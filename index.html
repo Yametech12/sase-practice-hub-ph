@@ -156,6 +156,48 @@
       font-weight: 700;
     }
     .primary-link:hover { background: white; color: #075b95; }
+    .fb-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 26px;
+      margin-top: 18px;
+      border-radius: 999px;
+      background: #1877F2;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      box-shadow: 0 10px 26px rgba(24,119,242,.35);
+    }
+    .fb-btn:hover { background: #1466cc; }
+    .fb-btn .fb-f {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #fff;
+      color: #1877F2;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .follow-banner {
+      background: linear-gradient(135deg, #0b3b66, #1877F2);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px;
+      text-align: center;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .follow-banner h2 { margin: 0 0 10px; font-size: 1.7rem; }
+    .follow-banner p { margin: 0 0 22px; opacity: .92; }
+    .follow-banner .fb-btn { margin-top: 0; background: #fff; color: #1877F2; }
+    .follow-banner .fb-btn:hover { background: #eef4ff; }
+    .follow-banner .fb-btn .fb-f { background: #1877F2; color: #fff; }
 
     .book {
       position: relative;
@@ -484,6 +526,7 @@
               <div class="price"><span>only</span><strong>₱67</strong></div>
               <a class="primary-link" href="#order">Order your copy ↓</a>
             </div>
+            <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener"><span class="fb-f">f</span> Click here — visit our Facebook Page</a>
           </div>
 
           <div class="book" aria-label="Illustration of the digital reviewer">
@@ -554,6 +597,16 @@
               <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 20h14"/></svg></span></div>
               <h3>Receive the PDF</h3><p>Your digital reviewer will be sent after the ₱67 payment has been verified.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="follow-banner">
+            <h2>👍 Like &amp; Follow our Page!</h2>
+            <p>Get study tips, reviewer updates, and exam reminders from <strong>SASE Practice Hub PH</strong>.</p>
+            <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener"><span class="fb-f">f</span> Click here to Like &amp; Follow</a>
           </div>
         </div>
       </section>
