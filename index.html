@@ -668,7 +668,7 @@
             </article>
             <article>
               <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h10v18l-2-1.4-3 1.4-3-1.4L7 21zM10 8h4M10 12h4M10 16h2"/></svg></span></div>
-              <h3>Save the reference number</h3><p>Find the reference number on your payment receipt and keep it for the order form.</p>
+              <h3>Save the reference number</h3><p>After paying, GCash will show a <strong>reference number</strong> on your receipt (a long number, e.g. 13 digits). <strong>This is NOT your phone number.</strong> Do not enter your own mobile number — copy the reference number from the GCash receipt.</p>
             </article>
             <article>
               <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></span></div>
@@ -717,7 +717,7 @@
             <form class="form-panel" id="orderForm" novalidate>
               <div class="step-label">AFTER PAYMENT</div>
               <h3>Create your order message</h3>
-              <p>Enter your full name and Messenger name, then copy the payment reference number from your receipt.</p>
+              <p>Enter your full name and Messenger name, then copy the <strong>GCash reference number</strong> from your payment receipt. <strong>Do NOT enter your phone number</strong> — the reference number is the long transaction number shown on your GCash receipt after payment.</p>
 
               <div class="field">
                 <label for="buyerName">Full name</label>
@@ -728,8 +728,9 @@
                 <input id="contactName" name="contactName" type="text" placeholder="Name we can search on Messenger" required maxlength="80" />
               </div>
               <div class="field">
-                <label for="reference">Payment reference number</label>
-                <input id="reference" name="reference" type="text" inputmode="numeric" autocomplete="off" placeholder="Reference number from your receipt" required minlength="6" maxlength="30" />
+                <label for="reference">GCash reference number</label>
+                <input id="reference" name="reference" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 1234567890123 (from GCash receipt)" required minlength="6" maxlength="30" />
+                <p class="field-help">⚠️ Find this on your GCash receipt after payment — it is a long transaction number, <strong>NOT your phone number</strong>. A phone number (like 09XX XXX XXXX) will not be accepted.</p>
               </div>
               <button class="generate" type="submit">Create order message</button>
               <p class="form-note">This form does not send anything automatically. It creates a message you can copy and send to <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH on Facebook</a>.</p>
@@ -815,6 +816,13 @@
         var name = document.getElementById('buyerName').value.trim();
         var contact = document.getElementById('contactName').value.trim();
         var reference = document.getElementById('reference').value.trim();
+        // Block PH mobile numbers mistakenly entered as reference
+        var digitsOnly = reference.replace(/\D/g, '');
+        if (/^09\d{9}$/.test(digitsOnly) || /^639\d{9}$/.test(digitsOnly) || /^\+639\d{9}$/.test(reference.replace(/\s/g, ''))) {
+          alert('⚠️ That looks like a phone number, not a GCash reference number.\n\nPlease check your GCash receipt after payment and copy the long transaction reference number (NOT your phone number).');
+          document.getElementById('reference').focus();
+          return;
+        }
         var message = [
           'Hello! I would like to order the MSU-SASE Reviewer.',
           '',
