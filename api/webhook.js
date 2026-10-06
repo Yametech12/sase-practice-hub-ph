@@ -101,9 +101,23 @@ function findAnswer(postFbid) {
   return null;
 }
 
-function buildReply(entry, commenterName) {
+function buildReply(entry, commenterName, userAnswer) {
   const name = commenterName ? ` ${commenterName.split(" ")[0]}` : "";
-  return `Correct! 🎉 "${entry.meaning}" — great job${name}!\nMore quizzes here: ${SITE_URL}`;
+  const correctAnswer = (entry.answer || "").toUpperCase().trim();
+  const userLetter = (userAnswer || "").toUpperCase().trim();
+  if (userLetter && correctAnswer) {
+    if (userLetter === correctAnswer) {
+      return `Correct! 🎉 "${entry.meaning}" — great job${name}!\nMore quizzes here: ${SITE_URL}`;
+    } else {
+      return `Good try${name}! 💪 The correct answer is ${correctAnswer} ("${entry.meaning}"). You're learning — keep going!\nMore quizzes here: ${SITE_URL}`;
+    }
+  }
+  return `Nice attempt${name}! The correct answer is ${correctAnswer} ("${entry.meaning}"). Keep practicing! 🌟\nMore quizzes here: ${SITE_URL}`;
+}
+
+function extractAnswerLetter(text) {
+  const m = text.trim().match(/^([a-dA-D])[\s.)]*$/);
+  return m ? m[1].toUpperCase() : null;
 }
 
 async function replyToComment(commentId, message) {
@@ -148,7 +162,8 @@ export default async function handler(req, res) {
         if (!entry_) { console.log("No answer for post", postFbid); continue; }
         const looksLikeAnswer = /^[a-dA-D][.)]?\s*$/.test(text) || text.toLowerCase().includes(entry_.meaning.toLowerCase()) || text.length < 30;
         if (!looksLikeAnswer) continue;
-        const reply = buildReply(entry_, v.from?.name);
+        const userLetter = extractAnswerLetter(text);
+        const reply = buildReply(entry_, v.from?.name, userLetter);
         const result = await replyToComment(commentId, reply);
         if (result.ok) { replied.add(commentId); console.log("Replied to", commentId); }
         else { console.error("Reply failed", JSON.stringify(result.data)); }
