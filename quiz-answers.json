@@ -1,1 +1,266 @@
-ewogICJwZmJpZDAyTkR6UXpjN1VDbTZQS1FFUHROQjN4ekpzcWM5cWVhb1R3QlJGZnpOajJ2RjVOdDJuaTNBUjlvV2NNYmptQjFoWmwiOiB7CiAgICAiYW5zd2VyIjogIkMiLAogICAgIm1lYW5pbmciOiAidGhvcm91Z2giLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJUaGUgYXJjaGl0ZWN0IHdhcyBtZXRpY3Vsb3VzIGluIGNoZWNraW5nIGV2ZXJ5IGRldGFpbCBvZiB0aGUgYmx1ZXByaW50LiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Blcm1hbGluay5waHA/c3RvcnlfZmJpZD1wZmJpZDAyTkR6UXpjN1VDbTZQS1FFUHROQjN4ekpzcWM5cWVhb1R3QlJGZnpOajJ2RjVOdDJuaTNBUjlvV2NNYmptQjFoWmwmaWQ9NjE1OTQ5OTc1NTY5MDUiLAogICAgInBvc3RfZmJpZCI6ICJwZmJpZDAyTkR6UXpjN1VDbTZQS1FFUHROQjN4ekpzcWM5cWVhb1R3QlJGZnpOajJ2RjVOdDJuaTNBUjlvV2NNYmptQjFoWmwiCiAgfSwKICAiMTIyMTAxMDkwMjIxNDk5OTE4IjogewogICAgImFuc3dlciI6ICJEIiwKICAgICJtZWFuaW5nIjogInZhZ3VlIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiVGhlIHdpdG5lc3MgZ2F2ZSBhbiBhbWJpZ3VvdXMgYW5zd2VyIHRoYXQgY29uZnVzZWQgdGhlIGludmVzdGlnYXRvcnMuIiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vcGVybWFsaW5rLnBocD9zdG9yeV9mYmlkPTEyMjEwMTA5MDIyMTQ5OTkxOCZpZD02MTU5NDk5NzU1NjkwNSIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMTA5MDIyMTQ5OTkxOCIKICB9LAogICIxMjIxMDEwOTkwMzU0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkIiLAogICAgIm1lYW5pbmciOiAiaGVzaXRhbnQiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJIZSB3YXMgcmVsdWN0YW50IHRvIGpvaW4gdGhlIGNvbnRlc3QgYmVjYXVzZSBoZSBmZWFyZWQgbG9zaW5nLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzYxNTk0OTk3NTU2OTA1L3Bvc3RzLzEyMjEwMTA5OTAzNTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMTA5OTAzNTQ5OTkxOCIKICB9LAogICJwZmJpZDBtcnJQUkNKbW12Q1I4bnhUR050V2RmOG1mNlNQYlY1RTJWZnhXQWFldWZkZ3I5bVNUYnE5S3RoRVNoTFVvWktsIjogewogICAgImFuc3dlciI6ICJEIiwKICAgICJtZWFuaW5nIjogImhvbmVzdCIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIlRoZSBtYXlvciBnYXZlIGEgY2FuZGlkIGludGVydmlldyBhYm91dCB0aGUgdG93bidzIGJ1ZGdldCBwcm9ibGVtcy4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9wZXJtYWxpbmsucGhwP3N0b3J5X2ZiaWQ9cGZiaWQwbXJyUFJDSm1tdkNSOG54VEdOdFdkZjhtZjZTUGJWNUUyVmZ4V0FhZXVmZGdyOW1TVGJxOUt0aEVTaExVb1pLbCZpZD02MTU5NDk5NzU1NjkwNSIsCiAgICAicG9zdF9mYmlkIjogInBmYmlkMG1yclBSQ0ptbXZDUjhueFRHTnRXZGY4bWY2U1BiVjVFMlZmeFdBYWV1ZmRncjltU1RicTlLdGhFU2hMVW9aS2wiCiAgfSwKICAiMTIyMTAxMTU4NTI1NDk5OTE4IjogewogICAgImFuc3dlciI6ICJDIiwKICAgICJtZWFuaW5nIjogInVuY2xlYXIiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJUaGUgcG9ldCByZW1haW5lZCBvYnNjdXJlIGRlc3BpdGUgd3JpdGluZyBmb3IgdHdlbnR5IHllYXJzLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzYxNTk0OTk3NTU2OTA1L3Bvc3RzLzEyMjEwMTE1ODUyNTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMTE1ODUyNTQ5OTkxOCIKICB9LAogICIxMjIxMDExOTA4MDU0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkEiLAogICAgIm1lYW5pbmciOiAiY2FsbSIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIkFmdGVyIHRoZSBzdG9ybSwgdGhlIHNlYSBiZWNhbWUgc2VyZW5lIGFnYWluLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzYxNTk0OTk3NTU2OTA1L3Bvc3RzLzEyMjEwMTE5MDgwNTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMTE5MDgwNTQ5OTkxOCIKICB9LAogICIxMjIxMDEyMjExNTM0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkIiLAogICAgIm1lYW5pbmciOiAicHJvZml0YWJsZSIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIkhlciBzbWFsbCBiYWtlcnkgdHVybmVkIG91dCB0byBiZSBhIGx1Y3JhdGl2ZSBidXNpbmVzcy4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS82MTU5NDk5NzU1NjkwNS9wb3N0cy8xMjIxMDEyMjExNTM0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDEyMjExNTM0OTk5MTgiCiAgfSwKICAiMTIyMTAxNDk3NTY3NDk5OTE4IjogewogICAgImFuc3dlciI6ICJEIiwKICAgICJtZWFuaW5nIjogInJ1bi1kb3duIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiVGhlIGRpbGFwaWRhdGVkIGJ1aWxkaW5nIHdhcyBmaW5hbGx5IGRlbW9saXNoZWQgbGFzdCBtb250aC4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS82MTU5NDk5NzU1NjkwNS9wb3N0cy8xMjIxMDE0OTc1Njc0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDE0OTc1Njc0OTk5MTgiCiAgfSwKICAiMTIyMTAxNDk3ODMxNDk5OTE4IjogewogICAgImFuc3dlciI6ICJDIiwKICAgICJtZWFuaW5nIjogImluIGNvbXBsZXRlIGFncmVlbWVudCIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIlRoZSB2b3RlIHdhcyB1bmFuaW1vdXMg4oCUIGV2ZXJ5IHNpbmdsZSBtZW1iZXIgcmFpc2VkIGEgaGFuZCBpbiBmYXZvci4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS82MTU5NDk5NzU1NjkwNS9wb3N0cy8xMjIxMDE0OTc4MzE0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDE0OTc4MzE0OTk5MTgiCiAgfSwKICAiMTIyMTAxNzIxNTg5NDk5OTE4IjogewogICAgImFuc3dlciI6ICJCIiwKICAgICJtZWFuaW5nIjogInRhbGthdGl2ZSIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIlVubGlrZSBoZXIgZ2FycnVsb3VzIGJyb3RoZXIsIHdobyB0YWxrcyBmcm9tIG1vcm5pbmcgdG8gbmlnaHQsIE1hcmEgcHJlZmVycyBzaWxlbmNlLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzYxNTk0OTk3NTU2OTA1L3Bvc3RzLzEyMjEwMTcyMTU4OTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMTcyMTU4OTQ5OTkxOCIKICB9LAogICIxMjIxMDE4Mzk5Njk0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkEiLAogICAgIm1lYW5pbmciOiAiZGlnIHVwIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiV29ya2VycyBiZWdhbiB0byBleGNhdmF0ZSB0aGUgc2l0ZSB0byB1bmNvdmVyIHRoZSBhbmNpZW50IGphcnMgYnVyaWVkIHRoZXJlLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzYxNTk0OTk3NTU2OTA1L3Bvc3RzLzEyMjEwMTgzOTk2OTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMTgzOTk2OTQ5OTkxOCIKICB9LAogICIxMjIxMDE5NzI1OTk0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkQiLAogICAgIm1lYW5pbmciOiAibWlzbGVhZGluZyIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIkhpcyBleGN1c2Ugd2FzIHNvIGZhbGxhY2lvdXMgdGhhdCBldmVuIGhpcyBjbG9zZXN0IGZyaWVuZHMgZGlkIG5vdCBiZWxpZXZlIGl0LiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEzMzU3NzA4MDYyOTI5OTMvcG9zdHMvMTIyMTAxOTcyNTk5NDk5OTE4IiwKICAgICJwb3N0X2ZiaWQiOiAiMTIyMTAxOTcyNTk5NDk5OTE4IgogIH0sCiAgIjEyMjEwMjExNzI4OTQ5OTkxOCI6IHsKICAgICJhbnN3ZXIiOiAiRCIsCiAgICAibWVhbmluZyI6ICJ3YXMiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJUaGUgYm91cXVldCBvZiByb3NlcyBvbiB0aGUgdGFibGUgX19fIGZyZXNobHkgcGlja2VkIHRoaXMgbW9ybmluZy4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwMjExNzI4OTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMjExNzI4OTQ5OTkxOCIKICB9LAogICIxMjIxMDIxOTE4ODc0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkEiLAogICAgIm1lYW5pbmciOiAid2VyZSIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIk5laXRoZXIgdGhlIG1hbmFnZXIgbm9yIHRoZSBjbGVya3MgX19fIGluZm9ybWVkIGFib3V0IHRoZSBzY2hlZHVsZSBjaGFuZ2UuIiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vMTMzNTc3MDgwNjI5Mjk5My9wb3N0cy8xMjIxMDIxOTE4ODc0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDIxOTE4ODc0OTk5MTgiCiAgfSwKICAiMTIyMTAyNDAwMzc1NDk5OTE4IjogewogICAgImFuc3dlciI6ICJDIiwKICAgICJtZWFuaW5nIjogImlzIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiRWFjaCBvZiB0aGUgY2FuZGlkYXRlcyBfX18gcmVxdWlyZWQgdG8gc3VibWl0IGEgcG9ydGZvbGlvLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEzMzU3NzA4MDYyOTI5OTMvcG9zdHMvMTIyMTAyNDAwMzc1NDk5OTE4IiwKICAgICJwb3N0X2ZiaWQiOiAiMTIyMTAyNDAwMzc1NDk5OTE4IgogIH0sCiAgIjEyMjEwMzAyNDc0MTQ5OTkxOCI6IHsKICAgICJhbnN3ZXIiOiAiQiIsCiAgICAibWVhbmluZyI6ICJoYXZlIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiVGhlIGRhdGEgb24gZW5yb2xsbWVudCBfX18gYmVlbiBjYXJlZnVsbHkgcmV2aWV3ZWQgYnkgdGhlIG9mZmljZS4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwMzAyNDc0MTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMzAyNDc0MTQ5OTkxOCIKICB9LAogICIxMjIxMDMwODIxNDM0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkQiLAogICAgIm1lYW5pbmciOiAid2FzIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiTm90IG9ubHkgdGhlIHBsYXllcnMgYnV0IGFsc28gdGhlIGNvYWNoIF9fXyBzdXJwcmlzZWQgYnkgdGhlIGZpbmFsIHNjb3JlLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEzMzU3NzA4MDYyOTI5OTMvcG9zdHMvMTIyMTAzMDgyMTQzNDk5OTE4IiwKICAgICJwb3N0X2ZiaWQiOiAiMTIyMTAzMDgyMTQzNDk5OTE4IgogIH0sCiAgIjEyMjEwMzEwODU0OTQ5OTkxOCI6IHsKICAgICJhbnN3ZXIiOiAiQSIsCiAgICAibWVhbmluZyI6ICJoYXMiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJUd28tdGhpcmRzIG9mIHRoZSBoYXJ2ZXN0IF9fXyBhbHJlYWR5IGJlZW4gc29sZCB0byB0cmFkZXJzLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEzMzU3NzA4MDYyOTI5OTMvcG9zdHMvMTIyMTAzMTA4NTQ5NDk5OTE4IiwKICAgICJwb3N0X2ZiaWQiOiAiMTIyMTAzMTA4NTQ5NDk5OTE4IgogIH0sCiAgIjEyMjEwMzE1Mjc4NzQ5OTkxOCI6IHsKICAgICJhbnN3ZXIiOiAiQyIsCiAgICAibWVhbmluZyI6ICJhcmUiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJUaGVyZSBfX18gc2V2ZXJhbCByZWFzb25zIHdoeSB0aGUgZXZlbnQgd2FzIHBvc3Rwb25lZC4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwMzE1Mjc4NzQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMzE1Mjc4NzQ5OTkxOCIKICB9LAogICIxMjIxMDMyMjA2Mjk0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkIiLAogICAgIm1lYW5pbmciOiAiaXRzIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiVGhlIGp1cnkgZmluYWxseSByZWFjaGVkIF9fXyB2ZXJkaWN0IGFmdGVyIHR3byBkYXlzIG9mIGRlbGliZXJhdGlvbi4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwMzIyMDYyOTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMzIyMDYyOTQ5OTkxOCIKICB9LAogICIxMjIxMDMyODkyNTE0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkQiLAogICAgIm1lYW5pbmciOiAidGhlaXIiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJUaGUgcGxheWVycyBsZWZ0IF9fXyBiYWdzIGluIHRoZSBsb2NrZXIgcm9vbSBhZnRlciBwcmFjdGljZS4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwMzI4OTI1MTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMzI4OTI1MTQ5OTkxOCIKICB9LAogICIxMjIxMDMzNjQ5MTc0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkQiLAogICAgIm1lYW5pbmciOiAiaGVyIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiTmVpdGhlciBvZiB0aGUgZ2lybHMgYnJvdWdodCBfX18gb3duIGx1bmNoIHRvIHRoZSBmaWVsZCB0cmlwLiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEzMzU3NzA4MDYyOTI5OTMvcG9zdHMvMTIyMTAzMzY0OTE3NDk5OTE4IiwKICAgICJwb3N0X2ZiaWQiOiAiMTIyMTAzMzY0OTE3NDk5OTE4IgogIH0sCiAgIjEyMjEwMzQ1MTM5NTQ5OTkxOCI6IHsKICAgICJhbnN3ZXIiOiAiQyIsCiAgICAibWVhbmluZyI6ICJpbiIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIlNoZSBpcyBpbnRlcmVzdGVkIF9fXyBqb2luaW5nIHRoZSBzY2llbmNlIGNsdWIgdGhpcyBzZW1lc3Rlci4iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwMzQ1MTM5NTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwMzQ1MTM5NTQ5OTkxOCIKICB9LAogICIxMjIxMDM2ODM0NDU0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkIiLAogICAgIm1lYW5pbmciOiAiaGFkIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiQnkgdGhlIHRpbWUgdGhlIGJlbGwgcmFuZywgdGhlIHN0dWRlbnRzIF9fXyBhbHJlYWR5IGZpbmlzaGVkIHRoZSBxdWl6LiIsCiAgICAicG9zdF91cmwiOiAiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEzMzU3NzA4MDYyOTI5OTMvcG9zdHMvMTIyMTAzNjgzNDQ1NDk5OTE4IiwKICAgICJwb3N0X2ZiaWQiOiAiMTIyMTAzNjgzNDQ1NDk5OTE4IgogIH0sCiAgIjEyMjEwMzc3NzM0NTQ5OTkxOCI6IHsKICAgICJhbnN3ZXIiOiAiQSIsCiAgICAibWVhbmluZyI6ICJhbiIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIkhlIGlzIF9fXyBob25lc3QgYW5kIGhhcmR3b3JraW5nIHN0dWRlbnQuIiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vMTMzNTc3MDgwNjI5Mjk5My9wb3N0cy8xMjIxMDM3NzczNDU0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDM3NzczNDU0OTk5MTgiCiAgfSwKICAiMTIyMTAzODU5MzcxNDk5OTE4IjogewogICAgImFuc3dlciI6ICJEIiwKICAgICJtZWFuaW5nIjogImhhdmVuJ3QgeW91IiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiWW91IGhhdmUgcmVhZCB0aGUgaW5zdHJ1Y3Rpb25zLCBfX18/IiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vMTMzNTc3MDgwNjI5Mjk5My9wb3N0cy8xMjIxMDM4NTkzNzE0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDM4NTkzNzE0OTk5MTgiCiAgfSwKICAiMTIyMTAzOTUxMDg3NDk5OTE4IjogewogICAgImFuc3dlciI6ICJDIiwKICAgICJtZWFuaW5nIjogIm9uIiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAiVGhlIHByaW5jaXBhbCBpbnNpc3RlZCBfX18gcmV2aWV3aW5nIGV2ZXJ5IGFwcGxpY2F0aW9uIHBlcnNvbmFsbHkuIiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vMTMzNTc3MDgwNjI5Mjk5My9wb3N0cy8xMjIxMDM5NTEwODc0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDM5NTEwODc0OTk5MTgiCiAgfSwKICAiMTIyMTA0MDE2ODE3NDk5OTE4IjogewogICAgImFuc3dlciI6ICJBIiwKICAgICJtZWFuaW5nIjogIjAuMDE1IiwKICAgICJ3b3JkIjogIiIsCiAgICAicXVlc3Rpb24iOiAi4oiaMC4wMDAyMjUgPSA/IiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vMTMzNTc3MDgwNjI5Mjk5My9wb3N0cy8xMjIxMDQwMTY4MTc0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDQwMTY4MTc0OTk5MTgiCiAgfSwKICAiMTIyMTA0MDg2NTc5NDk5OTE4IjogewogICAgImFuc3dlciI6ICJCIiwKICAgICJtZWFuaW5nIjogImEgc3F1YXJlIHdpdGggYSBkb3Qgb3V0c2lkZSIsCiAgICAid29yZCI6ICIiLAogICAgInF1ZXN0aW9uIjogIkEgdHJpYW5nbGUgd2l0aCBhIGRvdCBpbnNpZGUgYmVjb21lcyBhIHRyaWFuZ2xlIHdpdGggYSBkb3Qgb3V0c2lkZS4gQSBzcXVhcmUgd2l0aCBhIGRvdCBpbnNpZGUgYmVjb21lczoiLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwNDA4NjU3OTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwNDA4NjU3OTQ5OTkxOCIKICB9LAogICIxMjIxMDQxMjM4NTE0OTk5MTgiOiB7CiAgICAiYW5zd2VyIjogIkEiLAogICAgIm1lYW5pbmciOiAiSXQgaXMgbG9zdCB0byB0aGUgc3Vycm91bmRpbmdzIGFzIGhlYXQgZnJvbSBsaWZlIHByb2Nlc3Nlcy4iLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJJbiBhIGZvb2QgY2hhaW4sIG9ubHkgYWJvdXQgMTAlIG9mIHRoZSBlbmVyZ3kgYXQgb25lIGZlZWRpbmcgbGV2ZWwgcmVhY2hlcyB0aGUgbmV4dCBsZXZlbC4gV2hhdCBoYXBwZW5zIHRvIG1vc3Qgb2YgdGhlIHJlbWFpbmluZyBlbmVyZ3k/IiwKICAgICJwb3N0X3VybCI6ICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vMTMzNTc3MDgwNjI5Mjk5My9wb3N0cy8xMjIxMDQxMjM4NTE0OTk5MTgiLAogICAgInBvc3RfZmJpZCI6ICIxMjIxMDQxMjM4NTE0OTk5MTgiCiAgfSwKICAiMTIyMTA0MjY5Njc1NDk5OTE4IjogewogICAgImFuc3dlciI6ICJEIiwKICAgICJtZWFuaW5nIjogIlYiLAogICAgIndvcmQiOiAiIiwKICAgICJxdWVzdGlvbiI6ICJGaW5kIHRoZSBuZXh0IGxldHRlcjogRCwgRywgSywgTiwgUywgX18iLAogICAgInBvc3RfdXJsIjogImh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS8xMzM1NzcwODA2MjkyOTkzL3Bvc3RzLzEyMjEwNDI2OTY3NTQ5OTkxOCIsCiAgICAicG9zdF9mYmlkIjogIjEyMjEwNDI2OTY3NTQ5OTkxOCIKICB9Cn0=
+{
+  "pfbid02NDzQzc7UCm6PKQEPtNB3xzJsqc9qeaoTwBRFfzNj2vF5Nt2ni3AR9oWcMbjmB1hZl": {
+    "answer": "C",
+    "meaning": "thorough",
+    "word": "",
+    "question": "The architect was meticulous in checking every detail of the blueprint.",
+    "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02NDzQzc7UCm6PKQEPtNB3xzJsqc9qeaoTwBRFfzNj2vF5Nt2ni3AR9oWcMbjmB1hZl&id=61594997556905",
+    "post_fbid": "pfbid02NDzQzc7UCm6PKQEPtNB3xzJsqc9qeaoTwBRFfzNj2vF5Nt2ni3AR9oWcMbjmB1hZl"
+  },
+  "122101090221499918": {
+    "answer": "D",
+    "meaning": "vague",
+    "word": "",
+    "question": "The witness gave an ambiguous answer that confused the investigators.",
+    "post_url": "https://www.facebook.com/permalink.php?story_fbid=122101090221499918&id=61594997556905",
+    "post_fbid": "122101090221499918"
+  },
+  "122101099035499918": {
+    "answer": "B",
+    "meaning": "hesitant",
+    "word": "",
+    "question": "He was reluctant to join the contest because he feared losing.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101099035499918",
+    "post_fbid": "122101099035499918"
+  },
+  "pfbid0mrrPRCJmmvCR8nxTGNtWdf8mf6SPbV5E2VfxWAaeufdgr9mSTbq9KthEShLUoZKl": {
+    "answer": "D",
+    "meaning": "honest",
+    "word": "",
+    "question": "The mayor gave a candid interview about the town's budget problems.",
+    "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0mrrPRCJmmvCR8nxTGNtWdf8mf6SPbV5E2VfxWAaeufdgr9mSTbq9KthEShLUoZKl&id=61594997556905",
+    "post_fbid": "pfbid0mrrPRCJmmvCR8nxTGNtWdf8mf6SPbV5E2VfxWAaeufdgr9mSTbq9KthEShLUoZKl"
+  },
+  "122101158525499918": {
+    "answer": "C",
+    "meaning": "unclear",
+    "word": "",
+    "question": "The poet remained obscure despite writing for twenty years.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101158525499918",
+    "post_fbid": "122101158525499918"
+  },
+  "122101190805499918": {
+    "answer": "A",
+    "meaning": "calm",
+    "word": "",
+    "question": "After the storm, the sea became serene again.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101190805499918",
+    "post_fbid": "122101190805499918"
+  },
+  "122101221153499918": {
+    "answer": "B",
+    "meaning": "profitable",
+    "word": "",
+    "question": "Her small bakery turned out to be a lucrative business.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101221153499918",
+    "post_fbid": "122101221153499918"
+  },
+  "122101497567499918": {
+    "answer": "D",
+    "meaning": "run-down",
+    "word": "",
+    "question": "The dilapidated building was finally demolished last month.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101497567499918",
+    "post_fbid": "122101497567499918"
+  },
+  "122101497831499918": {
+    "answer": "C",
+    "meaning": "in complete agreement",
+    "word": "",
+    "question": "The vote was unanimous — every single member raised a hand in favor.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101497831499918",
+    "post_fbid": "122101497831499918"
+  },
+  "122101721589499918": {
+    "answer": "B",
+    "meaning": "talkative",
+    "word": "",
+    "question": "Unlike her garrulous brother, who talks from morning to night, Mara prefers silence.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101721589499918",
+    "post_fbid": "122101721589499918"
+  },
+  "122101839969499918": {
+    "answer": "A",
+    "meaning": "dig up",
+    "word": "",
+    "question": "Workers began to excavate the site to uncover the ancient jars buried there.",
+    "post_url": "https://www.facebook.com/61594997556905/posts/122101839969499918",
+    "post_fbid": "122101839969499918"
+  },
+  "122101972599499918": {
+    "answer": "D",
+    "meaning": "misleading",
+    "word": "",
+    "question": "His excuse was so fallacious that even his closest friends did not believe it.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122101972599499918",
+    "post_fbid": "122101972599499918"
+  },
+  "122102117289499918": {
+    "answer": "D",
+    "meaning": "was",
+    "word": "",
+    "question": "The bouquet of roses on the table ___ freshly picked this morning.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122102117289499918",
+    "post_fbid": "122102117289499918"
+  },
+  "122102191887499918": {
+    "answer": "A",
+    "meaning": "were",
+    "word": "",
+    "question": "Neither the manager nor the clerks ___ informed about the schedule change.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122102191887499918",
+    "post_fbid": "122102191887499918"
+  },
+  "122102400375499918": {
+    "answer": "C",
+    "meaning": "is",
+    "word": "",
+    "question": "Each of the candidates ___ required to submit a portfolio.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122102400375499918",
+    "post_fbid": "122102400375499918"
+  },
+  "122103024741499918": {
+    "answer": "B",
+    "meaning": "have",
+    "word": "",
+    "question": "The data on enrollment ___ been carefully reviewed by the office.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103024741499918",
+    "post_fbid": "122103024741499918"
+  },
+  "122103082143499918": {
+    "answer": "D",
+    "meaning": "was",
+    "word": "",
+    "question": "Not only the players but also the coach ___ surprised by the final score.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103082143499918",
+    "post_fbid": "122103082143499918"
+  },
+  "122103108549499918": {
+    "answer": "A",
+    "meaning": "has",
+    "word": "",
+    "question": "Two-thirds of the harvest ___ already been sold to traders.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103108549499918",
+    "post_fbid": "122103108549499918"
+  },
+  "122103152787499918": {
+    "answer": "C",
+    "meaning": "are",
+    "word": "",
+    "question": "There ___ several reasons why the event was postponed.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103152787499918",
+    "post_fbid": "122103152787499918"
+  },
+  "122103220629499918": {
+    "answer": "B",
+    "meaning": "its",
+    "word": "",
+    "question": "The jury finally reached ___ verdict after two days of deliberation.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103220629499918",
+    "post_fbid": "122103220629499918"
+  },
+  "122103289251499918": {
+    "answer": "D",
+    "meaning": "their",
+    "word": "",
+    "question": "The players left ___ bags in the locker room after practice.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103289251499918",
+    "post_fbid": "122103289251499918"
+  },
+  "122103364917499918": {
+    "answer": "D",
+    "meaning": "her",
+    "word": "",
+    "question": "Neither of the girls brought ___ own lunch to the field trip.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103364917499918",
+    "post_fbid": "122103364917499918"
+  },
+  "122103451395499918": {
+    "answer": "C",
+    "meaning": "in",
+    "word": "",
+    "question": "She is interested ___ joining the science club this semester.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103451395499918",
+    "post_fbid": "122103451395499918"
+  },
+  "122103683445499918": {
+    "answer": "B",
+    "meaning": "had",
+    "word": "",
+    "question": "By the time the bell rang, the students ___ already finished the quiz.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103683445499918",
+    "post_fbid": "122103683445499918"
+  },
+  "122103777345499918": {
+    "answer": "A",
+    "meaning": "an",
+    "word": "",
+    "question": "He is ___ honest and hardworking student.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103777345499918",
+    "post_fbid": "122103777345499918"
+  },
+  "122103859371499918": {
+    "answer": "D",
+    "meaning": "haven't you",
+    "word": "",
+    "question": "You have read the instructions, ___?",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103859371499918",
+    "post_fbid": "122103859371499918"
+  },
+  "122103951087499918": {
+    "answer": "C",
+    "meaning": "on",
+    "word": "",
+    "question": "The principal insisted ___ reviewing every application personally.",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122103951087499918",
+    "post_fbid": "122103951087499918"
+  },
+  "122104016817499918": {
+    "answer": "A",
+    "meaning": "0.015",
+    "word": "",
+    "question": "√0.000225 = ?",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104016817499918",
+    "post_fbid": "122104016817499918"
+  },
+  "122104086579499918": {
+    "answer": "B",
+    "meaning": "a square with a dot outside",
+    "word": "",
+    "question": "A triangle with a dot inside becomes a triangle with a dot outside. A square with a dot inside becomes:",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104086579499918",
+    "post_fbid": "122104086579499918"
+  },
+  "122104123851499918": {
+    "answer": "A",
+    "meaning": "It is lost to the surroundings as heat from life processes.",
+    "word": "",
+    "question": "In a food chain, only about 10% of the energy at one feeding level reaches the next level. What happens to most of the remaining energy?",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104123851499918",
+    "post_fbid": "122104123851499918"
+  },
+  "122104269675499918": {
+    "answer": "D",
+    "meaning": "V",
+    "word": "",
+    "question": "Find the next letter: D, G, K, N, S, __",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104269675499918",
+    "post_fbid": "122104269675499918"
+  },
+  "122104344417499918": {
+    "answer": "C",
+    "meaning": "emit",
+    "word": "",
+    "question": "As used in the passage, the word belch most nearly means",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104344417499918",
+    "post_fbid": "122104344417499918"
+  },
+  "pfbid0rgp2wMatsGFd1Vf14cekHWqayFtY9WmV6fUJpdwdPXvqDJxbd4TmSeUjYVbqE6sZl": {
+    "answer": "C",
+    "meaning": "thorough",
+    "word": "",
+    "question": "The architect was meticulous in checking every detail of the blueprint.",
+    "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0rgp2wMatsGFd1Vf14cekHWqayFtY9WmV6fUJpdwdPXvqDJxbd4TmSeUjYVbqE6sZl&id=61594997556905",
+    "post_fbid": "pfbid0rgp2wMatsGFd1Vf14cekHWqayFtY9WmV6fUJpdwdPXvqDJxbd4TmSeUjYVbqE6sZl"
+  }
+}
