@@ -214,5 +214,21 @@
     "question": "The principal insisted ___ reviewing every application personally.",
     "post_url": "https://www.facebook.com/1335770806292993/posts/122103951087499918",
     "post_fbid": "122103951087499918"
+  },
+  "122104016817499918": {
+    "answer": "A",
+    "meaning": "0.015",
+    "word": "",
+    "question": "√0.000225 = ?",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104016817499918",
+    "post_fbid": "122104016817499918"
+  },
+  "122104086579499918": {
+    "answer": "B",
+    "meaning": "a square with a dot outside",
+    "word": "",
+    "question": "A triangle with a dot inside becomes a triangle with a dot outside. A square with a dot inside becomes:",
+    "post_url": "https://www.facebook.com/1335770806292993/posts/122104086579499918",
+    "post_fbid": "122104086579499918"
   }
 }
