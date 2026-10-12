@@ -51,6 +51,7 @@ function publicQuestion(item, optMap) {
     section: item.section,
     number: item.number,
     question: item.question,
+    passage: item.passage || null,
     options,
   };
 }

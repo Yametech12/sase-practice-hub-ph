@@ -265,6 +265,7 @@
     }
 
     body.innerHTML =
+      (it.passage ? '<div class="q-passage">' + esc(it.passage) + "</div>" : "") +
       '<p class="q-text">' + esc(it.question) + "</p>" +
       '<ul class="q-opts">' + opts + "</ul>" +
       '<p class="ans-line">' + ansLine + "</p>" +

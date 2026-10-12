@@ -186,6 +186,17 @@ body {
 .q-body { display: none; padding: 0 12px 12px 52px; font-size: 13.5px; line-height: 1.6; }
 .q-item.open .q-body { display: block; }
 .q-text { margin: 0 0 8px; color: var(--ink); }
+.q-passage {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: #f4f7ff;
+  border-left: 4px solid #1d4ed8;
+  border-radius: 0 8px 8px 0;
+  white-space: pre-wrap;
+}
 .q-opts { margin: 0 0 8px; padding: 0; list-style: none; }
 .q-opts li { padding: 3px 0; color: var(--muted); }
 .q-opts li b { color: var(--ink); }

@@ -372,6 +372,9 @@
     if (!q) return;
     $("q-section").textContent = q.section || "";
     $("q-number").textContent = "Question " + (q.number != null ? q.number : state.currentIndex + 1);
+    var qp = $("q-passage");
+    if (q.passage) { qp.textContent = q.passage; qp.hidden = false; }
+    else { qp.textContent = ""; qp.hidden = true; }
     $("q-text").textContent = q.question || "";
     renderOptions(q);
     updateProgress();

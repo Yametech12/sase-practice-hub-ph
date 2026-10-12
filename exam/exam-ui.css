@@ -219,6 +219,17 @@ body {
 .flag-btn[aria-pressed="true"] { background: var(--amber-bg); border-color: #f0dcb0; color: var(--amber); }
 .q-number { margin: 0 0 6px; font-size: 14px; color: var(--muted); font-weight: 600; }
 .q-text { margin: 0 0 16px; font-size: 17px; font-weight: 600; color: var(--ink); }
+.q-passage {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper, #f4f7ff);
+  border-left: 4px solid var(--brand, #1d4ed8);
+  border-radius: 0 8px 8px 0;
+  white-space: pre-wrap;
+}
 
 /* options */
 .options { display: grid; gap: 10px; }

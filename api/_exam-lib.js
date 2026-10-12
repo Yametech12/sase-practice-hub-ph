@@ -207,7 +207,7 @@ export function getExamItems(bank, n) {
   return Array.isArray(arr) ? arr : [];
 }
 
-// ---- answer validation (G5): only A/B/C/D (or null) per known question id.
+// ---- answer validation (G5): only A/B/C/D/E (or null) per known question id.
 // Unknown qids are ignored (never inflate the denominator); malformed letters
 // are dropped, never thrown.
 export function sanitizeAnswers(answers, qOrderSet) {
@@ -215,7 +215,7 @@ export function sanitizeAnswers(answers, qOrderSet) {
   if (!answers || typeof answers !== "object") return out;
   for (const [qid, letter] of Object.entries(answers)) {
     if (typeof qid !== "string" || !qOrderSet.has(qid)) continue;
-    if (typeof letter !== "string" || !/^[A-D]$/.test(letter)) continue;
+    if (typeof letter !== "string" || !/^[A-E]$/.test(letter)) continue;
     out[qid] = letter;
   }
   return out;
@@ -345,6 +345,7 @@ export function buildResult(items, rec, finalAnswers) {
       section: item.section,
       number: item.number,
       question: item.question,
+      passage: item.passage || null,
       options: displayOptions,
       your_answer: disp || null,
       correct_answer: correctDisplay,
