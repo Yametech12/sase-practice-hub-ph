@@ -61,6 +61,18 @@ body {
   color: var(--amber); background: var(--amber-bg);
   border: 1px solid #f0d9a8; border-radius: 999px; padding: 5px 10px;
 }
+.back-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  color: var(--blue-900); text-decoration: none; font-size: 13px; font-weight: 700;
+  background: #fff; border: 1px solid #d5dcea;
+  padding: 6px 12px; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(12,33,71,.08);
+}
+.back-link:hover, .back-link:focus-visible { background: #eef3fb; }
+@media (max-width: 420px) {
+  .back-link { padding: 5px 9px; font-size: 12px; }
+  .brand-name { font-size: 13px; }
+}
 
 /* ---- Exam status strip ---- */
 .exam-status {

@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>SASE Mock Exam — SASE Practice Hub PH</title>
-<link rel="stylesheet" href="exam-ui.css">
+<link rel="stylesheet" href="/exam/exam-ui.css">
 </head>
 <body>
 
 <!-- ============ TOP BRAND BAR (persistent) ============ -->
 <header class="brandbar">
   <div class="brandbar-inner">
+    <a href="/" class="back-link" id="back-home" aria-label="Back to home page">&#8592; Home</a>
     <div class="brand">
       <span class="brand-mark" aria-hidden="true">📘</span>
       <span class="brand-name">SASE Practice Hub PH</span>
@@ -185,6 +186,16 @@
   <p>SASE Practice Hub PH · Practice exams for study purposes only — not the official MSU-SASE.</p>
 </footer>
 
-<script src="exam-ui.js"></script>
+<script src="/exam/exam-ui.js"></script>
+<script>
+// Back-to-home link: guard against losing an in-progress exam attempt.
+document.getElementById('back-home').addEventListener('click', function (e) {
+  if (document.querySelector('#screen-exam.active, #screen-submitting.active')) {
+    if (!confirm('Leave now? Your exam attempt will be lost and cannot be retaken.')) {
+      e.preventDefault();
+    }
+  }
+});
+</script>
 </body>
 </html>
