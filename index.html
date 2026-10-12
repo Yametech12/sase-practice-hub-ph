@@ -170,6 +170,32 @@
       padding: 4px 12px;
       border-radius: 999px;
     }
+    .portal-cta {
+      margin-top: 18px;
+      max-width: 540px;
+      background: rgba(255,216,100,.10);
+      border: 1px solid rgba(255,216,100,.45);
+      border-radius: 16px;
+      padding: 20px 22px 22px;
+      color: #e4f2fb;
+    }
+    .portal-cta h3 { color: #fff; font-size: 1.05rem; margin: 0 0 10px; }
+    .portal-cta p { font-size: .95rem; line-height: 1.55; margin: 0 0 16px; }
+    .portal-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 28px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: #08263f;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.05rem;
+      box-shadow: 0 10px 26px rgba(255,216,100,.30);
+    }
+    .portal-link:hover { background: #fff; color: #075b95; }
     .primary-link {
       display: inline-flex;
       align-items: center;
@@ -521,6 +547,7 @@
       .hero::after { display: none; }
       .price-row { gap: 16px; }
       .primary-link { width: 100%; }
+      .portal-link { width: 100%; }
       .book { padding: 33px 27px 38px 44px; }
       section { padding: 68px 0; }
       .payment-head { padding: 29px 24px 24px; align-items: start; flex-direction: column; gap: 12px; }
@@ -561,6 +588,11 @@
                 <li><strong>FREE online mock exam portal</strong> — 5 full 180-question mock exams, one released every week</li>
                 <li><strong>Scores + answer reviews</strong> — see your score, review every answer, and get a how-to-improve guide</li>
               </ul>
+            </div>
+            <div class="portal-cta" aria-label="Mock exam portal">
+              <h3>🎯 Try the Free Mock Exam Portal</h3>
+              <p>Every buyer gets FREE access — 5 full 180-question mock exams, one released every week, just like the real SASE. Use the password that came with your PDF to log in.</p>
+              <a class="portal-link" href="https://sase-practice-hub-ph.vercel.app/exam">Open the Mock Exam Portal →</a>
             </div>
             <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener"><span class="fb-f">f</span> Click here — visit our Facebook Page</a>
           </div>
