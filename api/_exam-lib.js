@@ -174,7 +174,12 @@ export async function updateState(mutator, message) {
   let lastErr = null;
   for (let i = 0; i < 3; i++) {
     const { sha, state } = await loadState();
+    const before = JSON.stringify(state);
     const result = await mutator(state);
+    // Skip the write when the mutator changed nothing (e.g. pure resume
+    // reads) — saves one slow GitHub round-trip per call. Behavior is
+    // identical: a no-op write would have produced the same file content.
+    if (JSON.stringify(state) === before) return result;
     try {
       await saveState(state, sha, message);
       return result;

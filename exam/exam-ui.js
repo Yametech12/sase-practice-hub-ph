@@ -11,7 +11,7 @@
         → 200 {ok:true, server_remaining_ms, server_now} · 410 expired
      POST /api/exam-grade     {token, exam, session_id, answers, submission_id}
         → 200 grade result (stored in sessionStorage "sase_exam_result",
-          then window.location.href = "results.html")
+          then window.location.href = "/exam/results.html")
      POST /api/exam-forfeit   {token, exam, session_id}
         → 200 same result schema with forfeited:true
    ============================================================ */
@@ -381,7 +381,10 @@
     updateGridCell(q.qid);
     if (scroll) {
       var card = document.querySelector(".qcard");
-      if (card && card.scrollIntoView) card.scrollIntoView({ block: "start", behavior: "smooth" });
+      if (card && card.scrollIntoView) {
+        var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        card.scrollIntoView({ block: "start", behavior: reduceMotion ? "auto" : "smooth" });
+      }
     }
   }
 
@@ -663,7 +666,7 @@
       sessionStorage.setItem(RESULT_KEY, JSON.stringify(result));
       sessionStorage.setItem(EXAM_NUM_KEY, String(examN));
     } catch (e) {}
-    window.location.href = "results.html";
+    window.location.href = "/exam/results.html";
   }
 
   /* ----- forfeit flow ----- */

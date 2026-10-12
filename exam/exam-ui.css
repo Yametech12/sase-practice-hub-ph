@@ -218,7 +218,7 @@ body {
 }
 .flag-btn[aria-pressed="true"] { background: var(--amber-bg); border-color: #f0dcb0; color: var(--amber); }
 .q-number { margin: 0 0 6px; font-size: 14px; color: var(--muted); font-weight: 600; }
-.q-text { margin: 0 0 16px; font-size: 17px; font-weight: 600; color: var(--ink); }
+.q-text { margin: 0 0 16px; font-size: 17px; font-weight: 600; color: var(--ink); overflow-wrap: break-word; }
 .q-passage {
   margin: 0 0 14px;
   padding: 12px 14px;
@@ -229,6 +229,7 @@ body {
   border-left: 4px solid var(--brand, #1d4ed8);
   border-radius: 0 8px 8px 0;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 /* options */
@@ -238,6 +239,7 @@ body {
   background: #f6f9fe; border: 2px solid var(--line); border-radius: 12px;
   padding: 13px 14px; font-size: 15px; cursor: pointer; font-family: var(--font);
   min-height: 56px; transition: border-color .12s ease, background .12s ease;
+  overflow-wrap: break-word;
 }
 .option:hover { border-color: var(--blue-600); }
 .option .opt-letter {
@@ -273,7 +275,7 @@ body {
 .grid-panel {
   background: #fff; width: 100%; max-width: 720px;
   max-height: 82vh; overflow-y: auto;
-  border-radius: 18px 18px 0 0; padding: 18px 16px 24px;
+  border-radius: 18px 18px 0 0; padding: 18px 16px calc(24px + env(safe-area-inset-bottom, 0px));
   animation: slideup .22s ease;
 }
 @keyframes slideup { from { transform: translateY(30px); opacity: .6;} to { transform: none; opacity: 1;} }
