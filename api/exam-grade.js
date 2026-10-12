@@ -126,7 +126,7 @@ export default async function handler(req, res) {
         auto_submitted: expired,
         forfeited: false,
       };
-      const stored = { ...result, submitted_at: submittedAt, auto_submitted: expired, forfeited: false };
+      const stored = { ...result, submitted_at: submittedAt, auto_submitted: expired, forfeited: false, server_now: now };
       state.used_submissions[idemKey] = stored;
       pendingLog = {
         type: "attempt",

@@ -5,7 +5,7 @@
      POST /api/exam-auth      {password, device_id} → 200 {token}
      POST /api/exam-list      {token} → 200 {exams:[...], server_now}
      POST /api/exam-questions {token, exam} → 200 {exam, session_id,
-        questions:[{qid, section, number, question, options:{A,B,C,D}}],
+        questions:[{qid, section, question, passage, options:{A,B,C,D}}],
         answers, server_remaining_ms, server_now, expires_at, resumed}
      POST /api/exam-progress  {token, exam, session_id, answers}
         → 200 {ok:true, server_remaining_ms, server_now} · 410 expired
