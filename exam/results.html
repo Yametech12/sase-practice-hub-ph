@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Your Result — SASE Practice Hub PH</title>
+<link rel="stylesheet" href="results-ui.css">
+</head>
+<body>
+
+<!-- ============================================================
+  SASE Mock Exam — Results Screen
+  INTEGRATION: the exam page stores the POST /api/exam-grade (or
+  /api/exam-forfeit) JSON result in sessionStorage under key
+  "sase_exam_result" (exam number under "sase_exam_n"), then
+  navigates here. results-ui.js reads it on load — no demo mode,
+  no mock data.
+============================================================ -->
+
+<div class="page">
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">📘</span>
+      <span class="brand-name">SASE Practice Hub PH</span>
+    </div>
+    <span class="practice-badge">PRACTICE RESULT</span>
+  </header>
+
+  <!-- Exam status strip -->
+  <div class="exam-status" id="examStatus">
+    <span class="exam-status-dot" aria-hidden="true"></span>
+    <span id="examStatusText">Loading…</span>
+  </div>
+
+  <!-- Auto-submit / forfeit notice (shown when result.auto_submitted or result.forfeited) -->
+  <div id="resultNotice" class="result-notice" role="status" hidden>
+    <span id="resultNoticeText"></span>
+  </div>
+
+  <!-- No-result fallback (direct visit without a grade result) -->
+  <div id="noResult" class="card" hidden>
+    <h2 class="card-title">No result found</h2>
+    <p>We couldn't find a graded exam result. Please complete an exam first — your result will appear here.</p>
+    <button class="btn btn-primary" id="btnNoResultHub" type="button">Back to exam hub</button>
+  </div>
+
+  <div id="resultBody" hidden>
+    <!-- Hero score -->
+    <section class="hero card" aria-labelledby="headline">
+      <p class="hero-kicker" id="examTitle">Mock Exam</p>
+      <div class="score-wrap">
+        <div class="score-ring">
+          <svg viewBox="0 0 120 120" class="ring-svg" aria-hidden="true">
+            <circle cx="60" cy="60" r="52" class="ring-track"/>
+            <circle cx="60" cy="60" r="52" class="ring-fill" id="ringFill"/>
+          </svg>
+          <div class="score-center">
+            <span class="score-pct" id="scorePct">—</span>
+            <span class="score-raw" id="scoreRaw">—</span>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <h1 id="headline">Well done!</h1>
+          <p id="subline">Your practice score is in.</p>
+        </div>
+      </div>
+      <p class="disclaimer">This is a <strong>practice benchmark</strong>, not an official SASE result. Use it to guide your study.</p>
+    </section>
+
+    <!-- Per-section breakdown -->
+    <section class="card" aria-labelledby="sectionsTitle">
+      <h2 class="card-title" id="sectionsTitle">Score by section</h2>
+      <div id="sectionBars" class="section-bars"></div>
+    </section>
+
+    <!-- How to improve -->
+    <section class="card improve" aria-labelledby="improveTitle">
+      <h2 class="card-title" id="improveTitle">How to improve <span aria-hidden="true">📈</span></h2>
+      <p class="improve-intro">Focus your study where it counts most. These pointers come from your weakest sections.</p>
+      <div id="improveList" class="improve-list"></div>
+    </section>
+
+    <!-- Answer review -->
+    <section class="card review" aria-labelledby="reviewTitle">
+      <h2 class="card-title" id="reviewTitle">Answer review</h2>
+      <div class="filter-chips" id="filterChips" role="group" aria-label="Filter reviewed questions">
+        <button class="chip active" data-filter="all" aria-pressed="true" type="button">All <span id="countAll"></span></button>
+        <button class="chip" data-filter="correct" aria-pressed="false" type="button">Correct <span id="countCorrect"></span></button>
+        <button class="chip" data-filter="wrong" aria-pressed="false" type="button">Wrong <span id="countWrong"></span></button>
+        <button class="chip" data-filter="skipped" aria-pressed="false" type="button">Skipped <span id="countSkipped"></span></button>
+      </div>
+      <div id="reviewList" class="review-list" tabindex="0" role="region" aria-label="Answer review list"></div>
+    </section>
+
+    <!-- Actions -->
+    <section class="actions">
+      <button class="btn btn-primary" id="btnScorecard" type="button"><span aria-hidden="true">⬇</span> Download score card</button>
+      <button class="btn btn-ghost" id="btnHub" type="button"><span aria-hidden="true">←</span> Back to exam hub</button>
+    </section>
+  </div>
+
+  <footer class="foot">
+    <p>Prepared by <strong>SASE Practice Hub PH</strong> — a professional MSU-SASE study resource.</p>
+    <p class="foot-small">sase-practice-hub-ph.vercel.app</p>
+  </footer>
+</div>
+
+<script src="results-ui.js"></script>
+</body>
+</html>

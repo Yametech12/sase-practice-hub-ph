@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SASE Mock Exam — SASE Practice Hub PH</title>
+<link rel="stylesheet" href="exam-ui.css">
+</head>
+<body>
+
+<!-- ============ TOP BRAND BAR (persistent) ============ -->
+<header class="brandbar">
+  <div class="brandbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">📘</span>
+      <span class="brand-name">SASE Practice Hub PH</span>
+    </div>
+    <span class="practice-badge">PRACTICE EXAM</span>
+  </div>
+</header>
+
+<main class="app">
+
+  <!-- ============================================================
+       SCREEN 1 — PASSWORD GATE + EXAM LIST
+       Backend: POST /api/exam-auth, POST /api/exam-list
+       ============================================================ -->
+  <section id="screen-gate" class="screen active">
+
+    <div class="gate-hero">
+      <h1>SASE Mock Exam Portal</h1>
+      <p class="subtitle">Five full-length mock exams · 180 questions each · 2-hour practice timer.</p>
+      <p class="disclaimer-line">This is a <strong>practice exam</strong> for preparation only. It is not the official MSU-SASE and is not affiliated with MSU.</p>
+    </div>
+
+    <form id="gate-form" class="gate-card" autocomplete="off">
+      <label for="gate-password" class="field-label">Enter your reviewer password</label>
+      <p class="field-hint" id="field-hint">Use the same unique password that came with your ₱67 PDF.</p>
+      <div class="gate-row">
+        <input type="password" id="gate-password" placeholder="e.g. Xk9mQ2vT7pLz"
+               autocomplete="current-password" aria-describedby="field-hint gate-error" required>
+        <button type="submit" id="gate-submit" class="btn btn-primary">Unlock</button>
+      </div>
+      <p id="gate-error" class="form-error" role="alert" hidden></p>
+      <p class="gate-note">One password works on <strong>one device only</strong>. Lost access? Message SASE Practice Hub PH.</p>
+    </form>
+
+    <!-- Exam list: rendered after successful auth via POST /api/exam-list -->
+    <div id="exam-list-wrap" hidden>
+      <h2 class="section-title">Your Exams</h2>
+      <p class="section-sub">One exam unlocks every week. Each exam can be taken <strong>once</strong>.</p>
+      <div id="list-error" class="error-card" role="alert" hidden>
+        <p id="list-error-text"></p>
+        <button id="list-error-dismiss" class="btn btn-secondary" type="button">Dismiss</button>
+      </div>
+      <div id="exam-list" class="exam-list">
+        <!-- Exam cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 2 — EXAM IN PROGRESS
+       Backend: POST /api/exam-questions (start),
+                POST /api/exam-progress (sync),
+                POST /api/exam-grade (submit),
+                POST /api/exam-forfeit (give up)
+       ============================================================ -->
+  <section id="screen-exam" class="screen" aria-label="Exam in progress">
+
+    <!-- Resume banner: shown when returning to an in-progress attempt -->
+    <div id="resume-banner" class="resume-banner" role="status" hidden>
+      <span class="resume-icon" aria-hidden="true">⏸</span>
+      <div>
+        <strong>Welcome back — resuming your exam.</strong>
+        <span id="resume-remaining">1h 23m remaining</span>
+      </div>
+    </div>
+
+    <!-- Timer bar (sticky under brandbar) -->
+    <div class="timer-block" role="timer" aria-label="Time remaining">
+      <div class="timer-row">
+        <span class="timer-label"><span aria-hidden="true">⏱</span> Time remaining</span>
+        <span id="timer-text" class="timer-text">2:00:00</span>
+      </div>
+      <div class="timer-track" role="progressbar" aria-label="Time remaining" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><div id="timer-fill" class="timer-fill"></div></div>
+      <span id="timer-live" class="sr-only" aria-live="polite"></span>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-row">
+      <span id="progress-text" class="progress-text">Question 1 of 180</span>
+      <button id="grid-toggle" class="btn btn-ghost" type="button" aria-label="Open question navigator"><span aria-hidden="true">☰</span> Grid</button>
+    </div>
+    <div class="progress-track" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill" class="progress-fill"></div></div>
+
+    <!-- Question card -->
+    <article class="qcard">
+      <div class="qcard-top">
+        <span id="q-section" class="q-section">English</span>
+        <button id="flag-btn" class="flag-btn" type="button" aria-pressed="false" title="Flag for review"><span aria-hidden="true">⚑</span> Flag</button>
+      </div>
+      <h2 id="q-number" class="q-number">Question 1</h2>
+      <p id="q-text" class="q-text">Loading question…</p>
+      <div id="q-options" class="options" role="radiogroup" aria-label="Answer choices">
+        <!-- Options injected by JS -->
+      </div>
+    </article>
+
+    <!-- Nav -->
+    <div class="exam-nav">
+      <button id="prev-btn" class="btn btn-secondary" type="button"><span aria-hidden="true">←</span> Previous</button>
+      <button id="submit-btn" class="btn btn-submit" type="button">Submit Exam</button>
+      <button id="next-btn" class="btn btn-primary" type="button">Next <span aria-hidden="true">→</span></button>
+    </div>
+    <button id="forfeit-btn" class="forfeit-btn" type="button">Give up on this attempt</button>
+
+    <!-- Inline submit error (replaces alert) -->
+    <div id="submit-error" class="error-card" role="alert" hidden>
+      <p id="submit-error-text"></p>
+      <button id="submit-retry" class="btn btn-secondary" type="button">Try again</button>
+    </div>
+
+    <!-- Question grid navigator (drawer) -->
+    <div id="grid-overlay" class="grid-overlay" hidden>
+      <div class="grid-panel" role="dialog" aria-modal="true" aria-labelledby="grid-title" tabindex="0">
+        <div class="grid-head">
+          <h3 id="grid-title">Question Navigator</h3>
+          <button id="grid-close" class="btn btn-ghost" type="button" aria-label="Close question navigator"><span aria-hidden="true">✕</span></button>
+        </div>
+        <div class="grid-legend">
+          <span><i class="dot dot-answered"></i>Answered</span>
+          <span><i class="dot dot-flagged"></i>Flagged</span>
+          <span><i class="dot dot-current"></i>Current</span>
+          <span><i class="dot dot-empty"></i>Unanswered</span>
+        </div>
+        <div id="grid" class="grid"></div>
+        <button id="grid-submit" class="btn btn-submit btn-block" type="button">Submit Exam</button>
+      </div>
+    </div>
+
+    <!-- Submit confirmation modal -->
+    <div id="confirm-overlay" class="grid-overlay" hidden>
+      <div class="confirm-panel" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+        <h3 id="confirm-title">Submit your exam?</h3>
+        <p id="confirm-text">You have answered 0 of 180 questions.</p>
+        <p class="confirm-warn">This counts as your <strong>one attempt</strong> for this exam. You cannot retake it.</p>
+        <div class="confirm-actions">
+          <button id="confirm-cancel" class="btn btn-secondary" type="button">Keep going</button>
+          <button id="confirm-ok" class="btn btn-submit" type="button">Submit now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forfeit confirmation modal -->
+    <div id="forfeit-overlay" class="grid-overlay" hidden>
+      <div class="confirm-panel" role="dialog" aria-modal="true" aria-labelledby="forfeit-title">
+        <h3 id="forfeit-title">Give up this attempt?</h3>
+        <p>Giving up counts as your <strong>one attempt</strong> for this exam. Your saved answers will be graded.</p>
+        <div class="confirm-actions">
+          <button id="forfeit-cancel" class="btn btn-secondary" type="button">Keep going</button>
+          <button id="forfeit-ok" class="btn btn-submit" type="button">Give up</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SCREEN 3 — SUBMITTING / DONE HANDOFF
+       The results screen (results.html) renders the grade result.
+       ============================================================ -->
+  <section id="screen-submitting" class="screen" aria-label="Submitting">
+    <div class="center-card">
+      <div class="spinner" aria-hidden="true"></div>
+      <h2>Grading your exam…</h2>
+      <p>Taking you to your results.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-foot">
+  <p>SASE Practice Hub PH · Practice exams for study purposes only — not the official MSU-SASE.</p>
+</footer>
+
+<script src="exam-ui.js"></script>
+</body>
+</html>
