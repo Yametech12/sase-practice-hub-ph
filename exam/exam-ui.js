@@ -499,7 +499,7 @@
     cell.classList.toggle("answered", !!state.answers[qid]);
     cell.classList.toggle("current", idx === state.currentIndex);
     var label = "Question " + (idx + 1) +
-      (state.answers[qid] ? ", answered" : ", unanswered") +
+      (state.answers[qid] ? ", answered" : ", skipped") +
       (state.flagged[qid] ? ", flagged for review" : "") +
       (idx === state.currentIndex ? ", current question" : "");
     cell.setAttribute("aria-label", label);
