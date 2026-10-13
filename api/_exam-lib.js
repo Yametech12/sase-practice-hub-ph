@@ -325,7 +325,8 @@ export function buildResult(items, rec, finalAnswers) {
   const review = [];
   let score = 0;
   let unanswered = 0;
-  for (const qid of rec.q_order) {
+  for (let pos = 0; pos < rec.q_order.length; pos++) {
+    const qid = rec.q_order[pos];
     const item = byId.get(qid);
     if (!item) continue;
     const disp = finalAnswers[qid]; // display letter (what the buyer tapped)
@@ -348,7 +349,13 @@ export function buildResult(items, rec, finalAnswers) {
     review.push({
       id: item.id,
       section: item.section,
-      number: item.number,
+      // number = POSITION in this attempt's question order (1-180), the
+      // same "Question N" the buyer saw during the exam. NOT item_number:
+      // that is a global pool id (1-450, e.g. MAT-001 -> 45), which would
+      // show as "Question 251 of 180" and confuse buyers. item_number is
+      // still sent for traceability; the client renders `number` only.
+      number: pos + 1,
+      item_number: item.item_number ?? null,
       question: item.question,
       passage: item.passage || null,
       options: displayOptions,

@@ -253,17 +253,41 @@
     applyFilter();
   }
 
-  function applyFilter() {
-    els.reviewList.innerHTML = "";
-    (currentData.review || []).forEach(function (it) {
-      if (currentFilter !== "all" && statusOf(it) !== currentFilter) return;
-      els.reviewList.appendChild(buildItem(it));
-    });
+  /* Circle shows a SHORT number only (1-3 chars, fits the 30px circle).
+     Server sends the exam position (1-180). Legacy stored reviews
+     (graded before the fix) have no `number` — fall back to the trailing
+     digits of the bank id ("SCI-018" -> "18"), then to the review
+     position. NEVER the full 7-char id ("SCI-018" wraps at the hyphen
+     and gets clipped by .q-item overflow:hidden). */
+  function circleNum(it, idx) {
+    if (it.number != null && isFinite(Number(it.number))) {
+      var n = String(Math.trunc(Number(it.number)));
+      if (n.length <= 3) return n;
+    }
+    var m = /(\d{1,3})$/.exec(String(it.id || ""));
+    if (m) return String(parseInt(m[1], 10));
+    return String((idx || 0) + 1);
   }
 
-  function buildItem(it) {
+  function applyFilter() {
+    els.reviewList.innerHTML = "";
+    var shown = 0;
+    (currentData.review || []).forEach(function (it, idx) {
+      if (currentFilter !== "all" && statusOf(it) !== currentFilter) return;
+      els.reviewList.appendChild(buildItem(it, idx));
+      shown++;
+    });
+    if (shown === 0) {
+      var empty = document.createElement("div");
+      empty.className = "q-empty";
+      empty.textContent = "No questions in this filter.";
+      els.reviewList.appendChild(empty);
+    }
+  }
+
+  function buildItem(it, idx) {
     var st = statusOf(it);
-    var num = it.number != null ? it.number : it.id;
+    var num = circleNum(it, idx);
     var div = document.createElement("div");
     div.className = "q-item " + st;
 

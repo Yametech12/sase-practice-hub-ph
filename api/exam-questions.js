@@ -44,13 +44,15 @@ import {
   alreadySubmittedMessage,
 } from "./_exam-lib.js";
 
-function publicQuestion(item, optMap) {
+function publicQuestion(item, optMap, position) {
   const options = {};
   for (const L of Object.keys(optMap).sort()) options[L] = item.options[optMap[L]];
   return {
     qid: item.id,
     section: item.section,
-    number: item.number,
+    // Position in this attempt's order (1-180) — matches the review
+    // `number` from buildResult and the "Question N" label the buyer sees.
+    number: position ?? item.item_number ?? null,
     question: item.question,
     passage: item.passage || null,
     options,
@@ -229,7 +231,7 @@ export default async function handler(req, res) {
     return res.status(200).json({
       exam: n,
       session_id: rec.session_id,
-      questions: rec.q_order.map((qid) => publicQuestion(byId.get(qid), rec.opt_map[qid])),
+      questions: rec.q_order.map((qid, i) => publicQuestion(byId.get(qid), rec.opt_map[qid], i + 1)),
       answers: sanitizeAnswers(rec.answers, new Set(rec.q_order)),
       server_remaining_ms: remaining,
       server_now: Date.now(),
