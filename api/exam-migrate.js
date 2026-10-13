@@ -170,9 +170,9 @@ export default async function handler(req, res) {
       used_submissions: Number(after[0].used_submissions),
     };
     return res.status(200).json({ ok: true, source, migrated });
-  } catch {
-    // Generic message only — never leak details that could carry secrets.
-    console.error("exam-migrate failed");
+  } catch (err) {
+    // Log the error MESSAGE only — never the full error, stack, headers, or env values.
+    console.error("exam-migrate failed:", err && err.message ? err.message : "unknown");
     return res.status(500).json({ error: "migration_failed" });
   }
 }
