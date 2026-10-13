@@ -165,12 +165,17 @@ async function ghBlob(sha) {
 }
 
 export async function loadState() {
-  const d = await gh("state.json");
-  const state = JSON.parse(Buffer.from(d.content, "base64").toString("utf8"));
+  // GitHub's contents API returns EMPTY content for files > 1MB, and
+  // state.json is ~1.17MB — JSON.parse("") throws, so every login that
+  // reaches device binding 500s with "Please try again in a moment."
+  // The contents response still carries the blob sha, so fetch metadata
+  // here and the full content via the blob API (no 1MB content limit).
+  const meta = await gh("state.json");
+  const state = await ghBlob(meta.sha);
   state.bindings ||= {};
   state.exams ||= {};
   state.used_submissions ||= {};
-  return { sha: d.sha, state };
+  return { sha: meta.sha, state };
 }
 
 export async function saveState(state, sha, message) {
@@ -214,8 +219,11 @@ export async function loadBank() {
   const fresh = bankCache && bankCache.bank?.exams && Object.keys(bankCache.bank.exams).length > 0
     && Date.now() - (bankCache.cachedAt || 0) < BANK_CACHE_TTL_MS;
   if (fresh) return bankCache;
-  const d = await gh("bank.json");
-  bankCache = { sha: d.sha, bank: JSON.parse(Buffer.from(d.content, "base64").toString("utf8")), cachedAt: Date.now() };
+  // Same 1MB contents-API trap as loadState: bank.json is ~0.49MB today
+  // but will cross 1MB as questions are added. Read via the blob API now.
+  const meta = await gh("bank.json");
+  const bank = await ghBlob(meta.sha);
+  bankCache = { sha: meta.sha, bank, cachedAt: Date.now() };
   return bankCache;
 }
 export async function loadBankAtBlob(sha) {
