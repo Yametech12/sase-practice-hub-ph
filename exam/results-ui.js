@@ -233,6 +233,16 @@
     return item.was_correct ? "correct" : "wrong";
   }
 
+  /* Short section code for the header badge (ENG / SCI / MATH / APT). */
+  function sectionCode(section) {
+    var s = String(section || "").toLowerCase();
+    if (/language|english/.test(s)) return "ENG";
+    if (/math/.test(s)) return "MATH";
+    if (/science/.test(s)) return "SCI";
+    if (/aptitude|logic/.test(s)) return "APT";
+    return String(section || "").slice(0, 4).toUpperCase() || "—";
+  }
+
   function renderReview(data) {
     var counts = { all: 0, correct: 0, wrong: 0, skipped: 0 };
     (data.review || []).forEach(function (it) { counts[statusOf(it)]++; counts.all++; });
@@ -258,16 +268,27 @@
     div.className = "q-item " + st;
 
     var srStatus = st === "correct" ? " — correct" : st === "wrong" ? " — wrong" : " — skipped"; /* A11Y K9 */
+    var statusLabel = st === "correct" ? "✓ Correct" : st === "wrong" ? "✕ Wrong" : "○ Skipped";
 
     var head = document.createElement("button");
     head.type = "button";
     head.className = "q-head";
     head.setAttribute("aria-expanded", "false"); /* A11Y K6 */
+    /* Stacked header: meta row (number + section-code badge + section +
+       status chip + chevron) above the FULL question text, wrapped.
+       No truncation — the old truncate(question, 64) cut questions
+       mid-sentence ("The badly researched…"). */
     head.innerHTML =
-      '<span class="q-num" aria-hidden="true">' + esc(String(num)) + "</span>" +
-      '<span><span class="q-sec">' + esc(it.section || "") + "</span><br>" + esc(truncate(it.question, 64)) +
+      '<span class="q-head-row">' +
+        '<span class="q-num" aria-hidden="true">' + esc(String(num)) + "</span>" +
+        '<span class="q-code" aria-hidden="true">' + esc(sectionCode(it.section)) + "</span>" +
+        '<span class="q-sec">' + esc(it.section || "") + "</span>" +
+        '<span class="q-status" aria-hidden="true">' + statusLabel + "</span>" +
+        '<span class="q-chev" aria-hidden="true">▾</span>' +
+      "</span>" +
+      '<span class="q-head-q">' + esc(it.question) +
       '<span class="sr-only">' + srStatus + "</span></span>" +
-      '<span class="q-chev" aria-hidden="true">▾</span>';
+      '<span class="q-tap-hint">Tap to see answer &amp; explanation</span>';
     head.addEventListener("click", function () {
       var open = div.classList.toggle("open");
       head.setAttribute("aria-expanded", open ? "true" : "false");
@@ -396,10 +417,6 @@
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;")
       .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  }
-  function truncate(s, n) {
-    s = String(s || "");
-    return s.length > n ? s.slice(0, n - 1) + "…" : s;
   }
 
   /* ---------- boot: read the stored grade result (no demo mode) ---------- */

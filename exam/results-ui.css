@@ -177,12 +177,15 @@ body {
 .chip.active { background: var(--blue-900); border-color: var(--blue-900); color: #fff; }
 .chip.active span { color: #cdd9f2; }
 
-.review-list { display: flex; flex-direction: column; gap: 8px; max-height: 70vh; overflow-y: auto; }
+.review-list { display: flex; flex-direction: column; gap: 10px; }
 .q-item { border: 1px solid var(--line); border-radius: 10px; background: #fff; overflow: hidden; }
 .q-head {
   width: 100%; border: 0; background: none; text-align: left; cursor: pointer;
-  display: flex; align-items: center; gap: 10px; padding: 11px 12px;
-  font-size: 13.5px; font-weight: 600; color: var(--ink); font-family: inherit;
+  display: flex; flex-direction: column; gap: 7px; padding: 12px;
+  font-family: inherit;
+}
+.q-head-row {
+  display: flex; align-items: center; gap: 8px; min-width: 0;
 }
 .q-num {
   flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
@@ -192,10 +195,34 @@ body {
 .q-item.correct .q-num { background: var(--green); }
 .q-item.wrong .q-num { background: var(--red); }
 .q-item.skipped .q-num { background: var(--amber); }
-.q-sec { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
-.q-chev { margin-left: auto; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; }
+/* Section-code badge (ENG / SCI / MATH / APT): fixed pill, never clipped.
+   flex-shrink:0 + nowrap + full padding keep it fully visible at 360px. */
+.q-code {
+  flex-shrink: 0; white-space: nowrap;
+  font-size: 11px; font-weight: 800; letter-spacing: 0.04em;
+  color: var(--blue-700); background: var(--blue-100);
+  border-radius: 999px; padding: 4px 9px;
+}
+.q-sec { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; flex: 1 1 auto; min-width: 0; }
+.q-status {
+  flex-shrink: 0; white-space: nowrap;
+  font-size: 11px; font-weight: 800; border-radius: 999px; padding: 4px 9px;
+}
+.q-item.correct .q-status { color: var(--green); background: var(--green-bg); }
+.q-item.wrong .q-status { color: var(--red); background: var(--red-bg); }
+.q-item.skipped .q-status { color: var(--amber); background: var(--amber-bg); }
+.q-chev { color: var(--muted); transition: transform 0.2s; flex-shrink: 0; font-size: 14px; }
 .q-item.open .q-chev { transform: rotate(180deg); }
-.q-body { display: none; padding: 0 12px 12px 52px; font-size: 13.5px; line-height: 1.6; }
+/* Full question text in the header: wraps to as many lines as needed,
+   never truncated — the old 64-char cut is what produced the
+   "The badly researched…" / "A muscle cell is working hard, but it…" stubs. */
+.q-head-q {
+  margin: 0; font-size: 14px; font-weight: 600; color: var(--ink);
+  line-height: 1.5; white-space: normal; overflow-wrap: break-word; word-break: break-word;
+}
+.q-tap-hint { font-size: 12px; font-weight: 500; color: var(--muted); }
+.q-item.open .q-tap-hint { display: none; }
+.q-body { display: none; padding: 0 12px 12px; font-size: 13.5px; line-height: 1.6; }
 .q-item.open .q-body { display: block; }
 .q-text { margin: 0 0 8px; color: var(--ink); }
 .q-passage {
