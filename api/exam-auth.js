@@ -63,7 +63,14 @@ export default async function handler(req, res) {
     // created_at produces a token every endpoint immediately 401s (infinite
     // login loop) or a schedule that never unlocks. This is a server config
     // error, not a buyer error — 500, not a dead token.
-    const createdAt = rec.created_at;
+    const createdAtRaw = rec.created_at;
+    // Legacy entries may carry a timezone-less ISO timestamp (recorded as
+    // naive UTC by the backfill). Treat that as UTC — rejecting it would
+    // lock out real buyers whose password is correct.
+    const createdAt =
+      typeof createdAtRaw === "string" && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?$/.test(createdAtRaw)
+        ? createdAtRaw + "Z"
+        : createdAtRaw;
     const ISO_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/;
     if (typeof createdAt !== "string" || !ISO_RE.test(createdAt) || Number.isNaN(Date.parse(createdAt))) {
       logEvent({ type: "auth_config_error", reason: "bad_created_at", order_id: orderId });
