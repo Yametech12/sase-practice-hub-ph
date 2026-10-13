@@ -110,8 +110,8 @@
     });
   }
 
-  /* Persistent device id — part of the 1-password-1-device rule.
-     The server binds the first device_id it sees for a password. */
+  /* Persistent device id — part of the 1-password-up-to-3-devices rule.
+     The server binds the first 3 device_ids it sees for a password. */
   function getDeviceId() {
     var id = null;
     try {
@@ -234,8 +234,34 @@
       }
       btn.addEventListener("click", function () { beginExam(ex.n); });
       card.appendChild(btn);
+    } else if (ex.status === "done") {
+      var rbtn = document.createElement("button");
+      rbtn.className = "btn btn-secondary";
+      rbtn.type = "button";
+      rbtn.textContent = "Review result";
+      rbtn.setAttribute("aria-label", "Review your Mock Exam " + ex.n + " result and advice");
+      rbtn.addEventListener("click", function () { reviewExam(ex.n, rbtn); });
+      card.appendChild(rbtn);
     }
     return card;
+  }
+
+  /* Re-open a completed exam's stored result (score, advice, answer review). */
+  function reviewExam(examN, btn) {
+    var orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = "Loading…";
+    api("/api/exam-result", { token: state.token, exam: examN }).then(function (data) {
+      try {
+        sessionStorage.setItem(RESULT_KEY, JSON.stringify(data));
+        sessionStorage.setItem(EXAM_NUM_KEY, String(examN));
+      } catch (e) {}
+      window.location.href = "/exam/results.html";
+    }).catch(function (err) {
+      btn.disabled = false;
+      btn.textContent = orig;
+      showListError(err.message || "Could not load your result. Please try again.");
+    });
   }
 
   /* ============================================================

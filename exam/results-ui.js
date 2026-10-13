@@ -360,7 +360,7 @@
   });
 
   /* ---------- back to hub ---------- */
-  function goHub() { window.location.href = "exam-ui.html"; }
+  function goHub() { window.location.href = "/exam"; }
   els.btnHub.addEventListener("click", goHub);
   els.btnNoResultHub.addEventListener("click", goHub);
 
