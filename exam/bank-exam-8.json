@@ -1,0 +1,2345 @@
+{
+  "exam": 8,
+  "questions": [
+    {
+      "id": "E8-L001",
+      "section": "Language Usage",
+      "question": "The mayor gave a candid assessment of the city's problems.",
+      "options": {
+        "A": "frank",
+        "B": "evasive",
+        "C": "polite",
+        "D": "brief"
+      },
+      "answer": "A",
+      "explanation": "candid. Candid means honest and straightforward; frank is the closest synonym."
+    },
+    {
+      "id": "E8-L002",
+      "section": "Language Usage",
+      "question": "After the flood, the resilient community rebuilt its homes quickly.",
+      "options": {
+        "A": "easily broken",
+        "B": "quick to recover",
+        "C": "slow to act",
+        "D": "afraid of change"
+      },
+      "answer": "B",
+      "explanation": "resilient. Resilient means able to recover quickly from difficulties."
+    },
+    {
+      "id": "E8-L003",
+      "section": "Language Usage",
+      "question": "The library has ample space for all the students.",
+      "options": {
+        "A": "crowded",
+        "B": "noisy",
+        "C": "sufficient",
+        "D": "expensive"
+      },
+      "answer": "C",
+      "explanation": "ample. Ample means more than enough; sufficient is the closest synonym."
+    },
+    {
+      "id": "E8-L004",
+      "section": "Language Usage",
+      "question": "As a novice chess player, he lost his first three matches.",
+      "options": {
+        "A": "expert",
+        "B": "coach",
+        "C": "critic",
+        "D": "beginner"
+      },
+      "answer": "D",
+      "explanation": "novice. A novice is a beginner."
+    },
+    {
+      "id": "E8-L005",
+      "section": "Language Usage",
+      "question": "The tranquil lake reflected the mountains perfectly.",
+      "options": {
+        "A": "calm",
+        "B": "stormy",
+        "C": "deep",
+        "D": "crowded"
+      },
+      "answer": "A",
+      "explanation": "tranquil. Tranquil means calm and peaceful."
+    },
+    {
+      "id": "E8-L006",
+      "section": "Language Usage",
+      "question": "Her vivid description made the story feel real.",
+      "options": {
+        "A": "dull",
+        "B": "clear and bright",
+        "C": "confusing",
+        "D": "brief"
+      },
+      "answer": "B",
+      "explanation": "vivid. Vivid means producing clear, bright images in the mind."
+    },
+    {
+      "id": "E8-L007",
+      "section": "Language Usage",
+      "question": "The stern teacher allowed no talking during the test.",
+      "options": {
+        "A": "kind",
+        "B": "funny",
+        "C": "strict",
+        "D": "tired"
+      },
+      "answer": "C",
+      "explanation": "stern. Stern means serious and strict."
+    },
+    {
+      "id": "E8-L008",
+      "section": "Language Usage",
+      "question": "Despite winning the award, he remained humble.",
+      "options": {
+        "A": "arrogant",
+        "B": "angry",
+        "C": "silent",
+        "D": "modest"
+      },
+      "answer": "D",
+      "explanation": "humble. Humble means modest, not proud."
+    },
+    {
+      "id": "E8-L009",
+      "section": "Language Usage",
+      "question": "She has a keen interest in astronomy.",
+      "options": {
+        "A": "eager and sharp",
+        "B": "slight",
+        "C": "fearful",
+        "D": "hidden"
+      },
+      "answer": "A",
+      "explanation": "keen. Keen means eager, sharp, and strongly felt."
+    },
+    {
+      "id": "E8-L010",
+      "section": "Language Usage",
+      "question": "The obscure poet was known only to a few readers.",
+      "options": {
+        "A": "famous",
+        "B": "little-known",
+        "C": "wealthy",
+        "D": "young"
+      },
+      "answer": "B",
+      "explanation": "obscure. Obscure means not well known."
+    },
+    {
+      "id": "E8-L011",
+      "section": "Language Usage",
+      "question": "A prudent shopper compares prices before buying.",
+      "options": {
+        "A": "reckless",
+        "B": "hurried",
+        "C": "careful",
+        "D": "generous"
+      },
+      "answer": "C",
+      "explanation": "prudent. Prudent means careful and sensible in decisions."
+    },
+    {
+      "id": "E8-L012",
+      "section": "Language Usage",
+      "question": "The diligent student reviews her notes every evening.",
+      "options": {
+        "A": "lazy",
+        "B": "forgetful",
+        "C": "noisy",
+        "D": "hardworking"
+      },
+      "answer": "D",
+      "explanation": "diligent. Diligent means hardworking and careful."
+    },
+    {
+      "id": "E8-L013",
+      "section": "Language Usage",
+      "question": "The committee reached a unanimous decision.",
+      "options": {
+        "A": "all in agreement",
+        "B": "divided",
+        "C": "delayed",
+        "D": "secret"
+      },
+      "answer": "A",
+      "explanation": "unanimous. Unanimous means everyone in agreement."
+    },
+    {
+      "id": "E8-L014",
+      "section": "Language Usage",
+      "question": "The old bridge is now obsolete.",
+      "options": {
+        "A": "sturdy",
+        "B": "no longer in use",
+        "C": "famous",
+        "D": "repaired"
+      },
+      "answer": "B",
+      "explanation": "obsolete. Obsolete means no longer used because something newer exists."
+    },
+    {
+      "id": "E8-L015",
+      "section": "Language Usage",
+      "question": "Her apology was sincere.",
+      "options": {
+        "A": "rehearsed",
+        "B": "brief",
+        "C": "genuine",
+        "D": "angry"
+      },
+      "answer": "C",
+      "explanation": "sincere. Sincere means genuine and honest."
+    },
+    {
+      "id": "E8-L016",
+      "section": "Language Usage",
+      "question": "The hiker felt weary after the long climb.",
+      "options": {
+        "A": "energetic",
+        "B": "hungry",
+        "C": "excited",
+        "D": "tired"
+      },
+      "answer": "D",
+      "explanation": "weary. Weary means very tired."
+    },
+    {
+      "id": "E8-L017",
+      "section": "Language Usage",
+      "question": "The novel's plot was intricate.",
+      "options": {
+        "A": "complex and detailed",
+        "B": "simple",
+        "C": "boring",
+        "D": "short"
+      },
+      "answer": "A",
+      "explanation": "intricate. Intricate means complex, with many detailed parts."
+    },
+    {
+      "id": "E8-L018",
+      "section": "Language Usage",
+      "question": "He gave a concise summary of the report.",
+      "options": {
+        "A": "long",
+        "B": "brief and clear",
+        "C": "confusing",
+        "D": "emotional"
+      },
+      "answer": "B",
+      "explanation": "concise. Concise means brief but complete."
+    },
+    {
+      "id": "E8-L019",
+      "section": "Language Usage",
+      "question": "The rumor spread rapidly through the school.",
+      "options": {
+        "A": "slowly",
+        "B": "quietly",
+        "C": "quickly",
+        "D": "rarely"
+      },
+      "answer": "C",
+      "explanation": "rapidly. Rapidly means very quickly."
+    },
+    {
+      "id": "E8-L020",
+      "section": "Language Usage",
+      "question": "The scientist remained skeptical of the claim.",
+      "options": {
+        "A": "convinced",
+        "B": "excited",
+        "C": "indifferent",
+        "D": "doubtful"
+      },
+      "answer": "D",
+      "explanation": "skeptical. Skeptical means doubtful, not easily convinced."
+    },
+    {
+      "id": "E8-L021",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of generous?",
+      "options": {
+        "A": "stingy",
+        "B": "kind",
+        "C": "wealthy",
+        "D": "cheerful"
+      },
+      "answer": "A",
+      "explanation": "generous vs stingy. Generous means giving freely; stingy means unwilling to give."
+    },
+    {
+      "id": "E8-L022",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of ancient?",
+      "options": {
+        "A": "old",
+        "B": "modern",
+        "C": "valuable",
+        "D": "broken"
+      },
+      "answer": "B",
+      "explanation": "ancient vs modern. Ancient means very old; modern means of the present time."
+    },
+    {
+      "id": "E8-L023",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of victory?",
+      "options": {
+        "A": "celebration",
+        "B": "effort",
+        "C": "defeat",
+        "D": "prize"
+      },
+      "answer": "C",
+      "explanation": "victory vs defeat. Victory means winning; defeat means losing."
+    },
+    {
+      "id": "E8-L024",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of expand?",
+      "options": {
+        "A": "grow",
+        "B": "build",
+        "C": "open",
+        "D": "shrink"
+      },
+      "answer": "D",
+      "explanation": "expand vs shrink. Expand means to grow larger; shrink means to grow smaller."
+    },
+    {
+      "id": "E8-L025",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of brave?",
+      "options": {
+        "A": "cowardly",
+        "B": "bold",
+        "C": "strong",
+        "D": "calm"
+      },
+      "answer": "A",
+      "explanation": "brave vs cowardly. Brave means fearless; cowardly means lacking courage."
+    },
+    {
+      "id": "E8-L026",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of scarce?",
+      "options": {
+        "A": "rare",
+        "B": "abundant",
+        "C": "costly",
+        "D": "hidden"
+      },
+      "answer": "B",
+      "explanation": "scarce vs abundant. Scarce means hard to find; abundant means plentiful."
+    },
+    {
+      "id": "E8-L027",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of permanent?",
+      "options": {
+        "A": "lasting",
+        "B": "solid",
+        "C": "temporary",
+        "D": "legal"
+      },
+      "answer": "C",
+      "explanation": "permanent vs temporary. Permanent means lasting forever; temporary means lasting only a short time."
+    },
+    {
+      "id": "E8-L028",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of honest?",
+      "options": {
+        "A": "truthful",
+        "B": "polite",
+        "C": "quiet",
+        "D": "deceitful"
+      },
+      "answer": "D",
+      "explanation": "honest vs deceitful. Honest means truthful; deceitful means misleading."
+    },
+    {
+      "id": "E8-L029",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of arrive?",
+      "options": {
+        "A": "depart",
+        "B": "enter",
+        "C": "wait",
+        "D": "hurry"
+      },
+      "answer": "A",
+      "explanation": "arrive vs depart. Arrive means to reach a place; depart means to leave it."
+    },
+    {
+      "id": "E8-L030",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of include?",
+      "options": {
+        "A": "add",
+        "B": "exclude",
+        "C": "invite",
+        "D": "count"
+      },
+      "answer": "B",
+      "explanation": "include vs exclude. Include means to add in; exclude means to leave out."
+    },
+    {
+      "id": "E8-L031",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of rigid?",
+      "options": {
+        "A": "stiff",
+        "B": "heavy",
+        "C": "flexible",
+        "D": "tall"
+      },
+      "answer": "C",
+      "explanation": "rigid vs flexible. Rigid means stiff and unbending; flexible means able to bend."
+    },
+    {
+      "id": "E8-L032",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of permit?",
+      "options": {
+        "A": "allow",
+        "B": "ask",
+        "C": "delay",
+        "D": "forbid"
+      },
+      "answer": "D",
+      "explanation": "permit vs forbid. Permit means to allow; forbid means to not allow."
+    },
+    {
+      "id": "E8-L033",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of optimistic?",
+      "options": {
+        "A": "pessimistic",
+        "B": "hopeful",
+        "C": "cheerful",
+        "D": "calm"
+      },
+      "answer": "A",
+      "explanation": "optimistic vs pessimistic. Optimistic means expecting good outcomes; pessimistic means expecting bad ones."
+    },
+    {
+      "id": "E8-L034",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of transparent?",
+      "options": {
+        "A": "clear",
+        "B": "opaque",
+        "C": "shiny",
+        "D": "fragile"
+      },
+      "answer": "B",
+      "explanation": "transparent vs opaque. Transparent lets light through; opaque does not."
+    },
+    {
+      "id": "E8-L035",
+      "section": "Language Usage",
+      "question": "Which word is the ANTONYM of compulsory?",
+      "options": {
+        "A": "required",
+        "B": "difficult",
+        "C": "optional",
+        "D": "annual"
+      },
+      "answer": "C",
+      "explanation": "compulsory vs optional. Compulsory means required; optional means a matter of choice."
+    },
+    {
+      "id": "E8-L036",
+      "section": "Language Usage",
+      "question": "Neither the students nor the teacher ___ present yesterday.",
+      "options": {
+        "A": "were",
+        "B": "are",
+        "C": "be",
+        "D": "was"
+      },
+      "answer": "D",
+      "explanation": "was. With neither/nor, the verb agrees with the nearer subject, teacher, which is singular."
+    },
+    {
+      "id": "E8-L037",
+      "section": "Language Usage",
+      "question": "Each of the players ___ a certificate at the ceremony.",
+      "options": {
+        "A": "receives",
+        "B": "receive",
+        "C": "have received",
+        "D": "receiving"
+      },
+      "answer": "A",
+      "explanation": "receives. Each is singular, so the verb takes the singular form."
+    },
+    {
+      "id": "E8-L038",
+      "section": "Language Usage",
+      "question": "The committee ___ decided to postpone the event.",
+      "options": {
+        "A": "have",
+        "B": "has",
+        "C": "are",
+        "D": "were"
+      },
+      "answer": "B",
+      "explanation": "has. Committee is a collective noun treated as singular here."
+    },
+    {
+      "id": "E8-L039",
+      "section": "Language Usage",
+      "question": "She is one of the students who ___ in the contest.",
+      "options": {
+        "A": "participates",
+        "B": "participating",
+        "C": "participate",
+        "D": "has participated"
+      },
+      "answer": "C",
+      "explanation": "participate. The clause who refers to students, which is plural."
+    },
+    {
+      "id": "E8-L040",
+      "section": "Language Usage",
+      "question": "Neither of the answers ___ correct.",
+      "options": {
+        "A": "are",
+        "B": "were",
+        "C": "be",
+        "D": "is"
+      },
+      "answer": "D",
+      "explanation": "is. Neither is singular, so it takes a singular verb."
+    },
+    {
+      "id": "E8-L041",
+      "section": "Language Usage",
+      "question": "The number of applicants ___ increased this year.",
+      "options": {
+        "A": "has",
+        "B": "have",
+        "C": "are",
+        "D": "were"
+      },
+      "answer": "A",
+      "explanation": "has. The number of is singular, so it takes a singular verb."
+    },
+    {
+      "id": "E8-L042",
+      "section": "Language Usage",
+      "question": "A number of applicants ___ waiting outside.",
+      "options": {
+        "A": "is",
+        "B": "are",
+        "C": "has",
+        "D": "was"
+      },
+      "answer": "B",
+      "explanation": "are. A number of means several, so it takes a plural verb."
+    },
+    {
+      "id": "E8-L043",
+      "section": "Language Usage",
+      "question": "Mathematics ___ my favorite subject.",
+      "options": {
+        "A": "are",
+        "B": "were",
+        "C": "is",
+        "D": "be"
+      },
+      "answer": "C",
+      "explanation": "is. Mathematics is a singular subject name despite ending in -s."
+    },
+    {
+      "id": "E8-L044",
+      "section": "Language Usage",
+      "question": "The news ___ shocking to everyone.",
+      "options": {
+        "A": "were",
+        "B": "are",
+        "C": "be",
+        "D": "was"
+      },
+      "answer": "D",
+      "explanation": "was. News is an uncountable singular noun."
+    },
+    {
+      "id": "E8-L045",
+      "section": "Language Usage",
+      "question": "Ten pesos ___ enough for the fare.",
+      "options": {
+        "A": "is",
+        "B": "are",
+        "C": "were",
+        "D": "have"
+      },
+      "answer": "A",
+      "explanation": "is. An amount of money is treated as singular."
+    },
+    {
+      "id": "E8-L046",
+      "section": "Language Usage",
+      "question": "She is the ___ of the two sisters.",
+      "options": {
+        "A": "tallest",
+        "B": "taller",
+        "C": "more tall",
+        "D": "most tall"
+      },
+      "answer": "B",
+      "explanation": "taller. When comparing two people, the comparative form is used: taller."
+    },
+    {
+      "id": "E8-L047",
+      "section": "Language Usage",
+      "question": "If he ___ harder, he would pass the exam.",
+      "options": {
+        "A": "studies",
+        "B": "study",
+        "C": "studied",
+        "D": "will study"
+      },
+      "answer": "C",
+      "explanation": "studied. This second conditional uses the past tense in the if-clause."
+    },
+    {
+      "id": "E8-L048",
+      "section": "Language Usage",
+      "question": "They have lived here ___ 2015.",
+      "options": {
+        "A": "for",
+        "B": "from",
+        "C": "by",
+        "D": "since"
+      },
+      "answer": "D",
+      "explanation": "since. Since marks the starting point of a period continuing to the present."
+    },
+    {
+      "id": "E8-L049",
+      "section": "Language Usage",
+      "question": "He is interested ___ astronomy.",
+      "options": {
+        "A": "in",
+        "B": "on",
+        "C": "at",
+        "D": "to"
+      },
+      "answer": "A",
+      "explanation": "in. The correct collocation is interested in."
+    },
+    {
+      "id": "E8-L050",
+      "section": "Language Usage",
+      "question": "The book belongs to Maria and ___.",
+      "options": {
+        "A": "I",
+        "B": "me",
+        "C": "mine",
+        "D": "myself"
+      },
+      "answer": "B",
+      "explanation": "me. After a preposition, the object pronoun me is required."
+    },
+    {
+      "id": "E8-L051",
+      "section": "Language Usage",
+      "question": "She practiced daily ___ she could improve her performance.",
+      "options": {
+        "A": "although",
+        "B": "unless",
+        "C": "so that",
+        "D": "in spite of"
+      },
+      "answer": "C",
+      "explanation": "so that. So that expresses purpose."
+    },
+    {
+      "id": "E8-L052",
+      "section": "Language Usage",
+      "question": "The test was difficult, ___ most students passed.",
+      "options": {
+        "A": "so",
+        "B": "for",
+        "C": "nor",
+        "D": "yet"
+      },
+      "answer": "D",
+      "explanation": "yet. Yet shows a contrast: difficult but still passed."
+    },
+    {
+      "id": "E8-L053",
+      "section": "Language Usage",
+      "question": "He apologized ___ being late.",
+      "options": {
+        "A": "for",
+        "B": "to",
+        "C": "on",
+        "D": "with"
+      },
+      "answer": "A",
+      "explanation": "for. The correct collocation is apologize for something."
+    },
+    {
+      "id": "E8-L054",
+      "section": "Language Usage",
+      "question": "The teacher asked the students to keep quiet ___ the exam.",
+      "options": {
+        "A": "while",
+        "B": "during",
+        "C": "among",
+        "D": "between"
+      },
+      "answer": "B",
+      "explanation": "during. During is a preposition used before the noun exam."
+    },
+    {
+      "id": "E8-L055",
+      "section": "Language Usage",
+      "question": "Choose the correctly spelled word.",
+      "options": {
+        "A": "accomodate",
+        "B": "acommodate",
+        "C": "accommodate",
+        "D": "accomodete"
+      },
+      "answer": "C",
+      "explanation": "accommodate. It has double c and double m."
+    },
+    {
+      "id": "E8-L056",
+      "section": "Language Usage",
+      "question": "Which of these words is spelled correctly?",
+      "options": {
+        "A": "enviroment",
+        "B": "envirenment",
+        "C": "enviornment",
+        "D": "environment"
+      },
+      "answer": "D",
+      "explanation": "environment. The correct spelling includes -ron- before -ment."
+    },
+    {
+      "id": "E8-L057",
+      "section": "Language Usage",
+      "question": "Select the word with the correct spelling.",
+      "options": {
+        "A": "definitely",
+        "B": "definately",
+        "C": "definetly",
+        "D": "defenitely"
+      },
+      "answer": "A",
+      "explanation": "definitely. It comes from finite, so it is spelled with -ite-."
+    },
+    {
+      "id": "E8-L058",
+      "section": "Language Usage",
+      "question": "Which spelling is correct?",
+      "options": {
+        "A": "seperate",
+        "B": "separate",
+        "C": "separete",
+        "D": "separrate"
+      },
+      "answer": "B",
+      "explanation": "separate. The middle vowel is a: sep-a-rate."
+    },
+    {
+      "id": "E8-L059",
+      "section": "Language Usage",
+      "question": "Which sentence is correct?",
+      "options": {
+        "A": "She don't like coffee.",
+        "B": "She isn't like coffee.",
+        "C": "She doesn't like coffee.",
+        "D": "She not like coffee."
+      },
+      "answer": "C",
+      "explanation": "She doesn't like coffee. A singular subject needs doesn't in the present tense."
+    },
+    {
+      "id": "E8-L060",
+      "section": "Language Usage",
+      "question": "Which of these sentences is grammatically correct?",
+      "options": {
+        "A": "There is many books on the shelf.",
+        "B": "There was many books on the shelf.",
+        "C": "There be many books on the shelf.",
+        "D": "There are many books on the shelf."
+      },
+      "answer": "D",
+      "explanation": "There are many books on the shelf. Many books is plural, so are is required."
+    },
+    {
+      "id": "E8-L061",
+      "section": "Language Usage",
+      "question": "Which is the best revision of this sentence? Running down the street, the bus left without him.",
+      "options": {
+        "A": "Running down the street, he missed the bus.",
+        "B": "The bus, running down the street, left without him.",
+        "C": "Running, the bus left him.",
+        "D": "The bus left, running down the street."
+      },
+      "answer": "A",
+      "explanation": "Running down the street, he missed the bus. The modifier must attach to he, the person running."
+    },
+    {
+      "id": "E8-L062",
+      "section": "Language Usage",
+      "question": "Identify the error in this sentence: The team are practicing for the finals.",
+      "options": {
+        "A": "team",
+        "B": "are",
+        "C": "practicing",
+        "D": "finals"
+      },
+      "answer": "B",
+      "explanation": "are. Team is a collective noun treated as singular here, so it should be is."
+    },
+    {
+      "id": "E8-L063",
+      "section": "Language Usage",
+      "question": "Identify the error in this sentence: She gave the book to John and I.",
+      "options": {
+        "A": "She",
+        "B": "gave",
+        "C": "I",
+        "D": "John"
+      },
+      "answer": "C",
+      "explanation": "I. After the preposition to, the object pronoun me is required, not I."
+    },
+    {
+      "id": "E8-L064",
+      "section": "Language Usage",
+      "question": "Identify the error in this sentence: He don't know the answer.",
+      "options": {
+        "A": "He",
+        "B": "know",
+        "C": "answer",
+        "D": "don't"
+      },
+      "answer": "D",
+      "explanation": "don't. A singular subject needs doesn't."
+    },
+    {
+      "id": "E8-L065",
+      "section": "Language Usage",
+      "question": "Identify the error in this sentence: Each student must bring their own pen.",
+      "options": {
+        "A": "their",
+        "B": "Each",
+        "C": "must",
+        "D": "own"
+      },
+      "answer": "A",
+      "explanation": "their. Each student is singular, so the pronoun should be his or her, not their."
+    },
+    {
+      "id": "E8-L066",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. What is the main idea of the passage?",
+      "options": {
+        "A": "A town built a new school.",
+        "B": "A small town library grew through donations and volunteers.",
+        "C": "Fishermen stopped reading.",
+        "D": "Children dislike books."
+      },
+      "answer": "B",
+      "explanation": "A small town library grew through donations and volunteers. The passage traces the library from a borrowed room to its own building."
+    },
+    {
+      "id": "E8-L067",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. Where did the library begin?",
+      "options": {
+        "A": "In a new building.",
+        "B": "In a fisherman's house.",
+        "C": "In a borrowed classroom.",
+        "D": "In the town hall."
+      },
+      "answer": "C",
+      "explanation": "In a borrowed classroom. The first sentence states this directly."
+    },
+    {
+      "id": "E8-L068",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. Who donated the first books?",
+      "options": {
+        "A": "Teachers.",
+        "B": "The council.",
+        "C": "Parents.",
+        "D": "Fishermen."
+      },
+      "answer": "D",
+      "explanation": "Fishermen. The passage says fishermen donated old books."
+    },
+    {
+      "id": "E8-L069",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. Who arranged the books on the shelves?",
+      "options": {
+        "A": "High school students.",
+        "B": "Fishermen.",
+        "C": "Town council.",
+        "D": "Children."
+      },
+      "answer": "A",
+      "explanation": "High school students. They volunteered to arrange the books."
+    },
+    {
+      "id": "E8-L070",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. When does the library open its doors to children?",
+      "options": {
+        "A": "Every evening.",
+        "B": "Every Saturday morning.",
+        "C": "Only on holidays.",
+        "D": "Every Sunday."
+      },
+      "answer": "B",
+      "explanation": "Every Saturday morning. The passage states this directly."
+    },
+    {
+      "id": "E8-L071",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. What did the town council give the library?",
+      "options": {
+        "A": "New books.",
+        "B": "Money for teachers.",
+        "C": "Its own small building.",
+        "D": "A boat."
+      },
+      "answer": "C",
+      "explanation": "Its own small building. The council gave the library its own building last year."
+    },
+    {
+      "id": "E8-L072",
+      "section": "Language Usage",
+      "question": "Passage: In the coastal town of San Roque, the only library began in a borrowed classroom. Fishermen donated old books, and high school students volunteered to arrange them on wooden shelves. Every Saturday morning, the library opens its doors to children who come to read stories and borrow books. Last year, the town council gave the library its own small building. Today, more than two hundred children visit each month, and the volunteers also run a storytelling hour for younger readers. In the passage, donated most nearly means ___.",
+      "options": {
+        "A": "sold",
+        "B": "borrowed",
+        "C": "threw away",
+        "D": "gave freely"
+      },
+      "answer": "D",
+      "explanation": "gave freely. To donate is to give something without expecting payment."
+    },
+    {
+      "id": "E8-L073",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. What problem did Althea notice?",
+      "options": {
+        "A": "Her grandmother struggled to read small print on medicine bottles.",
+        "B": "Her grandmother lost her glasses.",
+        "C": "The clinic had no medicine.",
+        "D": "Her grandmother could not walk."
+      },
+      "answer": "A",
+      "explanation": "Her grandmother struggled to read small print on medicine bottles. This is stated in the first sentence."
+    },
+    {
+      "id": "E8-L074",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. What did Althea design?",
+      "options": {
+        "A": "A new medicine bottle.",
+        "B": "A bookmark with a built-in magnifying lens.",
+        "C": "A pair of glasses.",
+        "D": "A reading lamp."
+      },
+      "answer": "B",
+      "explanation": "A bookmark with a built-in magnifying lens. The passage states this directly."
+    },
+    {
+      "id": "E8-L075",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. What was her first prototype made from?",
+      "options": {
+        "A": "Plastic and metal.",
+        "B": "Wood and glass.",
+        "C": "Cardboard and a lens from old reading glasses.",
+        "D": "Paper and rubber."
+      },
+      "answer": "C",
+      "explanation": "Cardboard and a lens from old reading glasses. The passage states this directly."
+    },
+    {
+      "id": "E8-L076",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. What happened at the science fair?",
+      "options": {
+        "A": "It was rejected.",
+        "B": "She sold her prototype.",
+        "C": "She met a doctor.",
+        "D": "Her invention won first prize."
+      },
+      "answer": "D",
+      "explanation": "Her invention won first prize. The passage states this directly."
+    },
+    {
+      "id": "E8-L077",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. What does Althea hope to do next?",
+      "options": {
+        "A": "Make a sturdier version for clinics to give to elderly patients.",
+        "B": "Stop inventing.",
+        "C": "Open a clinic.",
+        "D": "Become a doctor."
+      },
+      "answer": "A",
+      "explanation": "Make a sturdier version for clinics to give to elderly patients. This is stated in the last sentence."
+    },
+    {
+      "id": "E8-L078",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. In the passage, prototype most nearly means ___.",
+      "options": {
+        "A": "a finished product",
+        "B": "an early model of an invention",
+        "C": "a prize",
+        "D": "a medicine bottle"
+      },
+      "answer": "B",
+      "explanation": "an early model of an invention. A prototype is a first test version."
+    },
+    {
+      "id": "E8-L079",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. Which best describes Althea?",
+      "options": {
+        "A": "Careless and lazy.",
+        "B": "Impatient and rude.",
+        "C": "Observant and resourceful.",
+        "D": "Shy and silent."
+      },
+      "answer": "C",
+      "explanation": "Observant and resourceful. She noticed a real problem and built a solution from available materials."
+    },
+    {
+      "id": "E8-L080",
+      "section": "Language Usage",
+      "question": "Passage: When Althea was twelve, she noticed her grandmother struggling to read the small print on medicine bottles. She decided to design a bookmark with a built-in magnifying lens. Her first prototype was made from cardboard and a lens taken from an old pair of reading glasses. After several improvements, her invention won first prize at the regional science fair. Althea now hopes to make a sturdier version that clinics can give to elderly patients. What is the main idea of the passage?",
+      "options": {
+        "A": "Science fairs are easy to win.",
+        "B": "Elderly people need glasses.",
+        "C": "Cardboard is the best material.",
+        "D": "A girl turned an everyday problem into a prize-winning invention."
+      },
+      "answer": "D",
+      "explanation": "A girl turned an everyday problem into a prize-winning invention. The passage follows Althea from noticing the problem to winning the prize."
+    },
+    {
+      "id": "E8-M001",
+      "section": "Mathematics",
+      "question": "15 + 6 x 4 - 10 / 2 = ?",
+      "options": {
+        "A": "34",
+        "B": "30",
+        "C": "39",
+        "D": "44"
+      },
+      "answer": "A",
+      "explanation": "34. By order of operations: 6 x 4 = 24 and 10 / 2 = 5, so 15 + 24 - 5 = 34."
+    },
+    {
+      "id": "E8-M002",
+      "section": "Mathematics",
+      "question": "(12 - 4) squared / 8 + 3 = ?",
+      "options": {
+        "A": "9",
+        "B": "11",
+        "C": "10",
+        "D": "13"
+      },
+      "answer": "B",
+      "explanation": "11. (12 - 4) squared = 64; 64 / 8 = 8; 8 + 3 = 11."
+    },
+    {
+      "id": "E8-M003",
+      "section": "Mathematics",
+      "question": "What is 5/6 - 1/4?",
+      "options": {
+        "A": "1/3",
+        "B": "7/12",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "answer": "B",
+      "explanation": "7/12. Common denominator 12: 10/12 - 3/12 = 7/12."
+    },
+    {
+      "id": "E8-M004",
+      "section": "Mathematics",
+      "question": "What is 0.75 x 40?",
+      "options": {
+        "A": "28",
+        "B": "32",
+        "C": "35",
+        "D": "30"
+      },
+      "answer": "D",
+      "explanation": "30. 0.75 x 40 = 30."
+    },
+    {
+      "id": "E8-M005",
+      "section": "Mathematics",
+      "question": "What is 25% of 240?",
+      "options": {
+        "A": "60",
+        "B": "50",
+        "C": "70",
+        "D": "80"
+      },
+      "answer": "A",
+      "explanation": "60. 25% is one quarter, and 240 / 4 = 60."
+    },
+    {
+      "id": "E8-M006",
+      "section": "Mathematics",
+      "question": "A shirt costs 850 pesos. It is on sale at 20% off. What is the sale price?",
+      "options": {
+        "A": "640 pesos",
+        "B": "680 pesos",
+        "C": "700 pesos",
+        "D": "720 pesos"
+      },
+      "answer": "B",
+      "explanation": "680 pesos. The discount is 850 x 0.20 = 170, so 850 - 170 = 680."
+    },
+    {
+      "id": "E8-M007",
+      "section": "Mathematics",
+      "question": "How much simple interest is earned on 5,000 pesos at 6% per year for 3 years?",
+      "options": {
+        "A": "600 pesos",
+        "B": "1,200 pesos",
+        "C": "900 pesos",
+        "D": "1,500 pesos"
+      },
+      "answer": "C",
+      "explanation": "900 pesos. Interest = 5,000 x 0.06 x 3 = 900."
+    },
+    {
+      "id": "E8-M008",
+      "section": "Mathematics",
+      "question": "Solve for x: 5x - 8 = 27.",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "C",
+      "explanation": "7. Add 8: 5x = 35, so x = 7."
+    },
+    {
+      "id": "E8-M009",
+      "section": "Mathematics",
+      "question": "Solve for x: 2(x - 3) = 14.",
+      "options": {
+        "A": "10",
+        "B": "8",
+        "C": "9",
+        "D": "11"
+      },
+      "answer": "A",
+      "explanation": "10. Divide by 2: x - 3 = 7, so x = 10."
+    },
+    {
+      "id": "E8-M010",
+      "section": "Mathematics",
+      "question": "Solve: x squared - 5x + 6 = 0.",
+      "options": {
+        "A": "1 and 6",
+        "B": "2 and 3",
+        "C": "-2 and -3",
+        "D": "1 and 5"
+      },
+      "answer": "B",
+      "explanation": "2 and 3. The equation factors as (x - 2)(x - 3) = 0."
+    },
+    {
+      "id": "E8-M011",
+      "section": "Mathematics",
+      "question": "What is the slope of the line through (2, 3) and (5, 12)?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "answer": "B",
+      "explanation": "3. Slope = (12 - 3) / (5 - 2) = 9 / 3 = 3."
+    },
+    {
+      "id": "E8-M012",
+      "section": "Mathematics",
+      "question": "What is the area of a rectangle 9 cm long and 8 cm wide?",
+      "options": {
+        "A": "68 sq cm",
+        "B": "72 sq cm",
+        "C": "76 sq cm",
+        "D": "80 sq cm"
+      },
+      "answer": "B",
+      "explanation": "72 sq cm. Area = 9 x 8 = 72."
+    },
+    {
+      "id": "E8-M013",
+      "section": "Mathematics",
+      "question": "What is the area of a triangle with base 10 cm and height 8 cm?",
+      "options": {
+        "A": "40 sq cm",
+        "B": "30 sq cm",
+        "C": "50 sq cm",
+        "D": "80 sq cm"
+      },
+      "answer": "A",
+      "explanation": "40 sq cm. Area = (1/2) x 10 x 8 = 40."
+    },
+    {
+      "id": "E8-M014",
+      "section": "Mathematics",
+      "question": "Using pi = 22/7, what is the circumference of a circle with radius 14 cm?",
+      "options": {
+        "A": "44 cm",
+        "B": "66 cm",
+        "C": "88 cm",
+        "D": "176 cm"
+      },
+      "answer": "C",
+      "explanation": "88 cm. Circumference = 2 x (22/7) x 14 = 88."
+    },
+    {
+      "id": "E8-M015",
+      "section": "Mathematics",
+      "question": "What is the volume of a cube with side 4 cm?",
+      "options": {
+        "A": "16 cu cm",
+        "B": "48 cu cm",
+        "C": "64 cu cm",
+        "D": "96 cu cm"
+      },
+      "answer": "C",
+      "explanation": "64 cu cm. Volume = 4 x 4 x 4 = 64."
+    },
+    {
+      "id": "E8-M016",
+      "section": "Mathematics",
+      "question": "A train travels 240 km in 3 hours. What is its average speed?",
+      "options": {
+        "A": "70 km/h",
+        "B": "90 km/h",
+        "C": "120 km/h",
+        "D": "80 km/h"
+      },
+      "answer": "D",
+      "explanation": "80 km/h. Speed = 240 / 3 = 80."
+    },
+    {
+      "id": "E8-M017",
+      "section": "Mathematics",
+      "question": "A tank is filled by Pipe A in 6 hours and by Pipe B in 4 hours. How long will it take to fill the tank if both pipes are opened together?",
+      "options": {
+        "A": "2 hours",
+        "B": "2 hours 24 minutes",
+        "C": "2.5 hours",
+        "D": "5 hours"
+      },
+      "answer": "B",
+      "explanation": "2 hours 24 minutes. Combined rate = 1/6 + 1/4 = 5/12 of the tank per hour, so time = 12/5 hours = 2.4 hours = 2 hours 24 minutes."
+    },
+    {
+      "id": "E8-M018",
+      "section": "Mathematics",
+      "question": "Two numbers are in the ratio 3:5 and sum to 40. What is the larger number?",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "20",
+        "D": "30"
+      },
+      "answer": "B",
+      "explanation": "25. The parts total 8, so each part is 40 / 8 = 5; the larger is 5 x 5 = 25."
+    },
+    {
+      "id": "E8-M019",
+      "section": "Mathematics",
+      "question": "What is the average of 12, 18, 24, and 30?",
+      "options": {
+        "A": "19",
+        "B": "20",
+        "C": "21",
+        "D": "22"
+      },
+      "answer": "C",
+      "explanation": "21. Sum = 84; 84 / 4 = 21."
+    },
+    {
+      "id": "E8-M020",
+      "section": "Mathematics",
+      "question": "What is the median of 7, 3, 9, 5, and 11?",
+      "options": {
+        "A": "5",
+        "B": "9",
+        "C": "11",
+        "D": "7"
+      },
+      "answer": "D",
+      "explanation": "7. Sorted: 3, 5, 7, 9, 11; the middle value is 7."
+    },
+    {
+      "id": "E8-M021",
+      "section": "Mathematics",
+      "question": "A bag has 3 green balls and 5 yellow balls. What is the probability of drawing a green ball?",
+      "options": {
+        "A": "1/4",
+        "B": "3/8",
+        "C": "1/2",
+        "D": "5/8"
+      },
+      "answer": "B",
+      "explanation": "3/8. There are 3 green out of 8 total, so 3/8."
+    },
+    {
+      "id": "E8-M022",
+      "section": "Mathematics",
+      "question": "When two fair dice are rolled, what is the probability that the sum is 7?",
+      "options": {
+        "A": "1/4",
+        "B": "1/6",
+        "C": "5/36",
+        "D": "7/36"
+      },
+      "answer": "B",
+      "explanation": "1/6. Six of the 36 outcomes sum to 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1)."
+    },
+    {
+      "id": "E8-M023",
+      "section": "Mathematics",
+      "question": "What is 2 cubed x 2 to the 4th power?",
+      "options": {
+        "A": "64",
+        "B": "256",
+        "C": "128",
+        "D": "512"
+      },
+      "answer": "C",
+      "explanation": "128. 2 cubed x 2 to the 4th = 2 to the 7th = 128."
+    },
+    {
+      "id": "E8-M024",
+      "section": "Mathematics",
+      "question": "What is the square root of 144 plus the square root of 81?",
+      "options": {
+        "A": "19",
+        "B": "23",
+        "C": "25",
+        "D": "21"
+      },
+      "answer": "D",
+      "explanation": "21. Square root of 144 is 12 and of 81 is 9; 12 + 9 = 21."
+    },
+    {
+      "id": "E8-M025",
+      "section": "Mathematics",
+      "question": "What is 4 factorial (4!)?",
+      "options": {
+        "A": "12",
+        "B": "16",
+        "C": "24",
+        "D": "32"
+      },
+      "answer": "C",
+      "explanation": "24. 4! = 4 x 3 x 2 x 1 = 24."
+    },
+    {
+      "id": "E8-M026",
+      "section": "Mathematics",
+      "question": "A number increased by 15 is 47. What is the number?",
+      "options": {
+        "A": "30",
+        "B": "32",
+        "C": "34",
+        "D": "62"
+      },
+      "answer": "B",
+      "explanation": "32. 47 - 15 = 32."
+    },
+    {
+      "id": "E8-M027",
+      "section": "Mathematics",
+      "question": "A square has area 64 sq cm. What is its perimeter?",
+      "options": {
+        "A": "16 cm",
+        "B": "24 cm",
+        "C": "32 cm",
+        "D": "40 cm"
+      },
+      "answer": "C",
+      "explanation": "32 cm. Side = 8 cm, so perimeter = 4 x 8 = 32."
+    },
+    {
+      "id": "E8-M028",
+      "section": "Mathematics",
+      "question": "If y = 2x + 3 and x = 4, what is y?",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "12",
+        "D": "11"
+      },
+      "answer": "D",
+      "explanation": "11. y = 2(4) + 3 = 11."
+    },
+    {
+      "id": "E8-M029",
+      "section": "Mathematics",
+      "question": "What is 15% of 300?",
+      "options": {
+        "A": "45",
+        "B": "30",
+        "C": "50",
+        "D": "60"
+      },
+      "answer": "A",
+      "explanation": "45. 300 x 0.15 = 45."
+    },
+    {
+      "id": "E8-M030",
+      "section": "Mathematics",
+      "question": "A tank holds 240 liters. If it is 3/8 full, how many liters does it contain?",
+      "options": {
+        "A": "60 liters",
+        "B": "90 liters",
+        "C": "80 liters",
+        "D": "120 liters"
+      },
+      "answer": "B",
+      "explanation": "90 liters. 240 x 3/8 = 90."
+    },
+    {
+      "id": "E8-M031",
+      "section": "Mathematics",
+      "question": "What is the greatest common divisor (GCD) of 36 and 54?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "18",
+        "D": "27"
+      },
+      "answer": "C",
+      "explanation": "18. The largest number dividing both 36 and 54 is 18."
+    },
+    {
+      "id": "E8-M032",
+      "section": "Mathematics",
+      "question": "What is the least common multiple (LCM) of 8 and 12?",
+      "options": {
+        "A": "12",
+        "B": "36",
+        "C": "96",
+        "D": "24"
+      },
+      "answer": "D",
+      "explanation": "24. Multiples of 12: 12, 24; 24 is also a multiple of 8."
+    },
+    {
+      "id": "E8-M033",
+      "section": "Mathematics",
+      "question": "What is 0.6 + 1.25?",
+      "options": {
+        "A": "1.85",
+        "B": "1.31",
+        "C": "1.75",
+        "D": "2.85"
+      },
+      "answer": "A",
+      "explanation": "1.85. Align decimals: 0.60 + 1.25 = 1.85."
+    },
+    {
+      "id": "E8-M034",
+      "section": "Mathematics",
+      "question": "What is 7.5 / 0.5?",
+      "options": {
+        "A": "1.5",
+        "B": "15",
+        "C": "25",
+        "D": "75"
+      },
+      "answer": "B",
+      "explanation": "15. Dividing by 0.5 is the same as multiplying by 2: 7.5 x 2 = 15."
+    },
+    {
+      "id": "E8-M035",
+      "section": "Mathematics",
+      "question": "A map has scale 1:50,000. Two points 3 cm apart on the map are how far apart in reality?",
+      "options": {
+        "A": "0.5 km",
+        "B": "15 km",
+        "C": "1.5 km",
+        "D": "150 km"
+      },
+      "answer": "C",
+      "explanation": "1.5 km. Real distance = 3 x 50,000 = 150,000 cm = 1.5 km."
+    },
+    {
+      "id": "E8-M036",
+      "section": "Mathematics",
+      "question": "What is the supplement of a 65-degree angle?",
+      "options": {
+        "A": "25 degrees",
+        "B": "65 degrees",
+        "C": "155 degrees",
+        "D": "115 degrees"
+      },
+      "answer": "D",
+      "explanation": "115 degrees. Supplementary angles sum to 180, so 180 - 65 = 115."
+    },
+    {
+      "id": "E8-M037",
+      "section": "Mathematics",
+      "question": "A right triangle has legs 6 cm and 8 cm. What is the length of the hypotenuse?",
+      "options": {
+        "A": "10 cm",
+        "B": "9 cm",
+        "C": "12 cm",
+        "D": "14 cm"
+      },
+      "answer": "A",
+      "explanation": "10 cm. By Pythagoras: square root of (36 + 64) = square root of 100 = 10."
+    },
+    {
+      "id": "E8-M038",
+      "section": "Mathematics",
+      "question": "Find the next number: 2, 6, 18, 54, __.",
+      "options": {
+        "A": "108",
+        "B": "162",
+        "C": "216",
+        "D": "324"
+      },
+      "answer": "B",
+      "explanation": "162. Each term is multiplied by 3: 54 x 3 = 162."
+    },
+    {
+      "id": "E8-M039",
+      "section": "Mathematics",
+      "question": "Solve for x: 3x - 5 = 16.",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "C",
+      "explanation": "7. Add 5: 3x = 21, so x = 7."
+    },
+    {
+      "id": "E8-M040",
+      "section": "Mathematics",
+      "question": "A rectangle's length is twice its width. Its perimeter is 36 cm. What is its area?",
+      "options": {
+        "A": "54 sq cm",
+        "B": "64 sq cm",
+        "C": "96 sq cm",
+        "D": "72 sq cm"
+      },
+      "answer": "D",
+      "explanation": "72 sq cm. Width 6 cm and length 12 cm give perimeter 2(12 + 6) = 36 and area 12 x 6 = 72."
+    },
+    {
+      "id": "E8-A001",
+      "section": "Aptitude",
+      "question": "Find the next number: 2, 5, 11, 23, __.",
+      "options": {
+        "A": "45",
+        "B": "46",
+        "C": "47",
+        "D": "48"
+      },
+      "answer": "C",
+      "explanation": "47. Each term is twice the previous plus 1: 23 x 2 + 1 = 47."
+    },
+    {
+      "id": "E8-A002",
+      "section": "Aptitude",
+      "question": "Find the next number: 81, 72, 64, 57, __.",
+      "options": {
+        "A": "49",
+        "B": "50",
+        "C": "51",
+        "D": "52"
+      },
+      "answer": "C",
+      "explanation": "51. Differences grow by 1: -9, -8, -7, then -6, so 57 - 6 = 51."
+    },
+    {
+      "id": "E8-A003",
+      "section": "Aptitude",
+      "question": "Find the next number: 2, 3, 5, 9, 17, __.",
+      "options": {
+        "A": "31",
+        "B": "32",
+        "C": "33",
+        "D": "35"
+      },
+      "answer": "C",
+      "explanation": "33. Differences double: +1, +2, +4, +8, then +16, so 17 + 16 = 33."
+    },
+    {
+      "id": "E8-A004",
+      "section": "Aptitude",
+      "question": "Find the next number: 2, 2, 4, 6, 10, __.",
+      "options": {
+        "A": "14",
+        "B": "15",
+        "C": "16",
+        "D": "18"
+      },
+      "answer": "C",
+      "explanation": "16. Each term is the sum of the two before it: 6 + 10 = 16."
+    },
+    {
+      "id": "E8-A005",
+      "section": "Aptitude",
+      "question": "Find the next number: 64, 32, 16, 8, __.",
+      "options": {
+        "A": "4",
+        "B": "2",
+        "C": "6",
+        "D": "0"
+      },
+      "answer": "A",
+      "explanation": "4. Each term is half the previous: 8 / 2 = 4."
+    },
+    {
+      "id": "E8-A006",
+      "section": "Aptitude",
+      "question": "Find the next number: 5, 9, 17, 33, __.",
+      "options": {
+        "A": "61",
+        "B": "65",
+        "C": "63",
+        "D": "67"
+      },
+      "answer": "B",
+      "explanation": "65. Differences double: +4, +8, +16, then +32, so 33 + 32 = 65."
+    },
+    {
+      "id": "E8-A007",
+      "section": "Aptitude",
+      "question": "Find the next number: 5, 15, 45, 135, __.",
+      "options": {
+        "A": "270",
+        "B": "405",
+        "C": "540",
+        "D": "675"
+      },
+      "answer": "B",
+      "explanation": "405. Each term is multiplied by 3: 135 x 3 = 405."
+    },
+    {
+      "id": "E8-A008",
+      "section": "Aptitude",
+      "question": "Find the next number: 20, 18, 15, 11, 6, __.",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "0"
+      },
+      "answer": "D",
+      "explanation": "0. Differences grow by 1 each time: -2, -3, -4, -5, then -6, so 6 - 6 = 0."
+    },
+    {
+      "id": "E8-A009",
+      "section": "Aptitude",
+      "question": "Find the next number: 3, 8, 18, 38, __.",
+      "options": {
+        "A": "76",
+        "B": "77",
+        "C": "78",
+        "D": "80"
+      },
+      "answer": "C",
+      "explanation": "78. Each term is twice the previous plus 2: 38 x 2 + 2 = 78."
+    },
+    {
+      "id": "E8-A010",
+      "section": "Aptitude",
+      "question": "Find the next number: 9, 12, 21, 33, 54, __.",
+      "options": {
+        "A": "75",
+        "B": "87",
+        "C": "81",
+        "D": "96"
+      },
+      "answer": "B",
+      "explanation": "87. Each term is the sum of the two before it: 33 + 54 = 87."
+    },
+    {
+      "id": "E8-A011",
+      "section": "Aptitude",
+      "question": "Needle is to Thread as Pen is to __.",
+      "options": {
+        "A": "Ink",
+        "B": "Paper",
+        "C": "Book",
+        "D": "Desk"
+      },
+      "answer": "A",
+      "explanation": "Ink. A needle uses thread; a pen uses ink."
+    },
+    {
+      "id": "E8-A012",
+      "section": "Aptitude",
+      "question": "Dog is to Puppy as Cat is to __.",
+      "options": {
+        "A": "Cub",
+        "B": "Calf",
+        "C": "Chick",
+        "D": "Kitten"
+      },
+      "answer": "D",
+      "explanation": "Kitten. A puppy is a young dog; a kitten is a young cat."
+    },
+    {
+      "id": "E8-A013",
+      "section": "Aptitude",
+      "question": "Pen is to Write as Scissors is to __.",
+      "options": {
+        "A": "Cut",
+        "B": "Draw",
+        "C": "Fold",
+        "D": "Paste"
+      },
+      "answer": "A",
+      "explanation": "Cut. A pen is used to write; scissors are used to cut."
+    },
+    {
+      "id": "E8-A014",
+      "section": "Aptitude",
+      "question": "Ocean is to Drop as Forest is to __.",
+      "options": {
+        "A": "Leaf",
+        "B": "Tree",
+        "C": "Branch",
+        "D": "Root"
+      },
+      "answer": "B",
+      "explanation": "Tree. A drop is one unit of an ocean; a tree is one unit of a forest."
+    },
+    {
+      "id": "E8-A015",
+      "section": "Aptitude",
+      "question": "Hammer is to Nail as Key is to __.",
+      "options": {
+        "A": "Door",
+        "B": "Keychain",
+        "C": "Lock",
+        "D": "Handle"
+      },
+      "answer": "C",
+      "explanation": "Lock. A hammer drives a nail; a key opens a lock."
+    },
+    {
+      "id": "E8-A016",
+      "section": "Aptitude",
+      "question": "All roses are flowers, and some flowers fade quickly. Which statement must be true?",
+      "options": {
+        "A": "All flowers are roses.",
+        "B": "No roses fade.",
+        "C": "All roses fade quickly.",
+        "D": "Some flowers are roses."
+      },
+      "answer": "D",
+      "explanation": "Some flowers are roses. Since every rose is a flower, at least those flowers are roses."
+    },
+    {
+      "id": "E8-A017",
+      "section": "Aptitude",
+      "question": "No fish are birds. All trout are fish. Which conclusion must be true?",
+      "options": {
+        "A": "No trout are birds.",
+        "B": "Some trout are birds.",
+        "C": "All birds are trout.",
+        "D": "Some fish are birds."
+      },
+      "answer": "A",
+      "explanation": "Since every trout is a fish and no fish is a bird, no trout can be a bird."
+    },
+    {
+      "id": "E8-A018",
+      "section": "Aptitude",
+      "question": "In a code, LION is written as 121514 (A=1, B=2, ...). How is TIGER written?",
+      "options": {
+        "A": "2097518",
+        "B": "2097519",
+        "C": "20197518",
+        "D": "297518"
+      },
+      "answer": "A",
+      "explanation": "2097518. T=20, I=9, G=7, E=5, R=18, so TIGER is 20-9-7-5-18."
+    },
+    {
+      "id": "E8-A019",
+      "section": "Aptitude",
+      "question": "In a code, BIRD is written as 29418 (A=1, B=2, ...). How is FISH written?",
+      "options": {
+        "A": "61988",
+        "B": "69819",
+        "C": "69198",
+        "D": "69189"
+      },
+      "answer": "C",
+      "explanation": "69198. F=6, I=9, S=19, H=8, so FISH is 6-9-19-8."
+    },
+    {
+      "id": "E8-A020",
+      "section": "Aptitude",
+      "question": "What comes next in the pattern: triangle, circle, triangle, circle, triangle, __?",
+      "options": {
+        "A": "Triangle",
+        "B": "Square",
+        "C": "Star",
+        "D": "Circle"
+      },
+      "answer": "D",
+      "explanation": "Circle. The pattern alternates triangle, circle."
+    },
+    {
+      "id": "E8-A021",
+      "section": "Aptitude",
+      "question": "Find the next number: 1, 5, 12, 22, __.",
+      "options": {
+        "A": "32",
+        "B": "34",
+        "C": "35",
+        "D": "37"
+      },
+      "answer": "C",
+      "explanation": "35. Differences grow by 3: +4, +7, +10, then +13, so 22 + 13 = 35."
+    },
+    {
+      "id": "E8-A022",
+      "section": "Aptitude",
+      "question": "Which is the odd one out?",
+      "options": {
+        "A": "Copper",
+        "B": "Iron",
+        "C": "Gold",
+        "D": "Wood"
+      },
+      "answer": "D",
+      "explanation": "Wood. Copper, iron, and gold are metals; wood is not."
+    },
+    {
+      "id": "E8-A023",
+      "section": "Aptitude",
+      "question": "Which item does NOT belong with the others?",
+      "options": {
+        "A": "Monday",
+        "B": "Tuesday",
+        "C": "Wednesday",
+        "D": "January"
+      },
+      "answer": "D",
+      "explanation": "January. Monday, Tuesday, and Wednesday are days of the week; January is a month."
+    },
+    {
+      "id": "E8-A024",
+      "section": "Aptitude",
+      "question": "Which item is different from the others?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "9"
+      },
+      "answer": "D",
+      "explanation": "9. The others are prime numbers; 9 is composite."
+    },
+    {
+      "id": "E8-A025",
+      "section": "Aptitude",
+      "question": "In a race, Ana finished ahead of Ben. Ben finished ahead of Cara. Who finished last?",
+      "options": {
+        "A": "Cara",
+        "B": "Ana",
+        "C": "Ben",
+        "D": "Cannot tell"
+      },
+      "answer": "A",
+      "explanation": "Cara. Ana finished ahead of Ben and Ben finished ahead of Cara, so Cara finished last."
+    },
+    {
+      "id": "E8-A026",
+      "section": "Aptitude",
+      "question": "A train leaves at 8:00 traveling 60 km/h. A car leaves at 9:00 on the same route traveling 90 km/h. When does the car catch the train?",
+      "options": {
+        "A": "10:00",
+        "B": "11:00",
+        "C": "10:30",
+        "D": "12:00"
+      },
+      "answer": "B",
+      "explanation": "11:00. The train has a 60 km head start; the car closes it at 30 km/h, taking 2 hours."
+    },
+    {
+      "id": "E8-A027",
+      "section": "Aptitude",
+      "question": "If 3 pencils cost 18 pesos, how much do 7 pencils cost?",
+      "options": {
+        "A": "36 pesos",
+        "B": "40 pesos",
+        "C": "42 pesos",
+        "D": "48 pesos"
+      },
+      "answer": "C",
+      "explanation": "42 pesos. Each pencil costs 6 pesos, so 7 x 6 = 42."
+    },
+    {
+      "id": "E8-A028",
+      "section": "Aptitude",
+      "question": "All books on the top shelf are new. Pride and Prejudice is on the top shelf. What follows?",
+      "options": {
+        "A": "It is old.",
+        "B": "It is borrowed.",
+        "C": "Cannot tell.",
+        "D": "It is new."
+      },
+      "answer": "D",
+      "explanation": "It is new. It belongs to the group of books that are all new."
+    },
+    {
+      "id": "E8-A029",
+      "section": "Aptitude",
+      "question": "What comes next: AB, CD, EF, GH, __?",
+      "options": {
+        "A": "IJ",
+        "B": "HI",
+        "C": "JK",
+        "D": "KL"
+      },
+      "answer": "A",
+      "explanation": "IJ. Each pair advances two letters through the alphabet."
+    },
+    {
+      "id": "E8-A030",
+      "section": "Aptitude",
+      "question": "If today is Monday, what day of the week will it be in 13 days?",
+      "options": {
+        "A": "Friday",
+        "B": "Saturday",
+        "C": "Sunday",
+        "D": "Thursday"
+      },
+      "answer": "C",
+      "explanation": "Sunday. 13 days is 1 week plus 6 days; Monday plus 6 days is Sunday."
+    },
+    {
+      "id": "E8-S001",
+      "section": "Science",
+      "question": "Which gas do plants absorb from the air for photosynthesis?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Carbon dioxide",
+        "D": "Hydrogen"
+      },
+      "answer": "C",
+      "explanation": "Carbon dioxide. Plants take in carbon dioxide and release oxygen during photosynthesis."
+    },
+    {
+      "id": "E8-S002",
+      "section": "Science",
+      "question": "What is the chemical symbol for gold?",
+      "options": {
+        "A": "Ag",
+        "B": "Gd",
+        "C": "Go",
+        "D": "Au"
+      },
+      "answer": "D",
+      "explanation": "Au. Au comes from aurum, the Latin word for gold."
+    },
+    {
+      "id": "E8-S003",
+      "section": "Science",
+      "question": "What is the boiling point of water at sea level?",
+      "options": {
+        "A": "100 degrees C",
+        "B": "90 degrees C",
+        "C": "95 degrees C",
+        "D": "120 degrees C"
+      },
+      "answer": "A",
+      "explanation": "100 degrees C. At standard sea-level pressure, water boils at 100 degrees Celsius."
+    },
+    {
+      "id": "E8-S004",
+      "section": "Science",
+      "question": "Which planet has the largest and most prominent ring system?",
+      "options": {
+        "A": "Mars",
+        "B": "Saturn",
+        "C": "Jupiter",
+        "D": "Mercury"
+      },
+      "answer": "B",
+      "explanation": "Saturn. Saturn has the most extensive and visible ring system of any planet."
+    },
+    {
+      "id": "E8-S005",
+      "section": "Science",
+      "question": "Which force pulls objects toward Earth?",
+      "options": {
+        "A": "Friction",
+        "B": "Magnetism",
+        "C": "Gravity",
+        "D": "Inertia"
+      },
+      "answer": "C",
+      "explanation": "Gravity. Gravity attracts objects toward Earth's center."
+    },
+    {
+      "id": "E8-S006",
+      "section": "Science",
+      "question": "Which organ is primarily responsible for producing insulin?",
+      "options": {
+        "A": "Liver",
+        "B": "Pancreas",
+        "C": "Spleen",
+        "D": "Kidney"
+      },
+      "answer": "B",
+      "explanation": "Pancreas. The pancreas produces insulin, which regulates blood sugar."
+    },
+    {
+      "id": "E8-S007",
+      "section": "Science",
+      "question": "H2O is the chemical formula for what?",
+      "options": {
+        "A": "Water",
+        "B": "Salt",
+        "C": "Oxygen",
+        "D": "Acid"
+      },
+      "answer": "A",
+      "explanation": "Water. A water molecule has two hydrogen atoms and one oxygen atom."
+    },
+    {
+      "id": "E8-S008",
+      "section": "Science",
+      "question": "Which of these is a non-renewable source of energy?",
+      "options": {
+        "A": "Solar",
+        "B": "Wind",
+        "C": "Coal",
+        "D": "Hydro"
+      },
+      "answer": "C",
+      "explanation": "Coal. Coal is a fossil fuel that cannot be replenished on a human timescale; solar, wind, and hydro are renewable."
+    },
+    {
+      "id": "E8-S009",
+      "section": "Science",
+      "question": "What is the process by which a liquid changes into a gas?",
+      "options": {
+        "A": "Condensation",
+        "B": "Freezing",
+        "C": "Evaporation",
+        "D": "Melting"
+      },
+      "answer": "C",
+      "explanation": "Evaporation. Evaporation is liquid turning into vapor."
+    },
+    {
+      "id": "E8-S010",
+      "section": "Science",
+      "question": "Which vitamin is abundant in citrus fruits?",
+      "options": {
+        "A": "Vitamin A",
+        "B": "Vitamin B",
+        "C": "Vitamin C",
+        "D": "Vitamin D"
+      },
+      "answer": "C",
+      "explanation": "Vitamin C. Citrus fruits such as oranges and calamansi are rich in vitamin C."
+    },
+    {
+      "id": "E8-S011",
+      "section": "Science",
+      "question": "What is the main function of red blood cells?",
+      "options": {
+        "A": "Carry oxygen",
+        "B": "Fight infection",
+        "C": "Clot blood",
+        "D": "Produce hormones"
+      },
+      "answer": "A",
+      "explanation": "Carry oxygen. Red blood cells carry oxygen from the lungs to body tissues."
+    },
+    {
+      "id": "E8-S012",
+      "section": "Science",
+      "question": "Which part of a plant absorbs water from the soil?",
+      "options": {
+        "A": "Leaves",
+        "B": "Roots",
+        "C": "Stem",
+        "D": "Flowers"
+      },
+      "answer": "B",
+      "explanation": "Roots. Roots absorb water and minerals from the soil."
+    },
+    {
+      "id": "E8-S013",
+      "section": "Science",
+      "question": "What is Earth's outermost layer called?",
+      "options": {
+        "A": "Mantle",
+        "B": "Core",
+        "C": "Crust",
+        "D": "Atmosphere"
+      },
+      "answer": "C",
+      "explanation": "Crust. The crust is the thin outermost solid layer of Earth."
+    },
+    {
+      "id": "E8-S014",
+      "section": "Science",
+      "question": "Which instrument is used to measure temperature?",
+      "options": {
+        "A": "Barometer",
+        "B": "Altimeter",
+        "C": "Speedometer",
+        "D": "Thermometer"
+      },
+      "answer": "D",
+      "explanation": "Thermometer. A thermometer measures temperature."
+    },
+    {
+      "id": "E8-S015",
+      "section": "Science",
+      "question": "Which of these is NOT attracted to a magnet?",
+      "options": {
+        "A": "Iron",
+        "B": "Nickel",
+        "C": "Wood",
+        "D": "Cobalt"
+      },
+      "answer": "C",
+      "explanation": "Wood. Iron, nickel, and cobalt are magnetic materials; wood is not."
+    },
+    {
+      "id": "E8-S016",
+      "section": "Science",
+      "question": "Which acid is found in vinegar?",
+      "options": {
+        "A": "Citric acid",
+        "B": "Acetic acid",
+        "C": "Sulfuric acid",
+        "D": "Hydrochloric acid"
+      },
+      "answer": "B",
+      "explanation": "Acetic acid. Vinegar is mainly a dilute solution of acetic acid."
+    },
+    {
+      "id": "E8-S017",
+      "section": "Science",
+      "question": "What is the main pigment that captures sunlight in photosynthesis?",
+      "options": {
+        "A": "Chlorophyll",
+        "B": "Hemoglobin",
+        "C": "Melanin",
+        "D": "Carotene"
+      },
+      "answer": "A",
+      "explanation": "Chlorophyll. Chlorophyll in plant cells absorbs sunlight for photosynthesis."
+    },
+    {
+      "id": "E8-S018",
+      "section": "Science",
+      "question": "How many legs does a spider have?",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "4",
+        "D": "8"
+      },
+      "answer": "D",
+      "explanation": "8. Spiders are arachnids with eight legs."
+    },
+    {
+      "id": "E8-S019",
+      "section": "Science",
+      "question": "Which is the largest mammal in the world?",
+      "options": {
+        "A": "Blue whale",
+        "B": "Elephant",
+        "C": "Giraffe",
+        "D": "Hippopotamus"
+      },
+      "answer": "A",
+      "explanation": "Blue whale. The blue whale is the largest known animal."
+    },
+    {
+      "id": "E8-S020",
+      "section": "Science",
+      "question": "The process of a caterpillar becoming a butterfly is called __.",
+      "options": {
+        "A": "photosynthesis",
+        "B": "metamorphosis",
+        "C": "germination",
+        "D": "respiration"
+      },
+      "answer": "B",
+      "explanation": "metamorphosis. Metamorphosis is a major change in body form during development."
+    },
+    {
+      "id": "E8-S021",
+      "section": "Science",
+      "question": "Which layer of the atmosphere contains the ozone layer?",
+      "options": {
+        "A": "Troposphere",
+        "B": "Mesosphere",
+        "C": "Stratosphere",
+        "D": "Thermosphere"
+      },
+      "answer": "C",
+      "explanation": "Stratosphere. The ozone layer sits in the stratosphere."
+    },
+    {
+      "id": "E8-S022",
+      "section": "Science",
+      "question": "What is the unit of electric current?",
+      "options": {
+        "A": "Volt",
+        "B": "Ohm",
+        "C": "Watt",
+        "D": "Ampere"
+      },
+      "answer": "D",
+      "explanation": "Ampere. Current is measured in amperes."
+    },
+    {
+      "id": "E8-S023",
+      "section": "Science",
+      "question": "Which organ helps filter waste from the blood?",
+      "options": {
+        "A": "Kidney",
+        "B": "Liver",
+        "C": "Spleen",
+        "D": "Pancreas"
+      },
+      "answer": "A",
+      "explanation": "Kidney. The kidneys filter waste and excess water from the blood."
+    },
+    {
+      "id": "E8-S024",
+      "section": "Science",
+      "question": "A substance with pH 2 is __.",
+      "options": {
+        "A": "neutral",
+        "B": "strongly acidic",
+        "C": "weakly acidic",
+        "D": "basic"
+      },
+      "answer": "B",
+      "explanation": "strongly acidic. On the pH scale, values far below 7 are strongly acidic."
+    },
+    {
+      "id": "E8-S025",
+      "section": "Science",
+      "question": "Which force opposes motion between two surfaces in contact?",
+      "options": {
+        "A": "Gravity",
+        "B": "Inertia",
+        "C": "Friction",
+        "D": "Magnetism"
+      },
+      "answer": "C",
+      "explanation": "Friction. Friction resists sliding between surfaces."
+    },
+    {
+      "id": "E8-S026",
+      "section": "Science",
+      "question": "What is the closest star to Earth?",
+      "options": {
+        "A": "Proxima Centauri",
+        "B": "Sirius",
+        "C": "Polaris",
+        "D": "The Sun"
+      },
+      "answer": "D",
+      "explanation": "The Sun. The Sun is Earth's nearest star."
+    },
+    {
+      "id": "E8-S027",
+      "section": "Science",
+      "question": "Which blood cells help the body fight infections?",
+      "options": {
+        "A": "White blood cells",
+        "B": "Red blood cells",
+        "C": "Platelets",
+        "D": "Plasma cells"
+      },
+      "answer": "A",
+      "explanation": "White blood cells. White blood cells defend against germs."
+    },
+    {
+      "id": "E8-S028",
+      "section": "Science",
+      "question": "What do bees produce?",
+      "options": {
+        "A": "Wax only",
+        "B": "Honey",
+        "C": "Silk",
+        "D": "Milk"
+      },
+      "answer": "B",
+      "explanation": "Honey. Bees produce honey from flower nectar."
+    },
+    {
+      "id": "E8-S029",
+      "section": "Science",
+      "question": "What is the chemical formula for baking soda?",
+      "options": {
+        "A": "NaCl",
+        "B": "NaHCO3",
+        "C": "HCl",
+        "D": "NaOH"
+      },
+      "answer": "B",
+      "explanation": "NaHCO3. Baking soda is sodium bicarbonate, NaHCO3."
+    },
+    {
+      "id": "E8-S030",
+      "section": "Science",
+      "question": "Which of these materials conducts electricity?",
+      "options": {
+        "A": "Wood",
+        "B": "Plastic",
+        "C": "Rubber",
+        "D": "Copper"
+      },
+      "answer": "D",
+      "explanation": "Copper. Copper is a metal and a good conductor; wood, plastic, and rubber are insulators."
+    }
+  ]
+}

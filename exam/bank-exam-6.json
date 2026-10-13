@@ -1,0 +1,2345 @@
+{
+  "exam": 6,
+  "questions": [
+    {
+      "id": "E6-L001",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to CANDID.",
+      "options": {
+        "A": "hostile",
+        "B": "vague",
+        "C": "timid",
+        "D": "frank"
+      },
+      "answer": "D",
+      "explanation": "Candid means straightforward and honest, which is closest to frank."
+    },
+    {
+      "id": "E6-L002",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to SCARCE.",
+      "options": {
+        "A": "rare",
+        "B": "costly",
+        "C": "limited",
+        "D": "plentiful"
+      },
+      "answer": "D",
+      "explanation": "Scarce means hard to find or in short supply; its opposite is plentiful."
+    },
+    {
+      "id": "E6-L003",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to ADAMANT.",
+      "options": {
+        "A": "flexible",
+        "B": "gentle",
+        "C": "confused",
+        "D": "resolute"
+      },
+      "answer": "D",
+      "explanation": "Adamant means refusing to be persuaded; resolute has the same firm sense."
+    },
+    {
+      "id": "E6-L004",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Neither the coach nor the players was aware of the schedule change.'",
+      "options": {
+        "A": "Neither",
+        "B": "nor",
+        "C": "schedule",
+        "D": "was"
+      },
+      "answer": "D",
+      "explanation": "With neither/nor, the verb agrees with the nearer subject (players), so it should be 'were', not 'was'."
+    },
+    {
+      "id": "E6-L005",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The committee decided to _____ the proposal until more data became available.'",
+      "options": {
+        "A": "celebrate",
+        "B": "accelerate",
+        "C": "discard",
+        "D": "defer"
+      },
+      "answer": "D",
+      "explanation": "Defer means to postpone, which fits waiting for more data."
+    },
+    {
+      "id": "E6-L006",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to BREVITY.",
+      "options": {
+        "A": "length",
+        "B": "brightness",
+        "C": "confusion",
+        "D": "conciseness"
+      },
+      "answer": "D",
+      "explanation": "Brevity means using few words; conciseness is the closest synonym."
+    },
+    {
+      "id": "E6-L007",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to EXPAND.",
+      "options": {
+        "A": "enlarge",
+        "B": "inflate",
+        "C": "extend",
+        "D": "contract"
+      },
+      "answer": "D",
+      "explanation": "Expand means to grow larger; contract means to shrink."
+    },
+    {
+      "id": "E6-L008",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Each of the students have submitted their projects on time.'",
+      "options": {
+        "A": "Each",
+        "B": "on time",
+        "C": "their",
+        "D": "have"
+      },
+      "answer": "D",
+      "explanation": "'Each' is singular, so the verb should be 'has', not 'have'."
+    },
+    {
+      "id": "E6-L009",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to ASSIDUOUS.",
+      "options": {
+        "A": "noisy",
+        "B": "careless",
+        "C": "idle",
+        "D": "diligent"
+      },
+      "answer": "D",
+      "explanation": "Assiduous means showing great care and perseverance; diligent matches best."
+    },
+    {
+      "id": "E6-L010",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'Despite the heavy rain, the volunteers _____ to distribute relief goods.'",
+      "options": {
+        "A": "postponed",
+        "B": "hesitated",
+        "C": "retreated",
+        "D": "proceeded"
+      },
+      "answer": "D",
+      "explanation": "Proceeded means continued, fitting volunteers who carried on despite the rain."
+    },
+    {
+      "id": "E6-L011",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to OPAQUE.",
+      "options": {
+        "A": "cloudy",
+        "B": "thick",
+        "C": "dark",
+        "D": "transparent"
+      },
+      "answer": "D",
+      "explanation": "Opaque means light cannot pass through; transparent is the opposite."
+    },
+    {
+      "id": "E6-L012",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The data shows that the new policy are effective.'",
+      "options": {
+        "A": "data",
+        "B": "shows",
+        "C": "effective",
+        "D": "are"
+      },
+      "answer": "D",
+      "explanation": "The subject 'policy' is singular, so the verb should be 'is', not 'are'."
+    },
+    {
+      "id": "E6-L013",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to TYRO.",
+      "options": {
+        "A": "beginner",
+        "B": "expert",
+        "C": "judge",
+        "D": "musician"
+      },
+      "answer": "A",
+      "explanation": "A tyro is a beginner or someone new to an activity."
+    },
+    {
+      "id": "E6-L014",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'Her argument was so _____ that even her critics admitted it was hard to refute.'",
+      "options": {
+        "A": "cogent",
+        "B": "feeble",
+        "C": "trivial",
+        "D": "vague"
+      },
+      "answer": "A",
+      "explanation": "Cogent means clear and convincing, which fits an argument hard to refute."
+    },
+    {
+      "id": "E6-L015",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to TIMID.",
+      "options": {
+        "A": "shy",
+        "B": "nervous",
+        "C": "quiet",
+        "D": "bold"
+      },
+      "answer": "D",
+      "explanation": "Timid means shy and lacking courage; bold is the opposite."
+    },
+    {
+      "id": "E6-L016",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Between you and I, the plan needs revision.'",
+      "options": {
+        "A": "I",
+        "B": "you",
+        "C": "Between",
+        "D": "revision"
+      },
+      "answer": "A",
+      "explanation": "After a preposition, the object pronoun 'me' is required: 'Between you and me'."
+    },
+    {
+      "id": "E6-L017",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to UTILITARIAN.",
+      "options": {
+        "A": "theoretical",
+        "B": "decorative",
+        "C": "emotional",
+        "D": "practical"
+      },
+      "answer": "D",
+      "explanation": "Utilitarian means designed to be useful or practical rather than attractive."
+    },
+    {
+      "id": "E6-L018",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The mayor urged residents to remain _____ during the typhoon and to follow evacuation orders.'",
+      "options": {
+        "A": "calm",
+        "B": "hostile",
+        "C": "indifferent",
+        "D": "reckless"
+      },
+      "answer": "A",
+      "explanation": "Remaining calm fits the advice to follow evacuation orders."
+    },
+    {
+      "id": "E6-L019",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to GENEROUS.",
+      "options": {
+        "A": "stingy",
+        "B": "kind",
+        "C": "charitable",
+        "D": "patient"
+      },
+      "answer": "A",
+      "explanation": "Generous means giving freely; stingy means unwilling to give."
+    },
+    {
+      "id": "E6-L020",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Neither the teacher nor the students knows the answer.'",
+      "options": {
+        "A": "knows",
+        "B": "nor",
+        "C": "Neither",
+        "D": "answer"
+      },
+      "answer": "A",
+      "explanation": "With neither/nor, the verb agrees with the nearer subject (students), so it should be 'know'."
+    },
+    {
+      "id": "E6-L021",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to VIVID.",
+      "options": {
+        "A": "dull",
+        "B": "pale",
+        "C": "faint",
+        "D": "striking"
+      },
+      "answer": "D",
+      "explanation": "Vivid means producing powerful, clear images; striking is the closest synonym."
+    },
+    {
+      "id": "E6-L022",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to ANCIENT.",
+      "options": {
+        "A": "modern",
+        "B": "old",
+        "C": "antique",
+        "D": "aged"
+      },
+      "answer": "A",
+      "explanation": "Ancient means very old; modern is the opposite."
+    },
+    {
+      "id": "E6-L023",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The scientist's findings _____ the earlier theory, forcing the team to revise its model.'",
+      "options": {
+        "A": "confirmed",
+        "B": "repeated",
+        "C": "ignored",
+        "D": "contradicted"
+      },
+      "answer": "D",
+      "explanation": "Contradicted fits because the team had to revise its model."
+    },
+    {
+      "id": "E6-L024",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The number of enrollees have increased this year.'",
+      "options": {
+        "A": "have",
+        "B": "number",
+        "C": "increased",
+        "D": "year"
+      },
+      "answer": "A",
+      "explanation": "'The number' is singular, so the verb should be 'has'."
+    },
+    {
+      "id": "E6-L025",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to OBSOLETE.",
+      "options": {
+        "A": "current",
+        "B": "modern",
+        "C": "useful",
+        "D": "outdated"
+      },
+      "answer": "D",
+      "explanation": "Obsolete means no longer in use; outdated matches best."
+    },
+    {
+      "id": "E6-L026",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to VICTORY.",
+      "options": {
+        "A": "defeat",
+        "B": "triumph",
+        "C": "success",
+        "D": "conquest"
+      },
+      "answer": "A",
+      "explanation": "Victory means winning; defeat is the opposite."
+    },
+    {
+      "id": "E6-L027",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'To avoid confusion, the instructions must be written in a _____ manner.'",
+      "options": {
+        "A": "ambiguous",
+        "B": "secretive",
+        "C": "hasty",
+        "D": "clear"
+      },
+      "answer": "D",
+      "explanation": "Clear instructions avoid confusion."
+    },
+    {
+      "id": "E6-L028",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Everyone in the group are expected to contribute.'",
+      "options": {
+        "A": "are",
+        "B": "Everyone",
+        "C": "expected",
+        "D": "contribute"
+      },
+      "answer": "A",
+      "explanation": "'Everyone' is singular, so the verb should be 'is'."
+    },
+    {
+      "id": "E6-L029",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to HARDY.",
+      "options": {
+        "A": "fragile",
+        "B": "hasty",
+        "C": "timid",
+        "D": "robust"
+      },
+      "answer": "D",
+      "explanation": "Hardy means able to endure difficult conditions; robust matches best."
+    },
+    {
+      "id": "E6-L030",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The novel's ending was _____; readers debated its meaning for weeks.'",
+      "options": {
+        "A": "ambiguous",
+        "B": "obvious",
+        "C": "dull",
+        "D": "brief"
+      },
+      "answer": "A",
+      "explanation": "An ambiguous ending is open to interpretation, which fits readers debating it."
+    },
+    {
+      "id": "E6-L031",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to PERMANENT.",
+      "options": {
+        "A": "lasting",
+        "B": "stable",
+        "C": "durable",
+        "D": "temporary"
+      },
+      "answer": "D",
+      "explanation": "Permanent means lasting forever; temporary is the opposite."
+    },
+    {
+      "id": "E6-L032",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The quality of the products vary from batch to batch.'",
+      "options": {
+        "A": "vary",
+        "B": "quality",
+        "C": "batch",
+        "D": "from"
+      },
+      "answer": "A",
+      "explanation": "The subject 'quality' is singular, so the verb should be 'varies'."
+    },
+    {
+      "id": "E6-L033",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to ELOQUENT.",
+      "options": {
+        "A": "silent",
+        "B": "rude",
+        "C": "confused",
+        "D": "articulate"
+      },
+      "answer": "D",
+      "explanation": "Eloquent means fluent and persuasive in speaking; articulate matches best."
+    },
+    {
+      "id": "E6-L034",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'Farmers welcomed the rain because the soil had become _____ after months of drought.'",
+      "options": {
+        "A": "parched",
+        "B": "fertile",
+        "C": "soggy",
+        "D": "frozen"
+      },
+      "answer": "A",
+      "explanation": "Parched means dried out, fitting soil after months of drought."
+    },
+    {
+      "id": "E6-L035",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to INCLUDE.",
+      "options": {
+        "A": "add",
+        "B": "embrace",
+        "C": "contain",
+        "D": "exclude"
+      },
+      "answer": "D",
+      "explanation": "Include means to contain as part of a whole; exclude is the opposite."
+    },
+    {
+      "id": "E6-L036",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'She is one of the players who performs best under pressure.'",
+      "options": {
+        "A": "performs",
+        "B": "players",
+        "C": "one",
+        "D": "pressure"
+      },
+      "answer": "A",
+      "explanation": "The relative clause refers to 'players' (plural), so the verb should be 'perform'."
+    },
+    {
+      "id": "E6-L037",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to HAZARD.",
+      "options": {
+        "A": "safety",
+        "B": "reward",
+        "C": "shelter",
+        "D": "danger"
+      },
+      "answer": "D",
+      "explanation": "A hazard is a source of danger."
+    },
+    {
+      "id": "E6-L038",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The committee will _____ the budget proposal before forwarding it to the board.'",
+      "options": {
+        "A": "review",
+        "B": "ignore",
+        "C": "conceal",
+        "D": "postpone"
+      },
+      "answer": "A",
+      "explanation": "Review fits the context of examining a proposal before forwarding it."
+    },
+    {
+      "id": "E6-L039",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to BRAVE.",
+      "options": {
+        "A": "fearless",
+        "B": "daring",
+        "C": "bold",
+        "D": "cowardly"
+      },
+      "answer": "D",
+      "explanation": "Brave means showing courage; cowardly is the opposite."
+    },
+    {
+      "id": "E6-L040",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'There is many reasons to support the program.'",
+      "options": {
+        "A": "is",
+        "B": "There",
+        "C": "reasons",
+        "D": "support"
+      },
+      "answer": "A",
+      "explanation": "The subject 'reasons' is plural, so the verb should be 'are'."
+    },
+    {
+      "id": "E6-L041",
+      "section": "Language",
+      "question": "Read the passage and answer: 'When the coastal town of San Rafael lost its only library to a fire in 2019, residents assumed the building would never reopen. Instead, a group of retired teachers began collecting donated books in a borrowed garage. Within a year, the garage held more than 3,000 volumes, and volunteers ran weekend reading sessions for children. In 2022, the municipal government provided a vacant hall, and the collection moved into a proper reading room. Today, the library lends over 500 books a month, and its success is credited less to funding than to the persistence of its volunteers.' What is the main idea of the passage?",
+      "options": {
+        "A": "Fire safety rules for libraries",
+        "B": "A comparison of garages and halls",
+        "C": "Libraries are becoming obsolete",
+        "D": "How volunteers rebuilt a library after a fire"
+      },
+      "answer": "D",
+      "explanation": "The passage traces how volunteers rebuilt the library after the fire."
+    },
+    {
+      "id": "E6-L042",
+      "section": "Language",
+      "question": "In the San Rafael passage, the word PERSISTENCE most nearly means:",
+      "options": {
+        "A": "determination",
+        "B": "funding",
+        "C": "luck",
+        "D": "publicity"
+      },
+      "answer": "A",
+      "explanation": "Persistence means continuing firmly despite difficulty, i.e., determination."
+    },
+    {
+      "id": "E6-L043",
+      "section": "Language",
+      "question": "According to the San Rafael passage, in what year did the collection move into the vacant hall?",
+      "options": {
+        "A": "2019",
+        "B": "2020",
+        "C": "2022",
+        "D": "2023"
+      },
+      "answer": "C",
+      "explanation": "The passage states the municipal government provided a vacant hall in 2022."
+    },
+    {
+      "id": "E6-L044",
+      "section": "Language",
+      "question": "According to the San Rafael passage, the library's success is credited mainly to:",
+      "options": {
+        "A": "government funding",
+        "B": "the fire",
+        "C": "the donated garage",
+        "D": "the volunteers' persistence"
+      },
+      "answer": "D",
+      "explanation": "The passage says success is credited less to funding than to the persistence of its volunteers."
+    },
+    {
+      "id": "E6-L045",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to VERSATILE.",
+      "options": {
+        "A": "adaptable",
+        "B": "rigid",
+        "C": "narrow",
+        "D": "slow"
+      },
+      "answer": "A",
+      "explanation": "Versatile means able to adapt to many functions; adaptable matches best."
+    },
+    {
+      "id": "E6-L046",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to HONEST.",
+      "options": {
+        "A": "truthful",
+        "B": "loyal",
+        "C": "sincere",
+        "D": "dishonest"
+      },
+      "answer": "D",
+      "explanation": "Honest means truthful; dishonest is the opposite."
+    },
+    {
+      "id": "E6-L047",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The witness could not recall the exact time, but her _____ of the events was consistent.'",
+      "options": {
+        "A": "account",
+        "B": "excuse",
+        "C": "rumor",
+        "D": "doubt"
+      },
+      "answer": "A",
+      "explanation": "An account is a report of events, fitting a witness's testimony."
+    },
+    {
+      "id": "E6-L048",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The team, along with their coach, are preparing for the finals.'",
+      "options": {
+        "A": "are",
+        "B": "along",
+        "C": "team",
+        "D": "finals"
+      },
+      "answer": "A",
+      "explanation": "The phrase 'along with their coach' does not change the singular subject 'team', so the verb should be 'is'."
+    },
+    {
+      "id": "E6-L049",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to SURPLUS.",
+      "options": {
+        "A": "shortage",
+        "B": "debt",
+        "C": "need",
+        "D": "excess"
+      },
+      "answer": "D",
+      "explanation": "A surplus is an amount extra beyond what is needed; excess matches best."
+    },
+    {
+      "id": "E6-L050",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'Because the road was _____, travelers were advised to take an alternate route.'",
+      "options": {
+        "A": "flooded",
+        "B": "paved",
+        "C": "scenic",
+        "D": "crowded"
+      },
+      "answer": "A",
+      "explanation": "A flooded road requires an alternate route."
+    },
+    {
+      "id": "E6-L051",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to ARRIVE.",
+      "options": {
+        "A": "depart",
+        "B": "enter",
+        "C": "remain",
+        "D": "approach"
+      },
+      "answer": "A",
+      "explanation": "Arrive means to reach a place; depart means to leave it."
+    },
+    {
+      "id": "E6-L052",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Each participant was given a certificate and a medal, and were asked to sign the logbook.'",
+      "options": {
+        "A": "Each",
+        "B": "logbook",
+        "C": "sign",
+        "D": "were"
+      },
+      "answer": "D",
+      "explanation": "The subject 'Each participant' is singular, so the verb should be 'was'."
+    },
+    {
+      "id": "E6-L053",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to GENUINE.",
+      "options": {
+        "A": "authentic",
+        "B": "fake",
+        "C": "expensive",
+        "D": "rare"
+      },
+      "answer": "A",
+      "explanation": "Genuine means real and not counterfeit; authentic matches best."
+    },
+    {
+      "id": "E6-L054",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The teacher praised the students for their _____ effort in finishing the project ahead of schedule.'",
+      "options": {
+        "A": "reluctant",
+        "B": "careless",
+        "C": "minimal",
+        "D": "commendable"
+      },
+      "answer": "D",
+      "explanation": "Commendable means deserving praise, fitting the teacher's praise."
+    },
+    {
+      "id": "E6-L055",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to COMPLEX.",
+      "options": {
+        "A": "simple",
+        "B": "tangled",
+        "C": "detailed",
+        "D": "confusing"
+      },
+      "answer": "A",
+      "explanation": "Complex means complicated; simple is the opposite."
+    },
+    {
+      "id": "E6-L056",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Neither the rain nor the traffic delay the start of the program.'",
+      "options": {
+        "A": "delay",
+        "B": "nor",
+        "C": "Neither",
+        "D": "start"
+      },
+      "answer": "A",
+      "explanation": "With neither/nor, the verb agrees with the nearer subject (traffic, singular), so it should be 'delays'."
+    },
+    {
+      "id": "E6-L057",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to RAPID.",
+      "options": {
+        "A": "slow",
+        "B": "gradual",
+        "C": "swift",
+        "D": "steady"
+      },
+      "answer": "C",
+      "explanation": "Rapid means happening quickly; swift matches best."
+    },
+    {
+      "id": "E6-L058",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The report _____ several recommendations for reducing waste in the factory.'",
+      "options": {
+        "A": "denies",
+        "B": "hides",
+        "C": "proposes",
+        "D": "ignores"
+      },
+      "answer": "C",
+      "explanation": "Proposes fits a report putting forward recommendations."
+    },
+    {
+      "id": "E6-L059",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to PERMIT.",
+      "options": {
+        "A": "forbid",
+        "B": "allow",
+        "C": "approve",
+        "D": "grant"
+      },
+      "answer": "A",
+      "explanation": "Permit means to allow; forbid is the opposite."
+    },
+    {
+      "id": "E6-L060",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The audience were asked to keep their phones silent during the performance.'",
+      "options": {
+        "A": "audience",
+        "B": "during",
+        "C": "phones",
+        "D": "were"
+      },
+      "answer": "D",
+      "explanation": "'Audience' is treated as a singular collective noun here, so the verb should be 'was'."
+    },
+    {
+      "id": "E6-L061",
+      "section": "Language",
+      "question": "Read the passage and answer: 'Mangrove forests protect coastlines by softening storm surges and trapping sediment. Yet in many coastal areas, mangroves have been cleared for fishponds and settlements. In the village of Bantayan, residents reversed this trend: they replanted 12 hectares of mangroves over four years, guarding seedlings from grazing animals and debris. Fish catches near the restored forest rose, and the shoreline, once eroding, stabilized. Researchers studying the site concluded that community protection, not planting alone, determined whether the seedlings survived.' What is the main idea of the passage?",
+      "options": {
+        "A": "Community protection made mangrove restoration succeed",
+        "B": "Mangroves are useless to coastlines",
+        "C": "Fishponds are better than mangroves",
+        "D": "Storms cause mangroves to grow"
+      },
+      "answer": "A",
+      "explanation": "The passage emphasizes that community protection, not planting alone, determined the restoration's success."
+    },
+    {
+      "id": "E6-L062",
+      "section": "Language",
+      "question": "In the Bantayan passage, the word STABILIZED most nearly means:",
+      "options": {
+        "A": "flooded",
+        "B": "disappeared",
+        "C": "became steady",
+        "D": "shrank"
+      },
+      "answer": "C",
+      "explanation": "Stabilized means became steady, as the eroding shoreline stopped eroding."
+    },
+    {
+      "id": "E6-L063",
+      "section": "Language",
+      "question": "According to the Bantayan passage, how many hectares of mangroves did residents replant?",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "12",
+        "D": "20"
+      },
+      "answer": "C",
+      "explanation": "The passage states residents replanted 12 hectares over four years."
+    },
+    {
+      "id": "E6-L064",
+      "section": "Language",
+      "question": "According to the Bantayan passage, researchers concluded that:",
+      "options": {
+        "A": "community protection determined whether seedlings survived",
+        "B": "planting alone guarantees survival",
+        "C": "grazing animals help seedlings",
+        "D": "sediment harms mangroves"
+      },
+      "answer": "A",
+      "explanation": "Researchers concluded that community protection, not planting alone, determined seedling survival."
+    },
+    {
+      "id": "E6-L065",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to DURABLE.",
+      "options": {
+        "A": "fragile",
+        "B": "heavy",
+        "C": "cheap",
+        "D": "long-lasting"
+      },
+      "answer": "D",
+      "explanation": "Durable means able to last a long time; long-lasting matches best."
+    },
+    {
+      "id": "E6-L066",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to POLITE.",
+      "options": {
+        "A": "rude",
+        "B": "courteous",
+        "C": "kind",
+        "D": "calm"
+      },
+      "answer": "A",
+      "explanation": "Polite means showing good manners; rude is the opposite."
+    },
+    {
+      "id": "E6-L067",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The new policy aims to _____ the gap between urban and rural schools.'",
+      "options": {
+        "A": "widen",
+        "B": "ignore",
+        "C": "narrow",
+        "D": "hide"
+      },
+      "answer": "C",
+      "explanation": "Narrow the gap means reduce the difference, which is the policy's aim."
+    },
+    {
+      "id": "E6-L068",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'One of the books on the shelf are missing.'",
+      "options": {
+        "A": "One",
+        "B": "books",
+        "C": "missing",
+        "D": "are"
+      },
+      "answer": "D",
+      "explanation": "The subject is 'One', which is singular, so the verb should be 'is'."
+    },
+    {
+      "id": "E6-L069",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to CAUTIOUS.",
+      "options": {
+        "A": "reckless",
+        "B": "bold",
+        "C": "careful",
+        "D": "hasty"
+      },
+      "answer": "C",
+      "explanation": "Cautious means being careful to avoid danger or mistakes."
+    },
+    {
+      "id": "E6-L070",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'After reviewing the evidence, the panel reached a _____ decision.'",
+      "options": {
+        "A": "unanimous",
+        "B": "divided",
+        "C": "hasty",
+        "D": "secret"
+      },
+      "answer": "A",
+      "explanation": "Unanimous means everyone agreed, fitting a panel that reached one decision."
+    },
+    {
+      "id": "E6-L071",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to BEGIN.",
+      "options": {
+        "A": "end",
+        "B": "start",
+        "C": "commence",
+        "D": "launch"
+      },
+      "answer": "A",
+      "explanation": "Begin means to start; end is the opposite."
+    },
+    {
+      "id": "E6-L072",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The children, as well as their teacher, has arrived.'",
+      "options": {
+        "A": "children",
+        "B": "as well as",
+        "C": "has",
+        "D": "arrived"
+      },
+      "answer": "C",
+      "explanation": "The phrase 'as well as' does not change the plural subject 'children', so the verb should be 'have'."
+    },
+    {
+      "id": "E6-L073",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to EVIDENT.",
+      "options": {
+        "A": "hidden",
+        "B": "doubtful",
+        "C": "obvious",
+        "D": "rare"
+      },
+      "answer": "C",
+      "explanation": "Evident means plainly visible or clear; obvious matches best."
+    },
+    {
+      "id": "E6-L074",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The festival drew visitors from neighboring towns, _____ local businesses.'",
+      "options": {
+        "A": "harming",
+        "B": "closing",
+        "C": "ignoring",
+        "D": "benefiting"
+      },
+      "answer": "D",
+      "explanation": "Visitors spending money benefits local businesses."
+    },
+    {
+      "id": "E6-L075",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to RICH.",
+      "options": {
+        "A": "poor",
+        "B": "wealthy",
+        "C": "generous",
+        "D": "powerful"
+      },
+      "answer": "A",
+      "explanation": "Rich means having great wealth; poor is the opposite."
+    },
+    {
+      "id": "E6-L076",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'Either the students or the teacher are responsible for the report.'",
+      "options": {
+        "A": "Either",
+        "B": "or",
+        "C": "are",
+        "D": "responsible"
+      },
+      "answer": "C",
+      "explanation": "With either/or, the verb agrees with the nearer subject (teacher, singular), so it should be 'is'."
+    },
+    {
+      "id": "E6-L077",
+      "section": "Language",
+      "question": "Choose the word closest in meaning to SOOTHE.",
+      "options": {
+        "A": "irritate",
+        "B": "excite",
+        "C": "calm",
+        "D": "confuse"
+      },
+      "answer": "C",
+      "explanation": "Soothe means to gently calm or relieve."
+    },
+    {
+      "id": "E6-L078",
+      "section": "Language",
+      "question": "Choose the best word to complete the sentence: 'The athlete trained _____ for six months before the competition.'",
+      "options": {
+        "A": "reluctantly",
+        "B": "carelessly",
+        "C": "rarely",
+        "D": "rigorously"
+      },
+      "answer": "D",
+      "explanation": "Rigorously means thoroughly and strictly, fitting serious training."
+    },
+    {
+      "id": "E6-L079",
+      "section": "Language",
+      "question": "Choose the word opposite in meaning to SUCCESS.",
+      "options": {
+        "A": "failure",
+        "B": "triumph",
+        "C": "victory",
+        "D": "achievement"
+      },
+      "answer": "A",
+      "explanation": "Success means achieving a goal; failure is the opposite."
+    },
+    {
+      "id": "E6-L080",
+      "section": "Language",
+      "question": "Which part of the sentence has an error? 'The number of visitors to the museum have doubled since last year.'",
+      "options": {
+        "A": "have",
+        "B": "number",
+        "C": "doubled",
+        "D": "since"
+      },
+      "answer": "A",
+      "explanation": "'The number' is singular, so the verb should be 'has'."
+    },
+    {
+      "id": "E6-M001",
+      "section": "Mathematics",
+      "question": "What is 3/4 + 2/3?",
+      "options": {
+        "A": "5/7",
+        "B": "5/12",
+        "C": "17/12",
+        "D": "1"
+      },
+      "answer": "C",
+      "explanation": "Common denominator 12: 9/12 + 8/12 = 17/12."
+    },
+    {
+      "id": "E6-M002",
+      "section": "Mathematics",
+      "question": "What is 15% of 240?",
+      "options": {
+        "A": "24",
+        "B": "30",
+        "C": "48",
+        "D": "36"
+      },
+      "answer": "D",
+      "explanation": "15% of 240 = 0.15 x 240 = 36."
+    },
+    {
+      "id": "E6-M003",
+      "section": "Mathematics",
+      "question": "Solve for x: 3x + 7 = 22.",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explanation": "3x = 22 - 7 = 15, so x = 5."
+    },
+    {
+      "id": "E6-M004",
+      "section": "Mathematics",
+      "question": "What is the area of a rectangle 12 cm long and 7 cm wide?",
+      "options": {
+        "A": "76 sq cm",
+        "B": "84 sq cm",
+        "C": "96 sq cm",
+        "D": "70 sq cm"
+      },
+      "answer": "B",
+      "explanation": "Area = length x width = 12 x 7 = 84 sq cm."
+    },
+    {
+      "id": "E6-M005",
+      "section": "Mathematics",
+      "question": "What is 2^5?",
+      "options": {
+        "A": "10",
+        "B": "25",
+        "C": "32",
+        "D": "64"
+      },
+      "answer": "C",
+      "explanation": "2^5 = 2 x 2 x 2 x 2 x 2 = 32."
+    },
+    {
+      "id": "E6-M006",
+      "section": "Mathematics",
+      "question": "A train travels at 60 km/h for 2.5 hours. How far does it go?",
+      "options": {
+        "A": "120 km",
+        "B": "150 km",
+        "C": "180 km",
+        "D": "135 km"
+      },
+      "answer": "B",
+      "explanation": "Distance = speed x time = 60 x 2.5 = 150 km."
+    },
+    {
+      "id": "E6-M007",
+      "section": "Mathematics",
+      "question": "What is the mean of 4, 7, 10, 13, and 16?",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "answer": "B",
+      "explanation": "Sum = 50; 50 / 5 = 10."
+    },
+    {
+      "id": "E6-M008",
+      "section": "Mathematics",
+      "question": "What is 5! (5 factorial)?",
+      "options": {
+        "A": "20",
+        "B": "60",
+        "C": "120",
+        "D": "240"
+      },
+      "answer": "C",
+      "explanation": "5! = 5 x 4 x 3 x 2 x 1 = 120."
+    },
+    {
+      "id": "E6-M009",
+      "section": "Mathematics",
+      "question": "What is the perimeter of a square with side 9 cm?",
+      "options": {
+        "A": "27 cm",
+        "B": "36 cm",
+        "C": "45 cm",
+        "D": "81 cm"
+      },
+      "answer": "B",
+      "explanation": "Perimeter = 4 x side = 4 x 9 = 36 cm."
+    },
+    {
+      "id": "E6-M010",
+      "section": "Mathematics",
+      "question": "Solve for x: 2(x - 3) = 10.",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "answer": "C",
+      "explanation": "Divide by 2: x - 3 = 5, so x = 8."
+    },
+    {
+      "id": "E6-M011",
+      "section": "Mathematics",
+      "question": "What is 7.5 x 4?",
+      "options": {
+        "A": "28",
+        "B": "30",
+        "C": "32",
+        "D": "29"
+      },
+      "answer": "B",
+      "explanation": "7.5 x 4 = 30."
+    },
+    {
+      "id": "E6-M012",
+      "section": "Mathematics",
+      "question": "A jacket priced at 800 pesos is discounted 25%. What is the sale price?",
+      "options": {
+        "A": "550",
+        "B": "600",
+        "C": "650",
+        "D": "700"
+      },
+      "answer": "B",
+      "explanation": "Discount = 0.25 x 800 = 200; sale price = 800 - 200 = 600."
+    },
+    {
+      "id": "E6-M013",
+      "section": "Mathematics",
+      "question": "What is the least common multiple of 6 and 8?",
+      "options": {
+        "A": "12",
+        "B": "24",
+        "C": "48",
+        "D": "16"
+      },
+      "answer": "B",
+      "explanation": "Multiples of 6: 6, 12, 18, 24... Multiples of 8: 8, 16, 24... LCM = 24."
+    },
+    {
+      "id": "E6-M014",
+      "section": "Mathematics",
+      "question": "What is the slope of the line through (1, 2) and (4, 8)?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "6"
+      },
+      "answer": "B",
+      "explanation": "Slope = (8 - 2)/(4 - 1) = 6/3 = 2."
+    },
+    {
+      "id": "E6-M015",
+      "section": "Mathematics",
+      "question": "18 is what percent of 90?",
+      "options": {
+        "A": "15%",
+        "B": "18%",
+        "C": "20%",
+        "D": "25%"
+      },
+      "answer": "C",
+      "explanation": "18/90 = 0.20 = 20%."
+    },
+    {
+      "id": "E6-M016",
+      "section": "Mathematics",
+      "question": "What is the volume of a cube with edge 5 cm?",
+      "options": {
+        "A": "25 cu cm",
+        "B": "100 cu cm",
+        "C": "125 cu cm",
+        "D": "150 cu cm"
+      },
+      "answer": "C",
+      "explanation": "Volume = 5^3 = 125 cu cm."
+    },
+    {
+      "id": "E6-M017",
+      "section": "Mathematics",
+      "question": "What is 3^3 + 4^2?",
+      "options": {
+        "A": "35",
+        "B": "43",
+        "C": "52",
+        "D": "65"
+      },
+      "answer": "B",
+      "explanation": "3^3 = 27 and 4^2 = 16; 27 + 16 = 43."
+    },
+    {
+      "id": "E6-M018",
+      "section": "Mathematics",
+      "question": "How much simple interest is earned on 5,000 pesos at 4% per year for 3 years?",
+      "options": {
+        "A": "400",
+        "B": "600",
+        "C": "800",
+        "D": "1200"
+      },
+      "answer": "B",
+      "explanation": "Interest = 5000 x 0.04 x 3 = 600."
+    },
+    {
+      "id": "E6-M019",
+      "section": "Mathematics",
+      "question": "If y = 2x + 1 and x = 6, what is y?",
+      "options": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14"
+      },
+      "answer": "C",
+      "explanation": "y = 2(6) + 1 = 13."
+    },
+    {
+      "id": "E6-M020",
+      "section": "Mathematics",
+      "question": "What is the greatest common divisor of 36 and 48?",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "18",
+        "D": "24"
+      },
+      "answer": "B",
+      "explanation": "Divisors of 36: 1,2,3,4,6,9,12,18,36. Divisors of 48: 1,2,3,4,6,8,12,16,24,48. GCD = 12."
+    },
+    {
+      "id": "E6-M021",
+      "section": "Mathematics",
+      "question": "What is the area of a triangle with base 10 cm and height 6 cm?",
+      "options": {
+        "A": "30 sq cm",
+        "B": "60 sq cm",
+        "C": "45 sq cm",
+        "D": "15 sq cm"
+      },
+      "answer": "A",
+      "explanation": "Area = (1/2) x base x height = (1/2) x 10 x 6 = 30 sq cm."
+    },
+    {
+      "id": "E6-M022",
+      "section": "Mathematics",
+      "question": "What is 0.75 x 80?",
+      "options": {
+        "A": "50",
+        "B": "60",
+        "C": "65",
+        "D": "70"
+      },
+      "answer": "B",
+      "explanation": "0.75 x 80 = 60."
+    },
+    {
+      "id": "E6-M023",
+      "section": "Mathematics",
+      "question": "Solve for x: x/3 + 2 = 7.",
+      "options": {
+        "A": "9",
+        "B": "12",
+        "C": "15",
+        "D": "18"
+      },
+      "answer": "C",
+      "explanation": "x/3 = 5, so x = 15."
+    },
+    {
+      "id": "E6-M024",
+      "section": "Mathematics",
+      "question": "What is the circumference of a circle with radius 7 cm? Use pi = 22/7.",
+      "options": {
+        "A": "22 cm",
+        "B": "44 cm",
+        "C": "154 cm",
+        "D": "88 cm"
+      },
+      "answer": "B",
+      "explanation": "Circumference = 2 x pi x r = 2 x (22/7) x 7 = 44 cm."
+    },
+    {
+      "id": "E6-M025",
+      "section": "Mathematics",
+      "question": "What is the median of 3, 9, 5, 12, and 7?",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "9",
+        "D": "12"
+      },
+      "answer": "B",
+      "explanation": "Sorted: 3, 5, 7, 9, 12. The middle value is 7."
+    },
+    {
+      "id": "E6-M026",
+      "section": "Mathematics",
+      "question": "What is 2/5 of 250?",
+      "options": {
+        "A": "50",
+        "B": "75",
+        "C": "100",
+        "D": "125"
+      },
+      "answer": "C",
+      "explanation": "(2/5) x 250 = 500/5 = 100."
+    },
+    {
+      "id": "E6-M027",
+      "section": "Mathematics",
+      "question": "What is (-6) x (-4) + 3?",
+      "options": {
+        "A": "21",
+        "B": "24",
+        "C": "27",
+        "D": "30"
+      },
+      "answer": "C",
+      "explanation": "(-6) x (-4) = 24; 24 + 3 = 27."
+    },
+    {
+      "id": "E6-M028",
+      "section": "Mathematics",
+      "question": "An amount of 40 is shared in the ratio 3:5. What is the larger share?",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "answer": "C",
+      "explanation": "Total parts = 8; each part = 40/8 = 5; larger share = 5 x 5 = 25."
+    },
+    {
+      "id": "E6-M029",
+      "section": "Mathematics",
+      "question": "What is 9^2 - 7^2?",
+      "options": {
+        "A": "16",
+        "B": "32",
+        "C": "48",
+        "D": "64"
+      },
+      "answer": "B",
+      "explanation": "81 - 49 = 32."
+    },
+    {
+      "id": "E6-M030",
+      "section": "Mathematics",
+      "question": "A car covers 240 km in 4 hours. What is its average speed?",
+      "options": {
+        "A": "50 km/h",
+        "B": "55 km/h",
+        "C": "60 km/h",
+        "D": "65 km/h"
+      },
+      "answer": "C",
+      "explanation": "Speed = 240/4 = 60 km/h."
+    },
+    {
+      "id": "E6-M031",
+      "section": "Mathematics",
+      "question": "What is 1/2 + 1/3 + 1/6?",
+      "options": {
+        "A": "1",
+        "B": "5/6",
+        "C": "7/6",
+        "D": "1/2"
+      },
+      "answer": "A",
+      "explanation": "Common denominator 6: 3/6 + 2/6 + 1/6 = 6/6 = 1."
+    },
+    {
+      "id": "E6-M032",
+      "section": "Mathematics",
+      "question": "A price of 150 is increased by 20%. What is the new price?",
+      "options": {
+        "A": "160",
+        "B": "170",
+        "C": "180",
+        "D": "200"
+      },
+      "answer": "C",
+      "explanation": "Increase = 0.20 x 150 = 30; new price = 150 + 30 = 180."
+    },
+    {
+      "id": "E6-M033",
+      "section": "Mathematics",
+      "question": "If 5 pens cost 75 pesos, how much do 8 pens cost at the same unit price?",
+      "options": {
+        "A": "100",
+        "B": "110",
+        "C": "120",
+        "D": "130"
+      },
+      "answer": "C",
+      "explanation": "Unit price = 75/5 = 15; 8 pens = 8 x 15 = 120."
+    },
+    {
+      "id": "E6-M034",
+      "section": "Mathematics",
+      "question": "Solve for x: 4x - 9 = 23.",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "C",
+      "explanation": "4x = 32, so x = 8."
+    },
+    {
+      "id": "E6-M035",
+      "section": "Mathematics",
+      "question": "What is the area of a circle with radius 10 cm? Use pi = 3.14.",
+      "options": {
+        "A": "31.4 sq cm",
+        "B": "314 sq cm",
+        "C": "628 sq cm",
+        "D": "100 sq cm"
+      },
+      "answer": "B",
+      "explanation": "Area = pi x r^2 = 3.14 x 100 = 314 sq cm."
+    },
+    {
+      "id": "E6-M036",
+      "section": "Mathematics",
+      "question": "A bag has 4 red marbles and 6 blue marbles. What is the probability of drawing a red marble?",
+      "options": {
+        "A": "1/5",
+        "B": "2/5",
+        "C": "3/5",
+        "D": "4/5"
+      },
+      "answer": "B",
+      "explanation": "P(red) = 4/(4+6) = 4/10 = 2/5."
+    },
+    {
+      "id": "E6-M037",
+      "section": "Mathematics",
+      "question": "What is 15 x 12?",
+      "options": {
+        "A": "150",
+        "B": "165",
+        "C": "180",
+        "D": "195"
+      },
+      "answer": "C",
+      "explanation": "15 x 12 = 180."
+    },
+    {
+      "id": "E6-M038",
+      "section": "Mathematics",
+      "question": "What is 3/8 as a decimal?",
+      "options": {
+        "A": "0.38",
+        "B": "0.375",
+        "C": "0.35",
+        "D": "0.4"
+      },
+      "answer": "B",
+      "explanation": "3/8 = 0.375."
+    },
+    {
+      "id": "E6-M039",
+      "section": "Mathematics",
+      "question": "Find the next term: 1, 3, 6, 10, 15, ...",
+      "options": {
+        "A": "18",
+        "B": "20",
+        "C": "21",
+        "D": "22"
+      },
+      "answer": "C",
+      "explanation": "Differences are 2, 3, 4, 5, so the next difference is 6; 15 + 6 = 21."
+    },
+    {
+      "id": "E6-M040",
+      "section": "Mathematics",
+      "question": "What is the area of a trapezoid with bases 8 cm and 6 cm and height 5 cm?",
+      "options": {
+        "A": "30 sq cm",
+        "B": "35 sq cm",
+        "C": "40 sq cm",
+        "D": "70 sq cm"
+      },
+      "answer": "B",
+      "explanation": "Area = (1/2)(8 + 6)(5) = (1/2)(14)(5) = 35 sq cm."
+    },
+    {
+      "id": "E6-A001",
+      "section": "Aptitude",
+      "question": "Find the next number: 3, 7, 11, 15, ...",
+      "options": {
+        "A": "17",
+        "B": "18",
+        "C": "19",
+        "D": "20"
+      },
+      "answer": "C",
+      "explanation": "Each term increases by 4; 15 + 4 = 19."
+    },
+    {
+      "id": "E6-A002",
+      "section": "Aptitude",
+      "question": "Book is to Read as Pen is to:",
+      "options": {
+        "A": "Write",
+        "B": "Draw",
+        "C": "Ink",
+        "D": "Paper"
+      },
+      "answer": "A",
+      "explanation": "A book is used for reading; a pen is used for writing."
+    },
+    {
+      "id": "E6-A003",
+      "section": "Aptitude",
+      "question": "Which does NOT belong? Rose, Tulip, Sunflower, Oak.",
+      "options": {
+        "A": "Rose",
+        "B": "Tulip",
+        "C": "Sunflower",
+        "D": "Oak"
+      },
+      "answer": "D",
+      "explanation": "Rose, tulip, and sunflower are flowers; an oak is a tree."
+    },
+    {
+      "id": "E6-A004",
+      "section": "Aptitude",
+      "question": "Find the next number: 5, 10, 20, 40, ...",
+      "options": {
+        "A": "60",
+        "B": "70",
+        "C": "80",
+        "D": "100"
+      },
+      "answer": "C",
+      "explanation": "Each term doubles; 40 x 2 = 80."
+    },
+    {
+      "id": "E6-A005",
+      "section": "Aptitude",
+      "question": "If all Bloops are Gleeps and all Gleeps are Smeeps, then all Bloops are:",
+      "options": {
+        "A": "Gleeps",
+        "B": "Smeeps",
+        "C": "neither",
+        "D": "Bloops only"
+      },
+      "answer": "B",
+      "explanation": "Since Bloops are inside Gleeps and Gleeps are inside Smeeps, all Bloops are Smeeps."
+    },
+    {
+      "id": "E6-A006",
+      "section": "Aptitude",
+      "question": "Find the next number: 1, 1, 2, 3, 5, 8, ...",
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13"
+      },
+      "answer": "D",
+      "explanation": "Each term is the sum of the two before it: 5 + 8 = 13."
+    },
+    {
+      "id": "E6-A007",
+      "section": "Aptitude",
+      "question": "Pen is to Writer as Brush is to:",
+      "options": {
+        "A": "Canvas",
+        "B": "Paint",
+        "C": "Painter",
+        "D": "Picture"
+      },
+      "answer": "C",
+      "explanation": "A writer uses a pen to create; a painter uses a brush to create."
+    },
+    {
+      "id": "E6-A008",
+      "section": "Aptitude",
+      "question": "Find the next number: 100, 90, 81, 73, ...",
+      "options": {
+        "A": "64",
+        "B": "65",
+        "C": "66",
+        "D": "67"
+      },
+      "answer": "C",
+      "explanation": "Differences are -10, -9, -8, so the next difference is -7; 73 - 7 = 66."
+    },
+    {
+      "id": "E6-A009",
+      "section": "Aptitude",
+      "question": "If CAT is coded as 3120 (C=3, A=1, T=20), how is DOG coded?",
+      "options": {
+        "A": "4157",
+        "B": "4715",
+        "C": "1547",
+        "D": "4156"
+      },
+      "answer": "A",
+      "explanation": "D=4, O=15, G=7, so DOG = 4-15-7, written 4157."
+    },
+    {
+      "id": "E6-A010",
+      "section": "Aptitude",
+      "question": "Which number is NOT prime?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "answer": "D",
+      "explanation": "9 = 3 x 3, so it is not prime; 3, 5, and 7 are prime."
+    },
+    {
+      "id": "E6-A011",
+      "section": "Aptitude",
+      "question": "Find the next number: 2, 4, 8, 16, ...",
+      "options": {
+        "A": "24",
+        "B": "28",
+        "C": "32",
+        "D": "36"
+      },
+      "answer": "C",
+      "explanation": "Each term doubles; 16 x 2 = 32."
+    },
+    {
+      "id": "E6-A012",
+      "section": "Aptitude",
+      "question": "Eye is to See as Ear is to:",
+      "options": {
+        "A": "Speak",
+        "B": "Smell",
+        "C": "Hear",
+        "D": "Touch"
+      },
+      "answer": "C",
+      "explanation": "The eye is used for seeing; the ear is used for hearing."
+    },
+    {
+      "id": "E6-A013",
+      "section": "Aptitude",
+      "question": "Find the next letter: Z, X, V, T, ...",
+      "options": {
+        "A": "P",
+        "B": "Q",
+        "C": "R",
+        "D": "S"
+      },
+      "answer": "C",
+      "explanation": "Each letter steps back 2 in the alphabet; T - 2 = R."
+    },
+    {
+      "id": "E6-A014",
+      "section": "Aptitude",
+      "question": "If 5 workers finish a job in 12 days, how long will 10 workers take at the same rate?",
+      "options": {
+        "A": "6 days",
+        "B": "10 days",
+        "C": "12 days",
+        "D": "24 days"
+      },
+      "answer": "A",
+      "explanation": "Doubling the workers halves the time: 12 / 2 = 6 days."
+    },
+    {
+      "id": "E6-A015",
+      "section": "Aptitude",
+      "question": "Which does NOT belong? Circle, Triangle, Square, Sphere.",
+      "options": {
+        "A": "Circle",
+        "B": "Triangle",
+        "C": "Square",
+        "D": "Sphere"
+      },
+      "answer": "D",
+      "explanation": "Circle, triangle, and square are flat (2D) shapes; a sphere is three-dimensional."
+    },
+    {
+      "id": "E6-A016",
+      "section": "Aptitude",
+      "question": "Find the next number: 6, 12, 24, 48, ...",
+      "options": {
+        "A": "72",
+        "B": "84",
+        "C": "96",
+        "D": "108"
+      },
+      "answer": "C",
+      "explanation": "Each term doubles; 48 x 2 = 96."
+    },
+    {
+      "id": "E6-A017",
+      "section": "Aptitude",
+      "question": "Book is to Pages as Wall is to:",
+      "options": {
+        "A": "Bricks",
+        "B": "Paint",
+        "C": "Roof",
+        "D": "Door"
+      },
+      "answer": "A",
+      "explanation": "A book is made of pages; a wall is made of bricks."
+    },
+    {
+      "id": "E6-A018",
+      "section": "Aptitude",
+      "question": "Find the next letter: A, C, F, J, ...",
+      "options": {
+        "A": "M",
+        "B": "N",
+        "C": "O",
+        "D": "P"
+      },
+      "answer": "C",
+      "explanation": "Steps increase by 2, 3, 4, so the next step is 5; J + 5 = O."
+    },
+    {
+      "id": "E6-A019",
+      "section": "Aptitude",
+      "question": "Maria is taller than Ana. Ana is taller than Rosa. Who is the shortest?",
+      "options": {
+        "A": "Maria",
+        "B": "Ana",
+        "C": "Rosa",
+        "D": "Cannot tell"
+      },
+      "answer": "C",
+      "explanation": "Maria > Ana > Rosa, so Rosa is shortest."
+    },
+    {
+      "id": "E6-A020",
+      "section": "Aptitude",
+      "question": "Find the next number: 9, 18, 36, 72, ...",
+      "options": {
+        "A": "108",
+        "B": "120",
+        "C": "144",
+        "D": "180"
+      },
+      "answer": "C",
+      "explanation": "Each term doubles; 72 x 2 = 144."
+    },
+    {
+      "id": "E6-A021",
+      "section": "Aptitude",
+      "question": "Which number does NOT belong? 12, 18, 24, 35.",
+      "options": {
+        "A": "12",
+        "B": "18",
+        "C": "24",
+        "D": "35"
+      },
+      "answer": "D",
+      "explanation": "12, 18, and 24 are divisible by 6; 35 is not."
+    },
+    {
+      "id": "E6-A022",
+      "section": "Aptitude",
+      "question": "Water is to Thirst as Food is to:",
+      "options": {
+        "A": "Hunger",
+        "B": "Taste",
+        "C": "Cooking",
+        "D": "Plate"
+      },
+      "answer": "A",
+      "explanation": "Water satisfies thirst; food satisfies hunger."
+    },
+    {
+      "id": "E6-A023",
+      "section": "Aptitude",
+      "question": "Find the next number: 1, 2, 6, 24, ...",
+      "options": {
+        "A": "60",
+        "B": "96",
+        "C": "120",
+        "D": "144"
+      },
+      "answer": "C",
+      "explanation": "These are factorials: 1!, 2!, 3!, 4!; next is 5! = 120."
+    },
+    {
+      "id": "E6-A024",
+      "section": "Aptitude",
+      "question": "If today is Wednesday, what day of the week will it be in 10 days?",
+      "options": {
+        "A": "Friday",
+        "B": "Saturday",
+        "C": "Sunday",
+        "D": "Monday"
+      },
+      "answer": "B",
+      "explanation": "10 days = 1 week + 3 days; Wednesday + 3 days = Saturday."
+    },
+    {
+      "id": "E6-A025",
+      "section": "Aptitude",
+      "question": "Find the next number: 3, 9, 27, 81, ...",
+      "options": {
+        "A": "162",
+        "B": "243",
+        "C": "324",
+        "D": "108"
+      },
+      "answer": "B",
+      "explanation": "Each term triples; 81 x 3 = 243."
+    },
+    {
+      "id": "E6-A026",
+      "section": "Aptitude",
+      "question": "Fish is to School as Wolf is to:",
+      "options": {
+        "A": "Pack",
+        "B": "Herd",
+        "C": "Flock",
+        "D": "Swarm"
+      },
+      "answer": "A",
+      "explanation": "A group of fish is called a school; a group of wolves is called a pack."
+    },
+    {
+      "id": "E6-A027",
+      "section": "Aptitude",
+      "question": "Find the next number: 20, 17, 13, 10, 6, ...",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Differences alternate -3, -4; 6 - 3 = 3."
+    },
+    {
+      "id": "E6-A028",
+      "section": "Aptitude",
+      "question": "Which month does NOT belong? January, March, May, June.",
+      "options": {
+        "A": "January",
+        "B": "March",
+        "C": "May",
+        "D": "June"
+      },
+      "answer": "D",
+      "explanation": "January, March, and May have 31 days; June has 30 days."
+    },
+    {
+      "id": "E6-A029",
+      "section": "Aptitude",
+      "question": "If all R are S and no S is T, which must be true?",
+      "options": {
+        "A": "All R are T",
+        "B": "No R is T",
+        "C": "Some R are T",
+        "D": "All T are R"
+      },
+      "answer": "B",
+      "explanation": "Since every R is an S and no S is a T, no R can be a T."
+    },
+    {
+      "id": "E6-A030",
+      "section": "Aptitude",
+      "question": "If MANGO is coded by letter positions as 13-14-1-7-15, how is APPLE coded?",
+      "options": {
+        "A": "1-16-16-12-5",
+        "B": "16-16-12-5-1",
+        "C": "1-16-12-5-1",
+        "D": "16-1-12-5-16"
+      },
+      "answer": "A",
+      "explanation": "A=1, P=16, P=16, L=12, E=5, so APPLE = 1-16-16-12-5."
+    },
+    {
+      "id": "E6-S001",
+      "section": "Science",
+      "question": "A jeweler tests a metal sample and confirms it is gold. Which chemical symbol should appear on the assay report?",
+      "options": {
+        "A": "Ag",
+        "B": "Au",
+        "C": "Gd",
+        "D": "Go"
+      },
+      "answer": "B",
+      "explanation": "Au is the chemical symbol for gold (from the Latin aurum)."
+    },
+    {
+      "id": "E6-S002",
+      "section": "Science",
+      "question": "Which planet orbits closest to the Sun?",
+      "options": {
+        "A": "Venus",
+        "B": "Mercury",
+        "C": "Mars",
+        "D": "Earth"
+      },
+      "answer": "B",
+      "explanation": "Mercury is the innermost planet in the solar system."
+    },
+    {
+      "id": "E6-S003",
+      "section": "Science",
+      "question": "Which gas is released by plants during photosynthesis?",
+      "options": {
+        "A": "Carbon dioxide",
+        "B": "Oxygen",
+        "C": "Nitrogen",
+        "D": "Hydrogen"
+      },
+      "answer": "B",
+      "explanation": "Photosynthesis uses carbon dioxide and water to produce glucose and release oxygen."
+    },
+    {
+      "id": "E6-S004",
+      "section": "Science",
+      "question": "Which unit is used to measure force?",
+      "options": {
+        "A": "Joule",
+        "B": "Watt",
+        "C": "Newton",
+        "D": "Pascal"
+      },
+      "answer": "C",
+      "explanation": "The newton (N) is the SI unit of force."
+    },
+    {
+      "id": "E6-S005",
+      "section": "Science",
+      "question": "What is the chemical formula of ordinary table salt?",
+      "options": {
+        "A": "NaCl",
+        "B": "KCl",
+        "C": "HCl",
+        "D": "NaOH"
+      },
+      "answer": "A",
+      "explanation": "Table salt is sodium chloride, NaCl."
+    },
+    {
+      "id": "E6-S006",
+      "section": "Science",
+      "question": "At sea level, pure water boils at about:",
+      "options": {
+        "A": "90 degrees C",
+        "B": "95 degrees C",
+        "C": "100 degrees C",
+        "D": "110 degrees C"
+      },
+      "answer": "C",
+      "explanation": "At standard atmospheric pressure, water boils at 100 degrees Celsius."
+    },
+    {
+      "id": "E6-S007",
+      "section": "Science",
+      "question": "Which organ pumps blood through the human body?",
+      "options": {
+        "A": "Liver",
+        "B": "Heart",
+        "C": "Lung",
+        "D": "Kidney"
+      },
+      "answer": "B",
+      "explanation": "The heart pumps blood throughout the body."
+    },
+    {
+      "id": "E6-S008",
+      "section": "Science",
+      "question": "The speed of light in a vacuum is about:",
+      "options": {
+        "A": "150,000 km/s",
+        "B": "300,000 km/s",
+        "C": "450,000 km/s",
+        "D": "600,000 km/s"
+      },
+      "answer": "B",
+      "explanation": "Light travels at about 300,000 km/s in a vacuum."
+    },
+    {
+      "id": "E6-S009",
+      "section": "Science",
+      "question": "Which of these animals is a mammal?",
+      "options": {
+        "A": "Shark",
+        "B": "Dolphin",
+        "C": "Penguin",
+        "D": "Lizard"
+      },
+      "answer": "B",
+      "explanation": "Dolphins are mammals: they breathe air, nurse their young, and are warm-blooded."
+    },
+    {
+      "id": "E6-S010",
+      "section": "Science",
+      "question": "Which acid gives vinegar its sour taste?",
+      "options": {
+        "A": "Citric acid",
+        "B": "Acetic acid",
+        "C": "Lactic acid",
+        "D": "Sulfuric acid"
+      },
+      "answer": "B",
+      "explanation": "Vinegar contains acetic acid."
+    },
+    {
+      "id": "E6-S011",
+      "section": "Science",
+      "question": "One full revolution of Earth around the Sun takes about:",
+      "options": {
+        "A": "30 days",
+        "B": "180 days",
+        "C": "365 days",
+        "D": "730 days"
+      },
+      "answer": "C",
+      "explanation": "Earth completes one orbit in about 365 days, one year."
+    },
+    {
+      "id": "E6-S012",
+      "section": "Science",
+      "question": "Which gas do humans need to take in for cellular respiration?",
+      "options": {
+        "A": "Carbon dioxide",
+        "B": "Oxygen",
+        "C": "Nitrogen",
+        "D": "Helium"
+      },
+      "answer": "B",
+      "explanation": "Humans need oxygen for cellular respiration."
+    },
+    {
+      "id": "E6-S013",
+      "section": "Science",
+      "question": "Pure water freezes at:",
+      "options": {
+        "A": "-5 degrees C",
+        "B": "0 degrees C",
+        "C": "5 degrees C",
+        "D": "10 degrees C"
+      },
+      "answer": "B",
+      "explanation": "Water freezes at 0 degrees Celsius at standard pressure."
+    },
+    {
+      "id": "E6-S014",
+      "section": "Science",
+      "question": "Which of these is a renewable source of energy?",
+      "options": {
+        "A": "Coal",
+        "B": "Solar",
+        "C": "Natural gas",
+        "D": "Petroleum"
+      },
+      "answer": "B",
+      "explanation": "Solar energy comes from sunlight, which is continuously renewed; the others are fossil fuels."
+    },
+    {
+      "id": "E6-S015",
+      "section": "Science",
+      "question": "In which part of a plant cell does photosynthesis take place?",
+      "options": {
+        "A": "Mitochondrion",
+        "B": "Chloroplast",
+        "C": "Nucleus",
+        "D": "Ribosome"
+      },
+      "answer": "B",
+      "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis."
+    },
+    {
+      "id": "E6-S016",
+      "section": "Science",
+      "question": "Compared with Earth, gravity on the Moon is:",
+      "options": {
+        "A": "stronger",
+        "B": "weaker",
+        "C": "equal",
+        "D": "zero"
+      },
+      "answer": "B",
+      "explanation": "The Moon has less mass, so its surface gravity is about one-sixth of Earth's."
+    },
+    {
+      "id": "E6-S017",
+      "section": "Science",
+      "question": "Which part of the cell controls most of its activities?",
+      "options": {
+        "A": "Nucleus",
+        "B": "Vacuole",
+        "C": "Cytoplasm",
+        "D": "Cell membrane"
+      },
+      "answer": "A",
+      "explanation": "The nucleus holds DNA and directs cell activities."
+    },
+    {
+      "id": "E6-S018",
+      "section": "Science",
+      "question": "When iron is left exposed to air and moisture, it forms:",
+      "options": {
+        "A": "Salt",
+        "B": "Rust",
+        "C": "Ash",
+        "D": "Glass"
+      },
+      "answer": "B",
+      "explanation": "Iron reacts with oxygen and water to form iron oxide, or rust."
+    },
+    {
+      "id": "E6-S019",
+      "section": "Science",
+      "question": "Which planet is commonly called the Red Planet?",
+      "options": {
+        "A": "Venus",
+        "B": "Mars",
+        "C": "Jupiter",
+        "D": "Saturn"
+      },
+      "answer": "B",
+      "explanation": "Mars appears red because of iron oxide on its surface."
+    },
+    {
+      "id": "E6-S020",
+      "section": "Science",
+      "question": "Normal human body temperature is about:",
+      "options": {
+        "A": "30 degrees C",
+        "B": "35 degrees C",
+        "C": "37 degrees C",
+        "D": "40 degrees C"
+      },
+      "answer": "C",
+      "explanation": "Normal body temperature is about 37 degrees Celsius."
+    },
+    {
+      "id": "E6-S021",
+      "section": "Science",
+      "question": "Which of these is NOT a state of matter?",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "Light"
+      },
+      "answer": "D",
+      "explanation": "Solid, liquid, and gas are states of matter; light is energy, not matter in that sense."
+    },
+    {
+      "id": "E6-S022",
+      "section": "Science",
+      "question": "Sound travels fastest through:",
+      "options": {
+        "A": "A vacuum",
+        "B": "A gas",
+        "C": "A liquid",
+        "D": "A solid"
+      },
+      "answer": "D",
+      "explanation": "Sound moves fastest in solids because their particles are packed closely together."
+    },
+    {
+      "id": "E6-S023",
+      "section": "Science",
+      "question": "Sunlight helps the human body produce which vitamin?",
+      "options": {
+        "A": "Vitamin A",
+        "B": "Vitamin B",
+        "C": "Vitamin C",
+        "D": "Vitamin D"
+      },
+      "answer": "D",
+      "explanation": "Skin produces vitamin D when exposed to sunlight."
+    },
+    {
+      "id": "E6-S024",
+      "section": "Science",
+      "question": "Earthquakes are recorded with which instrument?",
+      "options": {
+        "A": "Thermometer",
+        "B": "Barometer",
+        "C": "Seismograph",
+        "D": "Altimeter"
+      },
+      "answer": "C",
+      "explanation": "A seismograph detects and records ground motion from earthquakes."
+    },
+    {
+      "id": "E6-S025",
+      "section": "Science",
+      "question": "Which blood cells carry oxygen around the body?",
+      "options": {
+        "A": "White blood cells",
+        "B": "Red blood cells",
+        "C": "Platelets",
+        "D": "Plasma cells"
+      },
+      "answer": "B",
+      "explanation": "Red blood cells contain hemoglobin, which carries oxygen."
+    },
+    {
+      "id": "E6-S026",
+      "section": "Science",
+      "question": "In the water cycle, the process by which water vapor cools and becomes liquid is called:",
+      "options": {
+        "A": "Evaporation",
+        "B": "Condensation",
+        "C": "Precipitation",
+        "D": "Transpiration"
+      },
+      "answer": "B",
+      "explanation": "Condensation is the change from vapor to liquid."
+    },
+    {
+      "id": "E6-S027",
+      "section": "Science",
+      "question": "Which element is most abundant in Earth's atmosphere?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Carbon dioxide",
+        "D": "Hydrogen"
+      },
+      "answer": "B",
+      "explanation": "Nitrogen makes up about 78% of the atmosphere."
+    },
+    {
+      "id": "E6-S028",
+      "section": "Science",
+      "question": "A magnet will attract which of these materials?",
+      "options": {
+        "A": "Wood",
+        "B": "Iron",
+        "C": "Plastic",
+        "D": "Glass"
+      },
+      "answer": "B",
+      "explanation": "Iron is ferromagnetic and is attracted by magnets."
+    },
+    {
+      "id": "E6-S029",
+      "section": "Science",
+      "question": "Which of these animals is a herbivore?",
+      "options": {
+        "A": "Lion",
+        "B": "Cow",
+        "C": "Eagle",
+        "D": "Shark"
+      },
+      "answer": "B",
+      "explanation": "Cows eat plants, so they are herbivores; the others eat meat."
+    },
+    {
+      "id": "E6-S030",
+      "section": "Science",
+      "question": "Energy stored in a stretched rubber band is an example of:",
+      "options": {
+        "A": "Kinetic energy",
+        "B": "Potential energy",
+        "C": "Thermal energy",
+        "D": "Chemical energy"
+      },
+      "answer": "B",
+      "explanation": "A stretched rubber band stores elastic potential energy."
+    }
+  ]
+}
