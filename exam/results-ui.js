@@ -147,22 +147,49 @@
     if (!data.weak_area) return null;
     return typeof data.weak_area === "string" ? data.weak_area : (data.weak_area.section || null);
   }
+  /* Per-section study guide — mirrors the server IMPROVEMENT_GUIDE in api/_exam-lib.js.
+     Used for every weak section; the server payload only carries the single weakest section. */
+  var SECTION_GUIDE = {
+    "Language Usage": {
+      chapters: "Parts I & V of your reviewer (vocabulary, grammar, reading)",
+      tip: "Read one passage daily and learn 5 new words with their sentences — vocabulary compounds fast."
+    },
+    "Mathematics": {
+      chapters: "Parts II & VI of your reviewer (word problems, algebra, geometry)",
+      tip: "Redo every wrong item without looking at the solution first. Speed comes from method, not memorization."
+    },
+    "Aptitude": {
+      chapters: "Parts III & VII of your reviewer (series, patterns, analogies)",
+      tip: "Practice 10 logic items a day under time pressure. Pattern recognition is a trained skill."
+    },
+    "Science": {
+      chapters: "Parts IV & VIII of your reviewer (biology, earth science, chemistry, physics)",
+      tip: "Make one-page concept maps per topic — practice science rewards understanding over facts."
+    }
+  };
+  function guideFor(name) {
+    if (SECTION_GUIDE[name]) return SECTION_GUIDE[name];
+    var k = String(name || "").toLowerCase();
+    if (/language|english/.test(k)) return SECTION_GUIDE["Language Usage"];
+    if (/math/.test(k)) return SECTION_GUIDE["Mathematics"];
+    if (/science/.test(k)) return SECTION_GUIDE["Science"];
+    if (/aptitude|logic/.test(k)) return SECTION_GUIDE["Aptitude"];
+    return null;
+  }
   function improveTips(data) {
     var imp = data.improvement || {};
-    var fallback = {
-      English: "Read one passage daily and learn 5 new words with their sentences — vocabulary compounds fast.",
-      Math: "Redo every wrong item without looking at the solution first. Speed comes from method, not memorization.",
-      Science: "Make one-page concept maps per topic — practice science rewards understanding over facts.",
-      Aptitude: "Practice 10 logic items a day under time pressure. Pattern recognition is a trained skill."
-    };
     return function (name) {
       if (imp.tips && imp.tips[name]) return imp.tips[name];
-      return fallback[name] || "Review this section's lessons and redo your wrong items.";
+      var g = guideFor(name);
+      if (g) return g.tip;
+      return "Review this section's lessons and redo your wrong items.";
     };
   }
   function chapterFor(data, name) {
     var imp = data.improvement || {};
     if (imp.chapters && typeof imp.chapters === "object" && imp.chapters[name]) return imp.chapters[name];
+    var g = guideFor(name);
+    if (g) return g.chapters;
     if (typeof imp.chapters === "string") return imp.chapters;
     return "your reviewer";
   }
