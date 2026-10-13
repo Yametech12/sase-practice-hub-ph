@@ -6,8 +6,8 @@
  *
  * Covers: fresh binding, existing-device rebind, device-limit rejection,
  * exam save/load round-trip, used_submissions idempotency, no-change
- * updateState (no writes), concurrent-conflict retry, and clean imports
- * of all 7 caller files.
+ * updateState (no writes), concurrent-conflict retry, clean imports
+ * of all 7 caller files, and the driver-surface regression (no sql.query).
  */
 import assert from "node:assert";
 import { createMockNeon } from "./mock-neon.mjs";
@@ -183,6 +183,32 @@ console.log("9. all 7 caller files still import cleanly (handlers untouched)");
     const m = await import(f);
     ok(`imports ${f.split("/").pop()}`, typeof m.default === "function");
   }
+}
+
+console.log("10. driver-surface regression: no sql.query() (v0.10 has no such method)");
+{
+  // Oct 2026 migration outage: the migration code called sql.query(), which
+  // exists only in driver v1. The pinned v0.10 driver provides tagged-template
+  // calls, direct sql("...", [params]) calls, and sql.transaction() — and NO
+  // .query. The mock mirrors that surface exactly, so any reintroduction of
+  // .query fails here, the same way it fails in production.
+  ok("mock has no .query method (matches real v0.10 driver)", typeof mock.query === "undefined");
+  let threw = false;
+  try {
+    mock.query("SELECT 1");
+  } catch (e) {
+    threw = e instanceof TypeError;
+  }
+  ok("calling .query throws TypeError (as on the real driver)", threw);
+  const ddl = await mock(
+    "CREATE TABLE IF NOT EXISTS bindings (order_id TEXT PRIMARY KEY, devices JSONB NOT NULL DEFAULT '[]'::jsonb)",
+    [],
+  );
+  ok("direct-call DDL executes (migration path)", Array.isArray(ddl));
+  const tx = await mock.transaction([
+    mock("CREATE TABLE IF NOT EXISTS exams (order_id TEXT NOT NULL, exam_n INT NOT NULL, data JSONB NOT NULL, PRIMARY KEY (order_id, exam_n))", []),
+  ]);
+  ok("direct-call query works inside transaction", Array.isArray(tx) && tx.length === 1);
 }
 
 console.log(`\nALL ${passed} CHECKS PASSED`);

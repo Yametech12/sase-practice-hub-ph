@@ -96,15 +96,18 @@ const schemaPath = path.join(path.dirname(fileURLToPath(import.meta.url)), "..",
 const schema = fs.readFileSync(schemaPath, "utf8");
 // Split into single statements: the Neon HTTP driver rejects multi-statement
 // strings ("cannot insert multiple commands into a prepared statement").
-// Strip -- line comments, split on ';', drop empties. sql.query() needs the
-// 0.10 driver line (see package.json — v1 is tagged-template-only).
+// Strip -- line comments, split on ';', drop empties. The pinned v0.10
+// driver has NO sql.query() method (that is a v1 API — calling it throws
+// "sql.query is not a function", the Oct 2026 migration outage). Call sql()
+// directly with the raw string + empty params array — the documented v0.10
+// direct-call form. Same fix in api/exam-migrate.js.
 const schemaStmts = schema
   .replace(/--[^\n]*\n/g, "\n")
   .split(";")
   .map((s) => s.trim())
   .filter(Boolean);
 
-const queries = schemaStmts.map((stmt) => sql.query(stmt));
+const queries = schemaStmts.map((stmt) => sql(stmt, []));
 for (const [orderId, b] of Object.entries(bindings)) {
   const devices = normalizeDevices(b);
   queries.push(

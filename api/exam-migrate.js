@@ -120,7 +120,11 @@ export default async function handler(req, res) {
       used_submissions: Object.keys(used).length,
     };
 
-    for (const stmt of SCHEMA_STMTS) await sql.query(stmt);
+    // The pinned v0.10 driver has NO sql.query() method (that is a v1 API) —
+    // calling it throws "sql.query is not a function" (Oct 2026 outage).
+    // Call sql() directly with the raw string + empty params array — the
+    // documented v0.10 direct-call form. DDL has no params.
+    for (const stmt of SCHEMA_STMTS) await sql(stmt, []);
     const existing = await sql`
       SELECT (SELECT count(*) FROM bindings) AS bindings,
              (SELECT count(*) FROM exams) AS exams,

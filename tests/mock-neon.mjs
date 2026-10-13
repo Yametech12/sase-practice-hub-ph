@@ -5,12 +5,17 @@
  * issues (matched by their /* NEON:*\/ marker comments):
  *  - tag call `sql`...`` returns a LAZY query object (like the real driver:
  *    nothing executes until awaited or passed to transaction()).
+ *  - direct call `sql("... $1 ...", [params])` also returns a lazy query
+ *    (the documented v0.10 direct-call form, used for the migration DDL).
  *  - `sql.transaction([...queries], opts)` executes them in order and returns
  *    one result array per query. The guard statement throws on snapshot
  *    mismatch (simulating the SQL 1/0 raise), which is what makes
  *    updateState's retry path testable.
- *  - `sql.query(text, params)` returns a lazy query (used by the migration
- *    script; not exercised by the lib tests).
+ *  - There is deliberately NO `sql.query()` method here: the pinned v0.10
+ *    driver does not provide one (it is a v1 API). An earlier version of
+ *    this mock invented `.query`, so the tests passed while production
+ *    threw "sql.query is not a function" (Oct 2026 migration outage).
+ *    Code calling `.query` must now fail loudly in tests too.
  *
  * Test hooks:
  *  - mock.db — { bindings: Map, exams: Map("order:exam_n" -> data), subs: Map }
@@ -46,6 +51,10 @@ export function createMockNeon() {
   function exec(strings, values) {
     const text = strings.join("\u0000");
     const has = (m) => text.includes(m);
+
+    // Migration DDL (CREATE TABLE ...) has no /* NEON: */ marker — it runs
+    // as a no-op success, like the real driver's direct-call form.
+    if (/^\s*CREATE TABLE/i.test(text)) return [];
 
     if (has("NEON:read-bindings")) {
       return [...db.bindings.entries()].map(([order_id, devices]) => ({ order_id, devices: clone(devices) }));
@@ -148,11 +157,18 @@ export function createMockNeon() {
   }
 
   function tag(strings, ...values) {
-    // Lazy query object: executes only when awaited or run via transaction().
-    const q = { __strings: strings, __values: values };
+    // Two real v0.10 call forms, both returning a lazy query object that
+    // executes only when awaited or run via transaction():
+    //   tagged:  sql`... ${param} ...`
+    //   direct:  sql("... $1 ...", [param])  (strings is a plain string)
+    // NO .query method: the real v0.10 driver has none (v1 API only).
+    const isDirect = typeof strings === "string";
+    const execStrings = isDirect ? [strings] : strings;
+    const execValues = isDirect ? (values[0] ?? []) : values;
+    const q = { __strings: execStrings, __values: execValues };
     q.then = (resolve, reject) => {
       try {
-        resolve(exec(strings, values));
+        resolve(exec(execStrings, execValues));
       } catch (e) {
         reject(e);
       }
@@ -163,11 +179,6 @@ export function createMockNeon() {
     const results = [];
     for (const q of queries) results.push(exec(q.__strings, q.__values));
     return results;
-  };
-  tag.query = (text, params = []) => {
-    const strings = [text];
-    strings.raw = [text];
-    return tag(strings, ...params);
   };
 
   tag.db = db;
