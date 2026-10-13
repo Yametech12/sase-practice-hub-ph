@@ -175,7 +175,7 @@
   <section id="screen-submitting" class="screen" aria-label="Submitting">
     <div class="center-card">
       <div class="spinner" aria-hidden="true"></div>
-      <h2>Grading your exam…</h2>
+      <h2 id="submitting-title">Grading your exam…</h2>
       <p>Taking you to your results.</p>
     </div>
   </section>
@@ -191,7 +191,7 @@
 // Back-to-home link: guard against losing an in-progress exam attempt.
 document.getElementById('back-home').addEventListener('click', function (e) {
   if (document.querySelector('#screen-exam.active, #screen-submitting.active')) {
-    if (!confirm('Leave now? Your exam attempt will be lost and cannot be retaken.')) {
+    if (!confirm('Leave now? Your answers are saved on the server and the timer keeps running — go back from Your Exams before time runs out.')) {
       e.preventDefault();
     }
   }

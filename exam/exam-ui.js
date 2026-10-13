@@ -272,6 +272,7 @@
     state.submitting = false;
     state.examLocked = false;
     $("submit-error").hidden = true;
+    $("submitting-title").textContent = "Loading your exam…";
     showScreen("screen-submitting");
     api("/api/exam-questions", { token: state.token, exam: examN })
       .then(function (data) {
@@ -668,6 +669,7 @@
     stopTimer();
     clearSync(); /* PERF F-5 */
     closeDialog();
+    $("submitting-title").textContent = "Grading your exam…";
     showScreen("screen-submitting");
     /* Final sync, then grade. */
     syncProgressNow().then(function () {
@@ -712,6 +714,7 @@
     state.submitting = true;
     stopTimer();
     clearSync();
+    $("submitting-title").textContent = "Grading your exam…";
     showScreen("screen-submitting");
     api("/api/exam-forfeit", { token: state.token, exam: state.exam, session_id: state.sessionId })
       .then(function (result) { goToResults(result, state.exam); })
