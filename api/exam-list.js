@@ -2,7 +2,7 @@
  * POST /api/exam-list
  * Body: { token }
  *
- * READ-ONLY: returns the 5 exams with per-exam status. Never writes state.
+ * READ-ONLY: returns the 8 exams with per-exam status. Never writes state.
  *
  * Statuses:
  *   - "available"   : unlocked, not started

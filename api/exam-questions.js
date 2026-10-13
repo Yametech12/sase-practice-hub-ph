@@ -1,6 +1,6 @@
 /**
  * POST /api/exam-questions
- * Body: { token, exam }   (exam: 1..5)
+ * Body: { token, exam }   (exam: 1..8)
  *
  * Starts a NEW attempt for exam N or RESUMES an in-progress one.
  * The attempt is CONSUMED at issuance (not at submit): start → close without
@@ -70,7 +70,7 @@ export default async function handler(req, res) {
     const p = verifyToken(token);
     if (!p) return res.status(401).json({ error: "bad_token", message: "Session expired. Please log in again." });
     const n = validExamN(exam);
-    if (!n) return res.status(400).json({ error: "bad_request", message: "Exam must be 1–5." });
+    if (!n) return res.status(400).json({ error: "bad_request", message: "Exam must be 1–8." });
 
     if (!rateLimit("q:" + p.order_id, 60, 60 * 1000)) {
       logEvent({ type: "questions_rate_limited", order_id: p.order_id, exam: n });

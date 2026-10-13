@@ -1,29 +1,27 @@
 /**
  * SASE Online Mock Exam Portal — shared server library (Vercel Node functions)
  *
- * SPEC v2: 5 weekly exams x 180 questions, 1 attempt per exam.
+ * SPEC v2: 8 weekly exams x 180 questions, 1 attempt per exam.
  * Exam N unlocks floor((now - created_at)/7d)+1 >= N (created_at = order date).
  *
- * Server-authoritative state lives in a PRIVATE GitHub repo (EXAM_STATE_REPO):
- *   state.json — { bindings, exams, used_submissions }
- *     bindings: { order_id: { devices: [{ device_hash, bound_at, ip_hash }] } } (1 password = up to 3 devices)
- *     exams:    { order_id: { "1": examRec, ... } }
- *       examRec: { status: "in_progress"|"done", session_id, started_at, q_order,
- *                  opt_map, answers, last_sync, bank_blob }  (+ result fields when done:
- *                  score, total, pct, sections, weak_area, improvement, review,
- *                  submitted_at, auto_submitted, forfeited)
- *     used_submissions: { "<order_id>:<n>:<submission_id>": result }  (grade idempotency)
- *   bank.json  — { exams: { "1": [items...], ... "5": [items...] } } (never in the public site repo)
+ * Server-authoritative state lives in Neon Postgres (DATABASE_URL):
+ *   bindings         — { order_id PK, devices JSONB } (1 password = up to 3 devices)
+ *   exams            — { order_id, exam_n, data JSONB } (data = full examRec)
+ *   used_submissions — { key PK, result JSONB } (grade idempotency)
+ *   (Schema: db/schema.sql. Legacy GitHub-file backend replaced Oct 2026:
+ *    state.json had grown past the GitHub contents-API 1MB read limit.)
+ *   bank.json STAYS in the private GitHub repo (see gh()/ghBlob() below).
  *
  * Env vars (Vercel):
  *   EXAM_HMAC_SECRET — HMAC signing secret for session tokens
- *   GH_EXAM_TOKEN    — GitHub token with contents:read/write on EXAM_STATE_REPO
- *   EXAM_STATE_REPO  — "owner/repo" of the private state repo
+ *   DATABASE_URL     — Neon pooled connection string (state backend)
+ *   GH_EXAM_TOKEN    — GitHub token with contents:read on EXAM_STATE_REPO (bank only)
+ *   EXAM_STATE_REPO  — "owner/repo" of the private state repo (bank only)
  */
 import crypto from "crypto";
 
 export const EXAM_MS = 2 * 60 * 60 * 1000; // 2-hour practice timer (server-authoritative)
-export const EXAM_COUNT = 5;
+export const EXAM_COUNT = 8;
 export const WEEK_MS = 7 * 24 * 3600 * 1000;
 
 const GH_TOKEN = process.env.GH_EXAM_TOKEN || "";
@@ -128,7 +126,159 @@ export function verifyToken(tok) {
   }
 }
 
-// ---- private-repo state backend ----
+// ---- Neon Postgres state backend (replaces the GitHub-file backend) ----
+// State lives in 3 Neon tables (db/schema.sql). JSONB payloads keep the
+// exact shapes the handlers already use, so no caller changes:
+//   bindings:         { order_id: { devices: [{ device_hash, bound_at, ip_hash }] } }
+//   exams:            { order_id: { "1": examRec, ... } }  (examRec = full attempt/result)
+//   used_submissions: { "<order_id>:<n>:<submission_id>": result } (grade idempotency)
+// Legacy state.json keys `attempts` / `in_progress` are NOT carried over —
+// no handler reads them (verified Oct 2026); the migration script logs
+// their counts and drops them.
+//
+// Concurrency: the old GitHub backend serialized ALL writers (single-file
+// SHA: any concurrent change -> SHA mismatch -> retry). updateState keeps
+// that exact guarantee on Neon. The Neon HTTP driver is NON-interactive
+// (no JS may run between queries inside one transaction), so the write
+// phase is fixed SQL driven by JSONB params — no dynamic SQL:
+//   1. loadState reads the full state (one read-only transaction).
+//   2. The mutator runs against that in-memory snapshot.
+//   3. writeState applies the diff in ONE Serializable transaction that
+//      (a) locks every row (SELECT ... FOR UPDATE),
+//      (b) guards that the DB still equals the snapshot the mutator saw
+//          (raises on ANY mismatch — same conservatism as the old SHA),
+//      (c) writes the full after-state (upserts + deletes).
+//   Any concurrent change -> guard raise or serialization error -> retry
+//   (up to 3 attempts with backoff, same as the GitHub backend).
+import { neon } from "@neondatabase/serverless";
+
+let _sql = null;
+function sqlClient() {
+  // Test seam (same pattern as the __EXAM_TEST_BANK hook below): tests set
+  // globalThis.__NEON_SQL_MOCK to a fake sql client; production uses neon().
+  if (globalThis.__NEON_SQL_MOCK) return globalThis.__NEON_SQL_MOCK;
+  if (!_sql) {
+    const url = process.env.DATABASE_URL || "";
+    if (!url) {
+      throw new Error(
+        "DATABASE_URL is not set — set the Neon pooled connection string in Vercel env vars.",
+      );
+    }
+    _sql = neon(url);
+  }
+  return _sql;
+}
+
+export async function loadState() {
+  const sql = sqlClient();
+  const [bRows, eRows, sRows] = await sql.transaction(
+    [
+      sql`/* NEON:read-bindings */ SELECT order_id, devices FROM bindings`,
+      sql`/* NEON:read-exams */ SELECT order_id, exam_n, data FROM exams`,
+      sql`/* NEON:read-subs */ SELECT key, result FROM used_submissions`,
+    ],
+    { readOnly: true },
+  );
+  const bindings = {};
+  for (const r of bRows) bindings[r.order_id] = { devices: bindingDevices({ devices: r.devices }) };
+  const exams = {};
+  for (const r of eRows) (exams[r.order_id] ||= {})[String(r.exam_n)] = r.data;
+  const used_submissions = {};
+  for (const r of sRows) used_submissions[r.key] = r.result;
+  const state = { bindings, exams, used_submissions };
+  // sha is a content hash (callers only destructure { state }); updateState
+  // does not use it — it guards on the full snapshot instead (see writeState).
+  return { sha: "neon:" + sha256(JSON.stringify(state)), state };
+}
+
+// Write the full after-state in ONE Serializable transaction. The guard
+// (first statement) raises unless the DB still equals `before` — the exact
+// snapshot the mutator saw. Raises -> caller retries with a fresh snapshot.
+async function writeState(after, before) {
+  const sql = sqlClient();
+  const b0 = JSON.stringify(before.bindings || {});
+  const e0 = JSON.stringify(before.exams || {});
+  const s0 = JSON.stringify(before.used_submissions || {});
+  const b1 = JSON.stringify(after.bindings || {});
+  const e1 = JSON.stringify(after.exams || {});
+  const s1 = JSON.stringify(after.used_submissions || {});
+  await sql.transaction(
+    [
+      sql`/* NEON:lock-bindings */ SELECT order_id FROM bindings FOR UPDATE`,
+      sql`/* NEON:lock-exams */ SELECT order_id, exam_n FROM exams FOR UPDATE`,
+      sql`/* NEON:lock-subs */ SELECT key FROM used_submissions FOR UPDATE`,
+      // Guard: every row must still equal the `before` snapshot. Any
+      // concurrent change (extra/missing/differing row) -> 1/0 raises
+      // "division by zero" -> the whole transaction rolls back -> retry.
+      // Params are bound once via the CTE (b/e/s = before snapshots).
+      sql`/* NEON:guard */ WITH p AS (SELECT ${b0}::jsonb AS b, ${e0}::jsonb AS e, ${s0}::jsonb AS s)
+      SELECT CASE WHEN (
+        (SELECT count(*) FROM bindings b, p WHERE (p.b -> b.order_id) IS NULL OR b.devices IS DISTINCT FROM (p.b -> b.order_id)::jsonb) = 0
+        AND (SELECT count(*) FROM p, jsonb_each(p.b) e WHERE NOT EXISTS (SELECT 1 FROM bindings b WHERE b.order_id = e.key)) = 0
+        AND (SELECT count(*) FROM exams x, p WHERE (p.e -> x.order_id -> x.exam_n::text) IS NULL OR x.data IS DISTINCT FROM (p.e -> x.order_id -> x.exam_n::text)::jsonb) = 0
+        AND (SELECT count(*) FROM p, jsonb_each(p.e) o, jsonb_each(o.value) e WHERE NOT EXISTS (SELECT 1 FROM exams x WHERE x.order_id = o.key AND x.exam_n = e.key::int)) = 0
+        AND (SELECT count(*) FROM used_submissions u, p WHERE (p.s -> u.key) IS NULL OR u.result IS DISTINCT FROM (p.s -> u.key)::jsonb) = 0
+        AND (SELECT count(*) FROM p, jsonb_each(p.s) e WHERE NOT EXISTS (SELECT 1 FROM used_submissions u WHERE u.key = e.key)) = 0
+      ) THEN 1 ELSE 1/0 END`,
+      sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
+      sql`/* NEON:write-bindings-del */ DELETE FROM bindings WHERE order_id NOT IN (SELECT key FROM jsonb_each(${b1}::jsonb))`,
+      sql`/* NEON:write-exams */ INSERT INTO exams (order_id, exam_n, data) SELECT o.key, e.key::int, e.value FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e ON CONFLICT (order_id, exam_n) DO UPDATE SET data = EXCLUDED.data`,
+      sql`/* NEON:write-exams-del */ DELETE FROM exams WHERE (order_id, exam_n) NOT IN (SELECT o.key, e.key::int FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e)`,
+      sql`/* NEON:write-subs */ INSERT INTO used_submissions (key, result) SELECT key, value FROM jsonb_each(${s1}::jsonb) ON CONFLICT (key) DO UPDATE SET result = EXCLUDED.result`,
+      sql`/* NEON:write-subs-del */ DELETE FROM used_submissions WHERE key NOT IN (SELECT key FROM jsonb_each(${s1}::jsonb))`,
+    ],
+    { isolationLevel: "Serializable" },
+  );
+}
+
+export async function saveState(state, sha, message) {
+  // Legacy compat: no handler calls saveState directly (updateState is the
+  // writer path). Writes the full state unconditionally in one Serializable
+  // transaction — NO guard, so prefer updateState for all real writes.
+  // `sha` / `message` are accepted for signature compatibility and ignored.
+  const sql = sqlClient();
+  const b1 = JSON.stringify(state.bindings || {});
+  const e1 = JSON.stringify(state.exams || {});
+  const s1 = JSON.stringify(state.used_submissions || {});
+  await sql.transaction(
+    [
+      sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
+      sql`/* NEON:write-bindings-del */ DELETE FROM bindings WHERE order_id NOT IN (SELECT key FROM jsonb_each(${b1}::jsonb))`,
+      sql`/* NEON:write-exams */ INSERT INTO exams (order_id, exam_n, data) SELECT o.key, e.key::int, e.value FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e ON CONFLICT (order_id, exam_n) DO UPDATE SET data = EXCLUDED.data`,
+      sql`/* NEON:write-exams-del */ DELETE FROM exams WHERE (order_id, exam_n) NOT IN (SELECT o.key, e.key::int FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e)`,
+      sql`/* NEON:write-subs */ INSERT INTO used_submissions (key, result) SELECT key, value FROM jsonb_each(${s1}::jsonb) ON CONFLICT (key) DO UPDATE SET result = EXCLUDED.result`,
+      sql`/* NEON:write-subs-del */ DELETE FROM used_submissions WHERE key NOT IN (SELECT key FROM jsonb_each(${s1}::jsonb))`,
+    ],
+    { isolationLevel: "Serializable" },
+  );
+  return "neon:" + sha256(JSON.stringify(state));
+}
+
+// Read-modify-write with retry on conflict. mutator(state) may be async;
+// it must be free of externally visible side effects (it may run more than
+// once — read-only GETs are fine, writes are not). It returns a result object
+// that the caller uses AFTER the save succeeds.
+export async function updateState(mutator, message) {
+  let lastErr = null;
+  for (let i = 0; i < 3; i++) {
+    try {
+      const { state } = await loadState();
+      const before = JSON.stringify(state);
+      const result = await mutator(state);
+      if (JSON.stringify(state) === before) return result;
+      await writeState(state, JSON.parse(before));
+      return result;
+    } catch (e) {
+      lastErr = e;
+      // Small backoff before retry (load blip or write conflict). Mutators
+      // must stay side-effect-free (read-only GETs only) because they may re-run.
+      if (i < 2) await new Promise((r) => setTimeout(r, 200 * (i + 1)));
+    }
+  }
+  throw lastErr;
+}
+
+// ---- private-repo BANK backend (bank.json stays in GitHub) ----
 async function gh(path, method = "GET", body = null) {
   const url =
     `https://api.github.com/repos/${STATE_REPO}/contents/${path}` +
@@ -162,50 +312,6 @@ async function ghBlob(sha) {
   if (!r.ok) throw new Error(`gh blob ${sha}: ${r.status}`);
   const d = await r.json();
   return JSON.parse(Buffer.from(d.content, "base64").toString("utf8"));
-}
-
-export async function loadState() {
-  // GitHub's contents API returns EMPTY content for files > 1MB, and
-  // state.json is ~1.17MB — JSON.parse("") throws, so every login that
-  // reaches device binding 500s with "Please try again in a moment."
-  // The contents response still carries the blob sha, so fetch metadata
-  // here and the full content via the blob API (no 1MB content limit).
-  const meta = await gh("state.json");
-  const state = await ghBlob(meta.sha);
-  state.bindings ||= {};
-  state.exams ||= {};
-  state.used_submissions ||= {};
-  return { sha: meta.sha, state };
-}
-
-export async function saveState(state, sha, message) {
-  const content = Buffer.from(JSON.stringify(state), "utf8").toString("base64");
-  const r = await gh("state.json", "PUT", { message, content, sha, branch: "main" });
-  return r.content.sha;
-}
-
-// Read-modify-write with retry on SHA conflict. mutator(state) may be async;
-// it must be free of externally visible side effects (it may run more than
-// once — read-only GETs are fine, writes are not). It returns a result object
-// that the caller uses AFTER the save succeeds.
-export async function updateState(mutator, message) {
-  let lastErr = null;
-  for (let i = 0; i < 3; i++) {
-    try {
-      const { sha, state } = await loadState(); // load retries now, like saves
-      const before = JSON.stringify(state);
-      const result = await mutator(state);
-      if (JSON.stringify(state) === before) return result;
-      await saveState(state, sha, message);
-      return result;
-    } catch (e) {
-      lastErr = e;
-      // Small backoff before retry (load blip or SHA conflict). Mutators must
-      // stay side-effect-free (read-only GETs only) because they may re-run.
-      if (i < 2) await new Promise((r) => setTimeout(r, 200 * (i + 1)));
-    }
-  }
-  throw lastErr;
 }
 
 // Local-test hook: the stub-test harness sets globalThis.__EXAM_TEST_BANK to a
@@ -509,7 +615,7 @@ export function alreadySubmittedMessage(pct, createdAt, n, now = Date.now()) {
     const days = Math.max(1, Math.ceil(next.unlocks_in_ms / (24 * 3600 * 1000)));
     return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks in ${days} day${days === 1 ? "" : "s"} — use the time to review the weak areas in your results.`;
   }
-  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 5 exams — use your results to review the weak areas.`;
+  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 8 exams — use your results to review the weak areas.`;
 }
 export const ACTIVE_ATTEMPT_MSG = (m) =>
   `You have Mock Exam ${m} in progress — finish it or give it up before starting another exam.`;

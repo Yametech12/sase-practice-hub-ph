@@ -132,8 +132,8 @@
   /* ---------------- shared 401 recovery ---------------- */
   /* Any mid-exam 401 funnels here. Clears the dead token, stops all
      timers/syncs, returns to the gate with an explicit "sign in again to
-     resume" message. Resume is automatic after re-login (loadExamList
-     auto-resumes the single in-progress exam). Idempotent: sync 401, grade
+     resume" message. After re-login the student taps Resume explicitly —
+     exams never auto-start. Idempotent: sync 401, grade
      401, and forfeit 401 can all fire in the same second. */
   function handleSessionExpired() {
     if (state.sessionExpiredHandled) return;
@@ -148,6 +148,7 @@
     }
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
     state.token = null;
+    if (logoutBtn) logoutBtn.hidden = true; // logout control is only for signed-in students
     var warn = $("sync-warning");
     if (warn) warn.hidden = true;
     showScreen("screen-gate");
@@ -202,6 +203,7 @@
         try { sessionStorage.setItem(SESSION_KEY, res.token); } catch (e) {}
         gateInput.value = ""; // never leave the password in the DOM after login
         gateForm.style.display = "none";
+        if (logoutBtn) logoutBtn.hidden = false;
         loadExamList();
       })
       .catch(function (err) {
@@ -223,10 +225,49 @@
       if (t) {
         state.token = t;
         gateForm.style.display = "none";
+        if (logoutBtn) logoutBtn.hidden = false;
         loadExamList();
       }
     } catch (e) {}
   })();
+
+  /* ---------- logout control + help link (audit fix) ----------
+     exam/index.html is owned by the wiring agent, so both controls are
+     injected here instead of hard-coded in the HTML. The logout button
+     lives in the brand bar; the help link lives in the page footer. */
+  var logoutBtn = document.createElement("button");
+  logoutBtn.type = "button";
+  logoutBtn.id = "exam-logout";
+  logoutBtn.className = "back-link";
+  logoutBtn.textContent = "Log out";
+  logoutBtn.hidden = true;
+  logoutBtn.setAttribute("aria-label", "Log out of the exam portal");
+  var brandbarInner = document.querySelector(".brandbar-inner");
+  if (brandbarInner) brandbarInner.appendChild(logoutBtn);
+  logoutBtn.addEventListener("click", function () {
+    stopTimer();
+    clearSync();
+    clearSubmitRetry();
+    state.submitting = false;
+    state.token = null;
+    state.sessionId = null;
+    try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+    $("exam-list-wrap").hidden = true;
+    var submitErr = $("submit-error");
+    if (submitErr) submitErr.hidden = true;
+    gateForm.style.display = "";
+    gateError.hidden = true;
+    gateInput.value = "";
+    logoutBtn.hidden = true;
+    showScreen("screen-gate");
+    gateInput.focus();
+  });
+
+  var helpPara = document.createElement("p");
+  helpPara.className = "page-foot-help";
+  helpPara.innerHTML = 'Need help? <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message SASE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a>';
+  var pageFoot = document.querySelector(".page-foot");
+  if (pageFoot) pageFoot.appendChild(helpPara);
 
   function loadExamList() {
     api("/api/exam-list", { token: state.token })
@@ -235,15 +276,16 @@
         list.innerHTML = "";
         (meta.exams || []).forEach(function (ex) { list.appendChild(examCard(ex)); });
         $("exam-list-wrap").hidden = false;
-        /* UX: if an exam is already in progress (e.g. after a reload), resume it
-           automatically instead of making the student click Resume. */
-        var inProg = (meta.exams || []).filter(function (ex) { return ex.status === "in_progress"; });
-        if (inProg.length === 1) { beginExam(inProg[0].n); }
+        /* No auto-start: an in-progress exam waits for an explicit Resume tap
+           (audit fix). The Resume button on the card + the resume banner in
+           beginExam stay available. */
+        if (logoutBtn) logoutBtn.hidden = false;
       })
       .catch(function (err) {
         if (err.status === 401) { /* token expired: back to the gate */
           try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
           state.token = null;
+          if (logoutBtn) logoutBtn.hidden = true;
           $("exam-list-wrap").hidden = true; // hide stale cards under the gate
           gateForm.style.display = "";
           gateError.textContent = err.message || "Your session expired. Please sign in again.";
@@ -391,7 +433,7 @@
         state.deadlineMs = data.server_now + data.server_remaining_ms;
         showScreen("screen-exam");
         if (data.resumed) {
-          /* Automatic resume: banner with remaining from server_remaining_ms. */
+          /* Explicit resume (student tapped Resume): banner with remaining from server_remaining_ms. */
           $("resume-remaining").textContent = fmtLong(data.server_remaining_ms);
           $("resume-banner").hidden = false; /* role="status" announces it (A11Y K14) */
           setTimeout(function () { $("resume-banner").hidden = true; }, 6000);

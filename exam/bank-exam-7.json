@@ -1,0 +1,2345 @@
+{
+  "exam": 7,
+  "questions": [
+    {
+      "answer": "B",
+      "explanation": "Abundant means existing in large quantities. 'Plentiful' carries the same meaning, while 'scarce' is its opposite.",
+      "id": "E7-L001",
+      "options": {
+        "A": "scarce",
+        "B": "plentiful",
+        "C": "hidden",
+        "D": "expensive"
+      },
+      "question": "Harvest season brought an abundant supply of vegetables to the market, and prices dropped. The word \"abundant\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Animosity means strong dislike or hostility between people. A long dispute over a fence would naturally produce hostility, not admiration or sympathy.",
+      "id": "E7-L002",
+      "options": {
+        "A": "admiration",
+        "B": "confusion",
+        "C": "sympathy",
+        "D": "hostility"
+      },
+      "question": "The two neighbors felt deep animosity after the long dispute over the fence. The word \"animosity\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "Brevity means shortness, especially of speech or writing. 'Conciseness' is the closest synonym; it describes saying much in few words.",
+      "id": "E7-L003",
+      "options": {
+        "A": "conciseness",
+        "B": "bravery",
+        "C": "delay",
+        "D": "brightness"
+      },
+      "question": "The speaker was praised for the brevity of her speech; she said everything important in just five minutes. The word \"brevity\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "To coerce someone is to force or pressure them into doing something against their will. The witness did not sign willingly, so 'forced' is the best match.",
+      "id": "E7-L004",
+      "options": {
+        "A": "invited",
+        "B": "paid",
+        "C": "forced",
+        "D": "taught"
+      },
+      "question": "The witness claimed she had been coerced into signing the statement. The word \"coerced\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Deference means respectful regard for another person, often shown by yielding to their wishes or status. Lina lowered her voice out of respect for her grandmother.",
+      "id": "E7-L005",
+      "options": {
+        "A": "fear",
+        "B": "respect",
+        "C": "curiosity",
+        "D": "habit"
+      },
+      "question": "Out of deference to her grandmother, Lina lowered her voice during the ceremony. The word \"deference\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "An eloquent speaker expresses ideas fluently and persuasively. 'Expressive' is the closest synonym, while 'silent' is nearly the opposite.",
+      "id": "E7-L006",
+      "options": {
+        "A": "expressive",
+        "B": "silent",
+        "C": "ancient",
+        "D": "wealthy"
+      },
+      "question": "The young mayor gave an eloquent speech that moved the whole audience to applause. The word \"eloquent\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Feasible means possible or practical to achieve under the given conditions. The engineers questioned whether the plan could be carried out within the budget, so 'achievable' fits best.",
+      "id": "E7-L007",
+      "options": {
+        "A": "popular",
+        "B": "expensive",
+        "C": "dangerous",
+        "D": "achievable"
+      },
+      "question": "The engineers doubted whether the plan was feasible with the remaining budget. The word \"feasible\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "Innate means present from birth, part of a person's natural character rather than learned. A child's curiosity that comes naturally is inborn.",
+      "id": "E7-L008",
+      "options": {
+        "A": "learned",
+        "B": "hidden",
+        "C": "inborn",
+        "D": "temporary"
+      },
+      "question": "A child's innate curiosity often drives her to ask endless questions. The word \"innate\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Jubilant means feeling or expressing great joy, especially after a victory or success. 'Joyful' is the closest synonym.",
+      "id": "E7-L009",
+      "options": {
+        "A": "exhausted",
+        "B": "joyful",
+        "C": "nervous",
+        "D": "quiet"
+      },
+      "question": "The jubilant crowd cheered and waved flags after the team won the championship. The word \"jubilant\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "Lethargic means sluggish and lacking energy, often from tiredness or illness. Climbers who can barely keep their eyes open are sluggish, not cheerful or alert.",
+      "id": "E7-L010",
+      "options": {
+        "A": "sluggish",
+        "B": "cheerful",
+        "C": "hungry",
+        "D": "alert"
+      },
+      "question": "After the long hike, the climbers felt lethargic and could barely keep their eyes open. The word \"lethargic\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Ominous describes something that gives the impression that trouble or danger is coming. Dark clouds warning fishermen to return early are threatening.",
+      "id": "E7-L011",
+      "options": {
+        "A": "distant",
+        "B": "colorful",
+        "C": "ordinary",
+        "D": "threatening"
+      },
+      "question": "The ominous clouds gathering over the harbor warned the fishermen to return early. The word \"ominous\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "Prudent means careful and wise in making decisions, thinking ahead about risks. 'Cautious' is the closest synonym; 'hasty' is close to the opposite.",
+      "id": "E7-L012",
+      "options": {
+        "A": "careless",
+        "B": "hasty",
+        "C": "cautious",
+        "D": "generous"
+      },
+      "question": "A prudent traveler checks the weather and packs extra supplies before a long journey. The word \"prudent\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Robust means strong and sturdy, able to withstand wear or pressure. A bridge that survives decades of heavy traffic is strong.",
+      "id": "E7-L013",
+      "options": {
+        "A": "narrow",
+        "B": "strong",
+        "C": "famous",
+        "D": "colorful"
+      },
+      "question": "The old bridge remains robust despite decades of heavy traffic. The word \"robust\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "Wary means cautious and watchful, alert to possible danger. A guard watching strangers near the gate is cautious, not fond or unaware.",
+      "id": "E7-L014",
+      "options": {
+        "A": "cautious",
+        "B": "fond",
+        "C": "unaware",
+        "D": "angry"
+      },
+      "question": "The guard remained wary of strangers who lingered near the gate after dark. The word \"wary\" is closest in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Ancient means very old, belonging to the distant past. Its opposite is 'modern,' meaning of the present time.",
+      "id": "E7-L015",
+      "options": {
+        "A": "old",
+        "B": "modern",
+        "C": "broken",
+        "D": "famous"
+      },
+      "question": "The archaeologists uncovered tools from an ancient settlement that existed thousands of years ago. The word \"ancient\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Arrogant means having an exaggerated sense of one's own importance. Its opposite is 'humble,' which means modest and not boastful.",
+      "id": "E7-L016",
+      "options": {
+        "A": "proud",
+        "B": "loud",
+        "C": "wealthy",
+        "D": "humble"
+      },
+      "question": "Unlike his arrogant classmate, Tomas is humble and quick to credit others. The word \"arrogant\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "Compulsory means required by rule, not a matter of choice. Its opposite is 'optional,' meaning left to one's choice.",
+      "id": "E7-L017",
+      "options": {
+        "A": "optional",
+        "B": "difficult",
+        "C": "regular",
+        "D": "strict"
+      },
+      "question": "Attendance at the seminar is compulsory for all scholars in the program. The word \"compulsory\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "To diminish is to become smaller or less. Its opposite is 'increased,' meaning grown larger.",
+      "id": "E7-L018",
+      "options": {
+        "A": "disappeared",
+        "B": "increased",
+        "C": "darkened",
+        "D": "widened"
+      },
+      "question": "As the rain diminished, the river slowly returned to its normal level. The word \"diminished\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "Genuine means real and authentic, not imitation. Its opposite is 'fake,' meaning counterfeit or not real.",
+      "id": "E7-L019",
+      "options": {
+        "A": "honest",
+        "B": "valuable",
+        "C": "fake",
+        "D": "ancient"
+      },
+      "question": "The collector paid a high price because the signature on the letter was genuine. The word \"genuine\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Scarce means in short supply, hard to find. Its opposite is 'plentiful,' meaning available in large amounts.",
+      "id": "E7-L020",
+      "options": {
+        "A": "dirty",
+        "B": "shallow",
+        "C": "warm",
+        "D": "plentiful"
+      },
+      "question": "During the dry season, water in the village wells becomes scarce. The word \"scarce\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "To expand is to grow larger or spread out. Its opposite is 'contract,' meaning to shrink or become smaller.",
+      "id": "E7-L021",
+      "options": {
+        "A": "contract",
+        "B": "extend",
+        "C": "improve",
+        "D": "decorate"
+      },
+      "question": "The company plans to expand its factory to hire more workers next year. The word \"expand\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Defeat means losing a contest or battle. Its opposite is 'victory,' meaning winning.",
+      "id": "E7-L022",
+      "options": {
+        "A": "effort",
+        "B": "victory",
+        "C": "injury",
+        "D": "practice"
+      },
+      "question": "The team's defeat in the finals disappointed their supporters. The word \"defeat\" is opposite in meaning to:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The context shows the mayor would not change his position despite hours of negotiation. 'Adamant' means firm and unwilling to be persuaded.",
+      "id": "E7-L023",
+      "options": {
+        "A": "confused",
+        "B": "curious",
+        "C": "polite",
+        "D": "firm"
+      },
+      "question": "Despite hours of negotiation, the mayor remained adamant that the market would not be relocated. The word \"adamant\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "The breeze and water reduced the runner's exhaustion. 'Alleviate' means to make suffering or a problem less severe, which is to relieve it.",
+      "id": "E7-L024",
+      "options": {
+        "A": "measure",
+        "B": "hide",
+        "C": "relieve",
+        "D": "increase"
+      },
+      "question": "The cool breeze and a glass of water helped alleviate the runner's exhaustion after the race. The word \"alleviate\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "A meeting held away from reporters and cameras is meant to be hidden. 'Clandestine' means kept secret, often for privacy or to avoid attention.",
+      "id": "E7-L025",
+      "options": {
+        "A": "joyful",
+        "B": "secret",
+        "C": "formal",
+        "D": "lengthy"
+      },
+      "question": "The two officials held a clandestine meeting in a small room, away from reporters and cameras. The word \"clandestine\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "An explanation that raises more questions is not believable. 'Dubious' means doubtful or of questionable value.",
+      "id": "E7-L026",
+      "options": {
+        "A": "doubtful",
+        "B": "lengthy",
+        "C": "honest",
+        "D": "cheerful"
+      },
+      "question": "His dubious explanation for the missing funds only raised more questions from the auditors. The word \"dubious\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Fame that fades within a year does not last. 'Ephemeral' means lasting for a very short time.",
+      "id": "E7-L027",
+      "options": {
+        "A": "deserved",
+        "B": "growing",
+        "C": "expensive",
+        "D": "short-lived"
+      },
+      "question": "The fame of the young singer proved ephemeral; within a year, few people remembered her songs. The word \"ephemeral\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "A twelve-hour climb that leaves even fit hikers collapsing is extremely tiring. 'Grueling' means exhausting and physically demanding.",
+      "id": "E7-L028",
+      "options": {
+        "A": "pleasant",
+        "B": "brief",
+        "C": "exhausting",
+        "D": "dangerous"
+      },
+      "question": "After the grueling twelve-hour climb, even the fittest hikers collapsed onto their sleeping mats. The word \"grueling\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Fishermen pull boats ashore because the storm is coming very soon. 'Imminent' means about to happen.",
+      "id": "E7-L029",
+      "options": {
+        "A": "forgotten",
+        "B": "about to happen",
+        "C": "harmless",
+        "D": "distant"
+      },
+      "question": "With the storm imminent, fishermen pulled their boats ashore and secured their nets. The word \"imminent\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "Soft clapping and early departures show a weak, uninterested response. 'Lackluster' means dull and lacking energy or enthusiasm.",
+      "id": "E7-L030",
+      "options": {
+        "A": "dull",
+        "B": "violent",
+        "C": "generous",
+        "D": "noisy"
+      },
+      "question": "The crowd gave a lackluster response to the performance, clapping softly and leaving early. The word \"lackluster\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Photographs that make someone long for earlier days stir a sentimental wish for the past. 'Nostalgia' means a longing for the past.",
+      "id": "E7-L031",
+      "options": {
+        "A": "anger",
+        "B": "fear",
+        "C": "shame",
+        "D": "longing"
+      },
+      "question": "Looking at his childhood photographs filled Mang Tomas with nostalgia for the days when the whole family lived under one roof. The word \"nostalgia\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "Arriving with an entourage and expecting everyone to stand shows a desire to impress. 'Pompous' means showy and self-important.",
+      "id": "E7-L032",
+      "options": {
+        "A": "timid",
+        "B": "generous",
+        "C": "showy",
+        "D": "honest"
+      },
+      "question": "The pompous official arrived with an entourage, expecting everyone to stand as he entered. The word \"pompous\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "A student who usually stays quiet but volunteers has acted against her usual reserve. 'Reticent' means reserved, not speaking much.",
+      "id": "E7-L033",
+      "options": {
+        "A": "rude",
+        "B": "reserved",
+        "C": "lazy",
+        "D": "boastful"
+      },
+      "question": "The usually reticent student surprised everyone by volunteering to lead the group presentation. The word \"reticent\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "A worker who can cook, sew, and repair appliances has many skills. 'Versatile' means able to adapt to many different tasks.",
+      "id": "E7-L034",
+      "options": {
+        "A": "adaptable",
+        "B": "wealthy",
+        "C": "famous",
+        "D": "strict"
+      },
+      "question": "A versatile worker, Aling Rosa can cook, sew, and repair small appliances. The word \"versatile\" most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "The verb 'prevent' is followed by 'from' plus a gerund. The correct form is 'prevented the visitors from entering the restricted area.'",
+      "id": "E7-L035",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The guard (A)prevented the visitors (B)to enter (C)the restricted area.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The sentence is grammatically correct. The verb 'played' agrees with the plural subject 'children,' and the time phrase is properly placed.",
+      "id": "E7-L036",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The children (A)played happily (B)in the park (C)until sunset.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "A pronoun in subject position must be in the subject form. Since the pair performs the action, the correct form is 'He and his sister will represent the school.'",
+      "id": "E7-L037",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". (A)Him and his sister (B)will represent (C)the school in the spelling contest.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "Items in a series must use the same grammatical form, a rule called parallelism. Because the first two items are gerunds ('reading,' 'swimming'), the third must also be a gerund: 'painting.'",
+      "id": "E7-L038",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". She likes (A)reading novels, (B)swimming in the river, (C)and to paint landscapes.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "The present perfect tense uses 'have' or 'has' plus the past participle. The past participle of 'go' is 'gone,' so the correct form is 'have already gone home.'",
+      "id": "E7-L039",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The players (A)have already (B)went home (C)after the game.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The sentence is grammatically correct. 'Asked' is followed correctly by the infinitive 'to submit,' and the deadline phrase is properly placed.",
+      "id": "E7-L040",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The teacher (A)asked the students (B)to submit their projects (C)by Friday.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "An adverb, not an adjective, is needed to describe how someone speaks. 'Clearly' modifies the verb 'speaks,' so the correct phrase is 'speaks very clearly.'",
+      "id": "E7-L041",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". (A)He speaks very clear (B)during class discussions (C)and debates.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'Affect' is the verb meaning to influence or change something, while 'effect' is usually a noun meaning a result. The policy influences routines, so 'affect' is correct.",
+      "id": "E7-L042",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The new policy (A)will change (B)the class schedule (C)and effect the students' routines.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "When two actions happen at the same time in the past, both verbs should be in the past tense. Since 'was cooking' is past continuous, the second verb should be 'was watching.'",
+      "id": "E7-L043",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". She (A)was cooking dinner (B)while he watches (C)the news.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The sentence is grammatically correct. 'Each of the workers' takes a singular verb, and 'received' agrees with that singular subject.",
+      "id": "E7-L044",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". Each of the workers (A)received a certificate (B)for perfect attendance (C)last month.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "A superlative adjective should not combine 'most' with an '-est' ending. 'Tallest' already expresses the highest degree, so 'most' must be removed.",
+      "id": "E7-L045",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". (A)The most tallest (B)building in town (C)was completed last year.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'Fewer' is used with countable nouns such as students, while 'less' is used with uncountable nouns such as rice. The correct phrase is 'fewer students.'",
+      "id": "E7-L046",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The canteen (A)now serves (B)smaller portions (C)because there is less students buying lunch.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "'Between' is used for two people or things, while 'among' is used for more than two. Since there are five winners, the correct word is 'among.'",
+      "id": "E7-L047",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". The teacher (A)divided the prizes (B)between the five winners (C)at the ceremony.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The sentence is grammatically correct. With 'neither... nor,' the verb agrees with the nearer subject 'players,' so the plural 'complained' is correct.",
+      "id": "E7-L048",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "No error"
+      },
+      "question": "Choose the part of the sentence that contains an error. If there is no error, choose \"No error\". Neither the coach (A)nor the players (B)complained about the referee's (C)decision.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'The number of' is treated as singular because it refers to a single total. The singular verb 'has' agrees with this subject.",
+      "id": "E7-L049",
+      "options": {
+        "A": "have",
+        "B": "are",
+        "C": "has",
+        "D": "were"
+      },
+      "question": "The number of enrollees in the review center ___ steadily increased this year.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "With 'neither... nor,' the verb agrees with the subject nearer to it. 'Sister' is singular, so the singular verb 'was' is correct.",
+      "id": "E7-L050",
+      "options": {
+        "A": "was",
+        "B": "were",
+        "C": "have been",
+        "D": "are"
+      },
+      "question": "Neither the twins nor their older sister ___ invited to the reunion.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "Names of academic subjects such as Physics are treated as singular even though they end in -s. The singular verb phrase 'has been' is therefore correct.",
+      "id": "E7-L051",
+      "options": {
+        "A": "are",
+        "B": "were",
+        "C": "have been",
+        "D": "has been"
+      },
+      "question": "Physics ___ my favorite subject since Grade 9.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "The subject is 'members,' a plural noun. The phrase 'of the choir' only modifies the subject and does not change its number, so the plural verb 'are' is correct.",
+      "id": "E7-L052",
+      "options": {
+        "A": "is",
+        "B": "are",
+        "C": "has been",
+        "D": "was"
+      },
+      "question": "The members of the choir ___ practicing for the regional competition.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'Every' makes the subject singular even when two nouns are joined by 'and.' The singular verb 'is' agrees with 'every laptop and tablet.'",
+      "id": "E7-L053",
+      "options": {
+        "A": "are",
+        "B": "have been",
+        "C": "is",
+        "D": "were"
+      },
+      "question": "Every laptop and tablet in the laboratory ___ labeled with an inventory number.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "An amount of time, money, or distance is treated as a single unit. 'Three hours' takes the singular verb 'is.'",
+      "id": "E7-L054",
+      "options": {
+        "A": "is",
+        "B": "are",
+        "C": "were",
+        "D": "have been"
+      },
+      "question": "Three hours ___ a long time to wait for a delayed bus.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The subject is 'collection,' a singular noun. The phrase 'of old stamps' only describes the collection, so the singular verb 'is' is correct.",
+      "id": "E7-L055",
+      "options": {
+        "A": "are",
+        "B": "were",
+        "C": "have been",
+        "D": "is"
+      },
+      "question": "The collection of old stamps ___ kept in a wooden box in the attic.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "With 'neither... nor,' the verb agrees with the subject nearer to it. 'Councilors' is plural, so the plural verb 'were' is correct.",
+      "id": "E7-L056",
+      "options": {
+        "A": "was",
+        "B": "were",
+        "C": "has been",
+        "D": "is"
+      },
+      "question": "Neither the mayor nor the councilors ___ present during the emergency session.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "A school is a singular institution and takes the singular possessive 'its.' 'Their' is plural, while 'his' and 'her' refer to people.",
+      "id": "E7-L057",
+      "options": {
+        "A": "their",
+        "B": "his",
+        "C": "her",
+        "D": "its"
+      },
+      "question": "The school released ___ new enrollment schedule yesterday.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "A pronoun following a linking verb in the predicate restates the subject and uses the subject form. The correct sentence is 'The winners were Rosa and I.'",
+      "id": "E7-L058",
+      "options": {
+        "A": "me",
+        "B": "I",
+        "C": "her",
+        "D": "him"
+      },
+      "question": "The winners of the poster contest were Rosa and ___.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "'Each' is singular, so it needs a singular possessive. The correct form is 'his or her own birth certificate.'",
+      "id": "E7-L059",
+      "options": {
+        "A": "his or her",
+        "B": "their",
+        "C": "its",
+        "D": "our"
+      },
+      "question": "Each applicant must submit ___ own birth certificate during registration.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "A company is a singular institution and takes the singular possessive 'its.' 'Their' is plural, while 'his' and 'her' refer to people.",
+      "id": "E7-L060",
+      "options": {
+        "A": "their",
+        "B": "his",
+        "C": "its",
+        "D": "her"
+      },
+      "question": "The company announced ___ plan to open a new branch next year.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "'Whose' is the possessive form of 'who' and shows ownership. The bag belongs to the student, so 'whose bag' is correct.",
+      "id": "E7-L061",
+      "options": {
+        "A": "who",
+        "B": "whom",
+        "C": "which",
+        "D": "whose"
+      },
+      "question": "The student ___ bag was left in the library claimed it after class.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "A reflexive pronoun must match its subject. The subject 'robot' is singular and not a person, so the correct reflexive pronoun is 'itself.'",
+      "id": "E7-L062",
+      "options": {
+        "A": "himself",
+        "B": "themselves",
+        "C": "itself",
+        "D": "herself"
+      },
+      "question": "The robot taught ___ to avoid obstacles during practice.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "The phrase 'since dawn' shows an action that started in the past and continues to the present. The present perfect continuous 'has been studying' expresses this.",
+      "id": "E7-L063",
+      "options": {
+        "A": "has been studying",
+        "B": "studies",
+        "C": "studied",
+        "D": "will study"
+      },
+      "question": "She ___ for the entrance exam since dawn and has barely taken a break.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'By next month' points to a time in the future before which the action will be finished. The future perfect 'will have completed' expresses a completed future action.",
+      "id": "E7-L064",
+      "options": {
+        "A": "complete",
+        "B": "have completed",
+        "C": "will have completed",
+        "D": "are completing"
+      },
+      "question": "By next month, the workers ___ the new classroom building.",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "A repeated daily habit uses the simple present tense. With the third-person singular subject 'he,' the verb takes an -s ending: 'goes.'",
+      "id": "E7-L065",
+      "options": {
+        "A": "go",
+        "B": "going",
+        "C": "gone",
+        "D": "goes"
+      },
+      "question": "He ___ to school by bicycle every day.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "In a first conditional sentence, the if-clause uses the present tense and the main clause uses 'will' plus the base verb. The correct form is 'will postpone.'",
+      "id": "E7-L066",
+      "options": {
+        "A": "postponed",
+        "B": "postpone",
+        "C": "will postpone",
+        "D": "had postponed"
+      },
+      "question": "If it rains tomorrow, we ___ the field trip to next week.",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "The past perfect is used for the earlier of two past actions. The visitors left after the presentation was already finished, so 'had finished' is correct.",
+      "id": "E7-L067",
+      "options": {
+        "A": "had finished",
+        "B": "finish",
+        "C": "have finished",
+        "D": "will finish"
+      },
+      "question": "The visitors left before we ___ the presentation of our project.",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "The verb 'suggest' is followed by a gerund, not an infinitive. The correct form is 'suggested leaving the meeting early.'",
+      "id": "E7-L068",
+      "options": {
+        "A": "to leave",
+        "B": "leave",
+        "C": "leaving",
+        "D": "left"
+      },
+      "question": "She suggested ___ the meeting early so the team could rest.",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "The passage discusses the market's benefits for vendors and the town, as well as its problems with litter and traffic. Only option B covers both sides.",
+      "id": "E7-L069",
+      "options": {
+        "A": "Night markets sell only food.",
+        "B": "The night market benefits vendors and the town but also creates problems that need managing.",
+        "C": "Aling Nena's fritters are the most popular food at the market.",
+        "D": "Traffic congestion caused by night markets cannot be solved."
+      },
+      "question": "Every Friday evening, the empty lot beside the town plaza transforms into a lively night market. Long before sunset, vendors arrive with folding tables, gas lamps, and crates of goods. Some sell grilled skewers and rice cakes; others offer handmade bracelets, second-hand books, and potted plants. What draws the crowd is not only the food but also the atmosphere: children weaving between stalls, neighbors exchanging news, and musicians playing near the entrance. For many vendors, the market is their main source of income. Aling Nena, who sells banana fritters, earns in one evening what her small store makes in three days. The municipal government supports the market because it keeps money circulating within the town. Yet the market's success also brings problems, such as litter and traffic congestion, which organizers must manage each week.\n\nWhat is the main idea of the passage?",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The passage states that Aling Nena earns in one evening what her small store makes in three days.",
+      "id": "E7-L070",
+      "options": {
+        "A": "less than her store makes in a day",
+        "B": "the same as her store makes in a week",
+        "C": "enough to close her store for good",
+        "D": "what her small store makes in three days"
+      },
+      "question": "Every Friday evening, the empty lot beside the town plaza transforms into a lively night market. Long before sunset, vendors arrive with folding tables, gas lamps, and crates of goods. Some sell grilled skewers and rice cakes; others offer handmade bracelets, second-hand books, and potted plants. What draws the crowd is not only the food but also the atmosphere: children weaving between stalls, neighbors exchanging news, and musicians playing near the entrance. For many vendors, the market is their main source of income. Aling Nena, who sells banana fritters, earns in one evening what her small store makes in three days. The municipal government supports the market because it keeps money circulating within the town. Yet the market's success also brings problems, such as litter and traffic congestion, which organizers must manage each week.\n\nAccording to the passage, Aling Nena earns in one evening at the market:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "The passage says the government supports the market because it keeps money circulating within the town. That economic benefit is the main reason given.",
+      "id": "E7-L071",
+      "options": {
+        "A": "it keeps money circulating within the town",
+        "B": "it reduces traffic around the plaza",
+        "C": "it replaces the vendors' regular stores",
+        "D": "it entertains tourists visiting the town"
+      },
+      "question": "Every Friday evening, the empty lot beside the town plaza transforms into a lively night market. Long before sunset, vendors arrive with folding tables, gas lamps, and crates of goods. Some sell grilled skewers and rice cakes; others offer handmade bracelets, second-hand books, and potted plants. What draws the crowd is not only the food but also the atmosphere: children weaving between stalls, neighbors exchanging news, and musicians playing near the entrance. For many vendors, the market is their main source of income. Aling Nena, who sells banana fritters, earns in one evening what her small store makes in three days. The municipal government supports the market because it keeps money circulating within the town. Yet the market's success also brings problems, such as litter and traffic congestion, which organizers must manage each week.\n\nIt can be inferred from the passage that the municipal government supports the night market mainly because:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'Circulating' comes from 'circulate,' meaning to move around within a system or place. Money circulating within the town stays and moves among local people.",
+      "id": "E7-L072",
+      "options": {
+        "A": "disappearing",
+        "B": "decreasing",
+        "C": "moving around within a place",
+        "D": "being counted"
+      },
+      "question": "Every Friday evening, the empty lot beside the town plaza transforms into a lively night market. Long before sunset, vendors arrive with folding tables, gas lamps, and crates of goods. Some sell grilled skewers and rice cakes; others offer handmade bracelets, second-hand books, and potted plants. What draws the crowd is not only the food but also the atmosphere: children weaving between stalls, neighbors exchanging news, and musicians playing near the entrance. For many vendors, the market is their main source of income. Aling Nena, who sells banana fritters, earns in one evening what her small store makes in three days. The municipal government supports the market because it keeps money circulating within the town. Yet the market's success also brings problems, such as litter and traffic congestion, which organizers must manage each week.\n\nThe word \"circulating\" in the passage most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "The passage states that for distant flowers, the scout bee performs a waggle dance, moving in a figure-eight pattern while shaking its abdomen.",
+      "id": "E7-L073",
+      "options": {
+        "A": "dances in quick circles",
+        "B": "performs a waggle dance in a figure-eight pattern",
+        "C": "stays inside the hive",
+        "D": "carries the other bees to the flowers"
+      },
+      "question": "When a scout bee discovers a rich patch of flowers, it returns to the hive and performs a remarkable dance. If the flowers are near the hive, the bee dances in quick circles. If they are farther away, it performs a waggle dance, moving in a figure-eight pattern while shaking its abdomen. The angle of the dance tells the other bees the direction of the flowers relative to the sun, while the length of the waggle tells them how far to fly. The other bees watch closely, then leave the hive to search in the indicated direction. Scientists have tested this communication system by moving hives and observing where the bees fly. Time and again, the bees head toward the food source the dancer described. The waggle dance is one of the clearest examples of symbolic communication among animals.\n\nAccording to the passage, when flowers are far from the hive, the scout bee:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The passage explains that the length of the waggle tells the other bees how far they must fly to reach the flowers.",
+      "id": "E7-L074",
+      "options": {
+        "A": "the color of the flowers",
+        "B": "the number of bees needed",
+        "C": "the danger of the journey",
+        "D": "the distance to the flowers"
+      },
+      "question": "When a scout bee discovers a rich patch of flowers, it returns to the hive and performs a remarkable dance. If the flowers are near the hive, the bee dances in quick circles. If they are farther away, it performs a waggle dance, moving in a figure-eight pattern while shaking its abdomen. The angle of the dance tells the other bees the direction of the flowers relative to the sun, while the length of the waggle tells them how far to fly. The other bees watch closely, then leave the hive to search in the indicated direction. Scientists have tested this communication system by moving hives and observing where the bees fly. Time and again, the bees head toward the food source the dancer described. The waggle dance is one of the clearest examples of symbolic communication among animals.\n\nIn the waggle dance, the length of the waggle communicates:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "The scientists moved hives and observed that the bees flew toward the food source the dancer described. This shows the bees can follow the dance's directions.",
+      "id": "E7-L075",
+      "options": {
+        "A": "bees can follow the dance's directions to find food",
+        "B": "bees dance mainly to entertain the hive",
+        "C": "bees ignore dances when the hive is moved",
+        "D": "only young bees understand the dance"
+      },
+      "question": "When a scout bee discovers a rich patch of flowers, it returns to the hive and performs a remarkable dance. If the flowers are near the hive, the bee dances in quick circles. If they are farther away, it performs a waggle dance, moving in a figure-eight pattern while shaking its abdomen. The angle of the dance tells the other bees the direction of the flowers relative to the sun, while the length of the waggle tells them how far to fly. The other bees watch closely, then leave the hive to search in the indicated direction. Scientists have tested this communication system by moving hives and observing where the bees fly. Time and again, the bees head toward the food source the dancer described. The waggle dance is one of the clearest examples of symbolic communication among animals.\n\nThe scientists' experiments described in the passage show that:",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "The passage focuses on how scout bees use dances to tell other bees where food is. Its purpose is to describe this communication system.",
+      "id": "E7-L076",
+      "options": {
+        "A": "explain how to keep bees",
+        "B": "warn readers about declining bee populations",
+        "C": "describe how bees communicate the location of food",
+        "D": "compare bees with other insects"
+      },
+      "question": "When a scout bee discovers a rich patch of flowers, it returns to the hive and performs a remarkable dance. If the flowers are near the hive, the bee dances in quick circles. If they are farther away, it performs a waggle dance, moving in a figure-eight pattern while shaking its abdomen. The angle of the dance tells the other bees the direction of the flowers relative to the sun, while the length of the waggle tells them how far to fly. The other bees watch closely, then leave the hive to search in the indicated direction. Scientists have tested this communication system by moving hives and observing where the bees fly. Time and again, the bees head toward the food source the dancer described. The waggle dance is one of the clearest examples of symbolic communication among animals.\n\nThe author's main purpose is to:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "The passage states that collected rainwater is stored in tanks and used for cleaning and watering the vegetable garden.",
+      "id": "E7-L077",
+      "options": {
+        "A": "drinking and cooking",
+        "B": "cleaning and watering the vegetable garden",
+        "C": "cooling the solar panels",
+        "D": "washing the school uniforms"
+      },
+      "question": "On a hilltop in the province stands a school that produces nearly all of its own electricity. Solar panels on the roof power the classrooms, the computer laboratory, and the water pump. Rainwater collected from the roof is stored in large tanks and used for cleaning and watering the vegetable garden. The students grow pechay, tomatoes, and herbs, which the school canteen uses for lunch. Teachers say the system has changed how students think about resources. Instead of taking electricity and water for granted, pupils now monitor the meters and report leaks promptly. The school also saves money: its monthly electricity bill has fallen to almost nothing. Other schools in the district have begun visiting to study the model, hoping to copy what works for their own campuses.\n\nAccording to the passage, the school's rainwater is used for:",
+      "section": "Language"
+    },
+    {
+      "answer": "D",
+      "explanation": "The passage says students no longer take electricity and water for granted. Monitoring meters and reporting leaks shows they have learned to value resources.",
+      "id": "E7-L078",
+      "options": {
+        "A": "they are punished if they do not",
+        "B": "the meters are part of their grades",
+        "C": "the principal requires daily reports",
+        "D": "they have learned not to take resources for granted"
+      },
+      "question": "On a hilltop in the province stands a school that produces nearly all of its own electricity. Solar panels on the roof power the classrooms, the computer laboratory, and the water pump. Rainwater collected from the roof is stored in large tanks and used for cleaning and watering the vegetable garden. The students grow pechay, tomatoes, and herbs, which the school canteen uses for lunch. Teachers say the system has changed how students think about resources. Instead of taking electricity and water for granted, pupils now monitor the meters and report leaks promptly. The school also saves money: its monthly electricity bill has fallen to almost nothing. Other schools in the district have begun visiting to study the model, hoping to copy what works for their own campuses.\n\nIt can be inferred that the students monitor the meters and report leaks because:",
+      "section": "Language"
+    },
+    {
+      "answer": "A",
+      "explanation": "The passage covers the school's solar power and rainwater systems, its savings, and how students learned to value resources. Only option A covers all of these.",
+      "id": "E7-L079",
+      "options": {
+        "A": "A school that generates its own power and harvests rainwater saves money and teaches students to value resources.",
+        "B": "Solar panels are the only way to power a school.",
+        "C": "Vegetable gardens should replace school canteens.",
+        "D": "All schools in the district already use the same system."
+      },
+      "question": "On a hilltop in the province stands a school that produces nearly all of its own electricity. Solar panels on the roof power the classrooms, the computer laboratory, and the water pump. Rainwater collected from the roof is stored in large tanks and used for cleaning and watering the vegetable garden. The students grow pechay, tomatoes, and herbs, which the school canteen uses for lunch. Teachers say the system has changed how students think about resources. Instead of taking electricity and water for granted, pupils now monitor the meters and report leaks promptly. The school also saves money: its monthly electricity bill has fallen to almost nothing. Other schools in the district have begun visiting to study the model, hoping to copy what works for their own campuses.\n\nWhat is the main idea of the passage?",
+      "section": "Language"
+    },
+    {
+      "answer": "C",
+      "explanation": "'Promptly' means without delay, or at once. Students who report leaks promptly report them quickly.",
+      "id": "E7-L080",
+      "options": {
+        "A": "reluctantly",
+        "B": "secretly",
+        "C": "quickly",
+        "D": "loudly"
+      },
+      "question": "On a hilltop in the province stands a school that produces nearly all of its own electricity. Solar panels on the roof power the classrooms, the computer laboratory, and the water pump. Rainwater collected from the roof is stored in large tanks and used for cleaning and watering the vegetable garden. The students grow pechay, tomatoes, and herbs, which the school canteen uses for lunch. Teachers say the system has changed how students think about resources. Instead of taking electricity and water for granted, pupils now monitor the meters and report leaks promptly. The school also saves money: its monthly electricity bill has fallen to almost nothing. Other schools in the district have begun visiting to study the model, hoping to copy what works for their own campuses.\n\nThe word \"promptly\" in the passage most nearly means:",
+      "section": "Language"
+    },
+    {
+      "answer": "B",
+      "explanation": "Multiply first: 6 × 4 = 24. Divide: 20 ÷ 5 = 4. Then 12 + 24 − 4 = 36 − 4 = 32. Answer: B.",
+      "id": "E7-M001",
+      "options": {
+        "A": "28",
+        "B": "32",
+        "C": "36",
+        "D": "40"
+      },
+      "question": "Evaluate: 12 + 6 × 4 − 20 ÷ 5 = ?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "(9 − 4) = 5, so (9 − 4)² = 25. 2³ = 8. 15 ÷ 3 = 5. Then 25 − 8 + 5 = 17 + 5 = 22. Answer: D.",
+      "id": "E7-M002",
+      "options": {
+        "A": "18",
+        "B": "27",
+        "C": "30",
+        "D": "22"
+      },
+      "question": "Evaluate: (9 − 4)² − 2³ + 15 ÷ 3 = ?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Divide first: 18 ÷ (−3) = −6. Multiply: (−6) × 2 = −12. Then −25 + (−12) − (−6) = −25 − 12 + 6 = −37 + 6 = −31. Answer: A.",
+      "id": "E7-M003",
+      "options": {
+        "A": "−31",
+        "B": "−19",
+        "C": "−37",
+        "D": "−25"
+      },
+      "question": "Evaluate: −25 + 18 ÷ (−3) × 2 − (−6) = ?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Inside the brackets: 5² = 25, so 12 − 25 = −13; 3 × (−13) = −39; 4³ = 64; −39 + 64 = 25. Then 100 − 25 = 75. Answer: C.",
+      "id": "E7-M004",
+      "options": {
+        "A": "71",
+        "B": "79",
+        "C": "75",
+        "D": "139"
+      },
+      "question": "Evaluate: 100 − [3 × (12 − 5²) + 4³] = ?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "0.35 = 35/100. Divide numerator and denominator by 5: 35 ÷ 5 = 7 and 100 ÷ 5 = 20, giving 7/20. Answer: A.",
+      "id": "E7-M005",
+      "options": {
+        "A": "7/20",
+        "B": "7/25",
+        "C": "3/10",
+        "D": "35/10"
+      },
+      "question": "Express 0.35 as a fraction in lowest terms.",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Discount: ₱640 × (1 − 0.15) = ₱640 × 0.85 = ₱544. Tax on the discounted price: ₱544 × 0.05 = ₱27.20. Final price: ₱544 + ₱27.20 = ₱571.20. Answer: C.",
+      "id": "E7-M006",
+      "options": {
+        "A": "₱544.00",
+        "B": "₱576.00",
+        "C": "₱571.20",
+        "D": "₱608.00"
+      },
+      "question": "A shirt originally priced at ₱640 is sold at a 15% discount, and then a 5% sales tax is added on the discounted price. What is the final price?",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "First simplify inside the parentheses: 2/3 − 1/6 = 4/6 − 1/6 = 3/6 = 1/2. Then 3/5 ÷ 1/2 = 3/5 × 2/1 = 6/5. Answer: B.",
+      "id": "E7-M007",
+      "options": {
+        "A": "2/5",
+        "B": "6/5",
+        "C": "9/10",
+        "D": "3/10"
+      },
+      "question": "Evaluate: 3/5 ÷ (2/3 − 1/6) = ?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "Simple interest: I = P × r × t = ₱8,000 × 0.06 × 2.5. ₱8,000 × 0.06 = ₱480 per year; ₱480 × 2.5 = ₱1,200. Answer: D.",
+      "id": "E7-M008",
+      "options": {
+        "A": "₱960",
+        "B": "₱1,440",
+        "C": "₱2,400",
+        "D": "₱1,200"
+      },
+      "question": "₱8,000 is invested at 6% per annum simple interest for 2 years and 6 months. How much interest is earned?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Let the original number be x. After a 35% increase it becomes 1.35x = 270. So x = 270 ÷ 1.35 = 200. Check: 200 × 1.35 = 270. Answer: A.",
+      "id": "E7-M009",
+      "options": {
+        "A": "200",
+        "B": "175",
+        "C": "235",
+        "D": "205"
+      },
+      "question": "A number is increased by 35% and becomes 270. What was the original number?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "The ratio 5:3 has 5 + 3 = 8 total parts. Each part is 64 ÷ 8 = 8 fruits. Oranges are 3 parts: 3 × 8 = 24. Answer: C.",
+      "id": "E7-M010",
+      "options": {
+        "A": "40",
+        "B": "32",
+        "C": "24",
+        "D": "16"
+      },
+      "question": "The ratio of apples to oranges in a basket is 5:3. If there are 64 fruits in all, how many are oranges?",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "Actual distance = map distance × scale = 7.2 cm × 25,000 = 180,000 cm. Convert: 180,000 cm = 1,800 m = 1.8 km. Answer: B.",
+      "id": "E7-M011",
+      "options": {
+        "A": "18 km",
+        "B": "1.8 km",
+        "C": "0.18 km",
+        "D": "180 km"
+      },
+      "question": "A map has a scale of 1:25,000. If the distance between two towns on the map is 7.2 cm, what is the actual distance?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "For inverse variation, xy = k (constant). k = 12 × 5 = 60. When x = 8, y = k ÷ x = 60 ÷ 8 = 7.5. Answer: D.",
+      "id": "E7-M012",
+      "options": {
+        "A": "6",
+        "B": "9.6",
+        "C": "4.8",
+        "D": "7.5"
+      },
+      "question": "y varies inversely as x. If y = 12 when x = 5, what is y when x = 8?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Fuel efficiency = 135 km ÷ 9 L = 15 km per liter. On 20 liters the car can travel 15 × 20 = 300 km. Answer: A.",
+      "id": "E7-M013",
+      "options": {
+        "A": "300 km",
+        "B": "270 km",
+        "C": "320 km",
+        "D": "360 km"
+      },
+      "question": "A car uses 9 liters of fuel to travel 135 km. At the same rate, how far can it travel on 20 liters of fuel?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "4x + 9 = 3x + 21. Subtract 3x from both sides: x + 9 = 21. Subtract 9: x = 12. Answer: C.",
+      "id": "E7-M014",
+      "options": {
+        "A": "10",
+        "B": "14",
+        "C": "12",
+        "D": "30"
+      },
+      "question": "Solve for x: 4x + 9 = 3x + 21",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "Multiply every term by 3: x − 12 = 6x + 18. Rearrange: −12 − 18 = 6x − x, so −30 = 5x, giving x = −6. Check: (−6)/3 − 4 = −6 and 2(−6) + 6 = −6. Answer: B.",
+      "id": "E7-M015",
+      "options": {
+        "A": "6",
+        "B": "−6",
+        "C": "−2",
+        "D": "2"
+      },
+      "question": "Solve for x: x/3 − 4 = 2x + 6",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "Add the two equations: (3x + y) + (2x − y) = 14 + 6, so 5x = 20 and x = 4. Substitute: 3(4) + y = 14, so y = 2. Then x² + y² = 16 + 4 = 20. Answer: D.",
+      "id": "E7-M016",
+      "options": {
+        "A": "16",
+        "B": "24",
+        "C": "12",
+        "D": "20"
+      },
+      "question": "If 3x + y = 14 and 2x − y = 6, what is the value of x² + y²?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "5 − 2x < 17. Subtract 5: −2x < 12. Divide by −2 and flip the inequality: x > −6. Answer: A.",
+      "id": "E7-M017",
+      "options": {
+        "A": "x > −6",
+        "B": "x < −6",
+        "C": "x > 6",
+        "D": "x < 6"
+      },
+      "question": "Solve the inequality: 5 − 2x < 17",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Find two numbers whose product is −24 and whose sum is 5: 8 and −3. So x² + 5x − 24 = (x + 8)(x − 3). Answer: C.",
+      "id": "E7-M018",
+      "options": {
+        "A": "(x − 8)(x + 3)",
+        "B": "(x + 6)(x − 4)",
+        "C": "(x + 8)(x − 3)",
+        "D": "(x − 6)(x + 4)"
+      },
+      "question": "Factor completely: x² + 5x − 24",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "x² − 8x + 12 = (x − 2)(x − 6) = 0, so the roots are 2 and 6. The sum of their squares is 2² + 6² = 4 + 36 = 40. Answer: B.",
+      "id": "E7-M019",
+      "options": {
+        "A": "36",
+        "B": "40",
+        "C": "52",
+        "D": "28"
+      },
+      "question": "What is the sum of the squares of the roots of x² − 8x + 12 = 0?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "Since x ≠ 0, divide the equation x² − 3x + 1 = 0 by x: x − 3 + 1/x = 0. Rearranging gives x + 1/x = 3. Answer: D.",
+      "id": "E7-M020",
+      "options": {
+        "A": "−3",
+        "B": "1",
+        "C": "0",
+        "D": "3"
+      },
+      "question": "If x² − 3x + 1 = 0, what is the value of x + 1/x?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Let the son's age be x; the father is 3x. In 8 years: (x + 8) + (3x + 8) = 72, so 4x + 16 = 72, 4x = 56, x = 14. Check: son 22, father 50, sum 72. Answer: A.",
+      "id": "E7-M021",
+      "options": {
+        "A": "14",
+        "B": "12",
+        "C": "16",
+        "D": "18"
+      },
+      "question": "A father is 3 times as old as his son. In 8 years, the sum of their ages will be 72. How old is the son now?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Let x be the liters of 60% syrup. Sugar equation: 0.60x + 0.20(15) = 0.35(x + 15). So 0.6x + 3 = 0.35x + 5.25, giving 0.25x = 2.25, x = 9. Check: 0.60(9) + 3 = 8.4 and 0.35(24) = 8.4. Answer: C.",
+      "id": "E7-M022",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "9",
+        "D": "15"
+      },
+      "question": "How many liters of a 60% sugar syrup must be mixed with 15 liters of a 20% sugar syrup to obtain a 35% sugar syrup?",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "Combined rate: 1/5 + 1/4 = 4/20 + 5/20 = 9/20 of the fence per hour. Time = 1 ÷ (9/20) = 20/9 hours ≈ 2.22 hours. 0.22 × 60 ≈ 13 minutes, so about 2 hours 13 minutes. Answer: B.",
+      "id": "E7-M023",
+      "options": {
+        "A": "2 hours 30 minutes",
+        "B": "2 hours 13 minutes",
+        "C": "2 hours",
+        "D": "4 hours 30 minutes"
+      },
+      "question": "Ana can paint a fence in 5 hours and Ben can paint the same fence in 4 hours. Working together, how long will it take them?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "They ride toward each other, so their closing speed is 18 + 24 = 42 km/h. Time to meet = distance ÷ closing speed = 105 ÷ 42 = 2.5 hours. Answer: D.",
+      "id": "E7-M024",
+      "options": {
+        "A": "2 hours",
+        "B": "3 hours",
+        "C": "1.5 hours",
+        "D": "2.5 hours"
+      },
+      "question": "Two cyclists start 105 km apart and ride toward each other at 18 km/h and 24 km/h. After how many hours will they meet?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Let the original speed be v km/h. Then 180/v − 180/(v + 6) = 1. Multiply through by v(v + 6): 180(v + 6) − 180v = v(v + 6), so 1,080 = v² + 6v. v² + 6v − 1,080 = 0 factors as (v + 36)(v − 30) = 0, so v = 30. Check: 180/30 = 6 h and 180/36 = 5 h, a difference of 1 h. Answer: A.",
+      "id": "E7-M025",
+      "options": {
+        "A": "30 km/h",
+        "B": "24 km/h",
+        "C": "36 km/h",
+        "D": "40 km/h"
+      },
+      "question": "A bus travels 180 km. If it had gone 6 km/h faster, the trip would have taken 1 hour less. What was the original speed of the bus?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Let the smaller integer be n. Then n² + (n + 1)² = 145, so 2n² + 2n + 1 = 145, 2n² + 2n − 144 = 0, n² + n − 72 = 0. Factoring: (n + 9)(n − 8) = 0, so n = 8. The larger integer is 9. Check: 8² + 9² = 64 + 81 = 145. Answer: C.",
+      "id": "E7-M026",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "9",
+        "D": "12"
+      },
+      "question": "The sum of the squares of two consecutive positive integers is 145. What is the larger integer?",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "An exterior angle equals the sum of the two remote interior angles. So the other remote interior angle = 118° − 54° = 64°. Answer: B.",
+      "id": "E7-M027",
+      "options": {
+        "A": "56°",
+        "B": "64°",
+        "C": "62°",
+        "D": "172°"
+      },
+      "question": "An exterior angle of a triangle measures 118°, and one remote interior angle measures 54°. What is the measure of the other remote interior angle?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "Circumference = π × diameter = (22/7) × 21 = 22 × 3 = 66 cm. Answer: D.",
+      "id": "E7-M028",
+      "options": {
+        "A": "132 cm",
+        "B": "33 cm",
+        "C": "346.5 cm",
+        "D": "66 cm"
+      },
+      "question": "A circle has a diameter of 21 cm. Using π = 22/7, what is its circumference?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Area of a trapezoid = (1/2)(sum of bases)(height) = (1/2)(12 + 18)(7) = (1/2)(30)(7) = 15 × 7 = 105 cm². Answer: A.",
+      "id": "E7-M029",
+      "options": {
+        "A": "105 cm²",
+        "B": "90 cm²",
+        "C": "120 cm²",
+        "D": "210 cm²"
+      },
+      "question": "A trapezoid has bases of 12 cm and 18 cm and a height of 7 cm. What is its area?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Volume of a cone = (1/3)πr²h = (1/3)(3.14)(6²)(10) = (1/3)(3.14)(360) = (1/3)(1,130.4) = 376.8 cm³. Answer: C.",
+      "id": "E7-M030",
+      "options": {
+        "A": "1,130.4 cm³",
+        "B": "188.4 cm³",
+        "C": "376.8 cm³",
+        "D": "753.6 cm³"
+      },
+      "question": "A cone has a radius of 6 cm and a height of 10 cm. Using π = 3.14, what is its volume?",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "In an isosceles triangle the two base angles are equal. Vertex angle 38°, so each base angle = (180° − 38°) ÷ 2 = 142° ÷ 2 = 71°. Answer: B.",
+      "id": "E7-M031",
+      "options": {
+        "A": "52°",
+        "B": "71°",
+        "C": "142°",
+        "D": "76°"
+      },
+      "question": "In an isosceles triangle, the vertex angle measures 38°. What is the measure of each base angle?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "Square: side = 52 ÷ 4 = 13 cm, area = 13² = 169 cm². Rectangle: length + width = 52 ÷ 2 = 26 cm; with length = width + 6, width = 10 cm and length = 16 cm, area = 160 cm². Difference = 169 − 160 = 9 cm². Answer: D.",
+      "id": "E7-M032",
+      "options": {
+        "A": "5 cm²",
+        "B": "13 cm²",
+        "C": "25 cm²",
+        "D": "9 cm²"
+      },
+      "question": "A square and a rectangle have the same perimeter of 52 cm. The rectangle's length exceeds its width by 6 cm. What is the difference between their areas?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Sum = 6 + 11 + 14 + 9 + 15 = 55. Mean = 55 ÷ 5 = 11. Answer: A.",
+      "id": "E7-M033",
+      "options": {
+        "A": "11",
+        "B": "10",
+        "C": "12",
+        "D": "11.5"
+      },
+      "question": "What is the mean of 6, 11, 14, 9, and 15?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "Arrange in order: 7, 8, 9, 12, 12, 15, 20. With 7 values, the median is the 4th value: 12. Answer: C.",
+      "id": "E7-M034",
+      "options": {
+        "A": "11",
+        "B": "9",
+        "C": "12",
+        "D": "15"
+      },
+      "question": "Find the median of the data set: 8, 12, 7, 20, 12, 9, 15.",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "The four equally likely outcomes are HH, HT, TH, TT. Exactly one head occurs in HT and TH — 2 out of 4 outcomes. Probability = 2/4 = 1/2. Answer: B.",
+      "id": "E7-M035",
+      "options": {
+        "A": "1/4",
+        "B": "1/2",
+        "C": "3/4",
+        "D": "1/3"
+      },
+      "question": "Two fair coins are tossed. What is the probability of getting exactly one head?",
+      "section": "Math"
+    },
+    {
+      "answer": "D",
+      "explanation": "There are 10 pens in all, 5 of which are green. With replacement, each draw has probability 5/10 = 1/2 of being green. P(both green) = (1/2) × (1/2) = 1/4. Answer: D.",
+      "id": "E7-M036",
+      "options": {
+        "A": "2/9",
+        "B": "1/5",
+        "C": "1/2",
+        "D": "1/4"
+      },
+      "question": "A bag contains 5 green, 3 yellow, and 2 red pens. A pen is drawn, replaced, and then another pen is drawn. What is the probability that both pens are green?",
+      "section": "Math"
+    },
+    {
+      "answer": "A",
+      "explanation": "Range = highest − lowest, so the highest score is 58 + 24 = 82. After increasing it by 6, the new highest is 88. New range = 88 − 58 = 30. Answer: A.",
+      "id": "E7-M037",
+      "options": {
+        "A": "30",
+        "B": "24",
+        "C": "36",
+        "D": "18"
+      },
+      "question": "The range of five test scores is 24. The lowest score is 58. If the highest score is increased by 6, what is the new range?",
+      "section": "Math"
+    },
+    {
+      "answer": "C",
+      "explanation": "The differences are 11 − 5 = 6, 17 − 11 = 6, 23 − 17 = 6. The common difference is 6, so the next term is 23 + 6 = 29. Answer: C.",
+      "id": "E7-M038",
+      "options": {
+        "A": "28",
+        "B": "30",
+        "C": "29",
+        "D": "27"
+      },
+      "question": "What is the next term in the sequence 5, 11, 17, 23, ...?",
+      "section": "Math"
+    },
+    {
+      "answer": "B",
+      "explanation": "This is a geometric sequence with first term 3 and common ratio 2. The nth term is 3 × 2^(n−1). The 8th term is 3 × 2^7 = 3 × 128 = 384. Answer: B.",
+      "id": "E7-M039",
+      "options": {
+        "A": "192",
+        "B": "384",
+        "C": "768",
+        "D": "96"
+      },
+      "question": "What is the 8th term of the geometric sequence 3, 6, 12, 24, ...?",
+      "section": "Math"
+    },
+    {
+      "id": "E7-M040",
+      "section": "Math",
+      "question": "What is the next term in the sequence 3, 8, 15, 24, ...?",
+      "options": {
+        "A": "33",
+        "B": "35",
+        "C": "37",
+        "D": "39"
+      },
+      "answer": "B",
+      "explanation": "The terms follow n^2 - 1: 2^2-1=3, 3^2-1=8, 4^2-1=15, 5^2-1=24, so next is 6^2-1=35."
+    },
+    {
+      "id": "E7-A001",
+      "section": "Aptitude",
+      "question": "Find the next number: 6, 11, 18, 27, 38, __",
+      "options": {
+        "A": "47",
+        "B": "51",
+        "C": "49",
+        "D": "53"
+      },
+      "answer": "B",
+      "explanation": "Differences increase by 2 each time: +5, +7, +9, +11. The next difference is +13, so 38 + 13 = 51. The distractors give differences of +9, +11, and +15, breaking the +2 growth pattern."
+    },
+    {
+      "id": "E7-A002",
+      "section": "Aptitude",
+      "question": "Find the next number: 90, 81, 72, 63, __",
+      "options": {
+        "A": "54",
+        "B": "45",
+        "C": "55",
+        "D": "60"
+      },
+      "answer": "A",
+      "explanation": "Subtract 9 each time: 90 - 9 = 81, 81 - 9 = 72, 72 - 9 = 63, so 63 - 9 = 54. The other options do not continue the steady -9 step."
+    },
+    {
+      "id": "E7-A003",
+      "section": "Aptitude",
+      "question": "Find the next number: 1, 4, 10, 22, 46, __",
+      "options": {
+        "A": "90",
+        "B": "92",
+        "C": "96",
+        "D": "94"
+      },
+      "answer": "D",
+      "explanation": "Rule: multiply by 2, then add 2. 1 x 2 + 2 = 4; 4 x 2 + 2 = 10; 10 x 2 + 2 = 22; 22 x 2 + 2 = 46; so 46 x 2 + 2 = 94. The distractors do not follow x2 + 2."
+    },
+    {
+      "id": "E7-A004",
+      "section": "Aptitude",
+      "question": "Find the next number: 3, 6, 11, 18, 27, __",
+      "options": {
+        "A": "36",
+        "B": "35",
+        "C": "38",
+        "D": "40"
+      },
+      "answer": "C",
+      "explanation": "Differences are consecutive odd numbers: +3, +5, +7, +9. The next difference is +11, so 27 + 11 = 38. The other options give differences of +8, +9, or +13, breaking the odd-number pattern."
+    },
+    {
+      "id": "E7-A005",
+      "section": "Aptitude",
+      "question": "Find the missing number: 5, 11, 23, 47, __",
+      "options": {
+        "A": "94",
+        "B": "95",
+        "C": "96",
+        "D": "90"
+      },
+      "answer": "B",
+      "explanation": "Each term is the previous term times 2, plus 1: 5 x 2 + 1 = 11, 11 x 2 + 1 = 23, 23 x 2 + 1 = 47, so the next term is 47 x 2 + 1 = 95."
+    },
+    {
+      "id": "E7-A006",
+      "section": "Aptitude",
+      "question": "Find the next number: 96, 48, 24, 12, __",
+      "options": {
+        "A": "8",
+        "B": "4",
+        "C": "3",
+        "D": "6"
+      },
+      "answer": "D",
+      "explanation": "Each term is half the previous one: 96 / 2 = 48, 48 / 2 = 24, 24 / 2 = 12, so 12 / 2 = 6. The distractors do not halve 12."
+    },
+    {
+      "id": "E7-A007",
+      "section": "Aptitude",
+      "question": "Find the next number: 4, 9, 19, 39, 79, __",
+      "options": {
+        "A": "159",
+        "B": "149",
+        "C": "158",
+        "D": "169"
+      },
+      "answer": "A",
+      "explanation": "Rule: multiply by 2, then add 1. 4 x 2 + 1 = 9; 9 x 2 + 1 = 19; 19 x 2 + 1 = 39; 39 x 2 + 1 = 79; so 79 x 2 + 1 = 159. The distractors do not follow x2 + 1."
+    },
+    {
+      "id": "E7-A008",
+      "section": "Aptitude",
+      "question": "Find the next number: 9, 4, 18, 8, 36, 16, __ (two interleaved series)",
+      "options": {
+        "A": "32",
+        "B": "48",
+        "C": "72",
+        "D": "64"
+      },
+      "answer": "C",
+      "explanation": "Two interleaved series, each doubling. Odd positions: 9, 18, 36, so the next odd-position term is 36 x 2 = 72. Even positions: 4, 8, 16. The missing term is in an odd position, so it is 72; 32 continues the even-position series, and 48 and 64 fit neither."
+    },
+    {
+      "id": "E7-A009",
+      "section": "Aptitude",
+      "question": "Find the next letter: C, F, I, L, O, __",
+      "options": {
+        "A": "P",
+        "B": "R",
+        "C": "S",
+        "D": "U"
+      },
+      "answer": "B",
+      "explanation": "Move forward 3 letters each time: C -> F -> I -> L -> O -> R. P is only +1 from O, S is +4, and U is +6."
+    },
+    {
+      "id": "E7-A010",
+      "section": "Aptitude",
+      "question": "Find the next letter: B, D, H, N, __",
+      "options": {
+        "A": "T",
+        "B": "U",
+        "C": "X",
+        "D": "V"
+      },
+      "answer": "D",
+      "explanation": "The jumps grow by 2: B to D is +2, D to H is +4, H to N is +6. The next jump is +8, so N (14) + 8 = V (22). T is +6, U is +7, and X is +10 from N."
+    },
+    {
+      "id": "E7-A011",
+      "section": "Aptitude",
+      "question": "In a code, each word's value is the sum of its letters' positions in the alphabet (A = 1, B = 2, ..., Z = 26). If CAT = 24 and DOG = 26, what is the value of BIRD?",
+      "options": {
+        "A": "33",
+        "B": "31",
+        "C": "32",
+        "D": "35"
+      },
+      "answer": "A",
+      "explanation": "Check the rule: C + A + T = 3 + 1 + 20 = 24 and D + O + G = 4 + 15 + 7 = 26. Applying it: B + I + R + D = 2 + 9 + 18 + 4 = 33. The distractors do not equal the letter-position sum."
+    },
+    {
+      "id": "E7-A012",
+      "section": "Aptitude",
+      "question": "Find the next letter: K, J, H, E, __",
+      "options": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      },
+      "answer": "C",
+      "explanation": "Move backward by growing steps: K to J is -1, J to H is -2, H to E is -3. The next step is -4, so E (5) - 4 = A (1). B is -3, C is -2, and D is -1 from E."
+    },
+    {
+      "id": "E7-A013",
+      "section": "Aptitude",
+      "question": "Author is to book as composer is to __",
+      "options": {
+        "A": "poem",
+        "B": "song",
+        "C": "painting",
+        "D": "speech"
+      },
+      "answer": "B",
+      "explanation": "Creator-to-creation relationship: an author creates a book, just as a composer creates a song. A poem is created by a poet, a painting by a painter, and a speech by a speaker."
+    },
+    {
+      "id": "E7-A014",
+      "section": "Aptitude",
+      "question": "4 is to 20 as 7 is to __",
+      "options": {
+        "A": "28",
+        "B": "42",
+        "C": "49",
+        "D": "35"
+      },
+      "answer": "D",
+      "explanation": "The rule is multiply by 5: 4 x 5 = 20, so 7 x 5 = 35. 28 is 7 x 4, 42 is 7 x 6, and 49 is 7 squared."
+    },
+    {
+      "id": "E7-A015",
+      "section": "Aptitude",
+      "question": "9 is to 81 as 12 is to __",
+      "options": {
+        "A": "144",
+        "B": "120",
+        "C": "132",
+        "D": "169"
+      },
+      "answer": "A",
+      "explanation": "The rule is squaring: 9 squared = 81, so 12 squared = 144. 120 and 132 are not squares of 12, and 169 is 13 squared."
+    },
+    {
+      "id": "E7-A016",
+      "section": "Aptitude",
+      "question": "Ocean is to water as desert is to __",
+      "options": {
+        "A": "heat",
+        "B": "cactus",
+        "C": "sand",
+        "D": "oasis"
+      },
+      "answer": "C",
+      "explanation": "Substance relationship: an ocean is made of water, just as a desert is made of sand. Heat is a property of a desert, a cactus is something that grows in it, and an oasis is a feature found in it."
+    },
+    {
+      "id": "E7-A017",
+      "section": "Aptitude",
+      "question": "5 is to 125 as 6 is to __",
+      "options": {
+        "A": "180",
+        "B": "216",
+        "C": "196",
+        "D": "256"
+      },
+      "answer": "B",
+      "explanation": "The rule is cubing: 5 cubed = 125, so 6 cubed = 216. 180 is 6 x 30, 196 is 14 squared, and 256 is 4 to the 4th power."
+    },
+    {
+      "id": "E7-A018",
+      "section": "Aptitude",
+      "question": "Finger is to hand as toe is to __",
+      "options": {
+        "A": "leg",
+        "B": "shoe",
+        "C": "nail",
+        "D": "foot"
+      },
+      "answer": "D",
+      "explanation": "Part-to-whole relationship: a finger is part of a hand, just as a toe is part of a foot. A leg is the larger limb, a shoe is worn on the foot, and a nail is part of a toe."
+    },
+    {
+      "id": "E7-A019",
+      "section": "Aptitude",
+      "question": "All roses are flowers. Some flowers are red. Which conclusion must be true?",
+      "options": {
+        "A": "Some red things are flowers.",
+        "B": "All roses are red.",
+        "C": "Some roses are red.",
+        "D": "All flowers are roses."
+      },
+      "answer": "A",
+      "explanation": "'Some flowers are red' means at least one flower is red, so that red thing is a flower: some red things are flowers (the valid converse). Nothing says the red flowers include roses, so B and C do not follow, and D reverses the first statement."
+    },
+    {
+      "id": "E7-A020",
+      "section": "Aptitude",
+      "question": "If it rains, the ground gets wet. The ground is wet. What can definitely be concluded?",
+      "options": {
+        "A": "It rained.",
+        "B": "It did not rain.",
+        "C": "Nothing definite can be concluded about whether it rained.",
+        "D": "The ground will dry soon."
+      },
+      "answer": "C",
+      "explanation": "This is affirming the consequent, which is invalid: the ground could be wet for other reasons (a sprinkler, a spilled bucket). So rain cannot be confirmed or ruled out, and nothing is known about drying."
+    },
+    {
+      "id": "E7-A021",
+      "section": "Aptitude",
+      "question": "Which of these animals does NOT belong with the others?",
+      "options": {
+        "A": "Dog",
+        "B": "Eagle",
+        "C": "Cat",
+        "D": "Cow"
+      },
+      "answer": "B",
+      "explanation": "Eagle is the only bird; dog, cat, and cow are all mammals. Each of the other options shares the mammal category."
+    },
+    {
+      "id": "E7-A022",
+      "section": "Aptitude",
+      "question": "Which number is the odd one out? 16, 25, 36, 49, 60",
+      "options": {
+        "A": "16",
+        "B": "25",
+        "C": "49",
+        "D": "60"
+      },
+      "answer": "D",
+      "explanation": "16, 25, 36, and 49 are perfect squares (4 squared, 5 squared, 6 squared, 7 squared). 60 is not a perfect square."
+    },
+    {
+      "id": "E7-A023",
+      "section": "Aptitude",
+      "question": "No birds are mammals. All bats are mammals. Which conclusion must be true?",
+      "options": {
+        "A": "No bats are birds.",
+        "B": "Some bats are birds.",
+        "C": "All birds are bats.",
+        "D": "Some birds are mammals."
+      },
+      "answer": "A",
+      "explanation": "Since every bat is a mammal and no bird is a mammal, no bat can be a bird. B contradicts this, C reverses the relationship, and D contradicts the first statement."
+    },
+    {
+      "id": "E7-A024",
+      "section": "Aptitude",
+      "question": "In a spelling contest, Ana scored higher than Ben. Ben scored higher than Cara. Who scored lowest?",
+      "options": {
+        "A": "Cara",
+        "B": "Ana",
+        "C": "Ben",
+        "D": "Cannot tell"
+      },
+      "answer": "A",
+      "explanation": "Ana > Ben > Cara, so Cara scored lowest."
+    },
+    {
+      "id": "E7-A025",
+      "section": "Aptitude",
+      "question": "A row of stars follows a pattern: one unshaded star, one shaded star, two unshaded stars, two shaded stars, three unshaded stars, __. What comes next?",
+      "options": {
+        "A": "four unshaded stars",
+        "B": "three shaded stars",
+        "C": "three unshaded stars",
+        "D": "four shaded stars"
+      },
+      "answer": "B",
+      "explanation": "The pattern runs in pairs with growing counts: (1 unshaded, 1 shaded), (2 unshaded, 2 shaded), (3 unshaded, 3 shaded). After three unshaded stars comes the matching three shaded stars."
+    },
+    {
+      "id": "E7-A026",
+      "section": "Aptitude",
+      "question": "A flag on a pole pointing right becomes a flag on a pole pointing left. Following the same rule (mirror image left-to-right), an arrow pointing up-right becomes:",
+      "options": {
+        "A": "an arrow pointing down-right",
+        "B": "an arrow pointing down-left",
+        "C": "an arrow pointing up-right",
+        "D": "an arrow pointing up-left"
+      },
+      "answer": "D",
+      "explanation": "The rule is a left-right mirror flip: right becomes left while up stays up. So up-right mirrors to up-left. Down-right and down-left wrongly flip the vertical direction, and up-right is unchanged."
+    },
+    {
+      "id": "E7-A027",
+      "section": "Aptitude",
+      "question": "A small arrow inside a circle points north. In each step, the arrow turns 90 degrees clockwise: north, east, south, __. Where does it point next?",
+      "options": {
+        "A": "west",
+        "B": "north",
+        "C": "southwest",
+        "D": "east"
+      },
+      "answer": "A",
+      "explanation": "Each step is a quarter-turn clockwise: north -> east -> south -> west. North would skip a step, southwest is not a 90-degree turn, and east is the previous direction."
+    },
+    {
+      "id": "E7-A028",
+      "section": "Aptitude",
+      "question": "Juan faces north. He turns 90 degrees to his right, then 90 degrees to his right again, then 90 degrees to his left. Which way does he face now?",
+      "options": {
+        "A": "North",
+        "B": "South",
+        "C": "East",
+        "D": "West"
+      },
+      "answer": "C",
+      "explanation": "Track each turn: north -> right turn -> east; east -> right turn -> south; south -> left turn -> east. The net effect is one right turn from north, which is east."
+    },
+    {
+      "id": "E7-A029",
+      "section": "Aptitude",
+      "question": "A school is 3 km east of a park. A library is 4 km north of the school. How far is the library from the park in a straight line?",
+      "options": {
+        "A": "6 km",
+        "B": "5 km",
+        "C": "7 km",
+        "D": "12 km"
+      },
+      "answer": "B",
+      "explanation": "The park, school, and library form a right triangle with legs 3 km and 4 km. By the Pythagorean theorem, the straight-line distance is the square root of (9 + 16) = the square root of 25 = 5 km. 7 km adds the legs, and 12 km multiplies them."
+    },
+    {
+      "id": "E7-A030",
+      "section": "Aptitude",
+      "question": "Maria walks 5 km north, then 3 km east, then 2 km south. How far is she from her starting point, and in which direction?",
+      "options": {
+        "A": "8 km northeast",
+        "B": "3 km east",
+        "C": "4 km north",
+        "D": "About 4.2 km northeast"
+      },
+      "answer": "D",
+      "explanation": "Net displacement: 5 km north minus 2 km south = 3 km north, and 3 km east. The straight-line distance is the square root of (3 squared + 3 squared) = the square root of 18, about 4.2 km, toward the northeast. 8 km is the total path length, not the displacement."
+    },
+    {
+      "id": "E7-S001",
+      "section": "Science",
+      "question": "A plant cell is placed in salty water, and the cell shrinks. Which cell structure normally controls which substances pass into and out of the cell, deciding what the cell gains or loses?",
+      "options": {
+        "A": "The cell wall",
+        "B": "The ribosome",
+        "C": "The cell membrane",
+        "D": "The Golgi body"
+      },
+      "answer": "C",
+      "explanation": "The cell membrane is selectively permeable: it controls which substances enter and leave the cell. The cell wall gives support and shape, but it is the membrane that regulates the passage of water, nutrients, and wastes."
+    },
+    {
+      "id": "E7-S002",
+      "section": "Science",
+      "question": "On the periodic table, the chemical symbol Fe stands for which element?",
+      "options": {
+        "A": "Fluorine",
+        "B": "Iron",
+        "C": "Lead",
+        "D": "Zinc"
+      },
+      "answer": "B",
+      "explanation": "Fe comes from the Latin word for iron, 'ferrum.' Chemical symbols do not always match the modern English name: fluorine is F, lead is Pb, and zinc is Zn."
+    },
+    {
+      "id": "E7-S003",
+      "section": "Science",
+      "question": "A bus travels 120 kilometers in 2 hours at a steady speed. What is the average speed of the bus?",
+      "options": {
+        "A": "30 km/h",
+        "B": "60 m/s",
+        "C": "240 km/h",
+        "D": "60 km/h"
+      },
+      "answer": "D",
+      "explanation": "Average speed equals total distance divided by total time. Here, 120 km divided by 2 h gives 60 km/h."
+    },
+    {
+      "id": "E7-S004",
+      "section": "Science",
+      "question": "A student finds the fossil of an ancient shellfish embedded in a layer of rock made of hardened sand and mud. In which type of rock are fossils like this most commonly found?",
+      "options": {
+        "A": "Sedimentary rock",
+        "B": "Igneous rock",
+        "C": "Metamorphic rock",
+        "D": "Volcanic glass"
+      },
+      "answer": "A",
+      "explanation": "Sedimentary rock forms from layers of sand, mud, and the remains of organisms settling and hardening over time, so it is where fossils are most often preserved. Igneous rock forms from cooled molten material, and metamorphic rock forms under heat and pressure that usually destroys fossils."
+    },
+    {
+      "id": "E7-S005",
+      "section": "Science",
+      "question": "A gene is best described as which of the following?",
+      "options": {
+        "A": "A protein that speeds up reactions in the cell",
+        "B": "A segment of DNA that carries instructions for making a protein",
+        "C": "A structure that carries oxygen through the blood",
+        "D": "A type of cell that fights infections"
+      },
+      "answer": "B",
+      "explanation": "Genes are sections of DNA that store the instructions for building proteins, and those proteins carry out most of the work in the cell. Proteins such as enzymes do speed up reactions, but the gene itself is the instruction, not the protein."
+    },
+    {
+      "id": "E7-S006",
+      "section": "Science",
+      "question": "The chemical formula for water is H2O. What does this formula tell us about one molecule of water?",
+      "options": {
+        "A": "It contains two hydrogen atoms and one oxygen atom.",
+        "B": "It contains one hydrogen atom and two oxygen atoms.",
+        "C": "It contains two hydrogen atoms and two oxygen atoms.",
+        "D": "It contains one hydrogen atom and one oxygen atom."
+      },
+      "answer": "A",
+      "explanation": "In a chemical formula, the subscript after each symbol shows how many atoms of that element are in one molecule. The '2' after H means two hydrogen atoms, and the O with no subscript means one oxygen atom."
+    },
+    {
+      "id": "E7-S007",
+      "section": "Science",
+      "question": "An astronaut has a mass of 60 kg on Earth. When she lands on the Moon, where gravity is much weaker, which statement about her mass and weight is TRUE?",
+      "options": {
+        "A": "Both her mass and her weight stay the same.",
+        "B": "Her mass decreases, but her weight stays the same.",
+        "C": "Her mass stays the same, but her weight decreases.",
+        "D": "Both her mass and her weight increase."
+      },
+      "answer": "C",
+      "explanation": "Mass is the amount of matter in an object and does not change with location, so it stays 60 kg. Weight is the pull of gravity on that mass, so weaker lunar gravity means she weighs much less on the Moon."
+    },
+    {
+      "id": "E7-S008",
+      "section": "Science",
+      "question": "Most of the water vapor in Earth's atmosphere originally comes from which process?",
+      "options": {
+        "A": "Water condensing into dew on cool grass",
+        "B": "Rain soaking into dry soil",
+        "C": "Plants absorbing water through their roots",
+        "D": "Water evaporating from the oceans"
+      },
+      "answer": "D",
+      "explanation": "Evaporation from the vast oceans supplies most of the water vapor in the air. Condensation removes vapor from the air by turning it back into liquid, and root absorption moves water within plants rather than adding vapor to the atmosphere."
+    },
+    {
+      "id": "E7-S009",
+      "section": "Science",
+      "question": "In a forest, fungi and bacteria break down fallen leaves and dead animals. What is the main role of these organisms in the ecosystem?",
+      "options": {
+        "A": "They return nutrients from dead matter to the soil.",
+        "B": "They capture sunlight to make food.",
+        "C": "They hunt other organisms for energy.",
+        "D": "They prevent all other organisms from growing."
+      },
+      "answer": "A",
+      "explanation": "Fungi and bacteria are decomposers: they break down dead organisms and waste, releasing nutrients back into the soil where plants can reuse them. Producers capture sunlight, and consumers eat other organisms."
+    },
+    {
+      "id": "E7-S010",
+      "section": "Science",
+      "question": "A liquid has a pH of 2. Which of the following best describes this liquid?",
+      "options": {
+        "A": "It is a strong base.",
+        "B": "It is a strong acid.",
+        "C": "It is neutral.",
+        "D": "It is pure water."
+      },
+      "answer": "B",
+      "explanation": "On the pH scale, values below 7 are acidic, 7 is neutral, and values above 7 are basic. A pH of 2 is well below 7, so the liquid is a strong acid, similar to lemon juice or stomach acid."
+    },
+    {
+      "id": "E7-S011",
+      "section": "Science",
+      "question": "A rocket rises into the sky as its engine pushes hot gases downward out of the nozzle. Which of Newton's laws best explains why the rocket moves upward?",
+      "options": {
+        "A": "An object at rest stays at rest unless acted on by a force.",
+        "B": "Force equals mass times acceleration.",
+        "C": "Objects fall at the same rate regardless of mass.",
+        "D": "For every action, there is an equal and opposite reaction."
+      },
+      "answer": "D",
+      "explanation": "Newton's third law states that every action has an equal and opposite reaction. The engine's action of pushing gases downward produces a reaction force that pushes the rocket upward."
+    },
+    {
+      "id": "E7-S012",
+      "section": "Science",
+      "question": "A student looks at a drop of blood under a microscope and sees many small, round cells with no nucleus. Which substance inside these cells carries oxygen from the lungs to the body's tissues?",
+      "options": {
+        "A": "Insulin",
+        "B": "Chlorophyll",
+        "C": "Hemoglobin",
+        "D": "Adrenaline"
+      },
+      "answer": "C",
+      "explanation": "Red blood cells contain hemoglobin, a protein that binds oxygen in the lungs and releases it to the body's tissues. Insulin regulates blood sugar, chlorophyll captures light in plants, and adrenaline is a hormone released in emergencies."
+    },
+    {
+      "id": "E7-S013",
+      "section": "Science",
+      "question": "A disposable hand warmer feels warm after it is opened and shaken. Which term best describes the chemical reaction happening inside the hand warmer?",
+      "options": {
+        "A": "Exothermic, because it releases heat to the surroundings.",
+        "B": "Endothermic, because it absorbs heat from the surroundings.",
+        "C": "Neutralization, because it produces salt and water.",
+        "D": "Photosynthesis, because it stores light energy."
+      },
+      "answer": "A",
+      "explanation": "An exothermic reaction releases energy, usually as heat, into the surroundings, which is why the hand warmer feels warm. An endothermic reaction absorbs heat and feels cold, and neither neutralization nor photosynthesis is happening inside a hand warmer."
+    },
+    {
+      "id": "E7-S014",
+      "section": "Science",
+      "question": "A drinking straw in a glass of water looks bent at the surface of the water, even though the straw is straight. What causes this effect?",
+      "options": {
+        "A": "Reflection of light off the glass",
+        "B": "Refraction, the bending of light as it passes from water into air",
+        "C": "Absorption of light by the straw",
+        "D": "The water dissolving the straw"
+      },
+      "answer": "B",
+      "explanation": "Refraction is the bending of light as it moves from one medium to another, such as from water to air. Because the light bends at the surface, the part of the straw under water appears shifted, making the straw look bent."
+    },
+    {
+      "id": "E7-S015",
+      "section": "Science",
+      "question": "Dark, towering clouds build up on a hot afternoon, and a heavy thunderstorm with lightning soon follows. These clouds are best identified as which type?",
+      "options": {
+        "A": "Cirrus clouds",
+        "B": "Stratus clouds",
+        "C": "Cumulus humilis clouds",
+        "D": "Cumulonimbus clouds"
+      },
+      "answer": "D",
+      "explanation": "Cumulonimbus clouds are tall, dense clouds that grow upward on warm, humid days and bring thunderstorms, heavy rain, and lightning. Cirrus clouds are thin and wispy, and stratus clouds are flat layers that usually bring steady, light rain."
+    },
+    {
+      "id": "E7-S016",
+      "section": "Science",
+      "question": "A couple has a baby boy. Which parent determined the baby's sex, and how?",
+      "options": {
+        "A": "The mother, because she passes on two X chromosomes.",
+        "B": "The father, because he passes on an X chromosome only.",
+        "C": "The father, because he may pass on either an X or a Y chromosome.",
+        "D": "Neither parent, because sex is set by the environment."
+      },
+      "answer": "C",
+      "explanation": "The mother always contributes an X chromosome, while the father contributes either an X or a Y. An XX combination develops as female and an XY combination as male, so the father's contribution determines the baby's sex."
+    },
+    {
+      "id": "E7-S017",
+      "section": "Science",
+      "question": "A person with an upset stomach takes an antacid tablet containing baking soda (sodium bicarbonate). How does the antacid relieve the burning feeling?",
+      "options": {
+        "A": "It coats the stomach with a waterproof layer.",
+        "B": "It acts as a base that neutralizes excess stomach acid.",
+        "C": "It turns the stomach acid into a stronger acid.",
+        "D": "It stops the stomach from producing food."
+      },
+      "answer": "B",
+      "explanation": "Baking soda is a base, and stomach pain is often caused by excess acid. When a base meets an acid, they neutralize each other, reducing the acidity that causes the burning feeling."
+    },
+    {
+      "id": "E7-S018",
+      "section": "Science",
+      "question": "A circuit has a 6-volt battery connected to a resistor of 2 ohms. Using Ohm's law (V = I x R), what is the electric current flowing through the circuit?",
+      "options": {
+        "A": "3 amperes",
+        "B": "12 amperes",
+        "C": "8 amperes",
+        "D": "0.3 amperes"
+      },
+      "answer": "A",
+      "explanation": "Ohm's law states that voltage equals current times resistance, so current equals voltage divided by resistance. Here, 6 volts divided by 2 ohms gives a current of 3 amperes."
+    },
+    {
+      "id": "E7-S019",
+      "section": "Science",
+      "question": "Which equation best summarizes the process of photosynthesis in a green plant?",
+      "options": {
+        "A": "Glucose + oxygen -> carbon dioxide + water + energy",
+        "B": "Glucose + water -> carbon dioxide + oxygen, using light energy",
+        "C": "Oxygen + water -> carbon dioxide + glucose",
+        "D": "Carbon dioxide + water -> glucose + oxygen, using light energy"
+      },
+      "answer": "D",
+      "explanation": "In photosynthesis, a plant uses light energy to combine carbon dioxide and water into glucose, releasing oxygen as a byproduct. The reverse process, breaking down glucose with oxygen to release energy, is cellular respiration."
+    },
+    {
+      "id": "E7-S020",
+      "section": "Science",
+      "question": "Carbon is the backbone of the millions of compounds found in living things. Which property of carbon atoms makes this possible?",
+      "options": {
+        "A": "Each carbon atom can form four covalent bonds.",
+        "B": "Each carbon atom has a full outer shell and never bonds.",
+        "C": "Carbon atoms can only bond with oxygen.",
+        "D": "Carbon atoms repel all other atoms."
+      },
+      "answer": "C",
+      "explanation": "A carbon atom has four electrons in its outer shell, so it can form four covalent bonds with other atoms, including other carbon atoms. This lets carbon build long chains, branches, and rings — the framework of proteins, fats, DNA, and other organic molecules."
+    },
+    {
+      "id": "E7-S021",
+      "section": "Science",
+      "question": "A student builds an electromagnet by wrapping wire around an iron nail and connecting the wire to a battery. Which change will make the electromagnet stronger?",
+      "options": {
+        "A": "Using fewer coils of wire around the nail",
+        "B": "Wrapping more coils of wire around the nail",
+        "C": "Replacing the iron nail with a wooden stick",
+        "D": "Connecting the wire so that no current flows"
+      },
+      "answer": "B",
+      "explanation": "The strength of an electromagnet grows with the number of coils and the amount of current flowing through them. More coils produce a stronger magnetic field, while an iron core concentrates it; wood and zero current would weaken or remove the magnetism."
+    },
+    {
+      "id": "E7-S022",
+      "section": "Science",
+      "question": "Venus is farther from the Sun than Mercury, yet Venus has the hottest surface of any planet. What is the main reason for Venus's extreme heat?",
+      "options": {
+        "A": "Its thick carbon dioxide atmosphere traps heat through a runaway greenhouse effect.",
+        "B": "Its surface is covered in burning lava oceans.",
+        "C": "It rotates so slowly that one side always faces the Sun.",
+        "D": "Its clouds are made of ice that reflects heat inward."
+      },
+      "answer": "A",
+      "explanation": "Venus is wrapped in a dense atmosphere that is mostly carbon dioxide, which traps outgoing heat in a powerful greenhouse effect and keeps the surface around 465 degC. Mercury, with almost no atmosphere to hold heat in, is cooler on average despite being closer to the Sun."
+    },
+    {
+      "id": "E7-S023",
+      "section": "Science",
+      "question": "A doctor says a patient has an injury to the central nervous system. Which two parts of the body make up the central nervous system?",
+      "options": {
+        "A": "The heart and the lungs",
+        "B": "The nerves in the arms and legs",
+        "C": "The stomach and the intestines",
+        "D": "The brain and the spinal cord"
+      },
+      "answer": "D",
+      "explanation": "The central nervous system consists of the brain and the spinal cord, which receive, process, and send out signals for the whole body. The nerves running through the arms and legs belong to the peripheral nervous system."
+    },
+    {
+      "id": "E7-S024",
+      "section": "Science",
+      "question": "Methane (CH4), the main gas in cooking fuel, burns completely in oxygen. Which pair of products does complete combustion of methane produce?",
+      "options": {
+        "A": "Carbon monoxide and hydrogen",
+        "B": "Carbon and water",
+        "C": "Carbon dioxide and water",
+        "D": "Oxygen and carbon"
+      },
+      "answer": "C",
+      "explanation": "In complete combustion, a hydrocarbon reacts with oxygen to form carbon dioxide and water. Carbon monoxide and soot appear only when the fuel burns incompletely because of too little oxygen."
+    },
+    {
+      "id": "E7-S025",
+      "section": "Science",
+      "question": "A 2-kg book rests on a shelf 1.5 meters above the floor. Using g = 10 m/s^2 and the formula PE = m x g x h, what is the gravitational potential energy of the book relative to the floor?",
+      "options": {
+        "A": "3 joules",
+        "B": "30 joules",
+        "C": "13.5 joules",
+        "D": "300 joules"
+      },
+      "answer": "B",
+      "explanation": "Gravitational potential energy equals mass times gravity times height. Here, 2 kg x 10 m/s^2 x 1.5 m gives 30 joules of stored energy due to the book's position."
+    },
+    {
+      "id": "E7-S026",
+      "section": "Science",
+      "question": "A small pond can support about 200 frogs. When the frog population grows past 200, food runs short, and the population falls back toward 200. What is the term for this limit of about 200 frogs?",
+      "options": {
+        "A": "Carrying capacity",
+        "B": "Mutation rate",
+        "C": "Gene flow",
+        "D": "Food web"
+      },
+      "answer": "A",
+      "explanation": "Carrying capacity is the maximum population that an environment can sustain over time, given its food, water, shelter, and space. When a population overshoots it, shortages and competition push the numbers back down."
+    },
+    {
+      "id": "E7-S027",
+      "section": "Science",
+      "question": "People on Earth always see the same side of the Moon. What is the best explanation for this?",
+      "options": {
+        "A": "The Moon does not rotate at all.",
+        "B": "The Moon's far side is always in darkness.",
+        "C": "The Moon is too far away for its far side to be seen.",
+        "D": "The Moon rotates once in the same time it takes to orbit Earth once."
+      },
+      "answer": "D",
+      "explanation": "The Moon is tidally locked to Earth: it spins once on its axis in the same time it takes to complete one orbit. Because the rotation and orbit stay in step, the same face always points toward Earth."
+    },
+    {
+      "id": "E7-S028",
+      "section": "Science",
+      "question": "A red blood cell is placed in a dish of pure distilled water. Water moves into the cell by osmosis, and the cell swells until it bursts. Why does the water move into the cell?",
+      "options": {
+        "A": "The cell membrane actively pumps water inward.",
+        "B": "Water evaporates from the dish into the cell.",
+        "C": "Water moves from where it is more concentrated outside the cell to where it is less concentrated inside.",
+        "D": "The cell produces water faster than it can release it."
+      },
+      "answer": "C",
+      "explanation": "Osmosis is the passive movement of water across a membrane from a region of higher water concentration to a region of lower water concentration. The distilled water outside is more concentrated in water than the salty interior of the cell, so water flows in until the cell bursts."
+    },
+    {
+      "id": "E7-S029",
+      "section": "Science",
+      "question": "At sea level, at what temperature in degrees Celsius does pure water boil?",
+      "options": {
+        "A": "0 degC",
+        "B": "100 degC",
+        "C": "37 degC",
+        "D": "212 degC"
+      },
+      "answer": "B",
+      "explanation": "At normal sea-level air pressure, pure water boils at 100 degrees Celsius, the point where its vapor pressure equals the pressure of the atmosphere. Zero degrees Celsius is the freezing point, and 212 is the boiling point in degrees Fahrenheit."
+    },
+    {
+      "id": "E7-S030",
+      "section": "Science",
+      "question": "Two bar magnets are held so that their north poles face each other. What will happen when they are brought close together?",
+      "options": {
+        "A": "They will push away from each other.",
+        "B": "They will pull strongly toward each other.",
+        "C": "They will lose all their magnetism.",
+        "D": "They will stick together and stop working."
+      },
+      "answer": "A",
+      "explanation": "Like magnetic poles repel each other, while unlike poles attract. Two north poles facing each other push apart, just as two south poles would."
+    }
+  ]
+}
