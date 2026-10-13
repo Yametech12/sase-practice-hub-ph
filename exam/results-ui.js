@@ -40,6 +40,7 @@
    "btnScorecard", "btnHub"].forEach(function (id) { els[id] = document.getElementById(id); });
 
   var currentData = null;
+  var currentExamN = null;
   var currentFilter = "all";
 
   /* ---------- headline tiers ---------- */
@@ -53,6 +54,7 @@
   /* ---------- main render ---------- */
   function render(data, examN) {
     currentData = data;
+    currentExamN = examN || "?";
     var pct = data.pct != null ? data.pct : (data.total ? data.score / data.total * 100 : 0);
 
     // COPY fix 3: auto-submit / forfeit notices.
@@ -294,6 +296,15 @@
     if (!currentData) return;
     var d = currentData;
     var pct = d.pct != null ? d.pct : (d.total ? d.score / d.total * 100 : 0);
+    var examLabel = "MOCK EXAM " + (currentExamN || "?") + " — PRACTICE RESULT";
+    var dateLabel = "";
+    if (d.submitted_at) {
+      var dt = new Date(d.submitted_at);
+      if (!isNaN(dt.getTime())) {
+        var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        dateLabel = "Taken " + months[dt.getMonth()] + " " + dt.getDate() + ", " + dt.getFullYear();
+      }
+    }
     var cv = document.createElement("canvas");
     cv.width = 1080; cv.height = 1350;
     var g = cv.getContext("2d");
@@ -304,9 +315,13 @@
     g.fillStyle = grad; g.fillRect(0, 0, 1080, 1350);
 
     g.fillStyle = "#ffffff"; g.textAlign = "center";
-    g.font = "700 54px Arial"; g.fillText("SASE Practice Hub PH", 540, 150);
-    g.font = "600 34px Arial"; g.fillStyle = "#cdd9f2";
-    g.fillText("MOCK EXAM — PRACTICE RESULT", 540, 220);
+    g.font = "700 54px Arial"; g.fillText("SASE Practice Hub PH", 540, 140);
+    g.font = "600 32px Arial"; g.fillStyle = "#cdd9f2";
+    g.fillText(examLabel, 540, 208);
+    if (dateLabel) {
+      g.font = "600 28px Arial"; g.fillStyle = "#9db4dd";
+      g.fillText(dateLabel, 540, 258);
+    }
 
     // score
     g.fillStyle = "#ffffff"; g.font = "800 220px Arial";
@@ -314,8 +329,9 @@
     g.font = "600 44px Arial"; g.fillStyle = "#cdd9f2";
     g.fillText(d.score + " out of " + d.total + " correct", 540, 600);
 
-    // sections
+    // sections (spacing shrinks gracefully if there are ever more than 4)
     var secs = sectionList(d), y = 720;
+    var step = secs.length > 4 ? Math.max(72, Math.floor(460 / secs.length)) : 110;
     g.textAlign = "left";
     secs.forEach(function (sec) {
       g.font = "700 38px Arial"; g.fillStyle = "#ffffff";
@@ -324,8 +340,8 @@
       g.fillStyle = "rgba(255,255,255,.25)";
       g.fillRect(140, y + 24, 800, 22);
       g.fillStyle = sec.pct >= WEAK_THRESHOLD ? "#4ade80" : "#fbbf24";
-      g.fillRect(140, y + 24, 800 * sec.pct / 100, 22);
-      y += 110;
+      g.fillRect(140, y + 24, 800 * Math.min(100, Math.max(0, sec.pct)) / 100, 22);
+      y += step;
     });
 
     // footer watermark
@@ -335,9 +351,12 @@
     g.fillText("sase-practice-hub-ph.vercel.app", 540, 1285);
 
     var a = document.createElement("a");
-    a.download = "sase-mock-exam-practice-score.png";
+    a.download = "sase-mock-exam-" + (currentExamN || "result") + "-practice-score.png";
     a.href = cv.toDataURL("image/png");
+    // append to DOM: detached-anchor clicks are ignored by some mobile browsers
+    document.body.appendChild(a);
     a.click();
+    document.body.removeChild(a);
   });
 
   /* ---------- back to hub ---------- */
