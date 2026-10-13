@@ -6,7 +6,7 @@
  *
  * Server-authoritative state lives in a PRIVATE GitHub repo (EXAM_STATE_REPO):
  *   state.json — { bindings, exams, used_submissions }
- *     bindings: { order_id: { device_hash, bound_at, ip_hash } }   (1 password = 1 device, strict)
+ *     bindings: { order_id: { devices: [{ device_hash, bound_at, ip_hash }] } } (1 password = up to 3 devices)
  *     exams:    { order_id: { "1": examRec, ... } }
  *       examRec: { status: "in_progress"|"done", session_id, started_at, q_order,
  *                  opt_map, answers, last_sync, bank_blob }  (+ result fields when done:
@@ -37,8 +37,14 @@ export function deviceHash(id) {
   return sha256("device:" + String(id));
 }
 export function ipHash(req) {
-  const fwd = req.headers["x-forwarded-for"] || "";
-  const ip = String(fwd).split(",")[0].trim() || req.socket?.remoteAddress || "unknown";
+  // Trust order: Vercel's x-real-ip (set by the platform, not the client) >
+  // LAST X-Forwarded-For entry (closest trusted proxy) > socket address.
+  // NEVER the first XFF entry: it is attacker-controlled (client can prepend
+  // arbitrary values; Vercel appends the real IP after them).
+  const real = String(req.headers["x-real-ip"] || "").trim();
+  const fwd = String(req.headers["x-forwarded-for"] || "");
+  const parts = fwd.split(",").map((s) => s.trim()).filter(Boolean);
+  const ip = real || parts[parts.length - 1] || req.socket?.remoteAddress || "unknown";
   return sha256("ip:" + ip).slice(0, 16);
 }
 export function newId(prefix) {
@@ -58,13 +64,20 @@ export function rateLimit(key, max, windowMs) {
   const now = Date.now();
   let arr = _buckets.get(key);
   if (!arr) {
+    // Evict only buckets fully idle for >1h — beyond every window in use
+    // (max 10 min), so no caller's live entries are ever touched.
+    // If the map is still full, REFUSE the new bucket (429) rather than
+    // evicting a live one: a flood must never unblock an existing limit.
+    for (const [k, v] of _buckets) {
+      if (v.length === 0 || v[v.length - 1] <= now - 3600000) _buckets.delete(k);
+    }
+    if (_buckets.size >= 5000) return false;
     arr = [];
     _buckets.set(key, arr);
   }
   while (arr.length && arr[0] <= now - windowMs) arr.shift();
   if (arr.length >= max) return false;
   arr.push(now);
-  if (_buckets.size > 5000) _buckets.clear(); // crude memory guard
   return true;
 }
 
@@ -77,7 +90,7 @@ export function parseCreatedAt(s) {
 // Week N (1-based) unlocks when floor((now-created)/7d)+1 >= N
 export function examUnlock(createdAt, n, now = Date.now()) {
   const created = parseCreatedAt(createdAt);
-  if (!created) return { unlocked: n === 1, unlocks_in_ms: 0, unlock_at: 0 };
+  if (!created) return { unlocked: n === 1, unlocks_in_ms: null, unlock_at: null };
   const unlockAt = created + (n - 1) * WEEK_MS;
   const unlocked = now >= unlockAt;
   return { unlocked, unlocks_in_ms: unlocked ? 0 : unlockAt - now, unlock_at: unlockAt };
@@ -173,18 +186,18 @@ export async function saveState(state, sha, message) {
 export async function updateState(mutator, message) {
   let lastErr = null;
   for (let i = 0; i < 3; i++) {
-    const { sha, state } = await loadState();
-    const before = JSON.stringify(state);
-    const result = await mutator(state);
-    // Skip the write when the mutator changed nothing (e.g. pure resume
-    // reads) — saves one slow GitHub round-trip per call. Behavior is
-    // identical: a no-op write would have produced the same file content.
-    if (JSON.stringify(state) === before) return result;
     try {
+      const { sha, state } = await loadState(); // load retries now, like saves
+      const before = JSON.stringify(state);
+      const result = await mutator(state);
+      if (JSON.stringify(state) === before) return result;
       await saveState(state, sha, message);
       return result;
     } catch (e) {
       lastErr = e;
+      // Small backoff before retry (load blip or SHA conflict). Mutators must
+      // stay side-effect-free (read-only GETs only) because they may re-run.
+      if (i < 2) await new Promise((r) => setTimeout(r, 200 * (i + 1)));
     }
   }
   throw lastErr;
@@ -193,17 +206,26 @@ export async function updateState(mutator, message) {
 // Local-test hook: the stub-test harness sets globalThis.__EXAM_TEST_BANK to a
 // synthetic bank so handlers can be exercised without touching the real bank.
 let bankCache = null;
+const BANK_CACHE_TTL_MS = 60_000;
 export async function loadBank() {
   if (globalThis.__EXAM_TEST_BANK) {
     return { sha: "test-bank", bank: globalThis.__EXAM_TEST_BANK };
   }
-  if (bankCache && bankCache.bank?.exams && Object.keys(bankCache.bank.exams).length > 0) return bankCache;
+  const fresh = bankCache && bankCache.bank?.exams && Object.keys(bankCache.bank.exams).length > 0
+    && Date.now() - (bankCache.cachedAt || 0) < BANK_CACHE_TTL_MS;
+  if (fresh) return bankCache;
   const d = await gh("bank.json");
-  bankCache = { sha: d.sha, bank: JSON.parse(Buffer.from(d.content, "base64").toString("utf8")) };
+  bankCache = { sha: d.sha, bank: JSON.parse(Buffer.from(d.content, "base64").toString("utf8")), cachedAt: Date.now() };
   return bankCache;
 }
 export async function loadBankAtBlob(sha) {
   if (globalThis.__EXAM_TEST_BANK) return globalThis.__EXAM_TEST_BANK;
+  if (!sha) {
+    // Legacy attempt without a pinned blob: fall back to the current bank
+    // rather than 500ing.
+    const { bank } = await loadBank();
+    return bank;
+  }
   if (sha === bankCache?.sha) return bankCache.bank;
   return ghBlob(sha);
 }
@@ -235,11 +257,33 @@ export function shuffleInPlace(arr) {
   return arr;
 }
 
-export async function readBody(req) {
+const MAX_BODY_BYTES = 256 * 1024; // largest legit body is a 180-answer sync, ~2 KB
+const BODY_TIMEOUT_MS = 15_000;
+export async function readBody(req, { maxBytes = MAX_BODY_BYTES, timeoutMs = BODY_TIMEOUT_MS } = {}) {
   let raw = "";
+  let bytes = 0;
+  let settled = false;
   await new Promise((resolve) => {
-    req.on("data", (c) => (raw += c));
-    req.on("end", resolve);
+    const timer = setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      try { req.destroy(); } catch { /* already closed */ }
+      resolve(); // fail-closed: downstream JSON.parse("{}") -> validation 400s
+    }, timeoutMs);
+    const done = () => { if (!settled) { settled = true; clearTimeout(timer); resolve(); } };
+    req.on("data", (c) => {
+      const chunk = typeof c === "string" ? Buffer.byteLength(c) : c.length;
+      bytes += chunk;
+      if (bytes > maxBytes) {
+        try { req.destroy(); } catch { /* already closed */ }
+        raw = ""; // discard oversize body -> fail-closed to {}
+        done();
+        return;
+      }
+      raw += c;
+    });
+    req.on("end", done);
+    req.on("error", done); // stream error must resolve, never hang
   });
   try {
     return JSON.parse(raw || "{}");
@@ -257,6 +301,7 @@ export function logEvent(evt) {
 }
 
 export function validExamN(n) {
+  if (typeof n === "boolean" || n === null || typeof n === "object") return 0;
   const x = Number(n);
   return Number.isInteger(x) && x >= 1 && x <= EXAM_COUNT ? x : 0;
 }
@@ -366,27 +411,37 @@ export function buildResult(items, rec, finalAnswers) {
       skipped: !disp,
     });
   }
-  const total = rec.q_order.length;
+  const total = review.length;
   const pct = pct1(score, total);
   for (const k of Object.keys(sections)) {
     sections[k].pct = pct1(sections[k].correct, sections[k].total);
   }
+  // Fixed tie-break order: identical section scores always pick the same section.
+  const SECTION_ORDER = ["Language Usage", "Mathematics", "Aptitude", "Science"];
+  const orderedNames = [
+    ...SECTION_ORDER.filter((n) => sections[n]),
+    ...Object.keys(sections).filter((n) => !SECTION_ORDER.includes(n)),
+  ];
   let weakSection = null;
   let weakPct = 101;
-  for (const [name, s] of Object.entries(sections)) {
+  for (const name of orderedNames) {
+    const s = sections[name];
     if (s.pct < weakPct) {
       weakPct = s.pct;
       weakSection = name;
     }
   }
-  const guide = weakSection && IMPROVEMENT_GUIDE[weakSection] ? IMPROVEMENT_GUIDE[weakSection] : null;
+  // No "weakest section" when every section clears the bar: a 100% paper has
+  // no weak area, and a >=70% paper gets the all-clear message client-side.
+  const hasWeak = weakSection != null && weakPct < 70;
+  const guide = hasWeak && IMPROVEMENT_GUIDE[weakSection] ? IMPROVEMENT_GUIDE[weakSection] : null;
   return {
     score,
     total,
     pct,
     unanswered,
     sections,
-    weak_area: weakSection != null ? `Your weakest section is ${weakSection} (${weakPct}%).` : "",
+    weak_area: hasWeak ? `Your weakest section is ${weakSection} (${weakPct}%).` : "",
     improvement: guide ? { section: weakSection, chapters: guide.chapters, tips: guide.tips } : null,
     review,
   };
@@ -397,6 +452,29 @@ export const MAX_DEVICES_PER_PASSWORD = 3;
 
 /** Normalize a binding record to its device list. Handles the legacy
  *  single-device shape {device_hash,...} and the current {devices:[...]}. */
+// ---- idempotent grade replies ----
+
+// Idempotent-reply resolver: used_submissions stores a POINTER, not a second
+// copy of the 180-item review. Old entries (with an embedded review) keep
+// working: if entry.review exists, use it; otherwise resolve via the exams rec.
+export function resolveSubmission(state, idemKey) {
+  const entry = state.used_submissions?.[idemKey];
+  if (!entry) return null;
+  if (entry.review) return { ...entry, idempotent: true };
+  const [orderId, nStr] = idemKey.split(":");
+  const rec = state.exams?.[orderId]?.[nStr];
+  if (!rec || rec.status !== "done") return null;
+  return {
+    score: rec.score, total: rec.total, pct: rec.pct,
+    sections: rec.sections, weak_area: rec.weak_area,
+    improvement: rec.improvement, review: rec.review || [],
+    submitted_at: rec.submitted_at ?? entry.submitted_at,
+    auto_submitted: !!rec.auto_submitted, forfeited: !!rec.forfeited,
+    server_now: entry.server_now ?? null,
+    idempotent: true,
+  };
+}
+
 export function bindingDevices(b) {
   if (!b) return [];
   if (Array.isArray(b.devices)) return b.devices;
@@ -417,6 +495,9 @@ export function alreadySubmittedMessage(pct, createdAt, n, now = Date.now()) {
   const next = nextLockedExam(createdAt, n, now);
   const pctStr = Number.isInteger(pct) ? String(pct) : pct.toFixed(1);
   if (next) {
+    if (next.unlocks_in_ms == null) {
+      return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks soon — use the time to review the weak areas in your results.`;
+    }
     const days = Math.max(1, Math.ceil(next.unlocks_in_ms / (24 * 3600 * 1000)));
     return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks in ${days} day${days === 1 ? "" : "s"} — use the time to review the weak areas in your results.`;
   }

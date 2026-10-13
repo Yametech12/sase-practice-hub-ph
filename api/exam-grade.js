@@ -11,7 +11,7 @@
  *    from the client. Bank version is pinned at issuance (bank_blob).
  *  - Lazy expiry: if the server clock is past expires_at, any answers in the
  *    request body are IGNORED — only pre-expiry persisted answers are graded.
- *  - Input validation: only A/B/C/D per known question id; unknown qids and
+ *  - Input validation: only A–E per known question id; unknown qids and
  *    malformed letters are dropped, never 500.
  *  - Idempotent: re-sending the same submission_id returns the stored result.
  *  - Weekly unlock is re-checked server-side before grading.
@@ -29,6 +29,7 @@ import {
   readBody,
   logEvent,
   buildResult,
+  resolveSubmission,
   sanitizeAnswers,
   validExamN,
   examUnlock,
@@ -60,9 +61,11 @@ export default async function handler(req, res) {
     let pendingLog = null;
 
     const outcome = await updateState(async (state) => {
+      pendingLog = null; // a retry must never emit a previous run's event
       // Idempotency first: already-graded submission returns the stored result.
-      if (state.used_submissions[idemKey]) {
-        return { status: 200, body: { ...state.used_submissions[idemKey], idempotent: true } };
+      const prior = resolveSubmission(state, idemKey);
+      if (prior) {
+        return { status: 200, body: prior };
       }
       const b = state.bindings[p.order_id];
       if (!bindingHasDevice(b, p.device_hash)) {
@@ -75,7 +78,7 @@ export default async function handler(req, res) {
       }
       if (rec.status === "done") {
         // Already submitted via another path (expiry auto-grade / forfeit):
-        // return the stored summary, never double-consume.
+        // return the stored summary WITH review, never double-consume.
         return {
           status: 200,
           body: {
@@ -85,6 +88,7 @@ export default async function handler(req, res) {
             sections: rec.sections,
             weak_area: rec.weak_area,
             improvement: rec.improvement,
+            review: rec.review || [],
             submitted_at: rec.submitted_at,
             auto_submitted: !!rec.auto_submitted,
             forfeited: !!rec.forfeited,
@@ -128,7 +132,13 @@ export default async function handler(req, res) {
         forfeited: false,
       };
       const stored = { ...result, submitted_at: submittedAt, auto_submitted: expired, forfeited: false, server_now: now };
-      state.used_submissions[idemKey] = stored;
+      // Store a POINTER only — the full review lives once, in the exams record.
+      state.used_submissions[idemKey] = {
+        ref: `${p.order_id}:${n}`,
+        submitted_at: submittedAt,
+        score: result.score, total: result.total, pct: result.pct,
+        auto_submitted: expired, forfeited: false, server_now: now,
+      };
       pendingLog = {
         type: "attempt",
         order_id: p.order_id,

@@ -24,6 +24,15 @@
 }
 
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+/* Skip link: visible only on keyboard focus */
+.skip-link {
+  position: absolute; left: 12px; top: -100px; z-index: 200;
+  background: #0f2a5c; color: #fff; font-weight: 700; font-size: 14px;
+  padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
 
 /* Visually hidden but announced to screen readers */
 .sr-only {
@@ -52,10 +61,11 @@ body {
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
   padding: calc(14px + env(safe-area-inset-top, 0px)) 2px 14px; /* notch safe area */
+  gap: 8px; flex-wrap: nowrap;
 }
-.brand { display: flex; align-items: center; gap: 8px; }
+.brand { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .brand-mark { font-size: 22px; }
-.brand-name { font-weight: 700; color: var(--blue-900); font-size: 15px; }
+.brand-name { font-weight: 700; color: var(--blue-900); font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .practice-badge {
   font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
   color: var(--amber); background: var(--amber-bg);
@@ -65,13 +75,15 @@ body {
   display: inline-flex; align-items: center; gap: 4px;
   color: var(--blue-900); text-decoration: none; font-size: 13px; font-weight: 700;
   background: #fff; border: 1px solid #d5dcea;
-  padding: 6px 12px; border-radius: 999px; white-space: nowrap;
+  padding: 10px 14px; border-radius: 999px; white-space: nowrap;
   box-shadow: 0 1px 3px rgba(12,33,71,.08);
+  min-height: 44px; /* 44px touch target */
 }
 .back-link:hover, .back-link:focus-visible { background: #eef3fb; }
 @media (max-width: 420px) {
-  .back-link { padding: 5px 9px; font-size: 12px; }
+  .back-link { padding: 10px 12px; font-size: 12px; min-height: 44px; }
   .brand-name { font-size: 13px; }
+  .practice-badge { display: none; } /* badge is decorative; brand + back-link matter */
 }
 
 /* ---- Exam status strip ---- */
@@ -111,6 +123,10 @@ body {
   letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
 }
 .score-wrap { display: flex; align-items: center; gap: 18px; }
+@media (max-width: 360px) {
+  .score-wrap { flex-wrap: wrap; } /* "Outstanding!" headline must not overflow at 320px */
+}
+.hero-copy { min-width: 0; overflow-wrap: break-word; }
 .score-ring { position: relative; width: 128px; height: 128px; flex-shrink: 0; }
 .ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .ring-track { fill: none; stroke: var(--blue-100); stroke-width: 11; }
@@ -134,7 +150,7 @@ body {
 
 /* ---- Section bars ---- */
 .section-bars { display: flex; flex-direction: column; gap: 12px; }
-.sec-row { display: grid; grid-template-columns: 92px 1fr 46px; align-items: center; gap: 10px; }
+.sec-row { display: grid; grid-template-columns: 105px 1fr 46px; align-items: center; gap: 10px; }
 .sec-name { font-size: 13.5px; font-weight: 600; color: var(--ink); }
 .sec-track { height: 10px; background: var(--blue-100); border-radius: 999px; overflow: hidden; }
 .sec-fill {

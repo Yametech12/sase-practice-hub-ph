@@ -19,6 +19,7 @@ import {
   sanitizeAnswers,
   validExamN,
   examUnlock,
+  EXAM_MS,
   DEVICE_MISMATCH_MSG,
   bindingHasDevice,
   EXAM_LOCKED_MSG,
@@ -27,7 +28,7 @@ import {
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "method_not_allowed" });
   try {
-    const { token, exam, session_id } = await readBody(req);
+    const { token, exam, session_id, answers } = await readBody(req);
     const p = verifyToken(token);
     if (!p) return res.status(401).json({ error: "bad_token", message: "Session expired. Please log in again." });
     const n = validExamN(exam);
@@ -43,6 +44,7 @@ export default async function handler(req, res) {
 
     let pendingLog = null;
     const outcome = await updateState(async (state) => {
+      pendingLog = null; // a retry must never emit a previous run's event
       const b = state.bindings[p.order_id];
       if (!bindingHasDevice(b, p.device_hash)) {
         return { status: 403, body: { error: "device_mismatch", message: DEVICE_MISMATCH_MSG } };
@@ -58,7 +60,8 @@ export default async function handler(req, res) {
           body: {
             score: rec.score, total: rec.total, pct: rec.pct,
             sections: rec.sections, weak_area: rec.weak_area,
-            improvement: rec.improvement, submitted_at: rec.submitted_at,
+            improvement: rec.improvement, review: rec.review || [],
+            submitted_at: rec.submitted_at,
             auto_submitted: !!rec.auto_submitted, forfeited: !!rec.forfeited,
             already_submitted: true,
           },
@@ -73,8 +76,12 @@ export default async function handler(req, res) {
       if (items.length === 0) {
         return { status: 503, body: { error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." } };
       }
-      const saved = sanitizeAnswers(rec.answers, new Set(rec.q_order));
-      const result = buildResult(items, rec, saved);
+      // Merge body answers exactly like exam-grade.js: body answers count ONLY if
+      // the timer has not expired. After expiry, grade saved answers only.
+      const expired = now >= rec.started_at + EXAM_MS;
+      const finalAnswers = sanitizeAnswers(rec.answers, new Set(rec.q_order));
+      if (!expired) Object.assign(finalAnswers, sanitizeAnswers(answers, new Set(rec.q_order)));
+      const result = buildResult(items, rec, finalAnswers);
       const submittedAt = new Date(now).toISOString();
       orderExams[String(n)] = {
         status: "done",
@@ -86,21 +93,21 @@ export default async function handler(req, res) {
         improvement: result.improvement,
         review: result.review,
         submitted_at: submittedAt,
-        auto_submitted: false,
-        forfeited: true,
+        auto_submitted: expired,
+        forfeited: !expired,
       };
       pendingLog = {
         type: "attempt",
         order_id: p.order_id,
         exam: n,
-        auto: false,
-        forfeited: true,
+        auto: expired,
+        forfeited: !expired,
         score: result.score,
         total: result.total,
         pct: result.pct,
         ip_hash: ipHash(req),
       };
-      return { status: 200, body: { ...result, submitted_at: submittedAt, auto_submitted: false, forfeited: true } };
+      return { status: 200, body: { ...result, submitted_at: submittedAt, auto_submitted: expired, forfeited: !expired } };
     }, `exam: forfeit ${p.order_id} exam${n}`);
 
     if (pendingLog) logEvent(pendingLog);

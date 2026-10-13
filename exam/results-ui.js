@@ -145,7 +145,15 @@
   /* ---------- how to improve ---------- */
   function weakAreaName(data) {
     if (!data.weak_area) return null;
-    return typeof data.weak_area === "string" ? data.weak_area : (data.weak_area.section || null);
+    if (typeof data.weak_area === "object") return data.weak_area.section || null;
+    // Server sends a sentence: "Your weakest section is Mathematics (50%)."
+    // Extract the bare section name against the known canonical names.
+    var sentence = String(data.weak_area);
+    var names = ["Language Usage", "Mathematics", "Aptitude", "Science"];
+    for (var i = 0; i < names.length; i++) {
+      if (sentence.indexOf(names[i]) !== -1) return names[i];
+    }
+    return sentence; // fallback: return as-is (legacy bare-name payloads still work)
   }
   /* Per-section study guide — mirrors the server IMPROVEMENT_GUIDE in api/_exam-lib.js.
      Used for every weak section; the server payload only carries the single weakest section. */
@@ -179,6 +187,11 @@
   function improveTips(data) {
     var imp = data.improvement || {};
     return function (name) {
+      // Server tips arrive as an ARRAY for the single weakest section.
+      if (Array.isArray(imp.tips) && imp.section === name) {
+        return imp.tips.join(" ");
+      }
+      // Object-keyed tips (future server shape) still supported.
       if (imp.tips && imp.tips[name]) return imp.tips[name];
       var g = guideFor(name);
       if (g) return g.tip;
@@ -188,6 +201,8 @@
   function chapterFor(data, name) {
     var imp = data.improvement || {};
     if (imp.chapters && typeof imp.chapters === "object" && imp.chapters[name]) return imp.chapters[name];
+    // Server chapters arrive as a STRING for the single weakest section.
+    if (typeof imp.chapters === "string" && imp.section === name) return imp.chapters;
     var g = guideFor(name);
     if (g) return g.chapters;
     if (typeof imp.chapters === "string") return imp.chapters;
@@ -373,8 +388,17 @@
     if (d.submitted_at) {
       var dt = new Date(d.submitted_at);
       if (!isNaN(dt.getTime())) {
-        var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-        dateLabel = "Taken " + months[dt.getMonth()] + " " + dt.getDate() + ", " + dt.getFullYear();
+        // Format in Asia/Manila (the product's timezone), not the viewer's local tz.
+        var parts = new Intl.DateTimeFormat("en-US", {
+          timeZone: "Asia/Manila", month: "short", day: "numeric", year: "numeric"
+        }).formatToParts(dt);
+        var mo = "", dy = "", yr = "";
+        parts.forEach(function (p) {
+          if (p.type === "month") mo = p.value;
+          if (p.type === "day") dy = p.value;
+          if (p.type === "year") yr = p.value;
+        });
+        dateLabel = "Taken " + mo + " " + dy + ", " + yr;
       }
     }
     var cv = document.createElement("canvas");
@@ -397,7 +421,7 @@
 
     // score
     g.fillStyle = "#ffffff"; g.font = "800 220px Arial";
-    g.fillText(pct.toFixed(0) + "%", 540, 520);
+    g.fillText(pct.toFixed(1) + "%", 540, 520);
     g.font = "600 44px Arial"; g.fillStyle = "#cdd9f2";
     g.fillText(d.score + " out of " + d.total + " correct", 540, 600);
 
@@ -408,7 +432,7 @@
     secs.forEach(function (sec) {
       g.font = "700 38px Arial"; g.fillStyle = "#ffffff";
       g.fillText(sec.name, 140, y);
-      g.textAlign = "right"; g.fillText(sec.pct.toFixed(0) + "%", 940, y); g.textAlign = "left";
+      g.textAlign = "right"; g.fillText(sec.pct.toFixed(1) + "%", 940, y); g.textAlign = "left";
       g.fillStyle = "rgba(255,255,255,.25)";
       g.fillRect(140, y + 24, 800, 22);
       g.fillStyle = sec.pct >= WEAK_THRESHOLD ? "#4ade80" : "#fbbf24";
@@ -462,7 +486,37 @@
       els.examStatusText.textContent = "No result loaded";
       return;
     }
+    /* The grade/forfeit done-branches used to return a summary WITHOUT review
+       (double-submit / retry-after-auto-grade / cross-tab race). The stored
+       review may be empty but the server still has it — re-fetch the
+       authoritative copy instead of rendering a blank review list. */
+    if (!Array.isArray(data.review) || data.review.length === 0) {
+      els.examStatusText.textContent = "Loading your full review…";
+      refetchReview(data, examN);
+      return;
+    }
     render(data, examN);
   })();
+
+  function refetchReview(fallbackData, examN) {
+    // Minimal fetch — results page has no api() helper; token lives in sessionStorage.
+    var token = null;
+    try { token = sessionStorage.getItem("sase_exam_session"); } catch (e) {}
+    if (!token || !examN) { render(fallbackData, examN); return; } // nothing to fetch with
+    fetch("/api/exam-result", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: token, exam: Number(examN) })
+    }).then(function (res) { return res.json().catch(function () { return null; }); })
+      .then(function (serverData) {
+        if (serverData && Array.isArray(serverData.review) && serverData.review.length) {
+          try { sessionStorage.setItem(RESULT_KEY, JSON.stringify(serverData)); } catch (e) {}
+          render(serverData, examN);
+        } else {
+          render(fallbackData, examN); // server has no review either — show score + empty state honestly
+        }
+      })
+      .catch(function () { render(fallbackData, examN); }); // offline → cached copy, never blank-screen
+  }
 
 })();

@@ -22,7 +22,26 @@ const PAGE_TOKEN = process.env.FB_PAGE_TOKEN;
 const PAGE_ID = process.env.FB_PAGE_ID || "1335770806292993";
 const SITE_URL = "https://sase-practice-hub-ph.vercel.app";
 
-const replied = new Set();
+const replied = new Map(); // commentId -> Date.now()
+const REPLIED_TTL_MS = 24 * 60 * 60 * 1000;
+function pruneReplied(now = Date.now()) {
+  for (const [id, ts] of replied) {
+    if (now - ts > REPLIED_TTL_MS) replied.delete(id);
+  }
+  // Hard cap: if still over 10k entries (burst), drop oldest first (Map is insertion-ordered).
+  while (replied.size > 10_000) {
+    const oldest = replied.keys().next().value;
+    replied.delete(oldest);
+  }
+}
+function pruneRateState(now = Date.now()) {
+  for (const [id, rec] of userReplyCount) {
+    if (now - rec.windowStart > RATE_WINDOW_MS) userReplyCount.delete(id);
+  }
+  for (const [id, rec] of userLastText) {
+    if (now - rec.timestamp > 5 * 60 * 1000) userLastText.delete(id);
+  }
+}
 const userReplyCount = new Map();
 const MAX_REPLIES_PER_HOUR = 3;
 const RATE_WINDOW_MS = 60 * 60 * 1000;
@@ -102,7 +121,10 @@ function findAnswer(postFbid) {
 }
 
 function buildReply(entry, commenterName, userAnswer) {
-  const name = commenterName ? ` ${commenterName.split(" ")[0]}` : "";
+  // Strip URLs/newlines from the display name — it is rendered in the Page's
+  // public reply, so it must not carry links or line breaks (text-level phishing).
+  const safeName = String(commenterName || "").split(/[\r\n]+/)[0].replace(/https?:\/\/\S+|www\.\S+/gi, "").trim();
+  const name = safeName ? ` ${safeName.split(" ")[0]}` : "";
   const correctAnswer = (entry.answer || "").toUpperCase().trim();
   const userLetter = (userAnswer || "").toUpperCase().trim();
   if (userLetter && correctAnswer) {
@@ -157,10 +179,46 @@ function extractAnswerLetter(text, entry) {
 }
 
 async function replyToComment(commentId, message) {
-  const url = `https://graph.facebook.com/v21.0/${commentId}/comments?message=${encodeURIComponent(message)}&access_token=${PAGE_TOKEN}`;
-  const res = await fetch(url, { method: "POST" });
-  const data = await res.json();
-  return { ok: !data.error, data };
+  const url = `https://graph.facebook.com/v21.0/${encodeURIComponent(commentId)}/comments?message=${encodeURIComponent(message)}&access_token=${PAGE_TOKEN}`;
+  try {
+    const res = await fetch(url, { method: "POST", signal: AbortSignal.timeout(8000) });
+    const data = await res.json().catch(() => ({}));
+    return { ok: !data.error, data };
+  } catch (e) {
+    // Network throw: unknown whether Graph posted. Treat as possibly-posted.
+    return { ok: false, data: { thrown: true, message: String((e && e.message) || e) } };
+  }
+}
+
+async function readWebhookBody(req) {
+  // Bounded body read (1 MB cap + timeout + stream-error handling). Signature
+  // verification still runs after the full body is read (the HMAC covers it).
+  let raw = "";
+  let bytes = 0;
+  let settled = false;
+  await new Promise((resolve) => {
+    const timer = setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      try { req.destroy(); } catch { /* already closed */ }
+      resolve();
+    }, 15_000);
+    const done = () => { if (!settled) { settled = true; clearTimeout(timer); resolve(); } };
+    req.on("data", (c) => {
+      const chunk = typeof c === "string" ? Buffer.byteLength(c) : c.length;
+      bytes += chunk;
+      if (bytes > 1024 * 1024) {
+        try { req.destroy(); } catch { /* already closed */ }
+        raw = "";
+        done();
+        return;
+      }
+      raw += c;
+    });
+    req.on("end", done);
+    req.on("error", done);
+  });
+  return raw;
 }
 
 export default async function handler(req, res) {
@@ -174,12 +232,13 @@ export default async function handler(req, res) {
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
-    if (mode === "subscribe" && token === VERIFY_TOKEN) return res.status(200).send(challenge);
+    if (mode === "subscribe" && token === VERIFY_TOKEN) return res.status(200).setHeader("Content-Type", "text/plain").send(challenge);
     return res.status(403).send("Verification failed");
   }
   if (req.method === "POST") {
-    let raw = "";
-    await new Promise((resolve) => { req.on("data", (c) => (raw += c)); req.on("end", resolve); });
+    pruneReplied();
+    pruneRateState();
+    const raw = await readWebhookBody(req);
     const sig = req.headers["x-hub-signature-256"];
     if (!verifySignature(raw, sig)) { console.warn("Bad signature — ignoring"); return res.status(200).send("ignored"); }
     let body;
@@ -197,8 +256,8 @@ export default async function handler(req, res) {
         const userId = String(v.from?.id || "unknown");
         if (!commentId || replied.has(commentId)) continue;
         const text = (v.message || "").trim();
-        if (isSpam(text)) { console.log("Spam blocked:", commentId); replied.add(commentId); continue; }
-        if (isDuplicate(userId, text)) { console.log("Duplicate blocked:", commentId); replied.add(commentId); continue; }
+        if (isSpam(text)) { console.log("Spam blocked:", commentId); replied.set(commentId, Date.now()); continue; }
+        if (isDuplicate(userId, text)) { console.log("Duplicate blocked:", commentId); replied.set(commentId, Date.now()); continue; }
         const entry_ = findAnswer(postFbid);
         if (!entry_) { console.log("No answer for post", postFbid); continue; }
         // C-1 FIX: Removed overly permissive "text.length < 30" clause.
@@ -211,11 +270,16 @@ export default async function handler(req, res) {
         // M-6 FIX: Rate limiting moved AFTER answer validation,
         // so non-answer comments don't consume the user's quota.
         // M-2 FIX: Skip rate limiting for unknown IDs to avoid shared bucket unfairness.
-        if (userId !== "unknown" && !checkRateLimit(userId)) { console.log("Rate limited:", userId); replied.add(commentId); continue; }
+        if (userId !== "unknown" && !checkRateLimit(userId)) { console.log("Rate limited:", userId); replied.set(commentId, Date.now()); continue; }
         const reply = buildReply(entry_, v.from?.name, userLetter);
+        // Single-attempt semantics: mark replied for EVERY post attempt (success,
+        // Graph !ok, or network throw). Meta retries the batch on 500; an unmarked
+        // comment would be replied to AGAIN. One lost reply is far less harmful
+        // than a duplicate public reply from the Page.
+        replied.set(commentId, Date.now());
         const result = await replyToComment(commentId, reply);
-        if (result.ok) { replied.add(commentId); console.log("Replied to", commentId); }
-        else { console.error("Reply failed", JSON.stringify(result.data)); }
+        if (result.ok) { console.log("Replied to", commentId); }
+        else { console.error("Reply failed", commentId, JSON.stringify(result.data)); }
       }
     }
     return res.status(200).send("EVENT_RECEIVED");

@@ -51,6 +51,18 @@ body {
   outline-offset: 2px;
 }
 
+/* Skip link: visible only on keyboard focus */
+.skip-link {
+  position: absolute; left: 12px; top: -100px; z-index: 200;
+  background: #0c2147; color: #fff; font-weight: 700; font-size: 14px;
+  padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+/* Sync-failure banner: warning styling, not a fatal error */
+#sync-warning { background: var(--amber-bg); border-color: #f0dcb0; margin-bottom: 12px; }
+#sync-warning[hidden] { display: none; }
+
 /* ---------- brand bar ---------- */
 .brandbar {
   background: linear-gradient(135deg, var(--blue-900), var(--blue-700));
@@ -59,12 +71,16 @@ body {
   box-shadow: 0 2px 12px rgba(12,33,71,.25);
   padding-top: env(safe-area-inset-top, 0px); /* MOBILE F4: notch safe area */
 }
+/* Focus ring must also read on the dark brand bar (white outline there). */
+.brandbar :focus-visible { outline-color: #fff; }
 .brandbar-inner {
   max-width: 720px; margin: 0 auto;
   padding: 12px 16px;
   display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; flex-wrap: nowrap;
 }
-.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; min-width: 0; }
+.brand-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .brand-mark { font-size: 20px; }
 .practice-badge {
   font-size: 10px; font-weight: 800; letter-spacing: 1.5px;
@@ -76,13 +92,15 @@ body {
   color: #fff; text-decoration: none; font-size: 13px; font-weight: 600;
   background: rgba(255,255,255,.14);
   border: 1px solid rgba(255,255,255,.28);
-  padding: 6px 12px; border-radius: 999px; white-space: nowrap;
+  padding: 10px 14px; border-radius: 999px; white-space: nowrap;
+  min-height: 44px; /* 44px touch target */
 }
 .back-link:hover, .back-link:focus-visible { background: rgba(255,255,255,.26); }
 @media (max-width: 420px) {
   .brandbar-inner { gap: 8px; }
   .brand-name { font-size: 13px; }
-  .back-link { padding: 5px 9px; font-size: 12px; }
+  .back-link { padding: 10px 12px; font-size: 12px; min-height: 44px; }
+  .practice-badge { display: none; } /* badge is decorative; brand + back-link matter */
 }
 
 /* ---------- layout ---------- */
@@ -124,7 +142,12 @@ body {
 .exam-card {
   background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 16px; display: flex; gap: 14px; align-items: center;
-  border: 2px solid transparent;
+  border: 2px solid transparent; flex-wrap: wrap;
+}
+.exam-card .btn { flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 420px) {
+  .exam-card { flex-direction: column; align-items: stretch; }
+  .exam-card .btn { width: 100%; }
 }
 .exam-card .exam-num {
   flex: 0 0 52px; height: 52px; border-radius: 12px;
@@ -473,7 +496,7 @@ body {
   border-top: 1px solid var(--line);
 }
 #screen-exam .exam-nav .btn { border-radius: 14px; min-height: 50px; padding: 12px 8px; font-size: 14px; }
-#screen-exam .forfeit-btn { min-height: 40px; padding: 6px 12px; }
+#screen-exam .forfeit-btn { min-height: 44px; padding: 6px 12px; }
 
 /* --- desktop: a little more air --- */
 @media (min-width: 560px) {

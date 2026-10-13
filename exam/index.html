@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/exam/exam-ui.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- ============ TOP BRAND BAR (persistent) ============ -->
 <header class="brandbar">
@@ -20,7 +21,7 @@
   </div>
 </header>
 
-<main class="app">
+<main class="app" id="main-content">
 
   <!-- ============================================================
        SCREEN 1 — PASSWORD GATE + EXAM LIST
@@ -78,6 +79,11 @@
       </div>
     </div>
 
+    <!-- Sync-failure banner: hidden until N consecutive syncs fail -->
+    <div id="sync-warning" class="error-card sync-warning" role="alert" hidden>
+      <p id="sync-warning-text">Connection lost — your latest answers may not be saving. Please check your connection. Your saved answers are safe on the server.</p>
+    </div>
+
     <!-- Timer bar (sticky under brandbar) -->
     <div class="timer-block" role="timer" aria-label="Time remaining">
       <div class="timer-row">
@@ -117,12 +123,6 @@
     </div>
     <button id="forfeit-btn" class="forfeit-btn" type="button">Give up on this attempt</button>
 
-    <!-- Inline submit error (replaces alert) -->
-    <div id="submit-error" class="error-card" role="alert" hidden>
-      <p id="submit-error-text"></p>
-      <button id="submit-retry" class="btn btn-secondary" type="button">Try again</button>
-    </div>
-
     <!-- Question grid navigator (drawer) -->
     <div id="grid-overlay" class="grid-overlay" hidden>
       <div class="grid-panel" role="dialog" aria-modal="true" aria-labelledby="grid-title">
@@ -158,7 +158,8 @@
     <div id="forfeit-overlay" class="grid-overlay" hidden>
       <div class="confirm-panel" role="dialog" aria-modal="true" aria-labelledby="forfeit-title">
         <h3 id="forfeit-title">Give up this attempt?</h3>
-        <p>Giving up counts as your <strong>one attempt</strong> for this exam. Your saved answers will be graded.</p>
+        <p id="forfeit-text">Giving up counts as your <strong>one attempt</strong> for this exam. Your saved answers will be graded.</p>
+        <p class="confirm-warn" id="forfeit-counts"></p>
         <div class="confirm-actions">
           <button id="forfeit-cancel" class="btn btn-secondary" type="button">Keep going</button>
           <button id="forfeit-ok" class="btn btn-submit" type="button">Give up</button>
@@ -173,12 +174,20 @@
        The results screen (results.html) renders the grade result.
        ============================================================ -->
   <section id="screen-submitting" class="screen" aria-label="Submitting">
-    <div class="center-card">
+    <div class="center-card" role="status">
       <div class="spinner" aria-hidden="true"></div>
       <h2 id="submitting-title">Grading your exam…</h2>
       <p>Taking you to your results.</p>
     </div>
   </section>
+
+  <!-- Inline submit error (replaces alert). Lives OUTSIDE the screens so it
+       can display on both the exam screen (manual retry) and the submitting
+       screen (auto-submit backoff) — showScreen() only toggles .screen. -->
+  <div id="submit-error" class="error-card" role="alert" hidden>
+    <p id="submit-error-text"></p>
+    <button id="submit-retry" class="btn btn-secondary" type="button">Try again</button>
+  </div>
 
 </main>
 

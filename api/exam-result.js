@@ -12,6 +12,7 @@ import {
   verifyToken,
   loadState,
   readBody,
+  validExamN,
   bindingHasDevice,
   DEVICE_MISMATCH_MSG,
 } from "./_exam-lib.js";
@@ -22,8 +23,8 @@ export default async function handler(req, res) {
     const { token, exam } = await readBody(req);
     const p = verifyToken(token);
     if (!p) return res.status(401).json({ error: "bad_token", message: "Session expired. Please log in again." });
-    const n = Number(exam);
-    if (!Number.isInteger(n) || n < 1) {
+    const n = validExamN(exam);
+    if (!n) {
       return res.status(400).json({ error: "bad_request", message: "Invalid exam number." });
     }
 

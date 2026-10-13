@@ -43,6 +43,12 @@ export default async function handler(req, res) {
     if (typeof password !== "string" || !password || typeof device_id !== "string" || !device_id) {
       return res.status(400).json({ error: "bad_request", message: "Password is required." });
     }
+    // Per-password bucket: caps guesses against ANY single password at 30/10 min
+    // regardless of IP rotation. Legitimate users (a few attempts) never hit it.
+    if (!rateLimit("auth:pw:" + sha256(password), 30, 10 * 60 * 1000)) {
+      logEvent({ type: "auth_rate_limited", reason: "per_password", ip_hash: ipHash(req) });
+      return res.status(429).json({ error: "rate_limited", message: "Too many attempts. Please wait a few minutes and try again." });
+    }
 
     const rec = hashes[sha256(password)];
     if (!rec || !rec.order_id) {
@@ -53,7 +59,16 @@ export default async function handler(req, res) {
       });
     }
     const orderId = rec.order_id;
-    const createdAt = rec.created_at || "";
+    // Fail LOUDLY on a bad created_at: minting a token with a missing/garbage
+    // created_at produces a token every endpoint immediately 401s (infinite
+    // login loop) or a schedule that never unlocks. This is a server config
+    // error, not a buyer error — 500, not a dead token.
+    const createdAt = rec.created_at;
+    const ISO_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/;
+    if (typeof createdAt !== "string" || !ISO_RE.test(createdAt) || Number.isNaN(Date.parse(createdAt))) {
+      logEvent({ type: "auth_config_error", reason: "bad_created_at", order_id: orderId });
+      return res.status(500).json({ error: "server_error", message: "Account setup incomplete. Please message SASE Practice Hub PH." });
+    }
     const dh = deviceHash(device_id);
 
     const outcome = await updateState((state) => {

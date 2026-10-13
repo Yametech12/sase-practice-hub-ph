@@ -26,6 +26,7 @@ import {
   ipHash,
   updateState,
   loadBank,
+  loadBankAtBlob,
   getExamItems,
   readBody,
   logEvent,
@@ -45,6 +46,9 @@ import {
 } from "./_exam-lib.js";
 
 function publicQuestion(item, optMap, position) {
+  // Graceful degradation: a missing item (corrupt record / bank mismatch)
+  // returns null instead of throwing TypeError -> 500. Caller maps null to 503.
+  if (!item || !optMap || typeof item.options !== "object") return null;
   const options = {};
   for (const L of Object.keys(optMap).sort()) options[L] = item.options[optMap[L]];
   return {
@@ -99,7 +103,8 @@ export default async function handler(req, res) {
     const byId = new Map(items.map((it) => [it.id, it]));
     let pendingLog = null;
 
-    const outcome = await updateState((state) => {
+    const outcome = await updateState(async (state) => {
+      pendingLog = null; // a retry must never emit a previous run's event
       const b = state.bindings[p.order_id];
       if (!bindingHasDevice(b, p.device_hash)) {
         return { status: 403, body: { error: "device_mismatch", message: DEVICE_MISMATCH_MSG } };
@@ -125,11 +130,16 @@ export default async function handler(req, res) {
       }
 
       // Case 2: expired while away — auto-grade with SAVED answers only
-      // (consumes the attempt). Full review is stored so the buyer still
-      // gets their results screen.
+      // (consumes the attempt). Grade against the PINNED bank snapshot,
+      // exactly like exam-grade.js / exam-forfeit.js. Never the live bank.
       if (rec && rec.status === "in_progress") {
         const saved = sanitizeAnswers(rec.answers, new Set(rec.q_order));
-        const result = buildResult(items, rec, saved);
+        const pinnedBank = await loadBankAtBlob(rec.bank_blob); // falls back to current bank if blob missing
+        const pinnedItems = getExamItems(pinnedBank, n);
+        if (pinnedItems.length === 0) {
+          return { status: 503, body: { error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." } };
+        }
+        const result = buildResult(pinnedItems, rec, saved);
         orderExams[String(n)] = {
           status: "done",
           score: result.score,
@@ -173,6 +183,7 @@ export default async function handler(req, res) {
             score: rec.score,
             total: rec.total,
             pct: rec.pct,
+            review: rec.review || [],
           },
         };
       }
@@ -227,11 +238,25 @@ export default async function handler(req, res) {
     if (outcome.body) return res.status(outcome.status).json(outcome.body);
 
     const { rec, remaining, resumed } = outcome;
-    // Resume must replay the SAME attempt record (shuffle mapping pinned at issuance).
+    // Resume must render from the PINNED bank snapshot, not the live bank.
+    // Fresh starts (resumed === false) already use the current bank pinned at issuance.
+    let renderById = byId;
+    if (resumed) {
+      const pinnedBank = await loadBankAtBlob(rec.bank_blob);
+      const pinnedItems = getExamItems(pinnedBank, n);
+      if (pinnedItems.length === 0) {
+        return res.status(503).json({ error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." });
+      }
+      renderById = new Map(pinnedItems.map((it) => [it.id, it]));
+    }
+    const questions = rec.q_order.map((qid, i) => publicQuestion(renderById.get(qid), rec.opt_map[qid], i + 1));
+    if (questions.some((q) => q === null)) {
+      return res.status(503).json({ error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." });
+    }
     return res.status(200).json({
       exam: n,
       session_id: rec.session_id,
-      questions: rec.q_order.map((qid, i) => publicQuestion(byId.get(qid), rec.opt_map[qid], i + 1)),
+      questions,
       answers: sanitizeAnswers(rec.answers, new Set(rec.q_order)),
       server_remaining_ms: remaining,
       server_now: Date.now(),

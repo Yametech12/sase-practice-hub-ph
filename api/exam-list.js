@@ -11,8 +11,9 @@
  *   - "locked"      : not yet unlocked (includes unlocks_in_ms countdown)
  *
  * Unlock rule: exam N unlocks when floor((now - created_at)/7d)+1 >= N.
- * An in_progress attempt whose timer has expired is listed as "available" —
- * the next exam-questions call will auto-grade it (consuming the attempt).
+ * An in_progress attempt whose timer has expired is listed as "expired" —
+ * the client shows "Time expired — view result" and the next exam-questions
+ * call auto-grades it (consuming the attempt).
  */
 import {
   verifyToken,
@@ -66,8 +67,10 @@ export default async function handler(req, res) {
           exams.push({ n, status: "in_progress", resume_remaining_ms: remaining });
           continue;
         }
-        // Expired in_progress is auto-graded on the next exam-questions call;
-        // list it as available so the client triggers that path.
+        // Expired in_progress: distinct status so the client shows
+        // "Time expired — view result" instead of a bogus Start button.
+        exams.push({ n, status: "expired" });
+        continue;
       }
       exams.push({ n, status: "available" });
     }
