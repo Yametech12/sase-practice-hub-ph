@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One-time migration</title>
+</head>
+<body>
+<!-- TEMPORARY — delete after migration with api/exam-migrate.js -->
+<h1>One-time migration</h1>
+<p>Paste the one-time migration secret and click Run migration. The secret is never displayed, logged, or stored.</p>
+<label for="secret">Migration secret</label>
+<input id="secret" type="password" autocomplete="off">
+<button id="run" type="button">Run migration</button>
+<pre id="result"></pre>
+<script>
+document.getElementById('run').addEventListener('click', async () => {
+  const input = document.getElementById('secret');
+  const secret = input.value;
+  input.value = '';
+  const out = document.getElementById('result');
+  out.textContent = 'Running…';
+  try {
+    const res = await fetch('/api/exam-migrate', {
+      method: 'POST',
+      headers: { 'x-migrate-secret': secret }
+    });
+    const text = await res.text();
+    out.textContent = 'HTTP ' + res.status + '\n' + text;
+  } catch (e) {
+    out.textContent = 'Request failed: ' + e.message;
+  }
+});
+</script>
+</body>
+</html>
