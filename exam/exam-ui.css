@@ -179,6 +179,9 @@ body {
   border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px;
   font-size: 14px;
 }
+/* The [hidden] attribute must win over the flex layout above — otherwise the
+   banner (with its hardcoded placeholder time) stays visible on fresh starts. */
+.resume-banner[hidden] { display: none; }
 .resume-icon { font-size: 22px; }
 .resume-banner span#resume-remaining { display: block; color: var(--amber); font-weight: 700; }
 
