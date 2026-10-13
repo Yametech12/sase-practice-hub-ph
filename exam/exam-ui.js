@@ -380,10 +380,15 @@
     updateProgress();
     updateGridCell(q.qid);
     if (scroll) {
+      /* Jump straight to the top of the question: instant and reliable on
+         mobile (smooth scrollIntoView proved flaky), then replay the card's
+         enter animation so the question change feels alive. */
+      window.scrollTo(0, 0);
       var card = document.querySelector(".qcard");
-      if (card && card.scrollIntoView) {
-        var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        card.scrollIntoView({ block: "start", behavior: reduceMotion ? "auto" : "smooth" });
+      if (card) {
+        card.classList.remove("q-enter");
+        void card.offsetWidth;
+        card.classList.add("q-enter");
       }
     }
   }
@@ -409,7 +414,8 @@
         : i === 0;
       b.tabIndex = tabbable ? 0 : -1;
       b.innerHTML = '<span class="opt-letter" aria-hidden="true">' + escapeHtml(letter) + "</span>" +
-                    "<span>" + escapeHtml(q.options[letter]) + "</span>";
+                    "<span>" + escapeHtml(q.options[letter]) + "</span>" +
+                    '<span class="opt-check" aria-hidden="true">✓</span>';
       b.addEventListener("click", function () { selectAnswer(letter, false); });
       b.addEventListener("keydown", function (ev) {
         var idx = letters.indexOf(letter), target = null;
@@ -445,7 +451,7 @@
   function updateProgress() {
     var answered = Object.keys(state.answers).length;
     var total = state.questions.length;
-    $("progress-text").textContent = "Question " + (state.currentIndex + 1) + " of " + total;
+    $("progress-text").textContent = "Question " + (state.currentIndex + 1) + " of " + total + " · " + answered + " answered";
     $("progress-fill").style.transform = "scaleX(" + (total ? answered / total : 0) + ")";
     $("progress-fill").parentElement.setAttribute("aria-valuenow", String(total ? Math.round(answered / total * 100) : 0));
     var prev = $("prev-btn");

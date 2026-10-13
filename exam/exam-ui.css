@@ -353,3 +353,126 @@ body {
   .timer-fill, .progress-fill, .option, .btn { transition: none; }
   .btn:active { transform: none; }
 }
+
+/* ============================================================
+   EXAM SCREEN REDESIGN (Oct 13, 2026)
+   - No-scroll app-like layout: timer / progress / card / pinned nav
+   - Beauty pass: refined options, gradient selected states, animations
+   ============================================================ */
+
+/* App-like column that fills the viewport under the brand bar */
+#screen-exam.active {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  min-height: calc(100dvh - 64px);
+}
+.app:has(#screen-exam.active) { padding-bottom: 6px; }
+
+/* --- compact timer --- */
+#screen-exam .timer-block { padding: 10px 14px; margin-bottom: 8px; border-radius: 16px; }
+#screen-exam .timer-row { margin-bottom: 6px; }
+#screen-exam .timer-text { font-size: 20px; }
+#screen-exam .timer-track { height: 6px; }
+
+/* --- compact progress --- */
+#screen-exam .progress-row { margin: 0 0 4px; }
+#screen-exam .progress-text { font-size: 13px; }
+#screen-exam .progress-track { height: 5px; margin-bottom: 10px; }
+
+/* --- question card --- */
+#screen-exam .qcard {
+  flex: 1 0 auto;
+  padding: 16px 16px 14px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  border: 1px solid #e3ebf9;
+}
+#screen-exam .qcard-top { margin-bottom: 10px; }
+#screen-exam .q-number {
+  font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase;
+  margin: 0 0 8px;
+}
+#screen-exam .q-text { font-size: 16.5px; line-height: 1.5; margin: 0 0 14px; }
+#screen-exam .q-passage { font-size: 14px; margin: 0 0 12px; padding: 10px 12px; }
+
+/* question-change enter animation (re-triggered from JS) */
+@keyframes qEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+#screen-exam .qcard.q-enter { animation: qEnter .28s ease; }
+@media (prefers-reduced-motion: reduce) {
+  #screen-exam .qcard.q-enter { animation: none; }
+}
+
+/* --- options: beautiful selectable cards --- */
+#screen-exam .options { gap: 8px; }
+#screen-exam .option {
+  align-items: center;
+  padding: 10px 12px;
+  min-height: 52px;
+  font-size: 14.5px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(12,33,71,.05);
+  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease, transform .1s ease;
+}
+#screen-exam .option:hover {
+  border-color: var(--blue-600);
+  box-shadow: 0 4px 12px rgba(36,86,171,.12);
+  transform: translateY(-1px);
+}
+#screen-exam .option:active { transform: scale(.99); }
+#screen-exam .option .opt-letter {
+  flex-basis: 32px; height: 32px; font-size: 14px;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+#screen-exam .option.selected {
+  border-color: var(--blue-600);
+  background: linear-gradient(180deg, #f3f8ff, var(--blue-50));
+  box-shadow: 0 4px 14px rgba(36,86,171,.16);
+}
+#screen-exam .option.selected .opt-letter {
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-800));
+  border-color: transparent; color: #fff;
+  box-shadow: 0 2px 6px rgba(36,86,171,.4);
+}
+/* check badge: appears on the selected option */
+#screen-exam .opt-check {
+  margin-left: auto; flex: 0 0 24px; height: 24px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800; line-height: 1;
+  color: transparent; background: transparent;
+  border: 2px solid var(--line);
+  transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+#screen-exam .option.selected .opt-check {
+  background: var(--green); border-color: var(--green); color: #fff;
+  box-shadow: 0 2px 6px rgba(14,107,68,.35);
+}
+
+/* --- pinned bottom nav: always reachable, no scrolling for buttons --- */
+#screen-exam .exam-nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 30;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  gap: 8px;
+  margin: 6px -16px 0;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(247,250,255,.94);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--line);
+}
+#screen-exam .exam-nav .btn { border-radius: 14px; min-height: 50px; padding: 12px 8px; font-size: 14px; }
+#screen-exam .forfeit-btn { min-height: 40px; padding: 6px 12px; }
+
+/* --- desktop: a little more air --- */
+@media (min-width: 560px) {
+  #screen-exam .qcard { padding: 22px 24px 20px; }
+  #screen-exam .q-text { font-size: 17.5px; }
+  #screen-exam .option { padding: 12px 16px; font-size: 15px; }
+}
