@@ -173,6 +173,10 @@
         list.innerHTML = "";
         (meta.exams || []).forEach(function (ex) { list.appendChild(examCard(ex)); });
         $("exam-list-wrap").hidden = false;
+        /* UX: if an exam is already in progress (e.g. after a reload), resume it
+           automatically instead of making the student click Resume. */
+        var inProg = (meta.exams || []).filter(function (ex) { return ex.status === "in_progress"; });
+        if (inProg.length === 1) { beginExam(inProg[0].n); }
       })
       .catch(function (err) {
         if (err.status === 401) { /* token expired: back to the gate */
