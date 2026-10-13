@@ -220,6 +220,8 @@ body {
 .qcard {
   background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 20px 18px; margin-bottom: 14px;
+  /* Anti-copy: questions & choices can't be selected/copied during the exam (practice integrity). */
+  user-select: none; -webkit-user-select: none;
 }
 .qcard-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
 .q-section {

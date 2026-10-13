@@ -734,4 +734,17 @@
     }
   });
 
+  /* Anti-copy: during the exam, questions & choices can't be selected, right-clicked, or Ctrl/C-copied. */
+  (function antiCopy() {
+    var card = document.querySelector(".qcard");
+    if (!card) return;
+    card.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+    card.addEventListener("copy", function (e) { e.preventDefault(); });
+    card.addEventListener("keydown", function (e) {
+      var mod = e.ctrlKey || e.metaKey;
+      var k = (e.key || "").toLowerCase();
+      if (mod && (k === "c" || k === "x")) { e.preventDefault(); }
+    });
+  })();
+
 })();
