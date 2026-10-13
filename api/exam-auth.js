@@ -2,9 +2,9 @@
  * POST /api/exam-auth
  * Body: { password, device_id }
  *
- * 1 password = 1 device (STRICT). The first device that authenticates with a
- * buyer's password is permanently bound to that order_id. A different device
- * gets 403 and the first device is NOT disturbed.
+ * 1 password = up to 3 devices. The first 3 devices that authenticate with a
+ * buyer's password are bound to that order_id. A 4th distinct device gets 403
+ * and the bound devices are NOT disturbed.
  *
  * Returns a token embedding { order_id, device_hash, created_at } — the
  * weekly exam schedule is derived from created_at.
@@ -20,6 +20,8 @@ import {
   readBody,
   logEvent,
   rateLimit,
+  bindingDevices,
+  MAX_DEVICES_PER_PASSWORD,
   DEVICE_MISMATCH_MSG,
 } from "./_exam-lib.js";
 import hashes from "./_exam-hashes.json" with { type: "json" };
@@ -56,16 +58,16 @@ export default async function handler(req, res) {
 
     const outcome = await updateState((state) => {
       const b = state.bindings[orderId];
-      if (b) {
-        if (b.device_hash === dh) return { ok: true, rebound: false };
-        return { ok: false, reason: "device_mismatch" };
-      }
-      // First auth for this order: bind permanently.
-      state.bindings[orderId] = {
+      const list = bindingDevices(b);
+      if (list.some((x) => x.device_hash === dh)) return { ok: true, rebound: false };
+      if (list.length >= MAX_DEVICES_PER_PASSWORD) return { ok: false, reason: "device_limit" };
+      // Bind this as an additional device (also lazy-migrates legacy bindings).
+      list.push({
         device_hash: dh,
         bound_at: new Date().toISOString(),
         ip_hash: ipHash(req),
-      };
+      });
+      state.bindings[orderId] = { devices: list };
       return { ok: true, rebound: true };
     }, `exam: bind device for ${orderId}`);
 

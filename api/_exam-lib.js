@@ -386,8 +386,23 @@ export function buildResult(items, rec, finalAnswers) {
 }
 
 // ---- user-facing copy (exact strings required by the copy audit) ----
+export const MAX_DEVICES_PER_PASSWORD = 3;
+
+/** Normalize a binding record to its device list. Handles the legacy
+ *  single-device shape {device_hash,...} and the current {devices:[...]}. */
+export function bindingDevices(b) {
+  if (!b) return [];
+  if (Array.isArray(b.devices)) return b.devices;
+  if (b.device_hash) return [{ device_hash: b.device_hash, bound_at: b.bound_at || "", ip_hash: b.ip_hash || "" }];
+  return [];
+}
+
+export function bindingHasDevice(b, dh) {
+  return bindingDevices(b).some((x) => x && x.device_hash === dh);
+}
+
 export const DEVICE_MISMATCH_MSG =
-  "This password is already linked to another device. For your security, one password works on one device only. If you changed phones, message SASE Practice Hub PH and we'll reset it for you.";
+  "This password is already used on 3 devices — the maximum allowed. If you changed phones, message SASE Practice Hub PH and we'll reset it for you.";
 export const EXAM_LOCKED_MSG =
   "This exam is not unlocked yet. New exams release every 7 days from your purchase date.";
 // Copy-audit Fix 2: done-exam re-entry message with the buyer's score + next unlock.

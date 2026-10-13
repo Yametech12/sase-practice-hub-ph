@@ -19,6 +19,7 @@ import {
   validExamN,
   EXAM_MS,
   DEVICE_MISMATCH_MSG,
+  bindingHasDevice,
 } from "./_exam-lib.js";
 
 export default async function handler(req, res) {
@@ -35,7 +36,7 @@ export default async function handler(req, res) {
     const now = Date.now();
     const outcome = await updateState((state) => {
       const b = state.bindings[p.order_id];
-      if (!b || b.device_hash !== p.device_hash) {
+      if (!bindingHasDevice(b, p.device_hash)) {
         return { status: 403, body: { error: "device_mismatch", message: DEVICE_MISMATCH_MSG } };
       }
       const rec = (state.exams[p.order_id] || {})[String(n)];
