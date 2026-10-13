@@ -4,6 +4,7 @@
    ============================================================ */
 
 :root {
+  color-scheme: light dark;
   --blue-900: #0c2147;
   --blue-800: #12306b;
   --blue-700: #1a3f86;
@@ -363,6 +364,8 @@ body {
   text-align: center; font-size: 12px; color: var(--muted);
   padding: 18px 16px calc(28px + env(safe-area-inset-bottom, 0px)); /* MOBILE F4 */
 }
+.page-foot-help { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+.page-foot-help a { color: inherit; }
 
 /* ---------- larger screens ---------- */
 @media (min-width: 560px) {
@@ -503,4 +506,53 @@ body {
   #screen-exam .qcard { padding: 22px 24px 20px; }
   #screen-exam .q-text { font-size: 17.5px; }
   #screen-exam .option { padding: 12px 16px; font-size: 15px; }
+}
+
+/* ============================================================
+   DARK MODE (prefers-color-scheme: dark) — matches the landing
+   page's dark mode. Surfaces go dark; brand blues stay, with
+   lightened text where a dark blue was used as a text color.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8f0fa;
+    --muted: #a8b8d0;
+    --line: #2c3f5f;
+    --blue-50: #16273f;
+    --blue-100: #22385c;
+    --card: #1a2c47;
+    --green-bg: #14382a;
+    --red-bg: #3d1a22;
+    --amber-bg: #3a2f16;
+  }
+  body { background: linear-gradient(180deg, #101f36 0%, #0d182b 320px); }
+  .gate-hero h1, .section-title, .progress-text, .timer-text,
+  .exam-card h3, .grid-head h3, .confirm-panel h3 { color: #e8f0fa; }
+  .gate-row input { background: #0f1e35; color: var(--ink); border-color: var(--line); }
+  .gate-row input::placeholder { color: #7d8ea8; }
+  .btn-secondary { background: #22385c; color: #dbe7fb; }
+  .btn-ghost { color: #dbe7fb; }
+  .q-section { color: #9cc3f0; background: #22385c; }
+  .exam-score { color: #9cc3f0; }
+  .status-done { color: #9cc3f0; background: #22385c; }
+  .status-locked { background: #22385c; color: #a8b8d0; }
+  .exam-card.is-locked .exam-num { background: #3a4a66; }
+  .option { background: #16273f; }
+  .option .opt-letter { background: #0f1e35; color: #9cc3f0; }
+  .flag-btn { color: var(--muted); }
+  .forfeit-btn { color: var(--muted); }
+  .q-passage { background: #16273f; }
+  .timer-track, .progress-track { background: #22385c; }
+  .grid-panel, .confirm-panel { background: #1a2c47; color: var(--ink); }
+  .grid-cell { background: #16273f; color: var(--muted); }
+  .grid-cell.current { color: #9cc3f0; }
+  .dot-empty { background: #22385c; }
+  .error-card { color: var(--ink); }
+  /* Pinned exam nav: dark translucent surface */
+  #screen-exam .exam-nav { background: rgba(13, 24, 43, .94); }
+  #screen-exam .qcard { border-color: #2c3f5f; }
+  #screen-exam .option { background: #16273f; }
+  #screen-exam .option.selected { background: linear-gradient(180deg, #1c3352, #16273f); }
+  #screen-exam .option .opt-letter { background: #0f1e35; }
+  #screen-exam .opt-check { border-color: var(--line); }
 }

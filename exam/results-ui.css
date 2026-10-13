@@ -4,6 +4,7 @@
    ============================================================ */
 
 :root {
+  color-scheme: light dark;
   --blue-900: #0f2a5c;
   --blue-700: #143a7a;
   --blue-600: #1d4fa3;
@@ -295,4 +296,47 @@ body {
 /* ---- Reduced motion (A11Y K16) ---- */
 @media (prefers-reduced-motion: reduce) {
   .ring-fill, .sec-fill, .q-chev { transition: none; }
+}
+
+/* ============================================================
+   DARK MODE (prefers-color-scheme: dark) — matches the landing
+   page's dark mode. Surfaces go dark; brand blues stay, with
+   lightened text where a dark blue was used as a text color.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8f0fa;
+    --muted: #a8b8d0;
+    --line: #2c3f5f;
+    --blue-50: #101f36;
+    --blue-100: #22385c;
+    --green-bg: #14382a;
+    --red-bg: #3d1a22;
+    --amber-bg: #3a2f16;
+    --grey-bg: #22385c;
+  }
+  body { background: #0d182b; }
+  .brand-name, .card-title, .hero-copy h1, .sec-pct, .sec-name,
+  .improve-item strong, .q-head-q, .q-text { color: #e8f0fa; }
+  .back-link, .btn-ghost, .chip, .q-item, .q-empty, .card { background: #1a2c47; color: var(--ink); }
+  .back-link, .btn-ghost, .chip { color: #dbe7fb; }
+  .chip.active { background: #2c4a7a; border-color: #2c4a7a; color: #fff; }
+  .btn-primary { background: #2c4a7a; }
+  .btn-primary:active { background: #3a5a8a; }
+  .exam-status { background: #16273f; }
+  .disclaimer, .improve-item, .q-expl { background: #16273f; }
+  .sec-track { background: #22385c; }
+  .q-passage { background: #16273f; }
+  .q-code { color: #9cc3f0; background: #22385c; }
+  .q-opts li { color: var(--muted); }
+  .q-opts li b { color: var(--ink); }
+  .q-item.correct .q-status { color: #7ed9a8; background: #14382a; }
+  .q-item.wrong .q-status { color: #f08ba0; background: #3d1a22; }
+  .q-item.skipped .q-status { color: #f0cd7a; background: #3a2f16; }
+  .q-opts li.is-correct, .q-opts li.is-correct b { color: #7ed9a8; }
+  .ans-line .you-right { color: #7ed9a8; }
+  .ans-line .you-wrong { color: #f08ba0; }
+  .improve-ok { background: #14382a; color: #7ed9a8; }
+  .improve-item .chap { background: #1a2c47; color: #9cc3f0; }
+  .foot a { color: #9cc3f0; }
 }

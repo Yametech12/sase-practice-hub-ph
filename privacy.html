@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for SASE Practice Hub PH — what data the reviewer store and mock exam portal collect, how it is used, and how to request deletion." />
+  <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/privacy.html" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <title>Privacy Policy — SASE Practice Hub PH</title>
   <style>
@@ -16,13 +18,21 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: October 6, 2026</p>
-  <p><strong>SASE Practice Hub PH</strong> ("we", "our") operates the website <a href="https://sase-practice-hub-ph.vercel.app">sase-practice-hub-ph.vercel.app</a> and the SASE Practice Hub PH Facebook Page. This policy explains what data we collect and how we use it.</p>
+  <p class="updated">Last updated: October 13, 2026</p>
+  <p><strong>SASE Practice Hub PH</strong> ("we", "our") operates <a href="/">this website</a>, the mock exam portal at <a href="/exam">/exam</a>, and the SASE Practice Hub PH Facebook Page. This policy explains what data we collect and how we use it.</p>
 
   <h2>1. Data We Collect</h2>
   <ul>
     <li><strong>Facebook Page interactions:</strong> When you comment on our Page posts, we receive your public comment text and name via Facebook's webhook system to provide quiz answer replies.</li>
-    <li><strong>Order information:</strong> When you order the MSU-SASE Reviewer, we collect your name and GCash reference number to verify payment and deliver your PDF.</li>
+    <li><strong>Order information:</strong> When you order the MSU-SASE Reviewer, we collect your name, your Facebook / Messenger name, your order reference, and your GCash reference number to verify payment and deliver your PDF.</li>
+    <li><strong>Portal access:</strong> When you use the mock exam portal, we collect and store:
+      <ul>
+        <li><strong>PDF password (hashed):</strong> your unique PDF password is verified against a stored one-way hash. The password itself is not kept in readable form.</li>
+        <li><strong>Device IDs:</strong> a random device identifier your browser generates, used to enforce the up-to-3-devices-per-password limit.</li>
+        <li><strong>Exam answers and results:</strong> the answers you submit, your scores, and your answer-review history, so you can see your results and review every answer.</li>
+        <li><strong>Session tokens:</strong> a temporary sign-in token kept in your browser while you use the portal, so you do not have to re-enter your password on every page.</li>
+      </ul>
+    </li>
     <li><strong>Website usage:</strong> Basic, anonymized analytics (page views) via Vercel's built-in analytics.</li>
   </ul>
 
@@ -30,17 +40,33 @@
   <ul>
     <li>To reply to your quiz comments with correct answers.</li>
     <li>To verify payments and deliver purchased digital products.</li>
+    <li>To run the mock exam portal: sign you in, enforce the device limit, save your answers, grade your exams, and show your results and answer reviews.</li>
     <li>To improve our educational content.</li>
   </ul>
-  <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for marketing purposes.</p>
+  <p>We do <strong>not</strong> sell or rent your personal data. We do not share it with third parties for marketing purposes.</p>
 
-  <h2>3. Data Retention</h2>
-  <p>Order records are kept to prevent duplicate reference-number use. Quiz comment replies are processed in real time and not stored beyond operational logs. You may request deletion of your data by messaging our Facebook Page.</p>
+  <h2>3. Third-Party Services</h2>
+  <p>Our pages load the following third-party services, which may collect their own data (such as your IP address, device and browser information, and pages viewed) under their own privacy policies:</p>
+  <ul>
+    <li><strong>Adsterra advertising scripts</strong> — the home page loads advertising scripts from Adsterra (served from profitableratecpmnetwork.com) that display ads and measure ad performance. These scripts may set cookies or collect usage data for ad delivery.</li>
+    <li><strong>Vercel hosting &amp; analytics</strong> — the site is hosted on Vercel, which provides basic anonymized usage analytics.</li>
+    <li><strong>Facebook</strong> — Page comments and messages are processed through Facebook's platform (see Section 5).</li>
+  </ul>
+  <p>Because the advertising scripts run in your browser, they can observe your visit to this site even though we do not send them your name, password, or exam answers.</p>
 
-  <h2>4. Facebook Data</h2>
-  <p>Our Facebook integration only accesses public comment data on our own Page posts, as permitted by Facebook's Platform Terms. We do not access your private messages, friends list, or personal profile data beyond what is needed to reply to your public comments.</p>
+  <h2>4. Data Retention</h2>
+  <ul>
+    <li><strong>Order records</strong> (name, Messenger name, order reference, GCash reference) are kept to prevent duplicate reference-number use and to handle support and refund requests.</li>
+    <li><strong>Portal data</strong> (password hash, device IDs, exam answers, results) is kept for as long as your portal access is active, so your results and answer reviews remain available. Exam answers and results may be kept after an exam is completed so you can review them later.</li>
+    <li><strong>Session tokens</strong> are temporary: they expire, are cleared when you log out, and are stored only in your browser.</li>
+    <li><strong>Quiz comment replies</strong> are processed in real time and not stored beyond operational logs.</li>
+  </ul>
+  <p>You may request deletion of your data by messaging our Facebook Page (see Section 6). Deleting portal data removes your stored answers and results, and cannot be undone.</p>
 
-  <h2>5. Contact</h2>
-  <p>For privacy questions, message us at <a href="https://www.facebook.com/profile.php?id=1335770806292993">SASE Practice Hub PH on Facebook</a>.</p>
+  <h2>5. Facebook Data</h2>
+  <p>Our Facebook integration only accesses public comment data on our own Page posts, as permitted by Facebook's Platform Terms. We do not access your private messages, friends list, or personal profile data beyond what is needed to reply to your public comments. Order messages you send us via Messenger are used only to verify payment and deliver your purchase.</p>
+
+  <h2>6. Contact</h2>
+  <p>For privacy questions or deletion requests, message us at <a href="https://www.facebook.com/profile.php?id=61594997556905">SASE Practice Hub PH on Facebook</a>.</p>
 </body>
 </html>

@@ -444,7 +444,7 @@
     g.textAlign = "center"; g.fillStyle = "#9db4dd"; g.font = "600 30px Arial";
     g.fillText("Practice benchmark — not an official SASE result", 540, 1230);
     g.fillStyle = "#ffffff"; g.font = "700 34px Arial";
-    g.fillText("sase-practice-hub-ph.vercel.app", 540, 1285);
+    g.fillText("SASE Practice Hub PH", 540, 1285);
 
     var a = document.createElement("a");
     a.download = "sase-mock-exam-" + (currentExamN || "result") + "-practice-score.png";

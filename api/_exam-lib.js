@@ -1,7 +1,7 @@
 /**
  * SASE Online Mock Exam Portal — shared server library (Vercel Node functions)
  *
- * SPEC v2: 5 weekly exams x 180 questions, 1 attempt per exam.
+ * SPEC v2: 8 weekly exams x 180 questions, 1 attempt per exam.
  * Exam N unlocks floor((now - created_at)/7d)+1 >= N (created_at = order date).
  *
  * Server-authoritative state lives in Neon Postgres (DATABASE_URL):
@@ -21,7 +21,7 @@
 import crypto from "crypto";
 
 export const EXAM_MS = 2 * 60 * 60 * 1000; // 2-hour practice timer (server-authoritative)
-export const EXAM_COUNT = 5;
+export const EXAM_COUNT = 8;
 export const WEEK_MS = 7 * 24 * 3600 * 1000;
 
 const GH_TOKEN = process.env.GH_EXAM_TOKEN || "";
@@ -615,7 +615,7 @@ export function alreadySubmittedMessage(pct, createdAt, n, now = Date.now()) {
     const days = Math.max(1, Math.ceil(next.unlocks_in_ms / (24 * 3600 * 1000)));
     return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks in ${days} day${days === 1 ? "" : "s"} — use the time to review the weak areas in your results.`;
   }
-  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 5 exams — use your results to review the weak areas.`;
+  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 8 exams — use your results to review the weak areas.`;
 }
 export const ACTIVE_ATTEMPT_MSG = (m) =>
   `You have Mock Exam ${m} in progress — finish it or give it up before starting another exam.`;

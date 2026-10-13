@@ -4,6 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="MSU-SASE Reviewer — 450 original practice questions with full explanations, two built-in 180-item mock exams, plus free access to 8 weekly online mock exams. ₱167 via GCash." />
+  <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/" />
+  <meta property="og:title" content="MSU-SASE Reviewer — Order for ₱167" />
+  <meta property="og:description" content="450 original practice questions with full explanations, two built-in 180-item mock exams, plus free access to 8 weekly online mock exams. ₱167 via GCash." />
+  <meta property="og:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MSU-SASE Reviewer — Order for ₱167" />
+  <meta name="twitter:description" content="450 original practice questions with full explanations, two built-in 180-item mock exams, plus free access to 8 weekly online mock exams. ₱167 via GCash." />
+  <meta name="twitter:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -246,7 +257,37 @@
       font-weight: 800;
       font-size: 1.1rem;
     }
-    .follow-banner {
+    .portal-section { padding-top: 20px; }
+    .portal-band {
+      position: relative;
+      padding: 44px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(125deg, #063f6c 0%, #075d9b 100%);
+      color: #e4f2fb;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .portal-band h2 {
+      margin-bottom: 14px;
+      color: #fff;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(2.1rem, 4vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+    }
+    .portal-band > p { max-width: 720px; font-size: 1.05rem; line-height: 1.65; }
+    .portal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+    .portal-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .portal-card h3 { color: #fff; margin: 0 0 8px; font-size: 1.05rem; }
+    .portal-card p { margin: 0; font-size: .93rem; line-height: 1.6; }
+    .portal-band .portal-link { margin-top: 4px; }
+    .portal-login-note { margin: 16px 0 0; font-size: .9rem; color: #d9f0ff; }
+    .hashtags { color: var(--muted); font-size: .8rem; letter-spacing: .01em; }
       background: linear-gradient(135deg, #0b3b66, #1877F2);
       border-radius: var(--radius-lg);
       padding: 44px 36px;
@@ -434,6 +475,16 @@
     .generate:active { transform: translateY(4px); box-shadow: 0 4px 0 #8f3a12; }
     .form-note { margin: 18px 0 0 !important; font-size: .82rem; }
     .form-error { color: #b52c42; font-size: .85rem; margin: 8px 0 0; background: #fdeaea; padding: 8px 12px; border-radius: 8px; }
+    .field-help { color: #5a4a00; font-size: .85rem; margin: 8px 0 0; background: #fff8e1; padding: 8px 12px; border-radius: 8px; }
+
+    /* Order reference shown after the form is submitted (quote it when messaging us) */
+    .order-ref { display: none; margin: 0 0 14px; padding: 12px 14px; border-radius: 10px; background: #eef6fa; border: 1px solid #d2e0e7; font-size: .95rem; }
+    .order-ref.visible { display: block; }
+    .order-ref strong { letter-spacing: .04em; }
+
+    /* Reserved space for the ad slot so the page does not jump when ads load */
+    .ad-slot { min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .ad-slot iframe { max-width: 100%; }
 
     .summary {
       display: none;
@@ -543,6 +594,8 @@
       .price-row { justify-content: center; }
       .book { margin: 0 auto; width: min(89%, 390px); }
       .features-grid { grid-template-columns: 1fr; gap: 38px; }
+      .portal-grid { grid-template-columns: 1fr; }
+      .portal-band { padding: 30px 22px; }
       .payment-grid { grid-template-columns: 1fr; }
       .pay-panel { border-right: 0; border-bottom: 1px solid var(--line); }
       .steps-list { grid-template-columns: 1fr 1fr; }
@@ -585,7 +638,7 @@
           <div class="hero-copy">
             <span class="eyebrow">450-item practice set with answer key</span>
             <h1 id="main-title">Prepare with purpose.</h1>
-            <p>450 original practice questions with full explanations — plus two complete 180-item mock exams. Built for serious SASE preparation.</p>
+            <p>450 original practice questions with full explanations — plus two complete 180-item mock exams built into the PDF. Built for serious SASE preparation.</p>
             <div class="price-row">
               <div class="price"><span>only</span><strong>₱167</strong></div>
               <a class="primary-link" href="#order">Order your copy ↓</a>
@@ -595,14 +648,14 @@
               <h2>Everything included for ₱167</h2>
               <ul>
                 <li><strong>MSU-SASE Reviewer PDF</strong> — 450 practice questions with full explanations</li>
-                <li><strong>FREE online mock exam portal</strong> — 5 full 180-question mock exams, one released every week</li>
+                <li><strong>FREE online mock exam portal</strong> — 8 full 180-question mock exams, one released every week over 8 weeks</li>
                 <li><strong>Scores + answer reviews</strong> — see your score, review every answer, and get a how-to-improve guide</li>
               </ul>
             </div>
             <div class="portal-cta" aria-label="Mock exam portal">
               <h2><span aria-hidden="true">🎯</span> Try the Free Mock Exam Portal</h2>
-              <p>Every buyer gets FREE access — 5 full 180-question mock exams, one released every week, just like the real SASE. Use the password that came with your PDF to log in.</p>
-              <a class="portal-link" href="https://sase-practice-hub-ph.vercel.app/exam">Open the Mock Exam Portal →</a>
+              <p>Every buyer gets FREE access — 8 full 180-question mock exams, one released every week over 8 weeks, at the same 180-question length as the practice format. Use the password that came with your PDF to log in.</p>
+              <a class="portal-link" href="/exam">Open the Mock Exam Portal →</a>
             </div>
             <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener"><span class="fb-f">f</span> Click here — visit our Facebook Page</a>
           </div>
@@ -653,7 +706,7 @@
           <div class="facts">
             <article class="fact">
               <div class="fact-number">01</div>
-              <div><h3>Free sample before you pay</h3><p>Try 10 real questions with full explanations — free on our <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Facebook page</a>. Decide for yourself if it is worth ₱167.</p></div>
+              <div><h3>Free sample before you pay</h3><p>Try 10 sample questions from the reviewer with full explanations — free on our <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Facebook page</a>. Decide for yourself if it is worth ₱167.</p></div>
             </article>
             <article class="fact">
               <div class="fact-number">02</div>
@@ -675,7 +728,7 @@
         <div class="wrap">
           <div class="section-intro">
             <h2 id="inside-title">What&apos;s inside the 450 questions.</h2>
-            <p>Every subject covered, every question explained. Two full mock exams included.</p>
+            <p>Every subject covered, every question explained. Two full mock exams built into the PDF included.</p>
           </div>
           <div class="facts">
             <article class="fact">
@@ -696,8 +749,34 @@
             </article>
             <article class="fact">
               <div class="fact-number">2×</div>
-              <div><h3>Full mock exams</h3><p>Two complete 180-item mocks matching the official format — timed practice for real exam conditions.</p></div>
+              <div><h3>Full mock exams</h3><p>Two complete 180-item mocks built into the PDF — timed practice at the same 180-question length as the practice format.</p></div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="portal-section" id="mock-exam-portal" aria-labelledby="portal-title">
+        <div class="wrap">
+          <div class="portal-band">
+            <span class="eyebrow">FREE WITH YOUR REVIEWER</span>
+            <h2 id="portal-title">Practice under timed conditions — then learn from every answer.</h2>
+            <p>Every buyer gets free access to the mock exam portal. Eight full 180-question mock exams, one released each week over 8 weeks — so you build steady, week-by-week progress instead of cramming. Each exam shows you exactly what to study next: your score, a review of every answer with explanations, and a how-to-improve guide. Practice to learn, not just to pass.</p>
+            <div class="portal-grid">
+              <article class="portal-card">
+                <h3>8 full mock exams</h3>
+                <p>180 questions each, one released every week over 8 weeks — the same 180-question length as the practice format.</p>
+              </article>
+              <article class="portal-card">
+                <h3>Review every answer</h3>
+                <p>See your score, revisit each question, and read the explanation behind the correct answer.</p>
+              </article>
+              <article class="portal-card">
+                <h3>Know what to study next</h3>
+                <p>Your results highlight your weak areas, so your next study session starts with a clear plan.</p>
+              </article>
+            </div>
+            <a class="portal-link" href="/exam">Open the Mock Exam Portal →</a>
+            <p class="portal-login-note">Log in with the password that came with your PDF. Keep it safe — it is your portal key.</p>
           </div>
         </div>
       </section>
@@ -711,7 +790,7 @@
           <div class="facts">
             <article class="fact">
               <div class="fact-number">?</div>
-              <div><h3>Is this an official MSU reviewer?</h3><p>No. This is an unofficial practice reviewer with original questions. MSU does not publish official reviewers.</p></div>
+              <div><h3>Is this an official MSU reviewer?</h3><p>No. This is an unofficial practice reviewer with original questions. This reviewer is not published by or affiliated with MSU.</p></div>
             </article>
             <article class="fact">
               <div class="fact-number">?</div>
@@ -719,11 +798,73 @@
             </article>
             <article class="fact">
               <div class="fact-number">?</div>
-              <div><h3>Can I see a sample first?</h3><p>Yes — 10 free sample questions with full explanations are posted on our Facebook page.</p></div>
+              <div><h3>Can I see a sample first?</h3><p>Yes — 10 free sample questions from the reviewer with full explanations are posted on our Facebook page.</p></div>
             </article>
             <article class="fact">
               <div class="fact-number">?</div>
               <div><h3>What if I have questions about the material?</h3><p>Message our Facebook page anytime. We help you understand — whether you bought the reviewer or not.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="portal-faq-title">
+        <div class="wrap">
+          <div class="section-intro">
+            <h2 id="portal-faq-title">Mock exam portal — common questions.</h2>
+            <p>How the free portal that comes with your reviewer works.</p>
+          </div>
+          <div class="facts">
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>How do I get my portal password?</h3><p>Your unique portal password is delivered together with your PDF, via Messenger, after your ₱167 payment is verified. Keep it safe — it is your portal key, and it also opens your PDF.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>How many devices can I use?</h3><p>One password works on up to 3 devices. If you switch to a new phone or computer and hit the limit, message our Facebook page and we will help you reset your devices.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>How many attempts do I get per exam?</h3><p>One attempt per exam. Once you submit — or your time runs out — that exam is graded and cannot be retaken. Use the review afterwards to learn from every answer.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>When are the exams released?</h3><p>One exam is released every week over 8 weeks. A locked exam shows its opening date on the exam list — check back when it unlocks.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>What happens when the timer runs out?</h3><p>Your answers are submitted automatically and graded, even if you never pressed Submit. You will see your score, a review of every answer, and a how-to-improve guide.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>Can I retake an exam to improve my score?</h3><p>No — each exam is one attempt, so treat every sitting like the real thing. Your 8 exams give you 8 fresh chances to practise under timed conditions.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">?</div>
+              <div><h3>I lost my password / I need a device reset.</h3><p>Message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> with your order reference and the name used on your order. We will verify your purchase and help you recover access.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="policy-title">
+        <div class="wrap">
+          <div class="section-intro">
+            <h2 id="policy-title">Delivery &amp; refund policy.</h2>
+            <p>What happens after you pay, in plain language.</p>
+          </div>
+          <div class="facts">
+            <article class="fact">
+              <div class="fact-number">01</div>
+              <div><h3>Delivery</h3><p>This is a digital product — no physical item is shipped. After your ₱167 GCash payment is verified, your PDF and your unique portal password are sent to you via Messenger as soon as your payment is verified (usually within a day). If you have not received your files within 48 hours of sending your order message, message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> with your order reference.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">02</div>
+              <div><h3>Refunds</h3><p>Because this is a digital product, refunds are given only when (a) your verified payment was received but the PDF was never delivered, or (b) the file you received is defective and cannot be opened after we have had a chance to resend a working copy. To request a refund, message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> with your order reference and your payment proof. Approved refunds are sent back to the GCash account used for payment.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact-number">03</div>
+              <div><h3>Support</h3><p>Questions about your order, the PDF, or the portal? Message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> on Facebook and include your order reference so we can help you faster. See also our <a href="/privacy.html">Privacy Policy</a>.</p></div>
             </article>
           </div>
         </div>
@@ -783,7 +924,7 @@
           <div class="payment-grid">
             <div class="pay-panel">
               <div class="qr-wrap">
-                <img src="qr-payment-167.png" alt="GCash QR code for the ₱167 reviewer payment" width="600" height="876" />
+                <img src="qr-payment-167.png" alt="GCash QR code for the ₱167 reviewer payment" width="600" height="644" />
               </div>
               <div class="amount-line"><span>Amount to send</span><strong>₱167.00</strong></div>
               <div class="number-box">
@@ -807,14 +948,16 @@
               </div>
               <div class="field">
                 <label for="reference">GCash reference number</label>
-                <input id="reference" name="reference" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 1234567890123 (from GCash receipt)" required minlength="6" maxlength="30" />
-                <p class="field-help"><span aria-hidden="true">⚠️</span> Find this on your GCash receipt after payment — it is a long transaction number, <strong>NOT your phone number</strong>. A phone number (like 09XX XXX XXXX) will not be accepted.</p>
-                <p id="ref-error" class="form-error" role="alert" hidden>That looks like a phone number, not a GCash reference number. Please check your GCash receipt after payment and copy the long transaction reference number (NOT your phone number).</p>
+                <input id="reference" name="reference" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 1234567890123 (from GCash receipt)" required minlength="13" maxlength="20" />
+                <p class="field-help"><span aria-hidden="true">⚠️</span> Find this on your GCash receipt after payment — it is the <strong>13-digit transaction reference number</strong>, <strong>NOT your phone number</strong>. A phone number (like 09XX XXX XXXX) will not be accepted.</p>
+                <p id="ref-error" class="form-error" role="alert" hidden>That looks like a phone number, not a GCash reference number. Please check your GCash receipt after payment and copy the 13-digit transaction reference number (NOT your phone number).</p>
+                <p id="ref-format-error" class="form-error" role="alert" hidden>A GCash reference number is exactly 13 digits. Please check your GCash receipt after payment and copy the full 13-digit reference number.</p>
               </div>
               <button class="generate" type="submit">Create order message</button>
               <p class="form-note">This form does not send anything automatically. It creates a message you can copy and send to <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH on Facebook</a>.</p>
 
               <div class="summary" id="summary" aria-live="polite">
+                <p class="order-ref" id="orderRefLine">Your order reference: <strong id="orderRefValue"></strong> — quote this when you message us.</p>
                 <pre id="summaryText"></pre>
                 <button class="copy-summary" type="button" id="copySummary">Copy order message</button>
                 <p class="send-note">Now send the copied message to <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH on Facebook</a>. Your PDF will be delivered after the payment is confirmed.</p>
@@ -828,13 +971,14 @@
 
     <!-- Adsterra ad units (owner: Adsterra panel beta.publishers.adsterra.com) -->
     <section class="ad-slot" aria-label="Advertisement">
-      <script src="https://pl31762091.profitableratecpmnetwork.com/f1/e3/17/f1e317d980a69254d14fbbcf269e24e7.js"></script>
-      <script src="https://pl31762092.profitableratecpmnetwork.com/83/01/5d/83015d942e45e0bc0ba327e14be0ef02.js"></script>
+      <script async defer src="https://pl31762091.profitableratecpmnetwork.com/f1/e3/17/f1e317d980a69254d14fbbcf269e24e7.js"></script>
+      <script async defer src="https://pl31762092.profitableratecpmnetwork.com/83/01/5d/83015d942e45e0bc0ba327e14be0ef02.js"></script>
     </section>
 
     <footer>
       <div class="wrap">
         <span>Unofficial practice material. Not affiliated with or endorsed by Mindanao State University.</span>
+        <span class="hashtags">#SASE #MSUSASE #MSUIIT #CollegeEntranceExam #SASE2026</span>
         <span>Digital PDF • ₱167 • <a href="/privacy.html" style="color: inherit;">Privacy Policy</a></span>
       </div>
     </footer>
@@ -901,14 +1045,31 @@
         var name = document.getElementById('buyerName').value.trim();
         var contact = document.getElementById('contactName').value.trim();
         var reference = document.getElementById('reference').value.trim();
-        // Block PH mobile numbers mistakenly entered as reference
+        // GCash reference numbers are exactly 13 digits. Strip spaces/dashes
+        // the buyer may have pasted, then validate the digits.
         var digitsOnly = reference.replace(/\D/g, '');
-        if (/^09\d{9}$/.test(digitsOnly) || /^639\d{9}$/.test(digitsOnly) || /^\+639\d{9}$/.test(reference.replace(/\s/g, ''))) {
-          var refErr = document.getElementById('ref-error');
+        var refErr = document.getElementById('ref-error');
+        var refFormatErr = document.getElementById('ref-format-error');
+        if (refErr) refErr.hidden = true;
+        if (refFormatErr) refFormatErr.hidden = true;
+        // Block PH mobile numbers mistakenly entered as reference (specific message).
+        if (/^09\d{9}$/.test(digitsOnly) || /^639\d{9}$/.test(digitsOnly)) {
           if (refErr) refErr.hidden = false;
           document.getElementById('reference').focus();
           return;
         }
+        // Anything that is not exactly 13 digits is a mistyped reference.
+        if (!/^\d{13}$/.test(digitsOnly)) {
+          if (refFormatErr) refFormatErr.hidden = false;
+          document.getElementById('reference').focus();
+          return;
+        }
+        reference = digitsOnly; // normalized: digits only
+        // Order reference the buyer can quote when messaging us (date + random).
+        var d = new Date();
+        var pad2 = function (n) { return (n < 10 ? '0' : '') + n; };
+        var orderRef = 'SASE-' + String(d.getFullYear()).slice(2) + pad2(d.getMonth() + 1) + pad2(d.getDate())
+          + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
         var message = [
           'Hello! I would like to order the MSU-SASE Reviewer.',
           '',
@@ -916,10 +1077,15 @@
           'Facebook / Messenger name: ' + contact,
           'Payment amount: ₱167.00',
           'Payment reference: ' + reference,
+          'Order reference: ' + orderRef,
           '',
           'I have completed the payment. Please verify and send my digital copy. Thank you!'
         ].join('\n');
 
+        var orderRefValue = document.getElementById('orderRefValue');
+        var orderRefLine = document.getElementById('orderRefLine');
+        if (orderRefValue) orderRefValue.textContent = orderRef;
+        if (orderRefLine) orderRefLine.classList.add('visible');
         summaryText.textContent = message;
         summary.classList.add('visible');
         summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
