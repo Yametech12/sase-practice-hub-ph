@@ -1,54 +1,33 @@
-// TEMPORARY diagnostic endpoint — DELETE AFTER USE. Tests the REAL
-// updateState/writeState code path (no hand-copied SQL): adds a FAKE
-// binding row, then deletes it in the same request, so state ends clean.
-// Returns only booleans/coarse labels.
+// TEMPORARY diagnostic endpoint — DELETE AFTER USE. Read-only: returns
+// the 6 guard counts in ONE query (same CTE/snapshot) + snapshot byte
+// sizes, so the failing clause is identified without ambiguity.
 import { neon } from "@neondatabase/serverless";
-import { loadState, updateState } from "./_exam-lib.js";
-
-function kindOf(e) {
-  const s = String(e?.message || e || "");
-  if (/division by zero/i.test(s)) return "guard_mismatch";
-  if (/could not serialize|40001/i.test(s)) return "serialization";
-  if (/timeout|timed out|ETIMEDOUT|ECONNRESET|fetch failed/i.test(s)) return "timeout";
-  return "other:" + s.slice(0, 80);
-}
-
-const FAKE = "ORD-DIAG-FAKE-001";
+import { loadState } from "./_exam-lib.js";
 
 export default async function handler(req, res) {
-  const out = { write_ok: false, write_error_kind: null, cleanup_ok: false, before: null, after: null };
+  const out = {};
   try {
-    const { state: s0 } = await loadState();
-    out.before = {
-      bindings: Object.keys(s0.bindings || {}).length,
-      has_fake: Boolean((s0.bindings || {})[FAKE]),
-    };
+    const { state } = await loadState();
+    const b0 = JSON.stringify(state.bindings || {});
+    const e0 = JSON.stringify(state.exams || {});
+    const s0 = JSON.stringify(state.used_submissions || {});
+    out.sizes = { b0: b0.length, e0: e0.length, s0: s0.length };
+    const sql = neon(process.env.DATABASE_URL || "");
     try {
-      await updateState((state) => {
-        state.bindings[FAKE] = {
-          devices: [{ device_hash: "diag", bound_at: "2026-10-14T00:00:00.000Z", ip_hash: "diag" }],
-        };
-        return { ok: true };
-      }, "diag: fake binding write");
-      out.write_ok = true;
+      const rows = await sql`WITH p AS (SELECT ${b0}::jsonb AS b, ${e0}::jsonb AS e, ${s0}::jsonb AS s)
+      SELECT
+        (SELECT count(*) FROM bindings b, p WHERE (p.b -> b.order_id -> 'devices') IS NULL OR b.devices IS DISTINCT FROM (p.b -> b.order_id -> 'devices')::jsonb) AS c1,
+        (SELECT count(*) FROM p, jsonb_each(p.b) e WHERE NOT EXISTS (SELECT 1 FROM bindings b WHERE b.order_id = e.key)) AS c2,
+        (SELECT count(*) FROM exams x, p WHERE (p.e -> x.order_id -> x.exam_n::text) IS NULL OR x.data IS DISTINCT FROM (p.e -> x.order_id -> x.exam_n::text)::jsonb) AS c3,
+        (SELECT count(*) FROM p, jsonb_each(p.e) o, jsonb_each(o.value) e WHERE NOT EXISTS (SELECT 1 FROM exams x WHERE x.order_id = o.key AND x.exam_n = e.key::int)) AS c4,
+        (SELECT count(*) FROM used_submissions u, p WHERE (p.s -> u.key) IS NULL OR u.result IS DISTINCT FROM (p.s -> u.key)::jsonb) AS c5,
+        (SELECT count(*) FROM p, jsonb_each(p.s) e WHERE NOT EXISTS (SELECT 1 FROM used_submissions u WHERE u.key = e.key)) AS c6`;
+      out.counts = rows?.[0] || null;
     } catch (e) {
-      out.write_error_kind = kindOf(e);
+      out.counts_error = String(e?.message || e || "").slice(0, 120);
     }
-    // Cleanup: remove the fake row if the write succeeded.
-    try {
-      const sql = neon(process.env.DATABASE_URL || "");
-      await sql`DELETE FROM bindings WHERE order_id = ${FAKE}`;
-      out.cleanup_ok = true;
-    } catch (e) {
-      out.cleanup_ok = "error:" + kindOf(e);
-    }
-    const { state: s1 } = await loadState();
-    out.after = {
-      bindings: Object.keys(s1.bindings || {}).length,
-      has_fake: Boolean((s1.bindings || {})[FAKE]),
-    };
   } catch (e) {
-    out.fatal = kindOf(e);
+    out.fatal = String(e?.message || e || "").slice(0, 80);
   }
   return res.status(200).json(out);
 }
