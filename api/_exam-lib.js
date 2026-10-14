@@ -208,18 +208,28 @@ async function writeState(after, before) {
       sql`/* NEON:lock-exams */ SELECT order_id, exam_n FROM exams FOR UPDATE`,
       sql`/* NEON:lock-subs */ SELECT key FROM used_submissions FOR UPDATE`,
       // Guard: every row must still equal the `before` snapshot. Any
-      // concurrent change (extra/missing/differing row) -> 1/0 raises
-      // "division by zero" -> the whole transaction rolls back -> retry.
-      // Params are bound once via the CTE (b/e/s = before snapshots).
+      // concurrent change (extra/missing/differing row) -> the divisor
+      // becomes 0 -> "division by zero" -> the whole transaction rolls
+      // back -> retry. Params are bound once via the CTE (b/e/s = before
+      // snapshots).
+      // CRITICAL (Oct 2026 production outage): the raise MUST be a
+      // data-dependent division, NOT `CASE WHEN (...) THEN 1 ELSE 1/0`.
+      // A literal 1/0 in a CASE ELSE is evaluated even when WHEN is true
+      // if WHEN contains subqueries (verified live on Neon) — so the old
+      // form raised on EVERY write, and every state-changing request
+      // 500'd while all clause-level checks passed. With the divisor
+      // computed from the mismatch counts, match -> 1/(1-0) = 1 and
+      // mismatch -> 1/(1-1) = error. Verified live: matching snapshot
+      // returns 1, empty snapshot raises division by zero.
       sql`/* NEON:guard */ WITH p AS (SELECT ${b0}::jsonb AS b, ${e0}::jsonb AS e, ${s0}::jsonb AS s)
-      SELECT CASE WHEN (
-        (SELECT count(*) FROM bindings b, p WHERE (p.b -> b.order_id -> 'devices') IS NULL OR b.devices IS DISTINCT FROM (p.b -> b.order_id -> 'devices')::jsonb) = 0
-        AND (SELECT count(*) FROM p, jsonb_each(p.b) e WHERE NOT EXISTS (SELECT 1 FROM bindings b WHERE b.order_id = e.key)) = 0
-        AND (SELECT count(*) FROM exams x, p WHERE (p.e -> x.order_id -> x.exam_n::text) IS NULL OR x.data IS DISTINCT FROM (p.e -> x.order_id -> x.exam_n::text)::jsonb) = 0
-        AND (SELECT count(*) FROM p, jsonb_each(p.e) o, jsonb_each(o.value) e WHERE NOT EXISTS (SELECT 1 FROM exams x WHERE x.order_id = o.key AND x.exam_n = e.key::int)) = 0
-        AND (SELECT count(*) FROM used_submissions u, p WHERE (p.s -> u.key) IS NULL OR u.result IS DISTINCT FROM (p.s -> u.key)::jsonb) = 0
-        AND (SELECT count(*) FROM p, jsonb_each(p.s) e WHERE NOT EXISTS (SELECT 1 FROM used_submissions u WHERE u.key = e.key)) = 0
-      ) THEN 1 ELSE 1/0 END`,
+      SELECT 1 / (1 - LEAST((
+        (SELECT count(*) FROM bindings b, p WHERE (p.b -> b.order_id -> 'devices') IS NULL OR b.devices IS DISTINCT FROM (p.b -> b.order_id -> 'devices')::jsonb)
+        + (SELECT count(*) FROM p, jsonb_each(p.b) e WHERE NOT EXISTS (SELECT 1 FROM bindings b WHERE b.order_id = e.key))
+        + (SELECT count(*) FROM exams x, p WHERE (p.e -> x.order_id -> x.exam_n::text) IS NULL OR x.data IS DISTINCT FROM (p.e -> x.order_id -> x.exam_n::text)::jsonb)
+        + (SELECT count(*) FROM p, jsonb_each(p.e) o, jsonb_each(o.value) e WHERE NOT EXISTS (SELECT 1 FROM exams x WHERE x.order_id = o.key AND x.exam_n = e.key::int))
+        + (SELECT count(*) FROM used_submissions u, p WHERE (p.s -> u.key) IS NULL OR u.result IS DISTINCT FROM (p.s -> u.key)::jsonb)
+        + (SELECT count(*) FROM p, jsonb_each(p.s) e WHERE NOT EXISTS (SELECT 1 FROM used_submissions u WHERE u.key = e.key))
+      ), 1))`,
       sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value->'devices' FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
       sql`/* NEON:write-bindings-del */ DELETE FROM bindings WHERE order_id NOT IN (SELECT key FROM jsonb_each(${b1}::jsonb))`,
       sql`/* NEON:write-exams */ INSERT INTO exams (order_id, exam_n, data) SELECT o.key, e.key::int, e.value FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e ON CONFLICT (order_id, exam_n) DO UPDATE SET data = EXCLUDED.data`,

@@ -229,6 +229,12 @@ console.log("11. SQL-shape regression: bindings column holds the devices ARRAY (
   const guardBlock = src.slice(src.indexOf("NEON:guard"), src.indexOf("NEON:write-bindings"));
   ok("guard compares column against -> 'devices' (array), not the wrapper object",
     guardBlock.includes("-> 'devices'") && !guardBlock.includes("(p.b -> b.order_id)::jsonb"));
+  // Oct 2026 production outage #2: `CASE WHEN (...) THEN 1 ELSE 1/0`
+  // raises even when WHEN is true if WHEN contains subqueries (verified
+  // live on Neon) — so the guard must raise via a DATA-DEPENDENT
+  // division, never a literal 1/0.
+  ok("guard raises via data-dependent division, never literal 1/0",
+    guardBlock.includes("1 / (1 - LEAST((") && !guardBlock.includes("ELSE 1/0"));
   const writeLines = src.split("\n").filter((l) => l.includes("NEON:write-bindings") && !l.includes("-del"));
   ok("all bindings writes store value->'devices' (array), not bare value",
     writeLines.length === 2 && writeLines.every((l) => l.includes("value->'devices'")));
