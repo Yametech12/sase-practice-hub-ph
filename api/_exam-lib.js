@@ -213,14 +213,14 @@ async function writeState(after, before) {
       // Params are bound once via the CTE (b/e/s = before snapshots).
       sql`/* NEON:guard */ WITH p AS (SELECT ${b0}::jsonb AS b, ${e0}::jsonb AS e, ${s0}::jsonb AS s)
       SELECT CASE WHEN (
-        (SELECT count(*) FROM bindings b, p WHERE (p.b -> b.order_id) IS NULL OR b.devices IS DISTINCT FROM (p.b -> b.order_id)::jsonb) = 0
+        (SELECT count(*) FROM bindings b, p WHERE (p.b -> b.order_id -> 'devices') IS NULL OR b.devices IS DISTINCT FROM (p.b -> b.order_id -> 'devices')::jsonb) = 0
         AND (SELECT count(*) FROM p, jsonb_each(p.b) e WHERE NOT EXISTS (SELECT 1 FROM bindings b WHERE b.order_id = e.key)) = 0
         AND (SELECT count(*) FROM exams x, p WHERE (p.e -> x.order_id -> x.exam_n::text) IS NULL OR x.data IS DISTINCT FROM (p.e -> x.order_id -> x.exam_n::text)::jsonb) = 0
         AND (SELECT count(*) FROM p, jsonb_each(p.e) o, jsonb_each(o.value) e WHERE NOT EXISTS (SELECT 1 FROM exams x WHERE x.order_id = o.key AND x.exam_n = e.key::int)) = 0
         AND (SELECT count(*) FROM used_submissions u, p WHERE (p.s -> u.key) IS NULL OR u.result IS DISTINCT FROM (p.s -> u.key)::jsonb) = 0
         AND (SELECT count(*) FROM p, jsonb_each(p.s) e WHERE NOT EXISTS (SELECT 1 FROM used_submissions u WHERE u.key = e.key)) = 0
       ) THEN 1 ELSE 1/0 END`,
-      sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
+      sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value->'devices' FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
       sql`/* NEON:write-bindings-del */ DELETE FROM bindings WHERE order_id NOT IN (SELECT key FROM jsonb_each(${b1}::jsonb))`,
       sql`/* NEON:write-exams */ INSERT INTO exams (order_id, exam_n, data) SELECT o.key, e.key::int, e.value FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e ON CONFLICT (order_id, exam_n) DO UPDATE SET data = EXCLUDED.data`,
       sql`/* NEON:write-exams-del */ DELETE FROM exams WHERE (order_id, exam_n) NOT IN (SELECT o.key, e.key::int FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e)`,
@@ -242,7 +242,7 @@ export async function saveState(state, sha, message) {
   const s1 = JSON.stringify(state.used_submissions || {});
   await sql.transaction(
     [
-      sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
+      sql`/* NEON:write-bindings */ INSERT INTO bindings (order_id, devices) SELECT key, value->'devices' FROM jsonb_each(${b1}::jsonb) ON CONFLICT (order_id) DO UPDATE SET devices = EXCLUDED.devices`,
       sql`/* NEON:write-bindings-del */ DELETE FROM bindings WHERE order_id NOT IN (SELECT key FROM jsonb_each(${b1}::jsonb))`,
       sql`/* NEON:write-exams */ INSERT INTO exams (order_id, exam_n, data) SELECT o.key, e.key::int, e.value FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e ON CONFLICT (order_id, exam_n) DO UPDATE SET data = EXCLUDED.data`,
       sql`/* NEON:write-exams-del */ DELETE FROM exams WHERE (order_id, exam_n) NOT IN (SELECT o.key, e.key::int FROM jsonb_each(${e1}::jsonb) o, jsonb_each(o.value) e)`,

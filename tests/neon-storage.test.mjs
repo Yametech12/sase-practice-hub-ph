@@ -211,4 +211,29 @@ console.log("10. driver-surface regression: no sql.query() (v0.10 has no such me
   ok("direct-call query works inside transaction", Array.isArray(tx) && tx.length === 1);
 }
 
+console.log("11. SQL-shape regression: bindings column holds the devices ARRAY (migration + schema)");
+{
+  // Oct 2026 production outage: every correct-password login 500'd, while
+  // wrong passwords still 401'd. Root cause: the real SQL compared the
+  // `devices` column (an ARRAY, per migration + schema) against the whole
+  // binding OBJECT `(p.b -> order_id)`, and the write stored that object
+  // instead of the array — so the guard ALWAYS mismatched and every
+  // state-changing write rolled back. The mock implemented the CORRECT
+  // (array) semantics, so all behavior tests passed while production
+  // threw. This static check pins the real SQL text to the array shape,
+  // which the mock cannot mask.
+  const fs = await import("node:fs");
+  const src = fs.readFileSync(new URL("../api/_exam-lib.js", import.meta.url), "utf8");
+  // The guard SQL spans lines: the /* NEON:guard */ marker is on the
+  // WITH line, the bindings comparison is on the next line.
+  const guardBlock = src.slice(src.indexOf("NEON:guard"), src.indexOf("NEON:write-bindings"));
+  ok("guard compares column against -> 'devices' (array), not the wrapper object",
+    guardBlock.includes("-> 'devices'") && !guardBlock.includes("(p.b -> b.order_id)::jsonb"));
+  const writeLines = src.split("\n").filter((l) => l.includes("NEON:write-bindings") && !l.includes("-del"));
+  ok("all bindings writes store value->'devices' (array), not bare value",
+    writeLines.length === 2 && writeLines.every((l) => l.includes("value->'devices'")));
+  ok("no bare-value bindings write remains",
+    !src.split("\n").some((l) => l.includes("NEON:write-bindings") && !l.includes("-del") && l.includes("SELECT key, value FROM")));
+}
+
 console.log(`\nALL ${passed} CHECKS PASSED`);
