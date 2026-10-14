@@ -1,49 +1,54 @@
-// TEMPORARY diagnostic endpoint — DELETE AFTER USE. Read-only: tests the
-// IS-NULL direction the per-clause tests missed — DB rows whose key is
-// absent from the loadState snapshot. Returns counts + keys only.
+// TEMPORARY diagnostic endpoint — DELETE AFTER USE. Tests the REAL
+// updateState/writeState code path (no hand-copied SQL): adds a FAKE
+// binding row, then deletes it in the same request, so state ends clean.
+// Returns only booleans/coarse labels.
 import { neon } from "@neondatabase/serverless";
-import { loadState } from "./_exam-lib.js";
+import { loadState, updateState } from "./_exam-lib.js";
+
+function kindOf(e) {
+  const s = String(e?.message || e || "");
+  if (/division by zero/i.test(s)) return "guard_mismatch";
+  if (/could not serialize|40001/i.test(s)) return "serialization";
+  if (/timeout|timed out|ETIMEDOUT|ECONNRESET|fetch failed/i.test(s)) return "timeout";
+  return "other:" + s.slice(0, 80);
+}
+
+const FAKE = "ORD-DIAG-FAKE-001";
 
 export default async function handler(req, res) {
-  const out = {};
+  const out = { write_ok: false, write_error_kind: null, cleanup_ok: false, before: null, after: null };
   try {
-    const { state } = await loadState();
-    const b0 = JSON.stringify(state.bindings || {});
-    const e0 = JSON.stringify(state.exams || {});
-    const s0 = JSON.stringify(state.used_submissions || {});
-    const sql = neon(process.env.DATABASE_URL || "");
-    const run = async (name, q) => {
-      try {
-        const rows = await sql(q, [b0, e0, s0]);
-        out[name] = rows.map((r) => r.k);
-      } catch (e) {
-        out[name] = "error:" + String(e?.message || e || "").slice(0, 60);
-      }
+    const { state: s0 } = await loadState();
+    out.before = {
+      bindings: Object.keys(s0.bindings || {}).length,
+      has_fake: Boolean((s0.bindings || {})[FAKE]),
     };
-    await run(
-      "bindings_rows_missing_from_snapshot",
-      `WITH p AS (SELECT $1::jsonb AS b, $2::jsonb AS e, $3::jsonb AS s) SELECT b.order_id AS k FROM bindings b, p WHERE (p.b -> b.order_id) IS NULL`,
-    );
-    await run(
-      "exams_rows_missing_from_snapshot",
-      `WITH p AS (SELECT $1::jsonb AS b, $2::jsonb AS e, $3::jsonb AS s) SELECT (x.order_id || ':' || x.exam_n::text) AS k FROM exams x, p WHERE (p.e -> x.order_id -> x.exam_n::text) IS NULL`,
-    );
-    await run(
-      "subs_rows_missing_from_snapshot",
-      `WITH p AS (SELECT $1::jsonb AS b, $2::jsonb AS e, $3::jsonb AS s) SELECT u.key AS k FROM used_submissions u, p WHERE (p.s -> u.key) IS NULL`,
-    );
-    // Also: snapshot keys NOT in DB (the other direction, for completeness).
-    await run(
-      "snapshot_bindings_keys_missing_from_db",
-      `WITH p AS (SELECT $1::jsonb AS b, $2::jsonb AS e, $3::jsonb AS s) SELECT e.key AS k FROM p, jsonb_each(p.b) e WHERE NOT EXISTS (SELECT 1 FROM bindings b WHERE b.order_id = e.key)`,
-    );
-    out.snapshot_counts = {
-      bindings: Object.keys(state.bindings || {}).length,
-      exams: Object.keys(state.exams || {}).length,
-      subs: Object.keys(state.used_submissions || {}).length,
+    try {
+      await updateState((state) => {
+        state.bindings[FAKE] = {
+          devices: [{ device_hash: "diag", bound_at: "2026-10-14T00:00:00.000Z", ip_hash: "diag" }],
+        };
+        return { ok: true };
+      }, "diag: fake binding write");
+      out.write_ok = true;
+    } catch (e) {
+      out.write_error_kind = kindOf(e);
+    }
+    // Cleanup: remove the fake row if the write succeeded.
+    try {
+      const sql = neon(process.env.DATABASE_URL || "");
+      await sql`DELETE FROM bindings WHERE order_id = ${FAKE}`;
+      out.cleanup_ok = true;
+    } catch (e) {
+      out.cleanup_ok = "error:" + kindOf(e);
+    }
+    const { state: s1 } = await loadState();
+    out.after = {
+      bindings: Object.keys(s1.bindings || {}).length,
+      has_fake: Boolean((s1.bindings || {})[FAKE]),
     };
   } catch (e) {
-    out.fatal = String(e?.message || e || "").slice(0, 80);
+    out.fatal = kindOf(e);
   }
   return res.status(200).json(out);
 }
