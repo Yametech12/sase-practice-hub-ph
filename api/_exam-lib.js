@@ -381,6 +381,27 @@ export function shuffleInPlace(arr) {
   return arr;
 }
 
+// Option-display mapping for one item: display letter -> canonical letter.
+// Error-identification items embed stem markers (A)-(D) in the question text
+// and their options ARE those segments in order (E = "No error"), so shuffling
+// would break the UI-letter <-> stem-marker match (review would say
+// "correct answer: D" while the explanation cites stem marker "(C)").
+// Those items keep the identity mapping; every other item gets a fresh shuffle.
+export function buildOptMap(item) {
+  const keys = Object.keys(item.options || {});
+  const stemMarked = /\(A\)[\s\S]*\(B\)/.test(item.question || "");
+  if (stemMarked) {
+    const m = {};
+    for (const L of keys) m[L] = L;
+    return m;
+  }
+  const origLetters = shuffleInPlace([...keys]);
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".slice(0, origLetters.length).split("");
+  const m = {};
+  letters.forEach((L, i) => (m[L] = origLetters[i]));
+  return m;
+}
+
 const MAX_BODY_BYTES = 256 * 1024; // largest legit body is a 180-answer sync, ~2 KB
 const BODY_TIMEOUT_MS = 15_000;
 export async function readBody(req, { maxBytes = MAX_BODY_BYTES, timeoutMs = BODY_TIMEOUT_MS } = {}) {

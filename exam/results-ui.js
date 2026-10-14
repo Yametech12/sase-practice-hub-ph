@@ -29,7 +29,7 @@
   var WEAK_THRESHOLD = 70; // sections below this % get an improve card
   var RESULT_KEY = "sase_exam_result";
   var EXAM_NUM_KEY = "sase_exam_n";
-  var TOTAL_EXAMS = 5;
+  var TOTAL_EXAMS = 8;
 
   var els = {};
   ["examStatus", "examStatusText", "resultNotice", "resultNoticeText",
@@ -355,7 +355,8 @@
 
     body.innerHTML =
       (it.passage ? '<div class="q-passage">' + esc(it.passage) + "</div>" : "") +
-      '<p class="q-text">' + esc(it.question) + "</p>" +
+      // No q-text here: the collapsed header already shows the FULL question,
+      // so repeating it in the expanded body duplicated the stem on screen.
       '<ul class="q-opts">' + opts + "</ul>" +
       '<p class="ans-line">' + ansLine + "</p>" +
       '<p class="q-expl"><strong>Why:</strong> ' + esc(it.explanation || "See your reviewer for the full explanation.") + "</p>";

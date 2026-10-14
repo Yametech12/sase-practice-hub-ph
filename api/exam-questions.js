@@ -17,7 +17,9 @@
  *   - per-token/IP rate limit on this endpoint (anti-scrape)
  *
  * Questions are returned WITHOUT answers/explanations. Options are shuffled
- * per attempt; the mapping is kept server-side in the exam record.
+ * per attempt, EXCEPT error-identification items whose stems carry (A)-(D)
+ * markers — those keep the identity mapping so the displayed letters match
+ * the stem markers. The mapping is kept server-side in the exam record.
  * The bank version (blob SHA) is pinned at issuance so a mid-exam redeploy
  * cannot corrupt grading.
  */
@@ -31,6 +33,7 @@ import {
   readBody,
   logEvent,
   shuffleInPlace,
+  buildOptMap,
   newId,
   validExamN,
   examUnlock,
@@ -212,11 +215,9 @@ export default async function handler(req, res) {
       const optMap = {};
       for (const qid of qOrder) {
         const item = byId.get(qid);
-        const origLetters = shuffleInPlace(Object.keys(item.options));
-        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".slice(0, origLetters.length).split("");
-        const m = {};
-        letters.forEach((L, i) => (m[L] = origLetters[i]));
-        optMap[qid] = m;
+        // buildOptMap: shuffled for normal items, identity for
+        // stem-marker (error-identification) items.
+        optMap[qid] = buildOptMap(item);
       }
       rec = {
         status: "in_progress",
