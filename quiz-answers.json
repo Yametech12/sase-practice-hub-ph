@@ -67,7 +67,7 @@
     "answer": "C",
     "meaning": "in complete agreement",
     "word": "",
-    "question": "The vote was unanimous — every single member raised a hand in favor.",
+    "question": "The vote was unanimous \u2014 every single member raised a hand in favor.",
     "post_url": "https://www.facebook.com/61594997556905/posts/122101497831499918",
     "post_fbid": "122101497831499918"
   },
@@ -219,7 +219,7 @@
     "answer": "A",
     "meaning": "0.015",
     "word": "",
-    "question": "√0.000225 = ?",
+    "question": "\u221a0.000225 = ?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/122104016817499918",
     "post_fbid": "122104016817499918"
   },
@@ -275,7 +275,7 @@
     "answer": "D",
     "meaning": "2",
     "word": "",
-    "question": "Solve the system: 3x − 2y = 4 and x + 3y = 5. What is the value of x?",
+    "question": "Solve the system: 3x \u2212 2y = 4 and x + 3y = 5. What is the value of x?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122104913745499918",
     "post_fbid": "122104913745499918"
   },
@@ -315,15 +315,15 @@
     "answer": "D",
     "meaning": "40%",
     "word": "",
-    "question": "A vendor bought 20 mangoes for ₱100 and sold each mango for ₱7. What was the percent profit?",
+    "question": "A vendor bought 20 mangoes for \u20b1100 and sold each mango for \u20b17. What was the percent profit?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122105302791499918",
     "post_fbid": "122105302791499918"
   },
   "122105459847499918": {
     "answer": "C",
-    "meaning": "₱1,200",
+    "meaning": "\u20b11,200",
     "word": "",
-    "question": "A pair of shoes is priced at ₱2,000. The shop gives a 25% discount, then an additional 20% off the discounted price. What is the final price?",
+    "question": "A pair of shoes is priced at \u20b12,000. The shop gives a 25% discount, then an additional 20% off the discounted price. What is the final price?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122105459847499918",
     "post_fbid": "122105459847499918"
   },
@@ -339,13 +339,13 @@
     "answer": "B",
     "meaning": "17",
     "word": "",
-    "question": "8 + 4 × 3 − 6 ÷ 2 = ?",
+    "question": "8 + 4 \u00d7 3 \u2212 6 \u00f7 2 = ?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122105823699499918",
     "post_fbid": "122105823699499918"
   },
   "122105889411499918": {
     "answer": "B",
-    "meaning": "chemical → electrical → light.",
+    "meaning": "chemical \u2192 electrical \u2192 light.",
     "word": "",
     "question": "When a flashlight is switched on, the energy transformation that occurs is",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122105889411499918",
@@ -393,9 +393,9 @@
   },
   "122106856965499918": {
     "answer": "D",
-    "meaning": "2(x + 2) / (x − 2)",
+    "meaning": "2(x + 2) / (x \u2212 2)",
     "word": "",
-    "question": "Simplify: (2x² − 8) / (x² − 4x + 4)",
+    "question": "Simplify: (2x\u00b2 \u2212 8) / (x\u00b2 \u2212 4x + 4)",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122106856965499918",
     "post_fbid": "122106856965499918"
   },
@@ -417,9 +417,9 @@
   },
   "122107169361499918": {
     "answer": "C",
-    "meaning": "●",
+    "meaning": "\u25cf",
     "word": "",
-    "question": "○, ◐, ●, ○, ◐, ●, ○, ◐, __",
+    "question": "\u25cb, \u25d0, \u25cf, \u25cb, \u25d0, \u25cf, \u25cb, \u25d0, __",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122107169361499918",
     "post_fbid": "122107169361499918"
   },
@@ -435,7 +435,7 @@
     "answer": "D",
     "meaning": "3/16",
     "word": "",
-    "question": "Evaluate: 4⁻² + 2⁻³",
+    "question": "Evaluate: 4\u207b\u00b2 + 2\u207b\u00b3",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122107746417499918",
     "post_fbid": "122107746417499918"
   },
@@ -465,7 +465,7 @@
   },
   "122108148201499918": {
     "answer": "D",
-    "meaning": "Being prepared — through supplies, plans, and information — reduces the harm disasters cause.",
+    "meaning": "Being prepared \u2014 through supplies, plans, and information \u2014 reduces the harm disasters cause.",
     "word": "",
     "question": "Which of the following best states the main idea of the passage?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122108148201499918",
@@ -481,9 +481,9 @@
   },
   "122108435103499918": {
     "answer": "B",
-    "meaning": "154 m²",
+    "meaning": "154 m\u00b2",
     "word": "",
-    "question": "A circular garden has a circumference of 44 m. Using π = 22/7, what is its area?",
+    "question": "A circular garden has a circumference of 44 m. Using \u03c0 = 22/7, what is its area?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122108435103499918",
     "post_fbid": "122108435103499918"
   },
@@ -499,7 +499,7 @@
     "answer": "A",
     "meaning": "8",
     "word": "",
-    "question": "Solve for x: 3(x − 4) + 5 = 2x + 1",
+    "question": "Solve for x: 3(x \u2212 4) + 5 = 2x + 1",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122108825115499918",
     "post_fbid": "122108825115499918"
   },
@@ -507,7 +507,7 @@
     "answer": "C",
     "meaning": "along the boundaries of several moving tectonic plates",
     "word": "",
-    "question": "The Philippines experiences frequent earthquakes mainly because the archipelago lies —",
+    "question": "The Philippines experiences frequent earthquakes mainly because the archipelago lies \u2014",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122108909607499918",
     "post_fbid": "122108909607499918"
   },
@@ -537,9 +537,9 @@
   },
   "122109317361499918": {
     "answer": "C",
-    "meaning": "x ≤ −4",
+    "meaning": "x \u2264 \u22124",
     "word": "",
-    "question": "Solve: −2x + 7 ≥ 15",
+    "question": "Solve: \u22122x + 7 \u2265 15",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122109317361499918",
     "post_fbid": "122109317361499918"
   },
@@ -582,5 +582,17 @@
     "question": "What is the main idea of the passage?",
     "post_url": "https://www.facebook.com/1335770806292993/posts/1335770806292993_122106713715499918",
     "post_fbid": "122106713715499918"
+  },
+  "122110841037499918": {
+    "answer": "C",
+    "question": "What comes next? 2, 6, 12, 20, 30, ?",
+    "choices": {
+      "A": "36",
+      "B": "40",
+      "C": "42",
+      "D": "48"
+    },
+    "post_url": "https://www.facebook.com/122101924755499918/posts/122110841037499918",
+    "post_fbid": "122110841037499918"
   }
 }
