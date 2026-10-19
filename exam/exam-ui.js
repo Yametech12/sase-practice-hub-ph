@@ -1,5 +1,5 @@
 /* ============================================================
-   SASE Mock Exam Portal — exam-taking UI logic (vanilla JS)
+   SASE Mock Exam Portal, exam-taking UI logic (vanilla JS)
    ------------------------------------------------------------
    BACKEND API (exact field names per contract):
      POST /api/exam-auth      {password, device_id} → 200 {token}
@@ -121,19 +121,18 @@
     }, function (fetchErr) {
       if (timer) clearTimeout(timer);
       if (fetchErr && fetchErr.name === "AbortError") {
-        var timeoutErr = new Error("The server is taking too long — please check your connection and try again.");
+        var timeoutErr = new Error("The server is taking too long, please check your connection and try again.");
         timeoutErr.status = 0; timeoutErr.code = "timeout";
         throw timeoutErr;
       }
-      throw new Error("Could not connect — please check your connection and try again.");
+      throw new Error("Could not connect, please check your connection and try again.");
     });
   }
 
   /* ---------------- shared 401 recovery ---------------- */
   /* Any mid-exam 401 funnels here. Clears the dead token, stops all
      timers/syncs, returns to the gate with an explicit "sign in again to
-     resume" message. After re-login the student taps Resume explicitly —
-     exams never auto-start. Idempotent: sync 401, grade
+     resume" message. After re-login the student taps Resume explicitly, exams never auto-start. Idempotent: sync 401, grade
      401, and forfeit 401 can all fire in the same second. */
   function handleSessionExpired() {
     if (state.sessionExpiredHandled) return;
@@ -153,7 +152,7 @@
     if (warn) warn.hidden = true;
     showScreen("screen-gate");
     gateForm.style.display = "";
-    gateError.textContent = "Your session expired — please sign in again to resume your exam. Your saved answers are safe.";
+    gateError.textContent = "Your session expired, please sign in again to resume your exam. Your saved answers are safe.";
     gateError.hidden = false;
     $("exam-list-wrap").hidden = true; // hide stale cards under the gate
     gateInput.focus();
@@ -161,9 +160,9 @@
 
   /* ---------------- submit backoff ---------------- */
   var SUBMIT_MAX_AUTO_RETRIES = 5;
-  var pendingRetryKind = "grade"; // "grade" | "forfeit" — what the shared Retry button redoes
+  var pendingRetryKind = "grade"; // "grade" | "forfeit", what the shared Retry button redoes
   function submitBackoffMs(attempt) {
-    // 2s, 4s, 8s, 16s, 32s — capped, jittered ±20% to avoid thundering herd
+    // 2s, 4s, 8s, 16s, 32s, capped, jittered ±20% to avoid thundering herd
     var base = Math.min(32000, 2000 * Math.pow(2, attempt));
     return Math.round(base * (0.8 + Math.random() * 0.4));
   }
@@ -171,7 +170,7 @@
     if (state.submitRetryTimer) { clearTimeout(state.submitRetryTimer); state.submitRetryTimer = null; }
   }
 
-  /* Persistent device id — part of the 1-password-up-to-3-devices rule.
+  /* Persistent device id, part of the 1-password-up-to-3-devices rule.
      The server binds the first 3 device_ids it sees for a password. */
   function getDeviceId() {
     var id = null;
@@ -186,7 +185,7 @@
   }
 
   /* ============================================================
-     SCREEN 1 — gate + exam list
+     SCREEN 1, gate + exam list
      ============================================================ */
   var gateForm = $("gate-form"), gateInput = $("gate-password"),
       gateError = $("gate-error"), gateSubmit = $("gate-submit");
@@ -336,7 +335,7 @@
       meta = '<p class="exam-meta">180 questions · 2-hour practice timer · ' +
         (ex.resume_remaining_ms != null ? fmtLong(ex.resume_remaining_ms) : "resume when ready") + "</p>";
     } else if (ex.status === "expired") {
-      meta = '<p class="exam-meta">Your time ran out — view your auto-submitted result.</p>';
+      meta = '<p class="exam-meta">Your time ran out, view your auto-submitted result.</p>';
     } else {
       meta = '<p class="exam-meta">180 questions · 2 hours · 1 attempt</p>';
     }
@@ -398,7 +397,7 @@
   }
 
   /* ============================================================
-     SCREEN 2 — exam
+     SCREEN 2, exam
      ============================================================ */
   function beginExam(examN) {
     state.exam = examN;
@@ -429,7 +428,7 @@
           var el = $(id);
           if (el) el.disabled = false;
         });
-        /* PERF F-1: deadline model — server_now + server_remaining_ms. */
+        /* PERF F-1: deadline model, server_now + server_remaining_ms. */
         state.deadlineMs = data.server_now + data.server_remaining_ms;
         showScreen("screen-exam");
         if (data.resumed) {
@@ -551,7 +550,7 @@
     });
   });
 
-  /* ----- question rendering (no smooth scroll on answer taps — PERF F-2) ----- */
+  /* ----- question rendering (no smooth scroll on answer taps, PERF F-2) ----- */
   function currentQ() { return state.questions[state.currentIndex]; }
 
   function renderQuestion(scroll) {
@@ -739,7 +738,7 @@
     if (!focusables.length) return;
     var first = focusables[0], last = focusables[focusables.length - 1];
     // Focus may sit on the dialog heading (tabindex="-1", not in the
-    // focusable list) — keep the trap closed from there too.
+    // focusable list), keep the trap closed from there too.
     if (focusables.indexOf(document.activeElement) === -1) {
       e.preventDefault();
       (e.shiftKey ? last : first).focus();
@@ -773,7 +772,7 @@
       state.syncFailNotified = false;
       var warn = $("sync-warning");
       if (warn) warn.hidden = true;
-      // Deadline correction from the server clock — free with every sync.
+      // Deadline correction from the server clock, free with every sync.
       if (res && res.server_remaining_ms != null && res.server_now != null) {
         var oldDeadline = state.deadlineMs;
         state.deadlineMs = res.server_now + res.server_remaining_ms;
@@ -795,8 +794,8 @@
         if (warnEl) {
           $("sync-warning-text").textContent =
             (err && err.status === 403)
-              ? "Your session is no longer valid on this device — your latest answers may not be saving. Please reload the page and sign in again to resume."
-              : "Connection lost — your latest answers may not be saving. Please check your connection. Your saved answers are safe on the server.";
+              ? "Your session is no longer valid on this device, your latest answers may not be saving. Please reload the page and sign in again to resume."
+              : "Connection lost, your latest answers may not be saving. Please check your connection. Your saved answers are safe on the server.";
           warnEl.hidden = false;
         }
       }
@@ -810,7 +809,7 @@
     clearTimeout(state.syncDebounceId);
     if (state.syncIntervalId) { clearInterval(state.syncIntervalId); state.syncIntervalId = null; } /* PERF F-5 */
   }
-  /* PERF F-3: sendBeacon on pagehide — fetch is not guaranteed to complete. */
+  /* PERF F-3: sendBeacon on pagehide, fetch is not guaranteed to complete. */
   window.addEventListener("pagehide", function () {
     if (!state.token || !state.sessionId || state.submitting) return;
     try { navigator.sendBeacon("/api/exam-progress", JSON.stringify(progressBody())); } catch (e) {}
@@ -868,7 +867,7 @@
        in the last debounce window before expiry. */
     syncProgressNow().then(function () {
       state.submitting = true;
-      clearSync(); /* PERF F-5 — now safe: final sync already flushed */
+      clearSync(); /* PERF F-5, now safe: final sync already flushed */
       return api("/api/exam-grade", {
         token: state.token, exam: state.exam, session_id: state.sessionId,
         answers: state.answers, submission_id: state.submissionId
@@ -894,7 +893,7 @@
       $("submitting-title").textContent = "Grading your exam…";
       showScreen("screen-submitting");
       $("submit-error-text").textContent =
-        "Could not reach the server — retrying in " + Math.round(delay / 1000) +
+        "Could not reach the server, retrying in " + Math.round(delay / 1000) +
         "s (attempt " + state.submitRetries + " of " + SUBMIT_MAX_AUTO_RETRIES + "). " +
         "Your answers are safe on this screen. Your time has expired.";
       $("submit-error").hidden = false;
@@ -910,15 +909,15 @@
       $("submitting-title").textContent = "Grading your exam…";
       showScreen("screen-submitting");
       $("submit-error-text").textContent =
-        "The server is still unreachable after several tries. Tap Try again to retry — " +
+        "The server is still unreachable after several tries. Tap Try again to retry, " +
         "your answers are safe. Your time has expired.";
       $("submit-error").hidden = false;
       return;
     }
-    // MANUAL path: unchanged behaviour — back to exam + inline error + retry.
+    // MANUAL path: unchanged behaviour, back to exam + inline error + retry.
     showScreen("screen-exam");
     $("submit-error-text").textContent =
-      (err.message || "Could not submit — please check your connection and try again.");
+      (err.message || "Could not submit, please check your connection and try again.");
     $("submit-error").hidden = false;
     scheduleSync(); // restore heartbeat lost by clearSync()
   }
@@ -984,7 +983,7 @@
     startTimer();
     scheduleSync();
     $("submit-error-text").textContent =
-      (err.message || "Could not give up — please check your connection and try again.") +
+      (err.message || "Could not give up, please check your connection and try again.") +
       " Your attempt is still active. Tap Try again to retry giving up, or keep answering.";
     $("submit-error").hidden = false;
   }

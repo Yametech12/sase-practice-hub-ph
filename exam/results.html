@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Your Result — SASE Practice Hub PH</title>
+<title>Your Result, SASE Practice Hub PH</title>
 <link rel="stylesheet" href="/exam/results-ui.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- ============================================================
-  SASE Mock Exam — Results Screen
+  SASE Mock Exam, Results Screen
   INTEGRATION: the exam page stores the POST /api/exam-grade (or
   /api/exam-forfeit) JSON result in sessionStorage under key
   "sase_exam_result" (exam number under "sase_exam_n"), then
-  navigates here. results-ui.js reads it on load — no demo mode,
+  navigates here. results-ui.js reads it on load, no demo mode,
   no mock data.
 ============================================================ -->
 
@@ -44,7 +44,7 @@
   <!-- No-result fallback (direct visit without a grade result) -->
   <div id="noResult" class="card" hidden>
     <h2 class="card-title">No result found</h2>
-    <p>We couldn't find a graded exam result. Please complete an exam first — your result will appear here.</p>
+    <p>We couldn't find a graded exam result. Please complete an exam first, your result will appear here.</p>
     <button class="btn btn-primary" id="btnNoResultHub" type="button">Back to exam hub</button>
   </div>
 
@@ -59,8 +59,8 @@
             <circle cx="60" cy="60" r="52" class="ring-fill" id="ringFill"/>
           </svg>
           <div class="score-center">
-            <span class="score-pct" id="scorePct">—</span>
-            <span class="score-raw" id="scoreRaw">—</span>
+            <span class="score-pct" id="scorePct">, </span>
+            <span class="score-raw" id="scoreRaw">, </span>
           </div>
         </div>
         <div class="hero-copy">
@@ -105,7 +105,7 @@
   </div>
 
   <footer class="foot">
-    <p>Prepared by <strong>SASE Practice Hub PH</strong> — a professional MSU-SASE study resource.</p>
+    <p>Prepared by <strong>SASE Practice Hub PH</strong>, a professional MSU-SASE study resource.</p>
     <p>Need help? <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message SASE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a></p>
     <p class="foot-small"><a href="/">SASE Practice Hub PH</a></p>
   </footer>

@@ -1,5 +1,5 @@
 /* ============================================================
-   SASE Mock Exam — Results screen logic (vanilla JS)
+   SASE Mock Exam, Results screen logic (vanilla JS)
    ------------------------------------------------------------
    INTEGRATION
    -----------
@@ -60,21 +60,21 @@
     // COPY fix 3: auto-submit / forfeit notices.
     if (data.auto_submitted) {
       els.resultNoticeText.textContent =
-        "Your time ran out, so your answers were submitted automatically. Here's how you did — review the weak areas below before your next exam.";
+        "Your time ran out, so your answers were submitted automatically. Here's how you did, review the weak areas below before your next exam.";
       els.resultNotice.hidden = false;
     } else if (data.forfeited) {
       els.resultNoticeText.textContent =
-        "You gave up this attempt — your saved answers were graded. Review the weak areas below before your next exam.";
+        "You gave up this attempt, your saved answers were graded. Review the weak areas below before your next exam.";
       els.resultNotice.hidden = false;
     }
 
     // Status strip
     var n = examN || "?";
-    els.examStatusText.textContent = "Mock Exam " + n + " of " + TOTAL_EXAMS + " — completed · Your score: " +
+    els.examStatusText.textContent = "Mock Exam " + n + " of " + TOTAL_EXAMS + ", completed · Your score: " +
       (data.pct != null ? data.pct.toFixed(1) + "%" : pct.toFixed(1) + "%");
-    els.examTitle.textContent = "Mock Exam " + n + " — Practice Result";
+    els.examTitle.textContent = "Mock Exam " + n + ", Practice Result";
 
-    // Score ring (decorative SVG is aria-hidden; values are real text — A11Y K11)
+    // Score ring (decorative SVG is aria-hidden; values are real text, A11Y K11)
     var C = 326.7; // 2π·52
     els.ringFill.style.strokeDashoffset = String(C - (C * pct / 100));
     els.scorePct.textContent = pct.toFixed(1) + "%";
@@ -155,12 +155,12 @@
     }
     return sentence; // fallback: return as-is (legacy bare-name payloads still work)
   }
-  /* Per-section study guide — mirrors the server IMPROVEMENT_GUIDE in api/_exam-lib.js.
+  /* Per-section study guide, mirrors the server IMPROVEMENT_GUIDE in api/_exam-lib.js.
      Used for every weak section; the server payload only carries the single weakest section. */
   var SECTION_GUIDE = {
     "Language Usage": {
       chapters: "Parts I & V of your reviewer (vocabulary, grammar, reading)",
-      tip: "Read one passage daily and learn 5 new words with their sentences — vocabulary compounds fast."
+      tip: "Read one passage daily and learn 5 new words with their sentences, vocabulary compounds fast."
     },
     "Mathematics": {
       chapters: "Parts II & VI of your reviewer (word problems, algebra, geometry)",
@@ -172,7 +172,7 @@
     },
     "Science": {
       chapters: "Parts IV & VIII of your reviewer (biology, earth science, chemistry, physics)",
-      tip: "Make one-page concept maps per topic — practice science rewards understanding over facts."
+      tip: "Make one-page concept maps per topic, practice science rewards understanding over facts."
     }
   };
   function guideFor(name) {
@@ -216,7 +216,7 @@
       .sort(function (a, b) { return a.pct - b.pct; });
     var weakName = weakAreaName(data);
     if (weakName && !weak.some(function (w) { return w.name === weakName; })) {
-      /* Server flagged a section even if it cleared the local threshold — honor it. */
+      /* Server flagged a section even if it cleared the local threshold, honor it. */
       var match = sectionList(data).filter(function (x) { return x.name === weakName; });
       if (match.length) weak.unshift(match[0]);
     }
@@ -224,7 +224,7 @@
     if (!weak.length) {
       var ok = document.createElement("div");
       ok.className = "improve-ok";
-      ok.innerHTML = '<span aria-hidden="true">🎉</span> All sections at 70% or higher — maintain with light review before your next exam.';
+      ok.innerHTML = '<span aria-hidden="true">🎉</span> All sections at 70% or higher, maintain with light review before your next exam.';
       els.improveList.appendChild(ok);
       return;
     }
@@ -234,7 +234,7 @@
       var div = document.createElement("div");
       div.className = "improve-item";
       div.innerHTML =
-        "<strong>" + esc(w.name) + " — " + w.pct.toFixed(0) + "%</strong>" +
+        "<strong>" + esc(w.name) + ", " + w.pct.toFixed(0) + "%</strong>" +
         "<p>" + esc(tipFor(w.name)) + "</p>" +
         '<span class="chap"><span aria-hidden="true">📖</span> Study: ' + esc(chapterFor(data, w.name)) + "</span>";
       els.improveList.appendChild(div);
@@ -255,7 +255,7 @@
     if (/math/.test(s)) return "MATH";
     if (/science/.test(s)) return "SCI";
     if (/aptitude|logic/.test(s)) return "APT";
-    return String(section || "").slice(0, 4).toUpperCase() || "—";
+    return String(section || "").slice(0, 4).toUpperCase() || ", ";
   }
 
   function renderReview(data) {
@@ -270,7 +270,7 @@
 
   /* Circle shows a SHORT number only (1-3 chars, fits the 30px circle).
      Server sends the exam position (1-180). Legacy stored reviews
-     (graded before the fix) have no `number` — fall back to the trailing
+     (graded before the fix) have no `number`, fall back to the trailing
      digits of the bank id ("SCI-018" -> "18"), then to the review
      position. NEVER the full 7-char id ("SCI-018" wraps at the hyphen
      and gets clipped by .q-item overflow:hidden). */
@@ -306,7 +306,7 @@
     var div = document.createElement("div");
     div.className = "q-item " + st;
 
-    var srStatus = st === "correct" ? " — correct" : st === "wrong" ? " — wrong" : " — skipped"; /* A11Y K9 */
+    var srStatus = st === "correct" ? ", correct" : st === "wrong" ? ", wrong" : ", skipped"; /* A11Y K9 */
     var statusLabel = st === "correct" ? "✓ Correct" : st === "wrong" ? "✕ Wrong" : "○ Skipped";
 
     var head = document.createElement("button");
@@ -315,7 +315,7 @@
     head.setAttribute("aria-expanded", "false"); /* A11Y K6 */
     /* Stacked header: meta row (number + section-code badge + section +
        status chip + chevron) above the FULL question text, wrapped.
-       No truncation — the old truncate(question, 64) cut questions
+       No truncation, the old truncate(question, 64) cut questions
        mid-sentence ("The badly researched…"). */
     head.innerHTML =
       '<span class="q-head-row">' +
@@ -348,9 +348,9 @@
     if (st === "skipped") {
       ansLine = 'You skipped this. Correct answer: <b class="you-right">' + esc(it.correct_answer) + "</b>";
     } else if (st === "correct") {
-      ansLine = 'Your answer <b class="you-right">' + esc(it.your_answer) + "</b> — correct! " + check;
+      ansLine = 'Your answer <b class="you-right">' + esc(it.your_answer) + "</b>, correct! " + check;
     } else {
-      ansLine = 'You answered <b class="you-wrong">' + esc(it.your_answer) + "</b> — correct answer: <b class=\"you-right\">" + esc(it.correct_answer) + "</b>";
+      ansLine = 'You answered <b class="you-wrong">' + esc(it.your_answer) + "</b>, correct answer: <b class=\"you-right\">" + esc(it.correct_answer) + "</b>";
     }
 
     body.innerHTML =
@@ -384,7 +384,7 @@
     if (!currentData) return;
     var d = currentData;
     var pct = d.pct != null ? d.pct : (d.total ? d.score / d.total * 100 : 0);
-    var examLabel = "MOCK EXAM " + (currentExamN || "?") + " — PRACTICE RESULT";
+    var examLabel = "MOCK EXAM " + (currentExamN || "?") + ", PRACTICE RESULT";
     var dateLabel = "";
     if (d.submitted_at) {
       var dt = new Date(d.submitted_at);
@@ -443,7 +443,7 @@
 
     // footer watermark
     g.textAlign = "center"; g.fillStyle = "#9db4dd"; g.font = "600 30px Arial";
-    g.fillText("Practice benchmark — not an official SASE result", 540, 1230);
+    g.fillText("Practice benchmark, not an official SASE result", 540, 1230);
     g.fillStyle = "#ffffff"; g.font = "700 34px Arial";
     g.fillText("SASE Practice Hub PH", 540, 1285);
 
@@ -489,7 +489,7 @@
     }
     /* The grade/forfeit done-branches used to return a summary WITHOUT review
        (double-submit / retry-after-auto-grade / cross-tab race). The stored
-       review may be empty but the server still has it — re-fetch the
+       review may be empty but the server still has it, re-fetch the
        authoritative copy instead of rendering a blank review list. */
     if (!Array.isArray(data.review) || data.review.length === 0) {
       els.examStatusText.textContent = "Loading your full review…";
@@ -500,7 +500,7 @@
   })();
 
   function refetchReview(fallbackData, examN) {
-    // Minimal fetch — results page has no api() helper; token lives in sessionStorage.
+    // Minimal fetch, results page has no api() helper; token lives in sessionStorage.
     var token = null;
     try { token = sessionStorage.getItem("sase_exam_session"); } catch (e) {}
     if (!token || !examN) { render(fallbackData, examN); return; } // nothing to fetch with
@@ -514,7 +514,7 @@
           try { sessionStorage.setItem(RESULT_KEY, JSON.stringify(serverData)); } catch (e) {}
           render(serverData, examN);
         } else {
-          render(fallbackData, examN); // server has no review either — show score + empty state honestly
+          render(fallbackData, examN); // server has no review either, show score + empty state honestly
         }
       })
       .catch(function () { render(fallbackData, examN); }); // offline → cached copy, never blank-screen

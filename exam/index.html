@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>SASE Mock Exam — SASE Practice Hub PH</title>
+<title>SASE Mock Exam, SASE Practice Hub PH</title>
 <link rel="stylesheet" href="/exam/exam-ui.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
 <main class="app" id="main-content">
 
   <!-- ============================================================
-       SCREEN 1 — PASSWORD GATE + EXAM LIST
+       SCREEN 1, PASSWORD GATE + EXAM LIST
        Backend: POST /api/exam-auth, POST /api/exam-list
        ============================================================ -->
   <section id="screen-gate" class="screen active">
@@ -62,7 +62,7 @@
   </section>
 
   <!-- ============================================================
-       SCREEN 2 — EXAM IN PROGRESS
+       SCREEN 2, EXAM IN PROGRESS
        Backend: POST /api/exam-questions (start),
                 POST /api/exam-progress (sync),
                 POST /api/exam-grade (submit),
@@ -74,14 +74,14 @@
     <div id="resume-banner" class="resume-banner" role="status" hidden>
       <span class="resume-icon" aria-hidden="true">⏸</span>
       <div>
-        <strong>Welcome back — resuming your exam.</strong>
+        <strong>Welcome back, resuming your exam.</strong>
         <span id="resume-remaining">…</span>
       </div>
     </div>
 
     <!-- Sync-failure banner: hidden until N consecutive syncs fail -->
     <div id="sync-warning" class="error-card sync-warning" role="alert" hidden>
-      <p id="sync-warning-text">Connection lost — your latest answers may not be saving. Please check your connection. Your saved answers are safe on the server.</p>
+      <p id="sync-warning-text">Connection lost, your latest answers may not be saving. Please check your connection. Your saved answers are safe on the server.</p>
     </div>
 
     <!-- Timer bar (sticky under brandbar) -->
@@ -170,7 +170,7 @@
   </section>
 
   <!-- ============================================================
-       SCREEN 3 — SUBMITTING / DONE HANDOFF
+       SCREEN 3, SUBMITTING / DONE HANDOFF
        The results screen (results.html) renders the grade result.
        ============================================================ -->
   <section id="screen-submitting" class="screen" aria-label="Submitting">
@@ -186,7 +186,7 @@
 
   <!-- Inline submit error (replaces alert). Lives OUTSIDE the screens so it
        can display on both the exam screen (manual retry) and the submitting
-       screen (auto-submit backoff) — showScreen() only toggles .screen. -->
+       screen (auto-submit backoff), showScreen() only toggles .screen. -->
   <div id="submit-error" class="error-card" role="alert" hidden>
     <p id="submit-error-text"></p>
     <button id="submit-retry" class="btn btn-secondary" type="button">Try again</button>
@@ -195,7 +195,7 @@
 </main>
 
 <footer class="page-foot">
-  <p>SASE Practice Hub PH · Practice exams for study purposes only — not the official MSU-SASE.</p>
+  <p>SASE Practice Hub PH · Practice exams for study purposes only, not the official MSU-SASE.</p>
 </footer>
 
 <script src="/exam/exam-ui.js"></script>
@@ -203,7 +203,7 @@
 // Back-to-home link: guard against losing an in-progress exam attempt.
 document.getElementById('back-home').addEventListener('click', function (e) {
   if (document.querySelector('#screen-exam.active, #screen-submitting.active')) {
-    if (!confirm('Leave now? Your answers are saved on the server and the timer keeps running — go back from Your Exams before time runs out.')) {
+    if (!confirm('Leave now? Your answers are saved on the server and the timer keeps running, go back from Your Exams before time runs out.')) {
       e.preventDefault();
     }
   }
