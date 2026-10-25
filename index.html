@@ -4,985 +4,1090 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="MSU-SASE Reviewer, 450 original practice questions with full explanations, two built-in 180-item mock exams, plus free access to 8 weekly online mock exams. ₱167 via GCash." />
+  <meta name="description" content="SASE Practice Hub PH — MSU-SASE reviewer, exam drills, weekly mock exams, and guided score review." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/" />
-  <meta property="og:title" content="MSU-SASE Reviewer, Order for ₱167" />
-  <meta property="og:description" content="450 original practice questions with full explanations, two built-in 180-item mock exams, plus free access to 8 weekly online mock exams. ₱167 via GCash." />
+  <meta property="og:title" content="SASE Practice Hub PH" />
+  <meta property="og:description" content="Practice smarter for MSU-SASE with 450 original reviewer questions, mock exams, and guided review." />
   <meta property="og:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MSU-SASE Reviewer, Order for ₱167" />
-  <meta name="twitter:description" content="450 original practice questions with full explanations, two built-in 180-item mock exams, plus free access to 8 weekly online mock exams. ₱167 via GCash." />
+  <meta name="twitter:title" content="SASE Practice Hub PH" />
+  <meta name="twitter:description" content="SASE reviewer and mock exam portal for MSU-SASE preparation." />
   <meta name="twitter:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <title>MSU-SASE Reviewer, Order for ₱167</title>
+  <title>SASE Practice Hub PH</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap');
-
     :root {
-      color-scheme: light dark;
-      --ink: #13253b;
-      --muted: #5d6b78;
-      --paper: #f8fbfd;
-      --surface: #ffffff;
-      --surface-2: #eef6fa;
-      --line: #d2e0e7;
-      --blue: #0877c9;
-      --blue-deep: #075d9b;
-      --orange: #c94e1e; /* white on this = 4.57:1, WCAG AA */
-      --yellow: #ffd864;
-      --success: #167458;
-      --shadow: 0 24px 70px rgba(18, 48, 74, .14);
-      --radius-lg: 30px;
-      --radius-md: 18px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --ink: #edf7ff;
-        --muted: #adbdc9;
-        --paper: #0c1721;
-        --surface: #132432;
-        --surface-2: #192e3d;
-        --line: #2c4658;
-        --blue: #5bb9f5;
-        --blue-deep: #83c9f6;
-        --orange: #b34a1a; /* white on this = 5.37:1, WCAG AA */
-        --yellow: #f5cf61;
-        --success: #62d4ad;
-        --shadow: 0 24px 70px rgba(0, 0, 0, .32);
-      }
+      --bg: #f4f8fc;
+      --bg-strong: #eaf3ff;
+      --surface: rgba(255,255,255,0.82);
+      --surface-strong: #ffffff;
+      --surface-soft: #eef5ff;
+      --ink: #13263d;
+      --muted: #5d7288;
+      --line: rgba(16, 48, 74, 0.12);
+      --primary: #0b5fcc;
+      --primary-strong: #0a4ea1;
+      --primary-soft: rgba(11,95,204,0.12);
+      --accent: #f9cb5b;
+      --accent-strong: #e7a828;
+      --success: #0f7a58;
+      --success-soft: #eafaf3;
+      --danger: #ca3f5b;
+      --danger-soft: #fff0f4;
+      --shadow: 0 18px 48px rgba(9, 38, 73, 0.12);
+      --shadow-soft: 0 10px 24px rgba(9, 38, 73, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --max: 1180px;
     }
 
     * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    /* Skip link: visible only on keyboard focus */
-    .skip-link {
-      position: absolute; left: 12px; top: -100px; z-index: 200;
-      background: #0c1721; color: #fff; font-weight: 700; font-size: 14px;
-      padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
-    }
-    .skip-link:focus { top: 0; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
       min-width: 320px;
+      font-family: Inter, "Segoe UI", sans-serif;
       background:
-        linear-gradient(var(--paper), var(--paper)) padding-box,
-        repeating-linear-gradient(0deg, transparent 0 39px, rgba(8,119,201,.035) 39px 40px);
+        radial-gradient(circle at top left, rgba(13, 92, 204, 0.08), transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, #f8fbff 44%, #f3f7fb 100%);
       color: var(--ink);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.55;
+      line-height: 1.6;
     }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
     button, input { font: inherit; }
     button { cursor: pointer; }
-    a { color: inherit; }
 
-    .page { overflow: hidden; }
-    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .skip-link {
+      position: absolute;
+      left: 20px;
+      top: -100px;
+      z-index: 100;
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 0 0 12px 12px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .skip-link:focus { top: 0; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(9, 28, 53, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      width: min(var(--max), calc(100% - 24px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 74px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #ffd88a);
+      color: var(--ink);
+      font-size: 18px;
+      box-shadow: 0 10px 24px rgba(249, 203, 91, 0.35);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.96rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .nav a {
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav a:hover { color: #fff; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), #ffd88a);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(249, 203, 91, 0.3);
+    }
 
     .hero {
       position: relative;
-      min-height: 720px;
-      display: grid;
-      align-items: center;
-      padding: 80px 0 72px;
+      padding: 54px 0 36px;
+    }
+
+    .hero-shell {
+      background: linear-gradient(120deg, #061d38 0%, #0a3560 24%, #0c4e8d 55%, #0a5cb0 100%);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
       isolation: isolate;
     }
-    .hero::before {
+
+    .hero-shell::before,
+    .hero-shell::after {
       content: "";
       position: absolute;
-      z-index: -2;
-      inset: 0 0 6% 0;
-      background: linear-gradient(125deg, #063f6c 0%, #075d9b 100%); /* darkened light end: hero copy now ≥5.8:1 */
-      clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      width: 430px;
-      height: 430px;
-      right: -190px;
-      top: 52px;
-      border: 86px solid rgba(255,255,255,.09);
-      border-radius: 50%;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
-      align-items: center;
-      gap: clamp(44px, 8vw, 100px);
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: #d9f0ff;
-      font-weight: 700;
-      font-size: .86rem;
-      letter-spacing: .04em;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 3px;
-      background: var(--yellow);
-    }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 {
-      max-width: 720px;
-      margin: 18px 0 24px;
-      color: white;
-      font-family: "Newsreader", Georgia, serif;
-      font-size: clamp(3.3rem, 7.4vw, 6.7rem);
-      line-height: .88;
-      letter-spacing: -.055em;
-    }
-    .hero-copy > p {
-      max-width: 650px;
-      color: #e4f2fb;
-      font-size: clamp(1.02rem, 1.6vw, 1.22rem);
-      line-height: 1.7;
-    }
-    .price-row { display: flex; align-items: center; gap: 22px; margin-top: 34px; flex-wrap: wrap; }
-    .price {
-      position: relative;
-      display: inline-flex;
-      align-items: baseline;
-      gap: 5px;
-      color: #08263f;
-      background: var(--yellow);
-      padding: 13px 24px 12px;
-      border-radius: 9px 20px 8px 17px;
-      box-shadow: 8px 8px 0 rgba(0,0,0,.14);
-      transform: rotate(-2deg);
-      font-size: 1rem;
-      font-weight: 700;
-    }
-    .price strong { font-size: 2.25rem; line-height: 1; }
-    .value-stack {
-      margin-top: 26px;
-      max-width: 540px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 16px;
-      padding: 20px 22px 22px;
-      color: #e4f2fb;
-    }
-    .value-stack h3 { color: #fff; font-size: 1.05rem; margin: 10px 0 12px; }
-    .value-stack ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-    .value-stack li { font-size: .95rem; line-height: 1.55; padding-left: 28px; position: relative; }
-    .value-stack li::before { content: "\2713"; position: absolute; left: 2px; top: 0; color: var(--yellow); font-weight: 800; }
-    .value-stack li strong { color: #fff; }
-    .new-badge {
-      display: inline-block;
-      background: var(--yellow);
-      color: #08263f;
-      font-weight: 800;
-      font-size: .72rem;
-      letter-spacing: .08em;
-      padding: 4px 12px;
-      border-radius: 999px;
-    }
-    .portal-cta {
-      margin-top: 18px;
-      max-width: 540px;
-      background: rgba(255,216,100,.10);
-      border: 1px solid rgba(255,216,100,.45);
-      border-radius: 16px;
-      padding: 20px 22px 22px;
-      color: #e4f2fb;
-    }
-    .portal-cta h3 { color: #fff; font-size: 1.05rem; margin: 0 0 10px; }
-    .portal-cta p { font-size: .95rem; line-height: 1.55; margin: 0 0 16px; }
-    .portal-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0 28px;
-      border-radius: 999px;
-      background: var(--yellow);
-      color: #08263f;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1.05rem;
-      box-shadow: 0 10px 26px rgba(255,216,100,.30);
-    }
-    .portal-link:hover { background: #fff; color: #075b95; }
-    .primary-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 22px;
-      border: 1px solid rgba(255,255,255,.5);
-      border-radius: 999px;
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .primary-link:hover { background: white; color: #075b95; }
-    .fb-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 54px;
-      padding: 0 26px;
-      margin-top: 18px;
-      border-radius: 999px;
-      background: #0f66d8; /* white on this = 5.37:1, WCAG AA */
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-      box-shadow: 0 10px 26px rgba(24,119,242,.35);
-    }
-    .fb-btn:hover { background: #0b54b5; }
-    .fb-btn .fb-f {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #fff;
-      color: #0f66d8;
-      font-weight: 800;
-      font-size: 1.1rem;
-    }
-    .portal-section { padding-top: 20px; }
-    .portal-band {
-      position: relative;
-      padding: 44px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(125deg, #063f6c 0%, #075d9b 100%);
-      color: #e4f2fb;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .portal-band h2 {
-      margin-bottom: 14px;
-      color: #fff;
-      font-family: "Newsreader", Georgia, serif;
-      font-size: clamp(2.1rem, 4vw, 3.4rem);
-      line-height: 1.02;
-      letter-spacing: -.04em;
-    }
-    .portal-band > p { max-width: 720px; font-size: 1.05rem; line-height: 1.65; }
-    .portal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
-    .portal-card {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 16px;
-      padding: 22px;
-    }
-    .portal-card h3 { color: #fff; margin: 0 0 8px; font-size: 1.05rem; }
-    .portal-card p { margin: 0; font-size: .93rem; line-height: 1.6; }
-    .portal-band .portal-link { margin-top: 4px; }
-    .portal-login-note { margin: 16px 0 0; font-size: .9rem; color: #d9f0ff; }
-    .hashtags { color: var(--muted); font-size: .8rem; letter-spacing: .01em; }
-      background: linear-gradient(135deg, #0b3b66, #1877F2);
-      border-radius: var(--radius-lg);
-      padding: 44px 36px;
-      text-align: center;
-      color: #fff;
-      box-shadow: var(--shadow);
-    }
-    .follow-banner h2 { margin: 0 0 10px; font-size: 1.7rem; }
-    .follow-banner p { margin: 0 0 22px; }
-    .follow-banner .fb-btn { margin-top: 0; background: #fff; color: #0f66d8; }
-    .follow-banner .fb-btn:hover { background: #eef4ff; }
-    .follow-banner .fb-btn .fb-f { background: #0f66d8; color: #fff; }
-
-    .book {
-      position: relative;
-      max-width: 390px;
-      margin-left: auto;
-      background: #fbfaf5;
-      color: #13253b;
-      border-radius: 8px 20px 20px 8px;
-      box-shadow: -12px 13px 0 #ef6c36, 0 34px 80px rgba(0,0,0,.27);
-      padding: 40px 38px 44px 53px;
-      transform: rotate(2.2deg);
-    }
-    .book::before {
-      content: "";
-      position: absolute;
-      left: 22px;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: #e0d8cc;
-    }
-    .book::after {
-      content: "A  B  C  D";
-      position: absolute;
-      left: -38px;
-      top: 85px;
-      width: 100px;
-      color: rgba(255,255,255,.92);
-      font-weight: 800;
-      font-size: .75rem;
-      letter-spacing: .11em;
-      transform: rotate(-90deg);
-    }
-    .book-mark { color: #0e6fb2; font-weight: 800; font-size: .8rem; letter-spacing: .08em; }
-    .book h2 {
-      margin: 18px 0 28px;
-      font-family: "Newsreader", Georgia, serif;
-      font-size: 2.3rem;
-      line-height: 1.05;
-      letter-spacing: -.035em;
-    }
-    .question-lines { display: grid; gap: 10px; }
-    .question-lines span { display: block; height: 7px; border-radius: 4px; background: #dfe7ea; }
-    .question-lines span:nth-child(2) { width: 82%; }
-    .question-lines span:nth-child(4) { width: 68%; }
-    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 27px; }
-    .choice { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: .86rem; }
-    .choice i { width: 20px; height: 20px; border: 2px solid #a9b6bd; border-radius: 50%; }
-
-    section { padding: 88px 0; }
-    .section-intro { max-width: 720px; }
-    .section-intro h2 {
-      margin-bottom: 17px;
-      font-family: "Newsreader", Georgia, serif;
-      font-size: clamp(2.45rem, 5vw, 4.3rem);
-      line-height: .98;
-      letter-spacing: -.045em;
-    }
-    .section-intro p { color: var(--muted); font-size: 1.06rem; }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 70px;
-      align-items: start;
-    }
-    .facts { display: grid; border-top: 1px solid var(--line); }
-    .fact {
-      display: grid;
-      grid-template-columns: 62px 1fr;
-      gap: 18px;
-      padding: 23px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .fact-number {
-      font-family: "Newsreader", Georgia, serif;
-      font-size: 2.05rem;
-      line-height: 1;
-      color: var(--orange);
-    }
-    .fact h3 { margin: 0 0 4px; font-size: 1rem; }
-    .fact p { margin: 0; color: var(--muted); font-size: .94rem; }
-
-    .payment-section { padding-top: 46px; }
-    .payment-shell {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-    .payment-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: end;
-      padding: 38px 44px 30px;
-      background: var(--surface-2);
-      border-bottom: 1px solid var(--line);
-    }
-    .payment-head h2 {
-      margin: 0;
-      font-family: "Newsreader", Georgia, serif;
-      font-size: clamp(2.1rem, 4vw, 3.35rem);
-      line-height: 1;
-      letter-spacing: -.04em;
-    }
-    .secure-note { color: var(--success); font-weight: 700; white-space: nowrap; }
-    .payment-grid { display: grid; grid-template-columns: .88fr 1.12fr; }
-    .pay-panel { padding: 42px 44px; background: var(--surface); border-right: 1px solid var(--line); }
-    .qr-wrap {
-      width: min(100%, 360px);
-      margin: 0 auto 26px;
-      padding: 18px;
-      border-radius: 22px;
-      background: white;
-      border: 1px solid #d8e4ea;
-    }
-    .qr-wrap img { display: block; width: 100%; height: auto; }
-    .amount-line { text-align: center; margin-bottom: 26px; }
-    .amount-line span { display: block; color: var(--muted); font-size: .88rem; }
-    .amount-line strong { color: var(--ink); font-size: 2.3rem; }
-    .number-box {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 15px 14px 18px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: var(--surface-2);
-    }
-    .number-box small { display: block; color: var(--muted); }
-    .number-box strong { display: block; letter-spacing: .045em; }
-    .copy-mini {
-      flex: none;
-      border: 0;
-      border-radius: 10px;
-      background: var(--ink);
-      color: var(--surface);
-      padding: 10px 14px;
-      font-weight: 700;
-    }
-
-    .form-panel { padding: 42px 44px; }
-    .step-label { margin-bottom: 7px; color: var(--blue-deep); font-weight: 800; font-size: .82rem; }
-    .form-panel h3 { margin-bottom: 9px; font-size: 1.5rem; }
-    .form-panel > p { margin-bottom: 28px; color: var(--muted); }
-    .field { margin-bottom: 17px; }
-    label { display: block; margin-bottom: 7px; font-size: .9rem; font-weight: 700; }
-    input {
-      width: 100%;
-      min-height: 52px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--paper);
-      color: var(--ink);
-      padding: 0 15px;
-      outline: none;
-    }
-    input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #075d9b; outline: 3px solid #075d9b; outline-offset: 0; }
-    .generate {
-      width: 100%;
-      min-height: 56px;
-      margin-top: 8px;
-      border: 0;
-      border-radius: 13px;
-      background: var(--orange);
-      color: white;
-      font-weight: 800;
-      box-shadow: 0 8px 0 #8f3a12;
-    }
-    .generate:active { transform: translateY(4px); box-shadow: 0 4px 0 #8f3a12; }
-    .form-note { margin: 18px 0 0 !important; font-size: .82rem; }
-    .form-error { color: #b52c42; font-size: .85rem; margin: 8px 0 0; background: #fdeaea; padding: 8px 12px; border-radius: 8px; }
-    .field-help { color: #5a4a00; font-size: .85rem; margin: 8px 0 0; background: #fff8e1; padding: 8px 12px; border-radius: 8px; }
-
-    /* Order reference shown after the form is submitted (quote it when messaging us) */
-    .order-ref { display: none; margin: 0 0 14px; padding: 12px 14px; border-radius: 10px; background: #eef6fa; border: 1px solid #d2e0e7; font-size: .95rem; }
-    .order-ref.visible { display: block; }
-    .order-ref strong { letter-spacing: .04em; }
-
-    /* Reserved space for the ad slot so the page does not jump when ads load */
-
-    .summary {
-      display: none;
-      margin-top: 27px;
-      padding: 21px;
-      border-radius: 14px;
-      background: var(--surface-2);
-      border: 1px solid var(--line);
-    }
-    .summary.visible { display: block; }
-    .summary pre {
-      margin: 0 0 16px;
-      color: var(--ink);
-      white-space: pre-wrap;
-      word-break: break-word;
-      font: 500 .88rem/1.65 "DM Sans", sans-serif;
-    }
-    .copy-summary {
-      width: 100%;
-      min-height: 48px;
-      border: 1px solid var(--ink);
-      border-radius: 10px;
-      background: var(--ink);
-      color: var(--surface);
-      font-weight: 800;
-    }
-    .send-note { margin: 14px 0 0; color: var(--muted); font-size: .86rem; text-align: center; }
-
-    .steps { padding: 70px 0 40px; }
-    .steps-band {
-      position: relative;
-      padding: 44px;
-      border-radius: var(--radius-lg);
-      background: var(--surface-2);
-      border: 1px solid var(--line);
-      overflow: hidden;
-    }
-    .steps-band::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: -80px;
-      width: 210px;
-      height: 210px;
-      border: 44px solid rgba(8,119,201,.08);
       border-radius: 50%;
       pointer-events: none;
     }
-    .steps .section-intro { margin-bottom: 32px; }
-    .steps .section-intro h2 { margin-bottom: 10px; }
-    .steps-list { counter-reset: step; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-    .steps-list article {
-      position: relative;
-      min-height: 220px;
-      padding: 26px;
-      background: var(--surface);
+
+    .hero-shell::before {
+      width: 540px;
+      height: 540px;
+      right: -140px;
+      top: -100px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 64%);
     }
-    .step-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 24px; }
-    .step-top::before {
-      counter-increment: step;
-      content: "0" counter(step);
-      color: var(--orange);
+
+    .hero-shell::after {
+      width: 360px;
+      height: 360px;
+      left: -80px;
+      bottom: -120px;
+      background: radial-gradient(circle, rgba(249,203,91,0.16), transparent 62%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+      padding: 54px 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dfeeff;
       font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin: 18px 0 18px;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+      color: #fff;
+      max-width: 680px;
+    }
+
+    .lead {
+      color: rgba(255,255,255,0.82);
+      max-width: 620px;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+    .button.primary {
+      background: linear-gradient(135deg, var(--accent), #ffd88a);
+      color: var(--ink);
+      box-shadow: 0 16px 30px rgba(249, 203, 91, 0.28);
+    }
+    .button.secondary {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      max-width: 660px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.82rem;
+    }
+
+    .mock-card {
+      position: relative;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      padding: 22px 22px 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .notebook {
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(237,244,252,0.96));
+      border-radius: 22px;
+      padding: 24px 20px 18px;
+      box-shadow: 0 18px 40px rgba(3, 13, 25, 0.2);
+      color: var(--ink);
+    }
+
+    .notebook-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .book-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 26px;
+      padding: 0 10px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 800;
+      background: rgba(11,95,204,0.08);
+      color: var(--primary-strong);
+    }
+
+    .book-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
+    }
+
+    .question-lines {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .question-lines span {
+      display: block;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(17, 38, 60, 0.12);
+    }
+    .question-lines span:nth-child(2) { width: 80%; }
+    .question-lines span:nth-child(3) { width: 64%; }
+    .question-lines span:nth-child(4) { width: 90%; }
+
+    .answer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .answer-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .answer-option i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(19, 38, 61, 0.32);
+      border-radius: 50%;
+    }
+
+    .section {
+      padding: 36px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 620px;
+      margin: 0;
+    }
+
+    .feature-grid, .value-grid, .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-card, .value-card, .faq-item, .info-card {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .feature-card {
+      padding: 22px 20px;
+    }
+
+    .count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary-soft), rgba(11,95,204,0.14));
+      color: var(--primary-strong);
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+
+    .feature-card h3, .value-card h3, .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+
+    .feature-card p, .value-card p, .faq-item p, .info-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .value-grid {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+    }
+
+    .value-card {
+      padding: 24px 22px;
+    }
+
+    .value-list {
+      list-style: none;
+      display: grid;
+      gap: 16px;
+      padding: 0;
+      margin: 18px 0 0;
+    }
+
+    .value-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .value-list li::before {
+      content: "✓";
+      display: inline-grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--success-soft);
+      color: var(--success);
+      font-size: 0.8rem;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .portal-band {
+      background: linear-gradient(135deg, #0d2d50 0%, #0c4d8f 50%, #0867c1 100%);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 34px 28px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portal-band::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -90px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.14), transparent 65%);
+    }
+
+    .portal-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .portal-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
+    }
+
+    .portal-card h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 1.12rem;
+    }
+
+    .portal-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+    }
+
+    .faq-item {
+      padding: 22px 20px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .order-wrap {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .info-card, .order-card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .info-card {
+      padding: 24px;
+    }
+
+    .qr-box {
+      background: #fff;
+      border: 1px solid rgba(9,38,73,0.08);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+      margin: 18px 0 22px;
+    }
+
+    .amount {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .amount small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .amount strong {
+      display: block;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      letter-spacing: -0.05em;
+      margin-top: 8px;
+    }
+
+    .mobile-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+    }
+
+    .mobile-box strong {
+      display: block;
+      letter-spacing: 0.04em;
       font-size: 1.05rem;
     }
-    .step-icon {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      color: var(--blue-deep);
-      background: var(--surface-2);
-    }
-    .step-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .steps-list h3 { margin-bottom: 8px; font-size: 1.06rem; }
-    .steps-list p { margin: 0; color: var(--muted); font-size: .92rem; }
 
-    footer { border-top: 1px solid var(--line); padding: 26px 0 34px; color: var(--muted); font-size: .8rem; }
-    footer .wrap { display: flex; justify-content: space-between; gap: 24px; }
+    .mini-copy {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 700;
+      min-height: 42px;
+    }
+
+    .order-card {
+      padding: 28px 24px;
+    }
+
+    .step-label {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(11,95,204,0.09);
+      color: var(--primary-strong);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .order-card h3 {
+      margin: 12px 0 10px;
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .order-card > p {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .field { margin-bottom: 18px; }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    input {
+      width: 100%;
+      min-height: 52px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(244,248,252,0.9);
+      color: var(--ink);
+      padding: 0 14px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(11,95,204,0.12);
+    }
+
+    .helper {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: #775b00;
+      background: rgba(249,203,91,0.12);
+      border: 1px solid rgba(231,168,40,0.2);
+      border-radius: 10px;
+      padding: 9px 10px;
+    }
+
+    .error {
+      display: none;
+      margin-top: 8px;
+      color: var(--danger);
+      background: var(--danger-soft);
+      border: 1px solid rgba(202,63,91,0.18);
+      border-radius: 10px;
+      padding: 9px 10px;
+      font-size: 0.82rem;
+    }
+    .error.visible { display: block; }
+
+    .generate-btn {
+      width: 100%;
+      min-height: 54px;
+      border: 0;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ef7d39 0%, #d85b2b 100%);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 10px 22px rgba(216, 91, 43, 0.22);
+      margin-top: 8px;
+    }
+
+    .summary-box {
+      display: none;
+      margin-top: 22px;
+      padding: 16px 18px;
+      border: 1px solid rgba(11,95,204,0.12);
+      border-radius: var(--radius-md);
+      background: rgba(11,95,204,0.04);
+    }
+    .summary-box.visible { display: block; }
+
+    .order-ref {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .order-ref strong { color: var(--ink); }
+
+    .summary-box pre {
+      margin: 0 0 16px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: inherit;
+      font-size: 0.93rem;
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(19,38,61,0.08);
+      border-radius: 10px;
+      padding: 14px;
+      color: var(--ink);
+    }
+
+    .copy-summary {
+      width: 100%;
+      min-height: 48px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .send-note {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
 
     .toast {
       position: fixed;
       left: 50%;
-      bottom: 24px;
-      z-index: 20;
-      transform: translate(-50%, 22px);
+      bottom: 25px;
+      transform: translate(-50%, 20px);
       opacity: 0;
       pointer-events: none;
-      padding: 12px 18px;
-      border-radius: 999px;
       background: var(--ink);
-      color: var(--surface);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 16px;
       font-weight: 700;
       box-shadow: var(--shadow);
-      transition: opacity .2s, transform .2s;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
-    .toast.show { opacity: 1; transform: translate(-50%, 0); }
-
-    @media (max-width: 820px) {
-      .wrap { width: min(100% - 28px, 640px); }
-      .hero { min-height: 0; padding: 64px 0 115px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 56px; }
-      .hero-copy { text-align: center; }
-      .hero-copy > p { margin-inline: auto; }
-      .eyebrow { justify-content: center; }
-      .price-row { justify-content: center; }
-      .book { margin: 0 auto; width: min(89%, 390px); }
-      .features-grid { grid-template-columns: 1fr; gap: 38px; }
-      .portal-grid { grid-template-columns: 1fr; }
-      .portal-band { padding: 30px 22px; }
-      .payment-grid { grid-template-columns: 1fr; }
-      .pay-panel { border-right: 0; border-bottom: 1px solid var(--line); }
-      .steps-list { grid-template-columns: 1fr 1fr; }
-      footer .wrap { flex-direction: column; gap: 8px; }
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
     }
 
-    @media (max-width: 520px) {
-      .wrap { width: min(100% - 22px, 440px); }
-      h1 { font-size: clamp(3.15rem, 17vw, 4.7rem); }
-      .hero { padding-top: 48px; }
-      .hero::after { display: none; }
-      .price-row { gap: 16px; }
-      .primary-link { width: 100%; }
-      .portal-link { width: 100%; }
-      .book { padding: 33px 27px 38px 44px; }
-      section { padding: 68px 0; }
-      .payment-head { padding: 29px 24px 24px; align-items: start; flex-direction: column; gap: 12px; }
-      .pay-panel, .form-panel { padding: 30px 22px; }
-      .qr-wrap { padding: 12px; border-radius: 17px; }
-      .number-box { align-items: stretch; flex-direction: column; }
-      .copy-mini { width: 100%; }
-      .steps { padding-top: 54px; }
-      .steps-band { padding: 28px 18px; }
-      .steps-list { grid-template-columns: 1fr; }
-      .steps-list article { min-height: 0; padding: 23px; }
+    @media (max-width: 900px) {
+      .hero-grid,
+      .value-grid,
+      .order-wrap {
+        grid-template-columns: 1fr;
+      }
+      .feature-grid,
+      .portal-grid,
+      .faq-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .mobile-hidden { display: none; }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition: none !important; }
+    @media (max-width: 620px) {
+      .nav { display: none; }
+      .hero-shell { border-radius: 22px; }
+      .hero-grid { padding: 32px 22px; }
+      .feature-grid, .portal-grid, .faq-grid, .hero-stats { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head .section-sub { margin-top: 10px; }
+      .portal-band { padding: 24px 18px; }
+      .order-card { padding: 22px 18px; }
+      .info-card { padding: 18px; }
+      .mobile-box { flex-direction: column; align-items: stretch; }
+      .mini-copy { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  <div class="page">
-    <main id="main-content">
-      <section class="hero" aria-labelledby="main-title">
-        <div class="wrap hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow">450-item practice set with answer key</span>
-            <h1 id="main-title">Prepare with purpose.</h1>
-            <p>450 original practice questions with full explanations, plus two complete 180-item mock exams built into the PDF. Built for serious SASE preparation.</p>
-            <div class="price-row">
-              <div class="price"><span>only</span><strong>₱167</strong></div>
-              <a class="primary-link" href="#order">Order your copy ↓</a>
-            </div>
-            <div class="value-stack" aria-label="What is included">
-              <span class="new-badge">NEW</span>
-              <h2>Everything included for ₱167</h2>
-              <ul>
-                <li><strong>MSU-SASE Reviewer PDF</strong>, 450 practice questions with full explanations</li>
-                <li><strong>FREE online mock exam portal</strong>, 8 full 180-question mock exams, one released every week over 8 weeks</li>
-                <li><strong>Scores + answer reviews</strong>, see your score, review every answer, and get a how-to-improve guide</li>
-              </ul>
-            </div>
-            <div class="portal-cta" aria-label="Mock exam portal">
-              <h2><span aria-hidden="true">🎯</span> Try the Free Mock Exam Portal</h2>
-              <p>Every buyer gets FREE access, 8 full 180-question mock exams, one released every week over 8 weeks, at the same 180-question length as the practice format. Use the password that came with your PDF to log in.</p>
-              <a class="portal-link" href="/exam">Open the Mock Exam Portal →</a>
-            </div>
-            <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener"><span class="fb-f">f</span> Click here, visit our Facebook Page</a>
-          </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-          <div class="book" aria-label="Illustration of the digital reviewer">
-            <div class="book-mark">MSU-SASE REVIEWER</div>
-            <h2>Practice. Check. Improve.</h2>
-            <div class="question-lines" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="SASE Practice Hub PH home">
+        <span class="brand-mark">📘</span>
+        <span>SASE Practice Hub PH</span>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#mock-exam-portal">Portal</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order" class="nav-cta">Order now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-shell">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">MSU-SASE practice made easier</span>
+              <h1>Prepare with purpose.</h1>
+              <p class="lead">450 original reviewer questions, guided explanations, and eight full mock exams built to help you study with focus and confidence before exam day.</p>
+
+              <div class="hero-actions">
+                <a href="#order" class="button primary">Order the reviewer</a>
+                <a href="/exam" class="button secondary">Open mock portal</a>
+              </div>
+
+              <div class="hero-stats" aria-label="Key product metrics">
+                <div class="stat">
+                  <strong>450</strong>
+                  <span>Practice items</span>
+                </div>
+                <div class="stat">
+                  <strong>8</strong>
+                  <span>Mock exams</span>
+                </div>
+                <div class="stat">
+                  <strong>₱167</strong>
+                  <span>One-time access</span>
+                </div>
+              </div>
             </div>
-            <div class="choices" aria-hidden="true">
-              <div class="choice"><i></i> A</div><div class="choice"><i></i> B</div>
-              <div class="choice"><i></i> C</div><div class="choice"><i></i> D</div>
+
+            <div class="mock-card" aria-label="Mock exam preview">
+              <div class="notebook">
+                <div class="notebook-top">
+                  <span class="book-tag">Reviewer</span>
+                  <span class="book-tag">MSU-SASE</span>
+                </div>
+                <h2 class="book-title">Practice. Check. Improve.</h2>
+                <div class="question-lines" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="answer-grid" aria-hidden="true">
+                  <div class="answer-option"><i></i> A</div>
+                  <div class="answer-option"><i></i> B</div>
+                  <div class="answer-option"><i></i> C</div>
+                  <div class="answer-option"><i></i> D</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <div class="wrap features-grid">
-          <div class="section-intro">
-            <h2>A complete practice companion.</h2>
-            <p>Built to help you practice at your own pace, identify weak areas, and review your answers before exam day.</p>
-          </div>
-          <div class="facts">
-            <article class="fact">
-              <div class="fact-number">450</div>
-              <div><h3>Practice questions</h3><p>450 original items across all four SASE subjects, Language Usage, Mathematics, Aptitude, and Science.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">01</div>
-              <div><h3>Answer key + explanations</h3><p>Every single question has a clear explanation, learn the reasoning, not just the correct letter.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">PDF</div>
-              <div><h3>Digital copy</h3><p>Easy to open on your phone, tablet, or computer.</p></div>
-            </article>
-          </div>
+    <section id="features" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Everything you need to study smarter.</h2>
+          <p class="section-sub">Built for learners who want real practice, better review habits, and clearer progression before test day.</p>
         </div>
-      </section>
 
-      <section class="why" aria-labelledby="why-title">
-        <div class="wrap">
-          <div class="section-intro">
-            <h2 id="why-title">Why learners choose us.</h2>
-            <p>Our goal is simple: help you actually learn, not just sell you a file.</p>
-          </div>
-          <div class="facts">
-            <article class="fact">
-              <div class="fact-number">01</div>
-              <div><h3>Free sample before you pay</h3><p>Try 10 sample questions from the reviewer with full explanations, free on our <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Facebook page</a>. Decide for yourself if it is worth ₱167.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">02</div>
-              <div><h3>Every question explained</h3><p>All 450 questions come with clear explanations, so you learn the reasoning, not just the correct letter.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">03</div>
-              <div><h3>Free study tips, always</h3><p>We share study methods, practice quizzes, and exam facts on our page, whether you buy or not.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">04</div>
-              <div><h3>Ask us anything</h3><p>Stuck on a question? Message our page and we will help you understand it.</p></div>
-            </article>
-          </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="count">01</div>
+            <h3>Full reviewer set</h3>
+            <p>Study a broad range of original questions across the key SASE sections with explanation-focused practice.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="count">02</div>
+            <h3>Timed mock exams</h3>
+            <p>Train under realistic conditions with eight full mock exams and the same 180-question testing rhythm.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="count">03</div>
+            <h3>Review and improve</h3>
+            <p>See your score, revisit every answer, and identify your weakest areas so your next study session starts with a clear plan.</p>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section aria-labelledby="inside-title">
-        <div class="wrap">
-          <div class="section-intro">
-            <h2 id="inside-title">What&apos;s inside the 450 questions.</h2>
-            <p>Every subject covered, every question explained. Two full mock exams built into the PDF included.</p>
-          </div>
-          <div class="facts">
-            <article class="fact">
-              <div class="fact-number">199</div>
-              <div><h3>Language Usage</h3><p>Synonyms, context clues, error identification, subject-verb agreement, pronouns, usage, and reading comprehension.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">99</div>
-              <div><h3>Mathematics</h3><p>Arithmetic, word problems, algebra, geometry, statistics, and probability, Grades 9–11 level.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">76</div>
-              <div><h3>Aptitude</h3><p>Number series, analogies, logical reasoning, and abstract patterns, the speed section.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">76</div>
-              <div><h3>Science</h3><p>Biology, chemistry, physics, and earth science fundamentals.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">2×</div>
-              <div><h3>Full mock exams</h3><p>Two complete 180-item mocks built into the PDF, timed practice at the same 180-question length as the practice format.</p></div>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section class="section">
+      <div class="wrap value-grid">
+        <article class="value-card">
+          <span class="eyebrow" style="color: var(--primary-strong);">What’s included</span>
+          <h3>Everything included for ₱167</h3>
+          <ul class="value-list">
+            <li>MSU-SASE reviewer with 450 original practice questions and detailed explanations</li>
+            <li>Free access to the online mock exam portal</li>
+            <li>Score review, answer explanations, and a simple study guide after each exam</li>
+          </ul>
+        </article>
 
-      <section class="portal-section" id="mock-exam-portal" aria-labelledby="portal-title">
-        <div class="wrap">
-          <div class="portal-band">
-            <span class="eyebrow">FREE WITH YOUR REVIEWER</span>
-            <h2 id="portal-title">Practice under timed conditions, then learn from every answer.</h2>
-            <p>Every buyer gets free access to the mock exam portal. Eight full 180-question mock exams, one released each week over 8 weeks, so you build steady, week-by-week progress instead of cramming. Each exam shows you exactly what to study next: your score, a review of every answer with explanations, and a how-to-improve guide. Practice to learn, not just to pass.</p>
+        <article class="value-card">
+          <span class="eyebrow" style="color: var(--primary-strong);">Why learners choose us</span>
+          <h3>Clear structure, less guesswork</h3>
+          <p>Instead of just giving you a pile of questions, the reviewer and mock portal are designed to help you learn the logic behind the answer and track your progress over time.</p>
+          <ul class="value-list">
+            <li>Practice with explanations, not just answer keys</li>
+            <li>Use weekly mock exams to build momentum</li>
+            <li>Focus on weak sections before exam day</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="mock-exam-portal" class="section">
+      <div class="wrap">
+        <div class="portal-band">
+          <div class="portal-inner">
+            <span class="eyebrow">Free with your reviewer</span>
+            <h2 class="section-title" style="color:#fff; margin-top: 12px;">Study under timed conditions and learn from every answer.</h2>
             <div class="portal-grid">
               <article class="portal-card">
                 <h3>8 full mock exams</h3>
-                <p>180 questions each, one released every week over 8 weeks, the same 180-question length as the practice format.</p>
+                <p>One exam released each week, each designed to match the full testing rhythm and pressure of the real review.</p>
               </article>
               <article class="portal-card">
                 <h3>Review every answer</h3>
-                <p>See your score, revisit each question, and read the explanation behind the correct answer.</p>
+                <p>See your results, revisit each question, and understand why the correct answer is right.</p>
               </article>
               <article class="portal-card">
                 <h3>Know what to study next</h3>
-                <p>Your results highlight your weak areas, so your next study session starts with a clear plan.</p>
+                <p>Use the score review to identify your weakest areas and decide exactly what to practice next.</p>
               </article>
             </div>
-            <a class="portal-link" href="/exam">Open the Mock Exam Portal →</a>
-            <p class="portal-login-note">Log in with the password that came with your PDF. Keep it safe, it is your portal key.</p>
+            <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
+              <a href="/exam" class="button primary">Open mock exam portal</a>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section aria-labelledby="faq-title">
-        <div class="wrap">
-          <div class="section-intro">
-            <h2 id="faq-title">Common questions.</h2>
-            <p>Everything you need to know before ordering.</p>
-          </div>
-          <div class="facts">
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>Is this an official MSU reviewer?</h3><p>No. This is an unofficial practice reviewer with original questions. This reviewer is not published by or affiliated with MSU.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>How do I receive the reviewer?</h3><p>After your ₱167 GCash payment is verified, the PDF is sent to you via Messenger.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>Can I see a sample first?</h3><p>Yes, 10 free sample questions from the reviewer with full explanations are posted on our Facebook page.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>What if I have questions about the material?</h3><p>Message our Facebook page anytime. We help you understand, whether you bought the reviewer or not.</p></div>
-            </article>
-          </div>
+    <section id="faq" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Common questions.</h2>
+          <p class="section-sub">Everything you need to know before ordering.</p>
         </div>
-      </section>
 
-      <section aria-labelledby="portal-faq-title">
-        <div class="wrap">
-          <div class="section-intro">
-            <h2 id="portal-faq-title">Mock exam portal, common questions.</h2>
-            <p>How the free portal that comes with your reviewer works.</p>
-          </div>
-          <div class="facts">
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>How do I get my portal password?</h3><p>Your unique portal password is delivered together with your PDF, via Messenger, after your ₱167 payment is verified. Keep it safe, it is your portal key, and it also opens your PDF.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>How many devices can I use?</h3><p>One password works on up to 3 devices. If you switch to a new phone or computer and hit the limit, message our Facebook page and we will help you reset your devices.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>How many attempts do I get per exam?</h3><p>One attempt per exam. Once you submit, or your time runs out, that exam is graded and cannot be retaken. Use the review afterwards to learn from every answer.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>When are the exams released?</h3><p>One exam is released every week over 8 weeks. A locked exam shows its opening date on the exam list, check back when it unlocks.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>What happens when the timer runs out?</h3><p>Your answers are submitted automatically and graded, even if you never pressed Submit. You will see your score, a review of every answer, and a how-to-improve guide.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>Can I retake an exam to improve my score?</h3><p>No, each exam is one attempt, so treat every sitting like the real thing. Your 8 exams give you 8 fresh chances to practise under timed conditions.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">?</div>
-              <div><h3>I lost my password / I need a device reset.</h3><p>Message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> with your order reference and the name used on your order. We will verify your purchase and help you recover access.</p></div>
-            </article>
-          </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Is this an official MSU reviewer?</h3>
+            <p>No. This is an unofficial practice reviewer with original questions and is not affiliated with or endorsed by MSU.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How do I receive the reviewer?</h3>
+            <p>After your payment is verified, your PDF and unique portal password are sent via Messenger.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can I see a sample first?</h3>
+            <p>Yes. Sample questions and study updates are shared on our Facebook page before purchase.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What if I need help?</h3>
+            <p>Message us anytime on Facebook and we’ll help you understand the material or the process.</p>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section aria-labelledby="policy-title">
-        <div class="wrap">
-          <div class="section-intro">
-            <h2 id="policy-title">Delivery &amp; refund policy.</h2>
-            <p>What happens after you pay, in plain language.</p>
+    <section id="order" class="section">
+      <div class="wrap order-wrap">
+        <aside class="info-card">
+          <span class="eyebrow" style="color: var(--primary-strong);">Pay and send details</span>
+          <h3>How to avail your reviewer.</h3>
+          <div class="qr-box">
+            <img src="qr-payment-167.png" alt="GCash QR code for the ₱167 reviewer payment" width="600" height="644" />
           </div>
-          <div class="facts">
-            <article class="fact">
-              <div class="fact-number">01</div>
-              <div><h3>Delivery</h3><p>This is a digital product, no physical item is shipped. After your ₱167 GCash payment is verified, your PDF and your unique portal password are sent to you via Messenger as soon as your payment is verified (usually within a day). If you have not received your files within 48 hours of sending your order message, message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> with your order reference.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">02</div>
-              <div><h3>Refunds</h3><p>Because this is a digital product, refunds are given only when (a) your verified payment was received but the PDF was never delivered, or (b) the file you received is defective and cannot be opened after we have had a chance to resend a working copy. To request a refund, message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> with your order reference and your payment proof. Approved refunds are sent back to the GCash account used for payment.</p></div>
-            </article>
-            <article class="fact">
-              <div class="fact-number">03</div>
-              <div><h3>Support</h3><p>Questions about your order, the PDF, or the portal? Message the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a> on Facebook and include your order reference so we can help you faster. See also our <a href="/privacy.html">Privacy Policy</a>.</p></div>
-            </article>
+          <div class="amount">
+            <small>Amount to send</small>
+            <strong>₱167.00</strong>
           </div>
-        </div>
-      </section>
+          <div class="mobile-box">
+            <div>
+              <small style="display:block; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: 0.7rem;">Mobile number</small>
+              <strong id="mobileNumber">0991 277 4308</strong>
+            </div>
+            <button type="button" class="mini-copy" data-copy="09912774308">Copy</button>
+          </div>
+        </aside>
 
-      <section class="steps" aria-labelledby="steps-title">
-        <div class="wrap steps-band">
-          <div class="section-intro">
-            <h2 id="steps-title">How to avail your reviewer.</h2>
-            <p>Follow these six steps. Keep your payment receipt until your order is confirmed.</p>
-          </div>
-          <div class="steps-list">
-            <article>
-              <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M8 8h3v3H8zM14 8h2M14 11h2M8 14h2M8 17h4M14 14h2v2h2v2h-4z"/></svg></span></div>
-              <h3>Scan the QR code</h3><p>Open your GCash or InstaPay-enabled app and scan the payment QR code below.</p>
-            </article>
-            <article>
-              <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM4 10h16M8 15h3"/></svg></span></div>
-              <h3>Pay exactly ₱167</h3><p>Confirm that the payment amount is exactly ₱167 before completing the transaction.</p>
-            </article>
-            <article>
-              <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h10v18l-2-1.4-3 1.4-3-1.4L7 21zM10 8h4M10 12h4M10 16h2"/></svg></span></div>
-              <h3>Save the reference number</h3><p>After paying, GCash will show a <strong>reference number</strong> on your receipt (a long number, e.g. 13 digits). <strong>This is NOT your phone number.</strong> Do not enter your own mobile number, copy the reference number from the GCash receipt.</p>
-            </article>
-            <article>
-              <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></span></div>
-              <h3>Fill up the form below</h3><p>Enter your name, contact or Messenger name, and GCash reference number.</p>
-            </article>
-            <article>
-              <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 3zM8 9h8M8 13h5"/></svg></span></div>
-              <h3>Copy and message</h3><p>Copy the generated order summary and send it via Messenger to the <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH page</a>.</p>
-            </article>
-            <article>
-              <div class="step-top"><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 20h14"/></svg></span></div>
-              <h3>Receive the PDF</h3><p>Your digital reviewer will be sent after the ₱167 payment has been verified.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+        <div class="order-card">
+          <span class="step-label">After payment</span>
+          <h3>Create your order message</h3>
+          <p>Enter your full name and Messenger name, then paste the GCash reference number from your receipt.</p>
 
-      <section>
-        <div class="wrap">
-          <div class="follow-banner">
-            <h2><span aria-hidden="true">👍</span> Like &amp; Follow our Page!</h2>
-            <p>Get study tips, reviewer updates, and exam reminders from <strong>SASE Practice Hub PH</strong>.</p>
-            <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener"><span class="fb-f">f</span> Click here to Like &amp; Follow</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="payment-section" id="order" aria-labelledby="order-heading">
-        <div class="wrap payment-shell">
-          <div class="payment-head">
-            <h2 id="order-heading">Pay, then send your details.</h2>
-            <span class="secure-note">Exact amount: ₱167</span>
-          </div>
-          <div class="payment-grid">
-            <div class="pay-panel">
-              <div class="qr-wrap">
-                <img src="qr-payment-167.png" alt="GCash QR code for the ₱167 reviewer payment" width="600" height="644" />
-              </div>
-              <div class="amount-line"><span>Amount to send</span><strong>₱167.00</strong></div>
-              <div class="number-box">
-                <div><small>Mobile number</small><strong id="mobileNumber">0991 277 4308</strong></div>
-                <button class="copy-mini" type="button" data-copy="09912774308">Copy number</button>
-              </div>
+          <form id="orderForm" novalidate>
+            <div class="field">
+              <label for="buyerName">Full name</label>
+              <input id="buyerName" name="buyerName" type="text" autocomplete="name" placeholder="Your full name" required maxlength="80" />
             </div>
 
-            <form class="form-panel" id="orderForm" novalidate>
-              <div class="step-label">AFTER PAYMENT</div>
-              <h3>Create your order message</h3>
-              <p>Enter your full name and Messenger name, then copy the <strong>GCash reference number</strong> from your payment receipt. <strong>Do NOT enter your phone number</strong>, the reference number is the long transaction number shown on your GCash receipt after payment.</p>
+            <div class="field">
+              <label for="contactName">Facebook / Messenger name</label>
+              <input id="contactName" name="contactName" type="text" autocomplete="nickname" placeholder="Name we can search on Messenger" required maxlength="80" />
+            </div>
 
-              <div class="field">
-                <label for="buyerName">Full name</label>
-                <input id="buyerName" name="buyerName" type="text" autocomplete="name" placeholder="Your full name" required maxlength="80" />
-              </div>
-              <div class="field">
-                <label for="contactName">Facebook / Messenger name</label>
-                <input id="contactName" name="contactName" type="text" autocomplete="nickname" placeholder="Name we can search on Messenger" required maxlength="80" />
-              </div>
-              <div class="field">
-                <label for="reference">GCash reference number</label>
-                <input id="reference" name="reference" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 1234567890123 (from GCash receipt)" required minlength="13" maxlength="20" />
-                <p class="field-help"><span aria-hidden="true">⚠️</span> Find this on your GCash receipt after payment, it is the <strong>13-digit transaction reference number</strong>, <strong>NOT your phone number</strong>. A phone number (like 09XX XXX XXXX) will not be accepted.</p>
-                <p id="ref-error" class="form-error" role="alert" hidden>That looks like a phone number, not a GCash reference number. Please check your GCash receipt after payment and copy the 13-digit transaction reference number (NOT your phone number).</p>
-                <p id="ref-format-error" class="form-error" role="alert" hidden>A GCash reference number is exactly 13 digits. Please check your GCash receipt after payment and copy the full 13-digit reference number.</p>
-              </div>
-              <button class="generate" type="submit">Create order message</button>
-              <p class="form-note">This form does not send anything automatically. It creates a message you can copy and send to <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH on Facebook</a>.</p>
+            <div class="field">
+              <label for="reference">GCash reference number</label>
+              <input id="reference" name="reference" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 1234567890123" required minlength="13" maxlength="13" />
+              <div class="helper"><strong>Important:</strong> Copy the 13-digit reference number from your GCash receipt after payment.</div>
+              <div id="ref-error" class="error" role="alert">That looks like a phone number, not a GCash reference number. Please use the 13-digit transaction reference.</div>
+              <div id="ref-format-error" class="error" role="alert">A GCash reference number is exactly 13 digits. Please check your receipt and copy the full number.</div>
+            </div>
 
-              <div class="summary" id="summary" aria-live="polite">
-                <p class="order-ref" id="orderRefLine">Your order reference: <strong id="orderRefValue"></strong>, quote this when you message us.</p>
-                <pre id="summaryText"></pre>
-                <button class="copy-summary" type="button" id="copySummary">Copy order message</button>
-                <p class="send-note">Now send the copied message to <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">SASE Practice Hub PH on Facebook</a>. Your PDF will be delivered after the payment is confirmed.</p>
-              </div>
-            </form>
-          </div>
+            <button class="generate-btn" type="submit">Create order message</button>
+
+            <div id="summary" class="summary-box" aria-live="polite">
+              <p class="order-ref">Your order reference: <strong id="orderRefValue"></strong>, quote this when you message us.</p>
+              <pre id="summaryText"></pre>
+              <button type="button" class="copy-summary" id="copySummary">Copy order message</button>
+              <p class="send-note">Then send the copied message to our Facebook page.</p>
+            </div>
+          </form>
         </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="wrap">
-        <span>Unofficial practice material. Not affiliated with or endorsed by Mindanao State University.</span>
-        <span class="hashtags">#SASE #MSUSASE #MSUIIT #CollegeEntranceExam #SASE2026</span>
-        <span>Digital PDF • ₱167 • <a href="/privacy.html" style="color: inherit;">Privacy Policy</a></span>
       </div>
-    </footer>
-  </div>
+    </section>
+  </main>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Unofficial practice material. Not affiliated with or endorsed by Mindanao State University.</span>
+      <span>Digital PDF • ₱167 • <a href="/privacy.html">Privacy Policy</a></span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Copied</div>
 
   <script>
     (function () {
       var form = document.getElementById('orderForm');
       var summary = document.getElementById('summary');
       var summaryText = document.getElementById('summaryText');
+      var orderRefValue = document.getElementById('orderRefValue');
       var copySummary = document.getElementById('copySummary');
       var toast = document.getElementById('toast');
       var toastTimer;
@@ -991,7 +1096,9 @@
         toast.textContent = message;
         toast.classList.add('show');
         clearTimeout(toastTimer);
-        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 1800);
+        toastTimer = setTimeout(function () {
+          toast.classList.remove('show');
+        }, 1800);
       }
 
       function copyText(text, successMessage) {
@@ -999,94 +1106,89 @@
           navigator.clipboard.writeText(text).then(function () {
             showToast(successMessage);
           }).catch(function () {
-            fallbackCopy(text, successMessage);
+            fallbackCopy(text);
+            showToast(successMessage);
           });
-        } else {
-          fallbackCopy(text, successMessage);
+          return;
         }
+        fallbackCopy(text);
+        showToast(successMessage);
       }
 
-      function fallbackCopy(text, successMessage) {
-        var area = document.createElement('textarea');
-        area.value = text;
-        area.setAttribute('readonly', '');
-        area.style.position = 'fixed';
-        area.style.opacity = '0';
-        document.body.appendChild(area);
-        area.select();
-        try {
-          document.execCommand('copy');
-          showToast(successMessage);
-        } catch (error) {
-          showToast('Select and copy the text manually');
-        }
-        document.body.removeChild(area);
+      function fallbackCopy(text) {
+        var aux = document.createElement('textarea');
+        aux.value = text;
+        aux.setAttribute('readonly', '');
+        aux.style.position = 'fixed';
+        aux.style.opacity = '0';
+        document.body.appendChild(aux);
+        aux.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(aux);
       }
 
-      document.querySelector('[data-copy]').addEventListener('click', function (event) {
-        copyText(event.currentTarget.getAttribute('data-copy'), 'Mobile number copied');
+      function isLikelyPhoneNumber(v) {
+        return /^09\d{9}$/.test(v.replace(/\s+/g, ''));
+      }
+
+      document.querySelectorAll('[data-copy]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          copyText(btn.getAttribute('data-copy'), 'Number copied');
+        });
       });
 
       form.addEventListener('submit', function (event) {
         event.preventDefault();
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
+
+        var buyer = document.getElementById('buyerName').value.trim();
+        var contact = document.getElementById('contactName').value.trim();
+        var ref = document.getElementById('reference').value.trim();
+        var refError = document.getElementById('ref-error');
+        var refFormatError = document.getElementById('ref-format-error');
+
+        refError.classList.remove('visible');
+        refFormatError.classList.remove('visible');
+
+        var valid = true;
+        if (!buyer || !contact || !ref) {
+          valid = false;
         }
 
-        var name = document.getElementById('buyerName').value.trim();
-        var contact = document.getElementById('contactName').value.trim();
-        var reference = document.getElementById('reference').value.trim();
-        // GCash reference numbers are exactly 13 digits. Strip spaces/dashes
-        // the buyer may have pasted, then validate the digits.
-        var digitsOnly = reference.replace(/\D/g, '');
-        var refErr = document.getElementById('ref-error');
-        var refFormatErr = document.getElementById('ref-format-error');
-        if (refErr) refErr.hidden = true;
-        if (refFormatErr) refFormatErr.hidden = true;
-        // Block PH mobile numbers mistakenly entered as reference (specific message).
-        if (/^09\d{9}$/.test(digitsOnly) || /^639\d{9}$/.test(digitsOnly)) {
-          if (refErr) refErr.hidden = false;
-          document.getElementById('reference').focus();
-          return;
+        if (isLikelyPhoneNumber(ref)) {
+          refError.classList.add('visible');
+          valid = false;
         }
-        // Anything that is not exactly 13 digits is a mistyped reference.
-        if (!/^\d{13}$/.test(digitsOnly)) {
-          if (refFormatErr) refFormatErr.hidden = false;
-          document.getElementById('reference').focus();
-          return;
+
+        if (ref && !/^\d{13}$/.test(ref.replace(/\s+/g, ''))) {
+          refFormatError.classList.add('visible');
+          valid = false;
         }
-        reference = digitsOnly; // normalized: digits only
-        // Order reference the buyer can quote when messaging us (date + random).
-        var d = new Date();
-        var pad2 = function (n) { return (n < 10 ? '0' : '') + n; };
-        var orderRef = 'SASE-' + String(d.getFullYear()).slice(2) + pad2(d.getMonth() + 1) + pad2(d.getDate())
-          + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+
+        if (!valid) return;
+
+        var orderRef = 'SASE-' + Math.random().toString(36).slice(2, 8).toUpperCase();
         var message = [
-          'Hello! I would like to order the MSU-SASE Reviewer.',
+          'Hi SASE Practice Hub PH,',
           '',
-          'Name: ' + name,
+          'I paid ₱167 via GCash.',
+          'Full name: ' + buyer,
           'Facebook / Messenger name: ' + contact,
-          'Payment amount: ₱167.00',
-          'Payment reference: ' + reference,
+          'GCash reference number: ' + ref,
           'Order reference: ' + orderRef,
           '',
-          'I have completed the payment. Please verify and send my digital copy. Thank you!'
+          'Please send my reviewer PDF and portal access details.'
         ].join('\n');
 
-        var orderRefValue = document.getElementById('orderRefValue');
-        var orderRefLine = document.getElementById('orderRefLine');
-        if (orderRefValue) orderRefValue.textContent = orderRef;
-        if (orderRefLine) orderRefLine.classList.add('visible');
         summaryText.textContent = message;
+        orderRefValue.textContent = orderRef;
         summary.classList.add('visible');
-        summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        showToast('Order summary ready');
       });
 
       copySummary.addEventListener('click', function () {
         copyText(summaryText.textContent, 'Order message copied');
       });
-    }());
+    })();
   </script>
 </body>
 </html>
