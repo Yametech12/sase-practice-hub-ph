@@ -11,36 +11,6 @@
 <link rel="stylesheet" href="/exam/exam-ui.css">
 </head>
 <body>
-<!-- MAINTENANCE OVERLAY (temporary, auto-expires 2026-10-25 18:54 PHT) -->
-<div id="maintenance-overlay" style="display:none;position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#0d2f52,#1a78e8);color:#fff;font-family:Inter,system-ui,sans-serif;align-items:center;justify-content:center;text-align:center;padding:24px;">
-  <div style="max-width:520px;">
-    <div style="font-size:44px;">🛠️</div>
-    <h1 style="font-size:28px;margin:14px 0 8px;font-weight:800;">Under Maintenance</h1>
-    <p style="opacity:.92;line-height:1.55;margin:0 0 6px;">SASE Practice Hub PH is being fixed and improved right now.<br>The website and online mock exam portal will be back shortly.</p>
-    <p style="opacity:.85;font-size:14px;margin:0 0 20px;">Your PDF reviewer copy is not affected — you can keep studying offline.</p>
-    <div style="font-size:14px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;">Back online in</div>
-    <div id="maintenance-countdown" style="font-size:44px;font-weight:900;font-variant-numeric:tabular-nums;margin:6px 0 18px;">--:--</div>
-    <p style="font-size:14px;opacity:.85;">Questions? Message us on Facebook: <strong>SASE Practice Hub PH</strong></p>
-  </div>
-</div>
-<script>
-(function(){
-  var target = new Date('2026-10-25T18:54:00+08:00').getTime();
-  var overlay = document.getElementById('maintenance-overlay');
-  var cd = document.getElementById('maintenance-countdown');
-  function tick(){
-    var left = target - Date.now();
-    if (left <= 0) { overlay.style.display = 'none'; return; }
-    overlay.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    var m = Math.floor(left/60000), s = Math.floor((left%60000)/1000);
-    cd.textContent = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
-    setTimeout(tick, 1000);
-  }
-  tick();
-})();
-</script>
-<!-- /MAINTENANCE OVERLAY -->
 
 <a href="#main-content" class="skip-link">Skip to content</a>
 
