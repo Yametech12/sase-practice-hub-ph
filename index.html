@@ -4,41 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="SASE Practice Hub PH — MSU-SASE reviewer, exam drills, weekly mock exams, and guided score review." />
+  <meta name="description" content="SASE Practice Hub PH — playful, student-focused MSU-SASE reviewer, mock exams, and guided study tools." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:title" content="SASE Practice Hub PH" />
-  <meta property="og:description" content="Practice smarter for MSU-SASE with 450 original reviewer questions, mock exams, and guided review." />
+  <meta property="og:description" content="Student-friendly MSU-SASE prep with 450 original practice questions and weekly mock exams." />
   <meta property="og:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="SASE Practice Hub PH" />
-  <meta name="twitter:description" content="SASE reviewer and mock exam portal for MSU-SASE preparation." />
+  <meta name="twitter:description" content="Student-friendly SASE reviewer and mock exam portal." />
   <meta name="twitter:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <title>SASE Practice Hub PH</title>
   <style>
     :root {
-      --bg: #f4f8fc;
-      --bg-strong: #eaf3ff;
-      --surface: rgba(255,255,255,0.82);
+      --bg: #f5f8ff;
+      --bg-2: #eef7ff;
+      --surface: rgba(255,255,255,0.86);
       --surface-strong: #ffffff;
-      --surface-soft: #eef5ff;
+      --surface-soft: #f3f7ff;
       --ink: #13263d;
-      --muted: #5d7288;
-      --line: rgba(16, 48, 74, 0.12);
-      --primary: #0b5fcc;
-      --primary-strong: #0a4ea1;
-      --primary-soft: rgba(11,95,204,0.12);
-      --accent: #f9cb5b;
-      --accent-strong: #e7a828;
-      --success: #0f7a58;
-      --success-soft: #eafaf3;
-      --danger: #ca3f5b;
-      --danger-soft: #fff0f4;
-      --shadow: 0 18px 48px rgba(9, 38, 73, 0.12);
-      --shadow-soft: 0 10px 24px rgba(9, 38, 73, 0.08);
+      --muted: #5d7085;
+      --line: rgba(19, 38, 61, 0.12);
+      --primary: #0f6ddf;
+      --primary-dark: #0a4ea1;
+      --primary-soft: rgba(15,109,223,0.12);
+      --yellow: #ffd75a;
+      --yellow-strong: #f3b720;
+      --pink: #ff8ab2;
+      --pink-soft: rgba(255,138,178,0.12);
+      --green: #0f8a64;
+      --green-soft: #ebfff7;
+      --danger: #d8415c;
+      --danger-soft: #fff1f4;
+      --shadow: 0 20px 60px rgba(9, 38, 73, 0.12);
+      --shadow-soft: 0 12px 24px rgba(9, 38, 73, 0.08);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 16px;
@@ -53,8 +55,8 @@
       min-width: 320px;
       font-family: Inter, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(13, 92, 204, 0.08), transparent 30%),
-        linear-gradient(180deg, var(--bg) 0%, #f8fbff 44%, #f3f7fb 100%);
+        radial-gradient(circle at top left, rgba(15,109,223,0.08), transparent 30%),
+        linear-gradient(180deg, #f5f8ff 0%, #f8fbff 35%, #f3f7fb 100%);
       color: var(--ink);
       line-height: 1.6;
     }
@@ -68,7 +70,7 @@
       position: absolute;
       left: 20px;
       top: -100px;
-      z-index: 100;
+      z-index: 50;
       background: var(--ink);
       color: #fff;
       padding: 12px 16px;
@@ -79,17 +81,17 @@
     .skip-link:focus { top: 0; }
 
     .wrap {
-      width: min(var(--max), calc(100% - 32px));
+      width: min(var(--max), calc(100% - 28px));
       margin: 0 auto;
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 40;
+      background: rgba(11, 26, 43, 0.72);
       backdrop-filter: blur(12px);
-      background: rgba(9, 28, 53, 0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .topbar-inner {
@@ -100,7 +102,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      min-height: 74px;
+      min-height: 72px;
     }
 
     .brand {
@@ -108,7 +110,7 @@
       align-items: center;
       gap: 10px;
       color: #fff;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 0.02em;
     }
 
@@ -118,18 +120,18 @@
       width: 36px;
       height: 36px;
       border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #ffd88a);
+      background: linear-gradient(135deg, var(--yellow), #ffea9b);
       color: var(--ink);
       font-size: 18px;
-      box-shadow: 0 10px 24px rgba(249, 203, 91, 0.35);
+      box-shadow: 0 12px 26px rgba(255,215,90,0.35);
     }
 
     .nav {
       display: flex;
       align-items: center;
       gap: 18px;
-      font-size: 0.96rem;
-      color: rgba(255,255,255,0.85);
+      font-size: 0.94rem;
+      color: rgba(255,255,255,0.82);
     }
 
     .nav a {
@@ -145,26 +147,25 @@
       min-height: 42px;
       padding: 0 18px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), #ffd88a);
+      background: linear-gradient(135deg, var(--yellow), #ffe18c);
       color: var(--ink);
       font-weight: 800;
       text-decoration: none;
-      box-shadow: 0 10px 20px rgba(249, 203, 91, 0.3);
+      box-shadow: 0 10px 20px rgba(255,215,90,0.28);
     }
 
     .hero {
-      position: relative;
-      padding: 54px 0 36px;
+      padding: 50px 0 28px;
     }
 
     .hero-shell {
-      background: linear-gradient(120deg, #061d38 0%, #0a3560 24%, #0c4e8d 55%, #0a5cb0 100%);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #081b32 0%, #123d6c 34%, #0a5db3 64%, #0f7ed9 100%);
+      box-shadow: var(--shadow);
       isolation: isolate;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .hero-shell::before,
@@ -178,25 +179,25 @@
     .hero-shell::before {
       width: 540px;
       height: 540px;
-      right: -140px;
-      top: -100px;
-      background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 64%);
+      right: -160px;
+      top: -110px;
+      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 63%);
     }
 
     .hero-shell::after {
-      width: 360px;
-      height: 360px;
+      width: 300px;
+      height: 300px;
       left: -80px;
-      bottom: -120px;
-      background: radial-gradient(circle, rgba(249,203,91,0.16), transparent 62%);
+      bottom: -100px;
+      background: radial-gradient(circle, rgba(255,215,90,0.18), transparent 60%);
     }
 
     .hero-grid {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 34px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
       align-items: center;
       padding: 54px 48px;
     }
@@ -205,36 +206,36 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #dfeeff;
-      font-weight: 800;
+      color: #dceeff;
+      font-weight: 900;
     }
 
     .eyebrow::before {
       content: "";
-      width: 30px;
+      width: 26px;
       height: 3px;
       border-radius: 999px;
-      background: var(--accent);
+      background: var(--yellow);
     }
 
     h1, h2, h3, p { margin-top: 0; }
 
     h1 {
       margin: 18px 0 18px;
-      font-size: clamp(3rem, 6vw, 5.2rem);
+      max-width: 720px;
+      font-size: clamp(3.1rem, 6vw, 5.5rem);
       line-height: 0.94;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.07em;
       color: #fff;
-      max-width: 680px;
     }
 
     .lead {
-      color: rgba(255,255,255,0.82);
       max-width: 620px;
-      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
       margin-bottom: 24px;
     }
 
@@ -252,33 +253,33 @@
       min-height: 54px;
       padding: 0 24px;
       border-radius: 999px;
-      border: 1px solid transparent;
       text-decoration: none;
       font-weight: 800;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .button:hover { transform: translateY(-1px); }
+
+    .button.primary {
+      background: linear-gradient(135deg, var(--yellow), #ffe590);
+      color: var(--ink);
+      box-shadow: 0 12px 24px rgba(255,215,90,0.28);
     }
 
-    .button:hover { transform: translateY(-1px); }
-    .button.primary {
-      background: linear-gradient(135deg, var(--accent), #ffd88a);
-      color: var(--ink);
-      box-shadow: 0 16px 30px rgba(249, 203, 91, 0.28);
-    }
     .button.secondary {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.09);
       color: #fff;
-      border-color: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.18);
     }
 
     .hero-stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
-      max-width: 660px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
     }
 
     .stat {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-md);
       padding: 14px 16px;
@@ -286,14 +287,15 @@
 
     .stat strong {
       display: block;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
       color: #fff;
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
       line-height: 1.1;
+      letter-spacing: -0.05em;
     }
 
     .stat span {
+      font-size: 0.8rem;
       color: rgba(255,255,255,0.8);
-      font-size: 0.82rem;
     }
 
     .mock-card {
@@ -301,44 +303,42 @@
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 26px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
-      padding: 22px 22px 18px;
+      padding: 18px;
       backdrop-filter: blur(8px);
     }
 
     .notebook {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(237,244,252,0.96));
-      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(240,246,255,0.98));
+      border-radius: 24px;
       padding: 24px 20px 18px;
-      box-shadow: 0 18px 40px rgba(3, 13, 25, 0.2);
+      box-shadow: 0 18px 40px rgba(4, 14, 29, 0.2);
       color: var(--ink);
     }
 
     .notebook-top {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: 8px;
       margin-bottom: 18px;
     }
 
-    .book-tag {
+    .tag {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 26px;
       padding: 0 10px;
       border-radius: 999px;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      background: rgba(15,109,223,0.08);
+      color: var(--primary-dark);
+      font-size: 0.72rem;
       font-weight: 800;
-      background: rgba(11,95,204,0.08);
-      color: var(--primary-strong);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .book-title {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
       line-height: 1.1;
       letter-spacing: -0.04em;
       margin: 0 0 16px;
@@ -347,44 +347,44 @@
     .question-lines {
       display: grid;
       gap: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
     .question-lines span {
       display: block;
-      height: 7px;
+      height: 8px;
       border-radius: 999px;
-      background: rgba(17, 38, 60, 0.12);
+      background: rgba(19,38,61,0.12);
     }
-    .question-lines span:nth-child(2) { width: 80%; }
-    .question-lines span:nth-child(3) { width: 64%; }
+    .question-lines span:nth-child(2) { width: 82%; }
+    .question-lines span:nth-child(3) { width: 68%; }
     .question-lines span:nth-child(4) { width: 90%; }
 
     .answer-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
     .answer-option {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
       color: var(--muted);
-      font-weight: 700;
-      font-size: 0.88rem;
+      font-weight: 800;
+      font-size: 0.86rem;
     }
 
     .answer-option i {
       display: inline-block;
       width: 18px;
       height: 18px;
-      border: 2px solid rgba(19, 38, 61, 0.32);
       border-radius: 50%;
+      border: 2px solid rgba(19, 38, 61, 0.32);
     }
 
     .section {
-      padding: 36px 0;
+      padding: 34px 0;
     }
 
     .section-head {
@@ -396,7 +396,7 @@
     }
 
     .section-title {
-      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
       line-height: 1.05;
       letter-spacing: -0.05em;
       margin: 0;
@@ -404,13 +404,13 @@
     }
 
     .section-sub {
+      margin: 0;
       color: var(--muted);
       font-size: 1.03rem;
       max-width: 620px;
-      margin: 0;
     }
 
-    .feature-grid, .value-grid, .faq-grid {
+    .feature-grid, .faq-grid {
       display: grid;
       gap: 18px;
     }
@@ -419,8 +419,8 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .feature-card, .value-card, .faq-item, .info-card {
-      background: rgba(255,255,255,0.7);
+    .feature-card, .faq-item, .value-card, .info-card, .order-card {
+      background: rgba(255,255,255,0.75);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
@@ -437,27 +437,29 @@
       width: 52px;
       height: 52px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary-soft), rgba(11,95,204,0.14));
-      color: var(--primary-strong);
+      background: linear-gradient(135deg, var(--primary-soft), rgba(15,109,223,0.1));
+      color: var(--primary-dark);
       font-weight: 900;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 14px;
     }
 
-    .feature-card h3, .value-card h3, .info-card h3 {
+    .feature-card h3, .faq-item h3, .value-card h3, .info-card h3 {
       margin: 0 0 8px;
-      font-size: 1.15rem;
+      font-size: 1.14rem;
       color: var(--ink);
     }
 
-    .feature-card p, .value-card p, .faq-item p, .info-card p {
+    .feature-card p, .faq-item p, .value-card p, .info-card p, .order-card p {
       margin: 0;
       color: var(--muted);
     }
 
     .value-grid {
+      display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      align-items: start;
+      gap: 18px;
+      align-items: stretch;
     }
 
     .value-card {
@@ -466,10 +468,10 @@
 
     .value-list {
       list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
       display: grid;
       gap: 16px;
-      padding: 0;
-      margin: 18px 0 0;
     }
 
     .value-list li {
@@ -477,7 +479,7 @@
       align-items: flex-start;
       gap: 12px;
       color: var(--ink);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .value-list li::before {
@@ -487,21 +489,21 @@
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: var(--success-soft);
-      color: var(--success);
+      background: var(--green-soft);
+      color: var(--green);
       font-size: 0.8rem;
       font-weight: 900;
       margin-top: 2px;
     }
 
     .portal-band {
-      background: linear-gradient(135deg, #0d2d50 0%, #0c4d8f 50%, #0867c1 100%);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      padding: 34px 28px;
-      color: #fff;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(135deg, #0f2850 0%, #0f4f8e 40%, #0d63b7 100%);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 30px 26px;
+      color: #fff;
     }
 
     .portal-band::before {
@@ -512,7 +514,7 @@
       width: 360px;
       height: 360px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.14), transparent 65%);
+      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
     }
 
     .portal-inner {
@@ -537,7 +539,7 @@
     .portal-card h3 {
       margin: 0 0 10px;
       color: #fff;
-      font-size: 1.12rem;
+      font-size: 1.1rem;
     }
 
     .portal-card p {
@@ -547,21 +549,15 @@
 
     .faq-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: start;
     }
 
     .faq-item {
       padding: 22px 20px;
     }
 
-    .faq-item h3 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-    }
-
     .order-wrap {
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: 0.8fr 1.2fr;
       gap: 18px;
       align-items: stretch;
     }
@@ -583,14 +579,15 @@
       border: 1px solid rgba(9,38,73,0.08);
       border-radius: 20px;
       padding: 18px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
       margin: 18px 0 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
     }
 
     .amount {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .amount small {
       display: block;
       color: var(--muted);
@@ -598,11 +595,12 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+
     .amount strong {
       display: block;
-      font-size: clamp(2rem, 4vw, 2.7rem);
-      letter-spacing: -0.05em;
       margin-top: 8px;
+      letter-spacing: -0.05em;
+      font-size: clamp(2rem, 4vw, 2.7rem);
     }
 
     .mobile-box {
@@ -640,24 +638,19 @@
       display: inline-block;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(11,95,204,0.09);
-      color: var(--primary-strong);
+      background: rgba(15,109,223,0.09);
+      color: var(--primary-dark);
       font-size: 0.72rem;
-      font-weight: 900;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      font-weight: 900;
     }
 
     .order-card h3 {
       margin: 12px 0 10px;
-      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
       line-height: 1.08;
       letter-spacing: -0.04em;
-    }
-
-    .order-card > p {
-      color: var(--muted);
-      margin: 0 0 18px;
     }
 
     .field { margin-bottom: 18px; }
@@ -674,7 +667,7 @@
       min-height: 52px;
       border-radius: 12px;
       border: 1px solid var(--line);
-      background: rgba(244,248,252,0.9);
+      background: rgba(245,248,255,0.9);
       color: var(--ink);
       padding: 0 14px;
       outline: none;
@@ -682,15 +675,15 @@
 
     input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(11,95,204,0.12);
+      box-shadow: 0 0 0 4px rgba(15,109,223,0.12);
     }
 
     .helper {
       margin-top: 8px;
       font-size: 0.82rem;
       color: #775b00;
-      background: rgba(249,203,91,0.12);
-      border: 1px solid rgba(231,168,40,0.2);
+      background: rgba(255,215,90,0.12);
+      border: 1px solid rgba(243,183,32,0.2);
       border-radius: 10px;
       padding: 9px 10px;
     }
@@ -700,7 +693,7 @@
       margin-top: 8px;
       color: var(--danger);
       background: var(--danger-soft);
-      border: 1px solid rgba(202,63,91,0.18);
+      border: 1px solid rgba(216,65,92,0.18);
       border-radius: 10px;
       padding: 9px 10px;
       font-size: 0.82rem;
@@ -712,10 +705,10 @@
       min-height: 54px;
       border: 0;
       border-radius: 14px;
-      background: linear-gradient(135deg, #ef7d39 0%, #d85b2b 100%);
+      background: linear-gradient(135deg, #fe9d5d 0%, #e76a36 100%);
       color: #fff;
       font-weight: 800;
-      box-shadow: 0 10px 22px rgba(216, 91, 43, 0.22);
+      box-shadow: 0 12px 24px rgba(231,106,54,0.24);
       margin-top: 8px;
     }
 
@@ -723,9 +716,9 @@
       display: none;
       margin-top: 22px;
       padding: 16px 18px;
-      border: 1px solid rgba(11,95,204,0.12);
+      border: 1px solid rgba(15,109,223,0.12);
       border-radius: var(--radius-md);
-      background: rgba(11,95,204,0.04);
+      background: rgba(15,109,223,0.04);
     }
     .summary-box.visible { display: block; }
 
@@ -770,6 +763,7 @@
       padding: 28px 0 42px;
       color: var(--muted);
     }
+
     .footer-inner {
       display: flex;
       justify-content: space-between;
@@ -811,14 +805,17 @@
       .faq-grid {
         grid-template-columns: 1fr 1fr;
       }
-      .mobile-hidden { display: none; }
+      .nav { display: none; }
     }
 
     @media (max-width: 620px) {
-      .nav { display: none; }
-      .hero-shell { border-radius: 22px; }
       .hero-grid { padding: 32px 22px; }
-      .feature-grid, .portal-grid, .faq-grid, .hero-stats { grid-template-columns: 1fr; }
+      .feature-grid,
+      .portal-grid,
+      .faq-grid,
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
       .section-head { display: block; }
       .section-head .section-sub { margin-top: 10px; }
       .portal-band { padding: 24px 18px; }
@@ -853,27 +850,27 @@
         <div class="hero-shell">
           <div class="hero-grid">
             <div>
-              <span class="eyebrow">MSU-SASE practice made easier</span>
-              <h1>Prepare with purpose.</h1>
-              <p class="lead">450 original reviewer questions, guided explanations, and eight full mock exams built to help you study with focus and confidence before exam day.</p>
+              <span class="eyebrow">Student-ready review system</span>
+              <h1>Study smarter, not harder.</h1>
+              <p class="lead">Get a playful, guided approach to SASE prep with original reviewer questions, answer explanations, and weekly mock exams built for students who want to improve faster.</p>
 
               <div class="hero-actions">
                 <a href="#order" class="button primary">Order the reviewer</a>
-                <a href="/exam" class="button secondary">Open mock portal</a>
+                <a href="/exam" class="button secondary">Try the mock portal</a>
               </div>
 
-              <div class="hero-stats" aria-label="Key product metrics">
+              <div class="hero-stats" aria-label="Product highlights">
                 <div class="stat">
                   <strong>450</strong>
-                  <span>Practice items</span>
+                  <span>practice items</span>
                 </div>
                 <div class="stat">
                   <strong>8</strong>
-                  <span>Mock exams</span>
+                  <span>mock exams</span>
                 </div>
                 <div class="stat">
                   <strong>₱167</strong>
-                  <span>One-time access</span>
+                  <span>student bundle</span>
                 </div>
               </div>
             </div>
@@ -881,8 +878,8 @@
             <div class="mock-card" aria-label="Mock exam preview">
               <div class="notebook">
                 <div class="notebook-top">
-                  <span class="book-tag">Reviewer</span>
-                  <span class="book-tag">MSU-SASE</span>
+                  <span class="tag">Reviewer</span>
+                  <span class="tag">MSU-SASE</span>
                 </div>
                 <h2 class="book-title">Practice. Check. Improve.</h2>
                 <div class="question-lines" aria-hidden="true">
@@ -907,27 +904,27 @@
     <section id="features" class="section">
       <div class="wrap">
         <div class="section-head">
-          <h2 class="section-title">Everything you need to study smarter.</h2>
-          <p class="section-sub">Built for learners who want real practice, better review habits, and clearer progression before test day.</p>
+          <h2 class="section-title">Built for students who want progress.</h2>
+          <p class="section-sub">A more supportive learning setup that blends practice, review, and confidence-building into one prep toolkit.</p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
             <div class="count">01</div>
-            <h3>Full reviewer set</h3>
-            <p>Study a broad range of original questions across the key SASE sections with explanation-focused practice.</p>
+            <h3>Study with purpose</h3>
+            <p>Focus on original practice questions that help you understand the logic behind the answer—no more blind guessing.</p>
           </article>
 
           <article class="feature-card">
             <div class="count">02</div>
-            <h3>Timed mock exams</h3>
-            <p>Train under realistic conditions with eight full mock exams and the same 180-question testing rhythm.</p>
+            <h3>Practice under pressure</h3>
+            <p>Build confidence with timed mock exams that mimic the pacing and stress of a real review session.</p>
           </article>
 
           <article class="feature-card">
             <div class="count">03</div>
-            <h3>Review and improve</h3>
-            <p>See your score, revisit every answer, and identify your weakest areas so your next study session starts with a clear plan.</p>
+            <h3>Track what matters</h3>
+            <p>See your scores, revisit mistakes, and tell exactly which sections need more attention before exam day.</p>
           </article>
         </div>
       </div>
@@ -936,23 +933,23 @@
     <section class="section">
       <div class="wrap value-grid">
         <article class="value-card">
-          <span class="eyebrow" style="color: var(--primary-strong);">What’s included</span>
-          <h3>Everything included for ₱167</h3>
+          <span class="eyebrow" style="color: var(--primary-dark);">What’s inside</span>
+          <h3>Everything you need for a strong review cycle</h3>
           <ul class="value-list">
-            <li>MSU-SASE reviewer with 450 original practice questions and detailed explanations</li>
-            <li>Free access to the online mock exam portal</li>
-            <li>Score review, answer explanations, and a simple study guide after each exam</li>
+            <li>450 original practice questions with explanations</li>
+            <li>Free online mock exam portal access</li>
+            <li>Weekly mock release rhythm for consistent prep</li>
           </ul>
         </article>
 
         <article class="value-card">
-          <span class="eyebrow" style="color: var(--primary-strong);">Why learners choose us</span>
-          <h3>Clear structure, less guesswork</h3>
-          <p>Instead of just giving you a pile of questions, the reviewer and mock portal are designed to help you learn the logic behind the answer and track your progress over time.</p>
+          <span class="eyebrow" style="color: var(--primary-dark);">Why students like it</span>
+          <h3>Less stress, more clarity</h3>
+          <p>We designed the reviewer to feel supportive instead of overwhelming—clear guidance, straightforward explanations, and enough structure to help you keep improving.</p>
           <ul class="value-list">
-            <li>Practice with explanations, not just answer keys</li>
-            <li>Use weekly mock exams to build momentum</li>
-            <li>Focus on weak sections before exam day</li>
+            <li>Easy to review on your phone or laptop</li>
+            <li>Clear score feedback after every mock</li>
+            <li>Helpful for regular study, not just last-minute cramming</li>
           </ul>
         </article>
       </div>
@@ -963,19 +960,19 @@
         <div class="portal-band">
           <div class="portal-inner">
             <span class="eyebrow">Free with your reviewer</span>
-            <h2 class="section-title" style="color:#fff; margin-top: 12px;">Study under timed conditions and learn from every answer.</h2>
+            <h2 class="section-title" style="color:#fff; margin-top: 12px;">Train like it’s the real thing.</h2>
             <div class="portal-grid">
               <article class="portal-card">
                 <h3>8 full mock exams</h3>
-                <p>One exam released each week, each designed to match the full testing rhythm and pressure of the real review.</p>
+                <p>Build stamina and confidence with one exam released every week over eight weeks.</p>
               </article>
               <article class="portal-card">
                 <h3>Review every answer</h3>
-                <p>See your results, revisit each question, and understand why the correct answer is right.</p>
+                <p>Revisit each question and understand the reasoning behind the correct answer.</p>
               </article>
               <article class="portal-card">
-                <h3>Know what to study next</h3>
-                <p>Use the score review to identify your weakest areas and decide exactly what to practice next.</p>
+                <h3>Know your weak spots</h3>
+                <p>Spot the sections that need more work and focus your next study session wisely.</p>
               </article>
             </div>
             <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
@@ -996,7 +993,7 @@
         <div class="faq-grid">
           <article class="faq-item">
             <h3>Is this an official MSU reviewer?</h3>
-            <p>No. This is an unofficial practice reviewer with original questions and is not affiliated with or endorsed by MSU.</p>
+            <p>No. This is an unofficial SASE practice reviewer with original questions and is not affiliated with or endorsed by MSU.</p>
           </article>
           <article class="faq-item">
             <h3>How do I receive the reviewer?</h3>
@@ -1004,7 +1001,7 @@
           </article>
           <article class="faq-item">
             <h3>Can I see a sample first?</h3>
-            <p>Yes. Sample questions and study updates are shared on our Facebook page before purchase.</p>
+            <p>Yes. Sample questions and study tips are shared on our Facebook page before purchase.</p>
           </article>
           <article class="faq-item">
             <h3>What if I need help?</h3>
@@ -1017,8 +1014,8 @@
     <section id="order" class="section">
       <div class="wrap order-wrap">
         <aside class="info-card">
-          <span class="eyebrow" style="color: var(--primary-strong);">Pay and send details</span>
-          <h3>How to avail your reviewer.</h3>
+          <span class="eyebrow" style="color: var(--primary-dark);">Pay and send details</span>
+          <h3>Student-friendly payment process</h3>
           <div class="qr-box">
             <img src="qr-payment-167.png" alt="GCash QR code for the ₱167 reviewer payment" width="600" height="644" />
           </div>
