@@ -1,4 +1,4 @@
-# Neon Postgres state backend — setup
+# Neon Postgres state backend, setup
 
 Portal state (bindings / exams / used_submissions) lives in Neon Postgres.
 `bank.json` stays in the private GitHub repo. Nothing here touches the
@@ -8,7 +8,7 @@ landing page, buyer passwords, or hashes.
 
 - Sign up at https://neon.tech (free tier is enough for thousands of buyers).
 - New project, region closest to PH users.
-- Copy the **pooled** connection string (`...-pooler...`) — that is `DATABASE_URL`.
+- Copy the **pooled** connection string (`...-pooler...`), that is `DATABASE_URL`.
 
 ## 2. Migrate the existing state (one-time, idempotent)
 
@@ -35,10 +35,10 @@ keys (no handler reads them).
 
 ## 4. Verify
 
-- Log in with the owner test account (existing bound device) — must succeed.
+- Log in with the owner test account (existing bound device), must succeed.
 - Start an exam, answer, sync, submit, view the result.
 - Rollback if needed: the GitHub state repo is untouched, so redeploying
-  `main` (GitHub backend) restores the old path — but any logins/exams
+  `main` (GitHub backend) restores the old path, but any logins/exams
   recorded in Neon after the switch would NOT be in the GitHub file.
 
 ## 5. Tests (no real DB needed)

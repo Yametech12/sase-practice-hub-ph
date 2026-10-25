@@ -1,9 +1,9 @@
-# Exams 6–8 Wiring Plan — SASE Portal (Neon + Deploy worker)
+# Exams 6–8 Wiring Plan, SASE Portal (Neon + Deploy worker)
 
 Status: READINESS / PREP ONLY. No migration run, no deploy, no bank write yet.
 Blocking rule: do NOT deploy until the coordinator confirms Exams 6–8 are
 rebuilt, audited, and wired. (The previous 540-question files were lost
-because they were never committed — see anti-loss rule below.)
+because they were never committed, see anti-loss rule below.)
 
 ## 1. How the portal serves the bank (verified in this branch)
 
@@ -15,7 +15,7 @@ because they were never committed — see anti-loss rule below.)
   (`loadBankAtBlob`), so grading uses the snapshot the attempt started with.
 - `GH_EXAM_TOKEN` stays required (bank reads). `DATABASE_URL` is for state
   only, never for questions.
-- Server code is ALREADY 8-exam-ready — no handler change needed for 6–8:
+- Server code is ALREADY 8-exam-ready, no handler change needed for 6–8:
   - `EXAM_COUNT = 8` in `api/_exam-lib.js`; `validExamN` accepts 1–8.
   - `api/exam-list.js` loops 1–8; weekly unlock via `examUnlock`.
   - `exam/index.html` already says "Eight full-length mock exams".
@@ -46,7 +46,7 @@ item = {
 - Do NOT copy the local `exam1.json` wrapper shape (`{exam, questions: []}`).
   The serving shape is the flat `exams: { "N": [items] }` map above.
 - Current size note: `bank.json` is ~0.49 MB at 5 exams; 8 exams lands
-  ~0.8 MB — still under the 1 MB Contents-API limit, and the blob path is
+  ~0.8 MB, still under the 1 MB Contents-API limit, and the blob path is
   already in use, so no read-path change is needed.
 
 ## 3. Where the auditors' output must land (two destinations)
@@ -58,23 +58,23 @@ item = {
 2. **Serving copy (AFTER audit passes):** update `bank.json` in
    `Yametech12/sase-exam-state` via the GitHub Contents API
    (PUT with base64 content + current file SHA). No script in this repo
-   does this — it is a deliberate manual/API step. Preserve Exams 1–5
+   does this, it is a deliberate manual/API step. Preserve Exams 1–5
    byte-identical: diff the `1`–`5` arrays before/after and confirm zero
    changes to them; only `6`, `7`, `8` keys are added.
 3. After the `bank.json` PUT, verify with a fresh `loadBank()`-equivalent
    read (blob API): keys `1`–`8` present, 180 items each, every item has
    `answer` + `explanation`, sections per-exam 80/40/30/30.
 
-## 4. Neon migration — prepared, NOT run
+## 4. Neon migration, prepared, NOT run
 
 ### Route decision (important)
 - `api/exam-migrate.js` (temporary endpoint, commit a427327) requires
   `MIGRATION_SECRET` in Vercel. **Verified: `MIGRATION_SECRET` is NOT
-  set in Vercel** (env-name listing only — no values read). The endpoint
+  set in Vercel** (env-name listing only, no values read). The endpoint
   would answer 503 until the secret is added.
 - **Recommended route:** the local script `scripts/migrate-github-to-neon.mjs`
   (read-only against GitHub, idempotent upserts). It needs `GH_EXAM_TOKEN`
-  + `DATABASE_URL` passed as env vars for that one command only — never
+  + `DATABASE_URL` passed as env vars for that one command only, never
   print, log, commit, or paste them anywhere.
 
 ### Commands (run at deploy time, from repo root)
@@ -91,7 +91,7 @@ GH_EXAM_TOKEN=<token> DATABASE_URL=<neon pooled URL> \
 #           (SELECT count(*) FROM used_submissions) subs;
 ```
 
-### Expected counts (from the last known state.json — RE-CONFIRM at run time)
+### Expected counts (from the last known state.json, RE-CONFIRM at run time)
 - `bindings`: 8 orders with bindings
 - `exams`: 9 exam rows across orders
 - `used_submissions`: 7 records
@@ -118,7 +118,7 @@ git push origin neon-migration   # then re-merge/deploy (see §5)
 
 ## 5. Deploy sequence (only after coordinator go-ahead)
 
-1. Exams 6–8 audited + wired (§3) — coordinator signals ready.
+1. Exams 6–8 audited + wired (§3), coordinator signals ready.
 2. Real Neon migration (§4) + counts verified.
 3. Delete `api/exam-migrate.js` (if still present), commit.
 4. Merge `neon-migration` → `main`, push. Vercel auto-deploys from `main`.
@@ -135,10 +135,10 @@ git push origin neon-migration   # then re-merge/deploy (see §5)
 - [ ] No secrets in any response, log, or commit.
 - [ ] `bank.json` in the state repo has keys 1–8 (verified via blob read).
 
-## 7. Vercel env state (verified, names only — no values read)
+## 7. Vercel env state (verified, names only, no values read)
 
 - Project `sase-practice-hub-ph` exists and is connected.
-- `DATABASE_URL`: present (3 entries — Production, Preview, Development),
+- `DATABASE_URL`: present (3 entries, Production, Preview, Development),
   stored as sensitive/secret. Never deploy without it.
 - `GH_EXAM_TOKEN`, `EXAM_HMAC_SECRET`, `EXAM_STATE_REPO`: present.
 - `MIGRATION_SECRET`: NOT set → temp endpoint unusable until added

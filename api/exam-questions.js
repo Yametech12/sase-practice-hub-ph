@@ -4,21 +4,21 @@
  *
  * Starts a NEW attempt for exam N or RESUMES an in-progress one.
  * The attempt is CONSUMED at issuance (not at submit): start → close without
- * submitting does NOT give a free peek — the timer keeps running.
+ * submitting does NOT give a free peek, the timer keeps running.
  * The timer is SERVER-AUTHORITATIVE: started_at is recorded server-side;
  * remaining = 2h - (now - started_at). Client never sends timestamps.
  *
  * Rules:
  *   - 403 locked            : exam not yet unlocked (weekly schedule, server-side)
- *   - 403 already_submitted : exam already submitted — 1 attempt per exam, no retakes
- *   - 403 active_attempt    : another exam is in progress — resume or forfeit it first
+ *   - 403 already_submitted : exam already submitted, 1 attempt per exam, no retakes
+ *   - 403 active_attempt    : another exam is in progress, resume or forfeit it first
  *   - expired while away   : auto-grades with saved answers (consumes the
  *                             attempt, full review stored), then reports already_submitted
  *   - per-token/IP rate limit on this endpoint (anti-scrape)
  *
  * Questions are returned WITHOUT answers/explanations. Options are shuffled
  * per attempt, EXCEPT error-identification items whose stems carry (A)-(D)
- * markers — those keep the identity mapping so the displayed letters match
+ * markers, those keep the identity mapping so the displayed letters match
  * the stem markers. The mapping is kept server-side in the exam record.
  * The bank version (blob SHA) is pinned at issuance so a mid-exam redeploy
  * cannot corrupt grading.
@@ -57,7 +57,7 @@ function publicQuestion(item, optMap, position) {
   return {
     qid: item.id,
     section: item.section,
-    // Position in this attempt's order (1-180) — matches the review
+    // Position in this attempt's order (1-180), matches the review
     // `number` from buildResult and the "Question N" label the buyer sees.
     number: position ?? item.item_number ?? null,
     question: item.question,
@@ -87,7 +87,7 @@ export default async function handler(req, res) {
     const now = Date.now();
 
     // Weekly unlock is checked BEFORE the bank (a locked exam must 403 even
-    // if its bank isn't deployed yet — never leak existence/timing info).
+    // if its bank isn't deployed yet, never leak existence/timing info).
     const u0 = examUnlock(p.created_at, n, now);
     if (!u0.unlocked) {
       logEvent({ type: "start_refused", reason: "locked", order_id: p.order_id, exam: n, ip_hash: ipHash(req) });
@@ -125,14 +125,14 @@ export default async function handler(req, res) {
       const orderExams = (state.exams[p.order_id] ||= {});
       let rec = orderExams[String(n)];
 
-      // Case 1: resume — time remains. Same attempt, same shuffle mapping.
+      // Case 1: resume, time remains. Same attempt, same shuffle mapping.
       if (rec && rec.status === "in_progress" && now < rec.started_at + EXAM_MS) {
         const remaining = rec.started_at + EXAM_MS - now;
         pendingLog = { type: "resume", order_id: p.order_id, exam: n, session_id: rec.session_id, remaining_ms: remaining };
         return { status: 200, resumed: true, rec, remaining };
       }
 
-      // Case 2: expired while away — auto-grade with SAVED answers only
+      // Case 2: expired while away, auto-grade with SAVED answers only
       // (consumes the attempt). Grade against the PINNED bank snapshot,
       // exactly like exam-grade.js / exam-forfeit.js. Never the live bank.
       if (rec && rec.status === "in_progress") {
@@ -169,14 +169,14 @@ export default async function handler(req, res) {
           body: {
             error: "already_submitted",
             auto: true,
-            message: "Your time ran out — this attempt was auto-submitted. " +
+            message: "Your time ran out, this attempt was auto-submitted. " +
               alreadySubmittedMessage(result.pct, p.created_at, n, now),
             result: { ...result, auto_submitted: true, submitted_at: new Date(now).toISOString() },
           },
         };
       }
 
-      // Case 3: already submitted — 1 attempt per exam, no retakes.
+      // Case 3: already submitted, 1 attempt per exam, no retakes.
       if (rec && rec.status === "done") {
         return {
           status: 403,
@@ -191,7 +191,7 @@ export default async function handler(req, res) {
         };
       }
 
-      // Case 4: one active attempt per account — another exam in progress
+      // Case 4: one active attempt per account, another exam in progress
       // blocks starting this one. The buyer must resume or forfeit it first.
       for (const [key, other] of Object.entries(orderExams)) {
         if (key !== String(n) && other && other.status === "in_progress" &&
@@ -210,7 +210,7 @@ export default async function handler(req, res) {
         }
       }
 
-      // Case 5: start fresh — the attempt is consumed NOW (at issuance).
+      // Case 5: start fresh, the attempt is consumed NOW (at issuance).
       const qOrder = shuffleInPlace(items.map((it) => it.id));
       const optMap = {};
       for (const qid of qOrder) {

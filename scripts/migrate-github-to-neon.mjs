@@ -14,9 +14,9 @@
  *   GH_EXAM_TOKEN=<token> DATABASE_URL=<neon pooled URL> node scripts/migrate-github-to-neon.mjs
  *
  * Env:
- *   GH_EXAM_TOKEN   — GitHub token with contents:read on the state repo
- *   EXAM_STATE_REPO — "owner/repo" of the private state repo (default Yametech12/sase-exam-state)
- *   DATABASE_URL    — Neon pooled connection string (target tables)
+ *   GH_EXAM_TOKEN  , GitHub token with contents:read on the state repo
+ *   EXAM_STATE_REPO, "owner/repo" of the private state repo (default Yametech12/sase-exam-state)
+ *   DATABASE_URL   , Neon pooled connection string (target tables)
  *
  * NEVER commit or print secrets. This script prints row counts only.
  */
@@ -88,7 +88,7 @@ console.log(
 );
 if (Object.keys(attempts).length || Object.keys(inProgress).length) {
   console.log(
-    "NOTE: `attempts` / `in_progress` are legacy keys no handler reads — they are NOT migrated.",
+    "NOTE: `attempts` / `in_progress` are legacy keys no handler reads, they are NOT migrated.",
   );
 }
 
@@ -97,9 +97,9 @@ const schema = fs.readFileSync(schemaPath, "utf8");
 // Split into single statements: the Neon HTTP driver rejects multi-statement
 // strings ("cannot insert multiple commands into a prepared statement").
 // Strip -- line comments, split on ';', drop empties. The pinned v0.10
-// driver has NO sql.query() method (that is a v1 API — calling it throws
+// driver has NO sql.query() method (that is a v1 API, calling it throws
 // "sql.query is not a function", the Oct 2026 migration outage). Call sql()
-// directly with the raw string + empty params array — the documented v0.10
+// directly with the raw string + empty params array, the documented v0.10
 // direct-call form. Same fix in api/exam-migrate.js.
 const schemaStmts = schema
   .replace(/--[^\n]*\n/g, "\n")

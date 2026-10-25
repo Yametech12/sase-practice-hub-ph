@@ -18,9 +18,9 @@
  *    Code calling `.query` must now fail loudly in tests too.
  *
  * Test hooks:
- *  - mock.db — { bindings: Map, exams: Map("order:exam_n" -> data), subs: Map }
- *  - mock.writeCount — number of write statements executed (guard/locks/reads excluded)
- *  - mock.interfereOnce(fn) — runs fn against mock.db right before the next
+ *  - mock.db, { bindings: Map, exams: Map("order:exam_n" -> data), subs: Map }
+ *  - mock.writeCount, number of write statements executed (guard/locks/reads excluded)
+ *  - mock.interfereOnce(fn), runs fn against mock.db right before the next
  *    guard evaluation, simulating a concurrent writer between the lib's read
  *    and write phases.
  */
@@ -33,7 +33,7 @@ function canon(v) {
 }
 
 // Deep-clone: the real Neon driver returns fresh JSON-parsed objects per
-// query (wire semantics) — the lib's in-memory state must NEVER alias the
+// query (wire semantics), the lib's in-memory state must NEVER alias the
 // mock's stored rows, or a rolled-back mutator would leak into the DB.
 function clone(v) {
   return v === undefined ? undefined : JSON.parse(JSON.stringify(v));
@@ -52,7 +52,7 @@ export function createMockNeon() {
     const text = strings.join("\u0000");
     const has = (m) => text.includes(m);
 
-    // Migration DDL (CREATE TABLE ...) has no /* NEON: */ marker — it runs
+    // Migration DDL (CREATE TABLE ...) has no /* NEON: */ marker, it runs
     // as a no-op success, like the real driver's direct-call form.
     if (/^\s*CREATE TABLE/i.test(text)) return [];
 

@@ -1,22 +1,22 @@
 /**
- * SASE Online Mock Exam Portal — shared server library (Vercel Node functions)
+ * SASE Online Mock Exam Portal, shared server library (Vercel Node functions)
  *
  * SPEC v2: 8 weekly exams x 180 questions, 1 attempt per exam.
  * Exam N unlocks floor((now - created_at)/7d)+1 >= N (created_at = order date).
  *
  * Server-authoritative state lives in Neon Postgres (DATABASE_URL):
- *   bindings         — { order_id PK, devices JSONB } (1 password = up to 3 devices)
- *   exams            — { order_id, exam_n, data JSONB } (data = full examRec)
- *   used_submissions — { key PK, result JSONB } (grade idempotency)
+ *   bindings        , { order_id PK, devices JSONB } (1 password = up to 3 devices)
+ *   exams           , { order_id, exam_n, data JSONB } (data = full examRec)
+ *   used_submissions, { key PK, result JSONB } (grade idempotency)
  *   (Schema: db/schema.sql. Legacy GitHub-file backend replaced Oct 2026:
  *    state.json had grown past the GitHub contents-API 1MB read limit.)
  *   bank.json STAYS in the private GitHub repo (see gh()/ghBlob() below).
  *
  * Env vars (Vercel):
- *   EXAM_HMAC_SECRET — HMAC signing secret for session tokens
- *   DATABASE_URL     — Neon pooled connection string (state backend)
- *   GH_EXAM_TOKEN    — GitHub token with contents:read on EXAM_STATE_REPO (bank only)
- *   EXAM_STATE_REPO  — "owner/repo" of the private state repo (bank only)
+ *   EXAM_HMAC_SECRET, HMAC signing secret for session tokens
+ *   DATABASE_URL    , Neon pooled connection string (state backend)
+ *   GH_EXAM_TOKEN   , GitHub token with contents:read on EXAM_STATE_REPO (bank only)
+ *   EXAM_STATE_REPO , "owner/repo" of the private state repo (bank only)
  */
 import crypto from "crypto";
 
@@ -48,7 +48,7 @@ export function ipHash(req) {
 export function newId(prefix) {
   return prefix + crypto.randomBytes(8).toString("hex");
 }
-// 1-decimal percent, half-up. Clamp to [0,100] — a score must never exceed 100% or go negative.
+// 1-decimal percent, half-up. Clamp to [0,100], a score must never exceed 100% or go negative.
 export function pct1(correct, total) {
   if (!total || total <= 0) return 0;
   const v = Math.round((correct / total) * 1000) / 10;
@@ -62,7 +62,7 @@ export function rateLimit(key, max, windowMs) {
   const now = Date.now();
   let arr = _buckets.get(key);
   if (!arr) {
-    // Evict only buckets fully idle for >1h — beyond every window in use
+    // Evict only buckets fully idle for >1h, beyond every window in use
     // (max 10 min), so no caller's live entries are ever touched.
     // If the map is still full, REFUSE the new bucket (429) rather than
     // evicting a live one: a flood must never unblock an existing limit.
@@ -132,7 +132,7 @@ export function verifyToken(tok) {
 //   bindings:         { order_id: { devices: [{ device_hash, bound_at, ip_hash }] } }
 //   exams:            { order_id: { "1": examRec, ... } }  (examRec = full attempt/result)
 //   used_submissions: { "<order_id>:<n>:<submission_id>": result } (grade idempotency)
-// Legacy state.json keys `attempts` / `in_progress` are NOT carried over —
+// Legacy state.json keys `attempts` / `in_progress` are NOT carried over , 
 // no handler reads them (verified Oct 2026); the migration script logs
 // their counts and drops them.
 //
@@ -140,13 +140,13 @@ export function verifyToken(tok) {
 // SHA: any concurrent change -> SHA mismatch -> retry). updateState keeps
 // that exact guarantee on Neon. The Neon HTTP driver is NON-interactive
 // (no JS may run between queries inside one transaction), so the write
-// phase is fixed SQL driven by JSONB params — no dynamic SQL:
+// phase is fixed SQL driven by JSONB params, no dynamic SQL:
 //   1. loadState reads the full state (one read-only transaction).
 //   2. The mutator runs against that in-memory snapshot.
 //   3. writeState applies the diff in ONE Serializable transaction that
 //      (a) locks every row (SELECT ... FOR UPDATE),
 //      (b) guards that the DB still equals the snapshot the mutator saw
-//          (raises on ANY mismatch — same conservatism as the old SHA),
+//          (raises on ANY mismatch, same conservatism as the old SHA),
 //      (c) writes the full after-state (upserts + deletes).
 //   Any concurrent change -> guard raise or serialization error -> retry
 //   (up to 3 attempts with backoff, same as the GitHub backend).
@@ -161,7 +161,7 @@ function sqlClient() {
     const url = process.env.DATABASE_URL || "";
     if (!url) {
       throw new Error(
-        "DATABASE_URL is not set — set the Neon pooled connection string in Vercel env vars.",
+        "DATABASE_URL is not set, set the Neon pooled connection string in Vercel env vars.",
       );
     }
     _sql = neon(url);
@@ -187,12 +187,12 @@ export async function loadState() {
   for (const r of sRows) used_submissions[r.key] = r.result;
   const state = { bindings, exams, used_submissions };
   // sha is a content hash (callers only destructure { state }); updateState
-  // does not use it — it guards on the full snapshot instead (see writeState).
+  // does not use it, it guards on the full snapshot instead (see writeState).
   return { sha: "neon:" + sha256(JSON.stringify(state)), state };
 }
 
 // Write the full after-state in ONE Serializable transaction. The guard
-// (first statement) raises unless the DB still equals `before` — the exact
+// (first statement) raises unless the DB still equals `before`, the exact
 // snapshot the mutator saw. Raises -> caller retries with a fresh snapshot.
 async function writeState(after, before) {
   const sql = sqlClient();
@@ -215,7 +215,7 @@ async function writeState(after, before) {
       // CRITICAL (Oct 2026 production outage): the raise MUST be a
       // data-dependent division, NOT `CASE WHEN (...) THEN 1 ELSE 1/0`.
       // A literal 1/0 in a CASE ELSE is evaluated even when WHEN is true
-      // if WHEN contains subqueries (verified live on Neon) — so the old
+      // if WHEN contains subqueries (verified live on Neon), so the old
       // form raised on EVERY write, and every state-changing request
       // 500'd while all clause-level checks passed. With the divisor
       // computed from the mismatch counts, match -> 1/(1-0) = 1 and
@@ -244,7 +244,7 @@ async function writeState(after, before) {
 export async function saveState(state, sha, message) {
   // Legacy compat: no handler calls saveState directly (updateState is the
   // writer path). Writes the full state unconditionally in one Serializable
-  // transaction — NO guard, so prefer updateState for all real writes.
+  // transaction, NO guard, so prefer updateState for all real writes.
   // `sha` / `message` are accepted for signature compatibility and ignored.
   const sql = sqlClient();
   const b1 = JSON.stringify(state.bindings || {});
@@ -266,7 +266,7 @@ export async function saveState(state, sha, message) {
 
 // Read-modify-write with retry on conflict. mutator(state) may be async;
 // it must be free of externally visible side effects (it may run more than
-// once — read-only GETs are fine, writes are not). It returns a result object
+// once, read-only GETs are fine, writes are not). It returns a result object
 // that the caller uses AFTER the save succeeds.
 export async function updateState(mutator, message) {
   let lastErr = null;
@@ -454,12 +454,12 @@ export function validExamN(n) {
 // ---- grading core (shared by exam-grade.js, exam-forfeit.js, and the
 //      expiry auto-grade path in exam-questions.js) ----
 
-// "How to improve" per section — actionable + tied to reviewer chapters.
+// "How to improve" per section, actionable + tied to reviewer chapters.
 const IMPROVEMENT_GUIDE = {
   "Language Usage": {
     chapters: "Parts I & V of your reviewer (vocabulary, grammar, reading)",
     tips: [
-      "Read every explanation for vocabulary items — even ones you got right. The synonyms repeat across exams.",
+      "Read every explanation for vocabulary items, even ones you got right. The synonyms repeat across exams.",
       "For error-identification, read the sentence aloud in your head; your ear catches what your eye skips.",
       "Do one timed 20-item drill daily. Speed matters as much as accuracy here.",
     ],
@@ -467,7 +467,7 @@ const IMPROVEMENT_GUIDE = {
   Mathematics: {
     chapters: "Parts II & VI of your reviewer (word problems, algebra, geometry)",
     tips: [
-      "Redo every missed word problem from scratch on paper — don't just re-read the solution.",
+      "Redo every missed word problem from scratch on paper, don't just re-read the solution.",
       "Memorize the 10 most-used formulas (percent, ratio, area, speed) until they're reflex.",
       "Skip-and-return: bank 40 seconds per item, circle the hard ones, finish easy ones first.",
     ],
@@ -475,7 +475,7 @@ const IMPROVEMENT_GUIDE = {
   Aptitude: {
     chapters: "Parts III & VII of your reviewer (series, patterns, analogies)",
     tips: [
-      "This section is pure speed — aim for ~20 seconds per item. Drill series daily until the patterns pop.",
+      "This section is pure speed, aim for ~20 seconds per item. Drill series daily until the patterns pop.",
       "For number series, always test differences first, then ratios, then alternating patterns.",
       "Analogies: state the relationship in one sentence before looking at the choices.",
     ],
@@ -483,9 +483,9 @@ const IMPROVEMENT_GUIDE = {
   Science: {
     chapters: "Parts IV & VIII of your reviewer (biology, earth science, chemistry, physics)",
     tips: [
-      "Focus on concepts, not memorization — most items test understanding of processes.",
+      "Focus on concepts, not memorization, most items test understanding of processes.",
       "Draw quick diagrams for biology and physics items; visualizing beats re-reading.",
-      "Review the scientific-method items — they're free points once the steps are clear.",
+      "Review the scientific-method items, they're free points once the steps are clear.",
     ],
   },
 };
@@ -632,7 +632,7 @@ export function bindingHasDevice(b, dh) {
 }
 
 export const DEVICE_MISMATCH_MSG =
-  "This password is already used on 3 devices — the maximum allowed. If you changed phones, message SASE Practice Hub PH and we'll reset it for you.";
+  "This password is already used on 3 devices, the maximum allowed. If you changed phones, message SASE Practice Hub PH and we'll reset it for you.";
 export const EXAM_LOCKED_MSG =
   "This exam is not unlocked yet. New exams release every 7 days from your purchase date.";
 // Copy-audit Fix 2: done-exam re-entry message with the buyer's score + next unlock.
@@ -641,12 +641,12 @@ export function alreadySubmittedMessage(pct, createdAt, n, now = Date.now()) {
   const pctStr = Number.isInteger(pct) ? String(pct) : pct.toFixed(1);
   if (next) {
     if (next.unlocks_in_ms == null) {
-      return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks soon — use the time to review the weak areas in your results.`;
+      return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks soon, use the time to review the weak areas in your results.`;
     }
     const days = Math.max(1, Math.ceil(next.unlocks_in_ms / (24 * 3600 * 1000)));
-    return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks in ${days} day${days === 1 ? "" : "s"} — use the time to review the weak areas in your results.`;
+    return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks in ${days} day${days === 1 ? "" : "s"}, use the time to review the weak areas in your results.`;
   }
-  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 8 exams — use your results to review the weak areas.`;
+  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 8 exams, use your results to review the weak areas.`;
 }
 export const ACTIVE_ATTEMPT_MSG = (m) =>
-  `You have Mock Exam ${m} in progress — finish it or give it up before starting another exam.`;
+  `You have Mock Exam ${m} in progress, finish it or give it up before starting another exam.`;

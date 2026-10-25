@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="SASE Practice Hub PH — casual, student-friendly MSU-SASE reviewer with mock exams and guided review." />
+  <meta name="color-scheme" content="light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <meta name="description" content="SASE Practice Hub PH, casual, student-friendly MSU-SASE reviewer with mock exams and guided review." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/" />
@@ -802,7 +805,8 @@
       .faq-grid {
         grid-template-columns: 1fr 1fr;
       }
-      .nav { display: none; }
+      .nav { gap: 10px; }
+      .nav a:not(.nav-cta):not(.nav-portal) { display: none; }
     }
 
     @media (max-width: 620px) {
@@ -821,6 +825,79 @@
       .mobile-box { flex-direction: column; align-items: stretch; }
       .mini-copy { width: 100%; }
     }
+
+    /* ---------- polish pass (Oct 25, 2026) ---------- */
+    body { font-family: Inter, "Segoe UI", system-ui, sans-serif; }
+    .nav-portal { font-weight: 700; color: #fff; }
+    h1, .section-title { letter-spacing: -0.02em; }
+    .button, .nav-cta, .generate-btn, .copy-summary, .mini-copy { min-height: 48px; }
+    .feature-card, .value-card, .faq-item, .portal-card {
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .feature-card:hover, .value-card:hover, .faq-item:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .faq-item a { color: var(--primary-dark); font-weight: 700; }
+    .fb-link {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 48px; margin-top: 10px; border-radius: 12px;
+      background: #1877f2; color: #fff; font-weight: 800; text-decoration: none;
+    }
+    .fb-link:hover { background: #0f63d1; }
+    :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+    @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .feature-card, .value-card, .faq-item, .portal-card, .toast { transition: none; }
+      .feature-card:hover, .value-card:hover, .faq-item:hover { transform: none; }
+    }
+
+    /* ---------- graphics pass ---------- */
+    .scene { padding: 0; background: none; border: 0; backdrop-filter: none; min-height: 440px; }
+    .scene-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .exam-sheet {
+      position: relative; z-index: 1; margin: 34px 14px 0 8px; padding: 18px;
+      background: #fff; border-radius: 22px; color: var(--ink);
+      box-shadow: 0 30px 50px rgba(4,18,40,.35); transform: rotate(-2deg);
+    }
+    .sheet-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; font-size: .72rem; font-weight: 800; border-radius: 999px; padding: 5px 11px; }
+    .chip-subject { background: var(--primary-soft); color: var(--primary-dark); text-transform: uppercase; letter-spacing: .06em; }
+    .chip-timer { background: var(--danger-soft); color: var(--danger); font-variant-numeric: tabular-nums; }
+    .sheet-progress { height: 7px; border-radius: 99px; background: #e6eefb; overflow: hidden; margin-bottom: 14px; }
+    .sheet-progress span { display: block; height: 100%; width: 38%; border-radius: 99px; background: linear-gradient(90deg, var(--primary), #57a8ff); }
+    .sheet-q { margin: 0 0 12px; font-weight: 800; font-size: 1.02rem; line-height: 1.35; }
+    .sheet-opts { display: grid; gap: 8px; }
+    .opt {
+      display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 12px;
+      border: 2px solid #e1e9f5; background: #f7faff; font-weight: 700; font-size: .92rem;
+    }
+    .opt b { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #fff; border: 2px solid #d3deef; color: var(--primary-dark); font-size: .8rem; }
+    .opt svg { margin-left: auto; background: var(--green); border-radius: 50%; padding: 3px; width: 22px; height: 22px; }
+    .opt.on { border-color: var(--primary); background: #eaf3ff; }
+    .opt.on b { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .float-card {
+      position: absolute; z-index: 2; background: #fff; color: var(--ink);
+      border-radius: 18px; padding: 10px 14px; box-shadow: 0 18px 34px rgba(4,18,40,.3);
+      animation: floaty 6s ease-in-out infinite;
+    }
+    .score-float { left: -6px; bottom: 26px; display: flex; align-items: center; gap: 10px; }
+    .score-float strong { display: block; font-size: .95rem; line-height: 1.2; }
+    .score-float span { font-size: .75rem; color: var(--muted); }
+    .weak-float { right: -4px; bottom: 96px; width: 156px; animation-delay: -3s; }
+    .weak-float small { display: block; font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--danger); }
+    .weak-float span { font-size: .74rem; color: var(--muted); font-weight: 600; }
+    .mini-bar { height: 8px; border-radius: 99px; background: #fde3e8; margin: 6px 0; overflow: hidden; }
+    .mini-bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #ff8bb2, var(--danger)); }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+    .count { position: relative; width: 60px; height: 60px; border-radius: 18px; background: linear-gradient(135deg, #dcecff, #eef6ff); }
+    .count small { position: absolute; top: -8px; right: -8px; min-width: 24px; height: 24px; border-radius: 99px; background: var(--yellow); color: var(--ink); font-size: .68rem; font-weight: 900; display: grid; place-items: center; box-shadow: 0 6px 12px rgba(238,175,29,.4); }
+    .feature-card { position: relative; overflow: hidden; }
+    .feature-card::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, var(--primary-soft), transparent 70%); pointer-events: none; }
+    .p-ico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; margin-bottom: 12px; background: rgba(255,216,93,.18); color: var(--yellow); }
+    .hero-shell { background-image: radial-gradient(rgba(255,255,255,.07) 1.2px, transparent 1.4px), linear-gradient(135deg, #081a30 0%, #133d6a 30%, #0d5ab0 62%, #0e78e0 100%); background-size: 22px 22px, auto; }
+    @media (max-width: 900px) { .scene { max-width: 420px; margin: 0 auto; width: 100%; } }
+    @media (max-width: 420px) { .weak-float { display: none; } .score-float { left: 0; } }
+    @media (prefers-reduced-motion: reduce) { .float-card { animation: none; } }
   </style>
 </head>
 <body>
@@ -834,7 +911,7 @@
       </div>
       <nav class="nav" aria-label="Main navigation">
         <a href="#features">Features</a>
-        <a href="#mock-exam-portal">Portal</a>
+        <a href="/exam" class="nav-portal">Portal</a>
         <a href="#faq">FAQ</a>
         <a href="#order" class="nav-cta">Order now</a>
       </nav>
@@ -853,13 +930,13 @@
 
               <div class="hero-actions">
                 <a href="#order" class="button primary">Order the reviewer</a>
-                <a href="/exam" class="button secondary">Try the mock portal</a>
+                <a href="/exam" class="button secondary">Already ordered? Open portal</a>
               </div>
 
               <div class="hero-stats" aria-label="Key product metrics">
                 <div class="stat">
                   <strong>450</strong>
-                  <span>practice items</span>
+                  <span>reviewer questions</span>
                 </div>
                 <div class="stat">
                   <strong>8</strong>
@@ -872,25 +949,49 @@
               </div>
             </div>
 
-            <div class="mock-card" aria-label="Preview of the study material">
-              <div class="notebook">
-                <div class="notebook-top">
-                  <span class="tag">Reviewer</span>
-                  <span class="tag">MSU-SASE</span>
+            <div class="mock-card scene" role="img" aria-label="Illustration of a mock exam: a question card with a timer, a score ring showing 86 percent, and a weak-spot tracker">
+              <svg class="scene-bg" viewBox="0 0 400 460" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="gSun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe28d"/><stop offset="1" stop-color="#ffb938"/></linearGradient>
+                </defs>
+                <circle cx="330" cy="70" r="46" fill="url(#gSun)" opacity=".9"/>
+                <circle cx="62" cy="400" r="70" fill="#ff8bb2" opacity=".22"/>
+                <g fill="#fff" opacity=".55">
+                  <circle cx="40" cy="60" r="3"/><circle cx="64" cy="92" r="2"/><circle cx="360" cy="190" r="3"/>
+                  <circle cx="24" cy="220" r="2"/><circle cx="372" cy="330" r="2.5"/>
+                </g>
+                <path d="M300 410l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#ffd85d"/>
+                <path d="M46 150l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#fff" opacity=".8"/>
+              </svg>
+
+              <div class="exam-sheet">
+                <div class="sheet-top">
+                  <span class="chip chip-subject">Mathematics</span>
+                  <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 1:42:18</span>
                 </div>
-                <h2 class="book-title">Practice. Check. Improve.</h2>
-                <div class="question-lines" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <div class="sheet-progress" aria-hidden="true"><span></span></div>
+                <p class="sheet-q">If 3x + 7 = 22, what is the value of x?</p>
+                <div class="sheet-opts" aria-hidden="true">
+                  <div class="opt"><b>A</b> 3</div>
+                  <div class="opt on"><b>B</b> 5 <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                  <div class="opt"><b>C</b> 7</div>
+                  <div class="opt"><b>D</b> 15</div>
                 </div>
-                <div class="answer-grid" aria-hidden="true">
-                  <div class="answer-option"><i></i> A</div>
-                  <div class="answer-option"><i></i> B</div>
-                  <div class="answer-option"><i></i> C</div>
-                  <div class="answer-option"><i></i> D</div>
-                </div>
+              </div>
+
+              <div class="float-card score-float">
+                <svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true">
+                  <circle cx="32" cy="32" r="26" fill="none" stroke="#e1ecfb" stroke-width="8"/>
+                  <circle cx="32" cy="32" r="26" fill="none" stroke="#0f8d69" stroke-width="8" stroke-linecap="round" stroke-dasharray="163" stroke-dashoffset="23" transform="rotate(-90 32 32)"/>
+                  <text x="32" y="37" text-anchor="middle" font-size="15" font-weight="900" fill="#12314b">86%</text>
+                </svg>
+                <div><strong>Great job!</strong><span>Mock Exam 3</span></div>
+              </div>
+
+              <div class="float-card weak-float">
+                <small>Weak spot</small>
+                <div class="mini-bar"><i style="width:48%"></i></div>
+                <span>Science · focus here</span>
               </div>
             </div>
           </div>
@@ -902,24 +1003,24 @@
       <div class="wrap">
         <div class="section-head">
           <h2 class="section-title">Low-stress prep, real progress.</h2>
-          <p class="section-sub">Built with students in mind—clear explanations, better review habits, and less random cramming energy.</p>
+          <p class="section-sub">Built with students in mind, clear explanations, better review habits, and less random cramming energy.</p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
-            <div class="count">01</div>
+            <div class="count"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5A2.5 2.5 0 014 20.5zM9 8h7M9 12h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><small>01</small></div>
             <h3>Study with purpose</h3>
             <p>Original practice questions that help you understand what’s really going on instead of just guessing and hoping.</p>
           </article>
 
           <article class="feature-card">
-            <div class="count">02</div>
+            <div class="count"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="13.5" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v5l3 2M9.5 2.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><small>02</small></div>
             <h3>Practice under pressure</h3>
             <p>Timed mock exams help you get used to the pace and pressure without the whole “panic mode” thing.</p>
           </article>
 
           <article class="feature-card">
-            <div class="count">03</div>
+            <div class="count"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><small>03</small></div>
             <h3>Track your weak spots</h3>
             <p>See your results, revisit mistakes, and know where to focus your next study session without overthinking it.</p>
           </article>
@@ -942,7 +1043,7 @@
         <article class="value-card">
           <span class="eyebrow" style="color: var(--primary-dark);">Why students use it</span>
           <h3>Less chaos, more clarity</h3>
-          <p>We designed this to feel supportive and practical—not overwhelming. It’s easy to review, easy to follow, and built for people who want actual improvement.</p>
+          <p>We designed this to feel supportive and practical, not overwhelming. It’s easy to review, easy to follow, and built for people who want actual improvement.</p>
           <ul class="value-list">
             <li>Simple review flow on phone or laptop</li>
             <li>Feedback that helps you improve fast</li>
@@ -960,14 +1061,17 @@
             <h2 class="section-title" style="color:white; margin-top:12px;">Train like it’s the real thing.</h2>
             <div class="portal-grid">
               <article class="portal-card">
+                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
                 <h3>8 full mock exams</h3>
                 <p>One exam released each week so you can build momentum without cramming at the last minute.</p>
               </article>
               <article class="portal-card">
+                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                 <h3>Review every answer</h3>
                 <p>Check what you got wrong, understand why, and turn mistakes into real progress.</p>
               </article>
               <article class="portal-card">
+                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
                 <h3>Know your weak spots</h3>
                 <p>See exactly which sections need more work and focus your next study session wisely.</p>
               </article>
@@ -998,11 +1102,11 @@
           </article>
           <article class="faq-item">
             <h3>Can I see a sample first?</h3>
-            <p>Yes. Sample questions and study tips are shared on our Facebook page before purchase.</p>
+            <p>Yes. Sample questions and study tips are shared on <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">our Facebook page</a> before purchase.</p>
           </article>
           <article class="faq-item">
             <h3>What if I need help?</h3>
-            <p>Message us anytime on Facebook and we’ll help you understand the material or the process.</p>
+            <p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message us on Facebook</a> anytime and we’ll help you understand the material or the process.</p>
           </article>
         </div>
       </div>
@@ -1053,13 +1157,16 @@
               <div id="ref-format-error" class="error" role="alert">A GCash reference number is exactly 13 digits. Please check your receipt and copy the full number.</div>
             </div>
 
+            <div id="form-error" class="error" role="alert">Please fill in your full name, Messenger name, and the 13-digit GCash reference number.</div>
+
             <button class="generate-btn" type="submit">Create order message</button>
 
             <div id="summary" class="summary-box" aria-live="polite">
               <p class="order-ref">Your order reference: <strong id="orderRefValue"></strong>, quote this when you message us.</p>
               <pre id="summaryText"></pre>
               <button type="button" class="copy-summary" id="copySummary">Copy order message</button>
-              <p class="send-note">Then send the copied message to our Facebook page.</p>
+              <a class="fb-link" href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Open our Facebook page to send it</a>
+              <p class="send-note">Paste the copied message in a Messenger chat with us.</p>
             </div>
           </form>
         </div>
@@ -1140,20 +1247,21 @@
         var refError = document.getElementById('ref-error');
         var refFormatError = document.getElementById('ref-format-error');
 
+        var formError = document.getElementById('form-error');
         refError.classList.remove('visible');
         refFormatError.classList.remove('visible');
+        formError.classList.remove('visible');
+
+        ref = ref.replace(/\s+/g, '');   /* "1234 5678 90123" -> 13 digits */
 
         var valid = true;
         if (!buyer || !contact || !ref) {
+          formError.classList.add('visible');
           valid = false;
-        }
-
-        if (isLikelyPhoneNumber(ref)) {
+        } else if (isLikelyPhoneNumber(ref)) {
           refError.classList.add('visible');
           valid = false;
-        }
-
-        if (ref && !/^\d{13}$/.test(ref.replace(/\s+/g, ''))) {
+        } else if (!/^\d{13}$/.test(ref)) {
           refFormatError.classList.add('visible');
           valid = false;
         }
@@ -1177,6 +1285,7 @@
         orderRefValue.textContent = orderRef;
         summary.classList.add('visible');
         showToast('Order summary ready');
+        summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
 
       copySummary.addEventListener('click', function () {

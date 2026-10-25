@@ -3,14 +3,14 @@
  * Body: { token, exam, session_id, answers, submission_id }
  *
  * Grades a submitted attempt server-side against the real bank and marks the
- * exam DONE. 1 attempt per exam — after grading (including timer
+ * exam DONE. 1 attempt per exam, after grading (including timer
  * auto-submits) the exam cannot be retaken.
  *
  * Grading rules (audit requirements):
  *  - Server-side only; shuffle mapping comes from the attempt record, never
  *    from the client. Bank version is pinned at issuance (bank_blob).
  *  - Lazy expiry: if the server clock is past expires_at, any answers in the
- *    request body are IGNORED — only pre-expiry persisted answers are graded.
+ *    request body are IGNORED, only pre-expiry persisted answers are graded.
  *  - Input validation: only A–E per known question id; unknown qids and
  *    malformed letters are dropped, never 500.
  *  - Idempotent: re-sending the same submission_id returns the stored result.
@@ -103,7 +103,7 @@ export default async function handler(req, res) {
       const qSet = new Set(rec.q_order);
       const expired = now >= rec.started_at + EXAM_MS;
       // Pre-expiry persisted answers are the base. Answers arriving in the
-      // request body are merged ONLY if the timer has not expired — after
+      // request body are merged ONLY if the timer has not expired, after
       // expiry the server grades what was saved, never late arrivals.
       const finalAnswers = sanitizeAnswers(rec.answers, qSet);
       if (!expired) {
@@ -132,7 +132,7 @@ export default async function handler(req, res) {
         forfeited: false,
       };
       const stored = { ...result, submitted_at: submittedAt, auto_submitted: expired, forfeited: false, server_now: now };
-      // Store a POINTER only — the full review lives once, in the exams record.
+      // Store a POINTER only, the full review lives once, in the exams record.
       state.used_submissions[idemKey] = {
         ref: `${p.order_id}:${n}`,
         submitted_at: submittedAt,

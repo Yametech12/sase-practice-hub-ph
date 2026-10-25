@@ -7,7 +7,7 @@
  * pagehide (via sendBeacon). The server is the source of truth for both
  * answers and time.
  *
- * Lazy expiry: writes arriving after expires_at are REJECTED (410) — the
+ * Lazy expiry: writes arriving after expires_at are REJECTED (410), the
  * timer kept running while the buyer was away, and late answers don't count.
  * Only A/B/C/D per known question id are accepted; anything else is dropped.
  */

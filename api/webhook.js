@@ -1,14 +1,14 @@
 /**
- * SASE Practice Hub PH — Facebook Page Webhook (Vercel Serverless)
+ * SASE Practice Hub PH, Facebook Page Webhook (Vercel Serverless)
  *
- * GET  /api/webhook — Meta verification handshake
- * POST /api/webhook — receive Page feed/comment events, auto-reply with quiz answers
+ * GET  /api/webhook, Meta verification handshake
+ * POST /api/webhook, receive Page feed/comment events, auto-reply with quiz answers
  *
  * Env vars (Vercel):
- *   FB_VERIFY_TOKEN  — must match the Verify Token entered in Meta App Dashboard
- *   FB_APP_SECRET    — Meta App Secret (for X-Hub-Signature-256 verification)
- *   FB_PAGE_TOKEN    — long-lived Page Access Token (pages_manage_engagement)
- *   FB_PAGE_ID       — 1335770806292993
+ *   FB_VERIFY_TOKEN , must match the Verify Token entered in Meta App Dashboard
+ *   FB_APP_SECRET   , Meta App Secret (for X-Hub-Signature-256 verification)
+ *   FB_PAGE_TOKEN   , long-lived Page Access Token (pages_manage_engagement)
+ *   FB_PAGE_ID      , 1335770806292993
  *
  * quiz-answers.json sits next to this file: { postFbid: { answer, meaning, question } }
  */
@@ -121,7 +121,7 @@ function findAnswer(postFbid) {
 }
 
 function buildReply(entry, commenterName, userAnswer) {
-  // Strip URLs/newlines from the display name — it is rendered in the Page's
+  // Strip URLs/newlines from the display name, it is rendered in the Page's
   // public reply, so it must not carry links or line breaks (text-level phishing).
   const safeName = String(commenterName || "").split(/[\r\n]+/)[0].replace(/https?:\/\/\S+|www\.\S+/gi, "").trim();
   const name = safeName ? ` ${safeName.split(" ")[0]}` : "";
@@ -129,9 +129,9 @@ function buildReply(entry, commenterName, userAnswer) {
   const userLetter = (userAnswer || "").toUpperCase().trim();
   if (userLetter && correctAnswer) {
     if (userLetter === correctAnswer) {
-      return `Correct! 🎉 "${entry.meaning}" — great job${name}!\nMore quizzes here: ${SITE_URL}`;
+      return `Correct! 🎉 "${entry.meaning}", great job${name}!\nMore quizzes here: ${SITE_URL}`;
     } else {
-      return `Good try${name}! 💪 The correct answer is ${correctAnswer} ("${entry.meaning}"). You're learning — keep going!\nMore quizzes here: ${SITE_URL}`;
+      return `Good try${name}! 💪 The correct answer is ${correctAnswer} ("${entry.meaning}"). You're learning, keep going!\nMore quizzes here: ${SITE_URL}`;
     }
   }
   return `Nice attempt${name}! The correct answer is ${correctAnswer} ("${entry.meaning}"). Keep practicing! 🌟\nMore quizzes here: ${SITE_URL}`;
@@ -240,7 +240,7 @@ export default async function handler(req, res) {
     pruneRateState();
     const raw = await readWebhookBody(req);
     const sig = req.headers["x-hub-signature-256"];
-    if (!verifySignature(raw, sig)) { console.warn("Bad signature — ignoring"); return res.status(200).send("ignored"); }
+    if (!verifySignature(raw, sig)) { console.warn("Bad signature, ignoring"); return res.status(200).send("ignored"); }
     let body;
     try { body = JSON.parse(raw); } catch { return res.status(200).send("bad json"); }
     if (body.object !== "page") return res.status(200).send("not a page event");

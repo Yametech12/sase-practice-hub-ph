@@ -1,5 +1,5 @@
 /* ============================================================
-   SASE Mock Exam — Results screen styles
+   SASE Mock Exam, Results screen styles
    Mobile-first (360px), deep blue / white professional design.
    ============================================================ */
 
@@ -209,7 +209,7 @@ body {
   flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; font-weight: 800; color: #fff; background: var(--muted);
-  white-space: nowrap; /* circle holds 1-3 digit numbers only — never wrap */
+  white-space: nowrap; /* circle holds 1-3 digit numbers only, never wrap */
 }
 .q-item.correct .q-num { background: var(--green); }
 .q-item.wrong .q-num { background: var(--red); }
@@ -233,7 +233,7 @@ body {
 .q-chev { color: var(--muted); transition: transform 0.2s; flex-shrink: 0; font-size: 14px; }
 .q-item.open .q-chev { transform: rotate(180deg); }
 /* Full question text in the header: wraps to as many lines as needed,
-   never truncated — the old 64-char cut is what produced the
+   never truncated, the old 64-char cut is what produced the
    "The badly researched…" / "A muscle cell is working hard, but it…" stubs. */
 .q-head-q {
   margin: 0; font-size: 14px; font-weight: 600; color: var(--ink);
@@ -299,7 +299,7 @@ body {
 }
 
 /* ============================================================
-   DARK MODE (prefers-color-scheme: dark) — matches the landing
+   DARK MODE (prefers-color-scheme: dark), matches the landing
    page's dark mode. Surfaces go dark; brand blues stay, with
    lightened text where a dark blue was used as a text color.
    ============================================================ */

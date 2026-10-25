@@ -1485,7 +1485,7 @@
     },
     {
       "answer": "B",
-      "explanation": "The four equally likely outcomes are HH, HT, TH, TT. Exactly one head occurs in HT and TH — 2 out of 4 outcomes. Probability = 2/4 = 1/2. Answer: B.",
+      "explanation": "The four equally likely outcomes are HH, HT, TH, TT. Exactly one head occurs in HT and TH, 2 out of 4 outcomes. Probability = 2/4 = 1/2. Answer: B.",
       "id": "E7-M035",
       "options": {
         "A": "1/4",
@@ -2209,7 +2209,7 @@
         "D": "Carbon atoms repel all other atoms."
       },
       "answer": "C",
-      "explanation": "A carbon atom has four electrons in its outer shell, so it can form four covalent bonds with other atoms, including other carbon atoms. This lets carbon build long chains, branches, and rings — the framework of proteins, fats, DNA, and other organic molecules."
+      "explanation": "A carbon atom has four electrons in its outer shell, so it can form four covalent bonds with other atoms, including other carbon atoms. This lets carbon build long chains, branches, and rings, the framework of proteins, fats, DNA, and other organic molecules."
     },
     {
       "id": "E7-S021",

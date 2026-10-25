@@ -1,5 +1,5 @@
 /* ============================================================
-   SASE Mock Exam Portal — exam-taking UI
+   SASE Mock Exam Portal, exam-taking UI
    Mobile-first (360px). Deep blue / white professional theme.
    ============================================================ */
 
@@ -25,10 +25,11 @@
   --card:     #ffffff;
   --radius:   14px;
   --shadow:   0 6px 24px rgba(12, 33, 71, .10);
-  --font: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font: Inter, "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
+button, input { font-family: inherit; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -203,13 +204,13 @@ body {
   border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px;
   font-size: 14px;
 }
-/* The [hidden] attribute must win over the flex layout above — otherwise the
+/* The [hidden] attribute must win over the flex layout above, otherwise the
    banner (with its hardcoded placeholder time) stays visible on fresh starts. */
 .resume-banner[hidden] { display: none; }
 .resume-icon { font-size: 22px; }
 .resume-banner span#resume-remaining { display: block; color: var(--amber); font-weight: 700; }
 
-/* ---------- timer (sticky under the sticky brandbar — MOBILE F1) ---------- */
+/* ---------- timer (sticky under the sticky brandbar, MOBILE F1) ---------- */
 .timer-block {
   background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 12px 16px; margin-bottom: 12px;
@@ -509,7 +510,7 @@ body {
 }
 
 /* ============================================================
-   DARK MODE (prefers-color-scheme: dark) — matches the landing
+   DARK MODE (prefers-color-scheme: dark), matches the landing
    page's dark mode. Surfaces go dark; brand blues stay, with
    lightened text where a dark blue was used as a text color.
    ============================================================ */
@@ -555,4 +556,122 @@ body {
   #screen-exam .option.selected { background: linear-gradient(180deg, #1c3352, #16273f); }
   #screen-exam .option .opt-letter { background: #0f1e35; }
   #screen-exam .opt-check { border-color: var(--line); }
+}
+
+
+/* ============================================================
+   REDESIGN PASS (Oct 25, 2026)
+   Matches the landing page: friendly yellow accent, softer
+   surfaces, bigger touch targets. Overrides only; the base
+   rules above stay as the structural source of truth.
+   ============================================================ */
+:root {
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(12, 33, 71, .08);
+  --shadow-lift: 0 16px 36px rgba(36, 86, 171, .16);
+}
+body {
+  background:
+    radial-gradient(900px 420px at 10% -10%, rgba(36,86,171,.10), transparent 60%),
+    radial-gradient(700px 360px at 100% 0%, rgba(232,169,61,.12), transparent 55%),
+    linear-gradient(180deg, #f6f9ff 0%, #f3f7fd 100%);
+}
+
+/* brand bar */
+.brandbar { background: linear-gradient(120deg, #0b1d40 0%, #16367a 100%); }
+.brand-mark {
+  display: grid; place-items: center; width: 30px; height: 30px;
+  border-radius: 9px; background: linear-gradient(135deg, #ffd85d, #f0b73a);
+  font-size: 16px;
+}
+.brand-name { letter-spacing: .01em; }
+.practice-badge { background: #ffd85d; }
+
+/* gate */
+.gate-hero { padding: 28px 8px 8px; }
+.gate-hero h1 { font-size: 30px; font-weight: 900; letter-spacing: -.02em; }
+.subtitle { font-size: 15px; }
+.disclaimer-line { border-radius: 999px; padding: 7px 14px; }
+.gate-card { padding: 24px 20px; border: 1px solid var(--line); }
+.gate-row input { border-radius: 12px; min-height: 52px; }
+.gate-row .btn { min-width: 104px; }
+.gate-note { line-height: 1.5; }
+@media (max-width: 420px) {
+  .gate-row { flex-direction: column; }
+  .gate-row .btn { width: 100%; }
+}
+
+/* exam list */
+.section-title { font-size: 20px; font-weight: 800; margin-top: 18px; }
+.exam-card { border: 1px solid var(--line); transition: transform .15s ease, box-shadow .15s ease; }
+.exam-card:not(.is-locked):not(.is-done):hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.exam-card .exam-num { border-radius: 14px; background: linear-gradient(135deg, #16367a, #2456ab); }
+.btn { border-radius: 12px; }
+
+/* ---------- instructions screen ---------- */
+.instr-card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 22px; box-shadow: var(--shadow);
+  padding: 20px 18px 22px; margin-top: 6px;
+}
+.instr-back { padding-left: 0; margin-bottom: 4px; }
+.instr-kicker {
+  display: inline-block; margin: 0 0 6px; font-size: 11px; font-weight: 800;
+  letter-spacing: 1.4px; text-transform: uppercase;
+  color: var(--amber); background: var(--amber-bg);
+  padding: 4px 10px; border-radius: 999px;
+}
+.instr-title { margin: 0 0 6px; font-size: 26px; font-weight: 900; letter-spacing: -.02em; color: var(--blue-900); outline: none; }
+.instr-lead { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+.instr-lead strong { color: var(--ink); }
+.instr-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
+.instr-fact {
+  text-align: center; padding: 12px 6px; border-radius: 14px;
+  background: var(--blue-50); border: 1px solid var(--blue-100);
+}
+.instr-fact strong { display: block; font-size: 22px; font-weight: 900; color: var(--blue-700); line-height: 1.1; }
+.instr-fact span { font-size: 12px; color: var(--muted); font-weight: 600; }
+.instr-h { margin: 18px 0 8px; font-size: 15px; font-weight: 800; color: var(--blue-900); }
+.instr-sections { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.instr-sections li {
+  display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  padding: 10px 12px; border-radius: 12px; background: var(--blue-50);
+  font-size: 14px; font-weight: 600;
+}
+.instr-sections b { color: var(--blue-700); font-variant-numeric: tabular-nums; }
+.instr-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 10px; }
+.instr-steps li {
+  counter-increment: step; position: relative;
+  padding-left: 38px; font-size: 14.5px; line-height: 1.5; color: var(--ink);
+}
+.instr-steps li::before {
+  content: counter(step); position: absolute; left: 0; top: 0;
+  width: 26px; height: 26px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--blue-600); color: #fff; font-size: 13px; font-weight: 800;
+}
+.instr-note {
+  margin: 16px 0; padding: 10px 12px; border-radius: 12px;
+  background: var(--amber-bg); color: var(--amber); font-size: 13px; line-height: 1.5;
+}
+.instr-check {
+  display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+  padding: 12px; margin-bottom: 12px; border: 2px solid var(--line);
+  border-radius: 14px; font-size: 14.5px; font-weight: 600;
+}
+.instr-check:has(input:checked) { border-color: var(--blue-600); background: var(--blue-50); }
+.instr-check input { width: 22px; height: 22px; flex: 0 0 22px; margin: 0; accent-color: var(--blue-600); }
+#instr-start:disabled { opacity: .5; box-shadow: none; cursor: not-allowed; }
+@media (max-width: 380px) { .instr-sections { grid-template-columns: 1fr; } }
+@media (min-width: 560px) { .instr-card { padding: 28px 30px 30px; } .instr-title { font-size: 30px; } }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:
+      radial-gradient(900px 420px at 10% -10%, rgba(36,86,171,.22), transparent 60%),
+      linear-gradient(180deg, #0f1d33 0%, #0b1526 100%);
+  }
+  .instr-title, .instr-h { color: #e8f0fa; }
+  .instr-fact strong, .instr-sections b { color: #9cc3f0; }
+  .instr-kicker, .instr-note { color: #f3d9a0; }
 }

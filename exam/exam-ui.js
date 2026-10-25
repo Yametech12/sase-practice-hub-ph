@@ -354,7 +354,10 @@
         btn.textContent = "Start";
         btn.setAttribute("aria-label", "Start Mock Exam " + ex.n); /* A11Y K15 */
       }
-      btn.addEventListener("click", function () { beginExam(ex.n); });
+      btn.addEventListener("click", function () {
+        /* New exams show the instructions first; resuming skips them. */
+        if (ex.status === "in_progress") beginExam(ex.n); else showInstructions(ex.n);
+      });
       card.appendChild(btn);
     } else if (ex.status === "expired") {
       // Expired attempts auto-grade on the next exam-questions call
@@ -397,6 +400,33 @@
   }
 
   /* ============================================================
+     SCREEN 1b, instructions (shown before a NEW exam starts)
+     ============================================================ */
+  var pendingExamN = null;
+  function showInstructions(examN) {
+    pendingExamN = examN;
+    $("instr-kicker").textContent = "Mock Exam " + examN;
+    $("instr-agree").checked = false;
+    $("instr-start").disabled = true;
+    showScreen("screen-instructions");
+    var h = $("instr-title");
+    if (h) h.focus();
+  }
+  $("instr-agree").addEventListener("change", function () {
+    $("instr-start").disabled = !this.checked;
+  });
+  $("instr-back").addEventListener("click", function () {
+    pendingExamN = null;
+    showScreen("screen-gate");
+  });
+  $("instr-start").addEventListener("click", function () {
+    if (pendingExamN == null || !$("instr-agree").checked) return;
+    var n = pendingExamN;
+    pendingExamN = null;
+    beginExam(n);
+  });
+
+  /* ============================================================
      SCREEN 2, exam
      ============================================================ */
   function beginExam(examN) {
@@ -414,7 +444,7 @@
         state.sessionId = data.session_id;
         state.questions = data.questions || [];
         state.answers = data.answers || {};
-        state.flagged = {};
+        state.flagged = loadFlags(data.session_id);
         state.cellByQid = {};
         state.currentIndex = 0;
         state.announced = {};
@@ -656,9 +686,24 @@
     var q = currentQ();
     if (!q) return;
     if (state.flagged[q.qid]) delete state.flagged[q.qid]; else state.flagged[q.qid] = true;
+    saveFlags();
     syncProgressSoon();
     renderQuestion(false); /* no scroll on flag toggle */
   });
+
+  /* Flags are a local study aid (the server only stores answers), so keep
+     them in sessionStorage per attempt so a refresh doesn't wipe them. */
+  function flagKey(sid) { return "sase_exam_flags_" + sid; }
+  function loadFlags(sid) {
+    try {
+      var raw = sessionStorage.getItem(flagKey(sid));
+      var obj = raw ? JSON.parse(raw) : {};
+      return (obj && typeof obj === "object") ? obj : {};
+    } catch (e) { return {}; }
+  }
+  function saveFlags() {
+    try { sessionStorage.setItem(flagKey(state.sessionId), JSON.stringify(state.flagged)); } catch (e) {}
+  }
 
   /* ----- question grid navigator ----- */
   function buildGrid() {
@@ -919,6 +964,8 @@
     $("submit-error-text").textContent =
       (err.message || "Could not submit, please check your connection and try again.");
     $("submit-error").hidden = false;
+    startTimer();   // doSubmit() stopped the countdown; without this the clock froze on screen
+    clearSync();    // never stack a second heartbeat
     scheduleSync(); // restore heartbeat lost by clearSync()
   }
   $("submit-retry").addEventListener("click", function () {
@@ -981,6 +1028,7 @@
     showScreen("screen-exam");
     // Restore the exam's live machinery: timer + heartbeat were killed at forfeit start.
     startTimer();
+    clearSync();
     scheduleSync();
     $("submit-error-text").textContent =
       (err.message || "Could not give up, please check your connection and try again.") +

@@ -1,6 +1,6 @@
 /**
  * Storage-layer tests for the Neon backend (api/_exam-lib.js).
- * Runs against the in-memory fake in ./mock-neon.mjs — no real Neon DB,
+ * Runs against the in-memory fake in ./mock-neon.mjs, no real Neon DB,
  * no GitHub, no secrets. Run:  node tests/neon-storage.test.mjs
  * (after `npm install` so @neondatabase/serverless resolves).
  *
@@ -189,7 +189,7 @@ console.log("10. driver-surface regression: no sql.query() (v0.10 has no such me
 {
   // Oct 2026 migration outage: the migration code called sql.query(), which
   // exists only in driver v1. The pinned v0.10 driver provides tagged-template
-  // calls, direct sql("...", [params]) calls, and sql.transaction() — and NO
+  // calls, direct sql("...", [params]) calls, and sql.transaction(), and NO
   // .query. The mock mirrors that surface exactly, so any reintroduction of
   // .query fails here, the same way it fails in production.
   ok("mock has no .query method (matches real v0.10 driver)", typeof mock.query === "undefined");
@@ -217,7 +217,7 @@ console.log("11. SQL-shape regression: bindings column holds the devices ARRAY (
   // wrong passwords still 401'd. Root cause: the real SQL compared the
   // `devices` column (an ARRAY, per migration + schema) against the whole
   // binding OBJECT `(p.b -> order_id)`, and the write stored that object
-  // instead of the array — so the guard ALWAYS mismatched and every
+  // instead of the array, so the guard ALWAYS mismatched and every
   // state-changing write rolled back. The mock implemented the CORRECT
   // (array) semantics, so all behavior tests passed while production
   // threw. This static check pins the real SQL text to the array shape,
@@ -231,7 +231,7 @@ console.log("11. SQL-shape regression: bindings column holds the devices ARRAY (
     guardBlock.includes("-> 'devices'") && !guardBlock.includes("(p.b -> b.order_id)::jsonb"));
   // Oct 2026 production outage #2: `CASE WHEN (...) THEN 1 ELSE 1/0`
   // raises even when WHEN is true if WHEN contains subqueries (verified
-  // live on Neon) — so the guard must raise via a DATA-DEPENDENT
+  // live on Neon), so the guard must raise via a DATA-DEPENDENT
   // division, never a literal 1/0.
   ok("guard raises via data-dependent division, never literal 1/0",
     guardBlock.includes("1 / (1 - LEAST((") && !guardBlock.includes("ELSE 1/0"));

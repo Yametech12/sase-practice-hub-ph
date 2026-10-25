@@ -56,6 +56,47 @@
     </div>
   </section>
 
+  <section id="screen-instructions" class="screen" aria-labelledby="instr-title">
+    <div class="instr-card">
+      <button id="instr-back" class="btn btn-ghost instr-back" type="button"><span aria-hidden="true">&#8592;</span> Back to your exams</button>
+      <p class="instr-kicker" id="instr-kicker">Mock Exam</p>
+      <h2 id="instr-title" class="instr-title" tabindex="-1">Before you start</h2>
+      <p class="instr-lead">Read these quickly. Once you tap <strong>Start exam</strong>, your 2-hour timer begins and cannot be paused.</p>
+
+      <div class="instr-facts" role="list">
+        <div class="instr-fact" role="listitem"><strong>180</strong><span>questions</span></div>
+        <div class="instr-fact" role="listitem"><strong>2 hrs</strong><span>time limit</span></div>
+        <div class="instr-fact" role="listitem"><strong>1</strong><span>attempt only</span></div>
+      </div>
+
+      <h3 class="instr-h">What's on the exam</h3>
+      <ul class="instr-sections">
+        <li><span>Language Usage</span><b>80</b></li>
+        <li><span>Mathematics</span><b>40</b></li>
+        <li><span>Aptitude</span><b>30</b></li>
+        <li><span>Science</span><b>30</b></li>
+      </ul>
+
+      <h3 class="instr-h">How it works</h3>
+      <ol class="instr-steps">
+        <li><strong>Pick one answer per question</strong> (A, B, C or D). You can change it any time before you submit.</li>
+        <li><strong>Your answers save automatically</strong> to the server, so a refresh or dropped connection won't lose them.</li>
+        <li><strong>The timer keeps running</strong> if you close the page. Come back to <em>Your Exams</em> and tap <em>Resume</em> before time runs out.</li>
+        <li><strong>Use Flag and the Grid</strong> to mark questions to revisit and jump to any question. Skipped questions score no points.</li>
+        <li><strong>Submit when you're done.</strong> If time runs out, your saved answers are submitted for you.</li>
+        <li><strong>You can't retake an exam.</strong> Submitting or giving up uses your one attempt.</li>
+      </ol>
+
+      <p class="instr-note">Find a quiet spot and a stable connection first. Questions can't be copied during the exam. This is practice material, not the official MSU-SASE.</p>
+
+      <label class="instr-check" for="instr-agree">
+        <input type="checkbox" id="instr-agree">
+        <span>I've read the instructions and I'm ready to start.</span>
+      </label>
+      <button id="instr-start" class="btn btn-primary btn-block" type="button" disabled>Start exam</button>
+    </div>
+  </section>
+
   <section id="screen-exam" class="screen" aria-label="Exam in progress">
     <div id="resume-banner" class="resume-banner" role="status" hidden>
       <span class="resume-icon" aria-hidden="true">⏸</span>

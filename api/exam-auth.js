@@ -6,7 +6,7 @@
  * buyer's password are bound to that order_id. A 4th distinct device gets 403
  * and the bound devices are NOT disturbed.
  *
- * Returns a token embedding { order_id, device_hash, created_at } — the
+ * Returns a token embedding { order_id, device_hash, created_at }, the
  * weekly exam schedule is derived from created_at.
  *
  * Per-IP rate limiting (defense in depth): 20 auth attempts per 10 minutes.
@@ -25,7 +25,7 @@ import {
   DEVICE_MISMATCH_MSG,
 } from "./_exam-lib.js";
 import hashes from "./_exam-hashes.json" with { type: "json" };
-// _exam-hashes.json: { "<sha256(password)>": { order_id, created_at } } — hashes only, never plaintext.
+// _exam-hashes.json: { "<sha256(password)>": { order_id, created_at } }, hashes only, never plaintext.
 // Underscore prefix = never routable; it is bundled into the function only.
 
 export default async function handler(req, res) {
@@ -62,10 +62,10 @@ export default async function handler(req, res) {
     // Fail LOUDLY on a bad created_at: minting a token with a missing/garbage
     // created_at produces a token every endpoint immediately 401s (infinite
     // login loop) or a schedule that never unlocks. This is a server config
-    // error, not a buyer error — 500, not a dead token.
+    // error, not a buyer error, 500, not a dead token.
     const createdAtRaw = rec.created_at;
     // Legacy entries may carry a timezone-less ISO timestamp (recorded as
-    // naive UTC by the backfill). Treat that as UTC — rejecting it would
+    // naive UTC by the backfill). Treat that as UTC, rejecting it would
     // lock out real buyers whose password is correct.
     const createdAt =
       typeof createdAtRaw === "string" && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?$/.test(createdAtRaw)

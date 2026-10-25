@@ -3,7 +3,7 @@
  * Body: { token, exam, session_id }
  *
  * Explicit forfeit: the buyer gives up an in-progress attempt. The attempt is
- * CONSUMED (1 attempt per exam) and the SAVED answers are graded — the buyer
+ * CONSUMED (1 attempt per exam) and the SAVED answers are graded, the buyer
  * still gets their results screen + improvement guide. Idempotent: forfeiting
  * an already-done exam returns the stored summary.
  */
