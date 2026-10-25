@@ -4,47 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="SASE Practice Hub PH — playful, student-focused MSU-SASE reviewer, mock exams, and guided study tools." />
+  <meta name="description" content="SASE Practice Hub PH — casual, student-friendly MSU-SASE reviewer with mock exams and guided review." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:title" content="SASE Practice Hub PH" />
-  <meta property="og:description" content="Student-friendly MSU-SASE prep with 450 original practice questions and weekly mock exams." />
+  <meta property="og:description" content="Casual student-friendly SASE prep with reviewer questions, mock exams, and study support." />
   <meta property="og:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="SASE Practice Hub PH" />
-  <meta name="twitter:description" content="Student-friendly SASE reviewer and mock exam portal." />
+  <meta name="twitter:description" content="Casual student-friendly SASE prep with reviewer questions, mock exams, and study support." />
   <meta name="twitter:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <title>SASE Practice Hub PH</title>
   <style>
     :root {
-      --bg: #f5f8ff;
-      --bg-2: #eef7ff;
-      --surface: rgba(255,255,255,0.86);
+      --bg: #f5f9ff;
+      --bg-2: #eff7ff;
+      --surface: rgba(255,255,255,0.82);
       --surface-strong: #ffffff;
-      --surface-soft: #f3f7ff;
-      --ink: #13263d;
-      --muted: #5d7085;
-      --line: rgba(19, 38, 61, 0.12);
-      --primary: #0f6ddf;
-      --primary-dark: #0a4ea1;
-      --primary-soft: rgba(15,109,223,0.12);
-      --yellow: #ffd75a;
-      --yellow-strong: #f3b720;
-      --pink: #ff8ab2;
-      --pink-soft: rgba(255,138,178,0.12);
-      --green: #0f8a64;
-      --green-soft: #ebfff7;
-      --danger: #d8415c;
+      --surface-soft: #f2f7ff;
+      --ink: #12314b;
+      --muted: #5d7188;
+      --line: rgba(18, 49, 75, 0.1);
+      --primary: #1a78e8;
+      --primary-dark: #0d4ea3;
+      --primary-soft: rgba(26,120,232,0.12);
+      --yellow: #ffd85d;
+      --yellow-strong: #eeaf1d;
+      --pink: #ff8bb2;
+      --pink-soft: rgba(255,139,178,0.12);
+      --green: #0f8d69;
+      --green-soft: #eafff6;
+      --danger: #d84b60;
       --danger-soft: #fff1f4;
-      --shadow: 0 20px 60px rgba(9, 38, 73, 0.12);
-      --shadow-soft: 0 12px 24px rgba(9, 38, 73, 0.08);
+      --shadow: 0 24px 60px rgba(7, 28, 50, 0.12);
+      --shadow-soft: 0 12px 26px rgba(7, 28, 50, 0.08);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 16px;
-      --radius-sm: 12px;
       --max: 1180px;
     }
 
@@ -55,8 +54,8 @@
       min-width: 320px;
       font-family: Inter, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(15,109,223,0.08), transparent 30%),
-        linear-gradient(180deg, #f5f8ff 0%, #f8fbff 35%, #f3f7fb 100%);
+        radial-gradient(circle at top left, rgba(26,120,232,0.08), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, #f4f8ff 34%, #f2f7fb 100%);
       color: var(--ink);
       line-height: 1.6;
     }
@@ -69,10 +68,10 @@
     .skip-link {
       position: absolute;
       left: 20px;
-      top: -100px;
-      z-index: 50;
+      top: -110px;
+      z-index: 60;
       background: var(--ink);
-      color: #fff;
+      color: white;
       padding: 12px 16px;
       border-radius: 0 0 12px 12px;
       text-decoration: none;
@@ -88,10 +87,10 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 40;
-      background: rgba(11, 26, 43, 0.72);
+      z-index: 50;
+      background: rgba(13, 24, 42, 0.76);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .topbar-inner {
@@ -101,7 +100,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       min-height: 72px;
     }
 
@@ -109,7 +108,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      color: #fff;
+      color: white;
       font-weight: 900;
       letter-spacing: 0.02em;
     }
@@ -119,11 +118,11 @@
       place-items: center;
       width: 36px;
       height: 36px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--yellow), #ffea9b);
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--yellow), #ffe18d);
       color: var(--ink);
       font-size: 18px;
-      box-shadow: 0 12px 26px rgba(255,215,90,0.35);
+      box-shadow: 0 12px 24px rgba(255,216,93,0.38);
     }
 
     .nav {
@@ -133,7 +132,6 @@
       font-size: 0.94rem;
       color: rgba(255,255,255,0.82);
     }
-
     .nav a {
       text-decoration: none;
       transition: color 0.2s ease;
@@ -147,25 +145,25 @@
       min-height: 42px;
       padding: 0 18px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--yellow), #ffe18c);
+      background: linear-gradient(135deg, var(--yellow), #ffe28d);
       color: var(--ink);
       font-weight: 800;
       text-decoration: none;
-      box-shadow: 0 10px 20px rgba(255,215,90,0.28);
+      box-shadow: 0 10px 18px rgba(255,216,93,0.26);
     }
 
     .hero {
-      padding: 50px 0 28px;
+      padding: 48px 0 28px;
     }
 
     .hero-shell {
       position: relative;
       overflow: hidden;
       border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #081b32 0%, #123d6c 34%, #0a5db3 64%, #0f7ed9 100%);
+      background: linear-gradient(135deg, #081a30 0%, #133d6a 30%, #0d5ab0 62%, #0e78e0 100%);
       box-shadow: var(--shadow);
-      isolation: isolate;
       border: 1px solid rgba(255,255,255,0.1);
+      isolation: isolate;
     }
 
     .hero-shell::before,
@@ -177,10 +175,10 @@
     }
 
     .hero-shell::before {
-      width: 540px;
-      height: 540px;
-      right: -160px;
-      top: -110px;
+      width: 520px;
+      height: 520px;
+      right: -140px;
+      top: -120px;
       background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 63%);
     }
 
@@ -188,18 +186,18 @@
       width: 300px;
       height: 300px;
       left: -80px;
-      bottom: -100px;
-      background: radial-gradient(circle, rgba(255,215,90,0.18), transparent 60%);
+      bottom: -110px;
+      background: radial-gradient(circle, rgba(255,216,93,0.18), transparent 60%);
     }
 
     .hero-grid {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
+      grid-template-columns: 1.14fr 0.86fr;
+      gap: 20px;
       align-items: center;
-      padding: 54px 48px;
+      padding: 56px 48px;
     }
 
     .eyebrow {
@@ -209,7 +207,7 @@
       font-size: 0.74rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #dceeff;
+      color: #dfeeff;
       font-weight: 900;
     }
 
@@ -226,24 +224,24 @@
     h1 {
       margin: 18px 0 18px;
       max-width: 720px;
-      font-size: clamp(3.1rem, 6vw, 5.5rem);
+      font-size: clamp(3rem, 6vw, 5.2rem);
       line-height: 0.94;
       letter-spacing: -0.07em;
-      color: #fff;
+      color: white;
     }
 
     .lead {
-      max-width: 620px;
+      max-width: 630px;
       color: rgba(255,255,255,0.82);
-      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-      margin-bottom: 24px;
+      font-size: clamp(1.04rem, 2vw, 1.2rem);
+      margin-bottom: 22px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .button {
@@ -257,14 +255,13 @@
       font-weight: 800;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
+
     .button:hover { transform: translateY(-1px); }
-
     .button.primary {
-      background: linear-gradient(135deg, var(--yellow), #ffe590);
+      background: linear-gradient(135deg, var(--yellow), #ffe9a5);
       color: var(--ink);
-      box-shadow: 0 12px 24px rgba(255,215,90,0.28);
+      box-shadow: 0 12px 22px rgba(255,216,93,0.28);
     }
-
     .button.secondary {
       background: rgba(255,255,255,0.09);
       color: #fff;
@@ -288,7 +285,7 @@
     .stat strong {
       display: block;
       color: #fff;
-      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
       line-height: 1.1;
       letter-spacing: -0.05em;
     }
@@ -300,17 +297,17 @@
 
     .mock-card {
       position: relative;
+      padding: 18px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 26px;
-      padding: 18px;
       backdrop-filter: blur(8px);
     }
 
     .notebook {
-      background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(240,246,255,0.98));
+      background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(238,244,255,0.98));
       border-radius: 24px;
-      padding: 24px 20px 18px;
+      padding: 22px 20px 18px;
       box-shadow: 0 18px 40px rgba(4, 14, 29, 0.2);
       color: var(--ink);
     }
@@ -329,12 +326,12 @@
       min-height: 26px;
       padding: 0 10px;
       border-radius: 999px;
-      background: rgba(15,109,223,0.08);
+      background: rgba(26,120,232,0.08);
       color: var(--primary-dark);
       font-size: 0.72rem;
-      font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      font-weight: 800;
     }
 
     .book-title {
@@ -353,10 +350,10 @@
       display: block;
       height: 8px;
       border-radius: 999px;
-      background: rgba(19,38,61,0.12);
+      background: rgba(18,49,75,0.12);
     }
     .question-lines span:nth-child(2) { width: 82%; }
-    .question-lines span:nth-child(3) { width: 68%; }
+    .question-lines span:nth-child(3) { width: 66%; }
     .question-lines span:nth-child(4) { width: 90%; }
 
     .answer-grid {
@@ -380,7 +377,7 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      border: 2px solid rgba(19, 38, 61, 0.32);
+      border: 2px solid rgba(18,49,75,0.32);
     }
 
     .section {
@@ -396,7 +393,7 @@
     }
 
     .section-title {
-      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
       line-height: 1.05;
       letter-spacing: -0.05em;
       margin: 0;
@@ -420,7 +417,7 @@
     }
 
     .feature-card, .faq-item, .value-card, .info-card, .order-card {
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.76);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
@@ -437,7 +434,7 @@
       width: 52px;
       height: 52px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary-soft), rgba(15,109,223,0.1));
+      background: linear-gradient(135deg, var(--primary-soft), rgba(26,120,232,0.08));
       color: var(--primary-dark);
       font-weight: 900;
       font-size: 1.15rem;
@@ -457,7 +454,7 @@
 
     .value-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.95fr 1.05fr;
       gap: 18px;
       align-items: stretch;
     }
@@ -468,8 +465,8 @@
 
     .value-list {
       list-style: none;
-      padding: 0;
       margin: 16px 0 0;
+      padding: 0;
       display: grid;
       gap: 16px;
     }
@@ -499,11 +496,11 @@
     .portal-band {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, #0f2850 0%, #0f4f8e 40%, #0d63b7 100%);
+      background: linear-gradient(135deg, #0f2850 0%, #0d4d8d 42%, #0a65bb 100%);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
-      padding: 30px 26px;
-      color: #fff;
+      padding: 30px 28px;
+      color: white;
     }
 
     .portal-band::before {
@@ -538,7 +535,7 @@
 
     .portal-card h3 {
       margin: 0 0 10px;
-      color: #fff;
+      color: white;
       font-size: 1.1rem;
     }
 
@@ -557,7 +554,7 @@
 
     .order-wrap {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: 0.78fr 1.22fr;
       gap: 18px;
       align-items: stretch;
     }
@@ -638,7 +635,7 @@
       display: inline-block;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(15,109,223,0.09);
+      background: rgba(26,120,232,0.09);
       color: var(--primary-dark);
       font-size: 0.72rem;
       letter-spacing: 0.12em;
@@ -648,7 +645,7 @@
 
     .order-card h3 {
       margin: 12px 0 10px;
-      font-size: clamp(1.9rem, 3vw, 2.3rem);
+      font-size: clamp(1.85rem, 3vw, 2.3rem);
       line-height: 1.08;
       letter-spacing: -0.04em;
     }
@@ -675,15 +672,15 @@
 
     input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(15,109,223,0.12);
+      box-shadow: 0 0 0 4px rgba(26,120,232,0.12);
     }
 
     .helper {
       margin-top: 8px;
       font-size: 0.82rem;
       color: #775b00;
-      background: rgba(255,215,90,0.12);
-      border: 1px solid rgba(243,183,32,0.2);
+      background: rgba(255,216,93,0.12);
+      border: 1px solid rgba(238,175,29,0.2);
       border-radius: 10px;
       padding: 9px 10px;
     }
@@ -693,7 +690,7 @@
       margin-top: 8px;
       color: var(--danger);
       background: var(--danger-soft);
-      border: 1px solid rgba(216,65,92,0.18);
+      border: 1px solid rgba(216,75,96,0.18);
       border-radius: 10px;
       padding: 9px 10px;
       font-size: 0.82rem;
@@ -705,10 +702,10 @@
       min-height: 54px;
       border: 0;
       border-radius: 14px;
-      background: linear-gradient(135deg, #fe9d5d 0%, #e76a36 100%);
+      background: linear-gradient(135deg, #ff9d59 0%, #e56d3d 100%);
       color: #fff;
       font-weight: 800;
-      box-shadow: 0 12px 24px rgba(231,106,54,0.24);
+      box-shadow: 0 12px 24px rgba(229,109,61,0.22);
       margin-top: 8px;
     }
 
@@ -716,9 +713,9 @@
       display: none;
       margin-top: 22px;
       padding: 16px 18px;
-      border: 1px solid rgba(15,109,223,0.12);
+      border: 1px solid rgba(26,120,232,0.12);
       border-radius: var(--radius-md);
-      background: rgba(15,109,223,0.04);
+      background: rgba(26,120,232,0.04);
     }
     .summary-box.visible { display: block; }
 
@@ -736,7 +733,7 @@
       font-family: inherit;
       font-size: 0.93rem;
       background: rgba(255,255,255,0.45);
-      border: 1px solid rgba(19,38,61,0.08);
+      border: 1px solid rgba(18,49,75,0.08);
       border-radius: 10px;
       padding: 14px;
       color: var(--ink);
@@ -782,7 +779,7 @@
       opacity: 0;
       pointer-events: none;
       background: var(--ink);
-      color: #fff;
+      color: white;
       border-radius: 999px;
       padding: 10px 16px;
       font-weight: 700;
@@ -850,16 +847,16 @@
         <div class="hero-shell">
           <div class="hero-grid">
             <div>
-              <span class="eyebrow">Student-ready review system</span>
+              <span class="eyebrow">No cap, just better prep</span>
               <h1>Study smarter, not harder.</h1>
-              <p class="lead">Get a playful, guided approach to SASE prep with original reviewer questions, answer explanations, and weekly mock exams built for students who want to improve faster.</p>
+              <p class="lead">A casual, student-friendly SASE prep hub with original reviewer questions, answer explanations, and weekly mock exams that actually help you improve without the stress.</p>
 
               <div class="hero-actions">
                 <a href="#order" class="button primary">Order the reviewer</a>
                 <a href="/exam" class="button secondary">Try the mock portal</a>
               </div>
 
-              <div class="hero-stats" aria-label="Product highlights">
+              <div class="hero-stats" aria-label="Key product metrics">
                 <div class="stat">
                   <strong>450</strong>
                   <span>practice items</span>
@@ -875,7 +872,7 @@
               </div>
             </div>
 
-            <div class="mock-card" aria-label="Mock exam preview">
+            <div class="mock-card" aria-label="Preview of the study material">
               <div class="notebook">
                 <div class="notebook-top">
                   <span class="tag">Reviewer</span>
@@ -904,27 +901,27 @@
     <section id="features" class="section">
       <div class="wrap">
         <div class="section-head">
-          <h2 class="section-title">Built for students who want progress.</h2>
-          <p class="section-sub">A more supportive learning setup that blends practice, review, and confidence-building into one prep toolkit.</p>
+          <h2 class="section-title">Low-stress prep, real progress.</h2>
+          <p class="section-sub">Built with students in mind—clear explanations, better review habits, and less random cramming energy.</p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
             <div class="count">01</div>
             <h3>Study with purpose</h3>
-            <p>Focus on original practice questions that help you understand the logic behind the answer—no more blind guessing.</p>
+            <p>Original practice questions that help you understand what’s really going on instead of just guessing and hoping.</p>
           </article>
 
           <article class="feature-card">
             <div class="count">02</div>
             <h3>Practice under pressure</h3>
-            <p>Build confidence with timed mock exams that mimic the pacing and stress of a real review session.</p>
+            <p>Timed mock exams help you get used to the pace and pressure without the whole “panic mode” thing.</p>
           </article>
 
           <article class="feature-card">
             <div class="count">03</div>
-            <h3>Track what matters</h3>
-            <p>See your scores, revisit mistakes, and tell exactly which sections need more attention before exam day.</p>
+            <h3>Track your weak spots</h3>
+            <p>See your results, revisit mistakes, and know where to focus your next study session without overthinking it.</p>
           </article>
         </div>
       </div>
@@ -933,23 +930,23 @@
     <section class="section">
       <div class="wrap value-grid">
         <article class="value-card">
-          <span class="eyebrow" style="color: var(--primary-dark);">What’s inside</span>
-          <h3>Everything you need for a strong review cycle</h3>
+          <span class="eyebrow" style="color: var(--primary-dark);">What’s included</span>
+          <h3>Everything in one student bundle</h3>
           <ul class="value-list">
-            <li>450 original practice questions with explanations</li>
-            <li>Free online mock exam portal access</li>
-            <li>Weekly mock release rhythm for consistent prep</li>
+            <li>450 original reviewer questions with explanations</li>
+            <li>Free access to the online mock exam portal</li>
+            <li>Better review rhythm for weekly prep and consistency</li>
           </ul>
         </article>
 
         <article class="value-card">
-          <span class="eyebrow" style="color: var(--primary-dark);">Why students like it</span>
-          <h3>Less stress, more clarity</h3>
-          <p>We designed the reviewer to feel supportive instead of overwhelming—clear guidance, straightforward explanations, and enough structure to help you keep improving.</p>
+          <span class="eyebrow" style="color: var(--primary-dark);">Why students use it</span>
+          <h3>Less chaos, more clarity</h3>
+          <p>We designed this to feel supportive and practical—not overwhelming. It’s easy to review, easy to follow, and built for people who want actual improvement.</p>
           <ul class="value-list">
-            <li>Easy to review on your phone or laptop</li>
-            <li>Clear score feedback after every mock</li>
-            <li>Helpful for regular study, not just last-minute cramming</li>
+            <li>Simple review flow on phone or laptop</li>
+            <li>Feedback that helps you improve fast</li>
+            <li>Useful for steady prep, not just last-minute panic</li>
           </ul>
         </article>
       </div>
@@ -960,19 +957,19 @@
         <div class="portal-band">
           <div class="portal-inner">
             <span class="eyebrow">Free with your reviewer</span>
-            <h2 class="section-title" style="color:#fff; margin-top: 12px;">Train like it’s the real thing.</h2>
+            <h2 class="section-title" style="color:white; margin-top:12px;">Train like it’s the real thing.</h2>
             <div class="portal-grid">
               <article class="portal-card">
                 <h3>8 full mock exams</h3>
-                <p>Build stamina and confidence with one exam released every week over eight weeks.</p>
+                <p>One exam released each week so you can build momentum without cramming at the last minute.</p>
               </article>
               <article class="portal-card">
                 <h3>Review every answer</h3>
-                <p>Revisit each question and understand the reasoning behind the correct answer.</p>
+                <p>Check what you got wrong, understand why, and turn mistakes into real progress.</p>
               </article>
               <article class="portal-card">
                 <h3>Know your weak spots</h3>
-                <p>Spot the sections that need more work and focus your next study session wisely.</p>
+                <p>See exactly which sections need more work and focus your next study session wisely.</p>
               </article>
             </div>
             <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
@@ -986,17 +983,17 @@
     <section id="faq" class="section">
       <div class="wrap">
         <div class="section-head">
-          <h2 class="section-title">Common questions.</h2>
-          <p class="section-sub">Everything you need to know before ordering.</p>
+          <h2 class="section-title">The usual questions.</h2>
+          <p class="section-sub">Straight answers before you pay.</p>
         </div>
 
         <div class="faq-grid">
           <article class="faq-item">
             <h3>Is this an official MSU reviewer?</h3>
-            <p>No. This is an unofficial SASE practice reviewer with original questions and is not affiliated with or endorsed by MSU.</p>
+            <p>No. This is an unofficial practice reviewer with original questions and is not affiliated with or endorsed by MSU.</p>
           </article>
           <article class="faq-item">
-            <h3>How do I receive the reviewer?</h3>
+            <h3>How do I receive it?</h3>
             <p>After your payment is verified, your PDF and unique portal password are sent via Messenger.</p>
           </article>
           <article class="faq-item">
@@ -1015,7 +1012,7 @@
       <div class="wrap order-wrap">
         <aside class="info-card">
           <span class="eyebrow" style="color: var(--primary-dark);">Pay and send details</span>
-          <h3>Student-friendly payment process</h3>
+          <h3>Easy payment, easy process</h3>
           <div class="qr-box">
             <img src="qr-payment-167.png" alt="GCash QR code for the ₱167 reviewer payment" width="600" height="644" />
           </div>
