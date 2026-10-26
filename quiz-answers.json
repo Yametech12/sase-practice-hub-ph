@@ -834,5 +834,17 @@
     },
     "post_url": "https://www.facebook.com/reel/1836800387363797/",
     "post_fbid": "1836800387363797"
+  },
+  "1125020586775533": {
+    "answer": "B",
+    "question": "Doctor is to hospital as teacher is to __",
+    "choices": {
+      "A": "student",
+      "B": "school",
+      "C": "book",
+      "D": "lesson"
+    },
+    "post_url": "https://www.facebook.com/reel/1125020586775533/",
+    "post_fbid": "1125020586775533"
   }
 }
