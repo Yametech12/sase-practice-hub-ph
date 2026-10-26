@@ -10,7 +10,9 @@
  *   - "done"        : submitted (score, pct, sections, weak_area, submitted_at)
  *   - "locked"      : not yet unlocked (includes unlocks_in_ms countdown)
  *
- * Unlock rule: exam N unlocks when floor((now - created_at)/7d)+1 >= N.
+ * Availability: all 8 exams are open immediately (the weekly release
+ * schedule was removed Oct 27, 2026); "locked" stays in the contract for
+ * older clients but is no longer returned.
  * An in_progress attempt whose timer has expired is listed as "expired" , 
  * the client shows "Time expired, view result" and the next exam-questions
  * call auto-grades it (consuming the attempt).

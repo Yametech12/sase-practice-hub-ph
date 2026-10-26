@@ -1,8 +1,9 @@
 /**
  * SASE Online Mock Exam Portal, shared server library (Vercel Node functions)
  *
- * SPEC v2: 8 weekly exams x 180 questions, 1 attempt per exam.
- * Exam N unlocks floor((now - created_at)/7d)+1 >= N (created_at = order date).
+ * SPEC v2: 8 exams x 180 questions, 1 attempt per exam.
+ * All 8 exams are open immediately from purchase (owner decision Oct 27,
+ * 2026: the weekly release schedule was removed).
  *
  * Server-authoritative state lives in Neon Postgres (DATABASE_URL):
  *   bindings        , { order_id PK, devices JSONB } (1 password = up to 3 devices)
@@ -79,21 +80,20 @@ export function rateLimit(key, max, windowMs) {
   return true;
 }
 
-// ---- weekly unlock schedule ----
+// ---- exam availability ----
+// Owner decision Oct 27, 2026: no weekly release schedule. All 8 exams are
+// open immediately; created_at no longer gates access. examUnlock keeps its
+// signature so existing callers (exam list, question start) work unchanged.
 export function parseCreatedAt(s) {
   if (!s) return 0;
   const t = Date.parse(s);
   return Number.isNaN(t) ? 0 : t;
 }
-// Week N (1-based) unlocks when floor((now-created)/7d)+1 >= N
 export function examUnlock(createdAt, n, now = Date.now()) {
-  const created = parseCreatedAt(createdAt);
-  if (!created) return { unlocked: n === 1, unlocks_in_ms: null, unlock_at: null };
-  const unlockAt = created + (n - 1) * WEEK_MS;
-  const unlocked = now >= unlockAt;
-  return { unlocked, unlocks_in_ms: unlocked ? 0 : unlockAt - now, unlock_at: unlockAt };
+  return { unlocked: true, unlocks_in_ms: 0, unlock_at: null };
 }
-// First still-locked exam after n (for "next exam unlocks in Y days" copy).
+// First still-locked exam after n. Always null now that every exam is open;
+// kept because alreadySubmittedMessage and older callers reference it.
 export function nextLockedExam(createdAt, n, now = Date.now()) {
   for (let m = n + 1; m <= EXAM_COUNT; m++) {
     const u = examUnlock(createdAt, m, now);
@@ -634,19 +634,16 @@ export function bindingHasDevice(b, dh) {
 export const DEVICE_MISMATCH_MSG =
   "This password is already used on 3 devices, the maximum allowed. If you changed phones, message SASE Practice Hub PH and we'll reset it for you.";
 export const EXAM_LOCKED_MSG =
-  "This exam is not unlocked yet. New exams release every 7 days from your purchase date.";
-// Copy-audit Fix 2: done-exam re-entry message with the buyer's score + next unlock.
+  "This exam could not be opened. Please message SASE Practice Hub PH so we can help.";
+// Done-exam re-entry message with the buyer's score. All 8 exams are open
+// (no weekly schedule since Oct 27, 2026), so the copy no longer mentions
+// unlocking; the last exam gets the "finished all 8" line.
 export function alreadySubmittedMessage(pct, createdAt, n, now = Date.now()) {
-  const next = nextLockedExam(createdAt, n, now);
   const pctStr = Number.isInteger(pct) ? String(pct) : pct.toFixed(1);
-  if (next) {
-    if (next.unlocks_in_ms == null) {
-      return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks soon, use the time to review the weak areas in your results.`;
-    }
-    const days = Math.max(1, Math.ceil(next.unlocks_in_ms / (24 * 3600 * 1000)));
-    return `You've already completed this exam with a score of ${pctStr}%. Your next exam unlocks in ${days} day${days === 1 ? "" : "s"}, use the time to review the weak areas in your results.`;
+  if (n >= EXAM_COUNT) {
+    return `You've already completed this exam with a score of ${pctStr}%. You've finished all 8 exams, use your results to review the weak areas.`;
   }
-  return `You've already completed this exam with a score of ${pctStr}%. You've finished all 8 exams, use your results to review the weak areas.`;
+  return `You've already completed this exam with a score of ${pctStr}%. All 8 exams are open, pick another one from the list and use your results to review the weak areas.`;
 }
 export const ACTIVE_ATTEMPT_MSG = (m) =>
   `You have Mock Exam ${m} in progress, finish it or give it up before starting another exam.`;

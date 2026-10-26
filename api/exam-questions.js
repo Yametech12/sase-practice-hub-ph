@@ -9,7 +9,7 @@
  * remaining = 2h - (now - started_at). Client never sends timestamps.
  *
  * Rules:
- *   - 403 locked            : exam not yet unlocked (weekly schedule, server-side)
+ *   - 403 locked            : legacy status; all exams are open since Oct 27, 2026, so this is no longer returned
  *   - 403 already_submitted : exam already submitted, 1 attempt per exam, no retakes
  *   - 403 active_attempt    : another exam is in progress, resume or forfeit it first
  *   - expired while away   : auto-grades with saved answers (consumes the
@@ -86,8 +86,9 @@ export default async function handler(req, res) {
     const { sha: bankSha, bank } = await loadBank();
     const now = Date.now();
 
-    // Weekly unlock is checked BEFORE the bank (a locked exam must 403 even
-    // if its bank isn't deployed yet, never leak existence/timing info).
+    // Availability is checked BEFORE the bank. examUnlock now always returns
+    // unlocked (weekly schedule removed Oct 27, 2026); the check stays so the
+    // gate can be reinstated in one place if ever needed.
     const u0 = examUnlock(p.created_at, n, now);
     if (!u0.unlocked) {
       logEvent({ type: "start_refused", reason: "locked", order_id: p.order_id, exam: n, ip_hash: ipHash(req) });

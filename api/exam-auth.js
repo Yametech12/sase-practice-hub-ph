@@ -6,8 +6,9 @@
  * buyer's password are bound to that order_id. A 4th distinct device gets 403
  * and the bound devices are NOT disturbed.
  *
- * Returns a token embedding { order_id, device_hash, created_at }, the
- * weekly exam schedule is derived from created_at.
+ * Returns a token embedding { order_id, device_hash, created_at }.
+ * (created_at is carried for record integrity; exam access no longer
+ * depends on it since the weekly schedule was removed Oct 27, 2026.)
  *
  * Per-IP rate limiting (defense in depth): 20 auth attempts per 10 minutes.
  */
