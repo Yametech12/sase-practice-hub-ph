@@ -383,6 +383,48 @@
       border: 2px solid rgba(18,49,75,0.32);
     }
 
+    .hero-sample-link {
+      margin: -6px 0 22px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-sample-link a {
+      color: var(--yellow);
+      font-weight: 800;
+      text-underline-offset: 3px;
+    }
+
+    .sample-band {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 30px 28px;
+      text-align: center;
+    }
+    .sample-band h2 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 12px;
+    }
+    .sample-band p {
+      margin: 0 auto 20px;
+      color: var(--muted);
+      max-width: 680px;
+    }
+    .sample-band .button {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 12px 22px rgba(26,120,232,0.28);
+    }
+    .sample-band small {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
     .section {
       padding: 34px 0;
     }
@@ -948,6 +990,8 @@
                 <a href="/exam" class="button secondary">Already ordered? Open portal</a>
               </div>
 
+              <p class="hero-sample-link">New here? Start with the free 10-question sample: <a href="/sample">Try the free sample</a></p>
+
               <div class="hero-stats" aria-label="Key product metrics">
                 <div class="stat">
                   <strong>450</strong>
@@ -1068,6 +1112,17 @@
       </div>
     </section>
 
+    <section id="free-sample" class="section">
+      <div class="wrap">
+        <div class="sample-band">
+          <h2>Not sure yet? Try 10 questions first.</h2>
+          <p>Take our free sample before you decide. Ten practice questions across Language Usage, Mathematics, Aptitude, and Science, each with the correct answer and a full explanation at the end. No sign up, no payment, no timer. Just an honest look at where you stand today.</p>
+          <a href="/sample" class="button">Start the free sample</a>
+          <small>Free forever. The full reviewer is ₱167 if you decide you want more practice.</small>
+        </div>
+      </div>
+    </section>
+
     <section id="mock-exam-portal" class="section">
       <div class="wrap">
         <div class="portal-band">
@@ -1117,7 +1172,7 @@
           </article>
           <article class="faq-item">
             <h3>Can I see a sample first?</h3>
-            <p>Yes. Sample questions and study tips are shared on <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">our Facebook page</a> before purchase.</p>
+            <p>Yes. You can take a free 10-question sample right here on the site, with the correct answer and an explanation for every question: <a href="/sample">Free SASE practice sample</a>. More sample questions and study tips are also shared on our Facebook page.</p>
           </article>
           <article class="faq-item">
             <h3>What if I need help?</h3>

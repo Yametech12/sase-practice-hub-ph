@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d4ea3">
+<meta name="description" content="Free 10-question SASE practice sample from SASE Practice Hub PH, with a score, a per-subject breakdown, and an explanation for every question. No sign up, no timer.">
+<link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/sample">
+<title>Free SASE Practice Sample, SASE Practice Hub PH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/exam/exam-ui.css">
+<link rel="stylesheet" href="/sample/sample.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="brandbar">
+  <div class="brandbar-inner">
+    <a href="/" class="back-link" aria-label="Back to home page">&#8592; Home</a>
+    <div class="brand" aria-label="SASE Practice Hub PH">
+      <span class="brand-mark" aria-hidden="true">📘</span>
+      <span class="brand-name">SASE Practice Hub PH</span>
+    </div>
+    <span class="practice-badge">FREE SAMPLE</span>
+  </div>
+</header>
+
+<main class="app" id="main-content">
+
+  <section id="screen-intro" class="screen active" aria-labelledby="intro-title">
+    <div class="instr-card">
+      <p class="instr-kicker">FREE SAMPLE</p>
+      <h1 id="intro-title" class="instr-title" tabindex="-1">Free SASE Practice Sample</h1>
+      <p class="instr-lead">Answer 10 practice questions in Language Usage, Mathematics, Aptitude, and Science. Every question has four choices, A to D. There is no timer and no sign up, so take your time and answer honestly. When you finish, you will see your score, the subjects to review first, and the explanation for every question.</p>
+      <button id="start-btn" class="btn btn-primary btn-block" type="button">Start the free sample</button>
+      <p class="sample-disclaimer">This is unofficial practice material from SASE Practice Hub PH. It is not the official MSU-SASE and is not affiliated with or endorsed by Mindanao State University.</p>
+    </div>
+  </section>
+
+  <section id="screen-quiz" class="screen" aria-label="Sample questions">
+    <div class="progress-row">
+      <span id="progress-text" class="progress-text">Question 1 of 10</span>
+    </div>
+    <div class="progress-track" role="progressbar" aria-label="Sample progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10"><div id="progress-fill" class="progress-fill"></div></div>
+
+    <article class="qcard">
+      <div class="qcard-top">
+        <span id="q-section" class="q-section">Language Usage</span>
+      </div>
+      <h2 id="q-number" class="q-number">Question 1</h2>
+      <p id="q-text" class="q-text">Loading question…</p>
+      <div id="q-options" class="options" role="radiogroup" aria-label="Answer choices"></div>
+    </article>
+
+    <p id="submit-prompt" class="sample-note" hidden>That was the last question. Submit to see your score and the explanation for every item.</p>
+
+    <div id="skip-warning" class="sample-warning" role="alert" hidden>
+      <p id="skip-warning-text"></p>
+      <div class="sample-warning-actions">
+        <button id="skip-back-btn" class="btn btn-secondary" type="button">Go back</button>
+        <button id="skip-submit-btn" class="btn btn-submit" type="button">Submit and see my score</button>
+      </div>
+    </div>
+
+    <div class="sample-nav">
+      <button id="prev-btn" class="btn btn-secondary" type="button"><span aria-hidden="true">←</span> Previous</button>
+      <button id="next-btn" class="btn btn-primary" type="button">Next <span aria-hidden="true">→</span></button>
+      <button id="submit-btn" class="btn btn-submit" type="button" hidden>Submit and see my score</button>
+    </div>
+  </section>
+
+  <section id="screen-score" class="screen" aria-labelledby="score-title">
+    <div class="instr-card">
+      <p class="instr-kicker">Sample complete</p>
+      <h2 id="score-title" class="instr-title" tabindex="-1">Your sample result</h2>
+      <p id="score-line" class="sample-score-line">You scored 0 out of 10.</p>
+      <p id="band-text" class="instr-lead"></p>
+
+      <h3 class="instr-h">How you did per subject</h3>
+      <ul id="breakdown-list" class="sample-breakdown"></ul>
+      <p id="review-priority" class="sample-priority"></p>
+
+      <h3 class="instr-h">Review your answers</h3>
+      <div id="review-list" class="sample-review"></div>
+
+      <div class="sample-upsell">
+        <h3>Ready for the full reviewer?</h3>
+        <p>The complete MSU-SASE Practice Reviewer includes 450 practice questions with a full explanation for every item, plus two complete 180-item mock exams inside the PDF. Every purchase also includes free access to our online mock exam portal: 8 full 180-question mock exams, all open right away, with a 2-hour practice timer, instant scores, and a full answer review after every exam.</p>
+        <p class="sample-price">Full reviewer: ₱167, one-time payment via GCash.</p>
+        <p>To order:</p>
+        <ol class="sample-steps">
+          <li>Send ₱167 via GCash to 0991 277 4308.</li>
+          <li>Save the GCash reference number from your receipt. Use the 13-digit transaction reference, not your phone number.</li>
+          <li>Message SASE Practice Hub PH with your name and reference number, or use the order form on our home page.</li>
+        </ol>
+        <p>Your PDF is sent through Messenger as soon as your payment is verified.</p>
+        <a href="/#order" class="btn btn-primary btn-block sample-upsell-btn">Order the full reviewer</a>
+      </div>
+
+      <div class="sample-plan">
+        <h3>Want a free study plan first?</h3>
+        <p>Message our Facebook Page and start your message with the word SAMPLE, with your score. Example: SAMPLE 7/10. Tell us your weakest subject from the breakdown above and we will reply with a free 7-day study plan for it. No purchase needed.</p>
+        <a href="https://www.facebook.com/profile.php?id=61594997556905" class="btn btn-secondary btn-block sample-upsell-btn" target="_blank" rel="noopener">Message us on Facebook</a>
+      </div>
+
+      <p class="sample-closing">No pressure either way. If you are not ready to order, keep practicing with the free questions on our Page and come back when you are.</p>
+      <button id="retake-btn" class="btn btn-ghost sample-retake" type="button">Take the sample again</button>
+      <p class="sample-disclaimer">This is unofficial practice material from SASE Practice Hub PH. It is not the official MSU-SASE and is not affiliated with or endorsed by Mindanao State University.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-foot">
+  <p>SASE Practice Hub PH · Practice material for study purposes only, not the official MSU-SASE.</p>
+</footer>
+
+<script src="/sample/sample.js"></script>
+</body>
+</html>
