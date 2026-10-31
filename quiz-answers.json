@@ -954,5 +954,17 @@
     },
     "post_url": "https://www.facebook.com/reel/1812727156298314/",
     "post_fbid": "1812727156298314"
+  },
+  "29446696881603410": {
+    "answer": "C",
+    "question": "In right triangle ABC, right-angled at C, AC = 3, BC = 4, and AB = 5. What is sin A?",
+    "choices": {
+      "A": "3/5",
+      "B": "3/4",
+      "C": "4/5",
+      "D": "5/4"
+    },
+    "post_url": "https://www.facebook.com/reel/29446696881603410/",
+    "post_fbid": "29446696881603410"
   }
 }
