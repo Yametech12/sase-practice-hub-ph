@@ -64,6 +64,9 @@ body {
 /* Sync-failure banner: warning styling, not a fatal error */
 #sync-warning { background: var(--amber-bg); border-color: #f0dcb0; margin-bottom: 12px; }
 #sync-warning[hidden] { display: none; }
+/* The logout button is a .back-link (display: inline-flex), which overrides
+   the hidden attribute. It must stay hidden until a session exists. */
+#exam-logout[hidden] { display: none; }
 
 /* ---------- brand bar ---------- */
 .brandbar {

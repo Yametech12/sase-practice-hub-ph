@@ -964,6 +964,17 @@
     .mobile-menu.open { display: block; }
     @media (max-width: 900px) { .nav-toggle { display: inline-flex; } }
     @media (min-width: 901px) { .mobile-menu { display: none !important; } }
+    /* Small phones: keep the header on one clean row. Brand and CTA never
+       wrap; the Portal text link yields (it stays in the hamburger menu). */
+    @media (max-width: 480px) {
+      .topbar-inner { gap: 6px; }
+      .brand { font-size: 0.8rem; white-space: nowrap; gap: 7px; letter-spacing: 0; }
+      .brand-mark { width: 30px; height: 30px; font-size: 15px; }
+      .nav { gap: 10px; }
+      .nav a.nav-portal { display: none; }
+      .nav-cta { white-space: nowrap; padding: 0 10px; font-size: 0.84rem; }
+      .nav-wrap { gap: 8px; }
+    }
     .hero-visual-caption { margin: 10px 4px 0; font-size: 0.78rem; color: rgba(255,255,255,0.72); text-align: center; }
     .faq-item summary { font-size: 1.14rem; font-weight: 800; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .faq-item summary::-webkit-details-marker { display: none; }
