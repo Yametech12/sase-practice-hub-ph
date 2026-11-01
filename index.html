@@ -954,6 +954,29 @@
     @media (max-width: 900px) { .scene { max-width: 420px; margin: 0 auto; width: 100%; } }
     @media (max-width: 420px) { .weak-float { display: none; } .score-float { left: 0; } }
     @media (prefers-reduced-motion: reduce) { .float-card { animation: none; } }
+
+    /* ---------- Batch 1 fixes (Nov 1, 2026) ---------- */
+    .nav-wrap { position: relative; display: flex; align-items: center; gap: 12px; }
+    .nav-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.08); color: #fff; font-size: 22px; line-height: 1; }
+    .mobile-menu { display: none; position: absolute; top: calc(100% + 10px); right: 0; min-width: 200px; background: #0d2440; border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 10px; box-shadow: 0 18px 40px rgba(0,0,0,0.35); z-index: 60; }
+    .mobile-menu a { display: block; padding: 11px 12px; border-radius: 9px; color: rgba(255,255,255,0.92); text-decoration: none; font-weight: 700; }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .mobile-menu.open { display: block; }
+    @media (max-width: 900px) { .nav-toggle { display: inline-flex; } }
+    @media (min-width: 901px) { .mobile-menu { display: none !important; } }
+    .hero-visual-caption { margin: 10px 4px 0; font-size: 0.78rem; color: rgba(255,255,255,0.72); text-align: center; }
+    .faq-item summary { font-size: 1.14rem; font-weight: 800; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 1.3rem; line-height: 1; color: var(--primary-dark); font-weight: 900; flex-shrink: 0; }
+    .faq-item[open ] summary::after { content: "-"; }
+    .faq-item summary + p, .faq-item > p { margin-top: 10px; }
+    details.faq-item { padding: 22px 20px; }
+    .next-steps { margin: 18px 0 0; padding: 18px 18px 18px 22px; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .next-steps h4 { margin: 0 0 10px; font-size: 1rem; color: var(--ink); }
+    .next-steps ol { margin: 0; padding-left: 20px; color: var(--muted); display: grid; gap: 6px; }
+    .next-steps li { padding-left: 2px; }
+    .bank-note { margin-top: 14px; color: var(--muted); font-size: 0.96rem; line-height: 1.6; }
+    .portal-band .bank-note { color: rgba(255,255,255,0.88); }
   </style>
 </head>
 <body>
@@ -998,12 +1021,21 @@
         <span class="brand-mark">📘</span>
         <span>SASE Practice Hub PH</span>
       </div>
+      <div class="nav-wrap">
       <nav class="nav" aria-label="Main navigation">
         <a href="#features">Features</a>
         <a href="/exam" class="nav-portal">Portal</a>
         <a href="#faq">FAQ</a>
         <a href="#order" class="nav-cta">Order now</a>
       </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">&#9776;</button>
+      <div id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+        <a href="#features">Features</a>
+        <a href="/exam">Portal</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order">Order now</a>
+      </div>
+      </div>
     </div>
   </header>
 
@@ -1015,7 +1047,7 @@
             <div>
               <span class="eyebrow">No cap, just better prep</span>
               <h1>Study smarter, not harder.</h1>
-              <p class="lead">A casual, student-friendly SASE prep hub with original reviewer questions, answer explanations, and weekly mock exams that actually help you improve without the stress.</p>
+              <p class="lead">A casual, student-friendly SASE prep hub with original reviewer questions, answer explanations, and 8 full mock exams, all open right away, that actually help you improve without the stress.</p>
 
               <div class="hero-actions">
                 <a href="#order" class="button primary">Order the reviewer</a>
@@ -1040,6 +1072,7 @@
               </div>
             </div>
 
+            <div>
             <div class="mock-card scene" role="img" aria-label="Illustration of a mock exam: a question card with a timer, a score ring showing 86 percent, and a weak-spot tracker">
               <svg class="scene-bg" viewBox="0 0 400 460" aria-hidden="true" focusable="false">
                 <defs>
@@ -1085,6 +1118,8 @@
                 <span>Science · focus here</span>
               </div>
             </div>
+            <p class="hero-visual-caption">Illustration: sample result view</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1127,8 +1162,9 @@
           <ul class="value-list">
             <li>450 original reviewer questions with explanations</li>
             <li>Free access to the online mock exam portal</li>
-            <li>Better review rhythm for weekly prep and consistency</li>
+            <li>Steady review rhythm for consistent prep at your own pace</li>
           </ul>
+          <p class="bank-note">The PDF reviewer and the portal use separate question banks: the PDF holds 450 original practice questions with full explanations, including two complete 180-item mock exams, while the portal holds a separate set of 8 full mock exams of 180 questions each, all open right away, using the same password.</p>
         </article>
 
         <article class="value-card">
@@ -1194,22 +1230,46 @@
         </div>
 
         <div class="faq-grid">
-          <article class="faq-item">
-            <h3>Is this an official MSU reviewer?</h3>
+          <details class="faq-item">
+            <summary>Is this an official MSU reviewer?</summary>
             <p>No. This is an unofficial practice reviewer with original questions and is not affiliated with or endorsed by MSU.</p>
-          </article>
-          <article class="faq-item">
-            <h3>How do I receive it?</h3>
+          </details>
+          <details class="faq-item">
+            <summary>How do I receive it?</summary>
             <p>After your payment is verified, your PDF and unique portal password are sent via Messenger.</p>
-          </article>
-          <article class="faq-item">
-            <h3>Can I see a sample first?</h3>
+          </details>
+          <details class="faq-item">
+            <summary>Can I see a sample first?</summary>
             <p>Yes. You can take a free 10-question sample right here on the site, with the correct answer and an explanation for every question: <a href="/sample">Free SASE practice sample</a>. More sample questions and study tips are also shared on our Facebook page.</p>
-          </article>
-          <article class="faq-item">
-            <h3>What if I need help?</h3>
-            <p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message us on Facebook</a> anytime and we’ll help you understand the material or the process.</p>
-          </article>
+          </details>
+          <details class="faq-item">
+            <summary>What if I need help?</summary>
+            <p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message us on Facebook</a> anytime and we will help you understand the material or the process.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How fast do I get my reviewer?</summary>
+            <p>Within 5 minutes after your payment is verified, you will receive your PDF and your portal password via Messenger.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens after I pay?</summary>
+            <p>Send your GCash reference number to us on Messenger using the order form below. We verify it, then within 5 minutes after verification we send your PDF and portal password. You can then log in to the exam portal and start practicing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>I lost my portal password, what do I do?</summary>
+            <p>Message the Page on Facebook and we will resend or reset it for you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How many devices can use the portal?</summary>
+            <p>Up to 3 devices can use the portal with one password. Message the Page if you need a device reset.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I print the PDF?</summary>
+            <p>Yes, you can print the PDF for your personal study.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does the reviewer cover?</summary>
+            <p>The reviewer covers Language Usage, Mathematics, Aptitude, and Science, built to the 180-item SASE format.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1240,6 +1300,17 @@
           <span class="step-label">After payment</span>
           <h3>Create your order message</h3>
           <p>Enter your full name and Messenger name, then paste the GCash reference number from your receipt.</p>
+
+          <div class="next-steps">
+            <h4>What happens next</h4>
+            <ol>
+              <li>Send your payment of ₱167 via GCash.</li>
+              <li>Send your reference number to us on Messenger using the order message below.</li>
+              <li>We verify your reference number.</li>
+              <li>Within 5 minutes after verification, you receive your PDF and your portal password via Messenger.</li>
+              <li>Log in to the exam portal with your password and start practicing.</li>
+            </ol>
+          </div>
 
           <form id="orderForm" novalidate>
             <div class="field">
@@ -1393,6 +1464,30 @@
 
       copySummary.addEventListener('click', function () {
         copyText(summaryText.textContent, 'Order message copied');
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('mobile-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      document.addEventListener('click', function (event) {
+        if (!menu.classList.contains('open')) return;
+        if (event.target.closest('.nav-wrap')) return;
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       });
     })();
   </script>

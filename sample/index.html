@@ -68,6 +68,7 @@
       <h1 id="intro-title" class="instr-title" tabindex="-1">Free SASE Practice Sample</h1>
       <p class="instr-lead">Answer 10 practice questions in Language Usage, Mathematics, Aptitude, and Science. Every question has four choices, A to D. There is no timer and no sign up, so take your time and answer honestly. When you finish, you will see your score, the subjects to review first, and the explanation for every question.</p>
       <button id="start-btn" class="btn btn-primary btn-block" type="button">Start the free sample</button>
+      <button id="resume-btn" class="btn btn-secondary btn-block sample-resume" type="button" hidden>Resume your sample</button>
       <p class="sample-disclaimer">This is unofficial practice material from SASE Practice Hub PH. It is not the official MSU-SASE and is not affiliated with or endorsed by Mindanao State University.</p>
     </div>
   </section>
@@ -87,13 +88,15 @@
       <div id="q-options" class="options" role="radiogroup" aria-label="Answer choices"></div>
     </article>
 
+    <p id="skip-note" class="sample-note" hidden>Skipped: this question scores zero. You can go back to it before you submit.</p>
+
     <p id="submit-prompt" class="sample-note" hidden>That was the last question. Submit to see your score and the explanation for every item.</p>
 
     <div id="skip-warning" class="sample-warning" role="alert" hidden>
       <p id="skip-warning-text"></p>
       <div class="sample-warning-actions">
         <button id="skip-back-btn" class="btn btn-secondary" type="button">Go back</button>
-        <button id="skip-submit-btn" class="btn btn-submit" type="button">Submit and see my score</button>
+        <button id="skip-review-btn" class="btn btn-secondary" type="button">Review skipped questions</button>
       </div>
     </div>
 

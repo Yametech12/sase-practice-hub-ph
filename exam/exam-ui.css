@@ -172,6 +172,29 @@ body {
 .exam-card.is-locked { opacity: .75; }
 .exam-card.is-locked .exam-num { background: #5b6b8c; } /* white on this = 5.35:1 */
 .exam-score { font-size: 13px; color: var(--blue-700); font-weight: 700; margin: 4px 0 0; }
+.exam-breakdown { font-size: 12px; color: var(--muted); margin: 4px 0 0; line-height: 1.45; }
+/* Rotating card accents: scanning aid only, no meaning per exam */
+.exam-card.accent-0 { border-left: 6px solid var(--blue-700); }
+.exam-card.accent-1 { border-left: 6px solid var(--green); }
+.exam-card.accent-1 .exam-num { background: linear-gradient(135deg, #0e6b44, #12805a); }
+.exam-card.accent-2 { border-left: 6px solid var(--gold); }
+.exam-card.accent-2 .exam-num { background: linear-gradient(135deg, #7a520d, #9a6b14); }
+
+/* ---------- exam list loading state ---------- */
+.exam-list-loading { text-align: center; padding: 8px 0 4px; }
+.exam-list-loading[hidden] { display: none; }
+.exam-list-loading p { margin: 0 0 12px; font-size: 14px; font-weight: 700; color: var(--blue-900); }
+.exam-list-loading .spinner { margin-bottom: 10px; }
+.exam-skeleton-list { display: grid; gap: 12px; text-align: left; }
+.skeleton-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px; display: flex; gap: 14px; align-items: center;
+}
+.skel-num { flex: 0 0 52px; height: 52px; border-radius: 12px; background: var(--blue-100); animation: skeletonPulse 1.2s ease-in-out infinite alternate; }
+.skel-lines { flex: 1; display: grid; gap: 8px; }
+.skel-line { display: block; height: 12px; width: 55%; border-radius: 6px; background: var(--blue-100); animation: skeletonPulse 1.2s ease-in-out infinite alternate; }
+.skel-line-wide { width: 85%; height: 16px; }
+@keyframes skeletonPulse { from { opacity: .55; } to { opacity: 1; } }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -253,6 +276,8 @@ body {
   font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
   color: var(--blue-700); background: var(--blue-100); padding: 4px 10px; border-radius: 999px;
 }
+.subject-chip { border: 1px solid var(--blue-100); box-shadow: inset 0 0 0 1px rgba(36,86,171,.08); }
+.subject-chip[hidden] { display: none; }
 .flag-btn {
   background: transparent; border: 1px solid var(--line); border-radius: 999px;
   padding: 6px 12px; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer;
@@ -295,7 +320,7 @@ body {
 .option.selected .opt-letter { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
 
 /* ---------- exam nav ---------- */
-.exam-nav { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 8px; }
+.exam-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; }
 .exam-nav .btn { padding: 12px 8px; font-size: 14px; }
 
 /* Subtle give-up text button near the nav */
@@ -330,6 +355,15 @@ body {
 .dot-flagged  { background: var(--gold); }
 .dot-current   { background: #fff; border: 2px solid var(--blue-700); }
 .dot-empty     { background: #e8eef9; }
+.grid-filter { margin-bottom: 12px; }
+.grid-filter-label {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font-size: 13px; font-weight: 700; color: var(--blue-900);
+  padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px;
+  min-height: 44px;
+}
+.grid-filter-label input { width: 18px; height: 18px; margin: 0; accent-color: var(--blue-600); }
+.grid-cell.is-filtered-out { display: none; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 8px; margin-bottom: 16px; }
 .grid-cell {
   height: 44px; border-radius: 8px; border: 1px solid var(--line);
@@ -382,6 +416,7 @@ body {
   .screen.active { animation: none; }
   .grid-panel, .confirm-panel { animation: none; }
   .spinner { animation: none; }
+  .skel-num, .skel-line { animation: none; }
   .timer-fill, .progress-fill, .option, .btn { transition: none; }
   .btn:active { transform: none; }
 }
@@ -490,7 +525,7 @@ body {
   position: sticky;
   bottom: 0;
   z-index: 30;
-  grid-template-columns: 1fr 1.25fr 1fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 8px;
   margin: 6px -16px 0;
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));

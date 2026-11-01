@@ -80,6 +80,16 @@
     <div id="exam-list-wrap" hidden>
       <h2 class="section-title">Your Exams</h2>
       <p class="section-sub">All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>.</p>
+      <div id="exam-list-loading" class="exam-list-loading" role="status" aria-live="polite" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading your exams...</p>
+        <div class="exam-skeleton-list" aria-hidden="true">
+          <div class="skeleton-card"><span class="skel-num"></span><span class="skel-lines"><span class="skel-line skel-line-wide"></span><span class="skel-line"></span></span></div>
+          <div class="skeleton-card"><span class="skel-num"></span><span class="skel-lines"><span class="skel-line skel-line-wide"></span><span class="skel-line"></span></span></div>
+          <div class="skeleton-card"><span class="skel-num"></span><span class="skel-lines"><span class="skel-line skel-line-wide"></span><span class="skel-line"></span></span></div>
+          <div class="skeleton-card"><span class="skel-num"></span><span class="skel-lines"><span class="skel-line skel-line-wide"></span><span class="skel-line"></span></span></div>
+        </div>
+      </div>
       <div id="list-error" class="error-card" role="alert" hidden>
         <p id="list-error-text"></p>
         <button id="list-error-dismiss" class="btn btn-secondary" type="button">Dismiss</button>
@@ -115,6 +125,7 @@
         <li><strong>Pick one answer per question</strong> (A, B, C or D). You can change it any time before you submit.</li>
         <li><strong>Your answers save automatically</strong> to the server, so a refresh or dropped connection won't lose them.</li>
         <li><strong>The timer keeps running</strong> if you close the page. Come back to <em>Your Exams</em> and tap <em>Resume</em> before time runs out.</li>
+        <li><strong>Once you start, the 2-hour timer runs even if you close the page. Start only when you are ready to finish.</strong></li>
         <li><strong>Use Flag and the Grid</strong> to mark questions to revisit and jump to any question. Skipped questions score no points.</li>
         <li><strong>Submit when you're done.</strong> If time runs out, your saved answers are submitted for you.</li>
         <li><strong>You can't retake an exam.</strong> Submitting or giving up uses your one attempt.</li>
@@ -153,14 +164,14 @@
     </div>
 
     <div class="progress-row">
-      <span id="progress-text" class="progress-text">Question 1 of 180</span>
+      <span id="progress-text" class="progress-text">Question 1 of 180, 0 answered (0%)</span>
       <button id="grid-toggle" class="btn btn-ghost" type="button" aria-label="Open question navigator"><span aria-hidden="true">☰</span> Grid</button>
     </div>
     <div class="progress-track" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill" class="progress-fill"></div></div>
 
     <article class="qcard">
       <div class="qcard-top">
-        <span id="q-section" class="q-section">Language Usage</span>
+        <span id="q-section" class="q-section subject-chip">Language Usage</span>
         <button id="flag-btn" class="flag-btn" type="button" aria-pressed="false" title="Flag for review"><span aria-hidden="true">⚑</span> Flag</button>
       </div>
       <h2 id="q-number" class="q-number">Question 1</h2>
@@ -172,7 +183,6 @@
 
     <div class="exam-nav">
       <button id="prev-btn" class="btn btn-secondary" type="button"><span aria-hidden="true">←</span> Previous</button>
-      <button id="submit-btn" class="btn btn-submit" type="button">Submit Exam</button>
       <button id="next-btn" class="btn btn-primary" type="button">Next <span aria-hidden="true">→</span></button>
     </div>
     <button id="forfeit-btn" class="forfeit-btn" type="button">Give up on this attempt</button>
@@ -188,6 +198,12 @@
           <span><i class="dot dot-flagged"></i>Flagged</span>
           <span><i class="dot dot-current"></i>Current</span>
           <span><i class="dot dot-empty"></i>Skipped</span>
+        </div>
+        <div class="grid-filter">
+          <label class="grid-filter-label" for="grid-flagged-only">
+            <input type="checkbox" id="grid-flagged-only">
+            <span>Flagged only</span>
+          </label>
         </div>
         <div id="grid" class="grid"></div>
         <button id="grid-submit" class="btn btn-submit btn-block" type="button">Submit Exam</button>

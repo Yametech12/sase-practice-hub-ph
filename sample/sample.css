@@ -23,6 +23,9 @@
 }
 .sample-note[hidden] { display: none; }
 
+.sample-resume { margin-top: 10px; }
+.sample-resume[hidden] { display: none; }
+
 .sample-warning {
   background: var(--amber-bg);
   border: 1px solid #f0dcb0;

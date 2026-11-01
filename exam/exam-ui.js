@@ -269,11 +269,17 @@
   if (pageFoot) pageFoot.appendChild(helpPara);
 
   function loadExamList() {
+    var loadingEl = $("exam-list-loading");
+    var listEl = $("exam-list");
+    if (listEl) listEl.innerHTML = "";
+    $("exam-list-wrap").hidden = false;
+    if (loadingEl) loadingEl.hidden = false;
     api("/api/exam-list", { token: state.token })
       .then(function (meta) {
+        if (loadingEl) loadingEl.hidden = true;
         var list = $("exam-list");
         list.innerHTML = "";
-        (meta.exams || []).forEach(function (ex) { list.appendChild(examCard(ex)); });
+        (meta.exams || []).forEach(function (ex, idx) { list.appendChild(examCard(ex, idx)); });
         $("exam-list-wrap").hidden = false;
         /* No auto-start: an in-progress exam waits for an explicit Resume tap
            (audit fix). The Resume button on the card + the resume banner in
@@ -281,6 +287,7 @@
         if (logoutBtn) logoutBtn.hidden = false;
       })
       .catch(function (err) {
+        if (loadingEl) loadingEl.hidden = true;
         if (err.status === 401) { /* token expired: back to the gate */
           try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
           state.token = null;
@@ -290,6 +297,7 @@
           gateError.textContent = err.message || "Your session expired. Please sign in again.";
           gateError.hidden = false;
         } else {
+          if (listEl) listEl.innerHTML = "";
           $("exam-list-wrap").hidden = false; // error card lives inside this wrapper
           showListError(err.message || "Could not load your exams. Please try again.");
         }
@@ -304,21 +312,24 @@
     $("list-error").hidden = true;
   });
 
-  function examCard(ex) {
+  function examCard(ex, index) {
     var card = document.createElement("div");
-    card.className = "exam-card" +
+    var accentIdx = (typeof index === "number" && isFinite(index)) ? Math.abs(index) % 3 : 0;
+    card.className = "exam-card accent-" + accentIdx +
       (ex.status === "done" ? " is-done" : "") +
       (ex.status === "locked" ? " is-locked" : "");
+    var donePct = (ex.pct != null ? ex.pct : (ex.total && ex.score != null ? Math.round(ex.score / ex.total * 1000) / 10 : null));
     var statusLabel =
       ex.status === "available"  ? '<span class="exam-status status-available">Available</span>' :
-      ex.status === "in_progress"? '<span class="exam-status status-inprogress">In progress</span>' :
+      ex.status === "in_progress"? '<span class="exam-status status-inprogress">In Progress</span>' :
       ex.status === "expired"    ? '<span class="exam-status status-locked">Time expired</span>' :
-      ex.status === "done"       ? '<span class="exam-status status-done">Done</span>' :
+      ex.status === "done"       ? '<span class="exam-status status-done">Completed' + (donePct != null ? " · " + escapeHtml(String(donePct)) + "%" : "") + "</span>" :
                                    '<span class="exam-status status-locked">Locked</span>';
+    var breakdown = '<p class="exam-breakdown">Language Usage 80, Mathematics 40, Aptitude 30, Science 30</p>';
     var meta;
     if (ex.status === "done") {
-      var pct = (ex.pct != null ? ex.pct : (ex.total ? Math.round(ex.score / ex.total * 1000) / 10 : null));
-      meta = '<p class="exam-score">' + (pct != null ? "Done · Your score: " + pct + "%" : "Done") + "</p>";
+      var pct = donePct;
+      meta = '<p class="exam-score">' + (pct != null ? "Completed · Your score: " + pct + "%" : "Completed") + "</p>";
     } else if (ex.status === "locked") {
       var unlockText = (ex.unlocks_in_ms != null ? fmtDays(ex.unlocks_in_ms) : "a few days");
       var unlockDate = "";
@@ -341,7 +352,7 @@
     }
     card.innerHTML =
       '<div class="exam-num">' + escapeHtml(String(ex.n)) + "</div>" +
-      '<div class="exam-body"><h3>Mock Exam ' + escapeHtml(String(ex.n)) + "</h3>" + meta + statusLabel + "</div>";
+      '<div class="exam-body"><h3>Mock Exam ' + escapeHtml(String(ex.n)) + "</h3>" + meta + breakdown + statusLabel + "</div>";
     if (ex.status === "available" || ex.status === "in_progress") {
       var btn = document.createElement("button");
       btn.className = "btn btn-primary";
@@ -454,7 +465,7 @@
         if (warn) warn.hidden = true;
         /* Re-enable the persistent exam controls (a 401 recovery may have
            locked them via lockExamUI). Option buttons are rebuilt fresh. */
-        ["flag-btn", "prev-btn", "next-btn", "submit-btn", "forfeit-btn"].forEach(function (id) {
+        ["flag-btn", "prev-btn", "next-btn", "forfeit-btn"].forEach(function (id) {
           var el = $(id);
           if (el) el.disabled = false;
         });
@@ -586,7 +597,12 @@
   function renderQuestion(scroll) {
     var q = currentQ();
     if (!q) return;
-    $("q-section").textContent = q.section || "";
+    var subjectEl = $("q-section");
+    if (subjectEl) {
+      var subjectText = q.subject || q.section || "";
+      subjectEl.textContent = subjectText;
+      subjectEl.hidden = !subjectText;
+    }
     $("q-number").textContent = "Question " + (q.number != null ? q.number : state.currentIndex + 1);
     var qp = $("q-passage");
     if (q.passage) { qp.textContent = q.passage; qp.hidden = false; }
@@ -594,7 +610,7 @@
     $("q-text").textContent = q.question || "";
     renderOptions(q);
     updateProgress();
-    updateGridCell(q.qid);
+    state.questions.forEach(function (qq) { updateGridCell(qq.qid); });
     if (scroll) {
       /* Jump straight to the top of the question: instant and reliable on
          mobile (smooth scrollIntoView proved flaky), then replay the card's
@@ -667,18 +683,29 @@
   function updateProgress() {
     var answered = Object.keys(state.answers).length;
     var total = state.questions.length;
-    $("progress-text").textContent = "Question " + (state.currentIndex + 1) + " of " + total + " · " + answered + " answered";
+    var pct = total ? Math.round(answered / total * 100) : 0;
+    $("progress-text").textContent = "Question " + (state.currentIndex + 1) + " of " + total + ", " + answered + " answered (" + pct + "%)";
     $("progress-fill").style.transform = "scaleX(" + (total ? answered / total : 0) + ")";
-    $("progress-fill").parentElement.setAttribute("aria-valuenow", String(total ? Math.round(answered / total * 100) : 0));
+    $("progress-fill").parentElement.setAttribute("aria-valuenow", String(pct));
     var prev = $("prev-btn");
-    prev.disabled = state.currentIndex === 0;
-    prev.style.opacity = state.currentIndex === 0 ? ".4" : "1";
+    if (prev) {
+      prev.disabled = state.currentIndex === 0;
+      prev.style.opacity = state.currentIndex === 0 ? ".4" : "1";
+    }
+    var next = $("next-btn");
+    if (next) {
+      var isLast = total > 0 && state.currentIndex === total - 1;
+      next.innerHTML = isLast ? "Review and Submit" : 'Next <span aria-hidden="true">→</span>';
+      next.setAttribute("aria-label", isLast ? "Review and submit exam" : "Next question");
+      next.disabled = false;
+    }
   }
 
   $("prev-btn").addEventListener("click", function () {
     if (state.currentIndex > 0) { state.currentIndex--; renderQuestion(true); }
   });
   $("next-btn").addEventListener("click", function () {
+    if (state.questions.length && state.currentIndex === state.questions.length - 1) { openConfirm(); return; }
     if (state.currentIndex < state.questions.length - 1) { state.currentIndex++; renderQuestion(true); }
   });
   $("flag-btn").addEventListener("click", function () {
@@ -723,7 +750,21 @@
       grid.appendChild(cell);
     });
     state.questions.forEach(function (q) { updateGridCell(q.qid); });
+    applyGridFilter();
   }
+
+  /* Display-only filter: hide non-flagged cells when the toggle is on. */
+  function applyGridFilter() {
+    var toggle = $("grid-flagged-only");
+    var only = !!(toggle && toggle.checked);
+    state.questions.forEach(function (q) {
+      var cell = state.cellByQid[q.qid];
+      if (!cell) return;
+      cell.classList.toggle("is-filtered-out", only && !state.flagged[q.qid]);
+    });
+  }
+  var gridFlaggedOnly = $("grid-flagged-only");
+  if (gridFlaggedOnly) gridFlaggedOnly.addEventListener("change", applyGridFilter);
 
   /* A11Y K8: cell state in the accessible name. */
   function updateGridCell(qid) {
@@ -740,6 +781,8 @@
       (state.flagged[qid] ? ", flagged for review" : "") +
       (idx === state.currentIndex ? ", current question" : "");
     cell.setAttribute("aria-label", label);
+    if (idx === state.currentIndex) cell.setAttribute("aria-current", "true");
+    else cell.removeAttribute("aria-current");
     var mark = cell.querySelector(".flag-mark");
     if (state.flagged[qid] && !mark) {
       var s = document.createElement("span");
@@ -793,7 +836,7 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 
-  $("grid-toggle").addEventListener("click", function () { openDialog("grid-overlay"); });
+  $("grid-toggle").addEventListener("click", function () { applyGridFilter(); openDialog("grid-overlay"); });
   $("grid-close").addEventListener("click", closeDialog);
   $("grid-overlay").addEventListener("click", function (e) { if (e.target === this) closeDialog(); });
   $("confirm-cancel").addEventListener("click", closeDialog);
@@ -866,7 +909,8 @@
     $("flag-btn").disabled = true;
     $("prev-btn").disabled = true;
     $("next-btn").disabled = true;
-    $("submit-btn").disabled = true;
+    var submitBtnEl = $("submit-btn");
+    if (submitBtnEl) submitBtnEl.disabled = true;
     $("forfeit-btn").disabled = true;
   }
 
@@ -884,7 +928,8 @@
       (flagged ? ", " + flagged + " flagged for review." : ".");
     openDialog("confirm-overlay");
   }
-  $("submit-btn").addEventListener("click", openConfirm);
+  var inRowSubmitBtn = $("submit-btn");
+  if (inRowSubmitBtn) inRowSubmitBtn.addEventListener("click", openConfirm);
   $("grid-submit").addEventListener("click", function () { closeDialog(); openConfirm(); });
   $("confirm-ok").addEventListener("click", function () {
     closeDialog();

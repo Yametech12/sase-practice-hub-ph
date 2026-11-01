@@ -90,6 +90,31 @@ var BANDS = [
 
 var current = 0;
 var answers = QUESTIONS.map(function () { return null; });
+var skipWarnedFor = -1;
+
+var STORAGE_KEY = "sase-sample-progress-v1";
+
+function saveProgress() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ current: current, answers: answers }));
+  } catch (e) { /* storage unavailable: resume is optional */ }
+}
+
+function loadProgress() {
+  try {
+    var raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) { return null; }
+    var saved = JSON.parse(raw);
+    if (!saved || !Array.isArray(saved.answers) || saved.answers.length !== QUESTIONS.length) { return null; }
+    if (typeof saved.current !== "number" || saved.current < 0 || saved.current >= QUESTIONS.length) { return null; }
+    var started = saved.current > 0 || saved.answers.some(function (a) { return a !== null; });
+    return started ? saved : null;
+  } catch (e) { return null; }
+}
+
+function clearProgress() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+}
 
 function el(id) { return document.getElementById(id); }
 
@@ -130,6 +155,8 @@ function renderQuestion() {
 
     btn.addEventListener("click", function () {
       answers[current] = letter;
+      skipWarnedFor = -1;
+      saveProgress();
       renderQuestion();
     });
     box.appendChild(btn);
@@ -141,6 +168,7 @@ function renderQuestion() {
   el("submit-btn").hidden = !isLast;
   el("submit-prompt").hidden = !isLast;
   el("skip-warning").hidden = true;
+  el("skip-note").hidden = true;
 }
 
 function skippedCount() {
@@ -151,11 +179,13 @@ function submit() {
   var skipped = skippedCount();
   if (skipped > 0 && el("skip-warning").hidden) {
     el("skip-warning-text").textContent =
-      "You skipped " + skipped + " questions. Skipped questions score zero. Go back if you want to answer them, or submit and see your score.";
+      "You skipped " + skipped + (skipped === 1 ? " question" : " questions") +
+      ". Skipped questions score zero. Go back if you want to answer them, or submit and see your score.";
     el("skip-warning").hidden = false;
     el("skip-warning").scrollIntoView({ block: "nearest" });
     return;
   }
+  clearProgress();
   renderScore();
   showScreen("screen-score");
   el("score-title").focus();
@@ -250,28 +280,57 @@ function renderScore() {
 function reset() {
   current = 0;
   answers = QUESTIONS.map(function () { return null; });
+  skipWarnedFor = -1;
+  clearProgress();
   renderQuestion();
   showScreen("screen-intro");
 }
 
+function goToFirstSkipped() {
+  el("skip-warning").hidden = true;
+  var firstSkipped = answers.indexOf(null);
+  if (firstSkipped >= 0) { current = firstSkipped; skipWarnedFor = -1; saveProgress(); renderQuestion(); }
+}
+
 el("start-btn").addEventListener("click", function () {
   current = 0;
+  answers = QUESTIONS.map(function () { return null; });
+  skipWarnedFor = -1;
+  clearProgress();
+  el("resume-btn").hidden = true;
+  renderQuestion();
+  showScreen("screen-quiz");
+});
+el("resume-btn").addEventListener("click", function () {
+  var saved = loadProgress();
+  if (!saved) { return; }
+  current = saved.current;
+  answers = saved.answers.slice();
+  skipWarnedFor = -1;
+  el("resume-btn").hidden = true;
   renderQuestion();
   showScreen("screen-quiz");
 });
 el("prev-btn").addEventListener("click", function () {
-  if (current > 0) { current -= 1; renderQuestion(); }
+  if (current > 0) { current -= 1; skipWarnedFor = -1; saveProgress(); renderQuestion(); }
 });
 el("next-btn").addEventListener("click", function () {
-  if (current < QUESTIONS.length - 1) { current += 1; renderQuestion(); }
+  if (current >= QUESTIONS.length - 1) { return; }
+  if (answers[current] === null && skipWarnedFor !== current) {
+    skipWarnedFor = current;
+    el("skip-note").hidden = false;
+    el("skip-note").scrollIntoView({ block: "nearest" });
+    return;
+  }
+  current += 1;
+  skipWarnedFor = -1;
+  saveProgress();
+  renderQuestion();
 });
 el("submit-btn").addEventListener("click", submit);
-el("skip-submit-btn").addEventListener("click", submit);
-el("skip-back-btn").addEventListener("click", function () {
-  el("skip-warning").hidden = true;
-  var firstSkipped = answers.indexOf(null);
-  if (firstSkipped >= 0) { current = firstSkipped; renderQuestion(); }
-});
+el("skip-review-btn").addEventListener("click", goToFirstSkipped);
+el("skip-back-btn").addEventListener("click", goToFirstSkipped);
 el("retake-btn").addEventListener("click", reset);
 
 renderQuestion();
+if (loadProgress()) { el("resume-btn").hidden = false; }

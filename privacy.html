@@ -6,17 +6,52 @@
   <meta name="description" content="Privacy Policy for SASE Practice Hub PH, what data the reviewer store and mock exam portal collect, how it is used, and how to request deletion." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/privacy.html" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <title>Privacy Policy, SASE Practice Hub PH</title>
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; line-height: 1.7; color: #1a1a1a; }
-    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    :root { --bg: #f5f9ff; --ink: #12314b; --muted: #5d7188; --line: rgba(18,49,75,0.1); --primary: #1a78e8; --primary-dark: #0d4ea3; --yellow: #ffd85d; --radius-lg: 24px; --max: 1180px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, "Segoe UI", system-ui, sans-serif; background: linear-gradient(180deg, #f8fbff 0%, #f4f8ff 34%, #f2f7fb 100%); color: var(--ink); line-height: 1.7; }
+    a { color: var(--primary-dark); }
+    .topbar { position: sticky; top: 0; z-index: 50; background: rgba(13,24,42,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .topbar-inner { max-width: var(--max); width: min(var(--max), calc(100% - 24px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: white; font-weight: 900; letter-spacing: 0.02em; text-decoration: none; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, var(--yellow), #ffe18d); color: var(--ink); font-size: 18px; }
+    .nav { display: flex; align-items: center; gap: 18px; font-size: 0.94rem; color: rgba(255,255,255,0.82); flex-wrap: wrap; }
+    .nav a { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 600; }
+    .nav a:hover { color: #fff; }
+    .wrap { width: min(760px, calc(100% - 28px)); margin: 0 auto; }
+    main { padding: 36px 0 10px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px 28px; box-shadow: 0 12px 26px rgba(7,28,50,0.08); }
+    h1 { font-size: 1.9rem; margin: 0 0 0.5rem; line-height: 1.15; }
     h2 { font-size: 1.2rem; margin-top: 2rem; }
     p, li { font-size: 0.95rem; }
-    .updated { color: #666; font-size: 0.85rem; }
-    a { color: #0877c9; }
+    .updated { color: var(--muted); font-size: 0.85rem; }
+    footer { padding: 28px 0 42px; color: var(--muted); }
+    .footer-inner { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 0.82rem; border-top: 1px solid var(--line); padding-top: 18px; }
+    @media (max-width: 620px) { .card { padding: 24px 18px; } .nav { gap: 12px; font-size: 0.88rem; } }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="SASE Practice Hub PH home">
+        <span class="brand-mark">&#128218;</span>
+        <span>SASE Practice Hub PH</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/sample">Free Sample</a>
+        <a href="/exam">Exam Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="card">
   <h1>Privacy Policy</h1>
   <p class="updated">Last updated: October 13, 2026</p>
   <p><strong>SASE Practice Hub PH</strong> ("we", "our") operates <a href="/">this website</a>, the mock exam portal at <a href="/exam">/exam</a>, and the SASE Practice Hub PH Facebook Page. This policy explains what data we collect and how we use it.</p>
@@ -51,11 +86,10 @@
     <li><strong>Vercel hosting &amp; analytics</strong>, the site is hosted on Vercel, which provides basic anonymized usage analytics.</li>
     <li><strong>Facebook</strong>, Page comments and messages are processed through Facebook's platform (see Section 5).</li>
   </ul>
-  <p>Because the advertising scripts run in your browser, they can observe your visit to this site even though we do not send them your name, password, or exam answers.</p>
 
   <h2>4. Data Retention</h2>
   <ul>
-    <li><strong>Order records</strong> (name, Messenger name, order reference, GCash reference) are kept to prevent duplicate reference-number use and to handle support and refund requests.</li>
+    <li><strong>Order records</strong> (name, Messenger name, order reference, GCash reference) are kept to prevent duplicate reference-number use and to handle support requests.</li>
     <li><strong>Portal data</strong> (password hash, device IDs, exam answers, results) is kept for as long as your portal access is active, so your results and answer reviews remain available. Exam answers and results may be kept after an exam is completed so you can review them later.</li>
     <li><strong>Session tokens</strong> are temporary: they expire, are cleared when you log out, and are stored only in your browser.</li>
     <li><strong>Quiz comment replies</strong> are processed in real time and not stored beyond operational logs.</li>
@@ -67,5 +101,15 @@
 
   <h2>6. Contact</h2>
   <p>For privacy questions or deletion requests, message us at <a href="https://www.facebook.com/profile.php?id=61594997556905">SASE Practice Hub PH on Facebook</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Unofficial practice material. Not affiliated with or endorsed by Mindanao State University.</span>
+      <span>Digital PDF &#8226; &#8369;167 &#8226; <a href="/privacy.html">Privacy Policy</a></span>
+    </div>
+  </footer>
 </body>
 </html>
