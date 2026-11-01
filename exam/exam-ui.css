@@ -587,6 +587,9 @@ body {
   .grid-cell.current { color: #9cc3f0; }
   .dot-empty { background: #22385c; }
   .error-card { color: var(--ink); }
+  /* The resume banner keeps its light cream background in dark mode
+     (--gold-soft is not redefined there), so its text stays dark. */
+  .resume-banner { color: #17233b; }
   /* Pinned exam nav: dark translucent surface */
   #screen-exam .exam-nav { background: rgba(13, 24, 43, .94); }
   #screen-exam .qcard { border-color: #2c3f5f; }

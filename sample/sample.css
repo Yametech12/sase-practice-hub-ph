@@ -116,7 +116,10 @@
 .sample-retake { display: block; margin: 0 auto; }
 
 @media (prefers-color-scheme: dark) {
-  .sample-score-line, .sample-upsell h3, .sample-plan h3, .sample-priority, .sample-price { color: #e8f0fa; }
+  .sample-score-line, .sample-upsell h3, .sample-plan h3, .sample-price { color: #e8f0fa; }
+  /* The priority box keeps its light cream background in dark mode
+     (--gold-soft is not redefined there), so its text stays dark. */
+  .sample-priority { color: var(--blue-900); }
   .sample-review-item { background: #16273f; }
   .sample-note { color: #e8f0fa; }
 }
