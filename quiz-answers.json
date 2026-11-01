@@ -990,5 +990,17 @@
     },
     "post_url": "https://www.facebook.com/reel/1140463348518733/",
     "post_fbid": "1140463348518733"
+  },
+  "1405619968222936": {
+    "answer": "A",
+    "question": "Find the median of the data set: 12, 7, 19, 7, 23, 15.",
+    "choices": {
+      "A": "13.5",
+      "B": "7",
+      "C": "13",
+      "D": "15"
+    },
+    "post_url": "https://www.facebook.com/reel/1405619968222936/",
+    "post_fbid": "1405619968222936"
   }
 }
