@@ -1002,5 +1002,17 @@
     },
     "post_url": "https://www.facebook.com/reel/1405619968222936/",
     "post_fbid": "1405619968222936"
+  },
+  "2981338555592206": {
+    "answer": "C",
+    "question": "If each side of a square is doubled, by what factor does its area increase?",
+    "choices": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "8"
+    },
+    "post_url": "https://www.facebook.com/reel/2981338555592206/",
+    "post_fbid": "2981338555592206"
   }
 }
