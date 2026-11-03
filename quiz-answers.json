@@ -1026,5 +1026,17 @@
   },
   "post_url": "https://www.facebook.com/reel/1162009423402190/",
   "post_fbid": "1162009423402190"
+ },
+ "947867078160822": {
+  "answer": "B",
+  "question": "After a 25% increase, the price of a bag is ₱625. What was its original price?",
+  "choices": {
+   "A": "₱468.75",
+   "B": "₱500",
+   "C": "₱600",
+   "D": "₱781.25"
+  },
+  "post_url": "https://www.facebook.com/reel/947867078160822/",
+  "post_fbid": "947867078160822"
  }
 }
