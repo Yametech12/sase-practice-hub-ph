@@ -10,11 +10,11 @@
  *   FB_PAGE_TOKEN   , long-lived Page Access Token (pages_manage_engagement)
  *   FB_PAGE_ID      , 1335770806292993
  *
- * quiz-answers.json sits next to this file: { postFbid: { answer, meaning, question } }
+ * quiz-answers.json lives in api/_data/: { postFbid: { answer, meaning, question } }
  */
 
 import crypto from "crypto";
-import answers from "../quiz-answers.json" with { type: "json" };
+import answers from "./_data/quiz-answers.json" with { type: "json" };
 
 const VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 const APP_SECRET = process.env.FB_APP_SECRET;
