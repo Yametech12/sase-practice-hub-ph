@@ -1,0 +1,1964 @@
+{
+ "exam": 8,
+ "questions": [
+  {
+   "id": "C8-V001",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to ADEPT.",
+   "options": {
+    "A": "ignorant",
+    "B": "lazy",
+    "C": "clumsy",
+    "D": "highly skilled"
+   },
+   "answer": "D",
+   "explanation": "Adept means very skilled or proficient at something. Clumsy means awkward in movement or handling, lazy means unwilling to work, and ignorant means lacking knowledge; none of them means skilled."
+  },
+  {
+   "id": "C8-V002",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to HAUGHTY.",
+   "options": {
+    "A": "humble",
+    "B": "arrogant",
+    "C": "nervous",
+    "D": "cheerful"
+   },
+   "answer": "B",
+   "explanation": "Haughty describes someone who looks down on others as if superior, which is arrogant. Humble is the opposite attitude, cheerful means noticeably happy, and nervous means anxious or uneasy."
+  },
+  {
+   "id": "C8-V003",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to HESITANT.",
+   "options": {
+    "A": "confident and decisive",
+    "B": "noisy and talkative",
+    "C": "uncertain and slow to act",
+    "D": "rude and insulting"
+   },
+   "answer": "C",
+   "explanation": "A hesitant person pauses because of doubt or uncertainty, so 'uncertain and slow to act' is closest. Confident and decisive is the opposite manner, noisy describes volume, and rude describes manners, not doubt."
+  },
+  {
+   "id": "C8-V004",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to OMINOUS.",
+   "options": {
+    "A": "meant to amuse the crowd",
+    "B": "suggesting that something bad will happen",
+    "C": "suggesting a pleasant surprise",
+    "D": "perfectly ordinary"
+   },
+   "answer": "B",
+   "explanation": "Ominous describes a sign or atmosphere that seems to warn of future trouble or harm. It is not about surprises that are pleasant, ordinary events, or anything meant to entertain."
+  },
+  {
+   "id": "C8-V005",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to TEDIOUS.",
+   "options": {
+    "A": "exciting and brief",
+    "B": "silent and hidden",
+    "C": "costly and rare",
+    "D": "tiresome and too long"
+   },
+   "answer": "D",
+   "explanation": "Tedious tasks are boring because they are slow, repetitive, or too long, hence tiresome. Exciting and brief is nearly the opposite, while costly and silent describe price and sound, not dullness."
+  },
+  {
+   "id": "C8-V006",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to AMIABLE.",
+   "options": {
+    "A": "rude and hostile",
+    "B": "cold and distant",
+    "C": "friendly and pleasant in manner",
+    "D": "strict and demanding"
+   },
+   "answer": "C",
+   "explanation": "Amiable describes a person who is friendly, pleasant, and easy to get along with. Rude and hostile is the opposite, cold and distant means unfriendly in a quiet way, and strict describes enforcement of rules, not warmth of manner."
+  },
+  {
+   "id": "C8-V007",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to WARY.",
+   "options": {
+    "A": "watchful and on guard against danger",
+    "B": "sleepy and inactive",
+    "C": "loud and boastful",
+    "D": "quick to trust everyone"
+   },
+   "answer": "A",
+   "explanation": "Wary means being cautious because you are watching for possible danger or deception. It is the opposite of trusting everyone readily, and it has nothing to do with being sleepy or boastful."
+  },
+  {
+   "id": "C8-V008",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to QUENCH.",
+   "options": {
+    "A": "to measure one's height",
+    "B": "to satisfy one's thirst",
+    "C": "to increase one's hunger",
+    "D": "to postpone one's trip"
+   },
+   "answer": "B",
+   "explanation": "To quench is to satisfy a need such as thirst by drinking, and by extension to put out a fire. Increase, measure, and postpone describe unrelated actions that do not satisfy or extinguish anything."
+  },
+  {
+   "id": "C8-V009",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to DIMINISH.",
+   "options": {
+    "A": "to become less or smaller",
+    "B": "to divide equally",
+    "C": "to increase in size",
+    "D": "to announce publicly"
+   },
+   "answer": "A",
+   "explanation": "Diminish means to lessen in size, amount, or importance. Increase is its direct opposite, announce means to make something known, and divide means to split into parts, which may or may not reduce anything."
+  },
+  {
+   "id": "C8-V010",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to RIGID.",
+   "options": {
+    "A": "flexible",
+    "B": "hard",
+    "C": "stiff",
+    "D": "firm"
+   },
+   "answer": "A",
+   "explanation": "Rigid means stiff and not bending, so the opposite is flexible, able to bend or adapt. Stiff, hard, and firm all share the meaning of rigid rather than oppose it."
+  },
+  {
+   "id": "C8-V011",
+   "section": "Verbal",
+   "question": "The long dry season gradually DEPLETED the town's stored water supply. The word DEPLETED most nearly means:",
+   "options": {
+    "A": "refilled to the top",
+    "B": "purified and cleaned",
+    "C": "carefully measured",
+    "D": "used up or greatly reduced"
+   },
+   "answer": "D",
+   "explanation": "In context, a long dry season with no rain can only use up or greatly reduce stored water, which is what depleted means. Refilled and purified would require water being added or cleaned, and measured does not change the amount at all."
+  },
+  {
+   "id": "C8-V012",
+   "section": "Verbal",
+   "question": "His ABRUPT departure surprised everyone in the meeting. The word ABRUPT most nearly means:",
+   "options": {
+    "A": "planned for weeks",
+    "B": "slow and gradual",
+    "C": "quiet and secret",
+    "D": "sudden and unexpected"
+   },
+   "answer": "D",
+   "explanation": "The surprise of the people in the meeting shows the departure was sudden and unexpected, which is what abrupt means. A departure planned for weeks or made slowly would not surprise anyone, and secret describes concealment, not suddenness."
+  },
+  {
+   "id": "C8-V013",
+   "section": "Verbal",
+   "question": "The list of approved applicants ___ posted on the bulletin board yesterday.",
+   "options": {
+    "A": "are being",
+    "B": "was",
+    "C": "have been",
+    "D": "were"
+   },
+   "answer": "B",
+   "explanation": "The subject is 'list,' a singular noun; the long phrase 'of approved applicants' does not make it plural, and 'yesterday' calls for the simple past. So the verb is 'was.' 'Were' and 'have been' disagree in number, and 'are being' is present tense."
+  },
+  {
+   "id": "C8-V014",
+   "section": "Verbal",
+   "question": "Five hundred pesos ___ the exact fee for the processing of the certificate.",
+   "options": {
+    "A": "is",
+    "B": "have been",
+    "C": "are",
+    "D": "were being"
+   },
+   "answer": "A",
+   "explanation": "An amount of money treated as one single sum takes a singular verb, so 'Five hundred pesos is the exact fee.' Plural verbs such as 'are' would be used only if the bills or coins were being counted one by one."
+  },
+  {
+   "id": "C8-V015",
+   "section": "Verbal",
+   "question": "She ___ in this agency since 2020, rising from clerk to supervisor.",
+   "options": {
+    "A": "worked tomorrow",
+    "B": "has worked",
+    "C": "works yesterday",
+    "D": "will work"
+   },
+   "answer": "B",
+   "explanation": "'Since 2020' signals an action that began in the past and continues to the present, which takes the present perfect 'has worked.' The other choices clash with the time marker: yesterday needs simple past, and tomorrow needs a future form without 'since.'"
+  },
+  {
+   "id": "C8-V016",
+   "section": "Verbal",
+   "question": "If I ___ the new schedule earlier, I would not have missed the orientation.",
+   "options": {
+    "A": "am knowing",
+    "B": "know",
+    "C": "had known",
+    "D": "will know"
+   },
+   "answer": "C",
+   "explanation": "This is a third conditional about an unreal past situation: 'If I had known ... I would not have missed.' The if-clause needs the past perfect 'had known' to match 'would not have missed' in the result clause."
+  },
+  {
+   "id": "C8-V017",
+   "section": "Verbal",
+   "question": "Accomplishment reports ___ by all division chiefs every Friday.",
+   "options": {
+    "A": "are submitted",
+    "B": "submits",
+    "C": "submit",
+    "D": "is submitted"
+   },
+   "answer": "A",
+   "explanation": "The reports receive the action, so a passive verb is needed, and the plural subject 'reports' takes 'are submitted.' 'Submit' and 'submits' are active forms that would make the reports do the submitting, and 'is submitted' is singular."
+  },
+  {
+   "id": "C8-V018",
+   "section": "Verbal",
+   "question": "Either the two nurses or the duty doctor ___ responsible for the ward tonight.",
+   "options": {
+    "A": "are",
+    "B": "is",
+    "C": "were being",
+    "D": "have been"
+   },
+   "answer": "B",
+   "explanation": "With 'either ... or,' the verb agrees with the nearer subject. The nearer subject is 'the duty doctor,' which is singular, so the verb is 'is.' The plural 'nurses' is farther from the verb and does not control agreement here."
+  },
+  {
+   "id": "C8-V019",
+   "section": "Verbal",
+   "question": "Each employee must file ___ Statement of Assets, Liabilities, and Net Worth (SALN) on or before April 30.",
+   "options": {
+    "A": "their many",
+    "B": "his or her",
+    "C": "them",
+    "D": "its"
+   },
+   "answer": "B",
+   "explanation": "'Each employee' is singular and refers to a person, so the possessive 'his or her' is required. 'Them' is an object pronoun, 'its' is for things, and 'their many' is both plural and grammatically incomplete in this sentence."
+  },
+  {
+   "id": "C8-V020",
+   "section": "Verbal",
+   "question": "Of the three proposed designs, the third is the ___ of all.",
+   "options": {
+    "A": "most practical",
+    "B": "practically",
+    "C": "practical",
+    "D": "more practical"
+   },
+   "answer": "A",
+   "explanation": "When three or more items are compared and one stands above the rest ('of all'), the superlative form is used: 'most practical.' 'More practical' compares only two, 'practical' makes no comparison, and 'practically' is an adverb."
+  },
+  {
+   "id": "C8-V021",
+   "section": "Verbal",
+   "question": "The courier arrived ___ the regional office just before the gates closed.",
+   "options": {
+    "A": "on",
+    "B": "to",
+    "C": "in",
+    "D": "at"
+   },
+   "answer": "D",
+   "explanation": "We use 'arrive at' for a specific point or building such as an office, station, or airport. 'Arrive in' is for cities and countries, 'arrive on' is not idiomatic, and 'arrive to' is incorrect in standard English."
+  },
+  {
+   "id": "C8-V022",
+   "section": "Verbal",
+   "question": "His morning duties include encoding letters, filing documents, and ___ the logbook.",
+   "options": {
+    "A": "updating",
+    "B": "update",
+    "C": "updated yesterday",
+    "D": "to update records daily"
+   },
+   "answer": "A",
+   "explanation": "Parallel structure requires the same form for all items in a series. 'Encoding' and 'filing' are gerunds (-ing forms), so the third item must also be a gerund: 'updating.' Mixing in a base verb, an infinitive phrase, or a past tense breaks the parallelism."
+  },
+  {
+   "id": "C8-V023",
+   "section": "Verbal",
+   "question": "By the time the guests arrived, the seminar ___ and the handouts were already on the chairs.",
+   "options": {
+    "A": "had already started",
+    "B": "is starting now",
+    "C": "will start later",
+    "D": "starts tomorrow"
+   },
+   "answer": "A",
+   "explanation": "'By the time the guests arrived' (past) requires an action completed even earlier, expressed by the past perfect 'had already started.' The other choices point to the present or future and contradict the past time frame."
+  },
+  {
+   "id": "C8-V024",
+   "section": "Verbal",
+   "question": "All applicants ___ submit two photocopies of a valid ID together with the application form.",
+   "options": {
+    "A": "being",
+    "B": "must",
+    "C": "yesterday",
+    "D": "musted"
+   },
+   "answer": "B",
+   "explanation": "The sentence states a requirement, and 'must' is the modal verb that expresses obligation before the base verb 'submit.' 'Musted' is not a word, and 'yesterday' and 'being' cannot function as the verb phrase here."
+  },
+  {
+   "id": "C8-V025",
+   "section": "Verbal",
+   "question": "The coordinator discussed the outreach plan with Ben and ___ before the meeting ended.",
+   "options": {
+    "A": "myself alone",
+    "B": "mine",
+    "C": "me",
+    "D": "I"
+   },
+   "answer": "C",
+   "explanation": "The pronoun is an object of the preposition 'with' (with Ben and ___), so the object form 'me' is correct. 'I' is a subject pronoun, 'mine' is a possessive pronoun, and a reflexive like 'myself' needs the subject 'I' acting on itself, which is not the case here."
+  },
+  {
+   "id": "C8-V026",
+   "section": "Verbal",
+   "question": "Choose the most effective version of the sentence: 'Walking toward the office in the heavy rain, my uniform got soaked.'",
+   "options": {
+    "A": "My uniform, walking toward the office in the heavy rain, got soaked.",
+    "B": "Walking toward the office in the heavy rain, my uniform was walking.",
+    "C": "Walking toward the office in the heavy rain, I got my uniform soaked.",
+    "D": "Walking in the heavy rain, the office soaked my uniform."
+   },
+   "answer": "C",
+   "explanation": "The original has a dangling modifier: a uniform cannot walk. The correct version gives the walking a real subject, 'I.' The other options keep impossible actors: the uniform walking, or the office doing the soaking."
+  },
+  {
+   "id": "C8-V027",
+   "section": "Verbal",
+   "question": "Choose the most effective version of the sentence: 'He returned back to the office again at exactly 10 p.m. in the evening.'",
+   "options": {
+    "A": "He returned back again to the office at 10 p.m. in the evening.",
+    "B": "He went back and returned to the office in the evening night.",
+    "C": "He returned to the office at 10 p.m.",
+    "D": "At 10 p.m. in the evening, he returned back once more again."
+   },
+   "answer": "C",
+   "explanation": "'Return' already means go back, 'p.m.' already means evening, and 'again' repeats the idea, so the concise version removes all three redundancies. Every other option keeps at least one doubled meaning."
+  },
+  {
+   "id": "C8-V028",
+   "section": "Verbal",
+   "question": "Choose the most effective version of the sentence: 'She almost encoded fifty records in one afternoon.' (The intended meaning is that the number of records was nearly fifty.)",
+   "options": {
+    "A": "She almost encoded fifty records in one afternoon.",
+    "B": "Almost she encoded fifty records in one afternoon.",
+    "C": "She encoded fifty records almost in one afternoon.",
+    "D": "She encoded almost fifty records in one afternoon."
+   },
+   "answer": "D",
+   "explanation": "'Almost' must be placed next to the word it modifies. Because the intended meaning is nearly fifty records, 'almost' belongs directly before 'fifty.' In the other positions it suggests she nearly encoded (but did not) or nearly finished within the afternoon."
+  },
+  {
+   "id": "C8-V029",
+   "section": "Verbal",
+   "question": "Choose the correctly punctuated sentence about the training schedule.",
+   "options": {
+    "A": "The training, which was scheduled last June, will finally push through next week.",
+    "B": "The training which, was scheduled last June, will finally push through next week.",
+    "C": "The training which was scheduled last June will finally, push through next week.",
+    "D": "The training, which was scheduled last June will finally push through, next week."
+   },
+   "answer": "A",
+   "explanation": "A non-restrictive clause ('which was scheduled last June') must be set off by a pair of commas, one before and one after it, and the verb phrase 'will push through' must not be split by a comma. Only the correct option satisfies both rules."
+  },
+  {
+   "id": "C8-V030",
+   "section": "Verbal",
+   "question": "Choose the grammatically correct and most effective sentence about the jury.",
+   "options": {
+    "A": "The jury has finally reached their verdict after two days of deliberation.",
+    "B": "The jury have finally reached its verdict after two days of deliberation.",
+    "C": "The jury has finally reached its verdict after two days of deliberation.",
+    "D": "The jury have finally reached their verdict after two days of deliberation."
+   },
+   "answer": "C",
+   "explanation": "Acting as a single body, the collective noun 'jury' takes a singular verb and a singular pronoun: 'has ... its.' The wrong options mix singular and plural forms ('have ... its' or 'has ... their'), breaking agreement."
+  },
+  {
+   "id": "C8-V031",
+   "section": "Verbal",
+   "question": "Arrange the sentences in the most logical order: (1) After rinsing, she hung the clothes under the sun to dry. (2) First, she sorted the clothes by color. (3) Then, she soaked the colored clothes in soapy water for thirty minutes. (4) Finally, she folded the dry clothes and kept them in the cabinet.",
+   "options": {
+    "A": "2-3-1-4",
+    "B": "2-1-3-4",
+    "C": "1-2-3-4",
+    "D": "3-2-1-4"
+   },
+   "answer": "A",
+   "explanation": "The signal words fix the order: 'First' (sorting, 2) comes before soaking (3); rinsing and drying (1) can only happen after soaking; and 'Finally' (folding, 4) closes the process. Any other sequence puts a later step before the step it depends on."
+  },
+  {
+   "id": "C8-V032",
+   "section": "Verbal",
+   "question": "Arrange the sentences in the most logical order: (1) Because of this, farmers now harvest earlier in the morning than before. (2) Climate change has made midday temperatures in many farming areas much hotter. (3) Working under the midday sun exposes farmers to heat exhaustion. (4) This adjustment protects their health while still allowing them to finish their work.",
+   "options": {
+    "A": "3-2-1-4",
+    "B": "2-1-3-4",
+    "C": "1-2-3-4",
+    "D": "2-3-1-4"
+   },
+   "answer": "D",
+   "explanation": "The paragraph moves from cause to effect: hotter midday temperatures (2) create the risk of heat exhaustion (3); 'Because of this' then introduces the response, harvesting earlier (1); and the benefit of that adjustment (4) concludes. Starting with 1 or 3 leaves the cause unexplained."
+  },
+  {
+   "id": "C8-V033",
+   "section": "Verbal",
+   "question": "Arrange the sentences in the most logical order: (1) He then reviewed the coverage of the examination one more time. (2) Marco registered for the Civil Service Examination three months before the test date. (3) With his requirements complete, he filed his application at the regional office. (4) Before filing, he gathered his ID picture, valid ID, and examination fee.",
+   "options": {
+    "A": "2-3-4-1",
+    "B": "2-4-3-1",
+    "C": "4-2-3-1",
+    "D": "2-4-1-3"
+   },
+   "answer": "B",
+   "explanation": "The timeline is fixed by the connectors: registering (2) starts the process; 'Before filing' (4) must precede filing the application (3); and reviewing the coverage 'one more time' (1) is his last preparation before the test. Filing (3) cannot come before gathering the requirements (4)."
+  },
+  {
+   "id": "C8-V034",
+   "section": "Verbal",
+   "question": "Which statement best expresses the main idea of the passage about Barangay San Isidro?",
+   "passage": "Barangay San Isidro started a community garden on a vacant lot in 2024. Residents converted the lot into plots where families grow vegetables such as pechay, eggplant, and tomatoes. Each participating family tends a small plot and keeps its harvest, while a shared plot is maintained by volunteers. Produce from the shared plot is sold at low prices, and the earnings pay for seeds and tools. After one year, the barangay reported that participating families spent less on vegetables and that the once idle lot no longer attracted illegal dumping.",
+   "options": {
+    "A": "Vegetables are easier to grow in Barangay San Isidro than anywhere else.",
+    "B": "The barangay banned families from buying vegetables in the market.",
+    "C": "Illegal dumping is the most serious problem in the barangay.",
+    "D": "A community garden turned a vacant lot into a source of food and income for residents."
+   },
+   "answer": "D",
+   "explanation": "The whole passage describes how the garden works and the benefits it produced: food for families, income from the shared plot, and a cleaner lot. The other options invent claims (a market ban, the easiest growing conditions) or magnify one side detail (dumping) into the main idea."
+  },
+  {
+   "id": "C8-V035",
+   "section": "Verbal",
+   "question": "According to the passage, where does the money for seeds and tools come from?",
+   "passage": "Barangay San Isidro started a community garden on a vacant lot in 2024. Residents converted the lot into plots where families grow vegetables such as pechay, eggplant, and tomatoes. Each participating family tends a small plot and keeps its harvest, while a shared plot is maintained by volunteers. Produce from the shared plot is sold at low prices, and the earnings pay for seeds and tools. After one year, the barangay reported that participating families spent less on vegetables and that the once idle lot no longer attracted illegal dumping.",
+   "options": {
+    "A": "From fees paid by participating families",
+    "B": "From fines collected for illegal dumping",
+    "C": "From donations of the municipal government",
+    "D": "From selling the produce of the shared plot"
+   },
+   "answer": "D",
+   "explanation": "The passage states directly that produce from the shared plot 'is sold at low prices, and the earnings pay for seeds and tools.' No government donation, family fee, or dumping fine is mentioned as a funding source."
+  },
+  {
+   "id": "C8-V036",
+   "section": "Verbal",
+   "question": "What can be inferred about the vacant lot before the garden was established?",
+   "passage": "Barangay San Isidro started a community garden on a vacant lot in 2024. Residents converted the lot into plots where families grow vegetables such as pechay, eggplant, and tomatoes. Each participating family tends a small plot and keeps its harvest, while a shared plot is maintained by volunteers. Produce from the shared plot is sold at low prices, and the earnings pay for seeds and tools. After one year, the barangay reported that participating families spent less on vegetables and that the once idle lot no longer attracted illegal dumping.",
+   "options": {
+    "A": "It was unused and had become a dumping spot.",
+    "B": "It was owned by a private company.",
+    "C": "It was a playground for children.",
+    "D": "It was already planted with vegetables."
+   },
+   "answer": "A",
+   "explanation": "The passage calls the lot 'vacant' and says that after the garden, 'the once idle lot no longer attracted illegal dumping,' which implies it was idle and used as a dumping spot before. Nothing supports a playground, a private owner, or earlier vegetable planting."
+  },
+  {
+   "id": "C8-V037",
+   "section": "Verbal",
+   "question": "Which statement best summarizes the passage about mangrove forests?",
+   "passage": "Mangrove forests protect coastal communities in several ways. Their dense roots slow down waves and trap sediment, reducing erosion along the shore. The roots also serve as shelter and breeding grounds for fish, crabs, and shellfish, which support the livelihood of small fisherfolk. When storms strike, areas with healthy mangrove belts usually suffer less flooding than areas where mangroves were cleared for fishponds or buildings. For these reasons, many coastal towns now run mangrove planting programs and guard the planted areas until the trees mature.",
+   "options": {
+    "A": "Mangroves protect coasts and support marine life, so communities work to preserve them.",
+    "B": "Mangroves should be cleared to give way to fishponds and buildings.",
+    "C": "Storms are the main reason fisherfolk lose their livelihood.",
+    "D": "Planting programs are too expensive for coastal towns."
+   },
+   "answer": "A",
+   "explanation": "Every part of the passage supports one idea: mangroves reduce erosion and flooding and shelter marine life, which is why towns plant and guard them. Clearing mangroves is presented as harmful, storms are only one detail, and no cost claim is made."
+  },
+  {
+   "id": "C8-V038",
+   "section": "Verbal",
+   "question": "According to the passage, how do mangrove roots help fisherfolk?",
+   "passage": "Mangrove forests protect coastal communities in several ways. Their dense roots slow down waves and trap sediment, reducing erosion along the shore. The roots also serve as shelter and breeding grounds for fish, crabs, and shellfish, which support the livelihood of small fisherfolk. When storms strike, areas with healthy mangrove belts usually suffer less flooding than areas where mangroves were cleared for fishponds or buildings. For these reasons, many coastal towns now run mangrove planting programs and guard the planted areas until the trees mature.",
+   "options": {
+    "A": "They mark the boundaries of fishing areas.",
+    "B": "They serve as shelter and breeding grounds for fish, crabs, and shellfish.",
+    "C": "They provide wood for building fishing boats.",
+    "D": "They keep seawater fresh for drinking."
+   },
+   "answer": "B",
+   "explanation": "The passage says the roots 'serve as shelter and breeding grounds for fish, crabs, and shellfish, which support the livelihood of small fisherfolk.' Boat wood, drinking water, and boundary markers are never mentioned."
+  },
+  {
+   "id": "C8-V039",
+   "section": "Verbal",
+   "question": "The phrase 'mangrove belts' in the passage most nearly refers to:",
+   "passage": "Mangrove forests protect coastal communities in several ways. Their dense roots slow down waves and trap sediment, reducing erosion along the shore. The roots also serve as shelter and breeding grounds for fish, crabs, and shellfish, which support the livelihood of small fisherfolk. When storms strike, areas with healthy mangrove belts usually suffer less flooding than areas where mangroves were cleared for fishponds or buildings. For these reasons, many coastal towns now run mangrove planting programs and guard the planted areas until the trees mature.",
+   "options": {
+    "A": "equipment worn by coastal guards",
+    "B": "fishing nets made from mangrove fiber",
+    "C": "strips of mangrove trees growing along the coast",
+    "D": "roads built beside mangrove forests"
+   },
+   "answer": "C",
+   "explanation": "In context, 'areas with healthy mangrove belts' are compared with areas where mangroves were cleared, so 'belts' means bands or strips of mangrove trees along the shore. It is a figurative use of belt as a long strip, not clothing, nets, or roads."
+  },
+  {
+   "id": "C8-V040",
+   "section": "Verbal",
+   "question": "What was the result of the pilot described in the passage?",
+   "passage": "Last year, a government agency piloted a four-day work week in two of its divisions. Employees worked longer hours on the four days so that their total weekly hours stayed the same. After six months, the agency compared the divisions' output with that of other divisions and found no drop in the number of documents processed. Absences also decreased slightly, and most employees reported lower transport expenses. However, the agency noted that frontline counters still had to be staffed on the fifth day, so a rotation schedule was needed before the scheme could be adopted office-wide.",
+   "options": {
+    "A": "Employees earned higher salaries during the pilot.",
+    "B": "The agency immediately adopted the scheme office-wide.",
+    "C": "Output did not drop even though employees worked only four days a week.",
+    "D": "The two divisions processed fewer documents than the others."
+   },
+   "answer": "C",
+   "explanation": "The passage reports 'no drop in the number of documents processed,' which means output was maintained. Salaries are not mentioned, fewer documents contradicts the finding, and office-wide adoption was still conditional on solving the staffing problem."
+  },
+  {
+   "id": "C8-V041",
+   "section": "Verbal",
+   "question": "Why did the agency need a rotation schedule before adopting the scheme office-wide?",
+   "passage": "Last year, a government agency piloted a four-day work week in two of its divisions. Employees worked longer hours on the four days so that their total weekly hours stayed the same. After six months, the agency compared the divisions' output with that of other divisions and found no drop in the number of documents processed. Absences also decreased slightly, and most employees reported lower transport expenses. However, the agency noted that frontline counters still had to be staffed on the fifth day, so a rotation schedule was needed before the scheme could be adopted office-wide.",
+   "options": {
+    "A": "Employees refused to work longer hours.",
+    "B": "Frontline counters still had to be staffed on the fifth day.",
+    "C": "Other divisions demanded the same schedule.",
+    "D": "Documents had to be counted again on the fifth day."
+   },
+   "answer": "B",
+   "explanation": "The passage gives the reason explicitly: 'frontline counters still had to be staffed on the fifth day, so a rotation schedule was needed.' Refusal by employees, recounting documents, and demands from other divisions are not stated."
+  },
+  {
+   "id": "C8-V042",
+   "section": "Verbal",
+   "question": "Which title best fits the passage?",
+   "passage": "Last year, a government agency piloted a four-day work week in two of its divisions. Employees worked longer hours on the four days so that their total weekly hours stayed the same. After six months, the agency compared the divisions' output with that of other divisions and found no drop in the number of documents processed. Absences also decreased slightly, and most employees reported lower transport expenses. However, the agency noted that frontline counters still had to be staffed on the fifth day, so a rotation schedule was needed before the scheme could be adopted office-wide.",
+   "options": {
+    "A": "Why Employees Dislike Longer Working Hours",
+    "B": "Four-Day Work Week Pilot Shows Promise, With One Challenge",
+    "C": "The Complete History of the Work Week",
+    "D": "Government Agencies Abolish the Five-Day Work Week"
+   },
+   "answer": "B",
+   "explanation": "The passage reports a promising pilot (same output, fewer absences) plus one obstacle (fifth-day staffing), which the correct title captures. Nothing says employees disliked the hours, no abolition was declared, and no history is given."
+  },
+  {
+   "id": "C8-V043",
+   "section": "Verbal",
+   "question": "Alin ang kasingkahulugan ng salitang MARANGAL?",
+   "options": {
+    "A": "sikat",
+    "B": "mayaman",
+    "C": "kagalang-galang",
+    "D": "matapang"
+   },
+   "answer": "C",
+   "explanation": "Ang 'marangal' ay nangangahulugang may dangal at karapat-dapat igalang, kaya 'kagalang-galang' ang kasingkahulugan nito. Ang 'mayaman' ay tungkol sa yaman, 'sikat' sa pagiging kilala, at 'matapang' sa tapang; wala sa mga ito ang tumutukoy sa dangal."
+  },
+  {
+   "id": "C8-V044",
+   "section": "Verbal",
+   "question": "Alin ang kasalungat ng salitang MATAMLAY?",
+   "options": {
+    "A": "malungkot",
+    "B": "mahina",
+    "C": "masigla",
+    "D": "pagod"
+   },
+   "answer": "C",
+   "explanation": "Ang 'matamlay' ay nangangahulugang walang sigla o mahina ang katawan, kaya ang kasalungat nito ay 'masigla.' Ang 'mahina' at 'pagod' ay malapit sa kahulugan ng matamlay, at ang 'malungkot' ay damdamin, hindi sigla ng katawan."
+  },
+  {
+   "id": "C8-V045",
+   "section": "Verbal",
+   "question": "Ano ang ibig sabihin ng salitang NAGHIHIKAHOS sa pangungusap: 'Maraming pamilya ang naghihikahos dahil sa patuloy na pagtaas ng presyo ng bilihin.'?",
+   "options": {
+    "A": "nagdidiwang at nagsasaya",
+    "B": "nagpapahinga nang mahimbing",
+    "C": "naghihirap o dumaranas ng matinding kakulangan",
+    "D": "nagmamayabang sa kapwa"
+   },
+   "answer": "C",
+   "explanation": "Ang 'naghihikahos' ay nangangahulugang dumaranas ng kahirapan o kakulangan, na siyang ipinahihiwatig ng pagtaas ng presyo ng bilihin. Hindi ito pagdiriwang, pagyayabang, o pamamahinga."
+  },
+  {
+   "id": "C8-V046",
+   "section": "Verbal",
+   "question": "Ano ang ibig sabihin ng sawikaing 'ANAK-PAWIS'?",
+   "options": {
+    "A": "isang manggagawa o taong nabubuhay sa sariling pagod",
+    "B": "anak ng isang mayamang pamilya",
+    "C": "batang walang tirahan",
+    "D": "taong ayaw magtrabaho"
+   },
+   "answer": "A",
+   "explanation": "Ang 'anak-pawis' ay sawikain para sa manggagawa: pawis ang puhunan niya sa paghahanapbuhay. Hindi ito tumutukoy sa mayamang pamilya, sa batang walang tirahan, o sa taong tamad; kabaligtaran ito ng huli sapagkat ang anak-pawis ay masipag na nagtatrabaho."
+  },
+  {
+   "id": "C8-V047",
+   "section": "Verbal",
+   "question": "Piliin ang wastong pang-angkop upang mabuo ang parirala: 'Ang ___ bulaklak ay kulay pula.'",
+   "options": {
+    "A": "maganda ang",
+    "B": "maganda ng",
+    "C": "maganda na",
+    "D": "magandang"
+   },
+   "answer": "D",
+   "explanation": "Ang 'maganda' ay nagtatapos sa patinig, kaya ang pang-angkop na '-ng' ay idinudugtong mismo sa salita: 'magandang bulaklak.' Hindi ginagamit ang 'na' kapag patinig ang hulihan sa ganitong dugtong, at ang 'ng' at 'ang' ay pantukoy o pananda, hindi pang-angkop dito."
+  },
+  {
+   "id": "C8-V048",
+   "section": "Verbal",
+   "question": "Anong tayutay ang ginamit sa pangungusap: 'Ang oras ay ginto.'?",
+   "options": {
+    "A": "pagtutulad",
+    "B": "pagmamalabis",
+    "C": "pagwawangis",
+    "D": "pagbibigay-katauhan"
+   },
+   "answer": "C",
+   "explanation": "Sa pagwawangis (metapora), tuwirang inihahambing ang oras sa ginto nang walang mga salitang 'parang' o 'tulad.' Kung may 'parang' o 'tulad,' pagtutulad iyon; ang pagmamalabis ay labis na paglalarawan, at ang pagbibigay-katauhan ay pagbibigay ng katangiang pantao sa bagay."
+  },
+  {
+   "id": "C8-V049",
+   "section": "Verbal",
+   "question": "Anong aspekto ng pandiwa ang ginamit sa pangungusap: 'Kumain na ang bata kanina.'?",
+   "options": {
+    "A": "imperpektibo (nagaganap)",
+    "B": "kontemplatibo (magaganap)",
+    "C": "perpektibo (naganap na)",
+    "D": "pawatas"
+   },
+   "answer": "C",
+   "explanation": "Ang 'kumain na ... kanina' ay kilos na tapos nang maganap, kaya perpektibo ang aspekto nito. Ang imperpektibo ay kasalukuyang nagaganap, ang kontemplatibo ay mangyayari pa lamang, at ang pawatas ay ang batayang anyo ng pandiwa."
+  },
+  {
+   "id": "C8-V050",
+   "section": "Verbal",
+   "question": "Alin ang pang-abay sa pangungusap: 'Dahan-dahang lumakad ang matanda patungo sa simbahan.'?",
+   "options": {
+    "A": "Dahan-dahan",
+    "B": "simbahan",
+    "C": "lumakad",
+    "D": "matanda"
+   },
+   "answer": "A",
+   "explanation": "Ang pang-abay ay salitang naglalarawan sa pandiwa, pang-uri, o kapwa pang-abay. Ang 'Dahan-dahan' ang naglalarawan kung paano lumakad; ang 'lumakad' ay ang pandiwa mismo, ang 'matanda' ay pangngalan, at ang 'simbahan' ay pangngalang lugar."
+  },
+  {
+   "id": "C8-V051",
+   "section": "Verbal",
+   "question": "Piliin ang pangungusap na wasto ang balarila at ayos ng mga salita.",
+   "options": {
+    "A": "Ang mga mag-aaral ay masigasig na nag-aaral para sa pagsusulit.",
+    "B": "Ang mga mag-aaral ay ay masigasig na nag-aaral para sa pagsusulit.",
+    "C": "Ang mag-aaral mga ay masigasig nag-aaral para sa pagsusulit.",
+    "D": "Masigasig na nag-aaral ay ang mga mag-aaral para sa pagsusulit."
+   },
+   "answer": "A",
+   "explanation": "Wasto ang ayos at gamit ng pananda sa unang pangungusap: simuno ('Ang mga mag-aaral'), panandang 'ay,' at panaguri. Ang iba ay may dobleng 'ay,' baligtad at sirang ayos ng 'ay,' o maling pagkakasunod ng 'mga' at simuno."
+  },
+  {
+   "id": "C8-V052",
+   "section": "Verbal",
+   "question": "Ano ang pangunahing diwa ng pangungusap: 'Ang kalinisan ng kapaligiran ay tungkulin ng bawat mamamayan.'?",
+   "options": {
+    "A": "Ang pamahalaan lamang ang dapat maglinis ng kapaligiran.",
+    "B": "Hindi na kailangang linisin ang kapaligiran.",
+    "C": "Pananagutan ng lahat ng mamamayan ang pagpapanatiling malinis ng kapaligiran.",
+    "D": "Ang kalinisan ay para lamang sa mga opisyal ng barangay."
+   },
+   "answer": "C",
+   "explanation": "Ang 'bawat mamamayan' ang diwa ng pangungusap: tungkulin ng lahat, hindi lamang ng pamahalaan o ng mga opisyal. Ang iba pang pagpipilian ay sumasalungat sa 'bawat mamamayan' o bumabaligtad sa mensahe ng pangungusap."
+  },
+  {
+   "id": "C8-N001",
+   "section": "Numerical",
+   "question": "What is the value of 48 ÷ 6 + 4 × 7 − 9?",
+   "options": {
+    "A": "37",
+    "B": "27",
+    "C": "75",
+    "D": "21"
+   },
+   "answer": "B",
+   "explanation": "Follow the order of operations: do division and multiplication first. 48 ÷ 6 = 8 and 4 × 7 = 28, so the expression becomes 8 + 28 − 9 = 27. Working strictly left to right without priority gives the inflated results in the other options."
+  },
+  {
+   "id": "C8-N002",
+   "section": "Numerical",
+   "question": "What is 45% of 380?",
+   "options": {
+    "A": "209",
+    "B": "171",
+    "C": "161",
+    "D": "180"
+   },
+   "answer": "B",
+   "explanation": "Percent means per hundred, so 45% of 380 = 0.45 × 380 = 171. A quick check: 10% of 380 is 38, so 40% is 152 and 5% is 19; 152 + 19 = 171."
+  },
+  {
+   "id": "C8-N003",
+   "section": "Numerical",
+   "question": "The price of a sack of fertilizer rose from ₱240 to ₱300. What is the percent increase?",
+   "options": {
+    "A": "25%",
+    "B": "20%",
+    "C": "60%",
+    "D": "30%"
+   },
+   "answer": "A",
+   "explanation": "Percent increase is based on the original price. The increase is 300 − 240 = ₱60, and 60 ÷ 240 = 0.25, or 25%. The value 60% wrongly uses the raw peso increase as a percent, and 20% wrongly divides by the new price."
+  },
+  {
+   "id": "C8-N004",
+   "section": "Numerical",
+   "question": "A water pump marked at ₱1,250 is on sale at 18% off. How much is the discount?",
+   "options": {
+    "A": "₱180",
+    "B": "₱1,025",
+    "C": "₱250",
+    "D": "₱225"
+   },
+   "answer": "D",
+   "explanation": "The discount is 18% of the marked price: 0.18 × 1,250 = ₱225. The amount ₱1,025 is the sale price (1,250 − 225), not the discount, and the other amounts come from using the wrong percent."
+  },
+  {
+   "id": "C8-N005",
+   "section": "Numerical",
+   "question": "A bicycle priced at ₱950 is sold at a 30% discount. How much does the buyer pay?",
+   "options": {
+    "A": "₱935",
+    "B": "₱620",
+    "C": "₱665",
+    "D": "₱285"
+   },
+   "answer": "C",
+   "explanation": "If 30% is taken off, the buyer pays 70% of the price: 0.70 × 950 = ₱665. The amount ₱285 is only the discount itself (30% of 950), not the amount paid."
+  },
+  {
+   "id": "C8-N006",
+   "section": "Numerical",
+   "question": "How much will ₱7,500 become after 4 years at 5% simple interest per year?",
+   "options": {
+    "A": "₱9,000",
+    "B": "₱8,625",
+    "C": "₱8,250",
+    "D": "₱9,375"
+   },
+   "answer": "A",
+   "explanation": "Simple interest: I = Prt = 7,500 × 0.05 × 4 = ₱1,500. Add the interest to the principal: 7,500 + 1,500 = ₱9,000. The other amounts result from computing interest for two, three, or five years instead of four."
+  },
+  {
+   "id": "C8-N007",
+   "section": "Numerical",
+   "question": "A loan of ₱6,500 earned ₱975 in simple interest over 3 years. What was the annual interest rate?",
+   "options": {
+    "A": "15%",
+    "B": "3%",
+    "C": "5%",
+    "D": "4%"
+   },
+   "answer": "C",
+   "explanation": "Use I = Prt and solve for r: r = I ÷ (P × t) = 975 ÷ (6,500 × 3) = 975 ÷ 19,500 = 0.05, or 5% per year. The 15% option is the total return over all three years (975 ÷ 6,500), not the annual rate."
+  },
+  {
+   "id": "C8-N008",
+   "section": "Numerical",
+   "question": "What is 4/9 + 5/6?",
+   "options": {
+    "A": "1 1/3",
+    "B": "1 5/18",
+    "C": "5/18",
+    "D": "9/15"
+   },
+   "answer": "B",
+   "explanation": "Use the least common denominator, 18: 4/9 = 8/18 and 5/6 = 15/18. Their sum is 23/18, which is 1 5/18. Adding numerators and denominators separately (9/15) is the classic error this item tests."
+  },
+  {
+   "id": "C8-N009",
+   "section": "Numerical",
+   "question": "What is 7/8 − 2/3?",
+   "options": {
+    "A": "1/6",
+    "B": "1/4",
+    "C": "5/24",
+    "D": "5/8"
+   },
+   "answer": "C",
+   "explanation": "Use the least common denominator, 24: 7/8 = 21/24 and 2/3 = 16/24. Subtracting gives 21/24 − 16/24 = 5/24. Subtracting numerators and denominators separately would give the wrong 5/8-type results."
+  },
+  {
+   "id": "C8-N010",
+   "section": "Numerical",
+   "question": "What is 5/9 of 270?",
+   "options": {
+    "A": "135",
+    "B": "120",
+    "C": "486",
+    "D": "150"
+   },
+   "answer": "D",
+   "explanation": "'Of' means multiply: 5/9 × 270 = 5 × 30 = 150, since 270 ÷ 9 = 30. The value 486 comes from dividing 270 by 5/9 instead of multiplying, which answers a different question."
+  },
+  {
+   "id": "C8-N011",
+   "section": "Numerical",
+   "question": "What is 12.6 ÷ 0.3?",
+   "options": {
+    "A": "42",
+    "B": "420",
+    "C": "4.2",
+    "D": "3.78"
+   },
+   "answer": "A",
+   "explanation": "Multiply both numbers by 10 to remove the decimal divisor: 126 ÷ 3 = 42. The options 4.2 and 420 are place-value errors of one power of ten, and 3.78 is the product 12.6 × 0.3, not the quotient."
+  },
+  {
+   "id": "C8-N012",
+   "section": "Numerical",
+   "question": "An amount of ₱2,400 is divided between two workers in the ratio 5 : 3. What is the smaller share?",
+   "options": {
+    "A": "₱900",
+    "B": "₱480",
+    "C": "₱1,500",
+    "D": "₱800"
+   },
+   "answer": "A",
+   "explanation": "The ratio has 5 + 3 = 8 parts, so each part is 2,400 ÷ 8 = ₱300. The smaller share has 3 parts: 3 × 300 = ₱900. The amount ₱1,500 is the larger share (5 parts), not the smaller one."
+  },
+  {
+   "id": "C8-N013",
+   "section": "Numerical",
+   "question": "In a class, the ratio of boys to girls is 4 : 5. If there are 30 girls, how many students are there in all?",
+   "options": {
+    "A": "24",
+    "B": "50",
+    "C": "54",
+    "D": "37.5"
+   },
+   "answer": "C",
+   "explanation": "Five ratio parts equal 30 girls, so one part is 6. Boys are 4 parts = 24, and the total is 24 + 30 = 54 students. Answering 24 gives only the boys, and 37.5 results from treating the ratio as a direct fraction of the total."
+  },
+  {
+   "id": "C8-N014",
+   "section": "Numerical",
+   "question": "A map is drawn so that each centimeter stands for 12 kilometers. Two towns are 4.5 centimeters apart on the map. How far apart are they in reality?",
+   "options": {
+    "A": "54 km",
+    "B": "48 km",
+    "C": "16.5 km",
+    "D": "60 km"
+   },
+   "answer": "A",
+   "explanation": "Multiply the map distance by the scale: 4.5 × 12 = 54 kilometers. Adding the two numbers (16.5) or rounding the map distance to 4 or 5 centimeters (48 or 60) does not apply the scale correctly."
+  },
+  {
+   "id": "C8-N015",
+   "section": "Numerical",
+   "question": "What is the average of 12, 17, 21, 26, and 29?",
+   "options": {
+    "A": "20",
+    "B": "21",
+    "C": "22",
+    "D": "105"
+   },
+   "answer": "B",
+   "explanation": "Add the numbers: 12 + 17 + 21 + 26 + 29 = 105. Divide by the count, 5: 105 ÷ 5 = 21. The value 105 is the sum before dividing, the step most often forgotten."
+  },
+  {
+   "id": "C8-N016",
+   "section": "Numerical",
+   "question": "The average of six numbers is 18. Five of the numbers are 12, 15, 19, 22, and 16. What is the sixth number?",
+   "options": {
+    "A": "22",
+    "B": "24",
+    "C": "26",
+    "D": "20"
+   },
+   "answer": "B",
+   "explanation": "If the average of six numbers is 18, their total must be 6 × 18 = 108. The five known numbers sum to 12 + 15 + 19 + 22 + 16 = 84, so the sixth number is 108 − 84 = 24."
+  },
+  {
+   "id": "C8-N017",
+   "section": "Numerical",
+   "question": "What is the median of the numbers 8, 3, 10, 5, and 7?",
+   "options": {
+    "A": "8",
+    "B": "6.6",
+    "C": "5",
+    "D": "7"
+   },
+   "answer": "D",
+   "explanation": "Arrange the numbers in order: 3, 5, 7, 8, 10. With five values, the median is the middle (third) value, 7. The value 6.6 is the mean, not the median, and 5 and 8 are simply other values in the set."
+  },
+  {
+   "id": "C8-N018",
+   "section": "Numerical",
+   "question": "The sum of the ages of two sisters is 41, and their ages differ by 7 years. How old is the younger sister?",
+   "options": {
+    "A": "17",
+    "B": "20",
+    "C": "34",
+    "D": "24"
+   },
+   "answer": "A",
+   "explanation": "Let the younger age be y; the older is y + 7. Then y + (y + 7) = 41, so 2y = 34 and y = 17. The older sister is 24, which is listed as a distractor for those who solve for the wrong sister."
+  },
+  {
+   "id": "C8-N019",
+   "section": "Numerical",
+   "question": "Six years ago, Ana was 18 years old. How old will Ana be nine years from now?",
+   "options": {
+    "A": "27",
+    "B": "36",
+    "C": "33",
+    "D": "24"
+   },
+   "answer": "C",
+   "explanation": "Work from the present: six years ago Ana was 18, so she is 18 + 6 = 24 now. Nine years from now she will be 24 + 9 = 33. Adding only one of the two time shifts gives 27 or 30-type errors."
+  },
+  {
+   "id": "C8-N020",
+   "section": "Numerical",
+   "question": "The sum of three consecutive odd integers is 93. What is the largest of the three integers?",
+   "options": {
+    "A": "33",
+    "B": "31",
+    "C": "29",
+    "D": "35"
+   },
+   "answer": "A",
+   "explanation": "Let the integers be n, n + 2, n + 4. Then 3n + 6 = 93, so n = 29 and the three integers are 29, 31, 33. The largest is 33; 31 is the middle integer and 29 is the smallest."
+  },
+  {
+   "id": "C8-N021",
+   "section": "Numerical",
+   "question": "If 5x − 8 = 47, what is the value of x?",
+   "options": {
+    "A": "13",
+    "B": "9",
+    "C": "7.8",
+    "D": "11"
+   },
+   "answer": "D",
+   "explanation": "Add 8 to both sides: 5x = 55. Divide by 5: x = 11. Check by substitution: 5(11) − 8 = 55 − 8 = 47, which matches the equation. Subtracting 8 instead of adding gives the wrong smaller values."
+  },
+  {
+   "id": "C8-N022",
+   "section": "Numerical",
+   "question": "Two numbers add up to 64, and one number is three times the other. What is the larger number?",
+   "options": {
+    "A": "16",
+    "B": "48",
+    "C": "32",
+    "D": "21.33"
+   },
+   "answer": "B",
+   "explanation": "Let the smaller number be n; the larger is 3n. Then n + 3n = 64, so 4n = 64 and n = 16. The larger number is 3 × 16 = 48. The value 16 is the smaller number, the trap in this item."
+  },
+  {
+   "id": "C8-N023",
+   "section": "Numerical",
+   "question": "A delivery van traveled 126 kilometers in 3.5 hours at a steady rate. What was its average speed?",
+   "options": {
+    "A": "36 km/h",
+    "B": "31.5 km/h",
+    "C": "441 km/h",
+    "D": "45 km/h"
+   },
+   "answer": "A",
+   "explanation": "Average speed equals distance divided by time: 126 ÷ 3.5 = 36 km/h. The value 441 km/h comes from multiplying distance by time, and 31.5 results from dividing by 4 hours instead of 3.5."
+  },
+  {
+   "id": "C8-N024",
+   "section": "Numerical",
+   "question": "How far can a car travel in 2.25 hours at an average speed of 68 km/h?",
+   "options": {
+    "A": "30.2 km",
+    "B": "153 km",
+    "C": "170 km",
+    "D": "136 km"
+   },
+   "answer": "B",
+   "explanation": "Distance equals speed multiplied by time: 68 × 2.25 = 153 kilometers. Note that 2.25 hours is 2 hours and 15 minutes: 68 × 2 = 136 plus 68 × 0.25 = 17 gives 153; using only the whole hours gives the 136 distractor."
+  },
+  {
+   "id": "C8-N025",
+   "section": "Numerical",
+   "question": "A machine fills 240 bottles in 4 hours at a constant rate. How many bottles can it fill in 7 hours?",
+   "options": {
+    "A": "560",
+    "B": "360",
+    "C": "300",
+    "D": "420"
+   },
+   "answer": "D",
+   "explanation": "Find the hourly rate first: 240 ÷ 4 = 60 bottles per hour. In 7 hours it fills 60 × 7 = 420 bottles. The other amounts come from using a wrong rate or adding hours instead of multiplying."
+  },
+  {
+   "id": "C8-N026",
+   "section": "Numerical",
+   "question": "Carla can encode a set of records in 5 hours, and Dan can encode the same set in 10 hours. Working together at the same rates, how long will they take?",
+   "options": {
+    "A": "3 hours and 20 minutes",
+    "B": "2 hours and 30 minutes",
+    "C": "7 hours and 30 minutes",
+    "D": "15 hours"
+   },
+   "answer": "A",
+   "explanation": "Add their rates: Carla does 1/5 of the job per hour and Dan 1/10, together 1/5 + 1/10 = 3/10 per hour. Time = 1 ÷ (3/10) = 10/3 hours = 3 hours and 20 minutes. Simply averaging or adding their separate times (7.5 or 15 hours) is wrong because they work at the same time."
+  },
+  {
+   "id": "C8-N027",
+   "section": "Numerical",
+   "question": "The perimeter of a rectangle is 52 meters and its length is 18 meters. What is its width?",
+   "options": {
+    "A": "16 m",
+    "B": "8 m",
+    "C": "34 m",
+    "D": "17 m"
+   },
+   "answer": "B",
+   "explanation": "Perimeter = 2(length + width), so length + width = 52 ÷ 2 = 26. Width = 26 − 18 = 8 meters. Subtracting the length from the full perimeter (34) forgets that the perimeter counts two lengths and two widths."
+  },
+  {
+   "id": "C8-N028",
+   "section": "Numerical",
+   "question": "A square plaza has a perimeter of 60 meters. What is its area?",
+   "options": {
+    "A": "900 square meters",
+    "B": "120 square meters",
+    "C": "225 square meters",
+    "D": "60 square meters"
+   },
+   "answer": "C",
+   "explanation": "Each side of the square is 60 ÷ 4 = 15 meters. Area = side × side = 15 × 15 = 225 square meters. Squaring the whole perimeter (or one wrong side) produces the 900 distractor."
+  },
+  {
+   "id": "C8-N029",
+   "section": "Numerical",
+   "question": "What is the area of a triangular flag with a base of 22 cm and a height of 7 cm?",
+   "options": {
+    "A": "154 square cm",
+    "B": "58 square cm",
+    "C": "77 square cm",
+    "D": "29 square cm"
+   },
+   "answer": "C",
+   "explanation": "Area of a triangle = ½ × base × height = ½ × 22 × 7 = 77 square cm. The value 154 is the full rectangle product 22 × 7; forgetting the one-half is the most common triangle error."
+  },
+  {
+   "id": "C8-N030",
+   "section": "Numerical",
+   "question": "What is the circumference of a circle with a radius of 10.5 cm? (Use π = 22/7)",
+   "options": {
+    "A": "21 cm",
+    "B": "66 cm",
+    "C": "33 cm",
+    "D": "346.5 cm"
+   },
+   "answer": "B",
+   "explanation": "Circumference = 2πr = 2 × (22/7) × 10.5 = 66 cm. The value 33 cm is only πr (half the circumference), and 346.5 cm is the area (πr² = 22/7 × 10.5²), the two most common mix-ups with this formula."
+  },
+  {
+   "id": "C8-N031",
+   "section": "Numerical",
+   "question": "What is the supplement of an angle measuring 65 degrees?",
+   "options": {
+    "A": "25°",
+    "B": "115°",
+    "C": "35°",
+    "D": "295°"
+   },
+   "answer": "B",
+   "explanation": "Supplementary angles add up to 180°, so the supplement is 180 − 65 = 115°. The value 25° is the complement (angles summing to 90°), which is the distractor this item is designed to catch."
+  },
+  {
+   "id": "C8-N032",
+   "section": "Numerical",
+   "question": "A box contains 6 red pens, 4 blue pens, and 5 green pens. If one pen is drawn at random, what is the probability that it is green?",
+   "options": {
+    "A": "3/5",
+    "B": "1/5",
+    "C": "1/3",
+    "D": "5/6"
+   },
+   "answer": "C",
+   "explanation": "Probability = favorable outcomes ÷ total outcomes. There are 5 green pens out of 6 + 4 + 5 = 15 pens, so the probability is 5/15 = 1/3. Using only part of the total (like 5/6) ignores the other pens in the box."
+  },
+  {
+   "id": "C8-N033",
+   "section": "Numerical",
+   "question": "A trader bought a gadget for ₱640 and sold it for ₱736. What is the profit percentage based on the cost?",
+   "options": {
+    "A": "85%",
+    "B": "96%",
+    "C": "13%",
+    "D": "15%"
+   },
+   "answer": "D",
+   "explanation": "Profit = 736 − 640 = ₱96. Profit percentage is based on cost: 96 ÷ 640 = 0.15, or 15%. The value 96% mistakes the peso profit for a percent, and 13% wrongly divides by the selling price."
+  },
+  {
+   "id": "C8-N034",
+   "section": "Numerical",
+   "question": "An agent receives a 7.5% commission on total sales. If the agent's sales amounted to ₱96,000, how much is the commission?",
+   "options": {
+    "A": "₱6,400",
+    "B": "₱9,600",
+    "C": "₱720",
+    "D": "₱7,200"
+   },
+   "answer": "D",
+   "explanation": "Commission = 7.5% × 96,000 = 0.075 × 96,000 = ₱7,200. A place-value slip gives ₱720, while ₱9,600 and ₱6,400 come from using 10% and other wrong rates."
+  },
+  {
+   "id": "C8-N035",
+   "section": "Numerical",
+   "question": "An item has a net price of ₱2,500 before a 12% value-added tax (VAT). How much is the total price including VAT?",
+   "options": {
+    "A": "₱2,800",
+    "B": "₱2,530",
+    "C": "₱300",
+    "D": "₱2,200"
+   },
+   "answer": "A",
+   "explanation": "The tax is 12% of 2,500 = ₱300. Adding it to the net price gives 2,500 + 300 = ₱2,800. The value ₱300 alone is just the tax, and ₱2,200 wrongly subtracts the tax instead of adding it."
+  },
+  {
+   "id": "C8-N036",
+   "section": "Numerical",
+   "question": "How many minutes are there in 4 hours and 35 minutes?",
+   "options": {
+    "A": "395 minutes",
+    "B": "240 minutes",
+    "C": "275 minutes",
+    "D": "435 minutes"
+   },
+   "answer": "C",
+   "explanation": "Convert the hours first: 4 × 60 = 240 minutes. Add the remaining 35 minutes: 240 + 35 = 275 minutes. Writing 435 treats the time as a decimal, the error this item checks."
+  },
+  {
+   "id": "C8-N037",
+   "section": "Numerical",
+   "question": "A training session started at 7:40 a.m. and ended at 1:25 p.m. How long did the session last?",
+   "options": {
+    "A": "6 hours and 15 minutes",
+    "B": "4 hours and 45 minutes",
+    "C": "5 hours and 45 minutes",
+    "D": "5 hours and 15 minutes"
+   },
+   "answer": "C",
+   "explanation": "From 7:40 a.m. to 12:40 p.m. is 5 hours, and from 12:40 to 1:25 p.m. is 45 minutes, for a total of 5 hours and 45 minutes. Borrowing across noon incorrectly produces the other durations."
+  },
+  {
+   "id": "C8-N038",
+   "section": "Numerical",
+   "question": "What is the least common multiple (LCM) of 15 and 20?",
+   "options": {
+    "A": "5",
+    "B": "300",
+    "C": "40",
+    "D": "60"
+   },
+   "answer": "D",
+   "explanation": "Multiples of 15: 15, 30, 45, 60; multiples of 20: 20, 40, 60. The smallest common multiple is 60. The value 5 is the greatest common factor, 300 is the product (a common multiple but not the least), and 40 is a multiple of 20 only."
+  },
+  {
+   "id": "C8-A001",
+   "section": "Analytical",
+   "question": "TELESCOPE : STARS :: MICROSCOPE : ___",
+   "options": {
+    "A": "microbes",
+    "B": "planets",
+    "C": "mountains",
+    "D": "oceans"
+   },
+   "answer": "A",
+   "explanation": "Both pairs show an instrument and the tiny or distant objects it is used to observe: a telescope is for viewing stars, and a microscope is for viewing microbes. Planets are also seen through telescopes, while oceans and mountains need no microscope."
+  },
+  {
+   "id": "C8-A002",
+   "section": "Analytical",
+   "question": "WHEEL : BICYCLE :: BLADE : ___",
+   "options": {
+    "A": "kitchen sink",
+    "B": "wooden table",
+    "C": "electric fan",
+    "D": "bicycle pump"
+   },
+   "answer": "C",
+   "explanation": "The relation is part to whole: a wheel is a working part of a bicycle, and a blade is a working part of an electric fan. The other choices are objects that do not have a blade as a defining part."
+  },
+  {
+   "id": "C8-A003",
+   "section": "Analytical",
+   "question": "CARPENTER : WOOD :: TAILOR : ___",
+   "options": {
+    "A": "shop",
+    "B": "customer",
+    "C": "needle",
+    "D": "cloth"
+   },
+   "answer": "D",
+   "explanation": "The relation is worker to the main material he or she works on: a carpenter works on wood, and a tailor works on cloth. A needle is only a tool, a shop is a workplace, and a customer is the person served, not the material."
+  },
+  {
+   "id": "C8-A004",
+   "section": "Analytical",
+   "question": "BRAVE : COWARDLY :: GENEROUS : ___",
+   "options": {
+    "A": "giving",
+    "B": "stingy",
+    "C": "helpful",
+    "D": "kind"
+   },
+   "answer": "B",
+   "explanation": "The first pair are opposites (brave versus cowardly), so the second pair must also be opposites: the opposite of generous is stingy. Kind, giving, and helpful are all close in meaning to generous, not opposite to it."
+  },
+  {
+   "id": "C8-A005",
+   "section": "Analytical",
+   "question": "LION : SAVANNA :: POLAR BEAR : ___",
+   "options": {
+    "A": "the desert",
+    "B": "the ocean floor",
+    "C": "the jungle",
+    "D": "the Arctic"
+   },
+   "answer": "D",
+   "explanation": "The relation is animal to its natural habitat: lions live in the savanna (grasslands), and polar bears live in the Arctic. Deserts and jungles are habitats of other animals, and polar bears hunt on sea ice at the surface, not on the ocean floor."
+  },
+  {
+   "id": "C8-A006",
+   "section": "Analytical",
+   "question": "GOVERNOR : PROVINCE :: MAYOR : ___",
+   "options": {
+    "A": "city",
+    "B": "barangay",
+    "C": "region",
+    "D": "nation"
+   },
+   "answer": "A",
+   "explanation": "The relation is chief executive to the unit he or she heads: a governor heads a province, and a mayor heads a city (or municipality). A barangay is headed by a barangay captain, a region has no single elected governor, and the nation is headed by the President."
+  },
+  {
+   "id": "C8-A007",
+   "section": "Analytical",
+   "question": "What is the next number in the series 1, 2, 4, 7, 11, 16, ___?",
+   "options": {
+    "A": "23",
+    "B": "22",
+    "C": "21",
+    "D": "20"
+   },
+   "answer": "B",
+   "explanation": "Look at the differences between consecutive terms: 1, 2, 3, 4, 5. Each jump grows by 1, so the next jump is 6, giving 16 + 6 = 22. Adding a constant amount instead produces the wrong 20 or 21."
+  },
+  {
+   "id": "C8-A008",
+   "section": "Analytical",
+   "question": "What is the next number in the series 96, 48, 24, 12, ___?",
+   "options": {
+    "A": "8",
+    "B": "0",
+    "C": "4",
+    "D": "6"
+   },
+   "answer": "D",
+   "explanation": "Each term is divided by 2 to get the next: 96 ÷ 2 = 48, 48 ÷ 2 = 24, 24 ÷ 2 = 12, so the next term is 12 ÷ 2 = 6. Subtracting a fixed amount does not fit, since the gaps shrink from 48 to 24 to 12."
+  },
+  {
+   "id": "C8-A009",
+   "section": "Analytical",
+   "question": "What is the next number in the series 2, 3, 5, 8, 13, 21, ___?",
+   "options": {
+    "A": "34",
+    "B": "36",
+    "C": "31",
+    "D": "29"
+   },
+   "answer": "A",
+   "explanation": "This is a Fibonacci-style series: from the third term on, each number is the sum of the two numbers before it (2 + 3 = 5, 3 + 5 = 8, and so on). The next term is 13 + 21 = 34."
+  },
+  {
+   "id": "C8-A010",
+   "section": "Analytical",
+   "question": "What is the next number in the series 100, 97, 91, 82, 70, ___?",
+   "options": {
+    "A": "64",
+    "B": "58",
+    "C": "60",
+    "D": "55"
+   },
+   "answer": "D",
+   "explanation": "The decreases grow in a pattern: −3, −6, −9, −12. Each subtraction is 3 more than the previous one, so the next subtraction is −15, giving 70 − 15 = 55. Keeping the last difference (−12) would wrongly give 58."
+  },
+  {
+   "id": "C8-A011",
+   "section": "Analytical",
+   "question": "What is the next number in the series 3, 4, 6, 10, 18, ___?",
+   "options": {
+    "A": "26",
+    "B": "28",
+    "C": "30",
+    "D": "34"
+   },
+   "answer": "D",
+   "explanation": "The differences are 1, 2, 4, 8, doubling each time. The next difference is 16, so the next term is 18 + 16 = 34. Adding the last difference again (8) gives the tempting but wrong 26."
+  },
+  {
+   "id": "C8-A012",
+   "section": "Analytical",
+   "question": "What is the next letter in the series Z, X, V, T, ___?",
+   "options": {
+    "A": "S",
+    "B": "Q",
+    "C": "R",
+    "D": "P"
+   },
+   "answer": "C",
+   "explanation": "The letters move backward through the alphabet two steps at a time: Z, X, V, T. Continuing the same −2 pattern gives R. Moving back only one step gives S, and larger jumps give Q or P, which break the pattern."
+  },
+  {
+   "id": "C8-A013",
+   "section": "Analytical",
+   "question": "What is the next letter in the series M, O, R, U, X, ___?",
+   "options": {
+    "A": "W",
+    "B": "Y",
+    "C": "A",
+    "D": "Z"
+   },
+   "answer": "D",
+   "explanation": "The steps alternate +2 and +3: M to O is +2, O to R is +3, R to U is +2, U to X is +3, so the next step is +2, giving Z. Repeating +3 gives A (wrapping past Z), and +1 or −1 steps do not appear in the pattern."
+  },
+  {
+   "id": "C8-A014",
+   "section": "Analytical",
+   "question": "What is the next letter in the series B, D, G, K, P, ___?",
+   "options": {
+    "A": "U",
+    "B": "T",
+    "C": "S",
+    "D": "V"
+   },
+   "answer": "D",
+   "explanation": "Convert the letters to positions: B = 2, D = 4, G = 7, K = 11, P = 16. The gaps are +2, +3, +4, +5, so the next gap is +6, landing on position 22, which is V. Stopping the gap growth at +5 gives U, the main distractor."
+  },
+  {
+   "id": "C8-A015",
+   "section": "Analytical",
+   "question": "Statements: All licensed pharmacists passed the pharmacy board examination. Rita is a licensed pharmacist. Which conclusion necessarily follows?",
+   "options": {
+    "A": "Rita owns a pharmacy.",
+    "B": "Everyone who passed the board examination is a pharmacist.",
+    "C": "Rita is the topnotcher of the examination.",
+    "D": "Rita passed the pharmacy board examination."
+   },
+   "answer": "D",
+   "explanation": "Since all licensed pharmacists passed the board examination and Rita is a licensed pharmacist, Rita necessarily passed. Owning a pharmacy and topping the exam are not stated, and the second option reverses the statement: passers could include other professions, so it does not follow."
+  },
+  {
+   "id": "C8-A016",
+   "section": "Analytical",
+   "question": "Statements: No reptiles are warm-blooded. All snakes are reptiles. Which conclusion necessarily follows?",
+   "options": {
+    "A": "All warm-blooded animals are snakes.",
+    "B": "No snakes are warm-blooded.",
+    "C": "No animals are warm-blooded.",
+    "D": "Some snakes are warm-blooded."
+   },
+   "answer": "B",
+   "explanation": "Snakes belong entirely inside the reptile group, and the whole reptile group is excluded from warm-blooded animals, so no snake is warm-blooded. The other options either contradict the statements or extend them to all animals, which was never claimed."
+  },
+  {
+   "id": "C8-A017",
+   "section": "Analytical",
+   "question": "Statements: Some doctors in the hospital are researchers. Some researchers in the hospital are published authors. Which conclusion does NOT necessarily follow?",
+   "options": {
+    "A": "Some researchers in the hospital are doctors.",
+    "B": "Some doctors in the hospital are researchers.",
+    "C": "Some researchers in the hospital are published authors.",
+    "D": "Some doctors in the hospital are published authors."
+   },
+   "answer": "D",
+   "explanation": "Two 'some' statements that share a middle group (researchers) cannot be chained: the doctors who research may be different people from the researchers who publish, so 'some doctors are authors' is not guaranteed. The other three options simply restate or safely reverse one of the given statements."
+  },
+  {
+   "id": "C8-A018",
+   "section": "Analytical",
+   "question": "Statements: If a document is classified, it is kept in the records vault. The procurement plan is a classified document. Which conclusion necessarily follows?",
+   "options": {
+    "A": "The procurement plan is kept in the records vault.",
+    "B": "Unclassified documents are destroyed.",
+    "C": "All documents in the vault are classified.",
+    "D": "The procurement plan is the only classified document."
+   },
+   "answer": "A",
+   "explanation": "This is a direct application of the rule (modus ponens): the plan is classified, and every classified document is kept in the vault, so the plan is in the vault. The first option commits the converse error, and the last two add facts never stated."
+  },
+  {
+   "id": "C8-A019",
+   "section": "Analytical",
+   "question": "Statements: All members of the chess club are students of the school. Paolo is not a student of the school. Which conclusion necessarily follows?",
+   "options": {
+    "A": "Paolo is a student of another school.",
+    "B": "Paolo is not a member of the chess club.",
+    "C": "No student of the school plays chess.",
+    "D": "Paolo does not know how to play chess."
+   },
+   "answer": "B",
+   "explanation": "Membership requires being a student of the school. Since Paolo is not a student of the school, he cannot be a member; this is the contrapositive of the first statement. Whether he can play chess or studies elsewhere is not given, and the last option contradicts the existence of the club's student members."
+  },
+  {
+   "id": "C8-A020",
+   "section": "Analytical",
+   "question": "Statement: 'The barangay will distribute free vegetable seedlings so that more households will grow their own food.' The statement assumes that:",
+   "options": {
+    "A": "Households are willing and able to plant and care for the seedlings.",
+    "B": "Vegetables will no longer be sold in the public market.",
+    "C": "All households own large farms.",
+    "D": "The barangay has already harvested the vegetables."
+   },
+   "answer": "A",
+   "explanation": "Free seedlings only lead to home-grown food if residents actually plant and tend them, so willingness and ability to plant is the necessary assumption. The plan does not require markets to disappear, a prior harvest, or large farms; small yards are enough for vegetables."
+  },
+  {
+   "id": "C8-A021",
+   "section": "Analytical",
+   "question": "Statement: 'The agency moved its permit applications online so that applicants will no longer need to line up at the office.' The statement assumes that:",
+   "options": {
+    "A": "All applicants own a computer shop.",
+    "B": "The office will close its frontline counters permanently.",
+    "C": "Applicants have access to the internet and can use the online system.",
+    "D": "Paper forms have been banned by law."
+   },
+   "answer": "C",
+   "explanation": "Online application removes the need to line up only if applicants can actually get online and use the system, so internet access and basic ability are assumed. Counters may still serve others, no law is mentioned, and owning a computer shop is far more than what is needed."
+  },
+  {
+   "id": "C8-A022",
+   "section": "Analytical",
+   "question": "Statement: 'The school will hold free review classes every Saturday so that its pupils will get higher scores in the national test.' The statement assumes that:",
+   "options": {
+    "A": "Only pupils with high scores may join the classes.",
+    "B": "Weekday classes will be suspended for the whole year.",
+    "C": "The national test will be given on a Saturday.",
+    "D": "Pupils will attend the Saturday classes and the extra review will help them."
+   },
+   "answer": "D",
+   "explanation": "Saturday classes can raise scores only if pupils show up and benefit from the review, so attendance and usefulness are assumed. The test day, suspension of weekday classes, and restricting the classes to high scorers (who need them least) are not assumed at all."
+  },
+  {
+   "id": "C8-A023",
+   "section": "Analytical",
+   "question": "Dario is taller than Elsa. Elsa is taller than Felix. Felix is taller than Gina. Who is the shortest?",
+   "options": {
+    "A": "Gina",
+    "B": "Felix",
+    "C": "Dario",
+    "D": "Elsa"
+   },
+   "answer": "A",
+   "explanation": "Chain the comparisons: Dario > Elsa > Felix > Gina. The person at the end of the chain, Gina, is shorter than all three others, so she is the shortest. Felix is only shorter than two of them."
+  },
+  {
+   "id": "C8-A024",
+   "section": "Analytical",
+   "question": "In a singing contest, Kim finished ahead of Lee. Lee finished ahead of Mho. Rica finished last. Who finished second?",
+   "options": {
+    "A": "Kim",
+    "B": "Lee",
+    "C": "Mho",
+    "D": "Rica"
+   },
+   "answer": "B",
+   "explanation": "The order is Kim first, then Lee, then Mho, with Rica last. Second place therefore belongs to Lee. Kim won the contest, Mho placed third, and Rica, stated to be last, placed fourth."
+  },
+  {
+   "id": "C8-A025",
+   "section": "Analytical",
+   "question": "Five books are arranged on a shelf from left to right. The History book is in the exact middle. The Math book is immediately to the left of History, and the English book is at the far left. The Science book is immediately to the right of History. Which book is at the far right?",
+   "options": {
+    "A": "Math book",
+    "B": "English book",
+    "C": "Art book",
+    "D": "Science book"
+   },
+   "answer": "C",
+   "explanation": "Build the arrangement: position 1 is English, position 2 is Math (immediately left of the middle), position 3 is History (the middle of five), and position 4 is Science (immediately right of History). The only remaining book, the Art book, takes position 5, the far right."
+  },
+  {
+   "id": "C8-A026",
+   "section": "Analytical",
+   "question": "In a row of applicants, one person is 4th from the left end and 6th from the right end. How many applicants are in the row?",
+   "options": {
+    "A": "2",
+    "B": "11",
+    "C": "9",
+    "D": "10"
+   },
+   "answer": "C",
+   "explanation": "Add the two positions and subtract 1, because the person is counted twice: 4 + 6 − 1 = 9 applicants. Simply adding the positions gives 10, which double-counts the person in question."
+  },
+  {
+   "id": "C8-A027",
+   "section": "Analytical",
+   "question": "A woman pointing to a boy said, 'He is the son of my father's only daughter.' How is the boy related to the woman?",
+   "options": {
+    "A": "He is her son.",
+    "B": "He is her cousin.",
+    "C": "He is her nephew.",
+    "D": "He is her brother."
+   },
+   "answer": "A",
+   "explanation": "Work from the inside out: 'my father's only daughter' can only be the woman herself, since she is her father's daughter and he has only one. The boy, as the son of that daughter, is therefore her son. He cannot be her brother or nephew because those would require a different parent."
+  },
+  {
+   "id": "C8-A028",
+   "section": "Analytical",
+   "question": "Marco's father is the brother of Lina's mother. How is Marco related to Lina?",
+   "options": {
+    "A": "Marco is Lina's brother.",
+    "B": "Marco is Lina's uncle.",
+    "C": "Marco is Lina's nephew.",
+    "D": "Marco is Lina's cousin."
+   },
+   "answer": "D",
+   "explanation": "Marco's father and Lina's mother are siblings, so their children are first cousins. Marco would be Lina's brother only if they shared a parent, her uncle if he belonged to her parents' generation, and her nephew if he were the child of her sibling."
+  },
+  {
+   "id": "C8-A029",
+   "section": "Analytical",
+   "question": "In a certain code, each letter is shifted three steps forward in the alphabet, so CAT is written as FDW. How is DOG written in the same code?",
+   "options": {
+    "A": "GRJ",
+    "B": "FQI",
+    "C": "CNF",
+    "D": "GRH"
+   },
+   "answer": "A",
+   "explanation": "Apply a +3 shift to each letter: D + 3 = G, O + 3 = R, and G + 3 = J, giving GRJ. The options FQI and GRH come from shifting one letter by the wrong amount, and CNF uses a −1 shift instead."
+  },
+  {
+   "id": "C8-A030",
+   "section": "Analytical",
+   "question": "In a certain code, each letter is replaced by the letter that immediately follows it in the alphabet, so BOOK is written as CPPL. How is READ written in the same code?",
+   "options": {
+    "A": "TFCE",
+    "B": "QDZC",
+    "C": "SFBD",
+    "D": "SFBE"
+   },
+   "answer": "D",
+   "explanation": "Move each letter one step forward: R + 1 = S, E + 1 = F, A + 1 = B, D + 1 = E, giving SFBE. QDZC moves letters backward, SFBD misses the last shift, and TFCE shifts by two steps."
+  },
+  {
+   "id": "C8-G001",
+   "section": "General Information",
+   "question": "Under the Regalian Doctrine in Article XII of the 1987 Constitution, all lands of the public domain, waters, minerals, and other natural resources are owned by:",
+   "options": {
+    "A": "Whoever occupies them first",
+    "B": "The State",
+    "C": "The province where they are found",
+    "D": "Private mining and logging companies"
+   },
+   "answer": "B",
+   "explanation": "Article XII, Section 2 declares that all lands of the public domain and all natural resources are owned by the State, which controls their exploration, development, and use. First occupants and private companies may only acquire rights through State-granted agreements or franchises, provinces are political units and do not own the public domain, and only alienable agricultural lands may pass into private ownership."
+  },
+  {
+   "id": "C8-G002",
+   "section": "General Information",
+   "question": "Under the 1987 Constitution, the term of office of the President and the Vice President begins at what time?",
+   "options": {
+    "A": "At noon on the 30th day of June following their election",
+    "B": "On January 1 of the year after the election",
+    "C": "Immediately after taking the oath, on any date",
+    "D": "At noon on the day after the proclamation of winners"
+   },
+   "answer": "A",
+   "explanation": "Article VII, Section 4 fixes the start of the presidential and vice-presidential term at noon on June 30 next following the election, regardless of when the oath is taken or winners are proclaimed. January 1 is the start of the fiscal year, not of the presidential term."
+  },
+  {
+   "id": "C8-G003",
+   "section": "General Information",
+   "question": "Only one-half of the Senate is elected in each regular senatorial election held every three years. How many Senators are elected at a time?",
+   "options": {
+    "A": "8 Senators",
+    "B": "16 Senators",
+    "C": "24 Senators",
+    "D": "12 Senators"
+   },
+   "answer": "D",
+   "explanation": "The Senate has 24 members serving six-year terms, with elections staggered so that half, or 12 Senators, are chosen every three years (Article VI, Section 2). Electing all 24 at once would defeat the staggering, and 8 or 16 do not correspond to the one-half rule."
+  },
+  {
+   "id": "C8-G004",
+   "section": "General Information",
+   "question": "Under the 1987 Constitution, the regular election for President and Vice President is held on:",
+   "options": {
+    "A": "The second Monday of June",
+    "B": "The last Monday of November",
+    "C": "The first Monday of May",
+    "D": "The second Monday of May"
+   },
+   "answer": "D",
+   "explanation": "Article VII, Section 4 sets the presidential election on the second Monday of May, the same schedule used for national and local elections generally. The first Monday and the June and November dates appear in no constitutional election schedule."
+  },
+  {
+   "id": "C8-G005",
+   "section": "General Information",
+   "question": "The 1987 Constitution grants fiscal autonomy to the Constitutional Commissions. This means that their appropriations, once approved, shall be:",
+   "options": {
+    "A": "Returned to the general fund at the end of each quarter",
+    "B": "Automatically and regularly released to them",
+    "C": "Subject to reduction by the Department of Budget and Management at will",
+    "D": "Released only with the personal approval of the President"
+   },
+   "answer": "B",
+   "explanation": "Article IX-A, Section 5 provides that the appropriations of the Constitutional Commissions shall be automatically and regularly released, protecting the Civil Service Commission, COMELEC, and COA from executive pressure. Presidential approval per release, quarterly return of funds, and discretionary DBM reduction would all defeat that independence."
+  },
+  {
+   "id": "C8-G006",
+   "section": "General Information",
+   "question": "The Vice President may be appointed as a member of the Cabinet. Unlike other presidential appointments, this appointment does NOT require:",
+   "options": {
+    "A": "The oath of office",
+    "B": "Compliance with RA 6713 disclosure rules",
+    "C": "Resignation from the vice presidency",
+    "D": "Confirmation by the Commission on Appointments"
+   },
+   "answer": "D",
+   "explanation": "Article VII, Section 3 expressly states that the Vice President may be appointed as a Member of the Cabinet without need for confirmation by the Commission on Appointments. The Vice President still takes an oath and remains covered by ethics and disclosure laws, and does not have to resign the vice presidency to serve in the Cabinet."
+  },
+  {
+   "id": "C8-G007",
+   "section": "General Information",
+   "question": "After proclaiming martial law or suspending the privilege of the writ of habeas corpus, the President must submit a report of the proclamation or suspension to Congress within:",
+   "options": {
+    "A": "48 hours",
+    "B": "24 hours",
+    "C": "30 days",
+    "D": "72 hours"
+   },
+   "answer": "A",
+   "explanation": "Article VII, Section 18 requires the President, within 48 hours of the proclamation or suspension, to submit a report in person or in writing to Congress, which may then revoke it. Thirty days is the bill-lapse period in another provision, while 24 and 72 hours are not the constitutional reporting periods."
+  },
+  {
+   "id": "C8-G008",
+   "section": "General Information",
+   "question": "To convict an official in an impeachment trial, the 1987 Constitution requires the concurrence of at least what fraction of all the Members of the Senate?",
+   "options": {
+    "A": "Three-fourths",
+    "B": "One-half plus one",
+    "C": "One-third",
+    "D": "Two-thirds"
+   },
+   "answer": "D",
+   "explanation": "Article XI, Section 3 requires the concurrence of two-thirds of all the Members of the Senate to convict in impeachment. One-third of the House is what initiates (files) an impeachment complaint, a majority (one-half plus one) is an ordinary quorum/voting rule, and three-fourths is the vote of Congress needed to propose constitutional amendments."
+  },
+  {
+   "id": "C8-G009",
+   "section": "General Information",
+   "question": "Congress may propose amendments to the 1987 Constitution by a vote of:",
+   "options": {
+    "A": "Two-thirds of the Senate only",
+    "B": "Two-thirds of all its Members",
+    "C": "Three-fourths of all its Members",
+    "D": "A majority of all its Members"
+   },
+   "answer": "C",
+   "explanation": "Article XVII, Section 1 allows Congress, upon a vote of three-fourths of all its Members, to propose amendments or call a constitutional convention. Two-thirds is used for overriding a veto and concurring in treaties, and a simple majority is only the quorum rule, not enough to propose amendments."
+  },
+  {
+   "id": "C8-G010",
+   "section": "General Information",
+   "question": "The Commission on Appointments, which confirms key presidential appointments, is composed of how many members in total?",
+   "options": {
+    "A": "12 (all from the Senate)",
+    "B": "25 (the Senate President as chairman, 12 Senators, and 12 Representatives)",
+    "C": "24 (12 Senators and 12 Representatives, with no chairman from either)",
+    "D": "30 (15 Senators and 15 Representatives)"
+   },
+   "answer": "B",
+   "explanation": "Article VI, Section 18 creates a Commission on Appointments of 25: the President of the Senate as ex officio Chairman, 12 Senators, and 12 Representatives, elected by each House on proportional party representation. The 24-member option forgets the Chairman, and the Senate alone cannot compose the body."
+  },
+  {
+   "id": "C8-G011",
+   "section": "General Information",
+   "question": "Members of the Supreme Court are appointed by the President, who must choose only from a list of nominees prepared by which body?",
+   "options": {
+    "A": "The Senate Committee on Justice",
+    "B": "The Commission on Appointments",
+    "C": "The Judicial and Bar Council",
+    "D": "The Integrated Bar of the Philippines"
+   },
+   "answer": "C",
+   "explanation": "Article VIII, Section 9 requires Supreme Court appointments to be made from a list of at least three nominees prepared by the Judicial and Bar Council; the appointment then needs no confirmation. The Commission on Appointments confirms other high officials but not justices, the Senate committee only deliberates on legislation, and the Integrated Bar is merely represented in the Council, not the listing body."
+  },
+  {
+   "id": "C8-G012",
+   "section": "General Information",
+   "question": "As a general rule, a law passed by Congress takes effect how many days after its complete publication in the Official Gazette or a newspaper of general circulation?",
+   "options": {
+    "A": "90 days",
+    "B": "15 days",
+    "C": "30 days",
+    "D": "Immediately upon signing"
+   },
+   "answer": "B",
+   "explanation": "Following Article 2 of the Civil Code as amended by Executive Order No. 200, laws take effect 15 days following the completion of their publication, unless the law itself provides otherwise. Immediate effectivity applies only when the law expressly says so, and the 30-day period is the bill-lapse rule, not the publication rule."
+  },
+  {
+   "id": "C8-G013",
+   "section": "General Information",
+   "question": "Which department is primarily responsible for formulating national health policies, regulating health facilities and services, and leading disease prevention and control programs?",
+   "options": {
+    "A": "Department of Education (DepEd)",
+    "B": "Department of Social Welfare and Development (DSWD)",
+    "C": "Department of the Interior and Local Government (DILG)",
+    "D": "Department of Health (DOH)"
+   },
+   "answer": "D",
+   "explanation": "The Department of Health is the primary policy, planning, and regulatory body for health, including licensing of hospitals and national disease programs. The DSWD handles social welfare services, the DepEd handles basic education, and the DILG supervises local governments, which deliver frontline health services but do not set national health policy."
+  },
+  {
+   "id": "C8-G014",
+   "section": "General Information",
+   "question": "Public utilities in the Philippines must be owned by corporations at least 60% of whose capital belongs to Filipino citizens; this means foreign equity in a public utility is limited to a maximum of:",
+   "options": {
+    "A": "51%",
+    "B": "49%",
+    "C": "40%",
+    "D": "25%"
+   },
+   "answer": "C",
+   "explanation": "Article XII, Section 11 requires at least 60% Filipino ownership of public utility franchises, so foreign participation cannot exceed the remaining 40%. The 49% and 51% figures would leave Filipinos without the required controlling share, and 25% is not the constitutional ceiling."
+  },
+  {
+   "id": "C8-G015",
+   "section": "General Information",
+   "question": "Under Article XIV of the 1987 Constitution, the State shall provide free public education at which levels?",
+   "options": {
+    "A": "Elementary and secondary (high school) levels",
+    "B": "Elementary level only",
+    "C": "Secondary level only",
+    "D": "All levels including college for everyone"
+   },
+   "answer": "A",
+   "explanation": "Article XIV, Section 2 makes public elementary and secondary education free, and requires compulsory elementary education. Free college is not granted to everyone by the Constitution (free tuition in state universities comes from a later statute, RA 10931), and limiting the guarantee to only one of the two levels understates it."
+  },
+  {
+   "id": "C8-G016",
+   "section": "General Information",
+   "question": "Under RA 6713, a public official or employee is also required to file a Statement of Assets, Liabilities, and Net Worth (SALN) within what period after separation from the service?",
+   "options": {
+    "A": "15 working days after separation",
+    "B": "30 days after separation",
+    "C": "60 days after separation",
+    "D": "On April 30 of the following year"
+   },
+   "answer": "B",
+   "explanation": "Section 8 of RA 6713 requires a SALN upon assumption of office (within 30 days), annually (on or before April 30), and upon expiration of the term or separation from the service (within 30 days). The 60-day period belongs to divestment of conflicting interests under Section 9, and 15 working days is the period for acting on public requests under Section 5."
+  },
+  {
+   "id": "C8-G017",
+   "section": "General Information",
+   "question": "Which department is primarily responsible for basic education in the Philippines, covering public elementary and secondary schools?",
+   "options": {
+    "A": "Commission on Higher Education (CHED)",
+    "B": "Department of Education (DepEd)",
+    "C": "Department of Social Welfare and Development (DSWD)",
+    "D": "Technical Education and Skills Development Authority (TESDA)"
+   },
+   "answer": "B",
+   "explanation": "The DepEd governs basic education: kindergarten, elementary, and secondary schooling. CHED supervises tertiary or college education, TESDA handles technical-vocational training and certification, and the DSWD runs social welfare programs such as supplemental feeding, not the school system."
+  },
+  {
+   "id": "C8-G018",
+   "section": "General Information",
+   "question": "Under RA 8749 (Philippine Clean Air Act), areas that share similar weather and atmospheric conditions affecting the dispersion of pollutants are grouped and managed as:",
+   "options": {
+    "A": "Protected areas",
+    "B": "Airsheds",
+    "C": "Ecological zones under RA 9003",
+    "D": "Water quality management areas"
+   },
+   "answer": "B",
+   "explanation": "Section 9 of RA 8749 divides the country into airsheds, areas with common weather and atmospheric circulation, each governed by a multi-sector governing board for air quality. Water quality management areas are a Clean Water Act (RA 9275) device, protected areas come from the NIPAS Act (RA 7586), and RA 9003 deals with solid waste, not air management units."
+  },
+  {
+   "id": "C8-G019",
+   "section": "General Information",
+   "question": "The Philippine Clean Water Act (RA 9275) is implemented principally by which department, through its Environmental Management Bureau?",
+   "options": {
+    "A": "Department of Public Works and Highways (DPWH)",
+    "B": "Department of Health (DOH)",
+    "C": "Department of Environment and Natural Resources (DENR)",
+    "D": "Department of the Interior and Local Government (DILG)"
+   },
+   "answer": "C",
+   "explanation": "RA 9275 designates the DENR, acting through the Environmental Management Bureau, as the lead implementing agency for water quality management. The DOH handles health and sanitation standards, the DPWH builds infrastructure such as sewerage, and the DILG supervises local governments, but none of them leads the Clean Water Act."
+  },
+  {
+   "id": "C8-G020",
+   "section": "General Information",
+   "question": "RA 6969 empowers the Department of Environment and Natural Resources to strictly regulate the importation, manufacture, transport, and disposal of which of the following because of their danger to health and the environment?",
+   "options": {
+    "A": "Municipal solid waste from households",
+    "B": "Toxic substances and hazardous and nuclear wastes",
+    "C": "Wastewater discharges into rivers",
+    "D": "Smoke and gas emissions from factories"
+   },
+   "answer": "B",
+   "explanation": "RA 6969 is the Toxic Substances and Hazardous and Nuclear Wastes Control Act, covering chemical substances and hazardous waste. Household solid waste is governed by RA 9003, factory air emissions by RA 8749, and wastewater discharges by RA 9275; each distractor is the subject of a different environmental law."
+  },
+  {
+   "id": "C8-G021",
+   "section": "General Information",
+   "question": "Which of the following acts inside a protected area is prohibited under the NIPAS Act (RA 7586)?",
+   "options": {
+    "A": "Reporting illegal logging to the Protected Area Management Board",
+    "B": "Hunting, destroying, or disturbing wildlife resources without authorization",
+    "C": "Conducting an approved scientific study in the area",
+    "D": "Entering the area as part of an authorized ecotourism activity"
+   },
+   "answer": "B",
+   "explanation": "RA 7586 prohibits hunting, destroying, disturbing, or possessing any wild plant or animal, or products derived from them, within protected areas without authorization. Approved research, authorized ecotourism, and reporting violations are lawful and even encouraged activities, so they are not prohibited acts."
+  },
+  {
+   "id": "C8-G022",
+   "section": "General Information",
+   "question": "The eight rays of the sun on the Philippine flag symbolize:",
+   "options": {
+    "A": "The first eight provinces that revolted against Spain",
+    "B": "The eight presidents of the First Republic",
+    "C": "The eight regions of the Philippines",
+    "D": "The eight major islands of the archipelago"
+   },
+   "answer": "A",
+   "explanation": "Each ray represents one of the first eight provinces that rose in revolt against Spain: Manila, Cavite, Bulacan, Pampanga, Nueva Ecija, Tarlac, Laguna, and Batangas. The Philippines has more than eight regions and far more than eight major islands, and the First Republic had only one president, Emilio Aguinaldo."
+  },
+  {
+   "id": "C8-G023",
+   "section": "General Information",
+   "question": "On the Philippine flag, the blue stripe symbolizes:",
+   "options": {
+    "A": "Patriotism and valor",
+    "B": "Peace, truth, and justice",
+    "C": "Purity and innocence",
+    "D": "Equality and fraternity"
+   },
+   "answer": "B",
+   "explanation": "The blue field of the flag stands for peace, truth, and justice. Patriotism and valor are symbolized by the red stripe, equality and fraternity (liberty) by the white triangle, and purity and innocence is a meaning attached to white in some other flags, not to the blue stripe here."
+  },
+  {
+   "id": "C8-G024",
+   "section": "General Information",
+   "question": "Jose Rizal's novel Noli Me Tangere, which exposed abuses in Spanish colonial society, was first published in 1887 in which city?",
+   "options": {
+    "A": "Ghent, Belgium",
+    "B": "Hong Kong",
+    "C": "Berlin, Germany",
+    "D": "Madrid, Spain"
+   },
+   "answer": "C",
+   "explanation": "The Noli Me Tangere was printed in Berlin in 1887, financed with help from Maximo Viola. Rizal's second novel, El Filibusterismo, was printed in Ghent in 1891, which is why Ghent is the tempting distractor; Madrid was where he studied and wrote for La Solidaridad, and Hong Kong was a later place of exile and practice."
+  },
+  {
+   "id": "C8-G025",
+   "section": "General Information",
+   "question": "Who authored the Acta de la Proclamacion de Independencia del Pueblo Filipino and read it during the proclamation of Philippine independence on June 12, 1898?",
+   "options": {
+    "A": "Ambrosio Rianzares Bautista",
+    "B": "Apolinario Mabini",
+    "C": "Felipe Agoncillo",
+    "D": "Emilio Aguinaldo"
+   },
+   "answer": "A",
+   "explanation": "Ambrosio Rianzares Bautista, Aguinaldo's adviser, wrote and read the declaration document at Kawit. Emilio Aguinaldo proclaimed the independence and waved the flag but did not author the Acta, Apolinario Mabini initially questioned the proclamation and later became Aguinaldo's chief adviser, and Felipe Agoncillo was the revolutionary government's diplomat sent abroad."
+  },
+  {
+   "id": "C8-G026",
+   "section": "General Information",
+   "question": "The Battle of Mactan in 1521 is remembered because the expedition commander killed there by Lapu-Lapu's forces was:",
+   "options": {
+    "A": "Juan Sebastian Elcano",
+    "B": "Ruy Lopez de Villalobos",
+    "C": "Ferdinand Magellan",
+    "D": "Miguel Lopez de Legazpi"
+   },
+   "answer": "C",
+   "explanation": "Ferdinand Magellan, the Portuguese navigator sailing for Spain, was killed in the Battle of Mactan on April 27, 1521. Elcano completed the circumnavigation afterward, Legazpi began Spanish colonization in 1565, and Villalobos named the islands 'Filipinas' in the 1540s."
+  },
+  {
+   "id": "C8-G027",
+   "section": "General Information",
+   "question": "The Bangko Sentral ng Pilipinas (BSP) is primarily responsible for:",
+   "options": {
+    "A": "Collecting income taxes from individuals",
+    "B": "Auditing all government accounts",
+    "C": "Maintaining price stability through monetary policy",
+    "D": "Preparing the national government's annual budget"
+   },
+   "answer": "C",
+   "explanation": "As the central bank, the BSP conducts monetary policy to keep prices stable and supervises banks. Income tax collection belongs to the Bureau of Internal Revenue, budget preparation to the DBM and the President, and auditing of government accounts to the Commission on Audit, so each distractor is another agency's job."
+  },
+  {
+   "id": "C8-G028",
+   "section": "General Information",
+   "question": "Which agency is tasked with assessing and collecting national internal revenue taxes, such as income tax and value-added tax?",
+   "options": {
+    "A": "Commission on Audit (COA)",
+    "B": "Bureau of Customs (BOC)",
+    "C": "Bureau of the Treasury (BTr)",
+    "D": "Bureau of Internal Revenue (BIR)"
+   },
+   "answer": "D",
+   "explanation": "The BIR, under the Department of Finance, assesses and collects internal revenue taxes, including income tax and VAT. The BOC collects duties on imported goods, the COA audits how funds were spent, and the Bureau of the Treasury manages the government's cash and debt, not tax assessment."
+  },
+  {
+   "id": "C8-G029",
+   "section": "General Information",
+   "question": "A criminal case for murder, which is punishable by reclusion perpetua, is originally tried in which court?",
+   "options": {
+    "A": "Court of Appeals",
+    "B": "Municipal Trial Court",
+    "C": "Supreme Court",
+    "D": "Regional Trial Court"
+   },
+   "answer": "D",
+   "explanation": "Regional Trial Courts have original jurisdiction over criminal cases punishable by imprisonment exceeding six years, including murder. Municipal Trial Courts handle offenses with penalties of six years or less, the Court of Appeals is an appellate court, and the Supreme Court is the highest court with only limited original jurisdiction, not over ordinary murder trials."
+  },
+  {
+   "id": "C8-G030",
+   "section": "General Information",
+   "question": "Philippine citizenship is principally determined by blood relation to a Filipino parent. This principle is known as:",
+   "options": {
+    "A": "Naturalization",
+    "B": "Jus sanguinis",
+    "C": "Jus soli",
+    "D": "Dual allegiance"
+   },
+   "answer": "B",
+   "explanation": "Jus sanguinis ('right of blood') grants citizenship based on the parents' citizenship, and it is the principle the Philippines follows. Jus soli grants citizenship by place of birth (as in the United States), naturalization is the process for aliens to acquire citizenship, and dual allegiance is a status the Constitution declares inimical to the national interest."
+  }
+ ]
+}
