@@ -1,470 +1,650 @@
 [
-  {
-    "section": "Mathematics",
-    "topic": "Decimals and place value",
-    "title": "Introduction to decimals | Decimals | 4th grade | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "BItpeFXC4vA",
-    "url": "https://www.youtube.com/watch?v=BItpeFXC4vA",
-    "why": "Foundation for decimal computation and decimal, fraction, percent conversion items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Fractions: adding and subtracting",
-    "title": "Math Antics - Adding and Subtracting Fractions",
-    "channel": "mathantics",
-    "video_id": "5juto2ze8Lg",
-    "url": "https://www.youtube.com/watch?v=5juto2ze8Lg",
-    "why": "Like and unlike fractions and common denominators, assumed by the Mathematics items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Ratios: introduction",
-    "title": "Introduction to ratios | Ratios, rates, and percentages | 6th grade | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "bIKmw0aTmYc",
-    "url": "https://www.youtube.com/watch?v=bIKmw0aTmYc",
-    "why": "Finds the ratio between two quantities, the foundation for ratio and proportion items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Percent of a number",
-    "title": "Math Antics - Finding A Percent Of A Number",
-    "channel": "mathantics",
-    "video_id": "rR95Cbcjzus",
-    "url": "https://www.youtube.com/watch?v=rR95Cbcjzus",
-    "why": "The core percent skill behind percentage word problems."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Exponents and basic operations",
-    "title": "Exponent properties involving products | Numbers and operations | 8th grade | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "zM_p7tfWvLU",
-    "url": "https://www.youtube.com/watch?v=zM_p7tfWvLU",
-    "why": "Powers and exponent rules inside longer computations."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Algebraic expressions: foundations",
-    "title": "What are variables, expressions, and equations? | Introduction to algebra | Algebra I | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "vDqOoI-4Z6M",
-    "url": "https://www.youtube.com/watch?v=vDqOoI-4Z6M",
-    "why": "The vocabulary the Algebra items assume: variables, expressions, equations."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Algebraic expressions from word problems",
-    "title": "How to write algebraic expressions from word problems | 6th grade | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "C_KffdI34ZU",
-    "url": "https://www.youtube.com/watch?v=C_KffdI34ZU",
-    "why": "Turns word-problem situations into expressions with variables."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Linear equations",
-    "title": "Solving a more complicated equation | Linear equations | Algebra I | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "XoEn1LfVoTo",
-    "url": "https://www.youtube.com/watch?v=XoEn1LfVoTo",
-    "why": "Solving an equation of the form ax + b = c step by step, the core equation type in the reviewer."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Linear equations: variables on both sides",
-    "title": "Introduction to solving an equation with variables on both sides | Algebra I | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "f15zA0PhSek",
-    "url": "https://www.youtube.com/watch?v=f15zA0PhSek",
-    "why": "Solves 2x + 3 = 5x - 2, the next step after one-sided equations."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Factoring polynomials",
-    "title": "How To Factor Polynomials The Easy Way!",
-    "channel": "The Organic Chemistry Tutor",
-    "video_id": "U6FndtdgpcA",
-    "url": "https://www.youtube.com/watch?v=U6FndtdgpcA",
-    "why": "GCF, trinomials, difference of perfect squares, and cubic polynomials."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Age problems",
-    "title": "Age word problems 2 | Linear equations | Algebra I | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "pPqPj8CAPvI",
-    "url": "https://www.youtube.com/watch?v=pPqPj8CAPvI",
-    "why": "Setting up equations where ages are multiples and shift by years, the structure of the reviewer's age items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Mixture problems",
-    "title": "Mixture problems 2 | Linear equations | Algebra I | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "OBVGQt1Eeug",
-    "url": "https://www.youtube.com/watch?v=OBVGQt1Eeug",
-    "why": "Tracks the amount of pure substance in each part, the setup for mixture items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Work problems (combined rates)",
-    "title": "Applying rational equations 1 | Polynomial and rational functions | Algebra II | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "gD7A1LA4jO8",
-    "url": "https://www.youtube.com/watch?v=gD7A1LA4jO8",
-    "why": "Converts each worker's time into a per-hour rate and adds the rates, the method for work-rate items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Distance, rate and time: passing trains",
-    "title": "Passing Trains",
-    "channel": "Khan Academy",
-    "video_id": "qLLjD-g_9ms",
-    "url": "https://www.youtube.com/watch?v=qLLjD-g_9ms",
-    "why": "Relative speed for trains passing in the same and opposite directions, training distance = rate x time thinking."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Distance, rate and time: meeting problems",
-    "title": "Two Passing Bicycles Word Problem",
-    "channel": "Khan Academy",
-    "video_id": "Nx4Xk5S4HQA",
-    "url": "https://www.youtube.com/watch?v=Nx4Xk5S4HQA",
-    "why": "Two riders moving toward each other: the meeting-point version of distance, rate and time."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Angles: complementary and supplementary",
-    "title": "Introduction to angles (old) | Angles and intersecting lines | Geometry | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "2439OIVBgPg",
-    "url": "https://www.youtube.com/watch?v=2439OIVBgPg",
-    "why": "Teaches the two definitions the reviewer tests: complement sums to 90 degrees, supplement to 180."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Perimeter",
-    "title": "Math Antics - Perimeter",
-    "channel": "mathantics",
-    "video_id": "AAY1bsazcgM",
-    "url": "https://www.youtube.com/watch?v=AAY1bsazcgM",
-    "why": "Distance around a shape, the idea behind perimeter-to-area items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Area",
-    "title": "Math Antics - Area",
-    "channel": "mathantics",
-    "video_id": "xCdxURXMdFY",
-    "url": "https://www.youtube.com/watch?v=xCdxURXMdFY",
-    "why": "Area of squares, rectangles, and triangles, including why doubling a side multiplies area by four."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Circles: circumference and area",
-    "title": "Area of a circle | Perimeter, area, and volume | Geometry | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "ZyOhRgnFmIY",
-    "url": "https://www.youtube.com/watch?v=ZyOhRgnFmIY",
-    "why": "The formula pair circle items chain together: find the radius from the circumference, then the area."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Pythagorean theorem",
-    "title": "The Pythagorean theorem intro | Right triangles and trigonometry | Geometry | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "AA6RfgP-AHU",
-    "url": "https://www.youtube.com/watch?v=AA6RfgP-AHU",
-    "why": "a squared plus b squared equals c squared, with the hypotenuse identified first, as in the ladder items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Volume",
-    "title": "Math Antics - Volume",
-    "channel": "mathantics",
-    "video_id": "qJwecTgce6c",
-    "url": "https://www.youtube.com/watch?v=qJwecTgce6c",
-    "why": "Volume as base area times height, the structure behind cylinder volume items."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Similar triangles",
-    "title": "Use Similar Triangles",
-    "channel": "Euler's Academy",
-    "video_id": "C9oib-6T8qs",
-    "url": "https://www.youtube.com/watch?v=C9oib-6T8qs",
-    "why": "Same shape, proportional sides, scale factor, and finding missing sides."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Trigonometry: SOH CAH TOA basics",
-    "title": "Maths Tutorial: Trigonometry SOH CAH TOA (trigonometric ratios)",
-    "channel": "Further Maths",
-    "video_id": "5tp74g4N8EY",
-    "url": "https://www.youtube.com/watch?v=5tp74g4N8EY",
-    "why": "Sine, cosine, and tangent as ratios in a right triangle."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Trigonometry: solving a right triangle",
-    "title": "Trig functions & solving a right triangle: SOH CAH TOA (full lecture, interactive)",
-    "channel": "Vu Do Math",
-    "video_id": "S7Haqt4yMmY",
-    "url": "https://www.youtube.com/watch?v=S7Haqt4yMmY",
-    "why": "Naming opposite, adjacent, and hypotenuse, then computing the ratios to solve a right triangle."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Statistics: mean, median, mode",
-    "title": "Finding mean, median, and mode | Descriptive statistics | Probability and Statistics | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "k3aKKasOmIw",
-    "url": "https://www.youtube.com/watch?v=k3aKKasOmIw",
-    "why": "The three averages the Statistics items ask for, computed step by step."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Probability: foundations",
-    "title": "Probability explained | Independent and dependent events | Probability and Statistics | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "uzkc-qNVoOk",
-    "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
-    "why": "What probability measures, with independent and dependent events."
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Probability: worked example",
-    "title": "Finding probability example 2 | Probability and Statistics | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "mLE-SlOZToc",
-    "url": "https://www.youtube.com/watch?v=mLE-SlOZToc",
-    "why": "A worked probability example, including NOT outcomes."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Agreement: subjects, verbs and pronouns",
-    "title": "Introduction to agreement | The parts of speech | Grammar | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "KEdI0-xIUFc",
-    "url": "https://www.youtube.com/watch?v=KEdI0-xIUFc",
-    "why": "The agreement idea behind subject-verb and pronoun-antecedent items."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Subject-verb agreement",
-    "title": "Subject-verb agreement | Syntax | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "4fMipjAnlRk",
-    "url": "https://www.youtube.com/watch?v=4fMipjAnlRk",
-    "why": "Matching singular and plural subjects to their verbs, the most tested Language Usage rule."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Verb tense",
-    "title": "The past tense | The parts of speech | Grammar | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "zS6N5EqXpCY",
-    "url": "https://www.youtube.com/watch?v=zS6N5EqXpCY",
-    "why": "How past-tense forms are built, for tense-consistency items."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Prepositions: correct usage",
-    "title": "Prepositions of time | The parts of speech | Grammar | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "TzUO8du5Lrg",
-    "url": "https://www.youtube.com/watch?v=TzUO8du5Lrg",
-    "why": "In, on, and at for time expressions, a common error-identification trap."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Parallelism",
-    "title": "Parallel structure | Syntax | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "2l2FgUrln1A",
-    "url": "https://www.youtube.com/watch?v=2l2FgUrln1A",
-    "why": "Keeping listed items in the same grammatical form, tested in sentence-correction items."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Vocabulary in context",
-    "title": "Using context clues to figure out new words | Reading | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "CiNggzdWkIo",
-    "url": "https://www.youtube.com/watch?v=CiNggzdWkIo",
-    "why": "Guessing an unfamiliar word's meaning from its sentence, the skill behind vocabulary-in-context items."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Reading comprehension: main idea",
-    "title": "What is a main idea? | Reading | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "4swFGRhQoMI",
-    "url": "https://www.youtube.com/watch?v=4swFGRhQoMI",
-    "why": "Separating a passage's main idea from its supporting details."
-  },
-  {
-    "section": "Language Usage",
-    "topic": "Paragraph organization",
-    "title": "Paragraph Structure",
-    "channel": "Smrt English",
-    "video_id": "NLzKqujmdGk",
-    "url": "https://www.youtube.com/watch?v=NLzKqujmdGk",
-    "why": "Topic sentences and how sentences chain, for paragraph-organization items."
-  },
-  {
-    "section": "Science",
-    "topic": "Biology: introduction to cells",
-    "title": "Introduction to Cells: The Grand Cell Tour",
-    "channel": "Amoeba Sisters",
-    "video_id": "8IlzKri08kk",
-    "url": "https://www.youtube.com/watch?v=8IlzKri08kk",
-    "why": "A tour of cell types and organelles, the starting point for biology items."
-  },
-  {
-    "section": "Science",
-    "topic": "Biology: cell structure",
-    "title": "Biology: Cell Structure I Nucleus Medical Media",
-    "channel": "Nucleus Medical Media",
-    "video_id": "URUJD5NEXC8",
-    "url": "https://www.youtube.com/watch?v=URUJD5NEXC8",
-    "why": "The structures inside a cell and what each one does, in medical-media detail."
-  },
-  {
-    "section": "Science",
-    "topic": "Biology: cell membrane",
-    "title": "Inside the Cell Membrane",
-    "channel": "Amoeba Sisters",
-    "video_id": "qBCVVszQQNs",
-    "url": "https://www.youtube.com/watch?v=qBCVVszQQNs",
-    "why": "How the cell membrane controls what enters and leaves the cell."
-  },
-  {
-    "section": "Science",
-    "topic": "Human body: anatomy and physiology foundations",
-    "title": "Introduction to Anatomy & Physiology: Crash Course Anatomy & Physiology #1",
-    "channel": "CrashCourse",
-    "video_id": "uBGl2BujkPQ",
-    "url": "https://www.youtube.com/watch?v=uBGl2BujkPQ",
-    "why": "How the body systems are organized and studied, the map for human-body items."
-  },
-  {
-    "section": "Science",
-    "topic": "Chemistry: carbon and organic basics",
-    "title": "Carbon... SO SIMPLE: Crash Course Biology #1",
-    "channel": "CrashCourse",
-    "video_id": "QnQe0xW_JY4",
-    "url": "https://www.youtube.com/watch?v=QnQe0xW_JY4",
-    "why": "Why carbon bonds with almost everything, the base of organic chemistry items."
-  },
-  {
-    "section": "Science",
-    "topic": "Chemistry: atoms and the nucleus",
-    "title": "The Nucleus: Crash Course Chemistry #1",
-    "channel": "CrashCourse",
-    "video_id": "FSyAehMdpyI",
-    "url": "https://www.youtube.com/watch?v=FSyAehMdpyI",
-    "why": "Protons, neutrons, and electrons: the atomic structure items assume."
-  },
-  {
-    "section": "Science",
-    "topic": "Chemistry: the periodic table",
-    "title": "The Periodic Table: Crash Course Chemistry #4",
-    "channel": "CrashCourse",
-    "video_id": "0RRVV4Diomg",
-    "url": "https://www.youtube.com/watch?v=0RRVV4Diomg",
-    "why": "How the periodic table is organized and what its groups and periods mean."
-  },
-  {
-    "section": "Science",
-    "topic": "Physics: vectors, scalars, and motion foundations",
-    "title": "Intro to vectors & scalars | One-dimensional motion | Physics | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "ihNZlp7iUHE",
-    "url": "https://www.youtube.com/watch?v=ihNZlp7iUHE",
-    "why": "Distance versus displacement and speed versus velocity, the first distinction in motion items."
-  },
-  {
-    "section": "Science",
-    "topic": "Earth science: greenhouse effect and climate basics",
-    "title": "What Is the Greenhouse Effect?",
-    "channel": "NASA Space Place",
-    "video_id": "SN5-DnOHQmE",
-    "url": "https://www.youtube.com/watch?v=SN5-DnOHQmE",
-    "why": "How greenhouse gases trap heat, from NASA, for climate and environment items."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Number series and patterns",
-    "title": "Practice finding patterns in numbers | 3rd grade | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "l-6uEtTBH7g",
-    "url": "https://www.youtube.com/watch?v=l-6uEtTBH7g",
-    "why": "Spotting the rule in a number pattern, the entry skill for series items. Start simple, then apply it under time pressure."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Data interpretation: bar graphs",
-    "title": "Reading bar graphs | Applying mathematical reasoning | Pre-Algebra | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "kiQ6MUQZHSs",
-    "url": "https://www.youtube.com/watch?v=kiQ6MUQZHSs",
-    "why": "Reading values off bar graphs accurately, for data-interpretation items."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Logical reasoning: inductive reasoning",
-    "title": "Inductive reasoning 1 | Sequences, series and induction | Precalculus | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "MnQ7Lizkpqk",
-    "url": "https://www.youtube.com/watch?v=MnQ7Lizkpqk",
-    "why": "Drawing a general rule from examples, and knowing how strong that conclusion is."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Logical reasoning: inductive vs deductive",
-    "title": "Difference between inductive and deductive reasoning | Precalculus | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "GEId0GonOZM",
-    "url": "https://www.youtube.com/watch?v=GEId0GonOZM",
-    "why": "The two directions of reasoning, tested directly in logic items."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Logical reasoning: deductive reasoning",
-    "title": "CA Geometry: Deductive reasoning | Worked examples | Geometry | Khan Academy",
-    "channel": "Khan Academy",
-    "video_id": "GluohfOedQE",
-    "url": "https://www.youtube.com/watch?v=GluohfOedQE",
-    "why": "Deductive reasoning worked examples: conclusions that must be true, not just likely."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Syllogisms",
-    "title": "Decision Making: Syllogisms Explained In 20 Minutes | UCAT Preparation",
-    "channel": "MES UCAT",
-    "video_id": "oBysm0k-a40",
-    "url": "https://www.youtube.com/watch?v=oBysm0k-a40",
-    "why": "All, some, and none statements: deciding which conclusions follow, a core logic format."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "If-then logic (rules of implication)",
-    "title": "Rules of Implication (part 1)",
-    "channel": "A Little Bit of Philosophy",
-    "video_id": "pNt6V6cHDnU",
-    "url": "https://www.youtube.com/watch?v=pNt6V6cHDnU",
-    "why": "Modus ponens, modus tollens, and the invalid forms logic items use as traps."
-  },
-  {
-    "section": "Aptitude",
-    "topic": "Analogies and word association",
-    "title": "Analogy I English for CLAT & IIM IPM I Score Booster",
-    "channel": "ProTalent Admin",
-    "video_id": "rgJ_8h8nc50",
-    "url": "https://www.youtube.com/watch?v=rgJ_8h8nc50",
-    "why": "State the relationship in one sentence before choosing, the analogy method from the reviewer applied to worked items."
-  }
+ {
+  "section": "Mathematics",
+  "topic": "Decimals and place value",
+  "title": "Introduction to decimals | Decimals | 4th grade | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "BItpeFXC4vA",
+  "url": "https://www.youtube.com/watch?v=BItpeFXC4vA",
+  "why": "Foundation for decimal computation and decimal, fraction, percent conversion items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Fractions: adding and subtracting",
+  "title": "Math Antics - Adding and Subtracting Fractions",
+  "channel": "mathantics",
+  "video_id": "5juto2ze8Lg",
+  "url": "https://www.youtube.com/watch?v=5juto2ze8Lg",
+  "why": "Like and unlike fractions and common denominators, assumed by the Mathematics items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Ratios: introduction",
+  "title": "Introduction to ratios | Ratios, rates, and percentages | 6th grade | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "bIKmw0aTmYc",
+  "url": "https://www.youtube.com/watch?v=bIKmw0aTmYc",
+  "why": "Finds the ratio between two quantities, the foundation for ratio and proportion items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Percent of a number",
+  "title": "Math Antics - Finding A Percent Of A Number",
+  "channel": "mathantics",
+  "video_id": "rR95Cbcjzus",
+  "url": "https://www.youtube.com/watch?v=rR95Cbcjzus",
+  "why": "The core percent skill behind percentage word problems."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Exponents and basic operations",
+  "title": "Exponent properties involving products | Numbers and operations | 8th grade | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "zM_p7tfWvLU",
+  "url": "https://www.youtube.com/watch?v=zM_p7tfWvLU",
+  "why": "Powers and exponent rules inside longer computations."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Algebraic expressions: foundations",
+  "title": "What are variables, expressions, and equations? | Introduction to algebra | Algebra I | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "vDqOoI-4Z6M",
+  "url": "https://www.youtube.com/watch?v=vDqOoI-4Z6M",
+  "why": "The vocabulary the Algebra items assume: variables, expressions, equations."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Algebraic expressions from word problems",
+  "title": "How to write algebraic expressions from word problems | 6th grade | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "C_KffdI34ZU",
+  "url": "https://www.youtube.com/watch?v=C_KffdI34ZU",
+  "why": "Turns word-problem situations into expressions with variables."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Linear equations",
+  "title": "Solving a more complicated equation | Linear equations | Algebra I | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "XoEn1LfVoTo",
+  "url": "https://www.youtube.com/watch?v=XoEn1LfVoTo",
+  "why": "Solving an equation of the form ax + b = c step by step, the core equation type in the reviewer."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Linear equations: variables on both sides",
+  "title": "Introduction to solving an equation with variables on both sides | Algebra I | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "f15zA0PhSek",
+  "url": "https://www.youtube.com/watch?v=f15zA0PhSek",
+  "why": "Solves 2x + 3 = 5x - 2, the next step after one-sided equations."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Factoring polynomials",
+  "title": "How To Factor Polynomials The Easy Way!",
+  "channel": "The Organic Chemistry Tutor",
+  "video_id": "U6FndtdgpcA",
+  "url": "https://www.youtube.com/watch?v=U6FndtdgpcA",
+  "why": "GCF, trinomials, difference of perfect squares, and cubic polynomials."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Age problems",
+  "title": "Age word problems 2 | Linear equations | Algebra I | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "pPqPj8CAPvI",
+  "url": "https://www.youtube.com/watch?v=pPqPj8CAPvI",
+  "why": "Setting up equations where ages are multiples and shift by years, the structure of the reviewer's age items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Mixture problems",
+  "title": "Mixture problems 2 | Linear equations | Algebra I | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "OBVGQt1Eeug",
+  "url": "https://www.youtube.com/watch?v=OBVGQt1Eeug",
+  "why": "Tracks the amount of pure substance in each part, the setup for mixture items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Work problems (combined rates)",
+  "title": "Applying rational equations 1 | Polynomial and rational functions | Algebra II | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "gD7A1LA4jO8",
+  "url": "https://www.youtube.com/watch?v=gD7A1LA4jO8",
+  "why": "Converts each worker's time into a per-hour rate and adds the rates, the method for work-rate items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Distance, rate and time: passing trains",
+  "title": "Passing Trains",
+  "channel": "Khan Academy",
+  "video_id": "qLLjD-g_9ms",
+  "url": "https://www.youtube.com/watch?v=qLLjD-g_9ms",
+  "why": "Relative speed for trains passing in the same and opposite directions, training distance = rate x time thinking."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Distance, rate and time: meeting problems",
+  "title": "Two Passing Bicycles Word Problem",
+  "channel": "Khan Academy",
+  "video_id": "Nx4Xk5S4HQA",
+  "url": "https://www.youtube.com/watch?v=Nx4Xk5S4HQA",
+  "why": "Two riders moving toward each other: the meeting-point version of distance, rate and time."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Angles: complementary and supplementary",
+  "title": "Introduction to angles (old) | Angles and intersecting lines | Geometry | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "2439OIVBgPg",
+  "url": "https://www.youtube.com/watch?v=2439OIVBgPg",
+  "why": "Teaches the two definitions the reviewer tests: complement sums to 90 degrees, supplement to 180."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Perimeter",
+  "title": "Math Antics - Perimeter",
+  "channel": "mathantics",
+  "video_id": "AAY1bsazcgM",
+  "url": "https://www.youtube.com/watch?v=AAY1bsazcgM",
+  "why": "Distance around a shape, the idea behind perimeter-to-area items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Area",
+  "title": "Math Antics - Area",
+  "channel": "mathantics",
+  "video_id": "xCdxURXMdFY",
+  "url": "https://www.youtube.com/watch?v=xCdxURXMdFY",
+  "why": "Area of squares, rectangles, and triangles, including why doubling a side multiplies area by four."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Circles: circumference and area",
+  "title": "Area of a circle | Perimeter, area, and volume | Geometry | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "ZyOhRgnFmIY",
+  "url": "https://www.youtube.com/watch?v=ZyOhRgnFmIY",
+  "why": "The formula pair circle items chain together: find the radius from the circumference, then the area."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Pythagorean theorem",
+  "title": "The Pythagorean theorem intro | Right triangles and trigonometry | Geometry | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "AA6RfgP-AHU",
+  "url": "https://www.youtube.com/watch?v=AA6RfgP-AHU",
+  "why": "a squared plus b squared equals c squared, with the hypotenuse identified first, as in the ladder items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Volume",
+  "title": "Math Antics - Volume",
+  "channel": "mathantics",
+  "video_id": "qJwecTgce6c",
+  "url": "https://www.youtube.com/watch?v=qJwecTgce6c",
+  "why": "Volume as base area times height, the structure behind cylinder volume items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Similar triangles",
+  "title": "Use Similar Triangles",
+  "channel": "Euler's Academy",
+  "video_id": "C9oib-6T8qs",
+  "url": "https://www.youtube.com/watch?v=C9oib-6T8qs",
+  "why": "Same shape, proportional sides, scale factor, and finding missing sides."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Trigonometry: SOH CAH TOA basics",
+  "title": "Maths Tutorial: Trigonometry SOH CAH TOA (trigonometric ratios)",
+  "channel": "Further Maths",
+  "video_id": "5tp74g4N8EY",
+  "url": "https://www.youtube.com/watch?v=5tp74g4N8EY",
+  "why": "Sine, cosine, and tangent as ratios in a right triangle."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Trigonometry: solving a right triangle",
+  "title": "Trig functions & solving a right triangle: SOH CAH TOA (full lecture, interactive)",
+  "channel": "Vu Do Math",
+  "video_id": "S7Haqt4yMmY",
+  "url": "https://www.youtube.com/watch?v=S7Haqt4yMmY",
+  "why": "Naming opposite, adjacent, and hypotenuse, then computing the ratios to solve a right triangle."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Statistics: mean, median, mode",
+  "title": "Finding mean, median, and mode | Descriptive statistics | Probability and Statistics | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "k3aKKasOmIw",
+  "url": "https://www.youtube.com/watch?v=k3aKKasOmIw",
+  "why": "The three averages the Statistics items ask for, computed step by step."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Probability: foundations",
+  "title": "Probability explained | Independent and dependent events | Probability and Statistics | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "uzkc-qNVoOk",
+  "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+  "why": "What probability measures, with independent and dependent events."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Probability: worked example",
+  "title": "Finding probability example 2 | Probability and Statistics | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "mLE-SlOZToc",
+  "url": "https://www.youtube.com/watch?v=mLE-SlOZToc",
+  "why": "A worked probability example, including NOT outcomes."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Percent word problems",
+  "title": "Solving Percent Problems",
+  "channel": "Math and Science",
+  "video_id": "j6kQ4HqpP1c",
+  "url": "https://www.youtube.com/watch?v=j6kQ4HqpP1c",
+  "why": "Worked percent word problems (find the part, the percent, or the whole) behind the reviewer's percentage items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Ratio and proportion word problems",
+  "title": "Math Antics - Proportions",
+  "channel": "mathantics",
+  "video_id": "USmit5zUGas",
+  "url": "https://www.youtube.com/watch?v=USmit5zUGas",
+  "why": "Sets up and solves proportions to find missing values, the method behind ratio and proportion word problems."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Exponents and roots in algebra",
+  "title": "Algebra Basics: Exponents In Algebra - Math Antics",
+  "channel": "mathantics",
+  "video_id": "S3IEeCyUWWA",
+  "url": "https://www.youtube.com/watch?v=S3IEeCyUWWA",
+  "why": "Exponents and roots as inverse operations for solving equations, supporting exponent and radical items."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Sequences: arithmetic sequences and series",
+  "title": "Arithmetic Sequences and Arithmetic Series - Basic Introduction",
+  "channel": "The Organic Chemistry Tutor",
+  "video_id": "XZJdyPkCxuE",
+  "url": "https://www.youtube.com/watch?v=XZJdyPkCxuE",
+  "why": "Common difference, nth term, and sum formulas for the sequence items in the reviewer."
+ },
+ {
+  "section": "Mathematics",
+  "topic": "Simple interest",
+  "title": "Determine the Amount of Interest Earned (Simple Interest)",
+  "channel": "Mathispower4u",
+  "video_id": "iVmetUlbheY",
+  "url": "https://www.youtube.com/watch?v=iVmetUlbheY",
+  "why": "Applies I = Prt step by step, the formula behind simple interest word problems."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Agreement: subjects, verbs and pronouns",
+  "title": "Introduction to agreement | The parts of speech | Grammar | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "KEdI0-xIUFc",
+  "url": "https://www.youtube.com/watch?v=KEdI0-xIUFc",
+  "why": "The agreement idea behind subject-verb and pronoun-antecedent items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Subject-verb agreement",
+  "title": "Subject-verb agreement | Syntax | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "4fMipjAnlRk",
+  "url": "https://www.youtube.com/watch?v=4fMipjAnlRk",
+  "why": "Matching singular and plural subjects to their verbs, the most tested Language Usage rule."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Verb tense",
+  "title": "The past tense | The parts of speech | Grammar | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "zS6N5EqXpCY",
+  "url": "https://www.youtube.com/watch?v=zS6N5EqXpCY",
+  "why": "How past-tense forms are built, for tense-consistency items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Prepositions: correct usage",
+  "title": "Prepositions of time | The parts of speech | Grammar | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "TzUO8du5Lrg",
+  "url": "https://www.youtube.com/watch?v=TzUO8du5Lrg",
+  "why": "In, on, and at for time expressions, a common error-identification trap."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Parallelism",
+  "title": "Parallel structure | Syntax | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "2l2FgUrln1A",
+  "url": "https://www.youtube.com/watch?v=2l2FgUrln1A",
+  "why": "Keeping listed items in the same grammatical form, tested in sentence-correction items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Vocabulary in context",
+  "title": "Using context clues to figure out new words | Reading | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "CiNggzdWkIo",
+  "url": "https://www.youtube.com/watch?v=CiNggzdWkIo",
+  "why": "Guessing an unfamiliar word's meaning from its sentence, the skill behind vocabulary-in-context items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Reading comprehension: main idea",
+  "title": "What is a main idea? | Reading | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "4swFGRhQoMI",
+  "url": "https://www.youtube.com/watch?v=4swFGRhQoMI",
+  "why": "Separating a passage's main idea from its supporting details."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Paragraph organization",
+  "title": "Paragraph Structure",
+  "channel": "Smrt English",
+  "video_id": "NLzKqujmdGk",
+  "url": "https://www.youtube.com/watch?v=NLzKqujmdGk",
+  "why": "Topic sentences and how sentences chain, for paragraph-organization items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Pronouns: what they are",
+  "title": "What is a pronoun? | The parts of speech | Grammar | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "nkjKPhleQ5E",
+  "url": "https://www.youtube.com/watch?v=nkjKPhleQ5E",
+  "why": "What pronouns stand for and the pronoun types, the foundation for all pronoun-usage items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Pronoun-antecedent agreement",
+  "title": "Pronoun-antecedent agreement | Syntax | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "j9kIACViG60",
+  "url": "https://www.youtube.com/watch?v=j9kIACViG60",
+  "why": "Matching a pronoun to its antecedent in number and person, a direct gap topic in pronoun agreement items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Pronoun case: who versus whom",
+  "title": "Who versus whom | The parts of speech | Grammar | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "bPqMLKXoEac",
+  "url": "https://www.youtube.com/watch?v=bPqMLKXoEac",
+  "why": "Subject form who versus object form whom, for pronoun-case error-identification items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Relative pronouns: that versus which",
+  "title": "That versus which | The parts of speech | Grammar | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "6Js8tBCfbWk",
+  "url": "https://www.youtube.com/watch?v=6Js8tBCfbWk",
+  "why": "Restrictive versus non-restrictive clauses and comma use, for relative-pronoun and punctuation items."
+ },
+ {
+  "section": "Language Usage",
+  "topic": "Modifiers: dangling modifiers",
+  "title": "Dangling modifiers | Syntax | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "SjunMcrXgE0",
+  "url": "https://www.youtube.com/watch?v=SjunMcrXgE0",
+  "why": "Spotting and fixing modifiers attached to the wrong noun, the gap topic behind misplaced and dangling modifier items."
+ },
+ {
+  "section": "Science",
+  "topic": "Biology: introduction to cells",
+  "title": "Introduction to Cells: The Grand Cell Tour",
+  "channel": "Amoeba Sisters",
+  "video_id": "8IlzKri08kk",
+  "url": "https://www.youtube.com/watch?v=8IlzKri08kk",
+  "why": "A tour of cell types and organelles, the starting point for biology items."
+ },
+ {
+  "section": "Science",
+  "topic": "Biology: cell structure",
+  "title": "Biology: Cell Structure I Nucleus Medical Media",
+  "channel": "Nucleus Medical Media",
+  "video_id": "URUJD5NEXC8",
+  "url": "https://www.youtube.com/watch?v=URUJD5NEXC8",
+  "why": "The structures inside a cell and what each one does, in medical-media detail."
+ },
+ {
+  "section": "Science",
+  "topic": "Biology: cell membrane",
+  "title": "Inside the Cell Membrane",
+  "channel": "Amoeba Sisters",
+  "video_id": "qBCVVszQQNs",
+  "url": "https://www.youtube.com/watch?v=qBCVVszQQNs",
+  "why": "How the cell membrane controls what enters and leaves the cell."
+ },
+ {
+  "section": "Science",
+  "topic": "Human body: anatomy and physiology foundations",
+  "title": "Introduction to Anatomy & Physiology: Crash Course Anatomy & Physiology #1",
+  "channel": "CrashCourse",
+  "video_id": "uBGl2BujkPQ",
+  "url": "https://www.youtube.com/watch?v=uBGl2BujkPQ",
+  "why": "How the body systems are organized and studied, the map for human-body items."
+ },
+ {
+  "section": "Science",
+  "topic": "Chemistry: carbon and organic basics",
+  "title": "Carbon... SO SIMPLE: Crash Course Biology #1",
+  "channel": "CrashCourse",
+  "video_id": "QnQe0xW_JY4",
+  "url": "https://www.youtube.com/watch?v=QnQe0xW_JY4",
+  "why": "Why carbon bonds with almost everything, the base of organic chemistry items."
+ },
+ {
+  "section": "Science",
+  "topic": "Chemistry: atoms and the nucleus",
+  "title": "The Nucleus: Crash Course Chemistry #1",
+  "channel": "CrashCourse",
+  "video_id": "FSyAehMdpyI",
+  "url": "https://www.youtube.com/watch?v=FSyAehMdpyI",
+  "why": "Protons, neutrons, and electrons: the atomic structure items assume."
+ },
+ {
+  "section": "Science",
+  "topic": "Chemistry: the periodic table",
+  "title": "The Periodic Table: Crash Course Chemistry #4",
+  "channel": "CrashCourse",
+  "video_id": "0RRVV4Diomg",
+  "url": "https://www.youtube.com/watch?v=0RRVV4Diomg",
+  "why": "How the periodic table is organized and what its groups and periods mean."
+ },
+ {
+  "section": "Science",
+  "topic": "Physics: vectors, scalars, and motion foundations",
+  "title": "Intro to vectors & scalars | One-dimensional motion | Physics | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "ihNZlp7iUHE",
+  "url": "https://www.youtube.com/watch?v=ihNZlp7iUHE",
+  "why": "Distance versus displacement and speed versus velocity, the first distinction in motion items."
+ },
+ {
+  "section": "Science",
+  "topic": "Earth science: greenhouse effect and climate basics",
+  "title": "What Is the Greenhouse Effect?",
+  "channel": "NASA Space Place",
+  "video_id": "SN5-DnOHQmE",
+  "url": "https://www.youtube.com/watch?v=SN5-DnOHQmE",
+  "why": "How greenhouse gases trap heat, from NASA, for climate and environment items."
+ },
+ {
+  "section": "Science",
+  "topic": "Biology: photosynthesis",
+  "title": "Photosynthesis: Light Reactions and the Calvin Cycle",
+  "channel": "Professor Dave Explains",
+  "video_id": "dAF5FngVa7A",
+  "url": "https://www.youtube.com/watch?v=dAF5FngVa7A",
+  "why": "How chloroplasts turn light, water, and CO2 into glucose and oxygen, the gap topic behind photosynthesis items."
+ },
+ {
+  "section": "Science",
+  "topic": "Earth science: the water cycle",
+  "title": "The water cycle  | Ecology | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "jFjI6y46QRk",
+  "url": "https://www.youtube.com/watch?v=jFjI6y46QRk",
+  "why": "Evaporation, condensation, and precipitation in one loop, the gap topic behind water-cycle items."
+ },
+ {
+  "section": "Science",
+  "topic": "Physics: forms of energy and energy transformation",
+  "title": "A guide to the energy of the Earth - Joshua M. Sneideman",
+  "channel": "TED-Ed",
+  "video_id": "fHztd6k5ZXY",
+  "url": "https://www.youtube.com/watch?v=fHztd6k5ZXY",
+  "why": "Where Earth's energy comes from and how it changes form, the gap topic behind forms-of-energy items."
+ },
+ {
+  "section": "Science",
+  "topic": "Ecology: food webs and energy flow",
+  "title": "Food Webs and Energy Pyramids: Bedrocks of Biodiversity",
+  "channel": "Amoeba Sisters",
+  "video_id": "-oVavgmveyY",
+  "url": "https://www.youtube.com/watch?v=-oVavgmveyY",
+  "why": "Producers, consumers, food chains and webs, and energy pyramids, for ecosystem and food-chain items."
+ },
+ {
+  "section": "Science",
+  "topic": "Earth and space: phases of the Moon",
+  "title": "Moon Phases: Crash Course Astronomy #4",
+  "channel": "CrashCourse",
+  "video_id": "AQ5vty8f9Xc",
+  "url": "https://www.youtube.com/watch?v=AQ5vty8f9Xc",
+  "why": "Why the Moon's appearance changes through its cycle, for earth and space basics items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Number series and patterns",
+  "title": "Practice finding patterns in numbers | 3rd grade | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "l-6uEtTBH7g",
+  "url": "https://www.youtube.com/watch?v=l-6uEtTBH7g",
+  "why": "Spotting the rule in a number pattern, the entry skill for series items. Start simple, then apply it under time pressure."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Data interpretation: bar graphs",
+  "title": "Reading bar graphs | Applying mathematical reasoning | Pre-Algebra | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "kiQ6MUQZHSs",
+  "url": "https://www.youtube.com/watch?v=kiQ6MUQZHSs",
+  "why": "Reading values off bar graphs accurately, for data-interpretation items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Logical reasoning: inductive reasoning",
+  "title": "Inductive reasoning 1 | Sequences, series and induction | Precalculus | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "MnQ7Lizkpqk",
+  "url": "https://www.youtube.com/watch?v=MnQ7Lizkpqk",
+  "why": "Drawing a general rule from examples, and knowing how strong that conclusion is."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Logical reasoning: inductive vs deductive",
+  "title": "Difference between inductive and deductive reasoning | Precalculus | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "GEId0GonOZM",
+  "url": "https://www.youtube.com/watch?v=GEId0GonOZM",
+  "why": "The two directions of reasoning, tested directly in logic items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Logical reasoning: deductive reasoning",
+  "title": "CA Geometry: Deductive reasoning | Worked examples | Geometry | Khan Academy",
+  "channel": "Khan Academy",
+  "video_id": "GluohfOedQE",
+  "url": "https://www.youtube.com/watch?v=GluohfOedQE",
+  "why": "Deductive reasoning worked examples: conclusions that must be true, not just likely."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Syllogisms",
+  "title": "Decision Making: Syllogisms Explained In 20 Minutes | UCAT Preparation",
+  "channel": "MES UCAT",
+  "video_id": "oBysm0k-a40",
+  "url": "https://www.youtube.com/watch?v=oBysm0k-a40",
+  "why": "All, some, and none statements: deciding which conclusions follow, a core logic format."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "If-then logic (rules of implication)",
+  "title": "Rules of Implication (part 1)",
+  "channel": "A Little Bit of Philosophy",
+  "video_id": "pNt6V6cHDnU",
+  "url": "https://www.youtube.com/watch?v=pNt6V6cHDnU",
+  "why": "Modus ponens, modus tollens, and the invalid forms logic items use as traps."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Analogies and word association",
+  "title": "Analogy I English for CLAT & IIM IPM I Score Booster",
+  "channel": "ProTalent Admin",
+  "video_id": "rgJ_8h8nc50",
+  "url": "https://www.youtube.com/watch?v=rgJ_8h8nc50",
+  "why": "State the relationship in one sentence before choosing, the analogy method from the reviewer applied to worked items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Number series: advanced patterns",
+  "title": "Series - Tricks & Shortcuts for 2026 - 2027 Placement tests, Job Interviews & Exams",
+  "channel": "CareerRide",
+  "video_id": "gXBuL_FyahE",
+  "url": "https://www.youtube.com/watch?v=gXBuL_FyahE",
+  "why": "Numeric, alphabetic, and alphanumeric series patterns (differences, primes, Fibonacci), the full method set for series items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Letter series",
+  "title": "SSC Reasoning Classes 2026 | Letter Series Reasoning | Letter Series Tricks | By Jitin Sir",
+  "channel": "SSC Wallah",
+  "video_id": "E7V3gnRfbMQ",
+  "url": "https://www.youtube.com/watch?v=E7V3gnRfbMQ",
+  "why": "Skip patterns and letter positions in alphabet series, the gap topic behind letter-series items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Abstract reasoning: figure series",
+  "title": "Figure Series - Tricks & Shortcuts for Placement tests, Job Interviews & Exams |Non Verbal Reasoning",
+  "channel": "CareerRide",
+  "video_id": "K-RftLZqde4",
+  "url": "https://www.youtube.com/watch?v=K-RftLZqde4",
+  "why": "Finding the next figure from rotation, movement, and element changes, the gap topic behind abstract reasoning items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Spatial reasoning: direction sense",
+  "title": "Direction Sense Test - Tricks & Shortcuts for 2026 - 2027 Placement tests, Job Interviews & Exams",
+  "channel": "CareerRide",
+  "video_id": "x0WkptLF6oE",
+  "url": "https://www.youtube.com/watch?v=x0WkptLF6oE",
+  "why": "Tracking turns and displacement on a compass diagram, for direction and spatial-orientation items."
+ },
+ {
+  "section": "Aptitude",
+  "topic": "Logical reasoning: blood relations",
+  "title": "Blood Relations - Tricks & Shortcuts for 2026 - 2027 Placement tests, Job Interviews & Exams",
+  "channel": "CareerRide",
+  "video_id": "LRdLhfDupMU",
+  "url": "https://www.youtube.com/watch?v=LRdLhfDupMU",
+  "why": "Family-tree diagrams for relationship puzzles, a standard logical reasoning format in aptitude items."
+ }
 ]
