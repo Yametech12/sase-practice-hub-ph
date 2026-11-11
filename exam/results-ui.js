@@ -64,7 +64,7 @@
       els.resultNotice.hidden = false;
     } else if (data.forfeited) {
       els.resultNoticeText.textContent =
-        "You gave up this attempt, your saved answers were graded. Review the weak areas below before your next exam.";
+        "You gave up this attempt. Your saved answers were graded. Review the weak areas below before your next exam.";
       els.resultNotice.hidden = false;
     }
 
@@ -192,7 +192,7 @@
     },
     "Science": {
       chapters: "Parts IV & VIII of your reviewer (biology, earth science, chemistry, physics)",
-      tip: "Make one-page concept maps per topic, practice science rewards understanding over facts."
+      tip: "Make one-page concept maps per topic. Science rewards understanding over facts."
     },
     /* Civil Service sections, mirroring the server guide in api/_exam-lib.js. */
     "Verbal": {
