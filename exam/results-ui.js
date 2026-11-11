@@ -101,6 +101,13 @@
       if (disc) disc.innerHTML = "This is a <strong>practice benchmark</strong>, not an official CSC result. Use it to guide your study.";
       var footP = document.querySelector(".foot p");
       if (footP) footP.innerHTML = "Prepared by the <strong>Civil Service Reviewer</strong> team, an independent, unofficial Civil Service exam study resource.";
+      /* The top bar brand and the footer help line are static SASE text
+         in results.html; switch them too, mirroring the exam page
+         (audit finding, Nov 11, 2026). */
+      var brandEl = document.querySelector(".brand-name");
+      if (brandEl) brandEl.textContent = "Civil Service Reviewer";
+      var footPs = document.querySelectorAll(".foot p");
+      if (footPs[1]) footPs[1].innerHTML = "Need help? <a href=\"https://www.facebook.com/profile.php?id=61594997556905\" target=\"_blank\" rel=\"noopener\">Message Civil Service Reviewer on Facebook</a> · <a href=\"/privacy.html\">Privacy Policy</a>";
     }
 
     renderSections(data);
@@ -307,6 +314,16 @@
   }
 
   /* Short section code for the header badge (ENG / SCI / MATH / APT). */
+  /* Some SASE banks store short section labels ("Language", "Math");
+     the exam screen normalizes them to the full names, so the review
+     does the same (audit finding, Nov 11, 2026). */
+  function displaySection(section) {
+    var s = String(section || "");
+    if (s === "Language") return "Language Usage";
+    if (s === "Math") return "Mathematics";
+    return s;
+  }
+
   function sectionCode(section) {
     var s = String(section || "").toLowerCase();
     if (/language|english/.test(s)) return "ENG";
@@ -383,7 +400,7 @@
       '<span class="q-head-row">' +
         '<span class="q-num" aria-hidden="true">' + esc(String(num)) + "</span>" +
         '<span class="q-code" aria-hidden="true">' + esc(sectionCode(it.section)) + "</span>" +
-        '<span class="q-sec">' + esc(it.section || "") + "</span>" +
+        '<span class="q-sec">' + esc(displaySection(it.section)) + "</span>" +
         '<span class="q-status" aria-hidden="true">' + statusLabel + "</span>" +
         '<span class="q-chev" aria-hidden="true">▾</span>' +
       "</span>" +

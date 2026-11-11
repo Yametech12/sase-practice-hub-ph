@@ -204,6 +204,9 @@
     }
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
     state.token = null;
+    state.lessons = null; // per-track cache must not survive into the next login
+    state.lessonsFilter = "all";
+    state.lessonsLoading = false;
     if (logoutBtn) logoutBtn.hidden = true; // logout control is only for signed-in students
     var warn = $("sync-warning");
     if (warn) warn.hidden = true;
@@ -263,6 +266,11 @@
         state.track = res.track === "cse" ? "cse" : "sase";
         state.durationMs = profile().durationMs;
         state.sessionExpiredHandled = false;
+        /* The lessons cache is per track: never let a previous session's
+           library render for a new login (audit finding, Nov 11, 2026). */
+        state.lessons = null;
+        state.lessonsFilter = "all";
+        state.lessonsLoading = false;
         try { sessionStorage.setItem(SESSION_KEY, res.token); } catch (e) {}
         gateInput.value = ""; // never leave the password in the DOM after login
         gateForm.style.display = "none";
@@ -316,6 +324,12 @@
       }
       if (t) {
         state.token = t;
+        /* Brand the portal for the stored session's track BEFORE the
+           list call, so an expired CSE session falls back to a CSE gate,
+           not the static SASE defaults (audit finding, Nov 11, 2026). */
+        state.track = tokenTrack(t) || "sase";
+        state.durationMs = profile().durationMs;
+        applyTrackChrome();
         gateForm.style.display = "none";
         if (logoutBtn) logoutBtn.hidden = false;
         loadExamList();

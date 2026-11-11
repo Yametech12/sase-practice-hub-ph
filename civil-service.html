@@ -24,12 +24,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>Civil Service Exam Reviewer, SASE Practice Hub PH</title>
-  <style>
-    /* Page-local: single-column hero padding, matching .hero-grid spacing. */
-    .cse-hero-inner { position: relative; z-index: 1; padding: 56px 48px; }
-    @media (max-width: 700px) { .cse-hero-inner { padding: 40px 22px; } }
-  </style>
   <link rel="stylesheet" href="/site.css" />
+  <style>
+    /* Page-local: single-column hero padding, matching .hero-grid spacing.
+       Placed after the shared sheet so page-local rules win the cascade. */
+    .cse-hero-inner { position: relative; z-index: 1; padding: 56px 48px; }
+    @media (max-width: 620px) { .cse-hero-inner { padding: 32px 22px; } }
+  </style>
 <script src="/maintenance.js"></script>
 </head>
 <body>

@@ -77,7 +77,7 @@ export default async function handler(req, res) {
       // A CSE7-shaped credential gets the CSE wording (the code is separate
       // from the buyer's PDF password, so pointing them at the PDF would
       // mislead). Everything else keeps the original SASE wording.
-      if (/^CSE7-/.test(password)) {
+      if (/^CSE7-/i.test(password)) {
         return res.status(401).json({
           error: "bad_password",
           message: "Incorrect access code. Please check the CSE7 access code sent with your Civil Service reviewer and try again.",

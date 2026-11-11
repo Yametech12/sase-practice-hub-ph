@@ -434,8 +434,8 @@ body {
 #screen-exam.active {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 64px);
-  min-height: calc(100dvh - 64px);
+  min-height: calc(100vh - 68px);
+  min-height: calc(100dvh - 68px);
 }
 .app:has(#screen-exam.active) { padding-bottom: 6px; }
 
@@ -548,9 +548,10 @@ body {
 }
 
 /* ============================================================
-   DARK MODE (prefers-color-scheme: dark), matches the landing
-   page's dark mode. Surfaces go dark; brand blues stay, with
-   lightened text where a dark blue was used as a text color.
+   DARK MODE (prefers-color-scheme: dark). The portal honors the
+   device setting; the sales pages are pinned light by design.
+   Surfaces go dark; brand blues stay, with lightened text where
+   a dark blue was used as a text color.
    ============================================================ */
 @media (prefers-color-scheme: dark) {
   :root {
