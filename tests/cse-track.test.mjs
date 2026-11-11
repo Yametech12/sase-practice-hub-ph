@@ -55,6 +55,10 @@ globalThis.__CSE_TEST_BANK = {
 globalThis.__CSE_TEST_LESSONS = [
   { section: "Numerical", topic: "Number Series", title: "Series basics", channel: "Test Channel", video_id: "abcDEF12345", url: "https://www.youtube.com/watch?v=abcDEF12345", why: "Start here." },
 ];
+globalThis.__SASE_TEST_LESSONS = [
+  { section: "Mathematics", topic: "Linear equations", title: "SASE math lesson", channel: "Test Channel", video_id: "saseVID1234", url: "https://www.youtube.com/watch?v=saseVID1234", why: "SASE start here." },
+  { section: "Science", topic: "Cells", title: "SASE science lesson", channel: "Test Channel", video_id: "saseSCI1234", url: "https://www.youtube.com/watch?v=saseSCI1234", why: "SASE science." },
+];
 globalThis.__NEON_SQL_MOCK = createMockNeon();
 
 // ---- fake req/res ----
@@ -152,15 +156,21 @@ try {
   ok("sase grade 200", saseGrade.statusCode === 200);
   ok("sase grade has NO benchmark", !saseGrade.body.benchmark);
 
-  console.log("5. lessons: CSE only, token required");
+  console.log("5. lessons: per-track libraries, token required, never cross-served");
   const cseLessons = await call(lessons, { token: cseAuth.body.token });
   ok("cse lessons 200", cseLessons.statusCode === 200);
+  ok("cse lessons track echo", cseLessons.body.track === "cse");
   ok("cse lessons payload", Array.isArray(cseLessons.body.lessons) && cseLessons.body.lessons.length === 1 && cseLessons.body.lessons[0].video_id === "abcDEF12345");
+  ok("cse lessons response contains no SASE lessons", !JSON.stringify(cseLessons.body).includes("saseVID1234") && !JSON.stringify(cseLessons.body).includes("saseSCI1234"));
   const saseLessons = await call(lessons, { token: saseAuth.body.token });
-  ok("sase token gets 403 track_mismatch", saseLessons.statusCode === 403 && saseLessons.body.error === "track_mismatch");
-  ok("sase lessons response leaks nothing", !JSON.stringify(saseLessons.body).includes("abcDEF12345"));
+  ok("sase lessons 200", saseLessons.statusCode === 200);
+  ok("sase lessons track echo", saseLessons.body.track === "sase");
+  ok("sase lessons payload", Array.isArray(saseLessons.body.lessons) && saseLessons.body.lessons.length === 2 && saseLessons.body.lessons[0].video_id === "saseVID1234" && saseLessons.body.lessons[1].section === "Science");
+  ok("sase lessons response contains no CSE lessons", !JSON.stringify(saseLessons.body).includes("abcDEF12345"));
   const anonLessons = await call(lessons, {});
   ok("no token gets 401", anonLessons.statusCode === 401);
+  const badLessons = await call(lessons, { token: "not-a-token" });
+  ok("bad token gets 401", badLessons.statusCode === 401);
 
   console.log("6. device limit still enforced per track (max 3)");
   await call(auth, { password: CSE_CODE, device_id: "dev-cse-2" });

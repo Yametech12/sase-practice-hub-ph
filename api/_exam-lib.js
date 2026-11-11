@@ -493,26 +493,23 @@ export function getCseExamItems(bank, n) {
   return Array.isArray(arr) ? arr : [];
 }
 
-// ---- CSE video lessons (paid-only, Civil Service track) ----
-// SOURCE OF TRUTH: exam/cse-lessons.json in this repo, a flat array in
+// ---- Video lessons (paid-only, both tracks) ----
+// SOURCE OF TRUTH: one JSON file per track in this repo, a flat array in
 // study-path order: [{ section, topic, title, channel, video_id, url, why }].
-// section is one of the 4 CSE section labels. The file ships EMPTY ([])
-// until the curated, live-verified list is dropped in; updating lessons
-// later = replace this one file and redeploy (no code change). The list is
-// served ONLY by api/exam-lessons.js behind a valid CSE-track token; it
-// must never be copied into any public HTML or landing page.
-let cseLessonsCache = null;
-export function loadCseLessons() {
-  if (globalThis.__CSE_TEST_LESSONS) return globalThis.__CSE_TEST_LESSONS;
-  if (cseLessonsCache) return cseLessonsCache;
-  let lessons = [];
+//   exam/cse-lessons.json  (Civil Service sections)
+//   exam/sase-lessons.json (SASE sections, added Nov 11, 2026 on owner order)
+// section is one of the track's 4 section labels. Updating lessons later =
+// replace the track's one file and redeploy (no code change). Each list is
+// served ONLY by api/exam-lessons.js behind a valid token OF THE SAME
+// TRACK; it must never be copied into any public HTML or landing page.
+function readLessonsFile(fileName) {
   try {
     const file = path.join(
-      path.dirname(fileURLToPath(import.meta.url)), "..", "exam", "cse-lessons.json"
+      path.dirname(fileURLToPath(import.meta.url)), "..", "exam", fileName
     );
     const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
     if (Array.isArray(parsed)) {
-      lessons = parsed.filter(
+      return parsed.filter(
         (l) =>
           l &&
           typeof l.section === "string" &&
@@ -525,8 +522,24 @@ export function loadCseLessons() {
   } catch {
     /* missing or unreadable lessons file: serve an empty list */
   }
-  cseLessonsCache = lessons;
-  return lessons;
+  return [];
+}
+let cseLessonsCache = null;
+export function loadCseLessons() {
+  if (globalThis.__CSE_TEST_LESSONS) return globalThis.__CSE_TEST_LESSONS;
+  if (cseLessonsCache) return cseLessonsCache;
+  cseLessonsCache = readLessonsFile("cse-lessons.json");
+  return cseLessonsCache;
+}
+let saseLessonsCache = null;
+export function loadSaseLessons() {
+  if (globalThis.__SASE_TEST_LESSONS) return globalThis.__SASE_TEST_LESSONS;
+  if (saseLessonsCache) return saseLessonsCache;
+  saseLessonsCache = readLessonsFile("sase-lessons.json");
+  return saseLessonsCache;
+}
+export function loadLessonsForTrack(track) {
+  return track === TRACK_CSE ? loadCseLessons() : loadSaseLessons();
 }
 
 // ---- answer validation (G5): only A/B/C/D/E (or null) per known question id.

@@ -4,9 +4,10 @@
    BACKEND API (exact field names per contract):
      POST /api/exam-auth      {password, device_id} → 200 {token, track}
      POST /api/exam-list      {token} → 200 {exams:[...], server_now, track, exam_ms}
-     POST /api/exam-lessons   {token} → 200 {track:"cse", lessons:[...]}
-        (Civil Service track only; SASE tokens get 403. The lesson list is
-         paid content and is never present in any static file.)
+     POST /api/exam-lessons   {token} → 200 {track, lessons:[...]}
+        (Both tracks; the token's track decides which library is served.
+         The lesson list is paid content and is never present in any
+         static file.)
      POST /api/exam-questions {token, exam} → 200 {exam, session_id,
         questions:[{qid, section, question, passage, options:{A,B,C,D}}],
         answers, server_remaining_ms, server_now, expires_at, resumed}
@@ -24,7 +25,9 @@
   /* ---------------- constants ---------------- */
   var EXAM_DURATION_MS = 2 * 60 * 60 * 1000; // 2-hour practice timer (SASE default)
   var LOW_TIME_MS = 15 * 60 * 1000;          // danger styling under 15 min
-  var WATCHED_KEY = "cse_lessons_watched";   // localStorage: watched lesson video_ids (per device)
+  /* localStorage watched check-off key, per track (per device):
+     "sase_lessons_watched" / "cse_lessons_watched". */
+  function watchedKey() { return state.track === "cse" ? "cse_lessons_watched" : "sase_lessons_watched"; }
 
   /* Track profiles: the portal serves two products. The token's track
      (returned by exam-auth / exam-list) picks the copy, counts, and timer.
@@ -88,8 +91,8 @@
     token: null,
     track: "sase",         // "sase" | "cse", from auth/list responses
     durationMs: EXAM_DURATION_MS, // per-track timer length (list response exam_ms wins)
-    lessons: null,         // CSE only: lessons array from /api/exam-lessons
-    lessonsFilter: "all",  // CSE lessons section filter
+    lessons: null,         // lessons array from /api/exam-lessons (per track)
+    lessonsFilter: "all",  // lessons section filter
     exam: null,            // exam number (n)
     sessionId: null,
     questions: [],
@@ -204,7 +207,7 @@
     var warn = $("sync-warning");
     if (warn) warn.hidden = true;
     var lw = $("lessons-wrap");
-    if (lw) lw.hidden = true; // paid CSE content leaves the DOM flow on sign-out
+    if (lw) lw.hidden = true; // paid lesson content leaves the DOM flow on sign-out
     showScreen("screen-gate");
     gateForm.style.display = "";
     gateError.textContent = "Your session expired, please sign in again to resume your exam. Your saved answers are safe.";
@@ -314,6 +317,8 @@
     applyTrackChrome();
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
     $("exam-list-wrap").hidden = true;
+    var lessonsWrapOnOut = $("lessons-wrap");
+    if (lessonsWrapOnOut) lessonsWrapOnOut.hidden = true; // paid lessons leave with the session
     var submitErr = $("submit-error");
     if (submitErr) submitErr.hidden = true;
     gateForm.style.display = "";
@@ -348,10 +353,6 @@
     set("foot-text", escapeHtml(pr.foot));
     var cseHint = $("gate-cse-hint");
     if (cseHint) cseHint.hidden = state.track === "cse";
-    if (state.track !== "cse") {
-      var lw = $("lessons-wrap");
-      if (lw) lw.hidden = true;
-    }
   }
 
   function loadExamList() {
@@ -372,7 +373,7 @@
         list.innerHTML = "";
         (meta.exams || []).forEach(function (ex, idx) { list.appendChild(examCard(ex, idx)); });
         $("exam-list-wrap").hidden = false;
-        if (state.track === "cse") loadLessons();
+        loadLessons();
         /* No auto-start: an in-progress exam waits for an explicit Resume tap
            (audit fix). The Resume button on the card + the resume banner in
            beginExam stay available. */
@@ -504,21 +505,28 @@
   }
 
   /* ============================================================
-     Civil Service VIDEO LESSONS (CSE track only, paid-only)
+     VIDEO LESSONS (both tracks, paid-only)
      ------------------------------------------------------------
      Loaded from POST /api/exam-lessons with the signed token; the list
-     never exists in any static file. Grouped by section in study-path
-     order (Numerical first: the owner's math-first order), file order
-     kept inside each group. Clicking a card swaps its thumbnail for a
-     youtube-nocookie iframe, created only on click so the page stays
-     fast. Watched state is a per-device localStorage check-off
-     (v1, no server state).
+     never exists in any static file. The token's track decides which
+     library the endpoint serves, and the section order below follows
+     the track (Mathematics / Numerical first: the owner's math-first
+     order), file order kept inside each group. Clicking a card swaps
+     its thumbnail for a youtube-nocookie iframe, created only on click
+     so the page stays fast. Watched state is a per-device localStorage
+     check-off, keyed per track (v1, no server state).
      ============================================================ */
-  var LESSON_SECTION_ORDER = ["Numerical", "Verbal", "Analytical", "General Information"];
+  var LESSON_SECTION_ORDER = {
+    cse: ["Numerical", "Verbal", "Analytical", "General Information"],
+    sase: ["Mathematics", "Language Usage", "Science", "Aptitude"]
+  };
+  function lessonSectionOrder() {
+    return LESSON_SECTION_ORDER[state.track] || LESSON_SECTION_ORDER.sase;
+  }
 
   function watchedIds() {
     try {
-      var raw = localStorage.getItem(WATCHED_KEY);
+      var raw = localStorage.getItem(watchedKey());
       var arr = raw ? JSON.parse(raw) : [];
       return Array.isArray(arr) ? arr : [];
     } catch (e) { return []; }
@@ -526,22 +534,23 @@
   function setWatched(videoId, on) {
     var ids = watchedIds().filter(function (id) { return id !== videoId; });
     if (on) ids.push(videoId);
-    try { localStorage.setItem(WATCHED_KEY, JSON.stringify(ids)); } catch (e) {}
+    try { localStorage.setItem(watchedKey(), JSON.stringify(ids)); } catch (e) {}
   }
 
   function loadLessons() {
     var wrap = $("lessons-wrap");
-    if (!wrap || state.track !== "cse" || !state.token) return;
+    if (!wrap || !state.token) return;
     wrap.hidden = false;
     if (state.lessons) { renderLessons(); return; }
     api("/api/exam-lessons", { token: state.token })
       .then(function (data) {
+        if (data.track) state.track = data.track === "cse" ? "cse" : "sase";
         state.lessons = Array.isArray(data.lessons) ? data.lessons : [];
-        /* Deep link from a CSE results page: /exam/?lessons=Numerical
+        /* Deep link from a results page: /exam/?lessons=Mathematics
            opens the lessons filtered to the weak section. */
         try {
           var want = new URLSearchParams(window.location.search).get("lessons");
-          if (want && LESSON_SECTION_ORDER.indexOf(want) !== -1) {
+          if (want && lessonSectionOrder().indexOf(want) !== -1) {
             state.lessonsFilter = want;
             setTimeout(function () { wrap.scrollIntoView(); }, 80);
           }
@@ -565,8 +574,9 @@
       if (!groups[l.section]) { groups[l.section] = []; order.push(l.section); }
       groups[l.section].push(l);
     });
+    var sectionOrder = lessonSectionOrder();
     order.sort(function (a, b) {
-      var ia = LESSON_SECTION_ORDER.indexOf(a), ib = LESSON_SECTION_ORDER.indexOf(b);
+      var ia = sectionOrder.indexOf(a), ib = sectionOrder.indexOf(b);
       return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
     });
     // Filter chips: All + one per section present.

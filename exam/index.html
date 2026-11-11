@@ -68,10 +68,11 @@
       </div>
     </div>
 
-    <!-- Civil Service VIDEO LESSONS (paid-only). exam-ui.js fills this ONLY
-         after a CSE-track login, from POST /api/exam-lessons. No lesson
-         titles or URLs ever appear in this static HTML. SASE accounts and
-         signed-out visitors never see this section. -->
+    <!-- VIDEO LESSONS (paid-only, both tracks). exam-ui.js fills this ONLY
+         after a paid login, from POST /api/exam-lessons; the token's track
+         decides which library is served. No lesson titles or URLs ever
+         appear in this static HTML. Signed-out visitors never see the
+         lesson list. -->
     <div id="lessons-wrap" hidden>
       <h2 class="section-title">Video Lessons</h2>
       <p class="section-sub">Stream the lessons inside the portal, in study order. Start with your weakest section, then work through the path. Tap a lesson to watch, and tick it off when you are done.</p>

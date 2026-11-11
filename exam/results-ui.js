@@ -281,11 +281,15 @@
       els.improveList.appendChild(div);
     });
 
-    /* Civil Service tie-in: the weakest section links straight to that
-       section's paid video lessons inside the portal (CSE results only;
-       SASE results carry no benchmark and never see this). */
-    var CSE_SECTIONS = ["Verbal", "Numerical", "Analytical", "General Information"];
-    if (data.benchmark && weakName && CSE_SECTIONS.indexOf(weakName) !== -1) {
+    /* Video lessons tie-in (both tracks): the weakest section links
+       straight to that section's paid video lessons inside the portal.
+       weakName comes from this result's own section breakdown, so a CSE
+       result only ever names a CSE section and a SASE result only ever
+       names a SASE section; the deep link opens that track's lessons
+       because the portal session carries the track. */
+    var LESSON_SECTIONS = ["Verbal", "Numerical", "Analytical", "General Information",
+                           "Language Usage", "Mathematics", "Aptitude", "Science"];
+    if (weakName && LESSON_SECTIONS.indexOf(weakName) !== -1) {
       var linkDiv = document.createElement("div");
       linkDiv.className = "improve-item lessons-link";
       linkDiv.innerHTML =
