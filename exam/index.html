@@ -20,7 +20,7 @@
     <a href="/" class="back-link" id="back-home" aria-label="Back to home page">&#8592; Home</a>
     <div class="brand" aria-label="SASE Practice Hub PH">
       <span class="brand-mark" aria-hidden="true">📘</span>
-      <span class="brand-name">SASE Practice Hub PH</span>
+      <span class="brand-name" id="brand-name">SASE Practice Hub PH</span>
     </div>
     <span class="practice-badge">PRACTICE EXAM</span>
   </div>
@@ -29,13 +29,13 @@
 <main class="app" id="main-content">
   <section id="screen-gate" class="screen active">
     <div class="gate-hero">
-      <h1>SASE Mock Exam Portal</h1>
-      <p class="subtitle">Eight full-length mock exams · 180 questions each · 2-hour practice timer.</p>
-      <p class="disclaimer-line">This is a <strong>practice exam</strong> for preparation only. It is not the official MSU-SASE and is not affiliated with MSU.</p>
+      <h1 id="gate-title">SASE Mock Exam Portal</h1>
+      <p class="subtitle" id="gate-subtitle">Eight full-length mock exams · 180 questions each · 2-hour practice timer.</p>
+      <p class="disclaimer-line" id="gate-disclaimer">This is a <strong>practice exam</strong> for preparation only. It is not the official MSU-SASE and is not affiliated with MSU.</p>
     </div>
 
     <form id="gate-form" class="gate-card" autocomplete="off">
-      <label for="gate-password" class="field-label">Enter your reviewer password</label>
+      <label for="gate-password" class="field-label" id="field-label">Enter your reviewer password</label>
       <p class="field-hint" id="field-hint">Use the same unique password that came with your ₱167 PDF.</p>
       <div class="gate-row">
         <input type="password" id="gate-password" placeholder="e.g. Xk9mQ2vT7pLz"
@@ -43,12 +43,13 @@
         <button type="submit" id="gate-submit" class="btn btn-primary">Unlock</button>
       </div>
       <p id="gate-error" class="form-error" role="alert" hidden></p>
-      <p class="gate-note">One password works on <strong>up to 3 devices</strong>. Lost access? Message SASE Practice Hub PH.</p>
+      <p class="gate-note" id="gate-note">One password works on <strong>up to 3 devices</strong>. Lost access? Message SASE Practice Hub PH.</p>
     </form>
+    <p class="gate-note" id="gate-cse-hint">Civil Service buyer? Enter your <strong>CSE7 access code</strong> above (it is separate from your PDF password).</p>
 
     <div id="exam-list-wrap" hidden>
-      <h2 class="section-title">Your Exams</h2>
-      <p class="section-sub">All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>.</p>
+      <h2 class="section-title" id="list-title">Your Exams</h2>
+      <p class="section-sub" id="list-sub">All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>.</p>
       <div id="exam-list-loading" class="exam-list-loading" role="status" aria-live="polite" hidden>
         <div class="spinner" aria-hidden="true"></div>
         <p>Loading your exams...</p>
@@ -66,6 +67,19 @@
       <div id="exam-list" class="exam-list">
       </div>
     </div>
+
+    <!-- Civil Service VIDEO LESSONS (paid-only). exam-ui.js fills this ONLY
+         after a CSE-track login, from POST /api/exam-lessons. No lesson
+         titles or URLs ever appear in this static HTML. SASE accounts and
+         signed-out visitors never see this section. -->
+    <div id="lessons-wrap" hidden>
+      <h2 class="section-title">Video Lessons</h2>
+      <p class="section-sub">Stream the lessons inside the portal, in study order. Start with your weakest section, then work through the path. Tap a lesson to watch, and tick it off when you are done.</p>
+      <div id="lessons-filters" class="lessons-filters" role="group" aria-label="Filter lessons by section"></div>
+      <div id="lessons-list" class="lessons-list"></div>
+      <p id="lessons-empty" class="section-sub" hidden>Video lessons are being prepared and will appear here soon.</p>
+      <p id="lessons-error" class="form-error" role="alert" hidden></p>
+    </div>
   </section>
 
   <section id="screen-instructions" class="screen" aria-labelledby="instr-title">
@@ -73,16 +87,16 @@
       <button id="instr-back" class="btn btn-ghost instr-back" type="button"><span aria-hidden="true">&#8592;</span> Back to your exams</button>
       <p class="instr-kicker" id="instr-kicker">Mock Exam</p>
       <h2 id="instr-title" class="instr-title" tabindex="-1">Before you start</h2>
-      <p class="instr-lead">Read these quickly. Once you tap <strong>Start exam</strong>, your 2-hour timer begins and cannot be paused.</p>
+      <p class="instr-lead" id="instr-lead">Read these quickly. Once you tap <strong>Start exam</strong>, your 2-hour timer begins and cannot be paused.</p>
 
       <div class="instr-facts" role="list">
-        <div class="instr-fact" role="listitem"><strong>180</strong><span>questions</span></div>
-        <div class="instr-fact" role="listitem"><strong>2 hrs</strong><span>time limit</span></div>
+        <div class="instr-fact" role="listitem" id="fact-questions"><strong>180</strong><span>questions</span></div>
+        <div class="instr-fact" role="listitem" id="fact-time"><strong>2 hrs</strong><span>time limit</span></div>
         <div class="instr-fact" role="listitem"><strong>1</strong><span>attempt only</span></div>
       </div>
 
       <h3 class="instr-h">What's on the exam</h3>
-      <ul class="instr-sections">
+      <ul class="instr-sections" id="instr-sections">
         <li><span>Language Usage</span><b>80</b></li>
         <li><span>Mathematics</span><b>40</b></li>
         <li><span>Aptitude</span><b>30</b></li>
@@ -94,13 +108,13 @@
         <li><strong>Pick one answer per question</strong> (A, B, C or D). You can change it any time before you submit.</li>
         <li><strong>Your answers save automatically</strong> to the server, so a refresh or dropped connection won't lose them.</li>
         <li><strong>The timer keeps running</strong> if you close the page. Come back to <em>Your Exams</em> and tap <em>Resume</em> before time runs out.</li>
-        <li><strong>Once you start, the 2-hour timer runs even if you close the page. Start only when you are ready to finish.</strong></li>
+        <li id="instr-step-timer"><strong>Once you start, the 2-hour timer runs even if you close the page. Start only when you are ready to finish.</strong></li>
         <li><strong>Use Flag and the Grid</strong> to mark questions to revisit and jump to any question. Skipped questions score no points.</li>
         <li><strong>Submit when you're done.</strong> If time runs out, your saved answers are submitted for you.</li>
         <li><strong>You can't retake an exam.</strong> Submitting or giving up uses your one attempt.</li>
       </ol>
 
-      <p class="instr-note">Find a quiet spot and a stable connection first. Questions can't be copied during the exam. This is practice material, not the official MSU-SASE.</p>
+      <p class="instr-note" id="instr-note">Find a quiet spot and a stable connection first. Questions can't be copied during the exam. This is practice material, not the official MSU-SASE.</p>
 
       <label class="instr-check" for="instr-agree">
         <input type="checkbox" id="instr-agree">
@@ -219,7 +233,7 @@
 </main>
 
 <footer class="page-foot">
-  <p>SASE Practice Hub PH · Practice exams for study purposes only, not the official MSU-SASE.</p>
+  <p id="foot-text">SASE Practice Hub PH · Practice exams for study purposes only, not the official MSU-SASE.</p>
 </footer>
 
 <script src="/exam/exam-ui.js"></script>

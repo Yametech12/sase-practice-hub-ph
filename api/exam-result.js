@@ -13,8 +13,11 @@ import {
   loadState,
   readBody,
   validExamN,
+  trackOf,
+  cseBenchmark,
+  TRACK_CSE,
   bindingHasDevice,
-  DEVICE_MISMATCH_MSG,
+  deviceMismatchMsg,
 } from "./_exam-lib.js";
 
 export default async function handler(req, res) {
@@ -28,16 +31,19 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "bad_request", message: "Invalid exam number." });
     }
 
+    const track = trackOf(p);
     const { state } = await loadState();
     const b = state.bindings[p.order_id];
     if (!bindingHasDevice(b, p.device_hash)) {
-      return res.status(403).json({ error: "device_mismatch", message: DEVICE_MISMATCH_MSG });
+      return res.status(403).json({ error: "device_mismatch", message: deviceMismatchMsg(track) });
     }
     const rec = (state.exams[p.order_id] || {})[String(n)];
     if (!rec || rec.status !== "done") {
       return res.status(404).json({ error: "no_result", message: "No completed result for this exam yet." });
     }
     // Same shape as a fresh grade response, so results.html renders unchanged.
+    // CSE results carry the 80.00 general-rating benchmark block (stored at
+    // grade time; recomputed here for any record that predates it).
     return res.status(200).json({
       score: rec.score,
       total: rec.total,
@@ -46,6 +52,8 @@ export default async function handler(req, res) {
       weak_area: rec.weak_area,
       improvement: rec.improvement,
       review: rec.review,
+      track,
+      benchmark: track === TRACK_CSE ? rec.benchmark || cseBenchmark(rec.pct) : null,
       submitted_at: rec.submitted_at,
       auto_submitted: !!rec.auto_submitted,
       forfeited: !!rec.forfeited,

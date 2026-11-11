@@ -1,0 +1,344 @@
+[
+  {
+    "section": "Numerical",
+    "topic": "Decimals and place value",
+    "title": "Introduction to decimals | Decimals | 4th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "BItpeFXC4vA",
+    "url": "https://www.youtube.com/watch?v=BItpeFXC4vA",
+    "why": "Foundation for decimal computation and decimal-fraction-percent conversion items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Fractions: adding and subtracting",
+    "title": "Math Antics - Adding and Subtracting Fractions",
+    "channel": "mathantics",
+    "video_id": "5juto2ze8Lg",
+    "url": "https://www.youtube.com/watch?v=5juto2ze8Lg",
+    "why": "Prepares for fraction operations inside basic-operations and word-problem items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Order of operations (MDAS/PEMDAS)",
+    "title": "Math Antics - Order Of Operations",
+    "channel": "mathantics",
+    "video_id": "dAgfnK528RA",
+    "url": "https://www.youtube.com/watch?v=dAgfnK528RA",
+    "why": "Prepares for basic-operations items where operation order changes the answer."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Exponents and basic operations",
+    "title": "Exponent properties involving products | Numbers and operations | 8th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "zM_p7tfWvLU",
+    "url": "https://www.youtube.com/watch?v=zM_p7tfWvLU",
+    "why": "Prepares for items with powers and exponent rules inside longer computations."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Ratio: introduction",
+    "title": "Introduction to ratios | Ratios, rates, and percentages | 6th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "bIKmw0aTmYc",
+    "url": "https://www.youtube.com/watch?v=bIKmw0aTmYc",
+    "why": "Foundation for ratio and proportion word problems."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Percent of a number",
+    "title": "Math Antics - Finding A Percent Of A Number",
+    "channel": "mathantics",
+    "video_id": "rR95Cbcjzus",
+    "url": "https://www.youtube.com/watch?v=rR95Cbcjzus",
+    "why": "Prepares for percentage word problems using Part = Rate x Base."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Percent change, discount and profit/loss",
+    "title": "Math Antics - Calculating Percent Change",
+    "channel": "mathantics",
+    "video_id": "5nZEUpZX_P0",
+    "url": "https://www.youtube.com/watch?v=5nZEUpZX_P0",
+    "why": "Prepares for percent increase/decrease, discount and price-change items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Algebraic expressions: foundations",
+    "title": "What are variables, expressions, and equations? | Introduction to algebra | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "vDqOoI-4Z6M",
+    "url": "https://www.youtube.com/watch?v=vDqOoI-4Z6M",
+    "why": "Builds the variable-and-expression vocabulary behind algebra word problems."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Algebraic expressions from word problems",
+    "title": "How to write algebraic expressions from word problems | 6th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "C_KffdI34ZU",
+    "url": "https://www.youtube.com/watch?v=C_KffdI34ZU",
+    "why": "Prepares for translating word problems into equations, the setup step of most Numerical items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Linear equations",
+    "title": "Solving a more complicated equation | Linear equations | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "XoEn1LfVoTo",
+    "url": "https://www.youtube.com/watch?v=XoEn1LfVoTo",
+    "why": "Prepares for equation-solving items of the form ax + b = c."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Linear equations: variables on both sides",
+    "title": "Introduction to solving an equation with variables on both sides | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "f15zA0PhSek",
+    "url": "https://www.youtube.com/watch?v=f15zA0PhSek",
+    "why": "Prepares for harder equation items used in age, work and mixture setups."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Number series and patterns",
+    "title": "Practice finding patterns in numbers | 3rd grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "l-6uEtTBH7g",
+    "url": "https://www.youtube.com/watch?v=l-6uEtTBH7g",
+    "why": "Trains the check-the-differences habit behind number series items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Averages: mean, median, mode",
+    "title": "Finding mean, median, and mode | Descriptive statistics | Probability and Statistics | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "k3aKKasOmIw",
+    "url": "https://www.youtube.com/watch?v=k3aKKasOmIw",
+    "why": "Prepares for average items and simple data summaries."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Age problems",
+    "title": "Age word problems 2 | Linear equations | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "pPqPj8CAPvI",
+    "url": "https://www.youtube.com/watch?v=pPqPj8CAPvI",
+    "why": "Prepares for age word problems with now-vs-then setups."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Work problems (combined rates)",
+    "title": "Applying rational equations 1 | Polynomial and rational functions | Algebra II | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "gD7A1LA4jO8",
+    "url": "https://www.youtube.com/watch?v=gD7A1LA4jO8",
+    "why": "Prepares for work-rate items using 1/T = 1/a + 1/b."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Distance, rate and time",
+    "title": "Passing Trains",
+    "channel": "Khan Academy",
+    "video_id": "qLLjD-g_9ms",
+    "url": "https://www.youtube.com/watch?v=qLLjD-g_9ms",
+    "why": "Prepares for motion and relative-speed items using Distance = Rate x Time."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Mixture problems",
+    "title": "Mixture problems 2 | Linear equations | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "OBVGQt1Eeug",
+    "url": "https://www.youtube.com/watch?v=OBVGQt1Eeug",
+    "why": "Prepares for mixture and weighted-average word problems."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Simple interest",
+    "title": "Simple Interest Formula",
+    "channel": "The Organic Chemistry Tutor",
+    "video_id": "NCYNXkbTTUo",
+    "url": "https://www.youtube.com/watch?v=NCYNXkbTTUo",
+    "why": "Prepares for simple interest items using I = P x r x t."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Perimeter",
+    "title": "Math Antics - Perimeter",
+    "channel": "mathantics",
+    "video_id": "AAY1bsazcgM",
+    "url": "https://www.youtube.com/watch?v=AAY1bsazcgM",
+    "why": "Prepares for perimeter items on rectangles, squares and triangles."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Area",
+    "title": "Math Antics - Area",
+    "channel": "mathantics",
+    "video_id": "xCdxURXMdFY",
+    "url": "https://www.youtube.com/watch?v=xCdxURXMdFY",
+    "why": "Prepares for area items and area-scaling traps."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Agreement: subjects, verbs and pronouns",
+    "title": "Introduction to agreement | The parts of speech | Grammar | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "KEdI0-xIUFc",
+    "url": "https://www.youtube.com/watch?v=KEdI0-xIUFc",
+    "why": "Foundation for subject-verb and pronoun-antecedent agreement items."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Subject-verb agreement",
+    "title": "Subject-verb agreement | Syntax | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "4fMipjAnlRk",
+    "url": "https://www.youtube.com/watch?v=4fMipjAnlRk",
+    "why": "Prepares for the highest-frequency grammar trap: verb agreeing with the true subject."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Verb tense",
+    "title": "The past tense | The parts of speech | Grammar | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "zS6N5EqXpCY",
+    "url": "https://www.youtube.com/watch?v=zS6N5EqXpCY",
+    "why": "Prepares for verb tense and tense-consistency items."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Prepositions: correct usage",
+    "title": "Prepositions of time | The parts of speech | Grammar | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "TzUO8du5Lrg",
+    "url": "https://www.youtube.com/watch?v=TzUO8du5Lrg",
+    "why": "Prepares for preposition correct-usage items (in, on, at for time)."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Parallelism",
+    "title": "Parallel structure | Syntax | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "2l2FgUrln1A",
+    "url": "https://www.youtube.com/watch?v=2l2FgUrln1A",
+    "why": "Prepares for parallelism items in sentence correction and error identification."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Vocabulary in context",
+    "title": "Using context clues to figure out new words | Reading | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "CiNggzdWkIo",
+    "url": "https://www.youtube.com/watch?v=CiNggzdWkIo",
+    "why": "Prepares for vocabulary-in-context items using inference, definition, example, antonym and synonym clues."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Reading comprehension: main idea",
+    "title": "What is a main idea? | Reading | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "4swFGRhQoMI",
+    "url": "https://www.youtube.com/watch?v=4swFGRhQoMI",
+    "why": "Prepares for main-idea items, the largest reading comprehension block."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Paragraph organization",
+    "title": "Paragraph Structure",
+    "channel": "Smrt English",
+    "video_id": "NLzKqujmdGk",
+    "url": "https://www.youtube.com/watch?v=NLzKqujmdGk",
+    "why": "Prepares for paragraph organization items: topic sentence, supporting sentences, conclusion."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Conclusions: inductive vs deductive reasoning",
+    "title": "Difference between inductive and deductive reasoning | Precalculus | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "GEId0GonOZM",
+    "url": "https://www.youtube.com/watch?v=GEId0GonOZM",
+    "why": "Foundation for conclusion items: what follows necessarily vs what is only probable."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Syllogisms",
+    "title": "Decision Making: Syllogisms Explained In 20 Minutes | UCAT Preparation",
+    "channel": "MES UCAT",
+    "video_id": "oBysm0k-a40",
+    "url": "https://www.youtube.com/watch?v=oBysm0k-a40",
+    "why": "Prepares for syllogism items where a conclusion must follow from given statements."
+  },
+  {
+    "section": "Analytical",
+    "topic": "If-then logic (rules of implication)",
+    "title": "Rules of Implication (part 1)",
+    "channel": "A Little Bit of Philosophy",
+    "video_id": "pNt6V6cHDnU",
+    "url": "https://www.youtube.com/watch?v=pNt6V6cHDnU",
+    "why": "Prepares for conditional-logic items: modus ponens, modus tollens and the invalid converse."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Analogies and word association",
+    "title": "Analogy I English for CLAT & IIM IPM I Score Booster",
+    "channel": "ProTalent Admin",
+    "video_id": "rgJ_8h8nc50",
+    "url": "https://www.youtube.com/watch?v=rgJ_8h8nc50",
+    "why": "Prepares for analogy items: name the relationship first, then match it."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Data interpretation: bar graphs",
+    "title": "Reading bar graphs | Applying mathematical reasoning | Pre-Algebra | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "kiQ6MUQZHSs",
+    "url": "https://www.youtube.com/watch?v=kiQ6MUQZHSs",
+    "why": "Prepares for data interpretation items on graphs: read labels, units and values first."
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine government: three branches",
+    "title": "The Three Branches of Philippine Government",
+    "channel": "NoMo Studio",
+    "video_id": "-p4_OFbxnmY",
+    "url": "https://www.youtube.com/watch?v=-p4_OFbxnmY",
+    "why": "Prepares for structure-of-government items: legislative, executive and judicial roles."
+  },
+  {
+    "section": "General Information",
+    "topic": "Bill of Rights (Article III)",
+    "title": "The Bill of Rights (Philippine Constitution) Basic Concepts (Part 1)",
+    "channel": "Atty. Edgar Pascua II",
+    "video_id": "lNZ0l-85Moo",
+    "url": "https://www.youtube.com/watch?v=lNZ0l-85Moo",
+    "why": "Prepares for Bill of Rights items, the most heavily tested General Information block."
+  },
+  {
+    "section": "General Information",
+    "topic": "RA 6713: code of conduct",
+    "title": "RA 6713: Code of Conduct and Ethical Standards for Public Officials and Employees",
+    "channel": "Jeffrey Sasoy",
+    "video_id": "2sYz3Uf5Boc",
+    "url": "https://www.youtube.com/watch?v=2sYz3Uf5Boc",
+    "why": "Prepares for RA 6713 items: norms of conduct, duties, prohibited acts and SALN."
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine flag and national symbols (RA 8491)",
+    "title": "Flag Heraldic Code of the Philippines | NSTP Lecture by Engr. Jorge Escalona",
+    "channel": "Jonas' Class Notes",
+    "video_id": "5PX0h6AbLvI",
+    "url": "https://www.youtube.com/watch?v=5PX0h6AbLvI",
+    "why": "Prepares for national symbol and flag items under the Flag and Heraldic Code."
+  },
+  {
+    "section": "General Information",
+    "topic": "Environment: greenhouse effect and climate basics",
+    "title": "What Is the Greenhouse Effect?",
+    "channel": "NASA Space Place",
+    "video_id": "SN5-DnOHQmE",
+    "url": "https://www.youtube.com/watch?v=SN5-DnOHQmE",
+    "why": "Prepares for environment concept items: greenhouse gases, warming and climate basics."
+  }
+]

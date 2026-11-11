@@ -23,8 +23,9 @@ import {
   readBody,
   examUnlock,
   EXAM_COUNT,
-  EXAM_MS,
-  DEVICE_MISMATCH_MSG,
+  trackOf,
+  examMsForTrack,
+  deviceMismatchMsg,
   bindingHasDevice,
 } from "./_exam-lib.js";
 
@@ -35,11 +36,13 @@ export default async function handler(req, res) {
     const p = verifyToken(token);
     if (!p) return res.status(401).json({ error: "bad_token", message: "Session expired. Please log in again." });
 
+    const track = trackOf(p);
+    const EXAM_MS = examMsForTrack(track); // per-track timer (SASE 2h, CSE 3h10m)
     const now = Date.now();
     const { state } = await loadState();
     const b = state.bindings[p.order_id];
     if (!bindingHasDevice(b, p.device_hash)) {
-      return res.status(403).json({ error: "device_mismatch", message: DEVICE_MISMATCH_MSG });
+      return res.status(403).json({ error: "device_mismatch", message: deviceMismatchMsg(track) });
     }
     const recs = state.exams[p.order_id] || {};
     const exams = [];
@@ -76,7 +79,7 @@ export default async function handler(req, res) {
       }
       exams.push({ n, status: "available" });
     }
-    return res.status(200).json({ exams, server_now: now });
+    return res.status(200).json({ exams, server_now: now, track, exam_ms: EXAM_MS });
   } catch (e) {
     console.error("exam-list error:", e.message);
     return res.status(500).json({ error: "server_error", message: "Please try again in a moment." });

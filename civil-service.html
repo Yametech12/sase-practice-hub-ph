@@ -1,0 +1,1202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <meta name="description" content="Civil Service Exam reviewer: 560 explained practice items, 8 online mock exams in the real CSE format, and video lessons. Exam date March 14, 2027." />
+  <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/civil-service.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/civil-service.html" />
+  <meta property="og:title" content="Civil Service Exam Reviewer, ₱369" />
+  <meta property="og:description" content="560 explained practice items, 8 mock exams in real CSE format, video lessons in the portal. For the March 14, 2027 CSE-PPT." />
+  <meta property="og:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Civil Service Exam Reviewer, ₱369" />
+  <meta name="twitter:description" content="560 explained practice items, 8 mock exams in real CSE format, video lessons in the portal." />
+  <meta name="twitter:image" content="https://sase-practice-hub-ph.vercel.app/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <title>Civil Service Exam Reviewer, SASE Practice Hub PH</title>
+  <style>
+    /* Page-local: single-column hero padding, matching .hero-grid spacing. */
+    .cse-hero-inner { position: relative; z-index: 1; padding: 56px 48px; }
+    @media (max-width: 700px) { .cse-hero-inner { padding: 40px 22px; } }
+  </style>
+  <style>
+    :root {
+      --bg: #f5f9ff;
+      --bg-2: #eff7ff;
+      --surface: rgba(255,255,255,0.82);
+      --surface-strong: #ffffff;
+      --surface-soft: #f2f7ff;
+      --ink: #12314b;
+      --muted: #5d7188;
+      --line: rgba(18, 49, 75, 0.1);
+      --primary: #1a78e8;
+      --primary-dark: #0d4ea3;
+      --primary-soft: rgba(26,120,232,0.12);
+      --yellow: #ffd85d;
+      --yellow-strong: #eeaf1d;
+      --pink: #ff8bb2;
+      --pink-soft: rgba(255,139,178,0.12);
+      --green: #0f8d69;
+      --green-soft: #eafff6;
+      --danger: #d84b60;
+      --danger-soft: #fff1f4;
+      --shadow: 0 24px 60px rgba(7, 28, 50, 0.12);
+      --shadow-soft: 0 12px 26px rgba(7, 28, 50, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: Inter, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(26,120,232,0.08), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, #f4f8ff 34%, #f2f7fb 100%);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+
+    .skip-link {
+      position: absolute;
+      left: 20px;
+      top: -110px;
+      z-index: 60;
+      background: var(--ink);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 0 0 12px 12px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .skip-link:focus { top: 0; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(13, 24, 42, 0.76);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      width: min(var(--max), calc(100% - 24px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--yellow), #ffe18d);
+      color: var(--ink);
+      font-size: 18px;
+      box-shadow: 0 12px 24px rgba(255,216,93,0.38);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.94rem;
+      color: rgba(255,255,255,0.82);
+    }
+    .nav a {
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav a:hover { color: #fff; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--yellow), #ffe28d);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 18px rgba(255,216,93,0.26);
+    }
+
+    .hero {
+      padding: 48px 0 28px;
+    }
+
+    .hero-shell {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #081a30 0%, #133d6a 30%, #0d5ab0 62%, #0e78e0 100%);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.1);
+      isolation: isolate;
+    }
+
+    .hero-shell::before,
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-shell::before {
+      width: 520px;
+      height: 520px;
+      right: -140px;
+      top: -120px;
+      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 63%);
+    }
+
+    .hero-shell::after {
+      width: 300px;
+      height: 300px;
+      left: -80px;
+      bottom: -110px;
+      background: radial-gradient(circle, rgba(255,216,93,0.18), transparent 60%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.14fr 0.86fr;
+      gap: 20px;
+      align-items: center;
+      padding: 56px 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dfeeff;
+      font-weight: 900;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--yellow);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin: 18px 0 18px;
+      max-width: 720px;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 0.94;
+      letter-spacing: -0.07em;
+      color: white;
+    }
+
+    .lead {
+      max-width: 630px;
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(1.04rem, 2vw, 1.2rem);
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+    .button.primary {
+      background: linear-gradient(135deg, var(--yellow), #ffe9a5);
+      color: var(--ink);
+      box-shadow: 0 12px 22px rgba(255,216,93,0.28);
+    }
+    .button.secondary {
+      background: rgba(255,255,255,0.09);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+    }
+
+    .stat strong {
+      display: block;
+      color: #fff;
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+    }
+
+    .stat span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .mock-card {
+      position: relative;
+      padding: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      backdrop-filter: blur(8px);
+    }
+
+    .notebook {
+      background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(238,244,255,0.98));
+      border-radius: 24px;
+      padding: 22px 20px 18px;
+      box-shadow: 0 18px 40px rgba(4, 14, 29, 0.2);
+      color: var(--ink);
+    }
+
+    .notebook-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 26px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(26,120,232,0.08);
+      color: var(--primary-dark);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .book-title {
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
+    }
+
+    .question-lines {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .question-lines span {
+      display: block;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(18,49,75,0.12);
+    }
+    .question-lines span:nth-child(2) { width: 82%; }
+    .question-lines span:nth-child(3) { width: 66%; }
+    .question-lines span:nth-child(4) { width: 90%; }
+
+    .answer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .answer-option {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 0.86rem;
+    }
+
+    .answer-option i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(18,49,75,0.32);
+    }
+
+    .hero-sample-link {
+      margin: -6px 0 22px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-sample-link a {
+      color: var(--yellow);
+      font-weight: 800;
+      text-underline-offset: 3px;
+    }
+
+    .sample-band {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 30px 28px;
+      text-align: center;
+    }
+    .sample-band h2 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 12px;
+    }
+    .sample-band p {
+      margin: 0 auto 20px;
+      color: var(--muted);
+      max-width: 680px;
+    }
+    .sample-band .button {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 12px 22px rgba(26,120,232,0.28);
+    }
+    .sample-band small {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .section-sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 620px;
+    }
+
+    .feature-grid, .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-card, .faq-item, .value-card, .info-card, .order-card {
+      background: rgba(255,255,255,0.76);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .feature-card {
+      padding: 22px 20px;
+    }
+
+    .count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary-soft), rgba(26,120,232,0.08));
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+    }
+
+    .feature-card h3, .faq-item h3, .value-card h3, .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.14rem;
+      color: var(--ink);
+    }
+
+    .feature-card p, .faq-item p, .value-card p, .info-card p, .order-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .value-card {
+      padding: 24px 22px;
+    }
+
+    .value-list {
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .value-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .value-list li::before {
+      content: "✓";
+      display: inline-grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 0.8rem;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .portal-band {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f2850 0%, #0d4d8d 42%, #0a65bb 100%);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 30px 28px;
+      color: white;
+    }
+
+    .portal-band::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -90px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
+    }
+
+    .portal-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .portal-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
+    }
+
+    .portal-card h3 {
+      margin: 0 0 10px;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .portal-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .faq-item {
+      padding: 22px 20px;
+    }
+
+    .order-wrap {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .info-card, .order-card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .info-card {
+      padding: 24px;
+    }
+
+    .qr-box {
+      background: #fff;
+      border: 1px solid rgba(9,38,73,0.08);
+      border-radius: 20px;
+      padding: 18px;
+      margin: 18px 0 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+      text-align: center;
+    }
+
+    .qr-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .qr-caption {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .amount {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .amount small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .amount strong {
+      display: block;
+      margin-top: 8px;
+      letter-spacing: -0.05em;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+    }
+
+    .mobile-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+    }
+
+    .mobile-box strong {
+      display: block;
+      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+    }
+
+    .mini-copy {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 700;
+      min-height: 42px;
+    }
+
+    .order-card {
+      padding: 28px 24px;
+    }
+
+    .step-label {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(26,120,232,0.09);
+      color: var(--primary-dark);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .order-card h3 {
+      margin: 12px 0 10px;
+      font-size: clamp(1.85rem, 3vw, 2.3rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .field { margin-bottom: 18px; }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    input {
+      width: 100%;
+      min-height: 52px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(245,248,255,0.9);
+      color: var(--ink);
+      padding: 0 14px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(26,120,232,0.12);
+    }
+
+    .helper {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: #775b00;
+      background: rgba(255,216,93,0.12);
+      border: 1px solid rgba(238,175,29,0.2);
+      border-radius: 10px;
+      padding: 9px 10px;
+    }
+
+    .error {
+      display: none;
+      margin-top: 8px;
+      color: var(--danger);
+      background: var(--danger-soft);
+      border: 1px solid rgba(216,75,96,0.18);
+      border-radius: 10px;
+      padding: 9px 10px;
+      font-size: 0.82rem;
+    }
+    .error.visible { display: block; }
+
+    .generate-btn {
+      width: 100%;
+      min-height: 54px;
+      border: 0;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ff9d59 0%, #e56d3d 100%);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 12px 24px rgba(229,109,61,0.22);
+      margin-top: 8px;
+    }
+
+    .summary-box {
+      display: none;
+      margin-top: 22px;
+      padding: 16px 18px;
+      border: 1px solid rgba(26,120,232,0.12);
+      border-radius: var(--radius-md);
+      background: rgba(26,120,232,0.04);
+    }
+    .summary-box.visible { display: block; }
+
+    .order-ref {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .order-ref strong { color: var(--ink); }
+
+    .summary-box pre {
+      margin: 0 0 16px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: inherit;
+      font-size: 0.93rem;
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(18,49,75,0.08);
+      border-radius: 10px;
+      padding: 14px;
+      color: var(--ink);
+    }
+
+    .copy-summary {
+      width: 100%;
+      min-height: 48px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .send-note {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      transform: translate(-50%, 20px);
+      opacity: 0;
+      pointer-events: none;
+      background: var(--ink);
+      color: white;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .value-grid,
+      .order-wrap {
+        grid-template-columns: 1fr;
+      }
+      .feature-grid,
+      .portal-grid,
+      .faq-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav { gap: 10px; }
+      .nav a:not(.nav-cta):not(.nav-portal) { display: none; }
+    }
+
+    @media (max-width: 620px) {
+      .hero-grid { padding: 32px 22px; }
+      .feature-grid,
+      .portal-grid,
+      .faq-grid,
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      .section-head { display: block; }
+      .section-head .section-sub { margin-top: 10px; }
+      .portal-band { padding: 24px 18px; }
+      .order-card { padding: 22px 18px; }
+      .info-card { padding: 18px; }
+      .mobile-box { flex-direction: column; align-items: stretch; }
+      .mini-copy { width: 100%; }
+    }
+
+    /* ---------- polish pass (Oct 25, 2026) ---------- */
+    body { font-family: Inter, "Segoe UI", system-ui, sans-serif; }
+    .nav-portal { font-weight: 700; color: #fff; }
+    h1, .section-title { letter-spacing: -0.02em; }
+    .button, .nav-cta, .generate-btn, .copy-summary, .mini-copy { min-height: 48px; }
+    .feature-card, .value-card, .faq-item, .portal-card {
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .feature-card:hover, .value-card:hover, .faq-item:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .faq-item a { color: var(--primary-dark); font-weight: 700; }
+    .fb-link {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 48px; margin-top: 10px; border-radius: 12px;
+      background: #1877f2; color: #fff; font-weight: 800; text-decoration: none;
+    }
+    .fb-link:hover { background: #0f63d1; }
+    :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+    @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .feature-card, .value-card, .faq-item, .portal-card, .toast { transition: none; }
+      .feature-card:hover, .value-card:hover, .faq-item:hover { transform: none; }
+    }
+
+    /* ---------- graphics pass ---------- */
+    .scene { padding: 0; background: none; border: 0; backdrop-filter: none; min-height: 440px; }
+    .scene-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .exam-sheet {
+      position: relative; z-index: 1; margin: 34px 14px 0 8px; padding: 18px;
+      background: #fff; border-radius: 22px; color: var(--ink);
+      box-shadow: 0 30px 50px rgba(4,18,40,.35); transform: rotate(-2deg);
+    }
+    .sheet-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; font-size: .72rem; font-weight: 800; border-radius: 999px; padding: 5px 11px; }
+    .chip-subject { background: var(--primary-soft); color: var(--primary-dark); text-transform: uppercase; letter-spacing: .06em; }
+    .chip-timer { background: var(--danger-soft); color: var(--danger); font-variant-numeric: tabular-nums; }
+    .sheet-progress { height: 7px; border-radius: 99px; background: #e6eefb; overflow: hidden; margin-bottom: 14px; }
+    .sheet-progress span { display: block; height: 100%; width: 38%; border-radius: 99px; background: linear-gradient(90deg, var(--primary), #57a8ff); }
+    .sheet-q { margin: 0 0 12px; font-weight: 800; font-size: 1.02rem; line-height: 1.35; }
+    .sheet-opts { display: grid; gap: 8px; }
+    .opt {
+      display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 12px;
+      border: 2px solid #e1e9f5; background: #f7faff; font-weight: 700; font-size: .92rem;
+    }
+    .opt b { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #fff; border: 2px solid #d3deef; color: var(--primary-dark); font-size: .8rem; }
+    .opt svg { margin-left: auto; background: var(--green); border-radius: 50%; padding: 3px; width: 22px; height: 22px; }
+    .opt.on { border-color: var(--primary); background: #eaf3ff; }
+    .opt.on b { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .float-card {
+      position: absolute; z-index: 2; background: #fff; color: var(--ink);
+      border-radius: 18px; padding: 10px 14px; box-shadow: 0 18px 34px rgba(4,18,40,.3);
+      animation: floaty 6s ease-in-out infinite;
+    }
+    .score-float { left: -6px; bottom: 26px; display: flex; align-items: center; gap: 10px; }
+    .score-float strong { display: block; font-size: .95rem; line-height: 1.2; }
+    .score-float span { font-size: .75rem; color: var(--muted); }
+    .weak-float { right: -4px; bottom: 96px; width: 156px; animation-delay: -3s; }
+    .weak-float small { display: block; font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--danger); }
+    .weak-float span { font-size: .74rem; color: var(--muted); font-weight: 600; }
+    .mini-bar { height: 8px; border-radius: 99px; background: #fde3e8; margin: 6px 0; overflow: hidden; }
+    .mini-bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #ff8bb2, var(--danger)); }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+    .count { position: relative; width: 60px; height: 60px; border-radius: 18px; background: linear-gradient(135deg, #dcecff, #eef6ff); }
+    .count small { position: absolute; top: -8px; right: -8px; min-width: 24px; height: 24px; border-radius: 99px; background: var(--yellow); color: var(--ink); font-size: .68rem; font-weight: 900; display: grid; place-items: center; box-shadow: 0 6px 12px rgba(238,175,29,.4); }
+    .feature-card { position: relative; overflow: hidden; }
+    .feature-card::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, var(--primary-soft), transparent 70%); pointer-events: none; }
+    .p-ico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; margin-bottom: 12px; background: rgba(255,216,93,.18); color: var(--yellow); }
+    .hero-shell { background-image: radial-gradient(rgba(255,255,255,.07) 1.2px, transparent 1.4px), linear-gradient(135deg, #081a30 0%, #133d6a 30%, #0d5ab0 62%, #0e78e0 100%); background-size: 22px 22px, auto; }
+    @media (max-width: 900px) { .scene { max-width: 420px; margin: 0 auto; width: 100%; } }
+    @media (max-width: 420px) { .weak-float { display: none; } .score-float { left: 0; } }
+    @media (prefers-reduced-motion: reduce) { .float-card { animation: none; } }
+
+    /* ---------- Batch 1 fixes (Nov 1, 2026) ---------- */
+    .nav-wrap { position: relative; display: flex; align-items: center; gap: 12px; }
+    .nav-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.08); color: #fff; font-size: 22px; line-height: 1; }
+    .mobile-menu { display: none; position: absolute; top: calc(100% + 10px); right: 0; min-width: 200px; background: #0d2440; border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 10px; box-shadow: 0 18px 40px rgba(0,0,0,0.35); z-index: 60; }
+    .mobile-menu a { display: block; padding: 11px 12px; border-radius: 9px; color: rgba(255,255,255,0.92); text-decoration: none; font-weight: 700; }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .mobile-menu.open { display: block; }
+    @media (max-width: 900px) { .nav-toggle { display: inline-flex; } }
+    @media (min-width: 901px) { .mobile-menu { display: none !important; } }
+    /* Small phones: keep the header on one clean row. Brand and CTA never
+       wrap; the Portal text link yields (it stays in the hamburger menu). */
+    @media (max-width: 480px) {
+      .topbar-inner { gap: 6px; }
+      .brand { font-size: 0.8rem; white-space: nowrap; gap: 7px; letter-spacing: 0; }
+      .brand-mark { width: 30px; height: 30px; font-size: 15px; }
+      .nav { gap: 10px; }
+      .nav a.nav-portal { display: none; }
+      .nav-cta { white-space: nowrap; padding: 0 10px; font-size: 0.84rem; }
+      .nav-wrap { gap: 8px; }
+    }
+    .hero-visual-caption { margin: 10px 4px 0; font-size: 0.78rem; color: rgba(255,255,255,0.72); text-align: center; }
+    .faq-item summary { font-size: 1.14rem; font-weight: 800; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 1.3rem; line-height: 1; color: var(--primary-dark); font-weight: 900; flex-shrink: 0; }
+    .faq-item[open ] summary::after { content: "-"; }
+    .faq-item summary + p, .faq-item > p { margin-top: 10px; }
+    details.faq-item { padding: 22px 20px; }
+    .next-steps { margin: 18px 0 0; padding: 18px 18px 18px 22px; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .next-steps h4 { margin: 0 0 10px; font-size: 1rem; color: var(--ink); }
+    .next-steps ol { margin: 0; padding-left: 20px; color: var(--muted); display: grid; gap: 6px; }
+    .next-steps li { padding-left: 2px; }
+    .bank-note { margin-top: 14px; color: var(--muted); font-size: 0.96rem; line-height: 1.6; }
+    .portal-band .bank-note { color: rgba(255,255,255,0.88); }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="SASE Practice Hub PH home">
+        <span class="brand-mark">📘</span>
+        <span>SASE Practice Hub PH</span>
+      </div>
+      <div class="nav-wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/exam" class="nav-portal">Portal</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#order" class="nav-cta">Order now</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">&#9776;</button>
+      <div id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/exam">Portal</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#order">Order now</a>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-shell">
+          <div class="cse-hero-inner">
+            <span class="eyebrow">Civil Service Exam · March 14, 2027</span>
+            <h1>Review for the CSE like it is the real thing.</h1>
+            <p class="lead">A complete Civil Service reviewer with lessons before the questions: 560 explained practice items in PDF, 8 online mock exams in the real CSE format and time limit, and video lessons inside the portal, all for one payment.</p>
+            <div class="hero-actions">
+              <a href="#order" class="button primary">Order for ₱369</a>
+              <a href="/exam" class="button secondary">Already ordered? Open portal</a>
+            </div>
+            <p class="hero-sample-link">Filing for the March 14, 2027 CSE-PPT is already open. Slots are first come, first served, so start your review early.</p>
+            <div class="hero-stats" aria-label="Key product metrics">
+              <div class="stat">
+                <strong>560</strong>
+                <span>explained items</span>
+              </div>
+              <div class="stat">
+                <strong>8</strong>
+                <span>online mock exams</span>
+              </div>
+              <div class="stat">
+                <strong>₱369</strong>
+                <span>one-time payment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="facts">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">The exam, in short.</h2>
+          <p class="section-sub">Everything below follows the official CSE-PPT format, so your practice matches the day itself.</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>Exam date: March 14, 2027</h3>
+            <p>The next Civil Service Exam, Pen and Paper Test (Professional level). Filing opened on November 2, 2026 and runs while slots last.</p>
+          </article>
+          <article class="value-card">
+            <h3>150 items, 3 hours 10 minutes</h3>
+            <p>Verbal 52, Numerical 38, Analytical 30, General Information 30. Our portal mocks use the exact same counts and the exact same clock.</p>
+          </article>
+          <article class="value-card">
+            <h3>Passing: general rating of 80.00</h3>
+            <p>Every portal result shows your practice percent against that 80.00 benchmark, per section, so you always know where you stand.</p>
+          </article>
+          <article class="value-card">
+            <h3>One attempt per mock, like the real day</h3>
+            <p>Each of the 8 portal exams can be taken once, with a server-enforced timer. Finishing one unlocks a full answer review with explanations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coverage">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">What it covers.</h2>
+          <p class="section-sub">The four official CSE sections, with the topics the exam actually draws from.</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>Verbal · 52 items</h3>
+            <p>English and Filipino grammar and correct usage, vocabulary, paragraph organization, and reading comprehension.</p>
+          </article>
+          <article class="value-card">
+            <h3>Numerical · 38 items</h3>
+            <p>Number series, basic operations, percentages, ratio and proportion, and word problems on age, work, motion, and money.</p>
+          </article>
+          <article class="value-card">
+            <h3>Analytical · 30 items</h3>
+            <p>Logic and reasoning, identifying assumptions and conclusions, and interpreting data and word problems.</p>
+          </article>
+          <article class="value-card">
+            <h3>General Information · 30 items</h3>
+            <p>The Philippine Constitution, RA 6713 (Code of Conduct and Ethical Standards), peace and human rights issues, and environment management and protection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inside">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">What is inside.</h2>
+          <p class="section-sub">Two parts that work together: the PDF teaches, the portal tests.</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>The PDF reviewer (560 items)</h3>
+            <p>A study guide with lessons and study plans, 160 practice-bank items, two full 150-item mock exams in study format with the answers right after each item, and a 100-item last-mile drill for your final week. Every explanation teaches the rule, the steps, or why the other choices fail.</p>
+          </article>
+          <article class="value-card">
+            <h3>The online portal (8 mock exams)</h3>
+            <p>Eight separate 150-item exams in real CSE format, all open right away, under the real 3 hours 10 minutes timer. Results show your score, your percent per section, your weak area, and a full answer review.</p>
+          </article>
+          <article class="value-card">
+            <h3>Video lessons, paid buyers only</h3>
+            <p>Inside the portal, a Video Lessons section streams curated lessons grouped by the four CSE sections as a study path. When a mock result flags a weak section, it links straight to that section's lessons.</p>
+          </article>
+          <article class="value-card">
+            <h3>Your own CSE7 access code</h3>
+            <p>The portal uses a separate CSE7 access code, different from your PDF password, so the two never get mixed up. One code works on up to 3 devices. A free sample of the reviewer is coming soon.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">How to order.</h2>
+          <p class="section-sub">Four steps, and you are reviewing within minutes.</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>1. Pay ₱369 via GCash</h3>
+            <p>Send ₱369 to GCash <strong>0991 277 4308</strong>. MariBank, GoTyme, and Maya are also accepted, just ask us on Messenger first.</p>
+          </article>
+          <article class="value-card">
+            <h3>2. Send the reference</h3>
+            <p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message our Facebook Page</a> with your GCash reference number and tell us it is for the Civil Service reviewer.</p>
+          </article>
+          <article class="value-card">
+            <h3>3. We verify your payment</h3>
+            <p>We match your reference against the payment. This is a quick manual check by our team.</p>
+          </article>
+          <article class="value-card">
+            <h3>4. Get everything on Messenger</h3>
+            <p>Within 5 minutes after verification, we send your PDF, its own password, and your separate CSE7 portal access code. Then log in at the <a href="/exam">exam portal</a> and start.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="honesty">
+      <div class="wrap">
+        <div class="info-card">
+          <h3>Honest notes before you buy</h3>
+          <p>Every item in this reviewer is an original practice item written for this product and modeled on the official CSC coverage. No item is a real, leaked, or recalled exam question. This product is not affiliated with the Civil Service Commission, and the CSC does not produce or accredit any review material, including this one. Your practice percent is a study benchmark against the 80.00 passing rating; it is not your official rating, and no reviewer can guarantee a pass. What we can promise is honest, carefully checked material that teaches as it tests.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Unofficial practice material. Not affiliated with or endorsed by the Civil Service Commission.</span>
+      <span>Digital PDF • ₱369 • <a href="/privacy.html">Privacy Policy</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('mobile-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          var open = menu.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        menu.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

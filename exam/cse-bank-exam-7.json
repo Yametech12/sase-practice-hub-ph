@@ -1,0 +1,1963 @@
+{
+ "exam": 7,
+ "questions": [
+  {
+   "id": "C7-V001",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to STURDY.",
+   "options": {
+    "A": "soft and light",
+    "B": "strong and solid",
+    "C": "weak and shaky",
+    "D": "tall and thin"
+   },
+   "answer": "B",
+   "explanation": "Sturdy means strongly and solidly built, so 'strong and solid' is closest. 'Weak and shaky' is the opposite; 'soft and light' describes texture and weight; 'tall and thin' describes shape, not strength."
+  },
+  {
+   "id": "C7-V002",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to DEFER.",
+   "options": {
+    "A": "shorten",
+    "B": "announce",
+    "C": "cancel",
+    "D": "postpone"
+   },
+   "answer": "D",
+   "explanation": "To defer is to put something off to a later time, which is to postpone it. Cancel means to call off entirely; announce is to make public; shorten is to make briefer."
+  },
+  {
+   "id": "C7-V003",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to VERIFY.",
+   "options": {
+    "A": "record",
+    "B": "guess",
+    "C": "deny",
+    "D": "confirm"
+   },
+   "answer": "D",
+   "explanation": "To verify is to check that something is true, which is to confirm it. Deny is the opposite; guess means to answer without proof; record only writes information down without checking it."
+  },
+  {
+   "id": "C7-V004",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to DREAD.",
+   "options": {
+    "A": "ignore",
+    "B": "welcome",
+    "C": "fear",
+    "D": "cause"
+   },
+   "answer": "C",
+   "explanation": "Dread is a strong fear of something that will or might happen. Welcome is the opposite reaction; ignore means to pay no attention; cause means to bring about."
+  },
+  {
+   "id": "C7-V005",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to TIMID.",
+   "options": {
+    "A": "noisy",
+    "B": "rude",
+    "C": "shy",
+    "D": "brave"
+   },
+   "answer": "C",
+   "explanation": "A timid person is lacking in courage and confidence, which is shy. Brave is the opposite; noisy describes sound, not confidence; rude describes manners."
+  },
+  {
+   "id": "C7-V006",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to SWIFT.",
+   "options": {
+    "A": "fast",
+    "B": "late",
+    "C": "heavy",
+    "D": "steady"
+   },
+   "answer": "A",
+   "explanation": "Swift means happening quickly, so fast is closest. Heavy describes weight; steady describes regularity; late is the opposite of prompt arrival."
+  },
+  {
+   "id": "C7-V007",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to VACANT.",
+   "options": {
+    "A": "clean",
+    "B": "narrow",
+    "C": "empty",
+    "D": "rented"
+   },
+   "answer": "C",
+   "explanation": "Vacant means not occupied or in use, which is empty. Clean describes tidiness; narrow describes width; rented means occupied under a lease, the opposite state."
+  },
+  {
+   "id": "C7-V008",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to LOYAL.",
+   "options": {
+    "A": "temporary",
+    "B": "faithful",
+    "C": "careless",
+    "D": "clever"
+   },
+   "answer": "B",
+   "explanation": "Loyal means remaining true and supportive, which is faithful. Clever describes intelligence; careless describes inattention; temporary describes duration."
+  },
+  {
+   "id": "C7-V009",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to ENORMOUS.",
+   "options": {
+    "A": "huge",
+    "B": "distant",
+    "C": "ordinary",
+    "D": "fragile"
+   },
+   "answer": "A",
+   "explanation": "Enormous means very large in size, so huge is closest. Ordinary means usual; distant describes far position; fragile means easily broken."
+  },
+  {
+   "id": "C7-V010",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to RELIEVE.",
+   "options": {
+    "A": "worsen",
+    "B": "ease",
+    "C": "measure",
+    "D": "hide"
+   },
+   "answer": "B",
+   "explanation": "To relieve pain or pressure is to ease it, making it less severe. Worsen is the opposite; hide means to conceal; measure means to determine an amount."
+  },
+  {
+   "id": "C7-V011",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to SHALLOW.",
+   "options": {
+    "A": "wide",
+    "B": "deep",
+    "C": "calm",
+    "D": "clear"
+   },
+   "answer": "B",
+   "explanation": "Shallow (not deep from top to bottom) has the opposite meaning deep. Wide describes breadth; calm and clear describe conditions, not depth."
+  },
+  {
+   "id": "C7-V012",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to ACCEPT.",
+   "options": {
+    "A": "consider",
+    "B": "permit",
+    "C": "refuse",
+    "D": "receive"
+   },
+   "answer": "C",
+   "explanation": "To accept is to take what is offered; its opposite is to refuse it. Receive is a near synonym; consider means to think about; permit means to allow."
+  },
+  {
+   "id": "C7-V013",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to CREATE.",
+   "options": {
+    "A": "build",
+    "B": "destroy",
+    "C": "invent",
+    "D": "design"
+   },
+   "answer": "B",
+   "explanation": "Create means to bring something into existence; destroy means to end its existence, the exact opposite. Invent, build, and design are all related to creating."
+  },
+  {
+   "id": "C7-V014",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to POLITE.",
+   "options": {
+    "A": "formal",
+    "B": "rude",
+    "C": "gentle",
+    "D": "kind"
+   },
+   "answer": "B",
+   "explanation": "Polite means showing good manners; rude means showing bad manners, its opposite. Gentle, formal, and kind are all compatible with being polite."
+  },
+  {
+   "id": "C7-V015",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to RARE.",
+   "options": {
+    "A": "ancient",
+    "B": "common",
+    "C": "precious",
+    "D": "costly"
+   },
+   "answer": "B",
+   "explanation": "Rare means seldom found or occurring; common means frequently found, its opposite. Precious and costly describe value, which rare items often have; ancient describes age."
+  },
+  {
+   "id": "C7-V016",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to SIMPLE.",
+   "options": {
+    "A": "complex",
+    "B": "pure",
+    "C": "easy",
+    "D": "plain"
+   },
+   "answer": "A",
+   "explanation": "Simple here means easy to understand or not complicated; complex is its opposite. Plain and easy are near synonyms of simple in this sense; pure means unmixed."
+  },
+  {
+   "id": "C7-V017",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to NARROW.",
+   "options": {
+    "A": "thin",
+    "B": "long",
+    "C": "wide",
+    "D": "straight"
+   },
+   "answer": "C",
+   "explanation": "Narrow means small in width; wide is its direct opposite. Thin is close in meaning to narrow; long describes length; straight describes shape."
+  },
+  {
+   "id": "C7-V018",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to DEPART.",
+   "options": {
+    "A": "escape",
+    "B": "return late",
+    "C": "travel",
+    "D": "arrive"
+   },
+   "answer": "D",
+   "explanation": "To depart is to leave a place; to arrive is to reach it, the opposite action. Travel is the general activity; escape is to leave secretly; 'return late' describes timing, not the opposite act."
+  },
+  {
+   "id": "C7-V019",
+   "section": "Verbal",
+   "question": "Which verb correctly completes the sentence: 'The boxes on the top shelf ___ too heavy to carry alone.'?",
+   "options": {
+    "A": "was being",
+    "B": "are",
+    "C": "is",
+    "D": "has"
+   },
+   "answer": "B",
+   "explanation": "The subject 'boxes' is plural, so the present-tense verb must be plural: are. 'Is' and 'has' are singular forms; 'was being' is also singular and changes the tense."
+  },
+  {
+   "id": "C7-V020",
+   "section": "Verbal",
+   "question": "Which word correctly completes the sentence: 'Neither the guard nor the clerks ___ the lost keys.'?",
+   "options": {
+    "A": "has finds",
+    "B": "finds",
+    "C": "found",
+    "D": "finding"
+   },
+   "answer": "C",
+   "explanation": "In a neither/nor construction the verb agrees with the nearer subject, 'clerks' (plural), and the past-tense plural form here is 'found'. 'Finds' and 'has finds' are singular or malformed; 'finding' cannot stand alone as the main verb."
+  },
+  {
+   "id": "C7-V021",
+   "section": "Verbal",
+   "question": "Which sentence about the survey results is grammatically correct?",
+   "options": {
+    "A": "The data from the three surveys was analyzed carefully yesterday by she.",
+    "B": "The data from the three surveys were analyzed carefully.",
+    "C": "The team have decided to cancels the meeting.",
+    "D": "Me and Ana submits the report every Friday."
+   },
+   "answer": "B",
+   "explanation": "Option A treats 'data' as plural (the survey results) with the plural verb 'were'. B misuses 'by she' (should be 'by her') and doubles the passive; C has a wrong subject order and verb form ('submits' with a compound subject); D mixes 'have decided' with the incorrect 'to cancels'."
+  },
+  {
+   "id": "C7-V022",
+   "section": "Verbal",
+   "question": "Which pronoun correctly completes the sentence: 'The award was given to Mr. Santos and ___.'",
+   "options": {
+    "A": "I",
+    "B": "mine",
+    "C": "me",
+    "D": "myself"
+   },
+   "answer": "C",
+   "explanation": "After the preposition 'to', an object pronoun is required: me. 'I' is a subject pronoun; 'myself' is reflexive and needs a matching subject; 'mine' is possessive."
+  },
+  {
+   "id": "C7-V023",
+   "section": "Verbal",
+   "question": "Which word correctly completes the sentence: 'She tiptoed quietly ___ she would not wake the baby.'?",
+   "options": {
+    "A": "because of",
+    "B": "despite",
+    "C": "unless of",
+    "D": "so that"
+   },
+   "answer": "D",
+   "explanation": "The clause states a purpose, so 'so that' is correct. 'Because of' must be followed by a noun phrase, not a clause; 'despite' reverses the meaning; 'unless of' is not a valid phrase."
+  },
+  {
+   "id": "C7-V024",
+   "section": "Verbal",
+   "question": "Which sentence about the clerk's duties uses parallel structure correctly?",
+   "options": {
+    "A": "The job requires encoding data, filing records, and answering phone calls.",
+    "B": "The job requires to encode data, filing records, and answer phone calls.",
+    "C": "The job requires encoding data, to file records, and answered phone calls.",
+    "D": "The job requires encoding data, filing records, and to answer phone calls."
+   },
+   "answer": "A",
+   "explanation": "Parallel structure keeps the same form for all items in a series: encoding, filing, answering (all -ing forms). The other options mix infinitives and past forms into the series."
+  },
+  {
+   "id": "C7-V025",
+   "section": "Verbal",
+   "question": "Which word correctly completes the sentence: 'The medicine should be taken ___ meals.'?",
+   "options": {
+    "A": "onto the",
+    "B": "among of",
+    "C": "behind of",
+    "D": "between"
+   },
+   "answer": "D",
+   "explanation": "'Between meals' is the correct expression for the intervals separating meals. 'Among' is for groups of three or more and takes no 'of' here; 'behind of' and 'onto the' do not fit the meaning."
+  },
+  {
+   "id": "C7-V026",
+   "section": "Verbal",
+   "question": "Which sentence is punctuated correctly?",
+   "options": {
+    "A": "The seminar which lasted three hours, covered new filing rules.",
+    "B": "The seminar, which lasted three hours, covered new filing rules.",
+    "C": "The seminar which, lasted three hours covered, new filing rules.",
+    "D": "The seminar, which lasted three hours covered new filing rules."
+   },
+   "answer": "B",
+   "explanation": "A non-restrictive clause ('which lasted three hours') must be set off by a pair of commas, as in option A. The others omit one comma of the pair or place commas where no pause belongs."
+  },
+  {
+   "id": "C7-V027",
+   "section": "Verbal",
+   "question": "Alin ang kasingkahulugan ng salitang MAHINAHON?",
+   "options": {
+    "A": "palaban at matapang",
+    "B": "padalos-dalos",
+    "C": "maingay at magulo",
+    "D": "kalmado at mahinay"
+   },
+   "answer": "D",
+   "explanation": "Ang mahinahon ay taong hindi madaling magalit at kontrolado ang kilos, kaya kalmado at mahinay ang kasingkahulugan nito. Ang palaban, padalos-dalos, at magulo ay kabaligtaran ng katangiang ito."
+  },
+  {
+   "id": "C7-V028",
+   "section": "Verbal",
+   "question": "Alin ang kasalungat ng salitang MADALAS?",
+   "options": {
+    "A": "parati",
+    "B": "palagi",
+    "C": "araw-araw",
+    "D": "bihira"
+   },
+   "answer": "D",
+   "explanation": "Ang madalas ay nangyayari nang paulit-ulit o maraming beses, kaya bihira (mangilan-ngilan lamang mangyari) ang kasalungat nito. Ang palagi, parati, at araw-araw ay pawang kasingkahulugan ng madalas, hindi kasalungat."
+  },
+  {
+   "id": "C7-V029",
+   "section": "Verbal",
+   "question": "Ano ang ibig sabihin ng sawikaing 'ilaw ng tahanan'?",
+   "options": {
+    "A": "ang ina",
+    "B": "ang guro ng pamilya",
+    "C": "ang ama",
+    "D": "ang panganay na anak"
+   },
+   "answer": "A",
+   "explanation": "Sa kulturang Pilipino, ang 'ilaw ng tahanan' ay tumutukoy sa ina, na nagbibigay ng liwanag at gabay sa pamilya. Ang ama naman ang tinatawag na 'haligi ng tahanan'."
+  },
+  {
+   "id": "C7-V030",
+   "section": "Verbal",
+   "question": "Alin sa mga sumusunod ang pang-abay na panlunan?",
+   "options": {
+    "A": "kahapon sa 'Dumating siya kahapon'",
+    "B": "sa paaralan sa pangungusap na 'Nag-aral siya sa paaralan'",
+    "C": "tunay sa 'Tunay na mabait siya'",
+    "D": "mabilis sa 'Tumakbo siya nang mabilis'"
+   },
+   "answer": "B",
+   "explanation": "Ang pang-abay na panlunan ay sumasagot sa tanong na 'saan', kaya 'sa paaralan' ang sagot. Ang 'mabilis' ay pamaraan (paano), ang 'kahapon' ay pamanahon (kailan), at ang 'tunay' ay pang-abay na panunumpa o pagtitiyak."
+  },
+  {
+   "id": "C7-V031",
+   "section": "Verbal",
+   "question": "Ano ang aspeto ng pandiwang 'sumusulat' sa pangungusap na 'Sumusulat si Ben ng liham ngayon'?",
+   "options": {
+    "A": "pawatas",
+    "B": "panghinaharap",
+    "C": "pangnagdaan",
+    "D": "pangkasalukuyan"
+   },
+   "answer": "D",
+   "explanation": "Ang 'sumusulat' ay inuulit ang unang pantig ng salitang-ugat (su-), tanda ng kilos na nagaganap ngayon, kaya pangkasalukuyan. Ang pangnagdaan ay 'sumulat', ang panghinaharap ay 'susulat', at ang pawatas ay 'sumulat' bilang anyong walang aspeto."
+  },
+  {
+   "id": "C7-V032",
+   "section": "Verbal",
+   "question": "Ano ang salitang-ugat ng 'pagkakaisa'?",
+   "options": {
+    "A": "isa",
+    "B": "kaisa",
+    "C": "pagka",
+    "D": "pagkakaisahan"
+   },
+   "answer": "A",
+   "explanation": "Ang 'pagkakaisa' ay binubuo ng unlaping pagka- at inuulit na anyo ng ugat na 'isa' (ka-isa), kaya 'isa' ang salitang-ugat. Ang 'kaisa' ay anyo na may panlapi na; ang 'pagka' ay panlapi lamang."
+  },
+  {
+   "id": "C7-V033",
+   "section": "Verbal",
+   "question": "Arrange the steps for mailing a parcel in the most logical order: (1) Pay the shipping fee and get the tracking receipt. (2) Wrap the item securely and write the receiver's address. (3) Hand the parcel to the counter staff for weighing. (4) Keep the receipt so the parcel can be tracked.",
+   "options": {
+    "A": "2, 1, 3, 4",
+    "B": "3, 2, 1, 4",
+    "C": "1, 2, 3, 4",
+    "D": "2, 3, 1, 4"
+   },
+   "answer": "D",
+   "explanation": "A parcel must first be wrapped and addressed (2), then handed over for weighing (3), then paid for with a receipt issued (1), and finally the sender keeps the receipt for tracking (4)."
+  },
+  {
+   "id": "C7-V034",
+   "section": "Verbal",
+   "question": "Which is the best topic sentence for a paragraph about road safety for children?",
+   "options": {
+    "A": "Children can stay safe on the road by following a few simple habits every day.",
+    "B": "The city repainted the pedestrian lane last month.",
+    "C": "Many vehicles pass through our street each morning.",
+    "D": "My younger brother owns a red bicycle."
+   },
+   "answer": "A",
+   "explanation": "A topic sentence states what the whole paragraph will discuss: habits that keep children safe on the road. The other sentences are single details or personal facts that cannot cover a full paragraph."
+  },
+  {
+   "id": "C7-V035",
+   "section": "Verbal",
+   "question": "Which sentence does NOT belong in a paragraph about eating a balanced diet? (1) A balanced meal includes rice, vegetables, fish, and fruit. (2) Vegetables give the body vitamins and fiber. (3) The new canteen building was painted green last summer. (4) Drinking water instead of soda helps the body stay healthy.",
+   "options": {
+    "A": "Sentence 1",
+    "B": "Sentence 2",
+    "C": "Sentence 3",
+    "D": "Sentence 4"
+   },
+   "answer": "C",
+   "explanation": "Sentences 1, 2, and 4 all discuss food and health. Sentence 3 talks about the paint color of a building, which has nothing to do with a balanced diet."
+  },
+  {
+   "id": "C7-V036",
+   "section": "Verbal",
+   "question": "Arrange the sentences into a logical paragraph: (1) In the end, the barangay hall displayed the finished map for everyone to use. (2) Volunteers first listed all the streets and landmarks in the area. (3) They then drew the streets on a large board, checking each one on foot. (4) This map now guides visitors and delivery riders.",
+   "options": {
+    "A": "2, 1, 3, 4",
+    "B": "4, 2, 3, 1",
+    "C": "2, 3, 1, 4",
+    "D": "3, 2, 1, 4"
+   },
+   "answer": "C",
+   "explanation": "The work begins with listing streets (2), continues with drawing and verifying them (3), ends with displaying the map (1), and the closing sentence states its present use (4)."
+  },
+  {
+   "id": "C7-V037",
+   "section": "Verbal",
+   "question": "Which sentence is the best conclusion for a paragraph describing how classmates cleaned their classroom together?",
+   "options": {
+    "A": "One pupil brought a broom from home.",
+    "B": "Working together, the class finished the cleanup quickly and left the room ready for the next day.",
+    "C": "The classroom has twenty desks and a blackboard.",
+    "D": "Cleaning supplies are sold at the store near the gate."
+   },
+   "answer": "B",
+   "explanation": "A conclusion sums up the paragraph's main point: cooperation made the cleanup fast and successful. The other options are isolated details or unrelated facts, not summaries."
+  },
+  {
+   "id": "C7-V038",
+   "section": "Verbal",
+   "question": "Arrange the sentences into a logical paragraph: (1) After two weeks of practice, the choir sang the piece confidently. (2) The choir members first learned the melody line by line. (3) Next, they practiced blending their voices in small groups. (4) Their teacher then combined all the groups for full rehearsals.",
+   "options": {
+    "A": "2, 3, 4, 1",
+    "B": "2, 4, 3, 1",
+    "C": "1, 2, 3, 4",
+    "D": "3, 2, 4, 1"
+   },
+   "answer": "A",
+   "explanation": "Learning proceeds from the melody (2), to small-group blending (3), to full rehearsals (4), and only after two weeks comes the confident performance (1)."
+  },
+  {
+   "id": "C7-V039",
+   "section": "Verbal",
+   "question": "Choose the word closest in meaning to ASSIST.",
+   "options": {
+    "A": "delay",
+    "B": "watch",
+    "C": "hinder",
+    "D": "help"
+   },
+   "answer": "D",
+   "explanation": "To assist is to help someone do something. Hinder is the opposite; watch means only to observe; delay means to make something late."
+  },
+  {
+   "id": "C7-V040",
+   "section": "Verbal",
+   "question": "Choose the word opposite in meaning to BORROW.",
+   "options": {
+    "A": "return",
+    "B": "keep",
+    "C": "lend",
+    "D": "owe"
+   },
+   "answer": "C",
+   "explanation": "To borrow is to take something for temporary use; to lend is to give something for temporary use, the matching opposite. Keep and return describe later actions; owe describes a debt state."
+  },
+  {
+   "id": "C7-V041",
+   "section": "Verbal",
+   "question": "What does the idiom 'hit the books' mean in the sentence: 'The examination is next week, so Carlo decided to hit the books tonight'?",
+   "options": {
+    "A": "Start studying seriously",
+    "B": "Buy new books",
+    "C": "Arrange the books on a shelf",
+    "D": "Throw the books away"
+   },
+   "answer": "A",
+   "explanation": "In context, 'hit the books' is an idiom meaning to begin studying seriously, which fits the approaching examination. The literal readings about throwing, buying, or arranging books ignore the idiom."
+  },
+  {
+   "id": "C7-V042",
+   "section": "Verbal",
+   "question": "Which word correctly completes the sentence: 'This year's enrollment is higher ___ last year's.'?",
+   "options": {
+    "A": "to",
+    "B": "than",
+    "C": "then",
+    "D": "that"
+   },
+   "answer": "B",
+   "explanation": "Comparisons with 'higher' use 'than'. 'Then' refers to time; 'that' and 'to' cannot complete a comparative structure."
+  },
+  {
+   "id": "C7-V043",
+   "section": "Verbal",
+   "question": "Which sentence uses 'its' and 'it's' correctly?",
+   "options": {
+    "A": "The dog wagged its tail because it's happy.",
+    "B": "The dog wagged it's tail because it's happy.",
+    "C": "The dog wagged it's tail because its happy.",
+    "D": "The dog wagged its tail because its happy."
+   },
+   "answer": "A",
+   "explanation": "'Its' (no apostrophe) is the possessive form, used for the dog's tail; 'it's' is the contraction of 'it is', used before 'happy'. Every other option swaps at least one of the two forms."
+  },
+  {
+   "id": "C7-V044",
+   "section": "Verbal",
+   "question": "Alin ang kasingkahulugan ng salitang MASAYAHIN?",
+   "options": {
+    "A": "malungkutin at tahimik",
+    "B": "palaging seryoso",
+    "C": "madaling magalit",
+    "D": "palangiti at masigla"
+   },
+   "answer": "D",
+   "explanation": "Ang masayahin ay taong palangiti, masigla, at maganda ang disposisyon. Ang malungkutin ay kasalungat nito; ang palaging seryoso at madaling magalit ay ibang mga katangian."
+  },
+  {
+   "id": "C7-V045",
+   "section": "Verbal",
+   "question": "What is the main idea of the passage about the night market cooperative?",
+   "passage": "The vendors of the San Roque night market used to lose part of their earnings whenever unsold cooked food spoiled overnight. In March, twenty-four vendors formed a cooperative and pooled a small weekly contribution to buy one shared chest freezer, which they placed in a rented stall near the market entrance. Each member records borrowed space in a logbook and pays a small fee per box stored. A rotating pair of vendors cleans the freezer every Sunday and reports any repair needs to the group. After three months, the cooperative reported that food waste had fallen sharply, and members agreed to save part of the fees for a second freezer.",
+   "options": {
+    "A": "The San Roque night market moved to a new location in March.",
+    "B": "Night market vendors reduced food waste by sharing one freezer through a cooperative.",
+    "C": "A chest freezer is the most expensive equipment a vendor can buy.",
+    "D": "Night market vendors earn more when they cook larger amounts of food."
+   },
+   "answer": "B",
+   "explanation": "The passage centers on vendors pooling money for a shared freezer and the drop in food waste that followed. Higher earnings from cooking more, freezer prices, and a market move are never stated."
+  },
+  {
+   "id": "C7-V046",
+   "section": "Verbal",
+   "question": "According to the passage, how do members pay for the use of the freezer?",
+   "passage": "The vendors of the San Roque night market used to lose part of their earnings whenever unsold cooked food spoiled overnight. In March, twenty-four vendors formed a cooperative and pooled a small weekly contribution to buy one shared chest freezer, which they placed in a rented stall near the market entrance. Each member records borrowed space in a logbook and pays a small fee per box stored. A rotating pair of vendors cleans the freezer every Sunday and reports any repair needs to the group. After three months, the cooperative reported that food waste had fallen sharply, and members agreed to save part of the fees for a second freezer.",
+   "options": {
+    "A": "They clean the market entrance every night.",
+    "B": "They contribute one box of food every week.",
+    "C": "They pay half of their daily earnings to the cooperative.",
+    "D": "They pay a small fee for each box they store."
+   },
+   "answer": "D",
+   "explanation": "The passage says each member 'pays a small fee per box stored'. Earnings shares and weekly food contributions are not mentioned; cleaning is done by a rotating pair, not as payment by all members."
+  },
+  {
+   "id": "C7-V047",
+   "section": "Verbal",
+   "question": "What can be inferred from the passage about the logbook?",
+   "passage": "The vendors of the San Roque night market used to lose part of their earnings whenever unsold cooked food spoiled overnight. In March, twenty-four vendors formed a cooperative and pooled a small weekly contribution to buy one shared chest freezer, which they placed in a rented stall near the market entrance. Each member records borrowed space in a logbook and pays a small fee per box stored. A rotating pair of vendors cleans the freezer every Sunday and reports any repair needs to the group. After three months, the cooperative reported that food waste had fallen sharply, and members agreed to save part of the fees for a second freezer.",
+   "options": {
+    "A": "It is kept by the owner of the rented stall.",
+    "B": "It records the names of customers who buy cooked food.",
+    "C": "It lists the prices of food sold at the night market.",
+    "D": "It helps the cooperative track who uses the shared freezer space."
+   },
+   "answer": "D",
+   "explanation": "Members 'record borrowed space in a logbook', so the logbook tracks use of the freezer. Prices, customers, and the stall owner are not connected to the logbook in the passage."
+  },
+  {
+   "id": "C7-V048",
+   "section": "Verbal",
+   "question": "As used in the passage, the word 'pooled' most nearly means",
+   "passage": "The vendors of the San Roque night market used to lose part of their earnings whenever unsold cooked food spoiled overnight. In March, twenty-four vendors formed a cooperative and pooled a small weekly contribution to buy one shared chest freezer, which they placed in a rented stall near the market entrance. Each member records borrowed space in a logbook and pays a small fee per box stored. A rotating pair of vendors cleans the freezer every Sunday and reports any repair needs to the group. After three months, the cooperative reported that food waste had fallen sharply, and members agreed to save part of the fees for a second freezer.",
+   "options": {
+    "A": "divided into equal shares",
+    "B": "borrowed from a bank",
+    "C": "hidden from other members",
+    "D": "combined into a common fund"
+   },
+   "answer": "D",
+   "explanation": "The vendors 'pooled a small weekly contribution' to buy the freezer, meaning they combined their money into one fund. Divided is the opposite; nothing was hidden or borrowed from a bank."
+  },
+  {
+   "id": "C7-V049",
+   "section": "Verbal",
+   "question": "What is the main idea of the passage about Sitio Malayo?",
+   "passage": "Sitio Malayo, a farming village far from the town center, has no power lines. In January, the parents' association installed a solar charging station at the barangay hall, with panels on the roof and ten charging slots below. Families pay two pesos to charge a lamp or a phone, and the money goes to a fund for panel repairs. Because children can now use solar lamps at night, teachers noticed that more pupils finish their homework. The association keeps a written schedule so that all families, including those who live farthest from the hall, get fair turns at the station.",
+   "options": {
+    "A": "Families in the village earn money by selling solar lamps.",
+    "B": "Teachers in Sitio Malayo give less homework than before.",
+    "C": "A solar charging station improved study conditions and access to light in an off-grid village.",
+    "D": "Solar panels are cheaper than connecting a village to power lines."
+   },
+   "answer": "C",
+   "explanation": "The passage describes a solar station that lets families charge lamps and phones, leading to more finished homework. Panel cost comparisons, lighter homework, and lamp selling are not stated."
+  },
+  {
+   "id": "C7-V050",
+   "section": "Verbal",
+   "question": "According to the passage, what is the two-peso payment used for?",
+   "passage": "Sitio Malayo, a farming village far from the town center, has no power lines. In January, the parents' association installed a solar charging station at the barangay hall, with panels on the roof and ten charging slots below. Families pay two pesos to charge a lamp or a phone, and the money goes to a fund for panel repairs. Because children can now use solar lamps at night, teachers noticed that more pupils finish their homework. The association keeps a written schedule so that all families, including those who live farthest from the hall, get fair turns at the station.",
+   "options": {
+    "A": "Rent for the barangay hall",
+    "B": "Paying the teachers at the village school",
+    "C": "Buying new lamps for every family",
+    "D": "A fund for repairing the solar panels"
+   },
+   "answer": "D",
+   "explanation": "The passage says the money 'goes to a fund for panel repairs'. Lamps, teacher pay, and hall rent are not mentioned as uses of the fee."
+  },
+  {
+   "id": "C7-V051",
+   "section": "Verbal",
+   "question": "Why does the association keep a written schedule?",
+   "passage": "Sitio Malayo, a farming village far from the town center, has no power lines. In January, the parents' association installed a solar charging station at the barangay hall, with panels on the roof and ten charging slots below. Families pay two pesos to charge a lamp or a phone, and the money goes to a fund for panel repairs. Because children can now use solar lamps at night, teachers noticed that more pupils finish their homework. The association keeps a written schedule so that all families, including those who live farthest from the hall, get fair turns at the station.",
+   "options": {
+    "A": "So that children can finish homework earlier",
+    "B": "So that panels are cleaned every week",
+    "C": "So that the barangay hall opens on time",
+    "D": "So that all families get fair turns at the charging station"
+   },
+   "answer": "D",
+   "explanation": "The passage states the schedule exists so all families, even the farthest ones, 'get fair turns at the station'. Homework, cleaning, and hall hours are separate matters."
+  },
+  {
+   "id": "C7-V052",
+   "section": "Verbal",
+   "question": "Which statement can be inferred from the passage about the solar charging station?",
+   "passage": "Sitio Malayo, a farming village far from the town center, has no power lines. In January, the parents' association installed a solar charging station at the barangay hall, with panels on the roof and ten charging slots below. Families pay two pesos to charge a lamp or a phone, and the money goes to a fund for panel repairs. Because children can now use solar lamps at night, teachers noticed that more pupils finish their homework. The association keeps a written schedule so that all families, including those who live farthest from the hall, get fair turns at the station.",
+   "options": {
+    "A": "Before the station was built, children had limited light for studying at night.",
+    "B": "Every family in the village owns a solar lamp.",
+    "C": "Charging a phone costs more than charging a lamp.",
+    "D": "The village will soon be connected to power lines."
+   },
+   "answer": "A",
+   "explanation": "Teachers noticed more finished homework once children could use solar lamps at night, implying light was limited before. Lamp ownership by every family, future power lines, and different prices per device are not stated; the fee is the same two pesos."
+  },
+  {
+   "id": "C7-N001",
+   "section": "Numerical",
+   "question": "What is 47 × 6?",
+   "options": {
+    "A": "292",
+    "B": "272",
+    "C": "329",
+    "D": "282"
+   },
+   "answer": "D",
+   "explanation": "47 × 6 = 47 × 6. Compute 47 × 5 = 235, plus 47 = 282. The distractors are 10 less, 10 more, and the product with 7 instead of 6."
+  },
+  {
+   "id": "C7-N002",
+   "section": "Numerical",
+   "question": "What is 936 ÷ 8?",
+   "options": {
+    "A": "127",
+    "B": "117",
+    "C": "126",
+    "D": "107"
+   },
+   "answer": "B",
+   "explanation": "8 × 117 = 936 = 936, so 936 ÷ 8 = 117. Check by multiplication before choosing. Always verify a division answer by multiplying it back by the divisor."
+  },
+  {
+   "id": "C7-N003",
+   "section": "Numerical",
+   "question": "A clerk bought supplies for ₱257.50 and ₱189.75. What is the total cost?",
+   "options": {
+    "A": "₱447.25",
+    "B": "₱547.25",
+    "C": "₱427.25",
+    "D": "₱437.25"
+   },
+   "answer": "A",
+   "explanation": "Add the centavos first: 0.50 + 0.75 = 1.25. Then 257 + 189 = 446, plus the carried 1 peso gives ₱447.25."
+  },
+  {
+   "id": "C7-N004",
+   "section": "Numerical",
+   "question": "What is 502 − 268?",
+   "options": {
+    "A": "244",
+    "B": "224",
+    "C": "246",
+    "D": "234"
+   },
+   "answer": "D",
+   "explanation": "Borrow: 502 − 268. 502 − 200 = 302; 302 − 68 = 234. Verify by adding: 234 + 268 = 502. Always verify a subtraction answer by adding it back to the number subtracted."
+  },
+  {
+   "id": "C7-N005",
+   "section": "Numerical",
+   "question": "What is 3/8 + 1/4?",
+   "options": {
+    "A": "7/8",
+    "B": "5/8",
+    "C": "1/3",
+    "D": "1/2"
+   },
+   "answer": "B",
+   "explanation": "Use a common denominator of 8: 1/4 = 2/8. Then 3/8 + 2/8 = 5/8. Adding numerators and denominators straight (4/12) is a common error."
+  },
+  {
+   "id": "C7-N006",
+   "section": "Numerical",
+   "question": "What is 3/4 of 96?",
+   "options": {
+    "A": "80",
+    "B": "64",
+    "C": "48",
+    "D": "72"
+   },
+   "answer": "D",
+   "explanation": "Divide by the denominator: 96 ÷ 4 = 24. Multiply by the numerator: 24 × 3 = 72. This method works for any fraction of a number: divide by the denominator, then multiply by the numerator."
+  },
+  {
+   "id": "C7-N007",
+   "section": "Numerical",
+   "question": "What is 18% of 250?",
+   "options": {
+    "A": "36",
+    "B": "25",
+    "C": "45",
+    "D": "50"
+   },
+   "answer": "C",
+   "explanation": "18% = 0.18. 250 × 0.18 = 45. Quick check: 10% of 250 is 25 and 8% is 20, and 25 + 20 = 45."
+  },
+  {
+   "id": "C7-N008",
+   "section": "Numerical",
+   "question": "A fee rose from ₱250 to ₱300. What is the percent increase?",
+   "options": {
+    "A": "20%",
+    "B": "15%",
+    "C": "50%",
+    "D": "25%"
+   },
+   "answer": "A",
+   "explanation": "Increase = 300 − 250 = 50. Percent increase = 50 ÷ 250 × 100 = 20%. Always divide by the ORIGINAL amount, not the new one."
+  },
+  {
+   "id": "C7-N009",
+   "section": "Numerical",
+   "question": "An item priced at ₱850 is sold at 20% off. How much do you pay?",
+   "options": {
+    "A": "765",
+    "B": "170",
+    "C": "830",
+    "D": "680"
+   },
+   "answer": "D",
+   "explanation": "Discount = 20% of 850 = ₱170. Amount paid = 850 − 170 = ₱680. ₱170 is only the discount, not the amount paid."
+  },
+  {
+   "id": "C7-N010",
+   "section": "Numerical",
+   "question": "How much simple interest is earned on ₱8,000 at 5% per year for 2 years?",
+   "options": {
+    "A": "₱400",
+    "B": "₱450",
+    "C": "₱800",
+    "D": "₱1,000"
+   },
+   "answer": "C",
+   "explanation": "I = Prt = 8,000 × 0.05 × 2 = ₱800. Halving the time or rate gives only ₱400, a common slip."
+  },
+  {
+   "id": "C7-N011",
+   "section": "Numerical",
+   "question": "The scores of five pupils are 74, 86, 90, 78, 92. What is the average?",
+   "options": {
+    "A": "82",
+    "B": "80",
+    "C": "84",
+    "D": "86"
+   },
+   "answer": "C",
+   "explanation": "Sum = 74 + 86 + 90 + 78 + 92 = 420. Average = 420 ÷ 5 = 84. A correct average must always fall between the lowest and the highest values in the set, which this one does."
+  },
+  {
+   "id": "C7-N012",
+   "section": "Numerical",
+   "question": "What is the median of 12, 7, 19, 7, 25, 14, 9?",
+   "options": {
+    "A": "12",
+    "B": "14",
+    "C": "9",
+    "D": "7"
+   },
+   "answer": "A",
+   "explanation": "Arrange in order: 7, 7, 9, 12, 14, 19, 25. The middle (4th of 7) value is 12. 7 is the mode and must not be confused with the median."
+  },
+  {
+   "id": "C7-N013",
+   "section": "Numerical",
+   "question": "What is the range of the data set 48, 23, 67, 35, 59?",
+   "options": {
+    "A": "40",
+    "B": "67",
+    "C": "48",
+    "D": "44"
+   },
+   "answer": "D",
+   "explanation": "Range = highest − lowest = 67 − 23 = 44. The highest value alone (67) is not the range. Range measures spread, so both the highest and the lowest values are always needed."
+  },
+  {
+   "id": "C7-N014",
+   "section": "Numerical",
+   "question": "₱640 is shared in the ratio 3:5. How much is the smaller share?",
+   "options": {
+    "A": "₱320",
+    "B": "₱400",
+    "C": "₱200",
+    "D": "₱240"
+   },
+   "answer": "D",
+   "explanation": "Total parts = 3 + 5 = 8. One part = 640 ÷ 8 = ₱80. Smaller share = 3 × 80 = ₱240. The larger share (₱400) is the other distractor."
+  },
+  {
+   "id": "C7-N015",
+   "section": "Numerical",
+   "question": "If 5 identical printers produce 1,250 pages in an hour, how many pages do 8 printers produce in the same time?",
+   "options": {
+    "A": "2250",
+    "B": "1600",
+    "C": "2000",
+    "D": "781"
+   },
+   "answer": "C",
+   "explanation": "Unit rate first: 1,250 ÷ 5 = 250 pages per printer. Then 250 × 8 = 2,000 pages. The unit-rate method solves any proportion problem where the rate stays the same."
+  },
+  {
+   "id": "C7-N016",
+   "section": "Numerical",
+   "question": "A bus travels 315 km in 5 hours at a steady speed. What is its average speed?",
+   "options": {
+    "A": "70 km/h",
+    "B": "63 km/h",
+    "C": "58 km/h",
+    "D": "60 km/h"
+   },
+   "answer": "B",
+   "explanation": "Speed = distance ÷ time = 315 ÷ 5 = 63 km/h. Keep the unit attached (km/h), because CSE options often differ only in the unit or in the value."
+  },
+  {
+   "id": "C7-N017",
+   "section": "Numerical",
+   "question": "If x + 17 = 42, what is x?",
+   "options": {
+    "A": "19",
+    "B": "25",
+    "C": "59",
+    "D": "42"
+   },
+   "answer": "B",
+   "explanation": "Subtract 17 from both sides: x = 42 − 17 = 25. Adding instead of subtracting gives the 59 distractor."
+  },
+  {
+   "id": "C7-N018",
+   "section": "Numerical",
+   "question": "If 3x − 7 = 20, what is x?",
+   "options": {
+    "A": "7",
+    "B": "13",
+    "C": "9",
+    "D": "27"
+   },
+   "answer": "C",
+   "explanation": "Add 7 to both sides: 3x = 27. Divide by 3: x = 9. Forgetting to add 7 first leads to wrong values."
+  },
+  {
+   "id": "C7-N019",
+   "section": "Numerical",
+   "question": "If 2(x + 5) = 34, what is x?",
+   "options": {
+    "A": "7",
+    "B": "29",
+    "C": "12",
+    "D": "17"
+   },
+   "answer": "C",
+   "explanation": "Divide both sides by 2: x + 5 = 17. Subtract 5: x = 12. Undo the operations in reverse order: first the grouping outside the parentheses, then the added constant."
+  },
+  {
+   "id": "C7-N020",
+   "section": "Numerical",
+   "question": "What is the area of a rectangle 14 cm long and 9 cm wide?",
+   "options": {
+    "A": "46 cm²",
+    "B": "126 cm²",
+    "C": "108 cm²",
+    "D": "140 cm²"
+   },
+   "answer": "B",
+   "explanation": "Area = length × width = 14 × 9 = 126 cm². The 46 cm² option is actually the perimeter value with wrong units, a common trap."
+  },
+  {
+   "id": "C7-N021",
+   "section": "Numerical",
+   "question": "What is the perimeter of a square whose side is 15 m?",
+   "options": {
+    "A": "60 m",
+    "B": "45 m",
+    "C": "225 m",
+    "D": "50 m"
+   },
+   "answer": "A",
+   "explanation": "Perimeter = 4 × side = 4 × 15 = 60 m. 225 m is the area formula misused. Perimeter measures the distance around a figure, while area measures the surface it covers; do not swap their formulas."
+  },
+  {
+   "id": "C7-N022",
+   "section": "Numerical",
+   "question": "What is the area of a trapezoid with parallel sides 10 cm and 14 cm and a height of 6 cm?",
+   "options": {
+    "A": "144 cm²",
+    "B": "24 cm²",
+    "C": "60 cm²",
+    "D": "72 cm²"
+   },
+   "answer": "D",
+   "explanation": "Area of a trapezoid = ½ × (sum of parallel sides) × height = ½ × (10 + 14) × 6 = ½ × 144 = 72 cm². Forgetting the ½ gives 144 cm²; 24 is only the sum of the parallel sides. The one-half in the triangle formula is the step most often forgotten under time pressure."
+  },
+  {
+   "id": "C7-N023",
+   "section": "Numerical",
+   "question": "Using π = 22/7, what is the area of a circle with radius 7 cm?",
+   "options": {
+    "A": "132 cm²",
+    "B": "154 cm²",
+    "C": "44 cm²",
+    "D": "176 cm²"
+   },
+   "answer": "B",
+   "explanation": "Area = πr² = (22/7) × 7 × 7 = (22/7) × 49 = 154 cm². 44 cm is the circumference (2πr), not the area."
+  },
+  {
+   "id": "C7-N024",
+   "section": "Numerical",
+   "question": "What is the volume of a box 5 m by 4 m by 3 m?",
+   "options": {
+    "A": "60 m³",
+    "B": "50 m³",
+    "C": "12 m³",
+    "D": "20 m³"
+   },
+   "answer": "A",
+   "explanation": "Volume = length × width × height = 5 × 4 × 3 = 60 m³. Adding the sides (12) is a common error."
+  },
+  {
+   "id": "C7-N025",
+   "section": "Numerical",
+   "question": "Two angles are supplementary. If one measures 65°, what does the other measure?",
+   "options": {
+    "A": "125°",
+    "B": "115°",
+    "C": "25°",
+    "D": "65°"
+   },
+   "answer": "B",
+   "explanation": "Supplementary angles sum to 180°: 180 − 65 = 115°. Using 90° gives the complement instead, a common mix-up."
+  },
+  {
+   "id": "C7-N026",
+   "section": "Numerical",
+   "question": "Two angles of a triangle measure 90° and 35°. What is the third angle?",
+   "options": {
+    "A": "65°",
+    "B": "75°",
+    "C": "45°",
+    "D": "55°"
+   },
+   "answer": "D",
+   "explanation": "Angles of a triangle sum to 180°: 180 − 90 − 35 = 55°. The 90-degree angle also tells you this is a right triangle, a useful check on the remaining angles."
+  },
+  {
+   "id": "C7-N027",
+   "section": "Numerical",
+   "question": "Three consecutive integers add up to 51. What is the middle integer?",
+   "options": {
+    "A": "17",
+    "B": "18",
+    "C": "16",
+    "D": "51"
+   },
+   "answer": "A",
+   "explanation": "Let the integers be n−1, n, n+1. Their sum is 3n = 51, so n = 17. The other two integers are 16 and 18."
+  },
+  {
+   "id": "C7-N028",
+   "section": "Numerical",
+   "question": "A worker earns ₱95 per hour. How much does the worker earn in 8 hours?",
+   "options": {
+    "A": "₱665",
+    "B": "₱700",
+    "C": "₱760",
+    "D": "₱800"
+   },
+   "answer": "C",
+   "explanation": "Earnings = rate × hours = 95 × 8 = ₱760. For wage problems, always multiply the rate per hour by the total number of hours worked."
+  },
+  {
+   "id": "C7-N029",
+   "section": "Numerical",
+   "question": "You buy 3 notebooks at ₱145 each and pay with a ₱1000 bill. How much change do you get?",
+   "options": {
+    "A": "₱565",
+    "B": "₱435",
+    "C": "₱515",
+    "D": "₱710"
+   },
+   "answer": "A",
+   "explanation": "Total cost = 3 × 145 = ₱435. Change = 1000 − 435 = ₱565. ₱435 is the cost, not the change."
+  },
+  {
+   "id": "C7-N030",
+   "section": "Numerical",
+   "question": "An item bought for ₱240 is sold for ₱300. What is the percent profit based on cost?",
+   "options": {
+    "A": "30%",
+    "B": "60%",
+    "C": "20%",
+    "D": "25%"
+   },
+   "answer": "D",
+   "explanation": "Profit = 300 − 240 = ₱60. Percent profit = 60 ÷ 240 × 100 = 25%. Dividing by the selling price gives the wrong 20%."
+  },
+  {
+   "id": "C7-N031",
+   "section": "Numerical",
+   "question": "What is the value of 3⁴?",
+   "options": {
+    "A": "64",
+    "B": "81",
+    "C": "27",
+    "D": "12"
+   },
+   "answer": "B",
+   "explanation": "3⁴ means 3 × 3 × 3 × 3 = 81. Multiplying 3 × 4 = 12 is the usual error; 27 is 3³ and 64 is 4³."
+  },
+  {
+   "id": "C7-N032",
+   "section": "Numerical",
+   "question": "What is the least common multiple (LCM) of 6 and 8?",
+   "options": {
+    "A": "48",
+    "B": "24",
+    "C": "12",
+    "D": "14"
+   },
+   "answer": "B",
+   "explanation": "Multiples of 6: 6, 12, 18, 24. Multiples of 8: 8, 16, 24. The first common multiple is 24. 48 is a common multiple but not the least; 12 is a multiple of 6 only."
+  },
+  {
+   "id": "C7-N033",
+   "section": "Numerical",
+   "question": "What is the smallest prime number greater than 29?",
+   "options": {
+    "A": "31",
+    "B": "33",
+    "C": "29",
+    "D": "30"
+   },
+   "answer": "A",
+   "explanation": "30 is even, 33 = 3 × 11, and 29 itself is not greater than 29. 31 has only 1 and itself as factors, so it is prime."
+  },
+  {
+   "id": "C7-N034",
+   "section": "Numerical",
+   "question": "A farmer harvested 8 sacks of rice, each weighing 25 kg. What is the total harvest in kilograms?",
+   "options": {
+    "A": "180",
+    "B": "33",
+    "C": "200",
+    "D": "220"
+   },
+   "answer": "C",
+   "explanation": "Total = 8 × 25 = 200 kg. Adding 8 + 25 = 33 is the operation error to avoid in multiplication word problems."
+  },
+  {
+   "id": "C7-N035",
+   "section": "Numerical",
+   "question": "A father is 4 times as old as his son. Their ages add up to 50. How old is the son?",
+   "options": {
+    "A": "10",
+    "B": "8",
+    "C": "12",
+    "D": "40"
+   },
+   "answer": "A",
+   "explanation": "Let the son be s; the father is 4s. s + 4s = 50, so 5s = 50 and s = 10. 40 is the father's age, the trap answer."
+  },
+  {
+   "id": "C7-N036",
+   "section": "Numerical",
+   "question": "A town's water use fell from 400 cubic meters to 340 cubic meters. What is the percent decrease?",
+   "options": {
+    "A": "15%",
+    "B": "18%",
+    "C": "10%",
+    "D": "20%"
+   },
+   "answer": "A",
+   "explanation": "Decrease = 400 − 340 = 60. Percent decrease = 60 ÷ 400 × 100 = 15%. Always divide by the original value."
+  },
+  {
+   "id": "C7-N037",
+   "section": "Numerical",
+   "question": "A 500 mL solution contains 40 mL of alcohol. What percent of the solution is alcohol?",
+   "options": {
+    "A": "12.5%",
+    "B": "4%",
+    "C": "10%",
+    "D": "8%"
+   },
+   "answer": "D",
+   "explanation": "Percent = 40 ÷ 500 × 100 = 8%. Work with the part over the whole volume. Percent means part divided by whole, multiplied by 100; the same formula solves all mixture and concentration items."
+  },
+  {
+   "id": "C7-N038",
+   "section": "Numerical",
+   "question": "What is the value of 6 + 4 × 3 − 2?",
+   "options": {
+    "A": "28",
+    "B": "14",
+    "C": "16",
+    "D": "20"
+   },
+   "answer": "C",
+   "explanation": "Multiply before adding: 4 × 3 = 12. Then 6 + 12 − 2 = 16. Computing strictly left to right gives the wrong 28."
+  },
+  {
+   "id": "C7-A001",
+   "section": "Analytical",
+   "question": "SCISSORS : CUT :: PEN : ___",
+   "options": {
+    "A": "Ink",
+    "B": "Write",
+    "C": "Draw lines",
+    "D": "Erase"
+   },
+   "answer": "B",
+   "explanation": "The relation is tool to its main action: scissors are used to cut, and a pen is used to write. Ink is a material the pen uses, not its action."
+  },
+  {
+   "id": "C7-A002",
+   "section": "Analytical",
+   "question": "FARMER : FIELD :: FISHERMAN : ___",
+   "options": {
+    "A": "Net",
+    "B": "Boat",
+    "C": "Sea",
+    "D": "Market"
+   },
+   "answer": "C",
+   "explanation": "The relation is worker to usual workplace: a farmer works in a field; a fisherman works at sea. A net and a boat are tools, and the market is where the catch is sold."
+  },
+  {
+   "id": "C7-A003",
+   "section": "Analytical",
+   "question": "Caterpillar : Butterfly :: Tadpole : ___",
+   "options": {
+    "A": "Frog",
+    "B": "Pond",
+    "C": "Egg",
+    "D": "Fish"
+   },
+   "answer": "A",
+   "explanation": "The relation is young or larval stage to the adult form it transforms into. A caterpillar metamorphoses into a butterfly, and a tadpole metamorphoses into a frog. A pond is only where a tadpole lives, an egg is an earlier stage rather than the adult form, and a fish is a different animal altogether."
+  },
+  {
+   "id": "C7-A004",
+   "section": "Analytical",
+   "question": "GILLS : FISH :: LUNGS : ___",
+   "options": {
+    "A": "Frog skin",
+    "B": "Plant",
+    "C": "Human",
+    "D": "Bird wing"
+   },
+   "answer": "C",
+   "explanation": "Gills are the breathing organs of a fish; lungs are the breathing organs of a human. The distractors name other animals' parts or unrelated organisms, not the organ's owner in the same relation."
+  },
+  {
+   "id": "C7-A005",
+   "section": "Analytical",
+   "question": "KEY : LOCK :: PASSWORD : ___",
+   "options": {
+    "A": "Keyboard",
+    "B": "Secret",
+    "C": "Door",
+    "D": "Account"
+   },
+   "answer": "D",
+   "explanation": "A key opens a lock; a password opens or secures access to an account. A keyboard is used to type it, and 'secret' only describes it."
+  },
+  {
+   "id": "C7-A006",
+   "section": "Analytical",
+   "question": "PUPIL : SCHOOL :: PATIENT : ___",
+   "options": {
+    "A": "Hospital",
+    "B": "Doctor",
+    "C": "Ward nurse",
+    "D": "Medicine"
+   },
+   "answer": "A",
+   "explanation": "A pupil is the person served by a school; a patient is the person served by a hospital. A doctor and a nurse are the servers, and medicine is a treatment."
+  },
+  {
+   "id": "C7-A007",
+   "section": "Analytical",
+   "question": "Statements: All pharmacists in the clinic are licensed. Rosa is a pharmacist in the clinic. Which conclusion necessarily follows?",
+   "options": {
+    "A": "Rosa also works in a hospital.",
+    "B": "Rosa is licensed.",
+    "C": "Rosa is the only pharmacist.",
+    "D": "Rosa owns the clinic."
+   },
+   "answer": "B",
+   "explanation": "If every pharmacist in the clinic is licensed and Rosa is one of them, Rosa must be licensed. Ownership, being the only pharmacist, and hospital work are not given."
+  },
+  {
+   "id": "C7-A008",
+   "section": "Analytical",
+   "question": "Statements: If a document is notarized, it bears a dry seal. This document has no dry seal. Which conclusion necessarily follows?",
+   "options": {
+    "A": "The document is a photocopy.",
+    "B": "The document is not notarized.",
+    "C": "The document was never signed.",
+    "D": "The document is fake."
+   },
+   "answer": "B",
+   "explanation": "This is modus tollens: notarized implies a seal, so no seal means not notarized. Nothing in the statements proves the document is fake, unsigned, or a copy."
+  },
+  {
+   "id": "C7-A009",
+   "section": "Analytical",
+   "question": "Statements: Some volunteers are students. All volunteers joined the coastal cleanup. Which conclusion necessarily follows?",
+   "options": {
+    "A": "All cleanup joiners are students.",
+    "B": "No student joined the cleanup.",
+    "C": "Some students joined the coastal cleanup.",
+    "D": "All students joined the cleanup."
+   },
+   "answer": "C",
+   "explanation": "The volunteers who are students joined the cleanup, so some students joined. The statements do not cover all students or all joiners."
+  },
+  {
+   "id": "C7-A010",
+   "section": "Analytical",
+   "question": "Statements: No processed meat is allowed in the school canteen. This ham is a processed meat. Which conclusion necessarily follows?",
+   "options": {
+    "A": "This ham is not allowed in the school canteen.",
+    "B": "All meats are banned in the canteen.",
+    "C": "The canteen sells no food.",
+    "D": "This ham is unhealthy."
+   },
+   "answer": "A",
+   "explanation": "Since no processed meat is allowed and ham is processed meat, this ham is not allowed. Health claims, a ban on all meat, and an empty canteen go beyond the statements."
+  },
+  {
+   "id": "C7-A011",
+   "section": "Analytical",
+   "question": "Statement: 'The barangay will give free seedlings to residents who attend the tree-growing seminar.' Which assumption underlies the plan?",
+   "options": {
+    "A": "Residents who want seedlings are willing and able to attend the seminar.",
+    "B": "Seedlings are the most expensive farm input.",
+    "C": "The seminar will be held during harvest season.",
+    "D": "All residents already grow trees."
+   },
+   "answer": "A",
+   "explanation": "The plan works only if interested residents can and will attend. Present tree-growing, seedling prices, and seminar timing are not required by the statement."
+  },
+  {
+   "id": "C7-A012",
+   "section": "Analytical",
+   "question": "Statement: 'Our cooperative will sell its coffee online so that farmers can earn more.' Which is an assumption of the plan?",
+   "options": {
+    "A": "Online selling has no costs at all.",
+    "B": "All farmers own smartphones.",
+    "C": "Buyers are willing to purchase the cooperative's coffee through online channels.",
+    "D": "Coffee prices never change."
+   },
+   "answer": "C",
+   "explanation": "Online selling raises earnings only if buyers will actually buy online. Smartphone ownership by every farmer, zero costs, and fixed prices are stronger claims than the plan needs."
+  },
+  {
+   "id": "C7-A013",
+   "section": "Analytical",
+   "question": "What is the next number in the series 3, 6, 11, 18, 27, ___?",
+   "options": {
+    "A": "40",
+    "B": "35",
+    "C": "38",
+    "D": "36"
+   },
+   "answer": "C",
+   "explanation": "The increases grow by 2: +3, +5, +7, +9, so the next increase is +11. 27 + 11 = 38. When the gaps between terms change regularly, examine the differences first before guessing a multiplier."
+  },
+  {
+   "id": "C7-A014",
+   "section": "Analytical",
+   "question": "What is the next number in the series 120, 109, 99, 90, 82, ___?",
+   "options": {
+    "A": "77",
+    "B": "73",
+    "C": "74",
+    "D": "75"
+   },
+   "answer": "D",
+   "explanation": "The subtractions shrink by 1: −11, −10, −9, −8, so the next subtraction is −7. 82 − 7 = 75."
+  },
+  {
+   "id": "C7-A015",
+   "section": "Analytical",
+   "question": "What is the next letter in the series A, Z, B, Y, C, X, ___?",
+   "options": {
+    "A": "D",
+    "B": "W",
+    "C": "U",
+    "D": "E"
+   },
+   "answer": "A",
+   "explanation": "Two interleaved series: A, B, C, ... moves forward from the start of the alphabet, while Z, Y, X, ... moves backward from the end. The next term belongs to the first series: D. W would be the next term of the backward series, one step too early."
+  },
+  {
+   "id": "C7-A016",
+   "section": "Analytical",
+   "question": "What is the next number in the series 5, 8, 13, 21, 34, ___?",
+   "options": {
+    "A": "68",
+    "B": "47",
+    "C": "55",
+    "D": "50"
+   },
+   "answer": "C",
+   "explanation": "Each term is the sum of the two before it: 5 + 8 = 13, 8 + 13 = 21, 13 + 21 = 34, so the next is 21 + 34 = 55 (a Fibonacci-type pattern)."
+  },
+  {
+   "id": "C7-A017",
+   "section": "Analytical",
+   "question": "What is the next number in the series 1, 2, 6, 24, 120, ___?",
+   "options": {
+    "A": "600",
+    "B": "240",
+    "C": "720",
+    "D": "360"
+   },
+   "answer": "C",
+   "explanation": "Each term multiplies by one more than the previous multiplier: ×2, ×3, ×4, ×5, so the next multiplier is ×6. 120 × 6 = 720 (these are the factorials 1!, 2!, 3!, 4!, 5!, 6!)."
+  },
+  {
+   "id": "C7-A018",
+   "section": "Analytical",
+   "question": "In a code, every letter is shifted one step forward in the alphabet (A→B, B→C, ..., Z→A). How is the word DOG coded?",
+   "options": {
+    "A": "EOH",
+    "B": "CPF",
+    "C": "EPH",
+    "D": "DPG"
+   },
+   "answer": "C",
+   "explanation": "Shift each letter forward by one: D→E, O→P, G→H, giving EPH. CPF shifts backward; EOH and DPG shift only some letters."
+  },
+  {
+   "id": "C7-A019",
+   "section": "Analytical",
+   "question": "In a code, A=1, B=2, ..., Z=26, but each value is doubled. What is the code for the letter J?",
+   "options": {
+    "A": "10",
+    "B": "20",
+    "C": "22",
+    "D": "12"
+   },
+   "answer": "B",
+   "explanation": "J is the 10th letter, and doubling gives 10 × 2 = 20. 10 is the undoubled value; 22 would be the doubled value of K."
+  },
+  {
+   "id": "C7-A020",
+   "section": "Analytical",
+   "question": "Four runners finished a race in this order of clues: Dario finished ahead of Elma. Felix finished behind Elma. Gina finished first. Who finished third?",
+   "options": {
+    "A": "Gina",
+    "B": "Elma",
+    "C": "Dario",
+    "D": "Felix"
+   },
+   "answer": "B",
+   "explanation": "Order: Gina first, then Dario ahead of Elma, and Felix behind Elma, giving Gina, Dario, Elma, Felix. Third is Elma; Felix is last."
+  },
+  {
+   "id": "C7-A021",
+   "section": "Analytical",
+   "question": "Five books are arranged by height on a display: the blue book is taller than the red book. The green book is the tallest. The yellow book is shorter than the red book. The black book is the shortest. Which book is second tallest?",
+   "options": {
+    "A": "Red book",
+    "B": "Green book",
+    "C": "Blue book",
+    "D": "Yellow book"
+   },
+   "answer": "C",
+   "explanation": "From tallest: green is tallest; blue is taller than red, and red is taller than yellow, with black shortest. The order is green, blue, red, yellow, black, so second tallest is the blue book."
+  },
+  {
+   "id": "C7-A022",
+   "section": "Analytical",
+   "question": "A permit passes through four desks in order: Receiving, Evaluation, Approval, Releasing. The permit is now at Evaluation. How many more desks will handle it after Evaluation before the process ends?",
+   "options": {
+    "A": "4",
+    "B": "3",
+    "C": "2",
+    "D": "1"
+   },
+   "answer": "C",
+   "explanation": "After Evaluation come Approval and Releasing, which is 2 more desks. Count only the stages that come after the current stage, not the stages already passed."
+  },
+  {
+   "id": "C7-A023",
+   "section": "Analytical",
+   "question": "In a queue, Mila is 4th from the front and 6th from the back. How many people are in the queue?",
+   "options": {
+    "A": "11",
+    "B": "9",
+    "C": "8",
+    "D": "10"
+   },
+   "answer": "B",
+   "explanation": "Total = position from front + position from back − 1 (Mila counted twice) = 4 + 6 − 1 = 9."
+  },
+  {
+   "id": "C7-A024",
+   "section": "Analytical",
+   "question": "A barangay recorded the seedlings planted by four purok in a month: Purok 1 planted 45, Purok 2 planted 60, Purok 3 planted 35, and Purok 4 planted 80. What was the total number of seedlings planted?",
+   "options": {
+    "A": "220",
+    "B": "210",
+    "C": "230",
+    "D": "200"
+   },
+   "answer": "A",
+   "explanation": "Total = 45 + 60 + 35 + 80 = 220. In data sets, compute the total first, because average and percent questions usually depend on it."
+  },
+  {
+   "id": "C7-A025",
+   "section": "Analytical",
+   "question": "A barangay recorded the seedlings planted by four purok in a month: Purok 1 planted 45, Purok 2 planted 60, Purok 3 planted 35, and Purok 4 planted 80. Which purok planted the most seedlings?",
+   "options": {
+    "A": "Purok 4",
+    "B": "Purok 1",
+    "C": "Purok 3",
+    "D": "Purok 2"
+   },
+   "answer": "A",
+   "explanation": "Compare the values: 80 (Purok 4) is greater than 60, 45, and 35, so Purok 4 planted the most."
+  },
+  {
+   "id": "C7-A026",
+   "section": "Analytical",
+   "question": "A barangay recorded the seedlings planted by four purok in a month: Purok 1 planted 45, Purok 2 planted 60, Purok 3 planted 35, and Purok 4 planted 80. What is the average number of seedlings planted per purok?",
+   "options": {
+    "A": "50",
+    "B": "60",
+    "C": "45",
+    "D": "55"
+   },
+   "answer": "D",
+   "explanation": "Average = total ÷ number of purok = 220 ÷ 4 = 55. The divisor in an average is the count of groups or entries, never the largest value."
+  },
+  {
+   "id": "C7-A027",
+   "section": "Analytical",
+   "question": "A barangay recorded the seedlings planted by four purok in a month: Purok 1 planted 45, Purok 2 planted 60, Purok 3 planted 35, and Purok 4 planted 80. How many more seedlings did Purok 4 plant than Purok 3?",
+   "options": {
+    "A": "25",
+    "B": "115",
+    "C": "35",
+    "D": "45"
+   },
+   "answer": "D",
+   "explanation": "Difference = 80 − 35 = 45. 115 is their sum, not their difference. A difference question asks 'how many more', so subtract; a combined question asks for a sum, so add."
+  },
+  {
+   "id": "C7-A028",
+   "section": "Analytical",
+   "question": "A barangay recorded the seedlings planted by four purok in a month: Purok 1 planted 45, Purok 2 planted 60, Purok 3 planted 35, and Purok 4 planted 80. What percent of the total seedlings were planted by Purok 2?",
+   "options": {
+    "A": "About 25%",
+    "B": "About 27%",
+    "C": "About 60%",
+    "D": "About 30%"
+   },
+   "answer": "B",
+   "explanation": "60 ÷ 220 × 100 ≈ 27.3%, so about 27%. Estimating against the total of 220 is the key step."
+  },
+  {
+   "id": "C7-A029",
+   "section": "Analytical",
+   "question": "Which one does NOT belong with the others: decimeter, kilometer, liter, centimeter?",
+   "options": {
+    "A": "Kilometer",
+    "B": "Decimeter",
+    "C": "Centimeter",
+    "D": "Liter"
+   },
+   "answer": "D",
+   "explanation": "Decimeter, kilometer, and centimeter are units of length. A liter is a unit of volume, so it does not belong."
+  },
+  {
+   "id": "C7-A030",
+   "section": "Analytical",
+   "question": "Which one does NOT belong with the others: triangle, square, pentagon, circle?",
+   "options": {
+    "A": "Circle",
+    "B": "Triangle",
+    "C": "Square",
+    "D": "Pentagon"
+   },
+   "answer": "A",
+   "explanation": "Triangle, square, and pentagon are polygons made of straight sides. A circle is a curved figure with no sides, so it does not belong."
+  },
+  {
+   "id": "C7-G001",
+   "section": "General Information",
+   "question": "What is the minimum age required for a person to be elected Senator of the Philippines?",
+   "options": {
+    "A": "40 years old",
+    "B": "25 years old",
+    "C": "35 years old",
+    "D": "30 years old"
+   },
+   "answer": "C",
+   "explanation": "Article VI, Section 3 sets 35 years as the minimum age for a Senator. 25 years is the minimum for a Member of the House of Representatives; 40 years is the minimum for President and Vice President; 30 years is not a constitutional age floor for any national office."
+  },
+  {
+   "id": "C7-G002",
+   "section": "General Information",
+   "question": "What is the minimum age required for a person to be elected Member of the House of Representatives?",
+   "options": {
+    "A": "25 years old",
+    "B": "35 years old",
+    "C": "30 years old",
+    "D": "21 years old"
+   },
+   "answer": "A",
+   "explanation": "Article VI, Section 5 sets 25 years as the minimum age for a district Representative. 35 years is the minimum for a Senator; 30 years is not the House floor; 21 years appears in no elective qualification in the Constitution."
+  },
+  {
+   "id": "C7-G003",
+   "section": "General Information",
+   "question": "For how many consecutive terms may a Member of the House of Representatives serve?",
+   "options": {
+    "A": "Four consecutive terms",
+    "B": "No limit on terms",
+    "C": "Two consecutive terms",
+    "D": "Three consecutive terms"
+   },
+   "answer": "D",
+   "explanation": "Article VI, Section 7 limits Representatives to not more than three consecutive terms (three terms of three years each). Two consecutive terms is the limit for Senators and for the Vice President; local officials share the three-term rule, while the President may not be re-elected at all."
+  },
+  {
+   "id": "C7-G004",
+   "section": "General Information",
+   "question": "Concurrence of how many Senators is required for a treaty or international agreement to be valid and effective?",
+   "options": {
+    "A": "Two-thirds of all the Members of Congress",
+    "B": "A majority of Senators present",
+    "C": "Two-thirds of all the Members of the Senate",
+    "D": "Three-fourths of all the Members of the Senate"
+   },
+   "answer": "C",
+   "explanation": "Article VII, Section 21 requires the concurrence of at least two-thirds of all the Members of the Senate for treaties. A simple majority suffices for ordinary business with a quorum; three-fourths is the vote Congress needs to propose constitutional amendments; treaties are a Senate-only function, not a vote of the whole Congress."
+  },
+  {
+   "id": "C7-G005",
+   "section": "General Information",
+   "question": "Under the Constitution, all appropriation, revenue, and tariff bills must originate exclusively in which body?",
+   "options": {
+    "A": "The Senate",
+    "B": "The Department of Budget and Management",
+    "C": "The House of Representatives",
+    "D": "The Office of the President"
+   },
+   "answer": "C",
+   "explanation": "Article VI, Section 24 requires money bills to originate exclusively in the House, although the Senate may propose or concur with amendments. The President prepares and submits the proposed budget, and the DBM assists in that preparation, but neither originates the bills in Congress."
+  },
+  {
+   "id": "C7-G006",
+   "section": "General Information",
+   "question": "For how long may the President initially suspend the privilege of the writ of habeas corpus or place the Philippines under martial law in case of invasion or rebellion?",
+   "options": {
+    "A": "Not more than 30 days",
+    "B": "Without any time limit",
+    "C": "Not more than 60 days",
+    "D": "Not more than 90 days"
+   },
+   "answer": "C",
+   "explanation": "Article VII, Section 18 caps the initial proclamation or suspension at 60 days, within which Congress may revoke or extend it. 30 days is the period tied to other presidential actions such as the lapse of bills; 90 days appears in vacancy-filling timelines; an unlimited period contradicts the Constitution."
+  },
+  {
+   "id": "C7-G007",
+   "section": "General Information",
+   "question": "If the Vice President is unable to succeed to the presidency upon the President's death or permanent disability, who acts as President next in the line of succession?",
+   "options": {
+    "A": "The Executive Secretary",
+    "B": "The President of the Senate",
+    "C": "The Chief Justice",
+    "D": "The Speaker of the House"
+   },
+   "answer": "B",
+   "explanation": "Article VII, Section 8: if the Vice President cannot succeed, the President of the Senate acts as President; only if he too cannot does the Speaker of the House take over. The Chief Justice heads the Judiciary and is not in the line of succession; the Executive Secretary is an appointed staff officer."
+  },
+  {
+   "id": "C7-G008",
+   "section": "General Information",
+   "question": "Which body has the sole power to initiate cases of impeachment?",
+   "options": {
+    "A": "The House of Representatives",
+    "B": "The Office of the Ombudsman",
+    "C": "The Supreme Court",
+    "D": "The Senate"
+   },
+   "answer": "A",
+   "explanation": "Article XI, Section 3 gives the House the exclusive power to initiate impeachment cases, while the Senate tries and decides them. The Ombudsman investigates officials for graft but does not initiate impeachment; the Supreme Court does not prosecute impeachment cases."
+  },
+  {
+   "id": "C7-G009",
+   "section": "General Information",
+   "question": "Under the Constitution, a natural-born citizen is one who is a citizen of the Philippines",
+   "options": {
+    "A": "from birth without having to perform any act to acquire or perfect citizenship",
+    "B": "after ten years of continuous residence",
+    "C": "upon registration with the Commission on Elections",
+    "D": "after taking an oath of allegiance at age 18"
+   },
+   "answer": "A",
+   "explanation": "Article IV, Section 2 defines natural-born citizens as those who are citizens from birth without having to perform any act to acquire or perfect their Philippine citizenship. Oaths, voter registration, and residence periods relate to naturalization or suffrage, not to natural-born status."
+  },
+  {
+   "id": "C7-G010",
+   "section": "General Information",
+   "question": "How long must a voter have resided in the Philippines and in the place where he proposes to vote immediately before an election?",
+   "options": {
+    "A": "At least 6 months in the Philippines and at least 1 month in the place of voting",
+    "B": "Residency is not required to vote",
+    "C": "At least 2 years in the Philippines and at least 1 year in the place of voting",
+    "D": "At least 1 year in the Philippines and at least 6 months in the place of voting"
+   },
+   "answer": "D",
+   "explanation": "Article V, Section 1 requires at least one year of residence in the Philippines and at least six months in the place where the voter proposes to vote, immediately preceding the election. The shorter and longer pairs are not constitutional requirements."
+  },
+  {
+   "id": "C7-G011",
+   "section": "General Information",
+   "question": "What is the term of office of the Ombudsman and his Deputies, and may they be reappointed?",
+   "options": {
+    "A": "Seven years, without reappointment",
+    "B": "Nine years, without reappointment",
+    "C": "Five years, renewable once",
+    "D": "Six years, with one reappointment allowed"
+   },
+   "answer": "A",
+   "explanation": "Article XI, Section 11 fixes a single seven-year term for the Ombudsman and his Deputies, without reappointment. Six years is the term of the President, Vice President, and Senators; nine and five years match no constitutional commission or Ombudsman term."
+  },
+  {
+   "id": "C7-G012",
+   "section": "General Information",
+   "question": "Which government financial institution serves as the central bank of the Philippines?",
+   "options": {
+    "A": "Development Bank of the Philippines",
+    "B": "Bangko Sentral ng Pilipinas (BSP)",
+    "C": "Philippine National Bank",
+    "D": "Land Bank of the Philippines"
+   },
+   "answer": "B",
+   "explanation": "The Bangko Sentral ng Pilipinas, created under RA 7653, is the country's central monetary authority. Land Bank is a government bank focused on agriculture and agrarian reform; the DBP is a development financing institution; the PNB is a universal commercial bank."
+  },
+  {
+   "id": "C7-G013",
+   "section": "General Information",
+   "question": "Which government agency supervises colleges and universities and tertiary education programs in the Philippines?",
+   "options": {
+    "A": "Department of Education (DepEd)",
+    "B": "Commission on Higher Education (CHED)",
+    "C": "Technical Education and Skills Development Authority (TESDA)",
+    "D": "Professional Regulation Commission (PRC)"
+   },
+   "answer": "B",
+   "explanation": "CHED, created by RA 7722, governs tertiary and graduate education. DepEd handles basic education (elementary and secondary); TESDA handles technical-vocational education; the PRC regulates licensed professions, not schools."
+  },
+  {
+   "id": "C7-G014",
+   "section": "General Information",
+   "question": "Which agency is primarily responsible for technical-vocational education and training, such as NC II courses in welding and cookery?",
+   "options": {
+    "A": "TESDA",
+    "B": "Department of Labor and Employment (DOLE)",
+    "C": "DepEd",
+    "D": "CHED"
+   },
+   "answer": "A",
+   "explanation": "TESDA (created by RA 7796) manages technical education and skills development, including National Certificate courses. CHED covers degree programs; DepEd covers basic education; DOLE, to which TESDA is attached for policy coordination, handles labor and employment policy."
+  },
+  {
+   "id": "C7-G015",
+   "section": "General Information",
+   "question": "Which department is the lead agency for social welfare programs such as the 4Ps conditional cash transfer?",
+   "options": {
+    "A": "Department of the Interior and Local Government (DILG)",
+    "B": "National Economic and Development Authority (NEDA)",
+    "C": "Department of Social Welfare and Development (DSWD)",
+    "D": "Department of Health (DOH)"
+   },
+   "answer": "C",
+   "explanation": "The DSWD runs social protection and welfare programs, including the Pantawid Pamilyang Pilipino Program (4Ps). The DILG supervises local governments and the police support structure; the DOH leads health services; NEDA coordinates national development planning."
+  },
+  {
+   "id": "C7-G016",
+   "section": "General Information",
+   "question": "Republic Act No. 6969 is known as the",
+   "options": {
+    "A": "Philippine Disaster Risk Reduction and Management Act of 2010",
+    "B": "Toxic Substances and Hazardous and Nuclear Wastes Control Act of 1990",
+    "C": "Ecological Solid Waste Management Act of 2000",
+    "D": "Philippine Clean Air Act of 1999"
+   },
+   "answer": "B",
+   "explanation": "RA 6969 regulates the importation, manufacture, use, and disposal of chemical substances and hazardous and nuclear wastes. The Clean Air Act is RA 8749; the Ecological Solid Waste Management Act is RA 9003; the DRRM Act is RA 10121."
+  },
+  {
+   "id": "C7-G017",
+   "section": "General Information",
+   "question": "Republic Act No. 10121 is known as the",
+   "options": {
+    "A": "Philippine Disaster Risk Reduction and Management Act of 2010",
+    "B": "Climate Change Act of 2009",
+    "C": "National Environmental Awareness and Education Act of 2008",
+    "D": "Data Privacy Act of 2012"
+   },
+   "answer": "A",
+   "explanation": "RA 10121 strengthened the disaster risk reduction system and created the NDRRMC framework. The Climate Change Act is RA 9729; the Data Privacy Act is RA 10173; the Environmental Awareness and Education Act is RA 9512."
+  },
+  {
+   "id": "C7-G018",
+   "section": "General Information",
+   "question": "Republic Act No. 10173 is known as the",
+   "options": {
+    "A": "Access to Information Program Act",
+    "B": "Data Privacy Act of 2012",
+    "C": "Cybercrime Prevention Act of 2012",
+    "D": "Anti-Photo and Video Voyeurism Act of 2009"
+   },
+   "answer": "B",
+   "explanation": "RA 10173 protects individual personal information and created the National Privacy Commission. The Cybercrime Prevention Act is RA 10175; the Anti-Photo and Video Voyeurism Act is RA 9995; there is no enacted 'Access to Information Program Act' (freedom of information remains executive policy, not a statute)."
+  },
+  {
+   "id": "C7-G019",
+   "section": "General Information",
+   "question": "Republic Act No. 9165 is known as the",
+   "options": {
+    "A": "Comprehensive Firearms and Ammunition Regulation Act",
+    "B": "Philippine AIDS Prevention and Control Act of 1998",
+    "C": "Anti-Drunk and Drugged Driving Act of 2013",
+    "D": "Comprehensive Dangerous Drugs Act of 2002"
+   },
+   "answer": "D",
+   "explanation": "RA 9165 is the Comprehensive Dangerous Drugs Act of 2002, enforced mainly by the PDEA. The firearms law is RA 10591; the drunk and drugged driving law is RA 10586; the AIDS law cited is RA 8504."
+  },
+  {
+   "id": "C7-G020",
+   "section": "General Information",
+   "question": "Republic Act No. 9512 promotes environmental awareness primarily through",
+   "options": {
+    "A": "creating a separate environmental police force",
+    "B": "banning the use of plastic packaging nationwide",
+    "C": "requiring factories to plant trees for every product sold",
+    "D": "integrating environmental education in school curricula at all levels"
+   },
+   "answer": "D",
+   "explanation": "RA 9512, the National Environmental Awareness and Education Act of 2008, declares November as Environmental Awareness Month and requires environmental education integration in curricula. Tree-planting quotas per product, a nationwide plastic ban, and an environmental police force are not provisions of this law."
+  },
+  {
+   "id": "C7-G021",
+   "section": "General Information",
+   "question": "Under RA 6713, what must a public official do upon assuming office in relation to business interests and financial connections that may cause a conflict of interest?",
+   "options": {
+    "A": "Identify and disclose them as required, and resign from conflicting private business positions within the prescribed period",
+    "B": "Report them only to family members",
+    "C": "Keep them private, since SALN filing is optional",
+    "D": "Transfer them only if a complaint is filed"
+   },
+   "answer": "A",
+   "explanation": "RA 6713 Section 9 requires officials to identify and disclose business interests and financial connections, including those of their spouse and unmarried minor children, and to resign from any private business enterprise within thirty days from assumption of office where a conflict arises. SALN filing is mandatory, not optional, and disclosure is made through official channels, not only upon complaint or to family."
+  },
+  {
+   "id": "C7-G022",
+   "section": "General Information",
+   "question": "A proposed constitutional amendment may be made through a Constitutional Convention. Congress may call such a convention by",
+   "options": {
+    "A": "a vote of two-thirds of all its Members",
+    "B": "a simple majority of the Senators alone",
+    "C": "a vote of three-fourths of all its Members",
+    "D": "a resolution of the Commission on Elections"
+   },
+   "answer": "A",
+   "explanation": "Article XVII, Section 3 allows Congress, by a vote of two-thirds of all its Members, to call a Constitutional Convention; a majority of all Members may instead submit the question of calling one to the electorate. Three-fourths is the vote for Congress itself to propose amendments as a constituent assembly; COMELEC administers elections and plebiscites but cannot call a convention."
+  },
+  {
+   "id": "C7-G023",
+   "section": "General Information",
+   "question": "In what year did the Battle of Mactan take place, where Ferdinand Magellan was killed?",
+   "options": {
+    "A": "1896",
+    "B": "1521",
+    "C": "1898",
+    "D": "1565"
+   },
+   "answer": "B",
+   "explanation": "Magellan was killed at Mactan on April 27, 1521, by warriors led by Lapulapu. 1565 marks Legazpi's arrival and the start of Spanish colonization; 1896 is the start of the Philippine Revolution; 1898 is the proclamation of independence."
+  },
+  {
+   "id": "C7-G024",
+   "section": "General Information",
+   "question": "Miguel Lopez de Legazpi's expedition, which began Spain's colonization of the Philippines, arrived in Cebu in what year?",
+   "options": {
+    "A": "1565",
+    "B": "1571",
+    "C": "1521",
+    "D": "1598"
+   },
+   "answer": "A",
+   "explanation": "Legazpi arrived in Cebu in 1565 and established the first Spanish settlement. 1521 was Magellan's earlier voyage, which ended with his death; 1571 is when Legazpi founded Manila; 1598 is not a founding date in colonization history."
+  },
+  {
+   "id": "C7-G025",
+   "section": "General Information",
+   "question": "The Katipunan (KKK), the secret society that launched the Philippine Revolution, was founded in Manila in what year?",
+   "options": {
+    "A": "1898",
+    "B": "1872",
+    "C": "1892",
+    "D": "1896"
+   },
+   "answer": "C",
+   "explanation": "Andres Bonifacio and companions founded the Kataas-taasang, Kagalang-galangang Katipunan in July 1892. 1872 is the year of the Cavite Mutiny and the execution of Gomburza; 1896 is when the Revolution broke out; 1898 is the proclamation of independence."
+  },
+  {
+   "id": "C7-G026",
+   "section": "General Information",
+   "question": "Bonifacio Day, honoring Andres Bonifacio, founder of the Katipunan, is celebrated every",
+   "options": {
+    "A": "November 1",
+    "B": "June 19",
+    "C": "December 30",
+    "D": "November 30"
+   },
+   "answer": "D",
+   "explanation": "Bonifacio Day falls on November 30, Bonifacio's birthday. December 30 is Rizal Day, marking Jose Rizal's execution; June 19 is Rizal's birthday; November 1 is All Saints' Day."
+  },
+  {
+   "id": "C7-G027",
+   "section": "General Information",
+   "question": "Araw ng Kagitingan (Day of Valor), commemorating the Fall of Bataan during World War II, is observed every",
+   "options": {
+    "A": "May 1",
+    "B": "April 9",
+    "C": "April 7",
+    "D": "August 21"
+   },
+   "answer": "B",
+   "explanation": "Araw ng Kagitingan is observed on April 9, the date Bataan fell in 1942. May 1 is Labor Day; August 21 is Ninoy Aquino Day; April 7 has no national commemoration of this event."
+  },
+  {
+   "id": "C7-G028",
+   "section": "General Information",
+   "question": "Who was the first President of the Commonwealth of the Philippines, inaugurated in 1935?",
+   "options": {
+    "A": "Manuel A. Roxas",
+    "B": "Sergio Osmeña",
+    "C": "Manuel L. Quezon",
+    "D": "Jose P. Laurel"
+   },
+   "answer": "C",
+   "explanation": "Manuel L. Quezon became the first Commonwealth President in 1935. Sergio Osmeña succeeded Quezon in 1944 as second Commonwealth President; Manuel Roxas was the last Commonwealth President and first President of the Third Republic in 1946; Jose P. Laurel headed the Japanese-sponsored Second Republic (1943-1945)."
+  },
+  {
+   "id": "C7-G029",
+   "section": "General Information",
+   "question": "On what date did the United States recognize Philippine independence, inaugurating the Third Republic?",
+   "options": {
+    "A": "July 4, 1945",
+    "B": "July 4, 1946",
+    "C": "June 12, 1946",
+    "D": "October 24, 1945"
+   },
+   "answer": "B",
+   "explanation": "The United States recognized Philippine independence on July 4, 1946, and Manuel Roxas became President of the Third Republic. June 12 commemorates the 1898 proclamation from Spain; July 4, 1945 was MacArthur's declaration of liberation; October 24, 1945 is the founding date of the United Nations."
+  },
+  {
+   "id": "C7-G030",
+   "section": "General Information",
+   "question": "National Heroes Day in the Philippines is observed on",
+   "options": {
+    "A": "the last Sunday of August",
+    "B": "the fourth Friday of August",
+    "C": "August 31 every year",
+    "D": "the last Monday of August"
+   },
+   "answer": "D",
+   "explanation": "Under RA 9492, National Heroes Day is a regular holiday observed on the last Monday of August. It is not fixed on August 31 and is not observed on a Sunday or Friday."
+  }
+ ]
+}

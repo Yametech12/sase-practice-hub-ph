@@ -6,9 +6,18 @@
  * buyer's password are bound to that order_id. A 4th distinct device gets 403
  * and the bound devices are NOT disturbed.
  *
- * Returns a token embedding { order_id, device_hash, created_at }.
+ * Returns a token embedding { order_id, device_hash, created_at, track }.
  * (created_at is carried for record integrity; exam access no longer
  * depends on it since the weekly schedule was removed Oct 27, 2026.)
+ *
+ * TRACKS (Nov 2026): two separate credential registries.
+ *  - SASE buyers: their 12-char reviewer password, matched against
+ *    _exam-hashes.json, track "sase".
+ *  - Civil Service buyers: a SEPARATE portal access code in the format
+ *    CSE7-XXXX-XXXX (never their PDF password, which opens only the PDF),
+ *    matched against _cse-hashes.json, track "cse".
+ * The matched registry decides the track; the registries never mix, so a
+ * SASE password cannot open CSE exams and a CSE code cannot open SASE exams.
  *
  * Per-IP rate limiting (defense in depth): 20 auth attempts per 10 minutes.
  */
@@ -23,11 +32,16 @@ import {
   rateLimit,
   bindingDevices,
   MAX_DEVICES_PER_PASSWORD,
-  DEVICE_MISMATCH_MSG,
+  deviceMismatchMsg,
+  TRACK_SASE,
+  TRACK_CSE,
 } from "./_exam-lib.js";
 import hashes from "./_exam-hashes.json" with { type: "json" };
 // _exam-hashes.json: { "<sha256(password)>": { order_id, created_at } }, hashes only, never plaintext.
 // Underscore prefix = never routable; it is bundled into the function only.
+import cseHashes from "./_cse-hashes.json" with { type: "json" };
+// _cse-hashes.json: { "<sha256(access code)>": { order_id: "CSE-XXXXXX", created_at } },
+// hashes only, never plaintext. Managed by scripts/cse-admin.py.
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "method_not_allowed" });
@@ -51,9 +65,24 @@ export default async function handler(req, res) {
       return res.status(429).json({ error: "rate_limited", message: "Too many attempts. Please wait a few minutes and try again." });
     }
 
-    const rec = hashes[sha256(password)];
+    const digest = sha256(password);
+    let rec = hashes[digest];
+    let track = TRACK_SASE;
+    if (!rec || !rec.order_id) {
+      rec = cseHashes[digest];
+      track = TRACK_CSE;
+    }
     if (!rec || !rec.order_id) {
       logEvent({ type: "auth_failed", reason: "bad_password", ip_hash: ipHash(req) });
+      // A CSE7-shaped credential gets the CSE wording (the code is separate
+      // from the buyer's PDF password, so pointing them at the PDF would
+      // mislead). Everything else keeps the original SASE wording.
+      if (/^CSE7-/.test(password)) {
+        return res.status(401).json({
+          error: "bad_password",
+          message: "Incorrect access code. Please check the CSE7 access code sent with your Civil Service reviewer and try again.",
+        });
+      }
       return res.status(401).json({
         error: "bad_password",
         message: "Incorrect password. Please check the password from your PDF and try again.",
@@ -74,8 +103,13 @@ export default async function handler(req, res) {
         : createdAtRaw;
     const ISO_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/;
     if (typeof createdAt !== "string" || !ISO_RE.test(createdAt) || Number.isNaN(Date.parse(createdAt))) {
-      logEvent({ type: "auth_config_error", reason: "bad_created_at", order_id: orderId });
-      return res.status(500).json({ error: "server_error", message: "Account setup incomplete. Please message SASE Practice Hub PH." });
+      logEvent({ type: "auth_config_error", reason: "bad_created_at", order_id: orderId, track });
+      return res.status(500).json({
+        error: "server_error",
+        message: track === TRACK_CSE
+          ? "Account setup incomplete. Please message us on Facebook so we can help."
+          : "Account setup incomplete. Please message SASE Practice Hub PH.",
+      });
     }
     const dh = deviceHash(device_id);
 
@@ -99,9 +133,10 @@ export default async function handler(req, res) {
         type: "auth_rejected",
         reason: "device_mismatch",
         order_id: orderId,
+        track,
         ip_hash: ipHash(req),
       });
-      return res.status(403).json({ error: "device_mismatch", message: DEVICE_MISMATCH_MSG });
+      return res.status(403).json({ error: "device_mismatch", message: deviceMismatchMsg(track) });
     }
 
     const now = Date.now();
@@ -109,11 +144,12 @@ export default async function handler(req, res) {
       order_id: orderId,
       device_hash: dh,
       created_at: createdAt,
+      track,
       iat: now,
       exp: now + 24 * 3600 * 1000,
     });
-    logEvent({ type: "auth_ok", order_id: orderId, rebound: outcome.rebound, ip_hash: ipHash(req) });
-    return res.status(200).json({ token });
+    logEvent({ type: "auth_ok", order_id: orderId, track, rebound: outcome.rebound, ip_hash: ipHash(req) });
+    return res.status(200).json({ token, track });
   } catch (e) {
     console.error("exam-auth error:", e.message);
     return res.status(500).json({ error: "server_error", message: "Please try again in a moment." });

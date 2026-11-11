@@ -17,8 +17,9 @@ import {
   readBody,
   sanitizeAnswers,
   validExamN,
-  EXAM_MS,
-  DEVICE_MISMATCH_MSG,
+  trackOf,
+  examMsForTrack,
+  deviceMismatchMsg,
   bindingHasDevice,
 } from "./_exam-lib.js";
 
@@ -32,12 +33,15 @@ export default async function handler(req, res) {
     if (!n || typeof session_id !== "string" || !session_id) {
       return res.status(400).json({ error: "bad_request" });
     }
+    // Per-track timer (SASE 2h, CSE 3h10m) from the token's track.
+    const track = trackOf(p);
+    const EXAM_MS = examMsForTrack(track);
 
     const now = Date.now();
     const outcome = await updateState((state) => {
       const b = state.bindings[p.order_id];
       if (!bindingHasDevice(b, p.device_hash)) {
-        return { status: 403, body: { error: "device_mismatch", message: DEVICE_MISMATCH_MSG } };
+        return { status: 403, body: { error: "device_mismatch", message: deviceMismatchMsg(track) } };
       }
       const rec = (state.exams[p.order_id] || {})[String(n)];
       if (!rec || rec.status !== "in_progress" || rec.session_id !== session_id) {
