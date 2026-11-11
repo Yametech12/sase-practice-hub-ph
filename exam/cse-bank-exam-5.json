@@ -1,0 +1,1964 @@
+{
+  "exam": 5,
+  "questions": [
+    {
+      "id": "C5-V001",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to VIVID.",
+      "options": {
+        "A": "dull and faint",
+        "B": "hard to remember",
+        "C": "bright, clear, and easy to picture",
+        "D": "very brief"
+      },
+      "answer": "C",
+      "explanation": "Vivid means bright, strong, and clear, producing a distinct picture in the mind. Dull and faint are its opposites."
+    },
+    {
+      "id": "C5-V002",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to RELUCTANT.",
+      "options": {
+        "A": "unwilling and hesitant",
+        "B": "eager and ready",
+        "C": "afraid",
+        "D": "careless"
+      },
+      "answer": "A",
+      "explanation": "Reluctant means not wanting to do something, hence unwilling and hesitant. Eager is its opposite; being afraid or careless is a different attitude altogether."
+    },
+    {
+      "id": "C5-V003",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to PRECISE.",
+      "options": {
+        "A": "exact and accurate",
+        "B": "rough and careless",
+        "C": "polite and formal",
+        "D": "expensive"
+      },
+      "answer": "A",
+      "explanation": "Precise means exact and accurate in every detail, the quality required in measurements and figures. Rough and careless is its opposite."
+    },
+    {
+      "id": "C5-V004",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to INEVITABLE.",
+      "options": {
+        "A": "certain to happen and impossible to avoid",
+        "B": "easy to avoid",
+        "C": "rarely discussed",
+        "D": "very surprising"
+      },
+      "answer": "A",
+      "explanation": "Inevitable describes something that is sure to happen and cannot be avoided, like sunrise. If it can be avoided, it is not inevitable."
+    },
+    {
+      "id": "C5-V005",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to FEASIBLE.",
+      "options": {
+        "A": "impossible in practice",
+        "B": "very costly",
+        "C": "possible to do or achieve",
+        "D": "widely popular"
+      },
+      "answer": "C",
+      "explanation": "Feasible means capable of being done successfully, possible in practice. A plan that cannot be carried out is not feasible, whatever its cost or popularity."
+    },
+    {
+      "id": "C5-V006",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to CANDOR.",
+      "options": {
+        "A": "flattery",
+        "B": "caution",
+        "C": "secrecy",
+        "D": "frankness"
+      },
+      "answer": "D",
+      "explanation": "Candor is the quality of being frank and honest in speaking. Flattery and secrecy hide the truth, and caution alone does not mean openness."
+    },
+    {
+      "id": "C5-V007",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to OBSOLETE.",
+      "options": {
+        "A": "brand new",
+        "B": "very expensive",
+        "C": "no longer in use",
+        "D": "hard to repair"
+      },
+      "answer": "C",
+      "explanation": "Obsolete describes something outdated and no longer used, like a replaced machine. Brand new is its opposite, and price or repairability is not part of the meaning."
+    },
+    {
+      "id": "C5-V008",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to SUPERFLUOUS.",
+      "options": {
+        "A": "absolutely essential",
+        "B": "more than what is needed",
+        "C": "barely enough",
+        "D": "carefully counted"
+      },
+      "answer": "B",
+      "explanation": "Superfluous means exceeding what is necessary, an unnecessary extra. Essential and barely enough describe the opposite end of quantity."
+    },
+    {
+      "id": "C5-V009",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to SCATTER.",
+      "options": {
+        "A": "spread out",
+        "B": "gather",
+        "C": "throw around",
+        "D": "waste"
+      },
+      "answer": "B",
+      "explanation": "Scatter means to throw or spread things in many directions; gather means to bring them together. Spread out and throw around are near-synonyms of scatter, the usual trap in antonym items."
+    },
+    {
+      "id": "C5-V010",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to SILENT.",
+      "options": {
+        "A": "quiet",
+        "B": "noisy",
+        "C": "still",
+        "D": "motionless"
+      },
+      "answer": "B",
+      "explanation": "Silent means making no sound; noisy is its direct opposite. Quiet and still are near-synonyms of silent, and motionless is about movement, not sound."
+    },
+    {
+      "id": "C5-V011",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to PERMANENT.",
+      "options": {
+        "A": "lasting",
+        "B": "endless",
+        "C": "fixed forever",
+        "D": "temporary"
+      },
+      "answer": "D",
+      "explanation": "Permanent means lasting forever without change; temporary means lasting only a limited time. Lasting and endless are synonyms of permanent."
+    },
+    {
+      "id": "C5-V012",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to GENEROUS.",
+      "options": {
+        "A": "charitable",
+        "B": "very costly",
+        "C": "stingy",
+        "D": "hospitable"
+      },
+      "answer": "C",
+      "explanation": "Generous means willing to give freely; stingy means unwilling to give or spend. Charitable and hospitable are close in spirit to generous, and wasteful is about spending carelessly, not refusing to give."
+    },
+    {
+      "id": "C5-V013",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "The list of requirements is posted on the bulletin board.",
+        "B": "The list of requirements are posted on the bulletin board.",
+        "C": "The list of requirements have been posted on the bulletin board.",
+        "D": "The list of requirements were posted on the bulletin board."
+      },
+      "answer": "A",
+      "explanation": "The subject is list (singular), not requirements. In a phrase like 'the list of requirements,' the verb agrees with the head noun list, so the singular is is correct."
+    },
+    {
+      "id": "C5-V014",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "Each of the applicants have submitted a valid ID.",
+        "B": "Each of the applicants are submitting a valid ID.",
+        "C": "Each of the applicants has submitted a valid ID.",
+        "D": "Each of the applicants submit a valid ID."
+      },
+      "answer": "C",
+      "explanation": "Each is always singular even when followed by a plural phrase ('of the applicants'), so the singular verb has is required."
+    },
+    {
+      "id": "C5-V015",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "The mayor, together with her staff, attend the flag ceremony every Monday.",
+        "B": "The mayor, together with her staff, have attended the flag ceremony every Monday.",
+        "C": "The mayor, together with her staff, are attending the flag ceremony every Monday.",
+        "D": "The mayor, together with her staff, attends the flag ceremony every Monday."
+      },
+      "answer": "D",
+      "explanation": "Phrases set off by commas with 'together with' do not change the subject. The subject is mayor (singular), so attends is correct."
+    },
+    {
+      "id": "C5-V016",
+      "section": "Verbal",
+      "question": "Choose the sentence with the correct verb form.",
+      "options": {
+        "A": "By this time tomorrow, the results will have being released.",
+        "B": "By this time tomorrow, the results will has been released.",
+        "C": "By this time tomorrow, the results would had been released.",
+        "D": "By this time tomorrow, the results will have been released."
+      },
+      "answer": "D",
+      "explanation": "'By this time tomorrow' signals the future perfect: will have + past participle (been released). Will has and would had are never correct forms."
+    },
+    {
+      "id": "C5-V017",
+      "section": "Verbal",
+      "question": "Which sentence uses the pronoun correctly?",
+      "options": {
+        "A": "The supervisor gave the forms to Ana and I.",
+        "B": "The supervisor gave the forms to Ana and me.",
+        "C": "The supervisor gave the forms to Ana and myself.",
+        "D": "Between you and I, the forms are ready."
+      },
+      "answer": "B",
+      "explanation": "After a preposition (to), use the objective case me. 'Ana and I' would be correct only as a subject. Myself is reflexive and needs a matching subject earlier in the sentence."
+    },
+    {
+      "id": "C5-V018",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "Fifty pesos is enough for the fare.",
+        "B": "Fifty pesos are enough for the fare.",
+        "C": "Fifty pesos have been enough for the fare.",
+        "D": "Fifty pesos were enough for the fare alone yesterday spent."
+      },
+      "answer": "A",
+      "explanation": "Amounts of money treated as one sum take a singular verb. Fifty pesos here is a single amount for one fare, so is is correct."
+    },
+    {
+      "id": "C5-V019",
+      "section": "Verbal",
+      "question": "Choose the sentence with correct parallelism.",
+      "options": {
+        "A": "The job requires encoding data, filing documents, and to answer phone calls.",
+        "B": "The job requires to encode data, filing documents, and phone calls are answered.",
+        "C": "The job requires encoding data, filing documents, and answering phone calls.",
+        "D": "The job requires encoding data, documents are filed, and answering phone calls."
+      },
+      "answer": "C",
+      "explanation": "Items in a series must share the same form. All three activities are gerunds (encoding, filing, answering) in the correct sentence; mixing infinitives or clauses breaks parallelism."
+    },
+    {
+      "id": "C5-V020",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "Scarcely had the program started than the rain poured.",
+        "B": "Scarcely the program had started when the rain poured.",
+        "C": "Scarcely had the program start when the rain poured.",
+        "D": "Scarcely had the program started when the rain poured."
+      },
+      "answer": "D",
+      "explanation": "Scarcely pairs with when (not than, which pairs with no sooner). After scarcely at the start, invert the subject and auxiliary: had the program started."
+    },
+    {
+      "id": "C5-V021",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "The data encoded yesterday was being encode correctly.",
+        "B": "The data encoded yesterday were encoded correctly.",
+        "C": "The data encoded yesterday is encoded correctly always.",
+        "D": "The data encoded yesterday has encoded correctly."
+      },
+      "answer": "B",
+      "explanation": "In formal usage tested by the CSE, data is plural (datum is singular), so were is used. Options with 'encode' as a past participle and the active has encoded are wrong forms."
+    },
+    {
+      "id": "C5-V022",
+      "section": "Verbal",
+      "question": "Choose the correctly punctuated sentence.",
+      "options": {
+        "A": "The office ordered paper ink and folders, for the seminar.",
+        "B": "The office ordered, paper, ink and folders for the seminar.",
+        "C": "The office ordered paper, ink and folders for, the seminar.",
+        "D": "The office ordered paper, ink, and folders for the seminar."
+      },
+      "answer": "D",
+      "explanation": "Commas separate items in a series, including before the final 'and' (Oxford comma). A comma must never separate a verb from its object or a preposition from its object."
+    },
+    {
+      "id": "C5-V023",
+      "section": "Verbal",
+      "question": "Choose the best word to complete the sentence: 'Because the road was flooded, the delivery was _____ for two days.'",
+      "options": {
+        "A": "suspended",
+        "B": "continued",
+        "C": "celebrated",
+        "D": "delivered"
+      },
+      "answer": "A",
+      "explanation": "Flooding stops operations, so suspended (temporarily stopped) fits the cause given by 'because.' The other verbs contradict the reason stated."
+    },
+    {
+      "id": "C5-V024",
+      "section": "Verbal",
+      "question": "Choose the best word to complete the sentence: 'The instructions were so _____ that no one asked a question afterward.'",
+      "options": {
+        "A": "vague",
+        "B": "temporary",
+        "C": "lengthy",
+        "D": "technical"
+      },
+      "answer": "B",
+      "explanation": "The result clause tells the answer: nobody asked questions because the instructions were clear. Vague would produce more questions, and lengthy or technical alone does not explain zero questions."
+    },
+    {
+      "id": "C5-V025",
+      "section": "Verbal",
+      "question": "Choose the best word to complete the sentence: 'Employees must _____ with the new reporting format starting Monday.'",
+      "options": {
+        "A": "complain",
+        "B": "comply",
+        "C": "compare",
+        "D": "compete"
+      },
+      "answer": "B",
+      "explanation": "Comply with is the correct collocation meaning to obey or follow a rule. The other verbs do not take 'with' in this required sense."
+    },
+    {
+      "id": "C5-V026",
+      "section": "Verbal",
+      "question": "Choose the best word to complete the sentence: 'The treasurer presented a _____ report, giving exact figures for every expense.'",
+      "options": {
+        "A": "detailed",
+        "B": "vague",
+        "C": "brief",
+        "D": "doubtful"
+      },
+      "answer": "A",
+      "explanation": "Exact figures for every expense describe a detailed report. Vague is the opposite, and brief contradicts 'every expense.'"
+    },
+    {
+      "id": "C5-V027",
+      "section": "Verbal",
+      "question": "Choose the best word to complete the sentence: 'To avoid errors, double-check the figures before you _____ the form.'",
+      "options": {
+        "A": "submit",
+        "B": "receive",
+        "C": "borrow",
+        "D": "display"
+      },
+      "answer": "A",
+      "explanation": "The sequence is checking first, then handing in the form. Submit is the only verb that completes the checking-then-filing flow."
+    },
+    {
+      "id": "C5-V028",
+      "section": "Verbal",
+      "question": "Choose the best word to complete the sentence: 'The old bridge was declared unsafe, so it was _____ to traffic.'",
+      "options": {
+        "A": "opened",
+        "B": "devoted",
+        "C": "closed",
+        "D": "exposed"
+      },
+      "answer": "C",
+      "explanation": "An unsafe structure is closed to traffic. The conjunction 'so' requires a result that follows from being unsafe."
+    },
+    {
+      "id": "C5-V029",
+      "section": "Verbal",
+      "question": "Arrange the sentences in the most logical order: (1) Then, rinse the cup with clean water. (2) To wash the reusable cup, first pour out any leftover drink. (3) Finally, let it air-dry before the next use. (4) Next, scrub it with soap and a sponge.",
+      "options": {
+        "A": "2-1-4-3",
+        "B": "4-2-1-3",
+        "C": "2-4-1-3",
+        "D": "2-4-3-1"
+      },
+      "answer": "C",
+      "explanation": "Signal words fix the order: first (2), next (4 scrubbing), then (1 rinsing off the soap), finally (3 drying). Rinsing before scrubbing (2-1-4-3) would wash away nothing because no soap has been applied yet."
+    },
+    {
+      "id": "C5-V030",
+      "section": "Verbal",
+      "question": "Arrange the sentences in the most logical order: (1) As a result, the seedlings survived the dry week. (2) The gardener watered the seedlings every morning. (3) A dry week followed, with no rain at all. (4) She had just planted the seedlings the day before the dry spell.",
+      "options": {
+        "A": "3-4-2-1",
+        "B": "4-3-2-1",
+        "C": "4-2-3-1",
+        "D": "2-4-3-1"
+      },
+      "answer": "B",
+      "explanation": "Time order: planting (4) comes before the dry week begins (3); watering (2) is the response during the dry week; the result (1) must be last because 'as a result' needs the watering before it."
+    },
+    {
+      "id": "C5-V031",
+      "section": "Verbal",
+      "question": "Arrange the sentences in the most logical order: (1) It also keeps a record that the office can check later. (2) A logbook is a simple tool used in many offices. (3) In it, staff write the date and purpose of every visit. (4) This record helps the office track who entered the building.",
+      "options": {
+        "A": "2-3-1-4",
+        "B": "2-1-3-4",
+        "C": "3-2-1-4",
+        "D": "2-3-4-1"
+      },
+      "answer": "A",
+      "explanation": "Start with the definition (2), then what is written in it (3). Sentence 1 begins 'It also,' so it must follow another benefit or function already mentioned; 4 then explains the value of that record, closing the paragraph."
+    },
+    {
+      "id": "C5-V032",
+      "section": "Verbal",
+      "question": "Arrange the sentences in the most logical order: (1) He reviewed the lesson for thirty minutes each night. (2) Because of this routine, his quiz scores steadily improved. (3) Marco wanted to raise his grades in science. (4) So he planned a simple routine he could follow daily.",
+      "options": {
+        "A": "3-4-1-2",
+        "B": "3-1-4-2",
+        "C": "1-3-4-2",
+        "D": "3-4-2-1"
+      },
+      "answer": "A",
+      "explanation": "Goal first (3), plan in response ('so,' 4), the routine in action (1), then the outcome introduced by 'because of this routine' (2), which must come after the routine is described."
+    },
+    {
+      "id": "C5-V033",
+      "section": "Verbal",
+      "passage": "In 2023, the city library extended its hours on weekends after a survey showed that most working residents could visit only on Saturdays and Sundays. Within six months, weekend attendance rose by 40 percent, and requests for study rooms doubled. The library director credited the change not to new books, since the collection had not grown, but to hours that finally matched the community's schedule.",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "A": "Changing library hours to fit residents' schedules greatly increased weekend use.",
+        "B": "The city library bought many new books in 2023.",
+        "C": "Working residents prefer reading at home on weekends.",
+        "D": "Study rooms are the most popular part of the library."
+      },
+      "answer": "A",
+      "explanation": "The passage centers on the schedule change and its effect. New books are explicitly ruled out by the director, and the other choices mention details that are either contradicted or never stated."
+    },
+    {
+      "id": "C5-V034",
+      "section": "Verbal",
+      "passage": "In 2023, the city library extended its hours on weekends after a survey showed that most working residents could visit only on Saturdays and Sundays. Within six months, weekend attendance rose by 40 percent, and requests for study rooms doubled. The library director credited the change not to new books, since the collection had not grown, but to hours that finally matched the community's schedule.",
+      "question": "According to the passage, why did weekend attendance rise?",
+      "options": {
+        "A": "The library added thousands of new books.",
+        "B": "The library's hours finally matched when residents were free to visit.",
+        "C": "Residents were required to visit on weekends.",
+        "D": "The study rooms were renovated."
+      },
+      "answer": "B",
+      "explanation": "The director's own explanation gives the cause: hours matched the community's schedule. The collection had not grown, and no renovation or requirement is mentioned."
+    },
+    {
+      "id": "C5-V035",
+      "section": "Verbal",
+      "passage": "In 2023, the city library extended its hours on weekends after a survey showed that most working residents could visit only on Saturdays and Sundays. Within six months, weekend attendance rose by 40 percent, and requests for study rooms doubled. The library director credited the change not to new books, since the collection had not grown, but to hours that finally matched the community's schedule.",
+      "question": "Which statement can be inferred from the passage?",
+      "options": {
+        "A": "Surveys are unnecessary before changing public services.",
+        "B": "Weekend attendance rose because weekday hours were cut.",
+        "C": "All residents work on weekdays.",
+        "D": "Services are used more when their schedules fit the users' free time."
+      },
+      "answer": "D",
+      "explanation": "The result supports the general lesson that timing affects use of a service. Nothing says weekday hours were cut or that every resident works weekdays; the survey in fact proved useful, so it was not unnecessary."
+    },
+    {
+      "id": "C5-V036",
+      "section": "Verbal",
+      "passage": "Mangroves protect coastal villages in two ways. Their dense roots slow down storm waves before the waves reach homes, and the same roots trap soil, keeping the shoreline from washing away. However, when mangroves are cut for fishponds, both protections disappear at once, and villages that once flooded rarely may find the sea reaching their doors after every strong storm.",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "A": "Fishponds are more profitable than mangrove forests.",
+        "B": "Storm waves are the strongest natural force on the coast.",
+        "C": "Mangroves give coastal villages two kinds of protection that are lost when the trees are cut.",
+        "D": "Villages should be built far from the shoreline."
+      },
+      "answer": "C",
+      "explanation": "Every sentence supports the two protections and their loss. Profitability and relocation are never discussed, so they cannot be the main idea."
+    },
+    {
+      "id": "C5-V037",
+      "section": "Verbal",
+      "passage": "Mangroves protect coastal villages in two ways. Their dense roots slow down storm waves before the waves reach homes, and the same roots trap soil, keeping the shoreline from washing away. However, when mangroves are cut for fishponds, both protections disappear at once, and villages that once flooded rarely may find the sea reaching their doors after every strong storm.",
+      "question": "According to the passage, how do mangrove roots protect the shoreline?",
+      "options": {
+        "A": "They trap soil so the shore does not wash away.",
+        "B": "They deepen the water near the shore.",
+        "C": "They push storm waves back to the sea.",
+        "D": "They make the soil too hard for building."
+      },
+      "answer": "A",
+      "explanation": "The passage states the roots trap soil, preventing erosion. The roots slow waves rather than push them back, and deepening water or hardening soil is not mentioned."
+    },
+    {
+      "id": "C5-V038",
+      "section": "Verbal",
+      "passage": "Mangroves protect coastal villages in two ways. Their dense roots slow down storm waves before the waves reach homes, and the same roots trap soil, keeping the shoreline from washing away. However, when mangroves are cut for fishponds, both protections disappear at once, and villages that once flooded rarely may find the sea reaching their doors after every strong storm.",
+      "question": "What happens when mangroves are cut for fishponds, based on the passage?",
+      "options": {
+        "A": "Villages gain a new source of income with no risks.",
+        "B": "Villages lose both protections and may flood after every strong storm.",
+        "C": "The shoreline grows wider each year.",
+        "D": "Storm waves become weaker near the village."
+      },
+      "answer": "B",
+      "explanation": "The last sentence states both protections disappear and flooding becomes frequent. Income, a wider shoreline, and weaker waves are not stated."
+    },
+    {
+      "id": "C5-V039",
+      "section": "Verbal",
+      "passage": "Office records were once kept only on paper, and finding one file could take a clerk an entire morning of opening cabinets. With digital records, the same file can be found in seconds by typing a keyword. Yet the passage to digital files is not free of risk: a single power failure or a corrupted drive can destroy records that paper would have kept for decades, which is why careful offices keep backups in more than one place.",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "A": "Paper records are always better than digital records.",
+        "B": "Clerks dislike using computers in the office.",
+        "C": "Power failures happen only in old offices.",
+        "D": "Digital records are much faster to search but need backups because they can be lost suddenly."
+      },
+      "answer": "D",
+      "explanation": "The passage balances speed against risk and ends with the backup practice. It does not claim paper is always better; it says careful offices back up digital files."
+    },
+    {
+      "id": "C5-V040",
+      "section": "Verbal",
+      "passage": "Office records were once kept only on paper, and finding one file could take a clerk an entire morning of opening cabinets. With digital records, the same file can be found in seconds by typing a keyword. Yet the passage to digital files is not free of risk: a single power failure or a corrupted drive can destroy records that paper would have kept for decades, which is why careful offices keep backups in more than one place.",
+      "question": "According to the passage, why do careful offices keep backups in more than one place?",
+      "options": {
+        "A": "Paper records take too much cabinet space.",
+        "B": "Keywords cannot be used on a single drive.",
+        "C": "A power failure or corrupted drive can destroy digital records.",
+        "D": "Clerks need copies for every visitor."
+      },
+      "answer": "C",
+      "explanation": "The stated reason is the risk of sudden loss from power failure or a corrupted drive. Cabinet space explains the old system, not the backups."
+    },
+    {
+      "id": "C5-V041",
+      "section": "Verbal",
+      "passage": "Office records were once kept only on paper, and finding one file could take a clerk an entire morning of opening cabinets. With digital records, the same file can be found in seconds by typing a keyword. Yet the passage to digital files is not free of risk: a single power failure or a corrupted drive can destroy records that paper would have kept for decades, which is why careful offices keep backups in more than one place.",
+      "question": "Which phrase in the passage signals that a contrasting idea is about to be given?",
+      "options": {
+        "A": "Once",
+        "B": "With",
+        "C": "Which is why",
+        "D": "Yet"
+      },
+      "answer": "D",
+      "explanation": "Yet is a contrast signal: it turns from the advantage (speed) to the risk. 'Which is why' signals a result or conclusion, and once/with set time or means."
+    },
+    {
+      "id": "C5-V042",
+      "section": "Verbal",
+      "question": "Ano ang kasingkahulugan ng salitang MALUMANAY?",
+      "options": {
+        "A": "marahas",
+        "B": "matapang",
+        "C": "malakas",
+        "D": "mahinahon"
+      },
+      "answer": "D",
+      "explanation": "Ang malumanay ay nangangahulugang mahinahon o banayad sa pananalita at kilos. Ang marahas at malakas ay kabaligtaran ng diwa nito."
+    },
+    {
+      "id": "C5-V043",
+      "section": "Verbal",
+      "question": "Ano ang kasalungat ng salitang MATIPID?",
+      "options": {
+        "A": "masinop",
+        "B": "maingat sa pera",
+        "C": "kuripot",
+        "D": "magastos"
+      },
+      "answer": "D",
+      "explanation": "Ang matipid ay maingat gumastos; ang kasalungat nito ay magastos. Ang masinop at kuripot ay malapit sa kahulugan ng matipid, kaya sila ang karaniwang patibong sa kasalungat na tanong."
+    },
+    {
+      "id": "C5-V044",
+      "section": "Verbal",
+      "question": "Ano ang kasingkahulugan ng salitang NAGLULUKSA?",
+      "options": {
+        "A": "nagdiriwang",
+        "B": "nagpapahinga",
+        "C": "nagdalamhati",
+        "D": "nagliliwaliw"
+      },
+      "answer": "C",
+      "explanation": "Ang nagluluksa ay nagdadalamhati dahil sa pagkawala o pagkamatay ng mahal sa buhay. Ang nagdiriwang at nagliliwaliw ay masaya, kabaligtaran ng lungkot ng pagluluksa."
+    },
+    {
+      "id": "C5-V045",
+      "section": "Verbal",
+      "question": "Piliin ang salitang may wastong baybay.",
+      "options": {
+        "A": "kinakaylangan",
+        "B": "kinakailanggan",
+        "C": "kinakaelangan",
+        "D": "kinakailangan"
+      },
+      "answer": "D",
+      "explanation": "Ang wastong baybay ay kinakailangan, mula sa salitang-ugat na kailangan na inuulit ang unang pantig (ki-na-ka-i-la-ngan). Ang ibang pagpipilian ay may kulang o sobrang titik."
+    },
+    {
+      "id": "C5-V046",
+      "section": "Verbal",
+      "question": "Alin ang wastong gamit ng 'nang' at 'ng'?",
+      "options": {
+        "A": "Umalis siya ng maaga upang hindi maipit sa trapiko.",
+        "B": "Kumain ng tahimik ang mga bata sa silid.",
+        "C": "Umalis siya nang maaga upang hindi maipit sa trapiko.",
+        "D": "Ibinigay nang guro ang aklat sa mag-aaral."
+      },
+      "answer": "C",
+      "explanation": "Ginagamit ang 'nang' bilang pang-angkop na katumbas ng 'upang/noong' at sa mga pang-abay (umalis nang maaga). Ang 'ng' ang ginagamit bilang pantukoy sa bagay na tinutukoy (kumain ng..., ibinigay ng guro). Sa ikalawang pangungusap, dapat 'nang tahimik'; sa ikatlo, dapat 'ng guro.'"
+    },
+    {
+      "id": "C5-V047",
+      "section": "Verbal",
+      "question": "Alin ang pangungusap na gumagamit ng wastong pang-angkop?",
+      "options": {
+        "A": "Ang masipag magsasaka ay maagang gumigising.",
+        "B": "Ang masipag ng magsasaka ay maagang gumigising.",
+        "C": "Ang masipag a magsasaka ay maagang gumigising.",
+        "D": "Ang masipag na magsasaka ay maagang gumigising."
+      },
+      "answer": "D",
+      "explanation": "Ang pang-angkop na 'na' ang nag-uugnay sa pang-uri (masipag) at sa pangngalang binibigyang-turing (magsasaka) kapag nagtatapos sa katinig ang unang salita. Hindi ginagamit ang 'ng' o 'a' sa ganitong ugnayan."
+    },
+    {
+      "id": "C5-V048",
+      "section": "Verbal",
+      "question": "Alin sa mga sumusunod ang halimbawa ng pang-abay na pamaraan?",
+      "options": {
+        "A": "Tahimik na nagbasa ang bata sa sulok.",
+        "B": "Ang bata ay nagbasa sa sulok kahapon.",
+        "C": "Dalawang aklat ang binasa ng bata.",
+        "D": "Ang aklat na iyon ay makapal."
+      },
+      "answer": "A",
+      "explanation": "Ang pang-abay na pamaraan ay sumasagot sa tanong na 'paano' (tahimik na nagbasa). Ang 'kahapon' ay pang-abay na pamanahon, ang 'dalawang' ay pang-uring pamilang, at ang 'makapal' ay pang-uri."
+    },
+    {
+      "id": "C5-V049",
+      "section": "Verbal",
+      "question": "Alin ang wastong pagkakasunod ng mga salita sa pangungusap na walang ay?",
+      "options": {
+        "A": "Ang bagong silid-aralan ng paaralan maganda ay.",
+        "B": "Maganda ang bagong silid-aralan ng paaralan.",
+        "C": "Maganda ay ang bagong silid-aralan ng paaralan.",
+        "D": "Ang maganda ay silid-aralan bagong ng paaralan."
+      },
+      "answer": "B",
+      "explanation": "Sa karaniwang ayos na walang 'ay' (di-karaniwang ayos), nauuna ang panaguri (maganda) at sumusunod ang simuno (ang bagong silid-aralan). Ang ibang pagpipilian ay may baluktot na ayos o maling pagkakalagay ng 'ay.'"
+    },
+    {
+      "id": "C5-V050",
+      "section": "Verbal",
+      "question": "Alin ang tamang gamit ng gitling?",
+      "options": {
+        "A": "Nag-aral siya sa bahay bahayan ng kanyang pinsan.",
+        "B": "Nag-aral siya sa bahay-bahayan ng kanyang-pinsan.",
+        "C": "Nag-aral siya-sa bahay-bahayan ng kanyang pinsan.",
+        "D": "Nag-aral siya sa bahay-bahayan ng kanyang pinsan."
+      },
+      "answer": "D",
+      "explanation": "Ang inuulit na salita (bahay-bahayan) ay sinusulat na may gitling. Hindi nilalagyan ng gitling ang pagitan ng pang-uring nagmamay-ari (kanyang) at ng pangngalan, at hindi idinudugtong ng gitling ang pang-ukol sa sumusunod na salita."
+    },
+    {
+      "id": "C5-V051",
+      "section": "Verbal",
+      "question": "Ayusin ang mga pangungusap sa pinakawastong pagkakasunod: (1) Dahil dito, hindi na sila nahuhuli sa klase. (2) Bumili ang magkapatid ng bisikleta noong nakaraang buwan. (3) Malayo ang kanilang bahay mula sa paaralan. (4) Ginagamit nila ito araw-araw sa pagpasok.",
+      "options": {
+        "A": "2-3-4-1",
+        "B": "3-4-2-1",
+        "C": "3-2-4-1",
+        "D": "3-2-1-4"
+      },
+      "answer": "C",
+      "explanation": "Nauuna ang sitwasyon (malayo ang bahay, 3), kasunod ang pagbili ng bisikleta (2), ang araw-araw na paggamit (4), at huli ang resulta na sinisimulan ng 'dahil dito' (1). Hindi maaaring mauna ang paggamit (4) sa pagbili (2)."
+    },
+    {
+      "id": "C5-V052",
+      "section": "Verbal",
+      "question": "Ayusin ang mga pangungusap sa pinakawastong pagkakasunod: (1) Una, hugasan ang mga kamay ng sabon at tubig. (2) Ang pagluluto ay mas ligtas kung malinis ang nagluluto. (3) Pagkatapos, patuyuin ang mga kamay ng malinis na tuwalya. (4) Sunod, isuot ang apron at itali ang buhok.",
+      "options": {
+        "A": "1-2-3-4",
+        "B": "2-1-3-4",
+        "C": "2-3-1-4",
+        "D": "2-1-4-3"
+      },
+      "answer": "B",
+      "explanation": "Panimula muna ang pangungusap 2 tungkol sa kalinisan. 'Una' ang nagbubukas ng hakbang (1); 'pagkatapos' (3) ang kasunod na hakbang sa paghuhugas; 'sunod' (4) ang huling hakbang bago magluto."
+    },
+    {
+      "id": "C5-N001",
+      "section": "Numerical",
+      "question": "What is the next number in the series? 5, 9, 15, 23, 33, ___",
+      "options": {
+        "A": "43",
+        "B": "45",
+        "C": "47",
+        "D": "41"
+      },
+      "answer": "B",
+      "explanation": "Look at the differences: 4, 6, 8, 10. Each difference grows by 2, so the next difference is 12, and 33 + 12 = 45. The distractors come from adding 10 again (43) or adding 14 (47)."
+    },
+    {
+      "id": "C5-N002",
+      "section": "Numerical",
+      "question": "What is the next number in the series? 4, 5, 7, 11, 19, ___",
+      "options": {
+        "A": "27",
+        "B": "31",
+        "C": "35",
+        "D": "39"
+      },
+      "answer": "C",
+      "explanation": "Each term is twice the previous term minus 3: 4x2-3=5, 5x2-3=7, 7x2-3=11, 11x2-3=19. Next: 19x2-3=35."
+    },
+    {
+      "id": "C5-N003",
+      "section": "Numerical",
+      "question": "What is the next number in the series? 3, 8, 15, 24, 35, ___",
+      "options": {
+        "A": "48",
+        "B": "46",
+        "C": "50",
+        "D": "44"
+      },
+      "answer": "A",
+      "explanation": "Each term is one less than a square: 2 squared minus 1 = 3, 3 squared minus 1 = 8, then 15, 24, 35. The next is 7 squared minus 1 = 48. The differences (5, 7, 9, 11, 13) confirm it."
+    },
+    {
+      "id": "C5-N004",
+      "section": "Numerical",
+      "question": "What is the next number in the series? 2, 5, 10, 13, 26, ___",
+      "options": {
+        "A": "52",
+        "B": "29",
+        "C": "31",
+        "D": "28"
+      },
+      "answer": "B",
+      "explanation": "The operations alternate: +3, x2, +3, x2. So after 26 comes 26 + 3 = 29. Multiplying again (52) skips the +3 step in the pattern."
+    },
+    {
+      "id": "C5-N005",
+      "section": "Numerical",
+      "question": "What is the next number in the series? 60, 54, 49, 45, 42, ___",
+      "options": {
+        "A": "40",
+        "B": "39",
+        "C": "41",
+        "D": "38"
+      },
+      "answer": "A",
+      "explanation": "The subtractions shrink: minus 6, minus 5, minus 4, minus 3. The next subtraction is minus 2, so 42 - 2 = 40."
+    },
+    {
+      "id": "C5-N006",
+      "section": "Numerical",
+      "question": "What is the value of 8 + 3 x (10 - 4)?",
+      "options": {
+        "A": "15",
+        "B": "26",
+        "C": "54",
+        "D": "60"
+      },
+      "answer": "B",
+      "explanation": "Follow MDAS with parentheses first: (10 - 4) = 6. Then multiply: 3 x 6 = 18. Then add: 8 + 18 = 26. Working left to right without parentheses gives the wrong 60."
+    },
+    {
+      "id": "C5-N007",
+      "section": "Numerical",
+      "question": "What is the value of (48 / 6) x 5 - 9?",
+      "options": {
+        "A": "40",
+        "B": "31",
+        "C": "49",
+        "D": "25"
+      },
+      "answer": "B",
+      "explanation": "Parentheses first: 48 / 6 = 8. Multiply: 8 x 5 = 40. Subtract: 40 - 9 = 31."
+    },
+    {
+      "id": "C5-N008",
+      "section": "Numerical",
+      "question": "What is the value of 15 x 4 - 36 / 4 + 7?",
+      "options": {
+        "A": "58",
+        "B": "51",
+        "C": "13",
+        "D": "67"
+      },
+      "answer": "A",
+      "explanation": "Multiply and divide before adding or subtracting: 15 x 4 = 60 and 36 / 4 = 9. Then 60 - 9 + 7 = 58, computed left to right."
+    },
+    {
+      "id": "C5-N009",
+      "section": "Numerical",
+      "question": "A guard works 7 days a week for 13 weeks with no day off. How many days did he work in all?",
+      "options": {
+        "A": "84",
+        "B": "98",
+        "C": "91",
+        "D": "20"
+      },
+      "answer": "C",
+      "explanation": "Multiply the days per week by the number of weeks: 7 x 13 = 91 days. Adding (20) is the trap when the problem asks for a repeated total."
+    },
+    {
+      "id": "C5-N010",
+      "section": "Numerical",
+      "question": "What is 3/4 + 2/3?",
+      "options": {
+        "A": "1 5/12",
+        "B": "17/24",
+        "C": "5/7",
+        "D": "1 1/12"
+      },
+      "answer": "A",
+      "explanation": "Use the common denominator 12: 3/4 = 9/12 and 2/3 = 8/12. Sum = 17/12 = 1 5/12. Adding numerators and denominators separately (5/7) is the classic error."
+    },
+    {
+      "id": "C5-N011",
+      "section": "Numerical",
+      "question": "What is 5/6 - 1/4?",
+      "options": {
+        "A": "4/2",
+        "B": "2/3",
+        "C": "1/2",
+        "D": "7/12"
+      },
+      "answer": "D",
+      "explanation": "Common denominator 12: 5/6 = 10/12 and 1/4 = 3/12. Difference = 7/12."
+    },
+    {
+      "id": "C5-N012",
+      "section": "Numerical",
+      "question": "What is 25% of 640?",
+      "options": {
+        "A": "160",
+        "B": "150",
+        "C": "175",
+        "D": "140"
+      },
+      "answer": "A",
+      "explanation": "25% is one-fourth. One-fourth of 640 is 640 / 4 = 160. Remember: 'of' in percent problems means multiply, and 25% = 1/4 is a shortcut worth memorizing."
+    },
+    {
+      "id": "C5-N013",
+      "section": "Numerical",
+      "question": "A price of 850 pesos was raised by 10%. What is the new price?",
+      "options": {
+        "A": "860",
+        "B": "935",
+        "C": "940",
+        "D": "925"
+      },
+      "answer": "B",
+      "explanation": "10% of 850 is 85. Add the increase: 850 + 85 = 935. Faster method: multiply by 1.10, because the new price is 110% of the old one."
+    },
+    {
+      "id": "C5-N014",
+      "section": "Numerical",
+      "question": "What is 0.375 expressed as a fraction in lowest terms?",
+      "options": {
+        "A": "3/8",
+        "B": "37/100",
+        "C": "3/75",
+        "D": "5/8"
+      },
+      "answer": "A",
+      "explanation": "0.375 = 375/1000. Divide numerator and denominator by 125 to get 3/8. Writing 37/100 drops the last digit and changes the value."
+    },
+    {
+      "id": "C5-N015",
+      "section": "Numerical",
+      "question": "If 3/5 of a class of 45 students are girls, how many boys are there?",
+      "options": {
+        "A": "27",
+        "B": "18",
+        "C": "15",
+        "D": "20"
+      },
+      "answer": "B",
+      "explanation": "Girls: 3/5 of 45 = 27. Boys are the rest: 45 - 27 = 18. Answering 27 is the trap: the question asks for boys, not girls."
+    },
+    {
+      "id": "C5-N016",
+      "section": "Numerical",
+      "question": "The ratio of boys to girls in a class is 3:5. If there are 15 boys, how many girls are there?",
+      "options": {
+        "A": "9",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "answer": "C",
+      "explanation": "Set up the proportion 3/5 = 15/x. The boys' value was multiplied by 5 (3 x 5 = 15), so do the same to the girls: 5 x 5 = 25."
+    },
+    {
+      "id": "C5-N017",
+      "section": "Numerical",
+      "question": "A recipe uses flour and sugar in the ratio 4:1. How many cups of sugar are needed for 12 cups of flour?",
+      "options": {
+        "A": "4",
+        "B": "2",
+        "C": "6",
+        "D": "3"
+      },
+      "answer": "D",
+      "explanation": "Flour went from 4 parts to 12 cups, a factor of 3. Sugar is 1 part x 3 = 3 cups."
+    },
+    {
+      "id": "C5-N018",
+      "section": "Numerical",
+      "question": "Two numbers are in the ratio 2:7 and their sum is 63. What is the larger number?",
+      "options": {
+        "A": "14",
+        "B": "49",
+        "C": "42",
+        "D": "56"
+      },
+      "answer": "B",
+      "explanation": "There are 2 + 7 = 9 parts in all, and 63 / 9 = 7 per part. The larger number is 7 parts x 7 = 49."
+    },
+    {
+      "id": "C5-N019",
+      "section": "Numerical",
+      "question": "A 6-meter pole casts a shadow 4 meters long. At the same time, a tree casts a shadow 10 meters long. How tall is the tree?",
+      "options": {
+        "A": "12 meters",
+        "B": "15 meters",
+        "C": "14 meters",
+        "D": "16 meters"
+      },
+      "answer": "B",
+      "explanation": "Heights and shadows are proportional: 6/4 = x/10. Cross-multiply: 4x = 60, so x = 15 meters."
+    },
+    {
+      "id": "C5-N020",
+      "section": "Numerical",
+      "question": "A student's grades in five subjects are 88, 92, 85, 90, and 95. What is the average?",
+      "options": {
+        "A": "89",
+        "B": "91",
+        "C": "90",
+        "D": "88"
+      },
+      "answer": "C",
+      "explanation": "Add all the grades: 88 + 92 + 85 + 90 + 95 = 450. Divide by 5 subjects: 450 / 5 = 90."
+    },
+    {
+      "id": "C5-N021",
+      "section": "Numerical",
+      "question": "The average of four numbers is 15. Three of the numbers are 12, 18, and 20. What is the fourth number?",
+      "options": {
+        "A": "15",
+        "B": "8",
+        "C": "12",
+        "D": "10"
+      },
+      "answer": "D",
+      "explanation": "Four numbers averaging 15 must total 4 x 15 = 60. The three given numbers total 50, so the fourth is 60 - 50 = 10."
+    },
+    {
+      "id": "C5-N022",
+      "section": "Numerical",
+      "question": "A jeepney traveled 60 km in 2 hours and then 90 km in 3 hours. What was its average speed for the whole trip?",
+      "options": {
+        "A": "30 km/h",
+        "B": "32 km/h",
+        "C": "25 km/h",
+        "D": "45 km/h"
+      },
+      "answer": "A",
+      "explanation": "Average speed = total distance / total time = (60 + 90) / (2 + 3) = 150 / 5 = 30 km/h. Always divide the totals; averaging separate leg speeds gives the wrong result whenever the legs take different times."
+    },
+    {
+      "id": "C5-N023",
+      "section": "Numerical",
+      "question": "A father is 36 years old and his son is 9. In how many years will the father be exactly twice as old as the son?",
+      "options": {
+        "A": "9",
+        "B": "27",
+        "C": "12",
+        "D": "18"
+      },
+      "answer": "D",
+      "explanation": "Let x be the years. 36 + x = 2(9 + x), so 36 + x = 18 + 2x, giving x = 18. Check: father 54, son 27, and 54 is twice 27."
+    },
+    {
+      "id": "C5-N024",
+      "section": "Numerical",
+      "question": "Maria is three times as old as her niece. Their ages add up to 48. How old is Maria?",
+      "options": {
+        "A": "36",
+        "B": "32",
+        "C": "12",
+        "D": "40"
+      },
+      "answer": "A",
+      "explanation": "Let the niece be x; Maria is 3x. x + 3x = 48, so x = 12 and Maria is 3 x 12 = 36."
+    },
+    {
+      "id": "C5-N025",
+      "section": "Numerical",
+      "question": "Five years ago, Jose was 25 years old. How old will he be 7 years from now?",
+      "options": {
+        "A": "32",
+        "B": "37",
+        "C": "30",
+        "D": "43"
+      },
+      "answer": "B",
+      "explanation": "Jose is 25 + 5 = 30 now. Seven years from now he will be 30 + 7 = 37."
+    },
+    {
+      "id": "C5-N026",
+      "section": "Numerical",
+      "question": "Ana can encode a document in 4 hours and Ben can do the same document in 6 hours. Working together, how long will they take?",
+      "options": {
+        "A": "5 hours",
+        "B": "2 hours",
+        "C": "2 hours 24 minutes",
+        "D": "3 hours"
+      },
+      "answer": "C",
+      "explanation": "Add rates: Ana does 1/4 per hour and Ben 1/6 per hour; together 1/4 + 1/6 = 5/12 per hour. Time = 12/5 = 2.4 hours = 2 hours 24 minutes. Together they must be faster than either alone, so 5 hours is impossible."
+    },
+    {
+      "id": "C5-N027",
+      "section": "Numerical",
+      "question": "A pipe fills a tank in 8 hours. A second pipe fills the same tank in 12 hours. How long will both pipes take together?",
+      "options": {
+        "A": "10 hours",
+        "B": "5 hours",
+        "C": "4 hours",
+        "D": "4 hours 48 minutes"
+      },
+      "answer": "D",
+      "explanation": "Combined rate: 1/8 + 1/12 = 3/24 + 2/24 = 5/24 per hour. Time = 24/5 = 4.8 hours = 4 hours 48 minutes."
+    },
+    {
+      "id": "C5-N028",
+      "section": "Numerical",
+      "question": "If 6 workers can finish a job in 10 days, how long will 4 workers take to finish the same job at the same rate?",
+      "options": {
+        "A": "7 days",
+        "B": "12 days",
+        "C": "15 days",
+        "D": "20 days"
+      },
+      "answer": "C",
+      "explanation": "This is inverse proportion: the job needs 6 x 10 = 60 worker-days. With 4 workers, 60 / 4 = 15 days. Fewer workers means more days, not fewer."
+    },
+    {
+      "id": "C5-N029",
+      "section": "Numerical",
+      "question": "How much simple interest will 12,000 pesos earn in 2 years at 5% per year?",
+      "options": {
+        "A": "600 pesos",
+        "B": "1,200 pesos",
+        "C": "1,000 pesos",
+        "D": "2,400 pesos"
+      },
+      "answer": "B",
+      "explanation": "I = Prt = 12,000 x 0.05 x 2 = 1,200 pesos. The 600-peso option is only one year's interest, the usual trap."
+    },
+    {
+      "id": "C5-N030",
+      "section": "Numerical",
+      "question": "A loan of 20,000 pesos earned 3,000 pesos in simple interest over 3 years. What was the yearly interest rate?",
+      "options": {
+        "A": "3%",
+        "B": "10%",
+        "C": "5%",
+        "D": "15%"
+      },
+      "answer": "C",
+      "explanation": "From I = Prt, r = I / (Pt) = 3,000 / (20,000 x 3) = 3,000 / 60,000 = 0.05 = 5% per year."
+    },
+    {
+      "id": "C5-N031",
+      "section": "Numerical",
+      "question": "How long will it take for 8,000 pesos at 6% simple interest per year to earn 2,400 pesos?",
+      "options": {
+        "A": "4 years",
+        "B": "5 years",
+        "C": "6 years",
+        "D": "3 years"
+      },
+      "answer": "B",
+      "explanation": "One year earns 8,000 x 0.06 = 480 pesos. Time = 2,400 / 480 = 5 years. Formally, t = I / (Pr)."
+    },
+    {
+      "id": "C5-N032",
+      "section": "Numerical",
+      "question": "A rectangular lot is 12 meters long and 8 meters wide. What is its perimeter?",
+      "options": {
+        "A": "96 meters",
+        "B": "40 meters",
+        "C": "20 meters",
+        "D": "48 meters"
+      },
+      "answer": "B",
+      "explanation": "Perimeter = 2(length + width) = 2(12 + 8) = 40 meters. The 96-meter option is the area (12 x 8), the most common swap in these items."
+    },
+    {
+      "id": "C5-N033",
+      "section": "Numerical",
+      "question": "What is the area of a triangle with a base of 10 cm and a height of 6 cm?",
+      "options": {
+        "A": "60 sq cm",
+        "B": "16 sq cm",
+        "C": "30 sq cm",
+        "D": "36 sq cm"
+      },
+      "answer": "C",
+      "explanation": "Area of a triangle = (base x height) / 2 = (10 x 6) / 2 = 30 sq cm. Forgetting to divide by 2 gives the trap answer 60."
+    },
+    {
+      "id": "C5-N034",
+      "section": "Numerical",
+      "question": "A square garden has a side of 9 meters. How many meters of fencing are needed to enclose it completely?",
+      "options": {
+        "A": "81 meters",
+        "B": "36 meters",
+        "C": "18 meters",
+        "D": "45 meters"
+      },
+      "answer": "B",
+      "explanation": "Fencing goes around the garden, so use the perimeter: 4 x 9 = 36 meters. The 81-meter option is the area, which is measured in square meters, not meters of fencing."
+    },
+    {
+      "id": "C5-N035",
+      "section": "Numerical",
+      "question": "A bag priced at 2,000 pesos is sold at a 20% discount. How much does the buyer pay?",
+      "options": {
+        "A": "1,800 pesos",
+        "B": "400 pesos",
+        "C": "1,600 pesos",
+        "D": "1,500 pesos"
+      },
+      "answer": "C",
+      "explanation": "The buyer pays 80% of the price: 0.80 x 2,000 = 1,600 pesos. The 400-peso option is the discount amount, not the amount paid."
+    },
+    {
+      "id": "C5-N036",
+      "section": "Numerical",
+      "question": "A shirt originally priced at 500 pesos is now sold for 400 pesos. What percent discount was given?",
+      "options": {
+        "A": "25%",
+        "B": "10%",
+        "C": "20%",
+        "D": "80%"
+      },
+      "answer": "C",
+      "explanation": "Discount = 100 pesos. Percent discount = 100 / 500 = 0.20 = 20%. Use the ORIGINAL price as the base; dividing by 400 wrongly gives 25%."
+    },
+    {
+      "id": "C5-N037",
+      "section": "Numerical",
+      "question": "A bus travels 240 kilometers in 4 hours at a steady speed. What is its speed?",
+      "options": {
+        "A": "40 km/h",
+        "B": "80 km/h",
+        "C": "56 km/h",
+        "D": "60 km/h"
+      },
+      "answer": "D",
+      "explanation": "Speed = distance / time = 240 / 4 = 60 km/h."
+    },
+    {
+      "id": "C5-N038",
+      "section": "Numerical",
+      "question": "How far can a car travel in 3.5 hours at an average speed of 80 km/h?",
+      "options": {
+        "A": "240 km",
+        "B": "280 km",
+        "C": "320 km",
+        "D": "245 km"
+      },
+      "answer": "B",
+      "explanation": "Distance = speed x time = 80 x 3.5 = 280 km. Compute in parts if needed: 80 x 3 = 240 and 80 x 0.5 = 40, total 280."
+    },
+    {
+      "id": "C5-A001",
+      "section": "Analytical",
+      "question": "Author : Novel :: Composer : ___",
+      "options": {
+        "A": "Stage",
+        "B": "Audience",
+        "C": "Symphony",
+        "D": "Piano"
+      },
+      "answer": "C",
+      "explanation": "The relation is creator to major work: an author creates a novel, a composer creates a symphony. A piano is a tool and an audience receives the work, so neither matches the relation."
+    },
+    {
+      "id": "C5-A002",
+      "section": "Analytical",
+      "question": "Fish : School :: Wolf : ___",
+      "options": {
+        "A": "Herd",
+        "B": "Flock",
+        "C": "Pack",
+        "D": "Swarm"
+      },
+      "answer": "C",
+      "explanation": "The relation is animal to the name of its group: a group of fish is a school, and a group of wolves is a pack. Herd is for cattle-like animals, flock for birds or sheep, and swarm for insects."
+    },
+    {
+      "id": "C5-A003",
+      "section": "Analytical",
+      "question": "Chapter : Book :: Scene : ___",
+      "options": {
+        "A": "Actor",
+        "B": "Play",
+        "C": "Ticket",
+        "D": "Curtain"
+      },
+      "answer": "B",
+      "explanation": "Part-to-whole relation: a chapter is a division of a book, and a scene is a division of a play. An actor performs in it, but is not the whole that contains scenes."
+    },
+    {
+      "id": "C5-A004",
+      "section": "Analytical",
+      "question": "Doctor : Diagnosis :: Judge : ___",
+      "options": {
+        "A": "Verdict",
+        "B": "Courtroom",
+        "C": "Lawyer",
+        "D": "Witness"
+      },
+      "answer": "A",
+      "explanation": "The relation is professional to the formal output of their ruling task: a doctor produces a diagnosis, a judge renders a verdict. The courtroom is a place, and a lawyer or witness is another person."
+    },
+    {
+      "id": "C5-A005",
+      "section": "Analytical",
+      "question": "Drought : Famine :: Spark : ___",
+      "options": {
+        "A": "Fire",
+        "B": "Water",
+        "C": "Ash",
+        "D": "Forest"
+      },
+      "answer": "A",
+      "explanation": "Cause-and-effect relation: a drought can cause famine; a spark can cause a fire. Ash is a result of fire, not of the spark directly in this pattern, and water opposes the effect."
+    },
+    {
+      "id": "C5-A006",
+      "section": "Analytical",
+      "question": "Thermometer is to temperature as a weighing scale is to ___",
+      "options": {
+        "A": "height",
+        "B": "volume",
+        "C": "length",
+        "D": "weight"
+      },
+      "answer": "D",
+      "explanation": "Both are instruments and what they measure: a thermometer measures temperature, a weighing scale measures weight. Pair the tool with its measured quantity."
+    },
+    {
+      "id": "C5-A007",
+      "section": "Analytical",
+      "question": "Statement: 'Let us hire a night guard, since most thefts in this warehouse happen at night.' The statement assumes that:",
+      "options": {
+        "A": "The present guards are stealing the supplies.",
+        "B": "All thefts everywhere happen at night.",
+        "C": "A guard on duty at night can help prevent the thefts.",
+        "D": "Night guards are paid less than day guards."
+      },
+      "answer": "C",
+      "explanation": "An assumption is the unstated link the argument needs. Hiring a night guard makes sense only if a guard's presence can prevent night thefts. The argument does not claim the current guards are thieves, and it speaks only about this warehouse."
+    },
+    {
+      "id": "C5-A008",
+      "section": "Analytical",
+      "question": "Statement: 'Review centers should hold classes online so that more students can prepare for the exam.' The speaker assumes that:",
+      "options": {
+        "A": "Online classes are always better than face-to-face classes.",
+        "B": "Many students who cannot attend in person are able to join online classes.",
+        "C": "All students own a computer.",
+        "D": "Face-to-face review classes will soon disappear."
+      },
+      "answer": "B",
+      "explanation": "The plan works only if the students it aims to reach can actually join online. It does not require that ALL students own a computer, nor that online is always better, so those stronger claims are not the assumption."
+    },
+    {
+      "id": "C5-A009",
+      "section": "Analytical",
+      "question": "Statement: 'The office should buy a second printer because the employees spend too much time waiting in line to print.' This assumes that:",
+      "options": {
+        "A": "The employees print too many unneeded pages.",
+        "B": "The second printer will never break down.",
+        "C": "Printing is the most important task in the office.",
+        "D": "The waiting is caused by having only one printer for the volume of printing."
+      },
+      "answer": "D",
+      "explanation": "The remedy (a second printer) assumes the cause is printer shortage, not employee behavior. If the real cause were wasteful printing, a second printer would not solve it, which is exactly how you test an assumption: negate it and see if the argument collapses."
+    },
+    {
+      "id": "C5-A010",
+      "section": "Analytical",
+      "question": "Statement: 'Applicants who submit complete requirements are processed within the day.' Which of the following is an assumption behind giving priority to complete submissions?",
+      "options": {
+        "A": "Whether a submission is complete can be checked quickly at the counter.",
+        "B": "Incomplete submissions are always rejected permanently.",
+        "C": "Most applicants submit incomplete requirements.",
+        "D": "Processing within the day is required by law."
+      },
+      "answer": "A",
+      "explanation": "Same-day processing of complete files assumes staff can verify completeness quickly; otherwise the promise cannot be kept. Nothing in the statement says incomplete files are rejected forever or that a law requires the one-day processing."
+    },
+    {
+      "id": "C5-A011",
+      "section": "Analytical",
+      "question": "Statements: All licensed drivers passed a driving test. Some residents of Barangay Uno are licensed drivers. Which conclusion necessarily follows?",
+      "options": {
+        "A": "All residents of Barangay Uno passed a driving test.",
+        "B": "Some residents of Barangay Uno passed a driving test.",
+        "C": "No resident of Barangay Uno passed a driving test.",
+        "D": "Some residents of Barangay Uno did not pass a driving test."
+      },
+      "answer": "B",
+      "explanation": "The 'some residents' who are licensed drivers fall inside the group that passed the test, so at least those residents passed. 'All residents' goes beyond the given 'some,' a standard overreach error."
+    },
+    {
+      "id": "C5-A012",
+      "section": "Analytical",
+      "question": "Statements: No walk-in applicants are entertained after 3 PM. Carlo is a walk-in applicant who arrived at 4 PM. Which conclusion follows?",
+      "options": {
+        "A": "Carlo was entertained because he had complete papers.",
+        "B": "Carlo was not entertained.",
+        "C": "All applicants after 3 PM are walk-in applicants.",
+        "D": "Some walk-in applicants are entertained after 3 PM."
+      },
+      "answer": "B",
+      "explanation": "Carlo belongs to the exact group covered by the rule (walk-in, after 3 PM), so the rule applies to him directly. His papers are never mentioned, so that option adds facts not given."
+    },
+    {
+      "id": "C5-A013",
+      "section": "Analytical",
+      "question": "Statements: If the river rises above the red mark, the evacuation alarm sounds. The alarm did not sound. Which conclusion necessarily follows?",
+      "options": {
+        "A": "The river did not rise at all.",
+        "B": "The alarm is broken.",
+        "C": "The river did not rise above the red mark.",
+        "D": "The red mark was lowered."
+      },
+      "answer": "C",
+      "explanation": "This is modus tollens: if P then Q; not Q, therefore not P. The river may still have risen somewhat, just not above the red mark, so the first distractor overstates the conclusion."
+    },
+    {
+      "id": "C5-A014",
+      "section": "Analytical",
+      "question": "Statements: Every file in Cabinet A has been digitized. The Santos file is in Cabinet A. Which conclusion follows?",
+      "options": {
+        "A": "All files in the office have been digitized.",
+        "B": "Cabinet A contains only the Santos file.",
+        "C": "The Santos file has been digitized.",
+        "D": "The Santos file is the most recent file."
+      },
+      "answer": "C",
+      "explanation": "A universal statement about Cabinet A applies to every member, including the Santos file. It says nothing about files outside Cabinet A."
+    },
+    {
+      "id": "C5-A015",
+      "section": "Analytical",
+      "question": "All nurses are licensed. Some licensed persons work abroad. Therefore:",
+      "options": {
+        "A": "No definite conclusion about nurses working abroad can be drawn.",
+        "B": "Some nurses work abroad.",
+        "C": "All nurses work abroad.",
+        "D": "No nurses work abroad."
+      },
+      "answer": "A",
+      "explanation": "The middle term 'licensed persons' is wider than both groups: the licensed persons who work abroad might not be nurses at all. When the overlap is not guaranteed, the valid answer is that no definite conclusion follows."
+    },
+    {
+      "id": "C5-A016",
+      "section": "Analytical",
+      "question": "All squares are rectangles. All rectangles have four sides. Therefore:",
+      "options": {
+        "A": "All four-sided figures are squares.",
+        "B": "Some rectangles are not squares.",
+        "C": "No square is a rectangle.",
+        "D": "All squares have four sides."
+      },
+      "answer": "D",
+      "explanation": "Chain the inclusions: squares are inside rectangles, and rectangles are inside four-sided figures, so squares have four sides. The reverse (all four-sided figures are squares) reverses the inclusion, which logic does not allow."
+    },
+    {
+      "id": "C5-A017",
+      "section": "Analytical",
+      "question": "Some teachers are coaches. All coaches receive an allowance. Therefore:",
+      "options": {
+        "A": "All teachers receive an allowance.",
+        "B": "No teacher receives an allowance.",
+        "C": "Some teachers receive an allowance.",
+        "D": "All allowances go to teachers."
+      },
+      "answer": "C",
+      "explanation": "The teachers who are coaches are included in the group receiving an allowance, so at least some teachers receive it. Extending it to ALL teachers is the overreach trap."
+    },
+    {
+      "id": "C5-A018",
+      "section": "Analytical",
+      "question": "No trainee passed the exam on the first try. Ben is a trainee. Therefore:",
+      "options": {
+        "A": "Ben will never pass the exam.",
+        "B": "Ben passed the exam on the second try.",
+        "C": "Ben did not pass the exam on the first try.",
+        "D": "Ben is the weakest trainee."
+      },
+      "answer": "C",
+      "explanation": "The rule covers every trainee's first try, including Ben's. It says nothing about later tries, so claims about the second try or the future go beyond the premises."
+    },
+    {
+      "id": "C5-A019",
+      "section": "Analytical",
+      "question": "If a form lacks a signature, it is returned. This form was not returned. Therefore:",
+      "options": {
+        "A": "This form is complete in every detail.",
+        "B": "This form does not lack a signature (it is signed).",
+        "C": "This form was approved.",
+        "D": "The signer was the applicant himself."
+      },
+      "answer": "B",
+      "explanation": "Modus tollens again: not returned means the condition for return (missing signature) did not occur. A signature alone does not prove the form is complete in every detail or approved."
+    },
+    {
+      "id": "C5-A020",
+      "section": "Analytical",
+      "question": "All members of the choir are students. Mia is not a student. Therefore:",
+      "options": {
+        "A": "Mia is not a member of the choir.",
+        "B": "Mia cannot sing.",
+        "C": "Some students are not in the choir.",
+        "D": "Mia is a teacher."
+      },
+      "answer": "A",
+      "explanation": "Membership requires being a student. Since Mia is outside the student set, she is outside the choir set. Her occupation or singing ability is not given."
+    },
+    {
+      "id": "C5-A021",
+      "section": "Analytical",
+      "question": "Five runners finished a race. Ana finished ahead of Ben. Ben finished ahead of Carla. Dan finished last. Elena finished between Ben and Carla. Who finished second?",
+      "options": {
+        "A": "Ana",
+        "B": "Elena",
+        "C": "Carla",
+        "D": "Ben"
+      },
+      "answer": "D",
+      "explanation": "Build the order: Ana ahead of Ben, Ben ahead of Carla, Elena between Ben and Carla, Dan last. Order: Ana, Ben, Elena, Carla, Dan. Second is Ben."
+    },
+    {
+      "id": "C5-A022",
+      "section": "Analytical",
+      "question": "Four books are stacked. The red book is under the blue book. The green book is on top of the blue book. The yellow book is at the very bottom. Which book is second from the top?",
+      "options": {
+        "A": "Blue book",
+        "B": "Green book",
+        "C": "Red book",
+        "D": "Yellow book"
+      },
+      "answer": "A",
+      "explanation": "From top: green (on top of blue), then blue, then red (under blue), then yellow at the bottom. Second from the top is the blue book."
+    },
+    {
+      "id": "C5-A023",
+      "section": "Analytical",
+      "question": "In a row of applicants, Rosa is 3rd from the front and 5th from the back. How many applicants are in the row?",
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "9",
+        "D": "7"
+      },
+      "answer": "D",
+      "explanation": "Total = position from front + position from back - 1 (Rosa is counted twice): 3 + 5 - 1 = 7."
+    },
+    {
+      "id": "C5-A024",
+      "section": "Analytical",
+      "question": "A report passes through offices in this order: Encoder, Checker, Supervisor, Director. If the report is now with the Checker and must be signed by the Director last, how many more offices will handle it after the Checker?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "4",
+        "D": "2"
+      },
+      "answer": "D",
+      "explanation": "After the Checker come the Supervisor and the Director: 2 more offices. Counting the Checker itself is the trap that gives 3."
+    },
+    {
+      "id": "C5-A025",
+      "section": "Analytical",
+      "question": "Five friends are lined up by height. Joel is taller than Ken but shorter than Luis. Mila is taller than Luis. Noah is the shortest. Who is the tallest?",
+      "options": {
+        "A": "Mila",
+        "B": "Luis",
+        "C": "Joel",
+        "D": "Ken"
+      },
+      "answer": "A",
+      "explanation": "Chain the comparisons: Noah shortest; Joel above Ken; Luis above Joel; Mila above Luis. So from shortest: Noah, Ken, Joel, Luis, Mila. Mila is tallest."
+    },
+    {
+      "id": "C5-A026",
+      "section": "Analytical",
+      "question": "A canteen sold 40 sandwiches on Monday, 55 on Tuesday, 35 on Wednesday, and 70 on Thursday. On which two days did it sell exactly 110 sandwiches combined?",
+      "options": {
+        "A": "Monday and Thursday",
+        "B": "Tuesday and Wednesday",
+        "C": "Monday and Tuesday",
+        "D": "Wednesday and Thursday"
+      },
+      "answer": "A",
+      "explanation": "Add the pairs: 40 + 70 = 110 (Monday and Thursday). Check others: 55 + 35 = 90, 40 + 55 = 95, 35 + 70 = 105."
+    },
+    {
+      "id": "C5-A027",
+      "section": "Analytical",
+      "question": "A survey of 200 examinees found: 90 prefer morning review, 60 prefer afternoon review, and 50 prefer evening review. What percent prefer evening review?",
+      "options": {
+        "A": "50%",
+        "B": "20%",
+        "C": "30%",
+        "D": "25%"
+      },
+      "answer": "D",
+      "explanation": "Percent = part / total x 100 = 50 / 200 x 100 = 25%. Answering 50% mistakes the count (50) for the percent."
+    },
+    {
+      "id": "C5-A028",
+      "section": "Analytical",
+      "question": "An office processed 120 permits in January, 150 in February, and 180 in March. What is the percent increase from January to March?",
+      "options": {
+        "A": "60%",
+        "B": "33%",
+        "C": "150%",
+        "D": "50%"
+      },
+      "answer": "D",
+      "explanation": "Increase = 180 - 120 = 60. Percent increase = increase / original x 100 = 60 / 120 x 100 = 50%. Always divide by the ORIGINAL value, not the new one."
+    },
+    {
+      "id": "C5-A029",
+      "section": "Analytical",
+      "question": "In a class of 40, the numbers of students per grade are: A = 8, B = 12, C = 14, D = 6. Which grade was received by the largest number of students?",
+      "options": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      },
+      "answer": "D",
+      "explanation": "Compare the counts directly: C has 14 students, more than B (12), A (8), and D (6). Data-interpretation items are solved by reading the values carefully before computing anything."
+    },
+    {
+      "id": "C5-A030",
+      "section": "Analytical",
+      "question": "A water station delivered 12, 15, 9, and 14 containers from Monday to Thursday. What is the average number of containers delivered per day?",
+      "options": {
+        "A": "13",
+        "B": "12",
+        "C": "12.5",
+        "D": "14"
+      },
+      "answer": "C",
+      "explanation": "Average = total / days = (12 + 15 + 9 + 14) / 4 = 50 / 4 = 12.5. Averages need not be whole numbers."
+    },
+    {
+      "id": "C5-G001",
+      "section": "General Information",
+      "question": "Under the party-list system in the 1987 Constitution, party-list representatives shall constitute what share of the total membership of the House of Representatives?",
+      "options": {
+        "A": "20 percent",
+        "B": "10 percent",
+        "C": "25 percent",
+        "D": "50 percent"
+      },
+      "answer": "A",
+      "explanation": "Article VI, Section 5(2): party-list representatives constitute twenty percent (20%) of the total House membership. This percentage is a favorite exact-number item, so anchor it to the House composition rule, not to the three-year term rule."
+    },
+    {
+      "id": "C5-G002",
+      "section": "General Information",
+      "question": "What is the minimum age required by the Constitution for a person to be elected President of the Philippines?",
+      "options": {
+        "A": "35 years old on the day of the election",
+        "B": "25 years old on the day of the election",
+        "C": "50 years old on the day of the election",
+        "D": "40 years old on the day of the election"
+      },
+      "answer": "D",
+      "explanation": "Article VII, Section 2 sets 40 years for President (and the same for Vice President). Remember the ladder: 25 for Representative, 35 for Senator, 40 for President."
+    },
+    {
+      "id": "C5-G003",
+      "section": "General Information",
+      "question": "Which body has the sole power to declare the existence of a state of war?",
+      "options": {
+        "A": "Congress, by a joint vote of at least two-thirds of both Houses",
+        "B": "The President, as Commander-in-Chief",
+        "C": "The Supreme Court",
+        "D": "The Department of National Defense"
+      },
+      "answer": "A",
+      "explanation": "Article VI, Section 23(1) gives Congress, voting jointly by two-thirds, the sole power to declare a state of war. The President commands the armed forces but cannot declare war."
+    },
+    {
+      "id": "C5-G004",
+      "section": "General Information",
+      "question": "Under Article III, when may a person's house be searched by authorities?",
+      "options": {
+        "A": "Anytime a police officer suspects a crime",
+        "B": "Only with a search warrant issued by a judge after personally examining the applicant and witnesses under oath",
+        "C": "With the verbal approval of the barangay captain",
+        "D": "Whenever the mayor issues an executive order"
+      },
+      "answer": "B",
+      "explanation": "Article III, Section 2 protects against unreasonable searches: a warrant must be issued by a judge, upon probable cause determined personally by the judge after examination under oath. Suspicion alone, or a local official's say-so, is not enough."
+    },
+    {
+      "id": "C5-G005",
+      "section": "General Information",
+      "question": "Which constitutional commission is charged with administering and enforcing all laws relative to the conduct of elections?",
+      "options": {
+        "A": "Commission on Audit",
+        "B": "Civil Service Commission",
+        "C": "Commission on Human Rights",
+        "D": "Commission on Elections (COMELEC)"
+      },
+      "answer": "D",
+      "explanation": "Article IX-C gives the COMELEC election functions. Map the Article IX commissions by task: COMELEC for elections, COA for government funds, and the Civil Service Commission for government personnel."
+    },
+    {
+      "id": "C5-G006",
+      "section": "General Information",
+      "question": "What fraction of its members is needed for the House of Representatives to elect the Speaker and conduct business (a quorum)?",
+      "options": {
+        "A": "One-third of the members",
+        "B": "Two-thirds of the members",
+        "C": "A majority of the members",
+        "D": "All members must be present"
+      },
+      "answer": "C",
+      "explanation": "Article VI, Section 16(2): a majority of each House constitutes a quorum to do business. Two-thirds appears in other acts (like overriding a veto or declaring war), which is why it is a common distractor."
+    },
+    {
+      "id": "C5-G007",
+      "section": "General Information",
+      "question": "If the President vetoes a bill, how may Congress override the veto?",
+      "options": {
+        "A": "By a two-thirds vote of both Houses (entered in their journals)",
+        "B": "By a simple majority of both Houses",
+        "C": "By a three-fourths vote of the Senate alone",
+        "D": "Congress cannot override a presidential veto"
+      },
+      "answer": "A",
+      "explanation": "Article VI, Section 27(1): after reconsideration, if approved by two-thirds of both Houses, the bill becomes law despite the veto. A simple majority is enough to pass a bill the first time, but not to override."
+    },
+    {
+      "id": "C5-G008",
+      "section": "General Information",
+      "question": "Under the Constitution, who may grant pardons after conviction by final judgment?",
+      "options": {
+        "A": "The President",
+        "B": "The Chief Justice",
+        "C": "The Secretary of Justice",
+        "D": "The Ombudsman"
+      },
+      "answer": "A",
+      "explanation": "Article VII, Section 19 gives the President the power to grant reprieves, commutations, and pardons after conviction by final judgment (with impeachment as the exception). The Secretary of Justice only recommends; the courts convict but do not pardon."
+    },
+    {
+      "id": "C5-G009",
+      "section": "General Information",
+      "question": "What is the retirement age set by the Constitution for members of the Judiciary?",
+      "options": {
+        "A": "60 years old",
+        "B": "65 years old",
+        "C": "75 years old",
+        "D": "70 years old"
+      },
+      "answer": "D",
+      "explanation": "Article VIII, Section 11: members of the Judiciary hold office during good behavior until they reach 70 years or become incapacitated. The 60/65 figures belong to optional/compulsory retirement in other government contexts."
+    },
+    {
+      "id": "C5-G010",
+      "section": "General Information",
+      "question": "Which office is constitutionally tasked to investigate, on its own or on complaint, any act or omission of a public official that appears illegal, unjust, improper, or inefficient?",
+      "options": {
+        "A": "The Sandiganbayan",
+        "B": "The Civil Service Commission",
+        "C": "The Office of the Ombudsman",
+        "D": "The Public Attorney's Office"
+      },
+      "answer": "C",
+      "explanation": "Article XI, Section 13 gives this investigative mandate to the Ombudsman. The Sandiganbayan is the court that TRIES graft cases of high officials; investigation of officials' misconduct belongs to the Ombudsman."
+    },
+    {
+      "id": "C5-G011",
+      "section": "General Information",
+      "question": "According to Article XIV, what are the official languages of the Philippines for purposes of communication and instruction?",
+      "options": {
+        "A": "Filipino only",
+        "B": "Filipino and English, until otherwise provided by law",
+        "C": "English and Spanish",
+        "D": "Filipino, English, and Spanish"
+      },
+      "answer": "B",
+      "explanation": "Article XIV, Section 7: for communication and instruction, the official languages are Filipino and, until otherwise provided by law, English. Spanish (and Arabic) are promoted on a voluntary and optional basis, not official."
+    },
+    {
+      "id": "C5-G012",
+      "section": "General Information",
+      "question": "How may the 1987 Constitution be amended through a people's initiative?",
+      "options": {
+        "A": "By a petition of at least 3 percent of all registered voters nationwide",
+        "B": "By a petition of at least 12 percent of all registered voters, with each legislative district represented by at least 3 percent of its voters",
+        "C": "By any barangay resolution approved by the mayor",
+        "D": "By a signature drive led by the Senate"
+      },
+      "answer": "B",
+      "explanation": "Article XVII, Section 2 sets the double threshold: 12 percent of total registered voters, of which every legislative district must be represented by at least 3 percent of its registered voters. Note the limits: initiative applies to amendments only, not revisions, and not more than once every five years."
+    },
+    {
+      "id": "C5-G013",
+      "section": "General Information",
+      "question": "Which of the following acts is PROHIBITED by RA 6713 for public officials and employees?",
+      "options": {
+        "A": "Filing a yearly statement of assets, liabilities, and net worth under oath",
+        "B": "Declaring a conflict of interest and inhibiting oneself from a transaction",
+        "C": "Soliciting or accepting a gift or anything of monetary value from a person in connection with a transaction affected by their official functions",
+        "D": "Responding to letters and requests from the public"
+      },
+      "answer": "C",
+      "explanation": "RA 6713, Section 3(d) prohibits soliciting or accepting gifts, gratuities, favors, or anything of monetary value connected with one's official functions. The other options are duties the same law REQUIRES: the SALN filing (Section 8), inhibition when there is conflict of interest, and responsiveness to the public (Section 5)."
+    },
+    {
+      "id": "C5-G014",
+      "section": "General Information",
+      "question": "RA 6713 lists eight norms of conduct for public officials and employees. Which of the following is one of those norms?",
+      "options": {
+        "A": "Political partisanship in the workplace",
+        "B": "Justness and sincerity",
+        "C": "Preference for relatives in appointments",
+        "D": "Acceptance of gifts for faster service"
+      },
+      "answer": "B",
+      "explanation": "Section 4 of RA 6713 names the norms: commitment to public interest, professionalism, justness and sincerity, political neutrality, responsiveness to the public, nationalism and patriotism, commitment to democracy, and simple living. The other options describe prohibited acts, the opposite of the norms."
+    },
+    {
+      "id": "C5-G015",
+      "section": "General Information",
+      "question": "Under RA 6713, how soon must public officials and employees act on letters and requests from the public that require an answer?",
+      "options": {
+        "A": "Within 15 working days from receipt",
+        "B": "Within 3 working days from receipt",
+        "C": "Within 30 working days from receipt",
+        "D": "Within 60 working days from receipt"
+      },
+      "answer": "A",
+      "explanation": "Section 5(a) of RA 6713: officials must act promptly on letters and requests and reply within 15 working days. (The separate ARTA law sets different processing days for transactions by complexity, a common confusion; RA 6713's reply standard is 15 working days.)"
+    },
+    {
+      "id": "C5-G016",
+      "section": "General Information",
+      "question": "A division chief on a modest government salary suddenly displays a fleet of luxury cars and a mansion far beyond his lawful income. Which norm of conduct under RA 6713 does this extravagant display most directly violate?",
+      "options": {
+        "A": "Political neutrality",
+        "B": "Responsiveness to the public",
+        "C": "Commitment to democracy",
+        "D": "Simple living"
+      },
+      "answer": "D",
+      "explanation": "Section 4(h) of RA 6713 requires officials to live modest lives appropriate to their position and income and forbids extravagant or ostentatious display of wealth. Political neutrality concerns partisan activities, and responsiveness concerns service to the public; neither covers lifestyle display."
+    },
+    {
+      "id": "C5-G017",
+      "section": "General Information",
+      "question": "Which agency is the central personnel agency of the Philippine government, administering the civil service and the Career Service Examination?",
+      "options": {
+        "A": "Civil Service Commission",
+        "B": "Department of Labor and Employment",
+        "C": "Professional Regulation Commission",
+        "D": "National Economic and Development Authority"
+      },
+      "answer": "A",
+      "explanation": "The CSC is the central personnel agency under Article IX-B and administers the CSE. The PRC regulates licensed professions (board exams), and DOLE handles labor and employment policy, not civil service eligibility."
+    },
+    {
+      "id": "C5-G018",
+      "section": "General Information",
+      "question": "The Commission on Audit (COA) has the constitutional power and duty to:",
+      "options": {
+        "A": "Prosecute officials accused of graft",
+        "B": "Prepare the national budget for the President",
+        "C": "Examine, audit, and settle all accounts pertaining to government revenues, expenditures, and uses of public funds",
+        "D": "Collect taxes from government corporations"
+      },
+      "answer": "C",
+      "explanation": "Article IX-D gives COA the audit function over all government accounts and funds. Budget preparation belongs to the DBM/Executive, tax collection to the BIR, and prosecution to the Ombudsman and DOJ."
+    },
+    {
+      "id": "C5-G019",
+      "section": "General Information",
+      "question": "In the Philippine government, which office serves as the principal law officer and legal defender of the government in court cases?",
+      "options": {
+        "A": "The Chief Justice",
+        "B": "The Secretary of Justice",
+        "C": "The Government Corporate Counsel",
+        "D": "The Solicitor General"
+      },
+      "answer": "D",
+      "explanation": "The Office of the Solicitor General represents the Republic in litigation. The Secretary of Justice heads the DOJ and supervises prosecution, while the Government Corporate Counsel serves government corporations specifically."
+    },
+    {
+      "id": "C5-G020",
+      "section": "General Information",
+      "question": "Members of the constitutional commissions (COMELEC, COA, and the Civil Service Commission) are appointed by:",
+      "options": {
+        "A": "The Chief Justice, with the consent of the Judicial and Bar Council",
+        "B": "The Senate President alone",
+        "C": "The voters, in a special election",
+        "D": "The President, with the consent of the Commission on Appointments"
+      },
+      "answer": "D",
+      "explanation": "Article IX, Section 1(1): the Chairman and Commissioners of the three constitutional commissions are appointed by the President with the consent of the Commission on Appointments, for seven years without reappointment. They are not elected, and the Judicial and Bar Council screens nominees for the Judiciary, not the commissions."
+    },
+    {
+      "id": "C5-G021",
+      "section": "General Information",
+      "question": "Which act is a violation of the Philippine Clean Air Act (RA 8749)?",
+      "options": {
+        "A": "Using unleaded gasoline in a private car",
+        "B": "Planting trees along a national highway",
+        "C": "Smoke belching: operating a motor vehicle whose emissions exceed the standards set under the Act",
+        "D": "Registering a motor vehicle with the Land Transportation Office"
+      },
+      "answer": "C",
+      "explanation": "RA 8749 sets emission standards and penalizes smoke-belching vehicles and other polluting emissions. The law number map still matters: 8749 is Clean Air, 9003 is Solid Waste, 9275 is Clean Water, and 9729 is Climate Change."
+    },
+    {
+      "id": "C5-G022",
+      "section": "General Information",
+      "question": "Under RA 9003, the Ecological Solid Waste Management Act, every barangay, or cluster of barangays, is required to establish which facility for sorting recovered materials?",
+      "options": {
+        "A": "Materials Recovery Facility (MRF)",
+        "B": "Incineration plant",
+        "C": "Sanitary landfill in every barangay",
+        "D": "Hazardous waste treatment plant"
+      },
+      "answer": "A",
+      "explanation": "RA 9003 requires a Materials Recovery Facility in every barangay or cluster of barangays, where segregated waste is sorted and recyclables are recovered. Sanitary landfills are for residual waste at the city or municipal level, and incineration is restricted, not required."
+    },
+    {
+      "id": "C5-G023",
+      "section": "General Information",
+      "question": "Republic Act No. 9275, the Philippine Clean Water Act, primarily penalizes which act?",
+      "options": {
+        "A": "Fishing without a license in municipal waters",
+        "B": "Discharging polluting matter into water bodies without a valid permit or beyond allowed standards",
+        "C": "Building houses near riverbanks",
+        "D": "Selling bottled water without a label"
+      },
+      "answer": "B",
+      "explanation": "RA 9275 regulates water quality: dischargers need a wastewater discharge permit and must meet effluent standards. Fishing licenses are under the Fisheries Code (RA 8550 as amended), not the Clean Water Act."
+    },
+    {
+      "id": "C5-G024",
+      "section": "General Information",
+      "question": "Republic Act No. 9729 created the Climate Change Commission. Under the law as amended, who chairs the Commission?",
+      "options": {
+        "A": "The President of the Philippines",
+        "B": "The Secretary of Environment and Natural Resources",
+        "C": "The Senate President",
+        "D": "The Director-General of NEDA"
+      },
+      "answer": "A",
+      "explanation": "RA 9729, as amended by RA 10174, makes the President the chairperson of the Climate Change Commission, with commissioners serving as vice chair and members. DENR's secretary sits as a member, not the chair."
+    },
+    {
+      "id": "C5-G025",
+      "section": "General Information",
+      "question": "Under the NIPAS Act (RA 7586, as amended by RA 11038), each protected area is managed on site through which body?",
+      "options": {
+        "A": "Barangay Council of the host village",
+        "B": "Protected Area Management Board (PAMB)",
+        "C": "Provincial Development Council alone",
+        "D": "Senate Committee on Environment"
+      },
+      "answer": "B",
+      "explanation": "Each protected area under NIPAS has a Protected Area Management Board (PAMB), chaired by the DENR Regional Executive Director, which administers that protected area. NIPAS itself stands for the National Integrated Protected Areas System (RA 7586, expanded by RA 11038)."
+    },
+    {
+      "id": "C5-G026",
+      "section": "General Information",
+      "question": "Philippine independence from Spain was proclaimed on June 12, 1898 in which town?",
+      "options": {
+        "A": "Malolos, Bulacan",
+        "B": "Barasoain, Bulacan",
+        "C": "Binondo, Manila",
+        "D": "Kawit, Cavite"
+      },
+      "answer": "D",
+      "explanation": "Emilio Aguinaldo proclaimed independence on June 12, 1898 from the window of his house in Kawit, Cavite, where the Philippine flag was first unfurled. Malolos is linked to the First Republic and Congress of 1898-1899, a related but different event."
+    },
+    {
+      "id": "C5-G027",
+      "section": "General Information",
+      "question": "Who composed the music of the Philippine national anthem, Lupang Hinirang?",
+      "options": {
+        "A": "Julian Felipe",
+        "B": "Jose Palma",
+        "C": "Constancio de Guzman",
+        "D": "Levi Celerio"
+      },
+      "answer": "A",
+      "explanation": "Julian Felipe composed the music (Marcha Nacional Filipina) in 1898. Jose Palma wrote the Spanish lyrics (Filipinas) a year later; separating composer from lyricist is the standard trap in this item type."
+    },
+    {
+      "id": "C5-G028",
+      "section": "General Information",
+      "question": "What is the national bird of the Philippines?",
+      "options": {
+        "A": "Maya (rice bird)",
+        "B": "Sarimanok",
+        "C": "Kalapati (dove)",
+        "D": "Philippine eagle"
+      },
+      "answer": "D",
+      "explanation": "The Philippine eagle (Pithecopaga jefferyi) was declared the national bird in 1995. The maya is a common rice bird often mistaken as the national bird, and the sarimanok is a legendary Maranao art motif, not a real species."
+    },
+    {
+      "id": "C5-G029",
+      "section": "General Information",
+      "question": "Where was Dr. Jose Rizal executed on December 30, 1896?",
+      "options": {
+        "A": "Fort Santiago",
+        "B": "Dapitan, Zamboanga del Norte",
+        "C": "Bagumbayan (now part of Rizal Park, Manila)",
+        "D": "Calamba, Laguna"
+      },
+      "answer": "C",
+      "explanation": "Rizal was shot at Bagumbayan field in Manila. Dapitan was his place of exile (1892-1896), Fort Santiago was where he was imprisoned before the execution, and Calamba was his birthplace."
+    },
+    {
+      "id": "C5-G030",
+      "section": "General Information",
+      "question": "The EDSA People Power Revolution of February 1986 ended the presidency of which leader and installed Corazon C. Aquino as President?",
+      "options": {
+        "A": "Diosdado Macapagal",
+        "B": "Ferdinand E. Marcos Sr.",
+        "C": "Ferdinand E. Marcos Jr.",
+        "D": "Elpidio Quirino"
+      },
+      "answer": "B",
+      "explanation": "The 1986 revolution ended the rule of Ferdinand E. Marcos Sr., in office since 1965, and Corazon Aquino became President. Marcos Jr. is his son, elected President in 2022, a generation later."
+    }
+  ]
+}

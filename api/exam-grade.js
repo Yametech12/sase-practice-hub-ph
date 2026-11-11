@@ -26,6 +26,8 @@ import {
   updateState,
   loadBankAtBlob,
   getExamItems,
+  loadCseBankAtBlob,
+  getCseExamItems,
   readBody,
   logEvent,
   buildResult,
@@ -33,8 +35,10 @@ import {
   sanitizeAnswers,
   validExamN,
   examUnlock,
-  EXAM_MS,
-  DEVICE_MISMATCH_MSG,
+  trackOf,
+  examMsForTrack,
+  deviceMismatchMsg,
+  TRACK_CSE,
   bindingHasDevice,
   EXAM_LOCKED_MSG,
 } from "./_exam-lib.js";
@@ -49,6 +53,9 @@ export default async function handler(req, res) {
     if (!n || typeof session_id !== "string" || !session_id || typeof submission_id !== "string" || !submission_id) {
       return res.status(400).json({ error: "bad_request" });
     }
+    // Track routing (token-carried): bank + timer follow the buyer's track.
+    const track = trackOf(p);
+    const EXAM_MS = examMsForTrack(track);
 
     const now = Date.now();
     // Defense in depth: grading re-checks the weekly unlock server-side.
@@ -69,7 +76,7 @@ export default async function handler(req, res) {
       }
       const b = state.bindings[p.order_id];
       if (!bindingHasDevice(b, p.device_hash)) {
-        return { status: 403, body: { error: "device_mismatch", message: DEVICE_MISMATCH_MSG } };
+        return { status: 403, body: { error: "device_mismatch", message: deviceMismatchMsg(track) } };
       }
       const orderExams = (state.exams[p.order_id] ||= {});
       const rec = orderExams[String(n)];
@@ -89,6 +96,7 @@ export default async function handler(req, res) {
             weak_area: rec.weak_area,
             improvement: rec.improvement,
             review: rec.review || [],
+            benchmark: rec.benchmark || null,
             submitted_at: rec.submitted_at,
             auto_submitted: !!rec.auto_submitted,
             forfeited: !!rec.forfeited,
@@ -110,13 +118,14 @@ export default async function handler(req, res) {
         Object.assign(finalAnswers, sanitizeAnswers(answers, qSet));
       }
 
-      // Grade against the bank version pinned at question issuance.
-      const bank = await loadBankAtBlob(rec.bank_blob);
-      const items = getExamItems(bank, n);
+      // Grade against the bank version pinned at question issuance
+      // (per-track loader: SASE GitHub blob, CSE pinned bank).
+      const bank = track === TRACK_CSE ? await loadCseBankAtBlob(rec.bank_blob) : await loadBankAtBlob(rec.bank_blob);
+      const items = track === TRACK_CSE ? getCseExamItems(bank, n) : getExamItems(bank, n);
       if (items.length === 0) {
         return { status: 503, body: { error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." } };
       }
-      const result = buildResult(items, rec, finalAnswers);
+      const result = buildResult(items, rec, finalAnswers, { track });
       const submittedAt = new Date(now).toISOString();
       orderExams[String(n)] = {
         status: "done",
@@ -127,6 +136,7 @@ export default async function handler(req, res) {
         weak_area: result.weak_area,
         improvement: result.improvement,
         review: result.review,
+        benchmark: result.benchmark || null,
         submitted_at: submittedAt,
         auto_submitted: expired,
         forfeited: false,

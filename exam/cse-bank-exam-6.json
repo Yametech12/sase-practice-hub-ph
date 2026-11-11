@@ -1,0 +1,1965 @@
+{
+  "exam": 6,
+  "questions": [
+    {
+      "id": "C6-V001",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to PRUDENT.",
+      "options": {
+        "A": "proud and boastful",
+        "B": "wise and careful",
+        "C": "quick to anger",
+        "D": "careless and reckless"
+      },
+      "answer": "B",
+      "explanation": "Prudent means showing care and good judgment in making decisions. A prudent official thinks before acting, so 'wise and careful' is closest; reckless is its opposite, and anger or boastfulness are different traits."
+    },
+    {
+      "id": "C6-V002",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to OBSTINATE.",
+      "options": {
+        "A": "generous with money",
+        "B": "quiet and shy",
+        "C": "easily persuaded",
+        "D": "stubborn and unwilling to change"
+      },
+      "answer": "D",
+      "explanation": "An obstinate person holds firmly to an opinion and refuses to change it, which is stubbornness. Someone easily persuaded is the opposite, while generosity and shyness describe unrelated qualities."
+    },
+    {
+      "id": "C6-V003",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to TIMID.",
+      "options": {
+        "A": "shy",
+        "B": "hesitant",
+        "C": "fearful",
+        "D": "bold"
+      },
+      "answer": "D",
+      "explanation": "Timid means lacking courage or confidence, so its opposite is bold. Shy, fearful, and hesitant are all near-synonyms of timid, which is the usual trap in antonym items."
+    },
+    {
+      "id": "C6-V004",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to CONCEAL.",
+      "options": {
+        "A": "hide",
+        "B": "cover",
+        "C": "reveal",
+        "D": "keep secret"
+      },
+      "answer": "C",
+      "explanation": "To conceal is to hide something from sight or knowledge, so the opposite is to reveal it. Hide, cover, and keep secret all express the same idea as conceal."
+    },
+    {
+      "id": "C6-V005",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to LEGITIMATE.",
+      "options": {
+        "A": "very expensive",
+        "B": "temporary",
+        "C": "lawful and valid",
+        "D": "fake or forged"
+      },
+      "answer": "C",
+      "explanation": "Legitimate means allowed by law or by the rules, hence lawful and valid. A fake or forged document is the opposite of legitimate; price and duration say nothing about lawfulness."
+    },
+    {
+      "id": "C6-V006",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to VERSATILE.",
+      "options": {
+        "A": "able to adapt to many uses",
+        "B": "easily broken",
+        "C": "very costly",
+        "D": "limited to one use only"
+      },
+      "answer": "A",
+      "explanation": "Versatile describes a person or tool that can do many different things well. 'Limited to one use' is its opposite; being fragile or costly is unrelated to adaptability."
+    },
+    {
+      "id": "C6-V007",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to DECEIVE.",
+      "options": {
+        "A": "tell the truth plainly",
+        "B": "warn about a danger",
+        "C": "mislead someone on purpose",
+        "D": "forgive an offense"
+      },
+      "answer": "C",
+      "explanation": "To deceive is to make someone believe something false on purpose, that is, to mislead. Telling the truth is its opposite, and forgiving or warning does not involve falsehood."
+    },
+    {
+      "id": "C6-V008",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to PERIL.",
+      "options": {
+        "A": "good fortune",
+        "B": "serious danger",
+        "C": "great comfort",
+        "D": "complete safety"
+      },
+      "answer": "B",
+      "explanation": "Peril means serious and immediate danger, as in 'the boat was in peril.' Safety is its opposite, while comfort and fortune are unrelated positive conditions."
+    },
+    {
+      "id": "C6-V009",
+      "section": "Verbal",
+      "question": "Choose the word opposite in meaning to TRIVIAL.",
+      "options": {
+        "A": "important and significant",
+        "B": "worthless",
+        "C": "small and unimportant",
+        "D": "ordinary and plain"
+      },
+      "answer": "A",
+      "explanation": "Trivial means of little value or importance, so the opposite is important and significant. Small, unimportant, and worthless are close to the meaning of trivial itself."
+    },
+    {
+      "id": "C6-V010",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to LENIENT.",
+      "options": {
+        "A": "extremely careful",
+        "B": "not strict; merciful in punishment",
+        "C": "very strict and harsh",
+        "D": "always in a hurry"
+      },
+      "answer": "B",
+      "explanation": "A lenient judge or teacher does not punish severely, so 'not strict; merciful' is closest. Strict and harsh are opposites of lenient; hurry and carefulness are different qualities."
+    },
+    {
+      "id": "C6-V011",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to OMIT.",
+      "options": {
+        "A": "emphasize",
+        "B": "leave out",
+        "C": "include",
+        "D": "repeat"
+      },
+      "answer": "B",
+      "explanation": "To omit is to leave something out, whether by choice or by mistake. Include is its direct opposite, while repeat and emphasize both give an item more presence, not less."
+    },
+    {
+      "id": "C6-V012",
+      "section": "Verbal",
+      "question": "Choose the word closest in meaning to ZENITH.",
+      "options": {
+        "A": "the starting line",
+        "B": "the lowest point",
+        "C": "the highest point",
+        "D": "a deep valley"
+      },
+      "answer": "C",
+      "explanation": "Zenith is the peak or highest point of something, such as a career. The lowest point (nadir) and a deep valley express the opposite idea, and a starting line is a beginning, not a peak."
+    },
+    {
+      "id": "C6-V013",
+      "section": "Verbal",
+      "question": "Choose the correct verb: 'The number of applicants _____ increased since last week.'",
+      "options": {
+        "A": "are",
+        "B": "has",
+        "C": "have",
+        "D": "were being"
+      },
+      "answer": "B",
+      "explanation": "The subject is 'the number,' which is singular, so the singular verb 'has' is correct. Remember the contrast: 'the number of' takes a singular verb, while 'a number of' takes a plural verb."
+    },
+    {
+      "id": "C6-V014",
+      "section": "Verbal",
+      "question": "Choose the correct verb: 'A number of students _____ absent during the field inspection.'",
+      "options": {
+        "A": "is",
+        "B": "were",
+        "C": "was",
+        "D": "has been"
+      },
+      "answer": "B",
+      "explanation": "'A number of' means 'several' and acts as a plural subject, so it takes 'were.' This is the reverse of 'the number of,' which is singular and takes a singular verb."
+    },
+    {
+      "id": "C6-V015",
+      "section": "Verbal",
+      "question": "Choose the correct pronoun: 'The secret is just between you and _____.'",
+      "options": {
+        "A": "myself",
+        "B": "me",
+        "C": "I",
+        "D": "mine"
+      },
+      "answer": "B",
+      "explanation": "After a preposition ('between'), the object form of the pronoun is required: 'between you and me.' 'I' is a subject form, 'myself' is reflexive, and 'mine' is possessive."
+    },
+    {
+      "id": "C6-V016",
+      "section": "Verbal",
+      "question": "Choose the correct verb form: 'By the time the auditors arrive next month, the office _____ all the vouchers.'",
+      "options": {
+        "A": "will have filed",
+        "B": "filed last",
+        "C": "files yesterday",
+        "D": "has file"
+      },
+      "answer": "A",
+      "explanation": "An action that will be completed before a future moment ('by the time the auditors arrive') takes the future perfect tense, 'will have filed.' The other choices mix past time or use a wrong verb form."
+    },
+    {
+      "id": "C6-V017",
+      "section": "Verbal",
+      "question": "Which sentence is grammatically correct?",
+      "options": {
+        "A": "Walking to the office, the new signboard caught Maria's eye.",
+        "B": "Walking to the office, a stray dog was seen by Maria.",
+        "C": "Walking to the office, Maria noticed the new signboard.",
+        "D": "Walking to the office, the rain soaked Maria's umbrella."
+      },
+      "answer": "C",
+      "explanation": "An opening participial phrase must describe the subject of the sentence. Only in the correct choice is Maria, the walker, the subject. In the others the signboard, the rain, or the dog appears to do the walking, which is a dangling modifier."
+    },
+    {
+      "id": "C6-V018",
+      "section": "Verbal",
+      "question": "Which sentence shows correct parallel structure?",
+      "options": {
+        "A": "Her duties include filing reports, encoding data, and to answer queries.",
+        "B": "Her duties include to file reports, encoding data, and answered queries.",
+        "C": "Her duties include filing reports, to encode data, and answering queries.",
+        "D": "Her duties include filing reports, encoding data, and answering queries."
+      },
+      "answer": "D",
+      "explanation": "Items in a series must share the same grammatical form. The correct sentence uses three '-ing' forms in a row (filing, encoding, answering). Mixing infinitives or a past-tense form breaks parallelism."
+    },
+    {
+      "id": "C6-V019",
+      "section": "Verbal",
+      "question": "Which sentence is correctly punctuated?",
+      "options": {
+        "A": "The seminar which, lasted three hours, covered new filing rules.",
+        "B": "The seminar, which lasted three hours, covered new filing rules.",
+        "C": "The seminar, which lasted three hours covered, new filing rules.",
+        "D": "The seminar which lasted three hours, covered new filing rules."
+      },
+      "answer": "B",
+      "explanation": "A non-restrictive clause ('which lasted three hours') is set off by a pair of commas, one before and one after the clause. The wrong choices drop one comma or place commas where they split the subject from its verb."
+    },
+    {
+      "id": "C6-V020",
+      "section": "Verbal",
+      "question": "Choose the correct form: 'Of the three proposals, the committee chose the _____ one.'",
+      "options": {
+        "A": "practicalest",
+        "B": "most practically",
+        "C": "most practical",
+        "D": "more practical"
+      },
+      "answer": "C",
+      "explanation": "When comparing more than two items ('of the three proposals'), use the superlative form, 'most practical.' 'More practical' compares only two, 'practicalest' is not a word, and 'practically' is an adverb."
+    },
+    {
+      "id": "C6-V021",
+      "section": "Verbal",
+      "question": "Choose the correct verb form: 'If he had reviewed his notes, he _____ the quiz.'",
+      "options": {
+        "A": "will pass",
+        "B": "would have passed",
+        "C": "would pass yesterday",
+        "D": "passes"
+      },
+      "answer": "B",
+      "explanation": "A condition contrary to past fact ('if he had reviewed') pairs with 'would have passed' in the result clause. This third conditional talks about an unreal past; present or simple forms do not fit its time frame."
+    },
+    {
+      "id": "C6-V022",
+      "section": "Verbal",
+      "question": "Choose the correct verb: 'The accomplishment reports _____ by the section chief yesterday.'",
+      "options": {
+        "A": "was signed",
+        "B": "has signing",
+        "C": "were signed",
+        "D": "is signed"
+      },
+      "answer": "C",
+      "explanation": "The subject 'reports' is plural and the action happened yesterday, so the past passive form is 'were signed.' 'Was' is singular, 'is signed' is present, and 'has signing' is not a valid verb form."
+    },
+    {
+      "id": "C6-V023",
+      "section": "Verbal",
+      "question": "Choose the correct word: 'The new filing system will take _____ at the start of the quarter.'",
+      "options": {
+        "A": "affect",
+        "B": "affecting",
+        "C": "effects",
+        "D": "effect"
+      },
+      "answer": "D",
+      "explanation": "In the idiom 'take effect,' meaning to come into force, the noun 'effect' is used. 'Affect' is usually a verb meaning to influence; do not let the familiar pair confuse the fixed expression."
+    },
+    {
+      "id": "C6-V024",
+      "section": "Verbal",
+      "question": "Choose the correct word: 'There were _____ examinees in the afternoon session than in the morning session.'",
+      "options": {
+        "A": "fewer",
+        "B": " lesser",
+        "C": "fewest",
+        "D": "less"
+      },
+      "answer": "A",
+      "explanation": "Use 'fewer' for things that can be counted, like examinees, and 'less' for uncountable amounts, like water or time. 'Fewest' is a superlative and would need a comparison among three or more groups."
+    },
+    {
+      "id": "C6-V025",
+      "section": "Verbal",
+      "question": "Choose the correct verb: 'Each of the envelopes _____ a return address printed on it.'",
+      "options": {
+        "A": "were having",
+        "B": "have",
+        "C": "are having",
+        "D": "has"
+      },
+      "answer": "D",
+      "explanation": "'Each' is always singular, even when followed by a plural phrase ('of the envelopes'), so the verb is 'has.' Ignore the plural noun inside the prepositional phrase when matching the verb."
+    },
+    {
+      "id": "C6-V026",
+      "section": "Verbal",
+      "question": "Choose the correct pronoun: 'Neither of the sisters forgot _____ umbrella at the clinic.'",
+      "options": {
+        "A": "its",
+        "B": "her",
+        "C": "their",
+        "D": "his"
+      },
+      "answer": "B",
+      "explanation": "'Neither of the sisters' refers to females one at a time and is treated as singular, so the singular feminine pronoun 'her' fits. 'Their' is plural, 'his' is masculine, and 'its' is for things."
+    },
+    {
+      "id": "C6-V027",
+      "section": "Verbal",
+      "question": "Choose the best connector: '_____ the power went out twice, the encoded records were not lost.'",
+      "options": {
+        "A": "Since that",
+        "B": "Because of",
+        "C": "Unless that",
+        "D": "Although"
+      },
+      "answer": "D",
+      "explanation": "The sentence contrasts an obstacle with a good result, so the concessive connector 'Although' is correct. 'Because of' needs a noun phrase and shows cause, while 'unless' sets a condition, neither of which matches the contrast."
+    },
+    {
+      "id": "C6-V028",
+      "section": "Verbal",
+      "question": "Which sentence uses capitalization correctly?",
+      "options": {
+        "A": "The seminar will be held on Friday, october 9, at the City Hall.",
+        "B": "The seminar will be held on friday, October 9, at the city hall.",
+        "C": "The seminar will be held on Friday, October 9, at the City hall.",
+        "D": "The seminar will be held on Friday, October 9, at the City Hall."
+      },
+      "answer": "D",
+      "explanation": "Days of the week, months, and the proper name of a specific building (City Hall) are capitalized. The wrong choices lowercase a day or month, or capitalize only part of the proper name."
+    },
+    {
+      "id": "C6-V029",
+      "section": "Verbal",
+      "question": "Arrange the sentences into a logical paragraph: (1) After cooling, the mixture is poured into molds. (2) The cook first melts sugar in a heavy pan until it turns golden. (3) She then adds butter and stirs until the mixture is smooth. (4) Finally, the hardened candies are wrapped in paper.",
+      "options": {
+        "A": "2, 3, 1, 4",
+        "B": "2, 1, 3, 4",
+        "C": "1, 2, 3, 4",
+        "D": "3, 2, 1, 4"
+      },
+      "answer": "A",
+      "explanation": "Follow the time markers: melting the sugar is 'first,' adding butter comes 'then,' pouring into molds happens 'after cooling,' and wrapping is 'finally.' Any order that pours before stirring or wraps before molding breaks the process."
+    },
+    {
+      "id": "C6-V030",
+      "section": "Verbal",
+      "question": "Arrange the sentences into a logical paragraph: (1) Because of this, the barangay bought two additional water tanks. (2) Residents of Barangay Malaya often lined up for water during the dry months. (3) The old tank could supply only half of the households in the area. (4) With the new tanks, every household now gets a regular share of water.",
+      "options": {
+        "A": "1, 4, 2, 3",
+        "B": "2, 3, 1, 4",
+        "C": "2, 1, 3, 4",
+        "D": "3, 2, 1, 4"
+      },
+      "answer": "B",
+      "explanation": "Start with the general problem (lining up for water), then its cause (the old tank was too small), then the response introduced by 'because of this,' and end with the present result. Effect cannot come before its cause."
+    },
+    {
+      "id": "C6-V031",
+      "section": "Verbal",
+      "question": "Arrange the sentences into a logical paragraph: (1) He practiced answering sample questions every evening for a month. (2) Ramon wanted to pass the entrance examination of the school he admired. (3) On the examination day, he answered calmly and finished ahead of time. (4) His name later appeared on the list of passers posted at the gate.",
+      "options": {
+        "A": "1, 2, 3, 4",
+        "B": "2, 3, 1, 4",
+        "C": "3, 4, 2, 1",
+        "D": "2, 1, 3, 4"
+      },
+      "answer": "D",
+      "explanation": "A narrative paragraph follows goal, preparation, performance, result. Ramon's goal comes first, then his month of practice, then the exam day itself, and finally the posted result marked by 'later.'"
+    },
+    {
+      "id": "C6-V032",
+      "section": "Verbal",
+      "question": "Arrange the sentences into a logical paragraph: (1) These small savings later paid for the repair of their boat engine. (2) The fishers agreed to set aside a fixed amount from every catch. (3) At first, some members doubted that the amounts would ever grow. (4) Month after month, however, the shared fund steadily increased.",
+      "options": {
+        "A": "2, 3, 4, 1",
+        "B": "2, 4, 3, 1",
+        "C": "4, 1, 2, 3",
+        "D": "3, 2, 4, 1"
+      },
+      "answer": "A",
+      "explanation": "The agreement to save comes first, followed by the early doubt ('at first'), then the steady growth 'month after month' signaled by 'however,' and last the use of the savings, which the word 'later' places at the end."
+    },
+    {
+      "id": "C6-V033",
+      "section": "Verbal",
+      "question": "Arrange the sentences into a logical paragraph: (1) A clear topic sentence helps readers know what a paragraph will discuss. (2) Supporting sentences then give details, examples, or reasons. (3) A closing sentence may restate the main point in fresh words. (4) Together, these parts make a paragraph easy to follow.",
+      "options": {
+        "A": "2, 1, 3, 4",
+        "B": "4, 3, 2, 1",
+        "C": "1, 3, 2, 4",
+        "D": "1, 2, 3, 4"
+      },
+      "answer": "D",
+      "explanation": "The paragraph itself follows the structure it describes: topic sentence first, supporting details next ('then'), a closing sentence after that, and a summary that begins 'Together,' which can only come last."
+    },
+    {
+      "id": "C6-V034",
+      "section": "Verbal",
+      "passage": "The coastal town of San Isidro installed forty solar-powered streetlights along its main road and fishing port in March. Before the project, the road went dark whenever the power supply failed, and fishers returning before dawn unloaded their catch by flashlight. The municipal government paid for the lights using savings from its electricity budget, because solar lamps charge during the day and need no power from the grid at night. After six months, the town recorded fewer road accidents at night, and the fish market opened an hour earlier because vendors could sort their catch safely. Encouraged by these results, the town council voted to add twenty more lights near the public school and the health center.",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "A": "Solar streetlights improved safety and early-morning work in San Isidro.",
+        "B": "Fishers in San Isidro refuse to work before dawn.",
+        "C": "The town council plans to sell electricity to nearby towns.",
+        "D": "San Isidro spent all of its savings on a single project."
+      },
+      "answer": "A",
+      "explanation": "Every detail supports one idea: the solar lights made the road safer and let the fish market open earlier. The town used only its electricity savings, not all savings, and no selling of electricity is mentioned."
+    },
+    {
+      "id": "C6-V035",
+      "section": "Verbal",
+      "passage": "The coastal town of San Isidro installed forty solar-powered streetlights along its main road and fishing port in March. Before the project, the road went dark whenever the power supply failed, and fishers returning before dawn unloaded their catch by flashlight. The municipal government paid for the lights using savings from its electricity budget, because solar lamps charge during the day and need no power from the grid at night. After six months, the town recorded fewer road accidents at night, and the fish market opened an hour earlier because vendors could sort their catch safely. Encouraged by these results, the town council voted to add twenty more lights near the public school and the health center.",
+      "question": "According to the passage, how was the project paid for?",
+      "options": {
+        "A": "From fees collected at the fish market",
+        "B": "From a loan granted by a national bank",
+        "C": "From savings in the town's electricity budget",
+        "D": "From donations given by fish vendors"
+      },
+      "answer": "C",
+      "explanation": "The passage states directly that the municipal government paid using savings from its electricity budget. Donations, loans, and market fees are not mentioned as funding sources."
+    },
+    {
+      "id": "C6-V036",
+      "section": "Verbal",
+      "passage": "The coastal town of San Isidro installed forty solar-powered streetlights along its main road and fishing port in March. Before the project, the road went dark whenever the power supply failed, and fishers returning before dawn unloaded their catch by flashlight. The municipal government paid for the lights using savings from its electricity budget, because solar lamps charge during the day and need no power from the grid at night. After six months, the town recorded fewer road accidents at night, and the fish market opened an hour earlier because vendors could sort their catch safely. Encouraged by these results, the town council voted to add twenty more lights near the public school and the health center.",
+      "question": "Why do the solar lamps not need power from the grid at night?",
+      "options": {
+        "A": "They use leftover power from the market.",
+        "B": "They run on batteries delivered weekly.",
+        "C": "They charge during the day using sunlight.",
+        "D": "They are connected to the fishing boats."
+      },
+      "answer": "C",
+      "explanation": "The passage explains that solar lamps charge during the day and need no grid power at night. The charging source is sunlight; weekly batteries, boats, and market power are invented details."
+    },
+    {
+      "id": "C6-V037",
+      "section": "Verbal",
+      "passage": "The coastal town of San Isidro installed forty solar-powered streetlights along its main road and fishing port in March. Before the project, the road went dark whenever the power supply failed, and fishers returning before dawn unloaded their catch by flashlight. The municipal government paid for the lights using savings from its electricity budget, because solar lamps charge during the day and need no power from the grid at night. After six months, the town recorded fewer road accidents at night, and the fish market opened an hour earlier because vendors could sort their catch safely. Encouraged by these results, the town council voted to add twenty more lights near the public school and the health center.",
+      "question": "What happened after six months of using the lights?",
+      "options": {
+        "A": "The town removed half of the streetlights.",
+        "B": "Night accidents decreased and the fish market opened earlier.",
+        "C": "More fishers decided to leave the town.",
+        "D": "The council stopped holding evening sessions."
+      },
+      "answer": "B",
+      "explanation": "The passage records two results after six months: fewer road accidents at night and a fish market opening an hour earlier. The other choices contradict or invent outcomes."
+    },
+    {
+      "id": "C6-V038",
+      "section": "Verbal",
+      "passage": "The coastal town of San Isidro installed forty solar-powered streetlights along its main road and fishing port in March. Before the project, the road went dark whenever the power supply failed, and fishers returning before dawn unloaded their catch by flashlight. The municipal government paid for the lights using savings from its electricity budget, because solar lamps charge during the day and need no power from the grid at night. After six months, the town recorded fewer road accidents at night, and the fish market opened an hour earlier because vendors could sort their catch safely. Encouraged by these results, the town council voted to add twenty more lights near the public school and the health center.",
+      "question": "What can be inferred from the last sentence of the passage?",
+      "options": {
+        "A": "The council was satisfied with the project and wanted to expand it.",
+        "B": "The school and health center had complained about darkness in writing.",
+        "C": "The project failed to meet its original goals.",
+        "D": "The council regretted installing the first lights."
+      },
+      "answer": "A",
+      "explanation": "Voting to add twenty more lights near the school and health center shows satisfaction and a wish to expand. Nothing in the passage reports regret, written complaints, or failure."
+    },
+    {
+      "id": "C6-V039",
+      "section": "Verbal",
+      "passage": "When the ferry terminal in Puerto Luna replaced its single long line with a numbered ticket system, passengers no longer had to stand for hours to keep their place. Each traveler now takes a ticket from a machine at the entrance and waits seated until the number is called on a screen. Porters say the hall is calmer because people are not pushing forward whenever a ferry arrives. The system also records how many passengers travel each day, which helps the terminal schedule extra trips on busy weekends. However, the manager admits that elderly passengers sometimes need help reading the screen, so two staff members are assigned to assist them during peak hours.",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "A": "Ferry passengers prefer standing in long lines.",
+        "B": "The terminal raised its ticket prices for weekends.",
+        "C": "Porters were replaced by machines at the terminal.",
+        "D": "A numbered ticket system made waiting at the ferry terminal more orderly."
+      },
+      "answer": "D",
+      "explanation": "The whole passage describes how numbered tickets replaced the single long line and made waiting calmer and more organized. Porters still work there, and prices are never discussed."
+    },
+    {
+      "id": "C6-V040",
+      "section": "Verbal",
+      "passage": "When the ferry terminal in Puerto Luna replaced its single long line with a numbered ticket system, passengers no longer had to stand for hours to keep their place. Each traveler now takes a ticket from a machine at the entrance and waits seated until the number is called on a screen. Porters say the hall is calmer because people are not pushing forward whenever a ferry arrives. The system also records how many passengers travel each day, which helps the terminal schedule extra trips on busy weekends. However, the manager admits that elderly passengers sometimes need help reading the screen, so two staff members are assigned to assist them during peak hours.",
+      "question": "According to the passage, what do passengers do under the new system?",
+      "options": {
+        "A": "Register their names a day before traveling.",
+        "B": "Line up at the gate as soon as a ferry arrives.",
+        "C": "Take a numbered ticket and wait seated until their number is called.",
+        "D": "Buy tickets from porters inside the hall."
+      },
+      "answer": "C",
+      "explanation": "The passage says each traveler takes a ticket from a machine and waits seated until the number appears on the screen. The old pushing-forward behavior is exactly what the system replaced."
+    },
+    {
+      "id": "C6-V041",
+      "section": "Verbal",
+      "passage": "When the ferry terminal in Puerto Luna replaced its single long line with a numbered ticket system, passengers no longer had to stand for hours to keep their place. Each traveler now takes a ticket from a machine at the entrance and waits seated until the number is called on a screen. Porters say the hall is calmer because people are not pushing forward whenever a ferry arrives. The system also records how many passengers travel each day, which helps the terminal schedule extra trips on busy weekends. However, the manager admits that elderly passengers sometimes need help reading the screen, so two staff members are assigned to assist them during peak hours.",
+      "question": "How does the recorded passenger data help the terminal?",
+      "options": {
+        "A": "It helps the terminal schedule extra trips on busy weekends.",
+        "B": "It identifies passengers who travel without tickets.",
+        "C": "It sets the price of each ferry ticket.",
+        "D": "It tells porters which bags are the heaviest."
+      },
+      "answer": "A",
+      "explanation": "The daily passenger counts guide scheduling of extra weekend trips. The data is about volume, not baggage weight, pricing, or enforcement against ticketless passengers."
+    },
+    {
+      "id": "C6-V042",
+      "section": "Verbal",
+      "passage": "When the ferry terminal in Puerto Luna replaced its single long line with a numbered ticket system, passengers no longer had to stand for hours to keep their place. Each traveler now takes a ticket from a machine at the entrance and waits seated until the number is called on a screen. Porters say the hall is calmer because people are not pushing forward whenever a ferry arrives. The system also records how many passengers travel each day, which helps the terminal schedule extra trips on busy weekends. However, the manager admits that elderly passengers sometimes need help reading the screen, so two staff members are assigned to assist them during peak hours.",
+      "question": "Which problem with the new system does the passage admit?",
+      "options": {
+        "A": "Passengers frequently lose their numbered tickets.",
+        "B": "Some elderly passengers need help reading the screen.",
+        "C": "The ticket machine often runs out of paper.",
+        "D": "The screen cannot be seen during daytime."
+      },
+      "answer": "B",
+      "explanation": "The manager admits elderly passengers sometimes need help reading the screen, which is why two staff members assist at peak hours. The other problems are not mentioned anywhere in the passage."
+    },
+    {
+      "id": "C6-V043",
+      "section": "Verbal",
+      "passage": "When the ferry terminal in Puerto Luna replaced its single long line with a numbered ticket system, passengers no longer had to stand for hours to keep their place. Each traveler now takes a ticket from a machine at the entrance and waits seated until the number is called on a screen. Porters say the hall is calmer because people are not pushing forward whenever a ferry arrives. The system also records how many passengers travel each day, which helps the terminal schedule extra trips on busy weekends. However, the manager admits that elderly passengers sometimes need help reading the screen, so two staff members are assigned to assist them during peak hours.",
+      "question": "The word 'calmer' in the passage most nearly means:",
+      "options": {
+        "A": "more peaceful and less disorderly",
+        "B": "faster in movement",
+        "C": "louder and busier",
+        "D": "colder in temperature"
+      },
+      "answer": "A",
+      "explanation": "Porters describe the hall as calmer because people no longer push forward; the word refers to peace and order, not temperature, speed, or noise level in the opposite direction."
+    },
+    {
+      "id": "C6-V044",
+      "section": "Verbal",
+      "question": "Ano ang kasingkahulugan ng salitang MAHINAHON?",
+      "options": {
+        "A": "madaling matakot",
+        "B": "palaging nagmamadali",
+        "C": "mahilig makipagtalo",
+        "D": "kalmado at hindi madaling magalit"
+      },
+      "answer": "D",
+      "explanation": "Ang mahinahon ay taong kalmado at kontrolado ang damdamin. Ang nagmamadali at mahilig makipagtalo ay kabaligtaran ng pagiging mahinahon, at ang pagiging matatakutin ay ibang katangian."
+    },
+    {
+      "id": "C6-V045",
+      "section": "Verbal",
+      "question": "Ano ang kasalungat ng salitang MAPAGBIGAY?",
+      "options": {
+        "A": "matulungin",
+        "B": "madamot",
+        "C": "mapagkawanggawa",
+        "D": "bukas-palad"
+      },
+      "answer": "B",
+      "explanation": "Ang mapagbigay ay handang magbahagi, kaya ang kasalungat nito ay madamot. Ang matulungin, mapagkawanggawa, at bukas-palad ay pawang kasingkahulugan ng mapagbigay."
+    },
+    {
+      "id": "C6-V046",
+      "section": "Verbal",
+      "question": "Alin ang wastong pangungusap?",
+      "options": {
+        "A": "Ang mga mag-aaral ay nagsumite ng kaniyang proyekto kahapon.",
+        "B": "Ang mga mag-aaral ay nagsumite ng kanilang mga proyekto ay kahapon.",
+        "C": "Ang mag-aaral ay nagsumite ng kanilang proyekto kahapon.",
+        "D": "Ang mga mag-aaral ay nagsumite ng kanilang proyekto kahapon."
+      },
+      "answer": "D",
+      "explanation": "Tama ang unang pangungusap dahil ang panghalip na 'kanilang' ay umaayon sa maramihang simuno na 'mga mag-aaral.' Ang 'kaniyang' ay isahan, ang dobleng 'ay' ay sumisira sa ayos, at ang isahang simuno ay hindi tumutugma sa 'kanilang.'"
+    },
+    {
+      "id": "C6-V047",
+      "section": "Verbal",
+      "question": "Alin ang pang-uri sa pangungusap na 'Ang masipag na hardinero ay nagdidilig ng mga halaman tuwing umaga'?",
+      "options": {
+        "A": "umaga",
+        "B": "hardinero",
+        "C": "nagdidilig",
+        "D": "masipag"
+      },
+      "answer": "D",
+      "explanation": "Ang pang-uri ay salitang naglalarawan sa pangngalan. Inilalarawan ng 'masipag' ang hardinero. Ang 'hardinero' ay pangngalan, ang 'nagdidilig' ay pandiwa, at ang 'umaga' ay pangngalang pantangi ng panahon."
+    },
+    {
+      "id": "C6-V048",
+      "section": "Verbal",
+      "question": "Alin ang pang-abay na panlunan sa pangungusap na 'Nag-aaral ang magkakaibigan sa silid-aklatan tuwing Sabado'?",
+      "options": {
+        "A": "tuwing Sabado",
+        "B": "magkakaibigan",
+        "C": "nag-aaral",
+        "D": "sa silid-aklatan"
+      },
+      "answer": "D",
+      "explanation": "Ang pang-abay na panlunan ay sumasagot sa tanong na 'saan,' kaya ito ay 'sa silid-aklatan.' Ang 'tuwing Sabado' ay pang-abay na pamanahon (kailan), ang 'nag-aaral' ay pandiwa, at ang 'magkakaibigan' ay simuno."
+    },
+    {
+      "id": "C6-V049",
+      "section": "Verbal",
+      "question": "Ano ang ibig sabihin ng sawikaing 'bukal sa loob'?",
+      "options": {
+        "A": "lihim na pagbibigay ng pera",
+        "B": "pagbibigay na may hinihintay na kapalit",
+        "C": "taos-puso at kusang-loob na pagbibigay",
+        "D": "napipilitang magbigay"
+      },
+      "answer": "C",
+      "explanation": "Ang 'bukal sa loob' ay nangangahulugang ang pagbibigay o pagtulong ay taos-puso at hindi napipilitan. Kung may hinihintay na kapalit o napipilitan, hindi ito bukal sa loob."
+    },
+    {
+      "id": "C6-V050",
+      "section": "Verbal",
+      "question": "Alin ang pangungusap na gumagamit ng pagmamalabis (hyperbole)?",
+      "options": {
+        "A": "Umiyak ang maraming tao sa kanyang pagpanaw.",
+        "B": "Malakas ang ulan kahapon sa bayan.",
+        "C": "Ang kanyang boses ay parang musika sa aking tainga.",
+        "D": "Bumaha ng luha ang buong bayan sa kanyang pagpanaw."
+      },
+      "answer": "D",
+      "explanation": "Ang pagmamalabis ay sadyang pagpapalabis na hindi literal, tulad ng 'bumaha ng luha.' Ang huling pagpipilian ay pagtutulad dahil gumagamit ng 'parang,' at ang dalawa pa ay tuwirang pahayag lamang."
+    },
+    {
+      "id": "C6-V051",
+      "section": "Verbal",
+      "question": "Alin ang may wastong baybay?",
+      "options": {
+        "A": "kongklusyon",
+        "B": "konklosyon",
+        "C": "konkluyson",
+        "D": "konklusyon"
+      },
+      "answer": "D",
+      "explanation": "Ang wastong baybay ng hiniram na salitang conclusion sa Filipino ay 'konklusyon,' na may 'u' pagkatapos ng 'kl.' Ang ibang pagpipilian ay maling pagbaybay na karaniwang napagkakamalang tama."
+    },
+    {
+      "id": "C6-V052",
+      "section": "Verbal",
+      "question": "Ayusin ang mga pangungusap sa pinakawastong pagkakasunod: (1) Dahil dito, umabot sa tamang oras ang mga pasahero. (2) Nagdagdag ang lungsod ng mga bus sa rutang iyon. (3) Dati, matagal na naghihintay ang mga pasahero sa hintuan tuwing umaga. (4) Ngayon, tuwing labinlimang minuto ay may dumaraang bus.",
+      "options": {
+        "A": "3, 2, 4, 1",
+        "B": "2, 3, 4, 1",
+        "C": "3, 4, 2, 1",
+        "D": "4, 1, 3, 2"
+      },
+      "answer": "A",
+      "explanation": "Magsimula sa dating kalagayan ('Dati'), sunod ang hakbang ng lungsod, pagkatapos ang bagong kalagayan ('Ngayon'), at huli ang resulta na ipinapakilala ng 'Dahil dito.' Hindi maaaring mauna ang resulta sa sanhi nito."
+    },
+    {
+      "id": "C6-N001",
+      "section": "Numerical",
+      "question": "What is the next number in the series 8, 15, 22, 29, 36, ___?",
+      "options": {
+        "A": "44",
+        "B": "50",
+        "C": "42",
+        "D": "43"
+      },
+      "answer": "D",
+      "explanation": "Each term increases by exactly 7: 8, 15, 22, 29, 36. Adding 7 once more gives 43. The distractors come from adding 6, 8, or 14 instead of the constant difference."
+    },
+    {
+      "id": "C6-N002",
+      "section": "Numerical",
+      "question": "What is the next number in the series 81, 27, 9, 3, ___?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "6"
+      },
+      "answer": "B",
+      "explanation": "Each term is divided by 3: 81 to 27 to 9 to 3. Dividing 3 by 3 gives 1. Subtracting a fixed amount would not keep the constant ratio of this geometric series."
+    },
+    {
+      "id": "C6-N003",
+      "section": "Numerical",
+      "question": "What is the next number in the series 2, 5, 10, 17, 26, ___?",
+      "options": {
+        "A": "37",
+        "B": "36",
+        "C": "35",
+        "D": "39"
+      },
+      "answer": "A",
+      "explanation": "The differences are 3, 5, 7, 9, increasing by 2 each time, so the next difference is 11. 26 + 11 = 37. Equivalently, each term is one more than a perfect square (1, 4, 9, 16, 25, 36)."
+    },
+    {
+      "id": "C6-N004",
+      "section": "Numerical",
+      "question": "What is the value of 36 / 4 + 5 x (7 - 3)?",
+      "options": {
+        "A": "20",
+        "B": "56",
+        "C": "40",
+        "D": "29"
+      },
+      "answer": "D",
+      "explanation": "Work inside the parentheses first: 7 - 3 = 4. Then multiply and divide before adding: 36 / 4 = 9 and 5 x 4 = 20, so 9 + 20 = 29. Adding before multiplying would give a wrong result."
+    },
+    {
+      "id": "C6-N005",
+      "section": "Numerical",
+      "question": "What is the value of (9 + 7)^2 / 16?",
+      "options": {
+        "A": "64",
+        "B": "16",
+        "C": "32",
+        "D": "8"
+      },
+      "answer": "B",
+      "explanation": "Add inside the parentheses first: 9 + 7 = 16. Square it: 16^2 = 256. Then divide: 256 / 16 = 16. Squaring only one addend or skipping the division leads to the distractors."
+    },
+    {
+      "id": "C6-N006",
+      "section": "Numerical",
+      "question": "What is the value of -14 + 22 - 9?",
+      "options": {
+        "A": "-27",
+        "B": "9",
+        "C": "5",
+        "D": "-1"
+      },
+      "answer": "D",
+      "explanation": "Combine step by step: -14 + 22 = 8, and 8 - 9 = -1. Adding all the absolute values (giving 45-type errors) or dropping a sign produces the wrong choices."
+    },
+    {
+      "id": "C6-N007",
+      "section": "Numerical",
+      "question": "What is 5/6 + 3/8?",
+      "options": {
+        "A": "29/48",
+        "B": "4/7",
+        "C": "1 5/24",
+        "D": "5/16"
+      },
+      "answer": "C",
+      "explanation": "Use the least common denominator 24: 5/6 = 20/24 and 3/8 = 9/24, so the sum is 29/24, or 1 5/24. Never add denominators; 8/14 comes from adding numerators and denominators straight across."
+    },
+    {
+      "id": "C6-N008",
+      "section": "Numerical",
+      "question": "What is 7/9 - 2/5?",
+      "options": {
+        "A": "17/45",
+        "B": "1 8/9",
+        "C": "7/9",
+        "D": "1 1/4"
+      },
+      "answer": "A",
+      "explanation": "Use the common denominator 45: 7/9 = 35/45 and 2/5 = 18/45, so the difference is 17/45. Subtracting numerators and denominators separately, or forgetting to convert, gives the distractors."
+    },
+    {
+      "id": "C6-N009",
+      "section": "Numerical",
+      "question": "What is 0.625 expressed as a fraction in lowest terms?",
+      "options": {
+        "A": "3/4",
+        "B": "1/2",
+        "C": "1/4",
+        "D": "5/8"
+      },
+      "answer": "D",
+      "explanation": "0.625 = 625/1000. Dividing numerator and denominator by 125 gives 5/8. The choices 6/8 and 5/10 are not equal to 0.625, and 25/100 equals 0.25, not 0.625, besides not being in lowest terms."
+    },
+    {
+      "id": "C6-N010",
+      "section": "Numerical",
+      "question": "What is 35% of 360?",
+      "options": {
+        "A": "108",
+        "B": "90",
+        "C": "126",
+        "D": "135"
+      },
+      "answer": "C",
+      "explanation": "Find 10% of 360 = 36, then 35% = 3 x 36 + 18 = 126. Or compute 360 x 0.35 = 126. The distractors are 25%, 30%, and 37.5% of 360, from using the wrong percent."
+    },
+    {
+      "id": "C6-N011",
+      "section": "Numerical",
+      "question": "A fare decreased from 150 pesos to 120 pesos. What is the percent decrease?",
+      "options": {
+        "A": "25%",
+        "B": "30%",
+        "C": "20%",
+        "D": "15%"
+      },
+      "answer": "C",
+      "explanation": "Percent change always uses the ORIGINAL value as the base. The decrease is 150 - 120 = 30, and 30 / 150 = 0.20, or 20%. Dividing by the new price (120) wrongly gives 25%."
+    },
+    {
+      "id": "C6-N012",
+      "section": "Numerical",
+      "question": "A bag originally priced at 1,250 pesos is sold at a 15% discount. How much does the buyer pay?",
+      "options": {
+        "A": "1,062.50 pesos",
+        "B": "1,075 pesos",
+        "C": "187.50 pesos",
+        "D": "1,250 pesos"
+      },
+      "answer": "A",
+      "explanation": "The discount is 15% of 1,250 = 187.50, so the buyer pays 1,250 - 187.50 = 1,062.50 pesos. Equivalently, paying 85% of the price: 1,250 x 0.85 = 1,062.50. Note 187.50 is the discount, not the amount paid."
+    },
+    {
+      "id": "C6-N013",
+      "section": "Numerical",
+      "question": "Two numbers are in the ratio 5 : 9 and their sum is 84. What is the larger number?",
+      "options": {
+        "A": "63",
+        "B": "45",
+        "C": "30",
+        "D": "54"
+      },
+      "answer": "D",
+      "explanation": "The ratio has 5 + 9 = 14 parts, so each part is 84 / 14 = 6. The larger share is 9 x 6 = 54. The smaller share, 5 x 6 = 30, is the main trap among the choices."
+    },
+    {
+      "id": "C6-N014",
+      "section": "Numerical",
+      "question": "Ana and Carla share 2,400 pesos in the ratio 3 : 5. How much does Ana, who gets the 3 parts, receive?",
+      "options": {
+        "A": "1,500 pesos",
+        "B": "800 pesos",
+        "C": "1,200 pesos",
+        "D": "900 pesos"
+      },
+      "answer": "D",
+      "explanation": "There are 3 + 5 = 8 parts, so each part is 2,400 / 8 = 300 pesos. Ana receives 3 x 300 = 900 pesos. Carla's share, 5 x 300 = 1,500, is the larger-share trap."
+    },
+    {
+      "id": "C6-N015",
+      "section": "Numerical",
+      "question": "If 4 notebooks cost 180 pesos, how much do 7 notebooks cost at the same unit price?",
+      "options": {
+        "A": "300 pesos",
+        "B": "245 pesos",
+        "C": "315 pesos",
+        "D": "280 pesos"
+      },
+      "answer": "C",
+      "explanation": "One notebook costs 180 / 4 = 45 pesos. Seven notebooks cost 7 x 45 = 315 pesos. Setting up the proportion 4 : 180 = 7 : x gives the same result."
+    },
+    {
+      "id": "C6-N016",
+      "section": "Numerical",
+      "question": "What is the average of 14, 22, 19, 27, and 33?",
+      "options": {
+        "A": "29",
+        "B": "23",
+        "C": "25",
+        "D": "20"
+      },
+      "answer": "B",
+      "explanation": "Add the numbers: 14 + 22 + 19 + 27 + 33 = 115. Divide by the count, 5: 115 / 5 = 23. Dividing by the wrong count or mis-adding the total leads to the other choices."
+    },
+    {
+      "id": "C6-N017",
+      "section": "Numerical",
+      "question": "The average of five numbers is 26. Four of the numbers are 20, 28, 24, and 30. What is the fifth number?",
+      "options": {
+        "A": "26",
+        "B": "28",
+        "C": "32",
+        "D": "24"
+      },
+      "answer": "B",
+      "explanation": "Five numbers averaging 26 must total 5 x 26 = 130. The four known numbers sum to 20 + 28 + 24 + 30 = 102, so the fifth number is 130 - 102 = 28."
+    },
+    {
+      "id": "C6-N018",
+      "section": "Numerical",
+      "question": "A delivery van traveled 120 km in 3 hours and then 180 km in another 3 hours. What was its average speed for the whole trip?",
+      "options": {
+        "A": "55 km/h",
+        "B": "60 km/h",
+        "C": "50 km/h",
+        "D": "45 km/h"
+      },
+      "answer": "C",
+      "explanation": "Average speed is total distance divided by total time: (120 + 180) / (3 + 3) = 300 / 6 = 50 km/h. Averaging the two leg speeds is a shortcut that only works here because the times are equal; the total-over-total method is always safe."
+    },
+    {
+      "id": "C6-N019",
+      "section": "Numerical",
+      "question": "A mother is 44 years old and her daughter is 12. In how many years will the mother be exactly twice as old as her daughter?",
+      "options": {
+        "A": "24 years",
+        "B": "16 years",
+        "C": "20 years",
+        "D": "12 years"
+      },
+      "answer": "C",
+      "explanation": "Let x be the number of years. Then 44 + x = 2(12 + x), so 44 + x = 24 + 2x, giving x = 20. Check: in 20 years they will be 64 and 32, and 64 is twice 32."
+    },
+    {
+      "id": "C6-N020",
+      "section": "Numerical",
+      "question": "Carlo is twice as old as Ben. If the sum of their ages is 54, how old is Carlo?",
+      "options": {
+        "A": "40 years old",
+        "B": "36 years old",
+        "C": "27 years old",
+        "D": "18 years old"
+      },
+      "answer": "B",
+      "explanation": "Let Ben's age be b; then Carlo is 2b and b + 2b = 54, so 3b = 54 and b = 18. Carlo is 2 x 18 = 36 years old. The trap choice 18 is Ben's age, not Carlo's."
+    },
+    {
+      "id": "C6-N021",
+      "section": "Numerical",
+      "question": "Worker A can finish a job in 10 days and Worker B can finish the same job in 15 days. Working together at the same rates, in how many days can they finish the job?",
+      "options": {
+        "A": "6 days",
+        "B": "12.5 days",
+        "C": "25 days",
+        "D": "5 days"
+      },
+      "answer": "A",
+      "explanation": "Add the daily rates: A does 1/10 and B does 1/15 of the job per day, totaling 3/30 + 2/30 = 5/30 = 1/6 per day, so together they need 6 days. Averaging 10 and 15 (12.5) ignores that rates, not times, are what add."
+    },
+    {
+      "id": "C6-N022",
+      "section": "Numerical",
+      "question": "Twelve workers can pave a road in 20 days at a constant rate. How many days will 16 workers need for the same road?",
+      "options": {
+        "A": "26.67 days",
+        "B": "15.5 days",
+        "C": "12 days",
+        "D": "15 days"
+      },
+      "answer": "D",
+      "explanation": "The job needs 12 x 20 = 240 worker-days. With 16 workers, the time is 240 / 16 = 15 days. More workers means fewer days, so answers larger than 20 use the proportion in the wrong direction."
+    },
+    {
+      "id": "C6-N023",
+      "section": "Numerical",
+      "question": "How much simple interest will 15,000 pesos earn at 4% per year in 3 years?",
+      "options": {
+        "A": "1,200 pesos",
+        "B": "1,800 pesos",
+        "C": "16,800 pesos",
+        "D": "600 pesos"
+      },
+      "answer": "B",
+      "explanation": "Simple interest I = P x r x t = 15,000 x 0.04 x 3 = 1,800 pesos. The 600 figure is only one year's interest, and 16,800 is the total amount (principal plus interest), not the interest alone."
+    },
+    {
+      "id": "C6-N024",
+      "section": "Numerical",
+      "question": "A loan of 8,000 pesos earned 960 pesos in simple interest over 3 years. What was the annual interest rate?",
+      "options": {
+        "A": "4%",
+        "B": "12%",
+        "C": "3%",
+        "D": "5%"
+      },
+      "answer": "A",
+      "explanation": "From I = P x r x t, r = I / (P x t) = 960 / (8,000 x 3) = 960 / 24,000 = 0.04, or 4% per year. Forgetting to divide by the 3 years wrongly gives 12%."
+    },
+    {
+      "id": "C6-N025",
+      "section": "Numerical",
+      "question": "How long will it take for 5,000 pesos at 6% simple interest per year to earn 900 pesos?",
+      "options": {
+        "A": "2 years",
+        "B": "3 years",
+        "C": "4 years",
+        "D": "5 years"
+      },
+      "answer": "B",
+      "explanation": "One year of interest is 5,000 x 0.06 = 300 pesos. To earn 900 pesos takes 900 / 300 = 3 years. Formally, t = I / (P x r) = 900 / 300 = 3."
+    },
+    {
+      "id": "C6-N026",
+      "section": "Numerical",
+      "question": "What is the area of a rectangle 18 meters long and 7 meters wide?",
+      "options": {
+        "A": "50 square meters",
+        "B": "25 square meters",
+        "C": "252 square meters",
+        "D": "126 square meters"
+      },
+      "answer": "D",
+      "explanation": "Area of a rectangle is length x width: 18 x 7 = 126 square meters. The 50 figure is the perimeter (2 x (18 + 7)), a common mix-up; area uses square units."
+    },
+    {
+      "id": "C6-N027",
+      "section": "Numerical",
+      "question": "A square lot has a side of 13 meters. What is its perimeter?",
+      "options": {
+        "A": "52 meters",
+        "B": "169 meters",
+        "C": "39 meters",
+        "D": "26 meters"
+      },
+      "answer": "A",
+      "explanation": "The perimeter of a square is 4 x side = 4 x 13 = 52 meters. The 169 figure is the area (13 x 13), and 26 or 39 count only two or three sides."
+    },
+    {
+      "id": "C6-N028",
+      "section": "Numerical",
+      "question": "What is the area of a triangle with a base of 14 cm and a height of 9 cm?",
+      "options": {
+        "A": "126 square cm",
+        "B": "46 square cm",
+        "C": "63 square cm",
+        "D": "23 square cm"
+      },
+      "answer": "C",
+      "explanation": "Area of a triangle is (base x height) / 2 = (14 x 9) / 2 = 126 / 2 = 63 square cm. Forgetting to halve gives 126, the area of the full rectangle around the triangle."
+    },
+    {
+      "id": "C6-N029",
+      "section": "Numerical",
+      "question": "Using pi = 22/7, what is the circumference of a circle with a radius of 7 cm?",
+      "options": {
+        "A": "44 cm",
+        "B": "22 cm",
+        "C": "154 cm",
+        "D": "88 cm"
+      },
+      "answer": "A",
+      "explanation": "Circumference C = 2 x pi x r = 2 x (22/7) x 7 = 44 cm. The 154 figure is the area (pi x r^2), and 88 results from using the diameter in place of the radius twice over."
+    },
+    {
+      "id": "C6-N030",
+      "section": "Numerical",
+      "question": "A bus travels at an average speed of 55 km/h for 4.5 hours. How far does it travel?",
+      "options": {
+        "A": "230 km",
+        "B": "275 km",
+        "C": "220 km",
+        "D": "247.5 km"
+      },
+      "answer": "D",
+      "explanation": "Distance = speed x time = 55 x 4.5 = 247.5 km. Compute in parts: 55 x 4 = 220 and 55 x 0.5 = 27.5, totaling 247.5; stopping at 220 forgets the final half hour."
+    },
+    {
+      "id": "C6-N031",
+      "section": "Numerical",
+      "question": "A car covers 360 km at a steady speed of 72 km/h. How long does the trip take?",
+      "options": {
+        "A": "4 hours",
+        "B": "5 hours",
+        "C": "6 hours",
+        "D": "5.5 hours"
+      },
+      "answer": "B",
+      "explanation": "Time = distance / speed = 360 / 72 = 5 hours. Check by multiplying back: 72 x 5 = 360 km, which matches the distance given."
+    },
+    {
+      "id": "C6-N032",
+      "section": "Numerical",
+      "question": "A customer pays with a 2,000-peso bill for items costing 475, 620, and 385 pesos. How much change should the customer receive?",
+      "options": {
+        "A": "620 pesos",
+        "B": "520 pesos",
+        "C": "1,480 pesos",
+        "D": "480 pesos"
+      },
+      "answer": "B",
+      "explanation": "First total the purchases: 475 + 620 + 385 = 1,480 pesos. The change is 2,000 - 1,480 = 520 pesos. The 1,480 choice is the total cost, not the change."
+    },
+    {
+      "id": "C6-N033",
+      "section": "Numerical",
+      "question": "If 4x - 7 = 25, what is the value of x?",
+      "options": {
+        "A": "8",
+        "B": "5",
+        "C": "9",
+        "D": "10"
+      },
+      "answer": "A",
+      "explanation": "Add 7 to both sides: 4x = 32. Divide both sides by 4: x = 8. Check: 4(8) - 7 = 32 - 7 = 25, which matches the equation."
+    },
+    {
+      "id": "C6-N034",
+      "section": "Numerical",
+      "question": "If x = 6, what is the value of 3x^2 - 5x?",
+      "options": {
+        "A": "63",
+        "B": "48",
+        "C": "78",
+        "D": "108"
+      },
+      "answer": "C",
+      "explanation": "Substitute x = 6: x^2 = 36, so 3 x 36 = 108, and 5x = 30. Then 108 - 30 = 78. Squaring only after multiplying, or skipping the subtraction, gives the distractors."
+    },
+    {
+      "id": "C6-N035",
+      "section": "Numerical",
+      "question": "What is 4/7 of 245?",
+      "options": {
+        "A": "140",
+        "B": "105",
+        "C": "175",
+        "D": "98"
+      },
+      "answer": "A",
+      "explanation": "Divide first: 245 / 7 = 35, then multiply by 4: 35 x 4 = 140. The 175 figure is 5/7 of 245 and 105-type errors come from using the wrong numerator."
+    },
+    {
+      "id": "C6-N036",
+      "section": "Numerical",
+      "question": "If 20% of a number is 46, what is the number?",
+      "options": {
+        "A": "230",
+        "B": "92",
+        "C": "115",
+        "D": "460"
+      },
+      "answer": "A",
+      "explanation": "If one fifth (20%) of the number is 46, the whole number is 5 x 46 = 230. Formally, number = 46 / 0.20 = 230. Halving or doubling 46 does not undo taking 20%."
+    },
+    {
+      "id": "C6-N037",
+      "section": "Numerical",
+      "question": "The sum of three consecutive integers is 87. What is the largest of the three integers?",
+      "options": {
+        "A": "28",
+        "B": "29",
+        "C": "33",
+        "D": "30"
+      },
+      "answer": "D",
+      "explanation": "Let the integers be n, n+1, n+2. Their sum is 3n + 3 = 87, so n = 28. The integers are 28, 29, 30, and the largest is 30. A quick check: the middle number equals the average, 87 / 3 = 29, so the largest is one more."
+    },
+    {
+      "id": "C6-N038",
+      "section": "Numerical",
+      "question": "A sales agent earns a commission of 8% on total sales of 45,500 pesos. How much commission does the agent earn?",
+      "options": {
+        "A": "3,600 pesos",
+        "B": "455 pesos",
+        "C": "3,640 pesos",
+        "D": "4,550 pesos"
+      },
+      "answer": "C",
+      "explanation": "Commission = 8% of 45,500 = 45,500 x 0.08 = 3,640 pesos. A fast check: 10% is 4,550 and 1% is 455, so 8% = 4,550 - 2 x 455 = 4,550 - 910 = 3,640."
+    },
+    {
+      "id": "C6-A001",
+      "section": "Analytical",
+      "question": "SCISSORS : CUT :: BROOM : _____",
+      "options": {
+        "A": "Handle",
+        "B": "Sweep",
+        "C": "Floor",
+        "D": "Dust"
+      },
+      "answer": "B",
+      "explanation": "The first word is a tool and the second is the action it is used for: scissors are used to cut. A broom is used to sweep. Dust is what is swept, the floor is where, and a handle is a part, none of which is the action."
+    },
+    {
+      "id": "C6-A002",
+      "section": "Analytical",
+      "question": "CATTLE : HERD :: SHEEP : _____",
+      "options": {
+        "A": "Swarm",
+        "B": "Pack",
+        "C": "Flock",
+        "D": "School"
+      },
+      "answer": "C",
+      "explanation": "A group of cattle is called a herd, and a group of sheep is called a flock. Pack is for wolves or dogs, swarm for bees or insects, and school for fish, so each collective noun belongs to a specific animal."
+    },
+    {
+      "id": "C6-A003",
+      "section": "Analytical",
+      "question": "PAINTER : CANVAS :: WRITER : _____",
+      "options": {
+        "A": "Paper",
+        "B": "Brush",
+        "C": "Reader",
+        "D": "Novel"
+      },
+      "answer": "A",
+      "explanation": "A painter works on a canvas, the surface that receives the work; a writer works on paper. A brush is the painter's tool, a novel is a finished product, and a reader is the audience, not the working surface."
+    },
+    {
+      "id": "C6-A004",
+      "section": "Analytical",
+      "question": "SEED : TREE :: EGG : _____",
+      "options": {
+        "A": "Shell",
+        "B": "Feather",
+        "C": "Bird",
+        "D": "Nest"
+      },
+      "answer": "C",
+      "explanation": "A seed is the starting stage from which a tree grows, and an egg is the starting stage from which a bird develops. A nest is a home, a feather is a body covering, and a shell is part of the egg itself."
+    },
+    {
+      "id": "C6-A005",
+      "section": "Analytical",
+      "question": "BAROMETER : PRESSURE :: RULER : _____",
+      "options": {
+        "A": "Time",
+        "B": "Weight",
+        "C": "Temperature",
+        "D": "Length"
+      },
+      "answer": "D",
+      "explanation": "A barometer measures air pressure, and a ruler measures length. Weight is measured by a scale, temperature by a thermometer, and time by a clock or watch; match each instrument to its quantity."
+    },
+    {
+      "id": "C6-A006",
+      "section": "Analytical",
+      "question": "WHEEL : CAR :: WING : _____",
+      "options": {
+        "A": "Airplane",
+        "B": "Engine",
+        "C": "Bird's feather",
+        "D": "Pilot"
+      },
+      "answer": "A",
+      "explanation": "A wheel is a part that helps a car move, and a wing is a part that helps an airplane fly or stay in the air. An engine is also a part but it does not correspond to the wheel's paired object; the relationship is part to the whole vehicle."
+    },
+    {
+      "id": "C6-A007",
+      "section": "Analytical",
+      "question": "HAMMER : NAIL :: SCREWDRIVER : _____",
+      "options": {
+        "A": "Toolbox",
+        "B": "Screw",
+        "C": "Wrench",
+        "D": "Wood"
+      },
+      "answer": "B",
+      "explanation": "A hammer is the tool used on a nail, and a screwdriver is the tool used on a screw. A wrench is a different tool, a toolbox stores tools, and wood is a material the fastener may enter."
+    },
+    {
+      "id": "C6-A008",
+      "section": "Analytical",
+      "question": "LIBRARY : BOOKS :: MUSEUM : _____",
+      "options": {
+        "A": "Visitors",
+        "B": "Artifacts",
+        "C": "Tickets",
+        "D": "Guards"
+      },
+      "answer": "B",
+      "explanation": "A library is a place that keeps and lends books; a museum is a place that keeps and displays artifacts. Visitors, tickets, and guards are found in both places, but they are not the collection each institution exists to hold."
+    },
+    {
+      "id": "C6-A009",
+      "section": "Analytical",
+      "question": "Statement: 'The city should plant trees along the highway to reduce air pollution in the area.' The statement assumes that:",
+      "options": {
+        "A": "Highway pollution is the only environmental problem of the city.",
+        "B": "Trees are the cheapest plants available in nurseries.",
+        "C": "Trees along the highway can absorb some pollutants from vehicle exhaust.",
+        "D": "All residents of the city own vehicles."
+      },
+      "answer": "C",
+      "explanation": "The recommendation only makes sense if trees actually help clean the air, so it assumes trees absorb some exhaust pollutants. It does not require that everyone owns a vehicle, that trees are cheapest, or that no other environmental problem exists."
+    },
+    {
+      "id": "C6-A010",
+      "section": "Analytical",
+      "question": "Statement: 'Employees should be given a one-hour training on the new software so that encoding errors will decrease.' The statement assumes that:",
+      "options": {
+        "A": "At least some encoding errors happen because employees do not yet know the software well.",
+        "B": "Training is the only expense the office will ever have.",
+        "C": "The new software is completely free of defects.",
+        "D": "Every employee dislikes using the new software."
+      },
+      "answer": "A",
+      "explanation": "Training can only reduce errors if unfamiliarity with the software causes some of them. If the errors came purely from software defects, training would not help, so the first choice is the necessary assumption; the rest are stronger than the statement needs."
+    },
+    {
+      "id": "C6-A011",
+      "section": "Analytical",
+      "question": "Statement: 'The school added a canteen so that students will no longer leave the campus during lunch.' The statement assumes that:",
+      "options": {
+        "A": "Students were leaving campus mainly to buy food.",
+        "B": "Students are never allowed to leave campus for any reason.",
+        "C": "The canteen will sell food at the lowest price in town.",
+        "D": "No student lives near the school."
+      },
+      "answer": "A",
+      "explanation": "A canteen addresses leaving only if the reason for leaving is to buy food. If students left for other reasons, the canteen would not keep them in. Price leadership, home distance, and a total ban are not required by the reasoning."
+    },
+    {
+      "id": "C6-A012",
+      "section": "Analytical",
+      "question": "Statement: 'Giving a small reward for every returned lost item will increase the number of items brought to the lost-and-found desk.' The statement assumes that:",
+      "options": {
+        "A": "All lost items are valuable.",
+        "B": "The lost-and-found desk is open twenty-four hours a day.",
+        "C": "Some people who find lost items are influenced by a reward to turn them in.",
+        "D": "People never return lost items without a reward."
+      },
+      "answer": "C",
+      "explanation": "The plan works only if a reward motivates at least some finders to surrender items. Items need not all be valuable, the desk need not be open all day, and the claim 'never without a reward' is stronger than the plan requires."
+    },
+    {
+      "id": "C6-A013",
+      "section": "Analytical",
+      "question": "Statements: All participants in the seminar are government employees. Some government employees are accountants. Which conclusion necessarily follows?",
+      "options": {
+        "A": "No participant is an accountant.",
+        "B": "All participants are accountants.",
+        "C": "No definite conclusion about participants being accountants can be drawn.",
+        "D": "Some participants are accountants."
+      },
+      "answer": "C",
+      "explanation": "'Some government employees are accountants' may refer to employees outside the seminar, so nothing certain follows about the participants. In syllogisms, a 'some' statement about the larger group cannot be forced onto the smaller group."
+    },
+    {
+      "id": "C6-A014",
+      "section": "Analytical",
+      "question": "Statements: If a document is marked urgent, it is processed within the day. Document R was NOT processed within the day. Which conclusion necessarily follows?",
+      "options": {
+        "A": "Document R was marked urgent but delayed by the staff.",
+        "B": "Document R was lost in the office.",
+        "C": "Document R arrived after office hours.",
+        "D": "Document R was not marked urgent."
+      },
+      "answer": "D",
+      "explanation": "This is modus tollens: if urgent implies same-day processing, then no same-day processing implies it was not marked urgent. The other choices invent explanations that the statements do not provide."
+    },
+    {
+      "id": "C6-A015",
+      "section": "Analytical",
+      "question": "Statements: No part-time worker in the agency receives a travel allowance. Ben is a part-time worker in the agency. Which conclusion necessarily follows?",
+      "options": {
+        "A": "Ben does not receive a travel allowance.",
+        "B": "Ben is a full-time worker.",
+        "C": "Ben receives a higher salary than full-time workers.",
+        "D": "Ben receives a travel allowance."
+      },
+      "answer": "A",
+      "explanation": "Ben belongs to the exact group the first statement describes, so the rule applies to him directly: he receives no travel allowance. His employment status and salary comparisons add facts not given."
+    },
+    {
+      "id": "C6-A016",
+      "section": "Analytical",
+      "question": "Statements: All the files in Drawer C have been scanned. The Ramos file is in Drawer C. Which conclusion necessarily follows?",
+      "options": {
+        "A": "The Ramos file is the only scanned file.",
+        "B": "Some files in Drawer C have not been scanned.",
+        "C": "The Ramos file has been scanned.",
+        "D": "All files in the agency have been scanned."
+      },
+      "answer": "C",
+      "explanation": "A universal statement about Drawer C applies to every member of it, including the Ramos file. It says nothing about files in other drawers, and it contradicts the claim that some Drawer C files were not scanned."
+    },
+    {
+      "id": "C6-A017",
+      "section": "Analytical",
+      "question": "Statements: Some vendors in the market sell fruits. All fruit sellers in the market wash their produce. Which conclusion necessarily follows?",
+      "options": {
+        "A": "All market vendors sell fruits.",
+        "B": "All vendors in the market wash their produce.",
+        "C": "Some vendors in the market wash their produce.",
+        "D": "No vendor in the market sells vegetables."
+      },
+      "answer": "C",
+      "explanation": "The vendors who sell fruits are covered by the second statement, so at least those vendors wash their produce. The conclusion is only 'some,' because other vendors may sell different goods and are not covered."
+    },
+    {
+      "id": "C6-A018",
+      "section": "Analytical",
+      "question": "Statements: Every member of the choir has a red folder. Mia has a red folder. Which conclusion necessarily follows?",
+      "options": {
+        "A": "Mia is certainly not a member of the choir.",
+        "B": "Mia is certainly a member of the choir.",
+        "C": "It cannot be concluded with certainty that Mia is a member of the choir.",
+        "D": "Only choir members own red folders."
+      },
+      "answer": "C",
+      "explanation": "Having a red folder is a requirement for choir members, but other people may also own red folders. Inferring membership from the folder alone is the fallacy of affirming the consequent; neither membership nor non-membership is certain."
+    },
+    {
+      "id": "C6-A019",
+      "section": "Analytical",
+      "question": "Statements: If the water level reaches the red line, the alarm will sound. The water level reached the red line this morning. Which conclusion necessarily follows?",
+      "options": {
+        "A": "The alarm was damaged this morning.",
+        "B": "The alarm sounded this morning.",
+        "C": "The water level rises every morning.",
+        "D": "The alarm sounds only in the morning."
+      },
+      "answer": "B",
+      "explanation": "This is modus ponens: the condition in the 'if' clause happened, so the result in the 'then' clause follows. How often the level rises, or the alarm's condition, is not part of the given statements."
+    },
+    {
+      "id": "C6-A020",
+      "section": "Analytical",
+      "question": "Statements: All licensed electricians in the city passed the safety course. Some residents of Barangay Uno are licensed electricians in the city. Which conclusion necessarily follows?",
+      "options": {
+        "A": "All residents of Barangay Uno passed the safety course.",
+        "B": "Some residents of Barangay Uno passed the safety course.",
+        "C": "No resident of Barangay Uno passed the safety course.",
+        "D": "All who passed the safety course live in Barangay Uno."
+      },
+      "answer": "B",
+      "explanation": "The residents who are licensed electricians fall under the 'all licensed electricians' rule, so at least some residents passed the course. Extending the conclusion to all residents, or to all passers, goes beyond the statements."
+    },
+    {
+      "id": "C6-A021",
+      "section": "Analytical",
+      "question": "Statements: A report is accepted only if it is signed by the supervisor. Report K was accepted. Which conclusion necessarily follows?",
+      "options": {
+        "A": "All signed reports are accepted.",
+        "B": "Report K was the best report submitted.",
+        "C": "Report K was signed by the supervisor.",
+        "D": "The supervisor signs every report received."
+      },
+      "answer": "C",
+      "explanation": "'Only if' states a necessary condition: acceptance requires a signature, so an accepted report must have been signed. It does not promise that every signed report is accepted, which would reverse the condition."
+    },
+    {
+      "id": "C6-A022",
+      "section": "Analytical",
+      "question": "Statements: Some examinees arrived late. All examinees who arrived late were given a separate room. Which conclusion necessarily follows?",
+      "options": {
+        "A": "All examinees were given a separate room.",
+        "B": "No examinee who arrived on time entered a room.",
+        "C": "Some examinees were given a separate room.",
+        "D": "All who were given a separate room arrived late."
+      },
+      "answer": "C",
+      "explanation": "Since some examinees arrived late and every late examinee got a separate room, at least those examinees were given one. The statements do not cover on-time examinees or claim that only latecomers received rooms."
+    },
+    {
+      "id": "C6-A023",
+      "section": "Analytical",
+      "question": "Five applicants are queued by appointment time. Carla comes before Dante. Dante comes before Elsie. Felix comes last. Gina comes before Carla. Who comes first in the queue?",
+      "options": {
+        "A": "Carla",
+        "B": "Gina",
+        "C": "Elsie",
+        "D": "Dante"
+      },
+      "answer": "B",
+      "explanation": "Chain the order: Gina is before Carla, Carla before Dante, Dante before Elsie, and Felix is last. The full order is Gina, Carla, Dante, Elsie, Felix, so Gina is first."
+    },
+    {
+      "id": "C6-A024",
+      "section": "Analytical",
+      "question": "Four folders are stacked on a desk. The blue folder is on top of the green folder. The yellow folder is below the green folder but above the white folder. Which folder is at the very bottom?",
+      "options": {
+        "A": "White folder",
+        "B": "Green folder",
+        "C": "Yellow folder",
+        "D": "Blue folder"
+      },
+      "answer": "A",
+      "explanation": "From top to bottom the order is blue, green, yellow, white: blue is above green, and yellow sits between green and white. The white folder is therefore at the very bottom of the stack."
+    },
+    {
+      "id": "C6-A025",
+      "section": "Analytical",
+      "question": "In a footrace, Karl finished ahead of Leo. Mina finished ahead of Karl. Noel finished last. Opal finished between Leo and Noel. Who finished second?",
+      "options": {
+        "A": "Karl",
+        "B": "Opal",
+        "C": "Leo",
+        "D": "Mina"
+      },
+      "answer": "A",
+      "explanation": "Build the order: Mina is ahead of Karl, Karl is ahead of Leo, Opal is between Leo and last-place Noel. The order is Mina, Karl, Leo, Opal, Noel, so Karl finished second."
+    },
+    {
+      "id": "C6-A026",
+      "section": "Analytical",
+      "question": "A clerk processes four tasks in sequence. Encoding is done before filing. Filing is done before mailing. Reviewing is done after mailing. How many tasks are done before mailing?",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "1",
+        "D": "2"
+      },
+      "answer": "D",
+      "explanation": "The sequence is encoding, filing, mailing, reviewing. Two tasks, encoding and filing, come before mailing. Reviewing comes after mailing, so it is not counted."
+    },
+    {
+      "id": "C6-A027",
+      "section": "Analytical",
+      "question": "An office recorded the applications it processed in one week: Monday 85, Tuesday 92, Wednesday 78, Thursday 95, Friday 90. What was the total number of applications processed that week?",
+      "options": {
+        "A": "450",
+        "B": "435",
+        "C": "430",
+        "D": "440"
+      },
+      "answer": "D",
+      "explanation": "Add the daily figures: 85 + 92 = 177, plus 78 = 255, plus 95 = 350, plus 90 = 440 applications for the week."
+    },
+    {
+      "id": "C6-A028",
+      "section": "Analytical",
+      "question": "An office recorded the applications it processed in one week: Monday 85, Tuesday 92, Wednesday 78, Thursday 95, Friday 90. What was the average number of applications processed per day?",
+      "options": {
+        "A": "92",
+        "B": "88",
+        "C": "85",
+        "D": "90"
+      },
+      "answer": "B",
+      "explanation": "The week's total is 440 applications over 5 working days, so the daily average is 440 / 5 = 88. Using the middle value or a single day's figure instead of total divided by days gives the distractors."
+    },
+    {
+      "id": "C6-A029",
+      "section": "Analytical",
+      "question": "An office recorded the applications it processed in one week: Monday 85, Tuesday 92, Wednesday 78, Thursday 95, Friday 90. What is the difference between the highest and the lowest daily counts?",
+      "options": {
+        "A": "13",
+        "B": "20",
+        "C": "7",
+        "D": "17"
+      },
+      "answer": "D",
+      "explanation": "The highest count is Thursday's 95 and the lowest is Wednesday's 78. The range is 95 - 78 = 17 applications."
+    },
+    {
+      "id": "C6-A030",
+      "section": "Analytical",
+      "question": "An office recorded the applications it processed in one week: Monday 85, Tuesday 92, Wednesday 78, Thursday 95, Friday 90. On how many days did the office process more than 88 applications?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "4",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "Compare each day with 88: Tuesday 92, Thursday 95, and Friday 90 are above 88, while Monday 85 and Wednesday 78 are below. That makes 3 days above the mark."
+    },
+    {
+      "id": "C6-G001",
+      "section": "General Information",
+      "question": "Under Article II of the 1987 Constitution, which authority is supreme over the military at all times?",
+      "options": {
+        "A": "The Chief of Staff of the Armed Forces",
+        "B": "The Secretary of National Defense as a military officer",
+        "C": "Civilian authority",
+        "D": "The commander of the largest military camp"
+      },
+      "answer": "C",
+      "explanation": "Article II, Section 3 declares that civilian authority is, at all times, supreme over the military, and that the Armed Forces is the protector of the people and the State. The Chief of Staff heads the AFP itself, the Defense Secretary is a civilian cabinet post but is not the constitutional principle named, and camp commanders are field officers."
+    },
+    {
+      "id": "C6-G002",
+      "section": "General Information",
+      "question": "Under Article II, Section 8 of the 1987 Constitution, the Philippines adopts a policy that is free from which of the following in its territory?",
+      "options": {
+        "A": "Nuclear weapons",
+        "B": "Imported consumer goods",
+        "C": "Foreign tourists",
+        "D": "All foreign investments"
+      },
+      "answer": "A",
+      "explanation": "Article II, Section 8 states that the Philippines, consistent with the national interest, adopts and pursues a policy of freedom from nuclear weapons in its territory. It does not ban tourists, imports, or foreign investment, which are regulated by other laws and policies."
+    },
+    {
+      "id": "C6-G003",
+      "section": "General Information",
+      "question": "Article II, Section 16 of the 1987 Constitution protects the right of the people to:",
+      "options": {
+        "A": "Own land anywhere in the country",
+        "B": "A government job upon graduation",
+        "C": "Free college education for all citizens",
+        "D": "A balanced and healthful ecology"
+      },
+      "answer": "D",
+      "explanation": "Section 16 obliges the State to protect the people's right to a balanced and healthful ecology in accord with the rhythm and harmony of nature. Free education guarantees appear in Article XIV, employment is promoted but not guaranteed as a personal right, and land ownership is subject to constitutional limits."
+    },
+    {
+      "id": "C6-G004",
+      "section": "General Information",
+      "question": "Under Article V, Section 1 of the 1987 Constitution, a voter must have resided in the Philippines for at least how long immediately before the election?",
+      "options": {
+        "A": "Six months in the Philippines and one month in the voting place",
+        "B": "Two years in the Philippines and one year in the voting place",
+        "C": "One year in the Philippines and six months in the place where the voter proposes to vote",
+        "D": "Five years in the Philippines and two years in the voting place"
+      },
+      "answer": "C",
+      "explanation": "Suffrage requires residence in the Philippines for at least one year and in the place of voting for at least six months immediately preceding the election, aside from being at least 18 years old and a Filipino citizen. The other choices inflate or shrink these constitutional periods."
+    },
+    {
+      "id": "C6-G005",
+      "section": "General Information",
+      "question": "Under Article VII of the 1987 Constitution, a candidate for President must have been a resident of the Philippines for at least how long immediately before election day?",
+      "options": {
+        "A": "One year",
+        "B": "Two years",
+        "C": "Ten years",
+        "D": "Five years"
+      },
+      "answer": "C",
+      "explanation": "A presidential candidate must be a natural-born citizen, a registered voter, able to read and write, at least 40 years old, and a resident of the Philippines for at least ten years immediately preceding the election. Two years is the residency for Senators, and one year is the district residency for House members."
+    },
+    {
+      "id": "C6-G006",
+      "section": "General Information",
+      "question": "Under Article VI of the 1987 Constitution, a candidate for Senator must have been a resident of the Philippines for at least how long immediately before election day?",
+      "options": {
+        "A": "Six months",
+        "B": "Ten years",
+        "C": "Two years",
+        "D": "One year"
+      },
+      "answer": "C",
+      "explanation": "A Senator must be a natural-born citizen, at least 35 years old, able to read and write, a registered voter, and a resident of the Philippines for not less than two years immediately preceding election day. Ten years is the presidential residency, and one year is the district residency for Representatives."
+    },
+    {
+      "id": "C6-G007",
+      "section": "General Information",
+      "question": "Under Article VI of the 1987 Constitution, a Member of the House of Representatives must have been a resident of the district he or she seeks to represent for at least:",
+      "options": {
+        "A": "Two years",
+        "B": "One year",
+        "C": "Ten years",
+        "D": "Six months"
+      },
+      "answer": "B",
+      "explanation": "A Representative must be a natural-born citizen, at least 25 years old, able to read and write, a registered voter in the district, and a resident there for at least one year immediately preceding the election. Two years applies to Senators and ten years to the President."
+    },
+    {
+      "id": "C6-G008",
+      "section": "General Information",
+      "question": "Under Article VI, Section 27 of the 1987 Constitution, what happens to a bill that the President neither signs nor vetoes within 30 days after receiving it?",
+      "options": {
+        "A": "It becomes a law as if the President had signed it.",
+        "B": "It is automatically rejected and can never be refiled.",
+        "C": "It returns to Congress for another full reading.",
+        "D": "It becomes a law only after a plebiscite."
+      },
+      "answer": "A",
+      "explanation": "A bill not returned with objections within 30 days after receipt becomes law as if signed; this is sometimes called lapsing into law. Only a veto sends a bill back, a rejected bill may in fact be refiled in a later Congress, and plebiscites are for constitutional changes, not ordinary bills."
+    },
+    {
+      "id": "C6-G009",
+      "section": "General Information",
+      "question": "Under Article XI of the 1987 Constitution, which body has the exclusive power to INITIATE all cases of impeachment?",
+      "options": {
+        "A": "The House of Representatives",
+        "B": "The Office of the Ombudsman",
+        "C": "The Supreme Court",
+        "D": "The Senate"
+      },
+      "answer": "A",
+      "explanation": "The House of Representatives initiates impeachment by filing and approving the articles, while the Senate tries and decides the case sitting as an impeachment court. The Supreme Court does not initiate impeachments, and the Ombudsman investigates ordinary graft complaints, not impeachments."
+    },
+    {
+      "id": "C6-G010",
+      "section": "General Information",
+      "question": "Under Article XIII of the 1987 Constitution, what is the primary function of the Commission on Human Rights?",
+      "options": {
+        "A": "To administer elections and resolve election contests",
+        "B": "To prosecute all criminal cases in court",
+        "C": "To audit the funds of government agencies",
+        "D": "To investigate, on its own or on complaint, all forms of human rights violations involving civil and political rights"
+      },
+      "answer": "D",
+      "explanation": "The CHR investigates human rights violations involving civil and political rights and recommends measures for their protection. Prosecution belongs to the Department of Justice and the Ombudsman, auditing to the Commission on Audit, and elections to the COMELEC."
+    },
+    {
+      "id": "C6-G011",
+      "section": "General Information",
+      "question": "Under Article IX-A of the 1987 Constitution, the Chairman and Commissioners of the constitutional commissions (CSC, COMELEC, COA) serve a term of how many years, without reappointment?",
+      "options": {
+        "A": "Seven years",
+        "B": "Three years",
+        "C": "Six years",
+        "D": "Nine years"
+      },
+      "answer": "A",
+      "explanation": "Article IX-A fixes a single seven-year term, without reappointment, for the Chairman and Commissioners of the Civil Service Commission, COMELEC, and Commission on Audit, with staggered first appointments. Three years is the term of local officials and Representatives; six years is the term of the President and Senators."
+    },
+    {
+      "id": "C6-G012",
+      "section": "General Information",
+      "question": "The power of the courts to declare a law or executive act unconstitutional when it conflicts with the Constitution is called:",
+      "options": {
+        "A": "Veto power",
+        "B": "Judicial review",
+        "C": "Police power",
+        "D": "Judicial legislation"
+      },
+      "answer": "B",
+      "explanation": "Judicial review (also called judicial power under Article VIII) lets courts settle actual controversies and determine whether any branch committed grave abuse of discretion, including declaring acts unconstitutional. Courts do not legislate, the veto belongs to the President, and police power is the State's power to regulate for public welfare."
+    },
+    {
+      "id": "C6-G013",
+      "section": "General Information",
+      "question": "In the Philippine court system, which court principally reviews on appeal the decisions of Regional Trial Courts in cases not falling under the Supreme Court's direct review?",
+      "options": {
+        "A": "The Court of Tax Appeals",
+        "B": "The Court of Appeals",
+        "C": "The Municipal Trial Court",
+        "D": "The Sandiganbayan"
+      },
+      "answer": "B",
+      "explanation": "The Court of Appeals reviews decisions of Regional Trial Courts and certain quasi-judicial bodies. The Sandiganbayan tries graft cases against ranking officials, Municipal Trial Courts are below the RTC, and the Court of Tax Appeals handles tax and tariff cases."
+    },
+    {
+      "id": "C6-G014",
+      "section": "General Information",
+      "question": "What is the legislative body of a province, city, municipality, or barangay that enacts ordinances and resolutions?",
+      "options": {
+        "A": "The Sanggunian",
+        "B": "The Ombudsman",
+        "C": "The Liga ng mga Barangay",
+        "D": "The Development Council"
+      },
+      "answer": "A",
+      "explanation": "Each local government unit acts through its Sanggunian (Sangguniang Panlalawigan, Panlungsod, Bayan, or Barangay), which passes ordinances and appropriations. The Ombudsman investigates graft, the Liga is an association of barangay officials, and development councils are planning bodies, not legislatures."
+    },
+    {
+      "id": "C6-G015",
+      "section": "General Information",
+      "question": "Under Section 9 of RA 6713, a public official must divest himself or herself of shareholdings or interests in any corporation or business that may conflict with his or her office within how many days from assuming office?",
+      "options": {
+        "A": "Fifteen working days",
+        "B": "Ninety days",
+        "C": "Sixty days",
+        "D": "Thirty days"
+      },
+      "answer": "C",
+      "explanation": "RA 6713, Section 9 requires resignation from private business positions within 30 days and divestment of shareholdings or interests within 60 days from assumption of office, to avoid conflicts of interest. Fifteen working days is the period for acting on public requests under Section 5, which is a different rule."
+    },
+    {
+      "id": "C6-G016",
+      "section": "General Information",
+      "question": "A licensing clerk tells an applicant that the permit will be released only after the applicant gives the clerk a personal 'processing gift.' Which statement best describes this act under RA 6713?",
+      "options": {
+        "A": "It is prohibited only if the applicant complains in writing.",
+        "B": "It is prohibited: officials must not solicit or accept gifts or benefits in connection with any government transaction.",
+        "C": "It is allowed if the gift is small and given voluntarily.",
+        "D": "It is allowed as long as the clerk issues an official receipt."
+      },
+      "answer": "B",
+      "explanation": "Section 7(d) of RA 6713 forbids soliciting or accepting, directly or indirectly, any gift, gratuity, favor, or benefit in connection with a contract or transaction with the government. The act is prohibited regardless of the gift's size, any receipt issued, or whether the victim complains."
+    },
+    {
+      "id": "C6-G017",
+      "section": "General Information",
+      "question": "A public employee consistently chooses the option that serves the public good even when a relative would personally benefit from the opposite choice. Which norm of conduct under RA 6713 is the employee demonstrating?",
+      "options": {
+        "A": "Commitment to public interest",
+        "B": "Justness and sincerity",
+        "C": "Responsiveness to the public",
+        "D": "Political neutrality"
+      },
+      "answer": "A",
+      "explanation": "Commitment to public interest means upholding the public good over and above personal interest at all times. Political neutrality concerns fair service regardless of party, justness and sincerity concern honesty and not discriminating against the poor, and responsiveness concerns prompt and courteous service to requests."
+    },
+    {
+      "id": "C6-G018",
+      "section": "General Information",
+      "question": "Which agency is the primary government institution for social welfare and development programs, including protective services for poor and vulnerable Filipinos?",
+      "options": {
+        "A": "Department of Health (DOH)",
+        "B": "Department of Social Welfare and Development (DSWD)",
+        "C": "Department of Education (DepEd)",
+        "D": "Department of the Interior and Local Government (DILG)"
+      },
+      "answer": "B",
+      "explanation": "The DSWD leads social protection: relief, livelihood support, and services for vulnerable sectors. The DOH handles health, the DILG supervises local governments and the police and fire services, and DepEd runs basic education."
+    },
+    {
+      "id": "C6-G019",
+      "section": "General Information",
+      "question": "Which department is principally responsible for food security and the development of the agriculture and fisheries sector?",
+      "options": {
+        "A": "Department of Agrarian Reform (DAR)",
+        "B": "Department of Trade and Industry (DTI)",
+        "C": "Department of Environment and Natural Resources (DENR)",
+        "D": "Department of Agriculture (DA)"
+      },
+      "answer": "D",
+      "explanation": "The DA promotes agricultural and fisheries development and food security. The DENR manages natural resources and the environment, the DTI handles trade and consumer protection, and the DAR implements land distribution to agrarian reform beneficiaries, which is related but narrower."
+    },
+    {
+      "id": "C6-G020",
+      "section": "General Information",
+      "question": "Which government agency is responsible for conducting the national census and official surveys and for issuing civil registration statistics?",
+      "options": {
+        "A": "Commission on Population and Development",
+        "B": "Department of the Interior and Local Government",
+        "C": "National Economic and Development Authority",
+        "D": "Philippine Statistics Authority (PSA)"
+      },
+      "answer": "D",
+      "explanation": "The PSA, created under RA 10625, conducts censuses and surveys and administers civil registration statistics such as births and marriages. The economic planning agency sets development plans, the population commission handles population policy programs, and the DILG supervises local governments."
+    },
+    {
+      "id": "C6-G021",
+      "section": "General Information",
+      "question": "A city government launches a program to identify and penalize smoke-belching vehicles and factories that exceed emission limits. This program is principally grounded on which law?",
+      "options": {
+        "A": "RA 8749, the Philippine Clean Air Act of 1999",
+        "B": "RA 9275, the Philippine Clean Water Act",
+        "C": "RA 7586, the NIPAS Act",
+        "D": "RA 9003, the Ecological Solid Waste Management Act"
+      },
+      "answer": "A",
+      "explanation": "Emission standards for vehicles and industries, including action against smoke-belching, come from the Clean Air Act, RA 8749. RA 9003 covers solid waste, RA 9275 covers pollution of water bodies, and RA 7586 establishes protected areas."
+    },
+    {
+      "id": "C6-G022",
+      "section": "General Information",
+      "question": "Under RA 9003, the Ecological Solid Waste Management Act, which disposal practice is expressly prohibited for local government units?",
+      "options": {
+        "A": "Operating or maintaining open dumps",
+        "B": "Segregating waste at the source",
+        "C": "Composting biodegradable waste",
+        "D": "Establishing a materials recovery facility"
+      },
+      "answer": "A",
+      "explanation": "Section 37 of RA 9003 prohibits open dumps; LGUs must convert them into controlled disposal facilities and eventually sanitary landfills. Segregation at source, materials recovery facilities, and composting are practices the same law requires or encourages, not prohibits."
+    },
+    {
+      "id": "C6-G023",
+      "section": "General Information",
+      "question": "Under RA 9275, the Philippine Clean Water Act, areas may be designated to protect a specific water body and are governed by a management board. These areas are called:",
+      "options": {
+        "A": "Environmental compliance zones",
+        "B": "Water Quality Management Areas",
+        "C": "Protected landscapes",
+        "D": "Non-attainment areas"
+      },
+      "answer": "B",
+      "explanation": "RA 9275 provides for Water Quality Management Areas, designated by the DENR with a governing board to protect specific bodies of water. Non-attainment areas are an air quality concept under the Clean Air Act, and protected landscapes are a NIPAS category under RA 7586."
+    },
+    {
+      "id": "C6-G024",
+      "section": "General Information",
+      "question": "Under RA 9729, the Climate Change Act of 2009, local government units are required to formulate and implement which local plan?",
+      "options": {
+        "A": "Local Climate Change Action Plan (LCCAP)",
+        "B": "Annual Investment Plan only",
+        "C": "Comprehensive Land Use Plan only",
+        "D": "Local Shelter Plan"
+      },
+      "answer": "A",
+      "explanation": "RA 9729 mainstreams climate change into government policy and requires LGUs to prepare Local Climate Change Action Plans as part of their local planning. Shelter and land use plans exist under other laws and do not substitute for the climate plan the Act specifically mandates."
+    },
+    {
+      "id": "C6-G025",
+      "section": "General Information",
+      "question": "A mountain watershed famous for its old-growth forest is declared part of the national system of protected areas, with strict rules against logging and settlement. This protection is established under which law?",
+      "options": {
+        "A": "RA 8749, the Philippine Clean Air Act",
+        "B": "RA 9003, the Ecological Solid Waste Management Act",
+        "C": "RA 7586, the National Integrated Protected Areas System (NIPAS) Act",
+        "D": "RA 9729, the Climate Change Act"
+      },
+      "answer": "C",
+      "explanation": "RA 7586 created the NIPAS, the classification and administration of all designated protected areas, later expanded by RA 11038. The other laws deal with air emissions, solid waste, and climate policy, none of which establishes protected areas."
+    },
+    {
+      "id": "C6-G026",
+      "section": "General Information",
+      "question": "The First Philippine Republic was inaugurated in January 1899 in which town?",
+      "options": {
+        "A": "Vigan, Ilocos Sur",
+        "B": "Kawit, Cavite",
+        "C": "San Fernando, Pampanga",
+        "D": "Malolos, Bulacan"
+      },
+      "answer": "D",
+      "explanation": "The First Philippine Republic, under President Emilio Aguinaldo, was inaugurated on January 23, 1899 in Malolos, Bulacan, seat of the revolutionary Congress. Kawit, Cavite is where independence was proclaimed on June 12, 1898; San Fernando and Vigan are historic Luzon towns but hosted no such inauguration."
+    },
+    {
+      "id": "C6-G027",
+      "section": "General Information",
+      "question": "Who founded the Kataas-taasang, Kagalang-galangang Katipunan ng mga Anak ng Bayan (KKK) in 1892?",
+      "options": {
+        "A": "Marcelo H. del Pilar",
+        "B": "Andres Bonifacio",
+        "C": "Emilio Aguinaldo",
+        "D": "Jose Rizal"
+      },
+      "answer": "B",
+      "explanation": "Andres Bonifacio founded the Katipunan in Manila in July 1892 after Rizal's La Liga Filipina was dissolved. Aguinaldo led the Magdalo faction and later the revolutionary government, Rizal inspired the movement through his novels but did not found the KKK, and del Pilar led the Propaganda Movement in Spain."
+    },
+    {
+      "id": "C6-G028",
+      "section": "General Information",
+      "question": "Melchora Aquino, a heroine of the Philippine Revolution who fed and sheltered wounded Katipuneros, is better known by which name?",
+      "options": {
+        "A": "Gabriela Silang",
+        "B": "Gregoria de Jesus",
+        "C": "Tandang Sora",
+        "D": "Josefa Llanes Escoda"
+      },
+      "answer": "C",
+      "explanation": "Melchora Aquino earned the name Tandang Sora ('Old Sora') for aiding the Katipunan at an advanced age. Gabriela Silang led a revolt in Ilocos after her husband Diego's death, Josefa Llanes Escoda founded the Girl Scouts of the Philippines, and Gregoria de Jesus was Bonifacio's wife and keeper of Katipunan documents."
+    },
+    {
+      "id": "C6-G029",
+      "section": "General Information",
+      "question": "In the Battle of Mactan in 1521, the forces of which Filipino chieftain defeated the expedition of Ferdinand Magellan?",
+      "options": {
+        "A": "Rajah Humabon",
+        "B": "Lapulapu",
+        "C": "Datu Zula",
+        "D": "Rajah Sulayman"
+      },
+      "answer": "B",
+      "explanation": "Lapulapu, a chieftain of Mactan, led the forces that resisted Magellan on April 27, 1521, where Magellan was killed. Rajah Humabon of Cebu was Magellan's ally and host, Datu Zula was another Mactan chief who sought Spanish help against Lapulapu, and Rajah Sulayman fought the Spanish in Manila decades later (1570s)."
+    },
+    {
+      "id": "C6-G030",
+      "section": "General Information",
+      "question": "When the Philippines is in a state of war, how is the national flag flown differently?",
+      "options": {
+        "A": "The white triangle is moved to the fly end.",
+        "B": "The flag is flown upside down with the sun below the stars.",
+        "C": "The blue stripe is placed on top.",
+        "D": "The red stripe is placed on top."
+      },
+      "answer": "D",
+      "explanation": "By law and custom, the flag signals the nation's state: in peace the blue stripe is on top, and in a state of war the red stripe is on top. The triangle, sun, and stars keep their positions; only the orientation of the two stripes changes."
+    }
+  ]
+}

@@ -6,7 +6,10 @@
  * The attempt is CONSUMED at issuance (not at submit): start → close without
  * submitting does NOT give a free peek, the timer keeps running.
  * The timer is SERVER-AUTHORITATIVE: started_at is recorded server-side;
- * remaining = 2h - (now - started_at). Client never sends timestamps.
+ * remaining = track timer - (now - started_at). Client never sends timestamps.
+ * Track timers: SASE 2h, Civil Service 3h10m (the real CSE-PPT limit). The
+ * track comes from the signed token and selects the bank: SASE bank.json
+ * (GitHub) vs the CSE bank (loadCseBank). Tracks never cross-serve.
  *
  * Rules:
  *   - 403 locked            : legacy status; all exams are open since Oct 27, 2026, so this is no longer returned
@@ -30,6 +33,9 @@ import {
   loadBank,
   loadBankAtBlob,
   getExamItems,
+  loadCseBank,
+  loadCseBankAtBlob,
+  getCseExamItems,
   readBody,
   logEvent,
   shuffleInPlace,
@@ -40,8 +46,10 @@ import {
   buildResult,
   sanitizeAnswers,
   rateLimit,
-  EXAM_MS,
-  DEVICE_MISMATCH_MSG,
+  trackOf,
+  examMsForTrack,
+  deviceMismatchMsg,
+  TRACK_CSE,
   bindingHasDevice,
   EXAM_LOCKED_MSG,
   ACTIVE_ATTEMPT_MSG,
@@ -74,6 +82,12 @@ export default async function handler(req, res) {
     if (!p) return res.status(401).json({ error: "bad_token", message: "Session expired. Please log in again." });
     const n = validExamN(exam);
     if (!n) return res.status(400).json({ error: "bad_request", message: "Exam must be 1–8." });
+    // Track routing: the token's track picks the bank, the pinned-bank
+    // loader, and the timer. A CSE token only ever sees CSE items.
+    const track = trackOf(p);
+    const EXAM_MS = examMsForTrack(track);
+    const getItems = (b) => (track === TRACK_CSE ? getCseExamItems(b, n) : getExamItems(b, n));
+    const loadAtBlob = (sha) => (track === TRACK_CSE ? loadCseBankAtBlob(sha) : loadBankAtBlob(sha));
 
     if (!rateLimit("q:" + p.order_id, 60, 60 * 1000)) {
       logEvent({ type: "questions_rate_limited", order_id: p.order_id, exam: n });
@@ -83,7 +97,7 @@ export default async function handler(req, res) {
       });
     }
 
-    const { sha: bankSha, bank } = await loadBank();
+    const { sha: bankSha, bank } = track === TRACK_CSE ? await loadCseBank() : await loadBank();
     const now = Date.now();
 
     // Availability is checked BEFORE the bank. examUnlock now always returns
@@ -100,7 +114,7 @@ export default async function handler(req, res) {
       });
     }
 
-    const items = getExamItems(bank, n);
+    const items = getItems(bank);
     if (items.length === 0) {
       return res.status(503).json({ error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." });
     }
@@ -111,7 +125,7 @@ export default async function handler(req, res) {
       pendingLog = null; // a retry must never emit a previous run's event
       const b = state.bindings[p.order_id];
       if (!bindingHasDevice(b, p.device_hash)) {
-        return { status: 403, body: { error: "device_mismatch", message: DEVICE_MISMATCH_MSG } };
+        return { status: 403, body: { error: "device_mismatch", message: deviceMismatchMsg(track) } };
       }
       // Re-check unlock inside the state transaction (created_at can't change,
       // but this keeps the invariant in one place).
@@ -138,12 +152,12 @@ export default async function handler(req, res) {
       // exactly like exam-grade.js / exam-forfeit.js. Never the live bank.
       if (rec && rec.status === "in_progress") {
         const saved = sanitizeAnswers(rec.answers, new Set(rec.q_order));
-        const pinnedBank = await loadBankAtBlob(rec.bank_blob); // falls back to current bank if blob missing
-        const pinnedItems = getExamItems(pinnedBank, n);
+        const pinnedBank = await loadAtBlob(rec.bank_blob); // falls back to current bank if blob missing
+        const pinnedItems = getItems(pinnedBank);
         if (pinnedItems.length === 0) {
           return { status: 503, body: { error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." } };
         }
-        const result = buildResult(pinnedItems, rec, saved);
+        const result = buildResult(pinnedItems, rec, saved, { track });
         orderExams[String(n)] = {
           status: "done",
           score: result.score,
@@ -153,6 +167,7 @@ export default async function handler(req, res) {
           weak_area: result.weak_area,
           improvement: result.improvement,
           review: result.review,
+          benchmark: result.benchmark || null,
           submitted_at: new Date(now).toISOString(),
           auto_submitted: true,
         };
@@ -244,8 +259,8 @@ export default async function handler(req, res) {
     // Fresh starts (resumed === false) already use the current bank pinned at issuance.
     let renderById = byId;
     if (resumed) {
-      const pinnedBank = await loadBankAtBlob(rec.bank_blob);
-      const pinnedItems = getExamItems(pinnedBank, n);
+      const pinnedBank = await loadAtBlob(rec.bank_blob);
+      const pinnedItems = getItems(pinnedBank);
       if (pinnedItems.length === 0) {
         return res.status(503).json({ error: "bank_not_ready", message: "This exam is being prepared. Please try again shortly." });
       }
@@ -257,6 +272,7 @@ export default async function handler(req, res) {
     }
     return res.status(200).json({
       exam: n,
+      track,
       session_id: rec.session_id,
       questions,
       answers: sanitizeAnswers(rec.answers, new Set(rec.q_order)),

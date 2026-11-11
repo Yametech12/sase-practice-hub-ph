@@ -2,8 +2,11 @@
    SASE Mock Exam Portal, exam-taking UI logic (vanilla JS)
    ------------------------------------------------------------
    BACKEND API (exact field names per contract):
-     POST /api/exam-auth      {password, device_id} → 200 {token}
-     POST /api/exam-list      {token} → 200 {exams:[...], server_now}
+     POST /api/exam-auth      {password, device_id} → 200 {token, track}
+     POST /api/exam-list      {token} → 200 {exams:[...], server_now, track, exam_ms}
+     POST /api/exam-lessons   {token} → 200 {track:"cse", lessons:[...]}
+        (Civil Service track only; SASE tokens get 403. The lesson list is
+         paid content and is never present in any static file.)
      POST /api/exam-questions {token, exam} → 200 {exam, session_id,
         questions:[{qid, section, question, passage, options:{A,B,C,D}}],
         answers, server_remaining_ms, server_now, expires_at, resumed}
@@ -19,8 +22,54 @@
   "use strict";
 
   /* ---------------- constants ---------------- */
-  var EXAM_DURATION_MS = 2 * 60 * 60 * 1000; // 2-hour practice timer
+  var EXAM_DURATION_MS = 2 * 60 * 60 * 1000; // 2-hour practice timer (SASE default)
   var LOW_TIME_MS = 15 * 60 * 1000;          // danger styling under 15 min
+  var WATCHED_KEY = "cse_lessons_watched";   // localStorage: watched lesson video_ids (per device)
+
+  /* Track profiles: the portal serves two products. The token's track
+     (returned by exam-auth / exam-list) picks the copy, counts, and timer.
+     SASE values below are exactly the copy this page always shipped. */
+  var TRACK_PROFILES = {
+    sase: {
+      title: "SASE Mock Exam Portal",
+      docTitle: "SASE Mock Exam, SASE Practice Hub PH",
+      brand: "SASE Practice Hub PH",
+      subtitle: "Eight full-length mock exams · 180 questions each · 2-hour practice timer.",
+      disclaimer: 'This is a <strong>practice exam</strong> for preparation only. It is not the official MSU-SASE and is not affiliated with MSU.',
+      fieldLabel: "Enter your reviewer password",
+      fieldHint: "Use the same unique password that came with your ₱167 PDF.",
+      gateNote: 'One password works on <strong>up to 3 devices</strong>. Lost access? Message SASE Practice Hub PH.',
+      listSub: 'All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>.',
+      foot: "SASE Practice Hub PH · Practice exams for study purposes only, not the official MSU-SASE.",
+      questions: 180,
+      durationMs: EXAM_DURATION_MS,
+      durationShort: "2 hours",
+      durationFact: "2 hrs",
+      breakdown: "Language Usage 80, Mathematics 40, Aptitude 30, Science 30",
+      sections: [["Language Usage", 80], ["Mathematics", 40], ["Aptitude", 30], ["Science", 30]],
+      instrNote: "Find a quiet spot and a stable connection first. Questions can't be copied during the exam. This is practice material, not the official MSU-SASE."
+    },
+    cse: {
+      title: "Civil Service Mock Exams",
+      docTitle: "Civil Service Mock Exams, Practice Portal",
+      brand: "Civil Service Reviewer",
+      subtitle: "Eight full mock exams · 150 questions each · 3 hours 10 minutes, the real exam time limit.",
+      disclaimer: 'This is a <strong>practice exam</strong> for preparation only. It is not the official Civil Service Exam and is not affiliated with the Civil Service Commission.',
+      fieldLabel: "Enter your CSE7 access code",
+      fieldHint: "Use the CSE7 access code sent with your Civil Service reviewer. It is separate from your PDF password.",
+      gateNote: 'One access code works on <strong>up to 3 devices</strong>. Lost access? Message us on Facebook.',
+      listSub: 'All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>. Results are benchmarked against the real passing general rating of <strong>80.00</strong>.',
+      foot: "Civil Service Reviewer · Practice exams for study purposes only, not the official Civil Service Exam.",
+      questions: 150,
+      durationMs: (3 * 60 + 10) * 60 * 1000,
+      durationShort: "3 hours 10 minutes",
+      durationFact: "3h 10m",
+      breakdown: "Verbal 52, Numerical 38, Analytical 30, General Information 30",
+      sections: [["Verbal", 52], ["Numerical", 38], ["Analytical", 30], ["General Information", 30]],
+      instrNote: "Find a quiet spot and a stable connection first. Questions can't be copied during the exam. This is practice material, not the official Civil Service Exam."
+    }
+  };
+  function profile() { return TRACK_PROFILES[state.track] || TRACK_PROFILES.sase; }
   var SYNC_DEBOUNCE_MS = 1500;
   var SYNC_HEARTBEAT_MS = 30000;
   var SESSION_KEY = "sase_exam_session";     // sessionStorage: auth token
@@ -37,6 +86,10 @@
   /* ---------------- state ---------------- */
   var state = {
     token: null,
+    track: "sase",         // "sase" | "cse", from auth/list responses
+    durationMs: EXAM_DURATION_MS, // per-track timer length (list response exam_ms wins)
+    lessons: null,         // CSE only: lessons array from /api/exam-lessons
+    lessonsFilter: "all",  // CSE lessons section filter
     exam: null,            // exam number (n)
     sessionId: null,
     questions: [],
@@ -150,6 +203,8 @@
     if (logoutBtn) logoutBtn.hidden = true; // logout control is only for signed-in students
     var warn = $("sync-warning");
     if (warn) warn.hidden = true;
+    var lw = $("lessons-wrap");
+    if (lw) lw.hidden = true; // paid CSE content leaves the DOM flow on sign-out
     showScreen("screen-gate");
     gateForm.style.display = "";
     gateError.textContent = "Your session expired, please sign in again to resume your exam. Your saved answers are safe.";
@@ -198,11 +253,14 @@
     api("/api/exam-auth", { password: gateInput.value.trim(), device_id: getDeviceId() })
       .then(function (res) {
         state.token = res.token;
+        state.track = res.track === "cse" ? "cse" : "sase";
+        state.durationMs = profile().durationMs;
         state.sessionExpiredHandled = false;
         try { sessionStorage.setItem(SESSION_KEY, res.token); } catch (e) {}
         gateInput.value = ""; // never leave the password in the DOM after login
         gateForm.style.display = "none";
         if (logoutBtn) logoutBtn.hidden = false;
+        applyTrackChrome();
         loadExamList();
       })
       .catch(function (err) {
@@ -250,6 +308,10 @@
     state.submitting = false;
     state.token = null;
     state.sessionId = null;
+    state.track = "sase";       // reset chrome so the next login starts clean
+    state.lessons = null;
+    state.lessonsFilter = "all";
+    applyTrackChrome();
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
     $("exam-list-wrap").hidden = true;
     var submitErr = $("submit-error");
@@ -268,6 +330,30 @@
   var pageFoot = document.querySelector(".page-foot");
   if (pageFoot) pageFoot.appendChild(helpPara);
 
+  /* Rewrite the gate/instructions chrome for the signed-in track. Called
+     after auth and after every list load; SASE values are the page's
+     original copy, so SASE buyers see zero change. */
+  function applyTrackChrome() {
+    var pr = profile();
+    document.title = pr.docTitle;
+    var set = function (id, html) { var el = $(id); if (el) el.innerHTML = html; };
+    set("gate-title", escapeHtml(pr.title));
+    set("gate-subtitle", escapeHtml(pr.subtitle));
+    set("gate-disclaimer", pr.disclaimer);
+    set("field-label", escapeHtml(pr.fieldLabel));
+    set("field-hint", escapeHtml(pr.fieldHint));
+    set("gate-note", pr.gateNote);
+    set("list-sub", pr.listSub);
+    set("brand-name", escapeHtml(pr.brand));
+    set("foot-text", escapeHtml(pr.foot));
+    var cseHint = $("gate-cse-hint");
+    if (cseHint) cseHint.hidden = state.track === "cse";
+    if (state.track !== "cse") {
+      var lw = $("lessons-wrap");
+      if (lw) lw.hidden = true;
+    }
+  }
+
   function loadExamList() {
     var loadingEl = $("exam-list-loading");
     var listEl = $("exam-list");
@@ -277,10 +363,16 @@
     api("/api/exam-list", { token: state.token })
       .then(function (meta) {
         if (loadingEl) loadingEl.hidden = true;
+        if (meta.track) {
+          state.track = meta.track === "cse" ? "cse" : "sase";
+          if (meta.exam_ms) state.durationMs = meta.exam_ms;
+          applyTrackChrome();
+        }
         var list = $("exam-list");
         list.innerHTML = "";
         (meta.exams || []).forEach(function (ex, idx) { list.appendChild(examCard(ex, idx)); });
         $("exam-list-wrap").hidden = false;
+        if (state.track === "cse") loadLessons();
         /* No auto-start: an in-progress exam waits for an explicit Resume tap
            (audit fix). The Resume button on the card + the resume banner in
            beginExam stay available. */
@@ -325,7 +417,8 @@
       ex.status === "expired"    ? '<span class="exam-status status-locked">Time expired</span>' :
       ex.status === "done"       ? '<span class="exam-status status-done">Completed' + (donePct != null ? " · " + escapeHtml(String(donePct)) + "%" : "") + "</span>" :
                                    '<span class="exam-status status-locked">Locked</span>';
-    var breakdown = '<p class="exam-breakdown">Language Usage 80, Mathematics 40, Aptitude 30, Science 30</p>';
+    var pr = profile();
+    var breakdown = '<p class="exam-breakdown">' + escapeHtml(pr.breakdown) + "</p>";
     var meta;
     if (ex.status === "done") {
       var pct = donePct;
@@ -343,12 +436,12 @@
       }
       meta = '<p class="exam-meta">Unlocks in ' + unlockText + unlockDate + "</p>";
     } else if (ex.status === "in_progress") {
-      meta = '<p class="exam-meta">180 questions · 2-hour practice timer · ' +
+      meta = '<p class="exam-meta">' + pr.questions + " questions · " + pr.durationShort + " timer · " +
         (ex.resume_remaining_ms != null ? fmtLong(ex.resume_remaining_ms) : "resume when ready") + "</p>";
     } else if (ex.status === "expired") {
       meta = '<p class="exam-meta">Your time ran out, view your auto-submitted result.</p>';
     } else {
-      meta = '<p class="exam-meta">180 questions · 2 hours · 1 attempt</p>';
+      meta = '<p class="exam-meta">' + pr.questions + " questions · " + pr.durationShort + " · 1 attempt</p>";
     }
     card.innerHTML =
       '<div class="exam-num">' + escapeHtml(String(ex.n)) + "</div>" +
@@ -411,12 +504,169 @@
   }
 
   /* ============================================================
+     Civil Service VIDEO LESSONS (CSE track only, paid-only)
+     ------------------------------------------------------------
+     Loaded from POST /api/exam-lessons with the signed token; the list
+     never exists in any static file. Grouped by section in study-path
+     order (Numerical first: the owner's math-first order), file order
+     kept inside each group. Clicking a card swaps its thumbnail for a
+     youtube-nocookie iframe, created only on click so the page stays
+     fast. Watched state is a per-device localStorage check-off
+     (v1, no server state).
+     ============================================================ */
+  var LESSON_SECTION_ORDER = ["Numerical", "Verbal", "Analytical", "General Information"];
+
+  function watchedIds() {
+    try {
+      var raw = localStorage.getItem(WATCHED_KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch (e) { return []; }
+  }
+  function setWatched(videoId, on) {
+    var ids = watchedIds().filter(function (id) { return id !== videoId; });
+    if (on) ids.push(videoId);
+    try { localStorage.setItem(WATCHED_KEY, JSON.stringify(ids)); } catch (e) {}
+  }
+
+  function loadLessons() {
+    var wrap = $("lessons-wrap");
+    if (!wrap || state.track !== "cse" || !state.token) return;
+    wrap.hidden = false;
+    if (state.lessons) { renderLessons(); return; }
+    api("/api/exam-lessons", { token: state.token })
+      .then(function (data) {
+        state.lessons = Array.isArray(data.lessons) ? data.lessons : [];
+        /* Deep link from a CSE results page: /exam/?lessons=Numerical
+           opens the lessons filtered to the weak section. */
+        try {
+          var want = new URLSearchParams(window.location.search).get("lessons");
+          if (want && LESSON_SECTION_ORDER.indexOf(want) !== -1) {
+            state.lessonsFilter = want;
+            setTimeout(function () { wrap.scrollIntoView(); }, 80);
+          }
+        } catch (e) {}
+        renderLessons();
+      })
+      .catch(function (err) {
+        var el = $("lessons-error");
+        if (el) { el.textContent = err.message || "Could not load the video lessons. Please try again."; el.hidden = false; }
+      });
+  }
+
+  function renderLessons() {
+    var listEl = $("lessons-list"), filtersEl = $("lessons-filters"), emptyEl = $("lessons-empty");
+    if (!listEl) return;
+    var lessons = state.lessons || [];
+    if (emptyEl) emptyEl.hidden = lessons.length > 0;
+    // Group, preserving file order inside each section (the study path).
+    var groups = {}, order = [];
+    lessons.forEach(function (l) {
+      if (!groups[l.section]) { groups[l.section] = []; order.push(l.section); }
+      groups[l.section].push(l);
+    });
+    order.sort(function (a, b) {
+      var ia = LESSON_SECTION_ORDER.indexOf(a), ib = LESSON_SECTION_ORDER.indexOf(b);
+      return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+    });
+    // Filter chips: All + one per section present.
+    if (filtersEl) {
+      filtersEl.innerHTML = "";
+      ["all"].concat(order).forEach(function (sec) {
+        var chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "lesson-chip" + (state.lessonsFilter === sec ? " active" : "");
+        chip.textContent = sec === "all" ? "All sections" : sec;
+        chip.setAttribute("aria-pressed", state.lessonsFilter === sec ? "true" : "false");
+        chip.addEventListener("click", function () { state.lessonsFilter = sec; renderLessons(); });
+        filtersEl.appendChild(chip);
+      });
+    }
+    listEl.innerHTML = "";
+    var watched = watchedIds();
+    order.forEach(function (sec) {
+      if (state.lessonsFilter !== "all" && state.lessonsFilter !== sec) return;
+      var h = document.createElement("h3");
+      h.className = "lessons-group-title";
+      h.textContent = sec;
+      listEl.appendChild(h);
+      groups[sec].forEach(function (l) { listEl.appendChild(lessonCard(l, watched)); });
+    });
+  }
+
+  function lessonCard(l, watched) {
+    var card = document.createElement("div");
+    card.className = "lesson-card" + (watched.indexOf(l.video_id) !== -1 ? " is-watched" : "");
+
+    var player = document.createElement("div");
+    player.className = "lesson-player";
+    var thumb = document.createElement("button");
+    thumb.type = "button";
+    thumb.className = "lesson-thumb";
+    thumb.setAttribute("aria-label", "Watch lesson: " + l.title);
+    thumb.innerHTML =
+      '<img src="https://i.ytimg.com/vi/' + escapeHtml(l.video_id) + '/hqdefault.jpg" alt="" loading="lazy">' +
+      '<span class="lesson-play" aria-hidden="true">▶</span>';
+    thumb.addEventListener("click", function () {
+      // Lazy: the embed iframe exists only after an explicit tap.
+      var ifr = document.createElement("iframe");
+      ifr.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(l.video_id) + "?autoplay=1&rel=0";
+      ifr.title = l.title;
+      ifr.setAttribute("allow", "accelerometer; autoplay; encrypted-media; picture-in-picture");
+      ifr.setAttribute("allowfullscreen", "");
+      player.innerHTML = "";
+      player.appendChild(ifr);
+    });
+    player.appendChild(thumb);
+    card.appendChild(player);
+
+    var body = document.createElement("div");
+    body.className = "lesson-body";
+    body.innerHTML =
+      (l.topic ? '<p class="lesson-topic">' + escapeHtml(l.topic) + "</p>" : "") +
+      "<h4>" + escapeHtml(l.title) + "</h4>" +
+      (l.channel ? '<p class="lesson-meta">' + escapeHtml(l.channel) + "</p>" : "") +
+      (l.why ? '<p class="lesson-why">' + escapeHtml(l.why) + "</p>" : "");
+    var label = document.createElement("label");
+    label.className = "lesson-watch";
+    var box = document.createElement("input");
+    box.type = "checkbox";
+    box.checked = watched.indexOf(l.video_id) !== -1;
+    box.addEventListener("change", function () {
+      setWatched(l.video_id, box.checked);
+      card.classList.toggle("is-watched", box.checked);
+    });
+    label.appendChild(box);
+    label.appendChild(document.createTextNode(" Watched"));
+    body.appendChild(label);
+    card.appendChild(body);
+    return card;
+  }
+
+  /* ============================================================
      SCREEN 1b, instructions (shown before a NEW exam starts)
      ============================================================ */
   var pendingExamN = null;
   function showInstructions(examN) {
     pendingExamN = examN;
+    var pr = profile();
     $("instr-kicker").textContent = "Mock Exam " + examN;
+    var lead = $("instr-lead");
+    if (lead) lead.innerHTML = "Read these quickly. Once you tap <strong>Start exam</strong>, your " + escapeHtml(pr.durationShort) + " timer begins and cannot be paused.";
+    var fq = $("fact-questions");
+    if (fq) fq.innerHTML = "<strong>" + pr.questions + "</strong><span>questions</span>";
+    var ft = $("fact-time");
+    if (ft) ft.innerHTML = "<strong>" + escapeHtml(pr.durationFact) + "</strong><span>time limit</span>";
+    var secList = $("instr-sections");
+    if (secList) {
+      secList.innerHTML = pr.sections.map(function (s) {
+        return "<li><span>" + escapeHtml(s[0]) + "</span><b>" + s[1] + "</b></li>";
+      }).join("");
+    }
+    var stepTimer = $("instr-step-timer");
+    if (stepTimer) stepTimer.innerHTML = "<strong>Once you start, the " + escapeHtml(pr.durationShort) + " timer runs even if you close the page. Start only when you are ready to finish.</strong>";
+    var note = $("instr-note");
+    if (note) note.textContent = pr.instrNote;
     $("instr-agree").checked = false;
     $("instr-start").disabled = true;
     showScreen("screen-instructions");
@@ -452,6 +702,7 @@
     showScreen("screen-submitting");
     api("/api/exam-questions", { token: state.token, exam: examN })
       .then(function (data) {
+        if (data.track) state.track = data.track === "cse" ? "cse" : "sase";
         state.sessionId = data.session_id;
         state.questions = data.questions || [];
         state.answers = data.answers || {};
@@ -571,7 +822,7 @@
   function renderTimer(remaining) {
     var t = $("timer-text"), f = $("timer-fill"), track = f.parentElement;
     t.textContent = fmtTime(remaining);
-    var frac = Math.max(0, Math.min(1, remaining / EXAM_DURATION_MS));
+    var frac = Math.max(0, Math.min(1, remaining / (state.durationMs || EXAM_DURATION_MS)));
     f.style.transform = "scaleX(" + frac + ")"; /* PERF F-4: transform, not width */
     track.setAttribute("aria-valuenow", String(Math.round(frac * 100)));
     var danger = remaining <= LOW_TIME_MS;

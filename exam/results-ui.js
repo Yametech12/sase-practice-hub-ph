@@ -84,6 +84,25 @@
     els.headline.innerHTML = h[0].replace(/<EMOJI>(.*?)<\/EMOJI>/, '<span aria-hidden="true">$1</span>');
     els.subline.textContent = h[1];
 
+    /* Civil Service track: benchmark the practice percent against the real
+       passing general rating of 80.00, and retitle the page for CSE. The
+       benchmark block only exists on CSE results (grade payloads carry it);
+       SASE results render exactly as before. */
+    if (data.benchmark) {
+      els.examTitle.textContent = "Civil Service Mock Exam " + n + ", Practice Result";
+      document.title = "Your Result, Civil Service Mock Exams";
+      var bm = document.createElement("p");
+      bm.className = "benchmark-line";
+      bm.innerHTML = "<strong>Benchmark:</strong> the real Civil Service exam passes at a general rating of <strong>80.00</strong>. " +
+        "Your practice score is <strong>" + pct.toFixed(1) + "%</strong>, shown against that benchmark to guide your review. " +
+        "A practice percent is not your official rating and does not guarantee a pass.";
+      els.subline.parentNode.insertBefore(bm, els.subline.nextSibling);
+      var disc = document.querySelector(".hero .disclaimer");
+      if (disc) disc.innerHTML = "This is a <strong>practice benchmark</strong>, not an official CSC result. Use it to guide your study.";
+      var footP = document.querySelector(".foot p");
+      if (footP) footP.innerHTML = "Prepared by the <strong>Civil Service Reviewer</strong> team, a professional Civil Service exam study resource.";
+    }
+
     renderSections(data);
     renderImprove(data);
     renderReview(data);
@@ -149,7 +168,8 @@
     // Server sends a sentence: "Your weakest section is Mathematics (50%)."
     // Extract the bare section name against the known canonical names.
     var sentence = String(data.weak_area);
-    var names = ["Language Usage", "Mathematics", "Aptitude", "Science"];
+    var names = ["Language Usage", "Mathematics", "Aptitude", "Science",
+                 "Verbal", "Numerical", "Analytical", "General Information"];
     for (var i = 0; i < names.length; i++) {
       if (sentence.indexOf(names[i]) !== -1) return names[i];
     }
@@ -173,6 +193,23 @@
     "Science": {
       chapters: "Parts IV & VIII of your reviewer (biology, earth science, chemistry, physics)",
       tip: "Make one-page concept maps per topic, practice science rewards understanding over facts."
+    },
+    /* Civil Service sections, mirroring the server guide in api/_exam-lib.js. */
+    "Verbal": {
+      chapters: "The Verbal lessons and Practice Banks in your Civil Service reviewer",
+      tip: "Read every explanation, even for items you got right. The same grammar rules and word families repeat across exams."
+    },
+    "Numerical": {
+      chapters: "The Numerical lessons and Practice Banks in your Civil Service reviewer",
+      tip: "Redo every missed problem from scratch on paper, showing each step, until the method is automatic."
+    },
+    "Analytical": {
+      chapters: "The Analytical lessons and Practice Banks in your Civil Service reviewer",
+      tip: "For assumption items, negate the choice: if negating it breaks the argument, it is the assumption."
+    },
+    "General Information": {
+      chapters: "The General Information lessons and Last-Mile Drill in your Civil Service reviewer",
+      tip: "Anchor facts to their source: article numbers for the Constitution, law numbers for statutes. The exam loves near-miss numbers."
     }
   };
   function guideFor(name) {
@@ -182,6 +219,10 @@
     if (/math/.test(k)) return SECTION_GUIDE["Mathematics"];
     if (/science/.test(k)) return SECTION_GUIDE["Science"];
     if (/aptitude|logic/.test(k)) return SECTION_GUIDE["Aptitude"];
+    if (/verbal/.test(k)) return SECTION_GUIDE["Verbal"];
+    if (/numerical/.test(k)) return SECTION_GUIDE["Numerical"];
+    if (/analytical/.test(k)) return SECTION_GUIDE["Analytical"];
+    if (/general/.test(k)) return SECTION_GUIDE["General Information"];
     return null;
   }
   function improveTips(data) {
@@ -239,6 +280,19 @@
         '<span class="chap"><span aria-hidden="true">📖</span> Study: ' + esc(chapterFor(data, w.name)) + "</span>";
       els.improveList.appendChild(div);
     });
+
+    /* Civil Service tie-in: the weakest section links straight to that
+       section's paid video lessons inside the portal (CSE results only;
+       SASE results carry no benchmark and never see this). */
+    var CSE_SECTIONS = ["Verbal", "Numerical", "Analytical", "General Information"];
+    if (data.benchmark && weakName && CSE_SECTIONS.indexOf(weakName) !== -1) {
+      var linkDiv = document.createElement("div");
+      linkDiv.className = "improve-item lessons-link";
+      linkDiv.innerHTML =
+        '<span aria-hidden="true">🎬</span> <a href="/exam/?lessons=' + encodeURIComponent(weakName) + '">' +
+        "Review the " + esc(weakName) + " video lessons</a> in the portal, then retake your next mock exam.";
+      els.improveList.appendChild(linkDiv);
+    }
   }
 
   /* ---------- answer review ---------- */
@@ -255,6 +309,10 @@
     if (/math/.test(s)) return "MATH";
     if (/science/.test(s)) return "SCI";
     if (/aptitude|logic/.test(s)) return "APT";
+    if (/verbal/.test(s)) return "VERB";
+    if (/numerical/.test(s)) return "NUM";
+    if (/analytical/.test(s)) return "ANA";
+    if (/general/.test(s)) return "GEN";
     return String(section || "").slice(0, 4).toUpperCase() || ", ";
   }
 
@@ -411,8 +469,10 @@
     grad.addColorStop(0, "#0f2a5c"); grad.addColorStop(1, "#143a7a");
     g.fillStyle = grad; g.fillRect(0, 0, 1080, 1350);
 
+    var isCse = !!d.benchmark;
+    var brandLine = isCse ? "Civil Service Mock Exams" : "SASE Practice Hub PH";
     g.fillStyle = "#ffffff"; g.textAlign = "center";
-    g.font = "700 54px Arial"; g.fillText("SASE Practice Hub PH", 540, 140);
+    g.font = "700 54px Arial"; g.fillText(brandLine, 540, 140);
     g.font = "600 32px Arial"; g.fillStyle = "#cdd9f2";
     g.fillText(examLabel, 540, 208);
     if (dateLabel) {
@@ -443,12 +503,12 @@
 
     // footer watermark
     g.textAlign = "center"; g.fillStyle = "#9db4dd"; g.font = "600 30px Arial";
-    g.fillText("Practice benchmark, not an official SASE result", 540, 1230);
+    g.fillText(isCse ? "Practice benchmark, not an official CSC rating" : "Practice benchmark, not an official SASE result", 540, 1230);
     g.fillStyle = "#ffffff"; g.font = "700 34px Arial";
-    g.fillText("SASE Practice Hub PH", 540, 1285);
+    g.fillText(brandLine, 540, 1285);
 
     var a = document.createElement("a");
-    a.download = "sase-mock-exam-" + (currentExamN || "result") + "-practice-score.png";
+    a.download = (isCse ? "cse" : "sase") + "-mock-exam-" + (currentExamN || "result") + "-practice-score.png";
     a.href = cv.toDataURL("image/png");
     // append to DOM: detached-anchor clicks are ignored by some mobile browsers
     document.body.appendChild(a);

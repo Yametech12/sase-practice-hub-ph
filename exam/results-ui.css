@@ -340,3 +340,12 @@ body {
   .improve-item .chap { background: #1a2c47; color: #9cc3f0; }
   .foot a { color: #9cc3f0; }
 }
+
+/* Civil Service results: 80.00 benchmark line + weak-section lessons link */
+.benchmark-line {
+  margin: 14px 0 0; padding: 12px 14px; border-radius: 12px;
+  background: #fdf3e0; color: #5c430a; font-size: 14px; line-height: 1.55;
+  border: 1px solid #f0dcae;
+}
+.improve-item.lessons-link { font-size: 14px; }
+.improve-item.lessons-link a { font-weight: 700; }

@@ -1,0 +1,1975 @@
+{
+  "exam": 1,
+  "questions": [
+    {
+      "id": "C1-V001",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "Neither the manager nor the employees was aware of the new schedule.",
+        "B": "Neither the manager nor the employees were aware of the new schedule.",
+        "C": "Neither the manager nor the employees is aware of the new schedule.",
+        "D": "Neither the manager nor the employees has been aware of the new schedule."
+      },
+      "answer": "B",
+      "explanation": "Correct: \"Neither … nor …\" agrees with the nearer subject (\"employees,\" plural → \"were\"). A/C/D use singular verbs (\"was/is/has been\") that disagree with the plural nearer subject."
+    },
+    {
+      "id": "C1-V002",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The committee has decided to postpone their meeting until next week.",
+        "B": "The committee have decided to postpone its meeting until next week.",
+        "C": "The committee has decided to postpone its meeting until next week.",
+        "D": "The committee have decided to postpone their meeting until next week."
+      },
+      "answer": "C",
+      "explanation": "Correct: \"committee\" is a collective noun treated as singular here → \"has … its.\" A mixes singular verb with plural pronoun; B/D use plural verb \"have\" with singular collective in this construction."
+    },
+    {
+      "id": "C1-V003",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "She is one of the employees who work overtime every Friday.",
+        "B": "She is one of the employees who works overtime every Friday.",
+        "C": "She is one of the employee who work overtime every Friday.",
+        "D": "She is one of the employees whom works overtime every Friday."
+      },
+      "answer": "A",
+      "explanation": "Correct: \"one of the employees who work\" — the relative pronoun \"who\" refers to \"employees\" (plural), so the verb is plural \"work.\" B uses singular \"works\"; C uses singular \"employee\"; D uses \"whom\" (object pronoun) as subject."
+    },
+    {
+      "id": "C1-V004",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "Between you and I, the report needs revision.",
+        "B": "Between we, the report needs revision.",
+        "C": "Between you and myself, the report needs revision.",
+        "D": "Between you and me, the report needs revision."
+      },
+      "answer": "D",
+      "explanation": "Correct: \"Between you and me\" — \"between\" is a preposition requiring object pronouns. A uses subject pronoun \"I\"; B uses subject pronoun \"we\"; C uses reflexive \"myself\" incorrectly."
+    },
+    {
+      "id": "C1-V005",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The data show a steady increase in applications.",
+        "B": "The data shows a steady increase in applications.",
+        "C": "The data is showing a steady increase in applications.",
+        "D": "The data shows a steady increase in application."
+      },
+      "answer": "A",
+      "explanation": "Correct: In formal usage \"data\" is the plural of \"datum\" → plural verb \"show.\" B uses singular \"shows\"; C is awkward/wordy; D has a number-agreement error (\"application\" should be plural in context, and verb is wrong)."
+    },
+    {
+      "id": "C1-V006",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "He speaks English more fluently than any student in his class.",
+        "B": "He speaks English more fluently than any other student in his class.",
+        "C": "He speaks English most fluently than any student in his class.",
+        "D": "He speaks English more fluent than any other student in his class."
+      },
+      "answer": "B",
+      "explanation": "Correct: Comparative of two entities needs \"more fluently than any other student\" — without \"other\" he would be compared with himself. A omits \"other\"; C mixes superlative \"most\" with comparative \"than\"; D uses adjective \"fluent\" instead of adverb \"fluently.\""
+    },
+    {
+      "id": "C1-V007",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The applicant submitted the requirements yesterday, and she take the exam next month.",
+        "B": "The applicant submitted the requirements yesterday, and she takes the exam next month.",
+        "C": "The applicant submits the requirements yesterday, and she will take the exam next month.",
+        "D": "The applicant submitted the requirements yesterday, and she will take the exam next month."
+      },
+      "answer": "D",
+      "explanation": "Correct: Past action (\"submitted … yesterday\") + future (\"will take … next month\") — tenses match their time markers. A/B/C variants mix \"take/takes/submits\" with the wrong time."
+    },
+    {
+      "id": "C1-V008",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "If she studied harder, she would have passed the exam.",
+        "B": "If she had studied harder, she would pass the exam.",
+        "C": "If she had studied harder, she would have passed the exam.",
+        "D": "If she had studied harder, she will have passed the exam."
+      },
+      "answer": "C",
+      "explanation": "Correct: Third conditional — \"If she had studied …, she would have passed.\" A pairs simple past with \"would have passed\"; B pairs past perfect with simple \"would pass\"; D pairs past perfect with future perfect."
+    },
+    {
+      "id": "C1-V009",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The supervisor asked the clerk to submit the report, to file the copies, and checking the entries.",
+        "B": "The supervisor asked the clerk submitting the report, to file the copies, and to check the entries.",
+        "C": "The supervisor asked the clerk to submit the report, filing the copies, and to check the entries.",
+        "D": "The supervisor asked the clerk to submit the report, to file the copies, and to check the entries."
+      },
+      "answer": "D",
+      "explanation": "Correct: Parallel infinitives — \"to submit …, to file …, and to check ….\" A/B/C break parallelism with \"checking/submitting/filing.\""
+    },
+    {
+      "id": "C1-V010",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The book on the table is mine.",
+        "B": "The book on the table are mine.",
+        "C": "The book on the table am mine.",
+        "D": "The book on the table were mine."
+      },
+      "answer": "A",
+      "explanation": "Correct: Subject is singular \"book\" → \"is.\" The phrase \"on the table\" does not change the subject. B/C/D use plural/first-person/plural verbs."
+    },
+    {
+      "id": "C1-V011",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "Each of the applicants must bring their own identification card.",
+        "B": "Each of the applicants must bring his own identification card only.",
+        "C": "Each of the applicants must bring his or her own identification card.",
+        "D": "Each of the applicants must brings his or her own identification card."
+      },
+      "answer": "C",
+      "explanation": "Correct: \"Each\" is singular → singular pronoun \"his or her.\" A uses plural \"their\" (informal in this formal item); B uses singular-only \"his\"; D uses \"must brings\" (verb error)."
+    },
+    {
+      "id": "C1-V012",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The teacher gave the award to Ana and I.",
+        "B": "The teacher gave the award to me and Ana's.",
+        "C": "The teacher gave the award to I and Ana.",
+        "D": "The teacher gave the award to Ana and me."
+      },
+      "answer": "D",
+      "explanation": "Correct: Object of preposition \"to\" → object pronoun \"me\": \"to Ana and me.\" A/C use subject pronoun \"I\"; B uses possessive \"Ana's.\""
+    },
+    {
+      "id": "C1-V013",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "She don't like coffee.",
+        "B": "She doesn't likes coffee.",
+        "C": "She doesn't like coffee.",
+        "D": "She don't likes coffee."
+      },
+      "answer": "C",
+      "explanation": "Correct: Third-person singular present: \"She doesn't like coffee\" — \"doesn't\" takes the base verb \"like.\" A/D use \"don't\" with singular \"she\"; B uses \"doesn't likes\" (double marking); D also uses \"don't likes.\""
+    },
+    {
+      "id": "C1-V014",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "The documents, together with the letter, were sent to the office.",
+        "B": "The documents, together with the letter, was sent to the office.",
+        "C": "The documents, together with the letter, is sent to the office.",
+        "D": "The documents, together with the letter, are send to the office."
+      },
+      "answer": "A",
+      "explanation": "Correct: Subject is plural \"documents\" → \"were sent.\" The parenthetical \"together with the letter\" does not make the subject singular. B uses singular \"was\"; C/D have verb-form errors."
+    },
+    {
+      "id": "C1-V015",
+      "section": "Verbal",
+      "question": "Choose the sentence that is grammatically correct and most effective.",
+      "options": {
+        "A": "She does not know neither the date nor the venue of the seminar.",
+        "B": "She does not know neither the date or the venue of the seminar.",
+        "C": "She does not know either the date or the venue of the seminar.",
+        "D": "She does not know either the date nor the venue of the seminar."
+      },
+      "answer": "C",
+      "explanation": "Correct: With a negative (\"does not know\"), use \"either … or.\" \"Neither … nor\" would double the negative. A/B/D variants mix \"neither … or\" / \"either … nor\" / double negatives."
+    },
+    {
+      "id": "C1-V016",
+      "section": "Verbal",
+      "question": "The supervisor gave a candid assessment of the team's performance.",
+      "options": {
+        "A": "vague",
+        "B": "biased",
+        "C": "polite",
+        "D": "honest"
+      },
+      "answer": "D",
+      "explanation": "\"Candid\" = honest, frank. A (vague), B (biased), C (polite) do not match."
+    },
+    {
+      "id": "C1-V017",
+      "section": "Verbal",
+      "question": "The new policy aims to mitigate the effects of flooding.",
+      "options": {
+        "A": "lessen",
+        "B": "increase",
+        "C": "ignore",
+        "D": "cause"
+      },
+      "answer": "A",
+      "explanation": "\"Mitigate\" = lessen, reduce severity. B (increase) is opposite; C (ignore) and D (cause) are unrelated."
+    },
+    {
+      "id": "C1-V018",
+      "section": "Verbal",
+      "question": "The clerk was meticulous in checking every entry.",
+      "options": {
+        "A": "careless",
+        "B": "thorough",
+        "C": "hurried",
+        "D": "indifferent"
+      },
+      "answer": "B",
+      "explanation": "\"Meticulous\" = thorough, careful with detail. A (careless) is opposite; C (hurried) and D (indifferent) contradict care."
+    },
+    {
+      "id": "C1-V019",
+      "section": "Verbal",
+      "question": "The decision was unanimous — all members voted in favor.",
+      "options": {
+        "A": "divided",
+        "B": "secret",
+        "C": "agreed by all",
+        "D": "postponed"
+      },
+      "answer": "C",
+      "explanation": "\"Unanimous\" = agreed by all. A (divided) is opposite; B/D (secret/postponed) are unrelated."
+    },
+    {
+      "id": "C1-V020",
+      "section": "Verbal",
+      "question": "The office remained tranquil even during the busy season.",
+      "options": {
+        "A": "noisy",
+        "B": "crowded",
+        "C": "tense",
+        "D": "calm"
+      },
+      "answer": "D",
+      "explanation": "\"Tranquil\" = calm, peaceful. A (noisy), B (crowded), C (tense) are opposites/contradictions."
+    },
+    {
+      "id": "C1-V021",
+      "section": "Verbal",
+      "question": "The word diligent is closest in meaning to:",
+      "options": {
+        "A": "lazy",
+        "B": "hardworking",
+        "C": "talented",
+        "D": "fortunate"
+      },
+      "answer": "B",
+      "explanation": "\"Diligent\" = hardworking. A (lazy) is opposite; C/D are unrelated traits."
+    },
+    {
+      "id": "C1-V022",
+      "section": "Verbal",
+      "question": "The word obscure is closest in meaning to:",
+      "options": {
+        "A": "clear",
+        "B": "famous",
+        "C": "vague",
+        "D": "bright"
+      },
+      "answer": "C",
+      "explanation": "\"Obscure\" = vague, unclear, little-known. A (clear) and D (bright) are opposites; B (famous) is opposite in the \"little-known\" sense."
+    },
+    {
+      "id": "C1-V023",
+      "section": "Verbal",
+      "question": "The antonym of expand is:",
+      "options": {
+        "A": "enlarge",
+        "B": "extend",
+        "C": "contract",
+        "D": "inflate"
+      },
+      "answer": "C",
+      "explanation": "Antonym of \"expand\" (grow larger) is \"contract\" (shrink). A/B/D all mean grow/inflate."
+    },
+    {
+      "id": "C1-V024",
+      "section": "Verbal",
+      "question": "The antonym of frugal is:",
+      "options": {
+        "A": "thrifty",
+        "B": "economical",
+        "C": "careful",
+        "D": "extravagant"
+      },
+      "answer": "D",
+      "explanation": "Antonym of \"frugal\" (thrifty) is \"extravagant\" (wasteful). A/B/C are synonyms of frugal."
+    },
+    {
+      "id": "C1-V025",
+      "section": "Verbal",
+      "question": "The word candid in Q16 could also be replaced by forthright without changing the meaning. Which of the following is the best synonym for forthright?",
+      "options": {
+        "A": "evasive",
+        "B": "direct",
+        "C": "timid",
+        "D": "sarcastic"
+      },
+      "answer": "B",
+      "explanation": "\"Forthright\" = direct, straightforward. A (evasive) is opposite; C (timid) and D (sarcastic) do not match."
+    },
+    {
+      "id": "C1-V026",
+      "section": "Verbal",
+      "question": "(1) First, identify the main problem. (2) Next, gather all relevant facts. (3) Then, evaluate possible solutions. (4) Finally, implement the best solution and monitor the results.",
+      "options": {
+        "A": "1-2-3-4",
+        "B": "2-1-3-4",
+        "C": "1-3-2-4",
+        "D": "4-3-2-1"
+      },
+      "answer": "A",
+      "explanation": "Problem-solving order: identify → gather facts → evaluate → implement/monitor (1-2-3-4). Other orders put evaluation before facts or implementation first."
+    },
+    {
+      "id": "C1-V027",
+      "section": "Verbal",
+      "question": "(1) The city launched a tree-planting program last year. (2) Volunteers planted over five thousand seedlings along the river. (3) As a result, the riverbank is now greener and less prone to erosion. (4) Residents continue to maintain the trees every month.",
+      "options": {
+        "A": "2-1-4-3",
+        "B": "4-3-2-1",
+        "C": "1-2-3-4",
+        "D": "3-1-2-4"
+      },
+      "answer": "C",
+      "explanation": "Chronology: launch (1) → planting (2) → result (3) → maintenance (4). A starts with the planting before the launch; B reverses the whole sequence, putting maintenance and the result before the planting and the launch; D opens with the result."
+    },
+    {
+      "id": "C1-V028",
+      "section": "Verbal",
+      "question": "(1) Good communication begins with listening. (2) When people feel heard, they are more willing to cooperate. (3) Listening also helps prevent misunderstandings. (4) Therefore, effective leaders listen before they speak.",
+      "options": {
+        "A": "2-1-3-4",
+        "B": "1-3-2-4",
+        "C": "1-2-4-3",
+        "D": "4-1-2-3"
+      },
+      "answer": "B",
+      "explanation": "Best flow: listening (1) → prevents misunderstandings (3) → people feel heard/cooperate (2) → therefore leaders listen first (4). A starts with the effect; C ends with a supporting point after the conclusion; D starts with the conclusion."
+    },
+    {
+      "id": "C1-V029",
+      "section": "Verbal",
+      "question": "(1) The library was quiet that morning. (2) Students were reading at their desks. (3) Suddenly, the fire alarm rang. (4) Everyone calmly walked toward the exits.",
+      "options": {
+        "A": "1-2-3-4",
+        "B": "2-1-4-3",
+        "C": "1-3-2-4",
+        "D": "3-1-2-4"
+      },
+      "answer": "A",
+      "explanation": "Chronology: quiet library (1) → students reading (2) → alarm (3) → exits (4). Others break time order."
+    },
+    {
+      "id": "C1-V030",
+      "section": "Verbal",
+      "question": "(1) Regular exercise improves health. (2) It strengthens the heart and muscles. (3) It also reduces stress and improves sleep. (4) For these reasons, doctors recommend at least 30 minutes of exercise daily.",
+      "options": {
+        "A": "1-2-3-4",
+        "B": "2-1-3-4",
+        "C": "1-3-4-2",
+        "D": "4-1-2-3"
+      },
+      "answer": "A",
+      "explanation": "General claim (1) → heart/muscles (2) → stress/sleep (3) → recommendation (4). B starts with a detail; C/D place the conclusion mid-paragraph."
+    },
+    {
+      "id": "C1-V031",
+      "section": "Verbal",
+      "question": "(1) The report was incomplete. (2) The clerk forgot to attach the annexes. (3) The supervisor returned it for revision. (4) After the annexes were added, the report was approved.",
+      "options": {
+        "A": "2-3-1-4",
+        "B": "1-2-3-4",
+        "C": "1-3-2-4",
+        "D": "3-1-2-4"
+      },
+      "answer": "B",
+      "explanation": "Cause→effect: incomplete (1) → forgot annexes (2) → returned (3) → approved after fix (4). A (2-3-1-4) puts the return before the stated incompleteness; C/D scramble cause and effect."
+    },
+    {
+      "id": "C1-V032",
+      "section": "Verbal",
+      "question": "(1) The Philippines is an archipelago of more than 7,600 islands. (2) Its diverse geography includes mountains, plains, and coastlines. (3) This geography shapes the livelihoods of its people. (4) Fishing and farming remain major sources of income in many provinces.",
+      "options": {
+        "A": "2-1-3-4",
+        "B": "1-2-3-4",
+        "C": "1-3-2-4",
+        "D": "4-3-2-1"
+      },
+      "answer": "B",
+      "explanation": "General→specific: archipelago (1) → geography (2) → shapes livelihoods (3) → fishing/farming (4). A starts with a detail before the topic sentence; C puts the livelihood claim before the geography it rests on; D reverses the whole sequence, ending with the topic sentence."
+    },
+    {
+      "id": "C1-V033",
+      "section": "Verbal",
+      "question": "What is the main idea of the passage?",
+      "passage": "A government office decided to digitize its records to improve service. Before the change, citizens waited in long lines to request documents, and clerks searched through piles of paper folders. After digitization, requests could be filed online, and records could be retrieved in minutes. However, the office also trained its staff to assist citizens who were unfamiliar with computers. As a result, waiting time decreased, and more citizens reported satisfaction with the service.",
+      "options": {
+        "A": "Computers are difficult for many citizens to use.",
+        "B": "Digitizing records improved service while staff support remained important.",
+        "C": "Paper records are more reliable than digital records.",
+        "D": "Long lines are unavoidable in government offices."
+      },
+      "answer": "B",
+      "explanation": "Main idea = digitization improved service and staff help still mattered. A is only a detail; C contradicts the passage; D contradicts the decreased waiting time."
+    },
+    {
+      "id": "C1-V034",
+      "section": "Verbal",
+      "question": "According to the passage, what happened after digitization?",
+      "passage": "A government office decided to digitize its records to improve service. Before the change, citizens waited in long lines to request documents, and clerks searched through piles of paper folders. After digitization, requests could be filed online, and records could be retrieved in minutes. However, the office also trained its staff to assist citizens who were unfamiliar with computers. As a result, waiting time decreased, and more citizens reported satisfaction with the service.",
+      "options": {
+        "A": "Paper folders were kept as the primary system.",
+        "B": "Citizens stopped visiting the office entirely.",
+        "C": "Clerks no longer needed any training.",
+        "D": "Requests could be filed online and records retrieved in minutes."
+      },
+      "answer": "D",
+      "explanation": "Direct detail: requests online, records in minutes. A (paper kept as primary) contradicts digitization; B (stopped visiting entirely) is too extreme; C contradicts the training."
+    },
+    {
+      "id": "C1-V035",
+      "section": "Verbal",
+      "question": "Why did the office train its staff?",
+      "passage": "A government office decided to digitize its records to improve service. Before the change, citizens waited in long lines to request documents, and clerks searched through piles of paper folders. After digitization, requests could be filed online, and records could be retrieved in minutes. However, the office also trained its staff to assist citizens who were unfamiliar with computers. As a result, waiting time decreased, and more citizens reported satisfaction with the service.",
+      "options": {
+        "A": "To reduce the number of employees.",
+        "B": "To replace the online system.",
+        "C": "To assist citizens unfamiliar with computers.",
+        "D": "To increase waiting time."
+      },
+      "answer": "C",
+      "explanation": "Direct detail: train staff to assist citizens unfamiliar with computers. A (reduce employees), B (replace online system), D (increase waiting) contradict the passage."
+    },
+    {
+      "id": "C1-V036",
+      "section": "Verbal",
+      "question": "What can be inferred from the passage?",
+      "passage": "A government office decided to digitize its records to improve service. Before the change, citizens waited in long lines to request documents, and clerks searched through piles of paper folders. After digitization, requests could be filed online, and records could be retrieved in minutes. However, the office also trained its staff to assist citizens who were unfamiliar with computers. As a result, waiting time decreased, and more citizens reported satisfaction with the service.",
+      "options": {
+        "A": "Combining technology with human assistance improves public service.",
+        "B": "Technology alone guarantees good service.",
+        "C": "Digitization made staff unnecessary.",
+        "D": "Citizens preferred paper-based requests."
+      },
+      "answer": "A",
+      "explanation": "Inference: technology + human assistance together improved service. B (technology alone) ignores the training; C (staff unnecessary) contradicts training; D (preferred paper) contradicts satisfaction."
+    },
+    {
+      "id": "C1-V037",
+      "section": "Verbal",
+      "question": "What is the main purpose of Maria's record-keeping?",
+      "passage": "Maria manages a small bakery. Every morning, she checks her inventory, prepares the day's bread, and lists the items she needs to restock. She noticed that sales were highest on weekends, so she began baking more bread on Fridays and Saturdays. She also started recording daily sales in a notebook to identify which products sold best. Over time, her careful planning reduced waste and increased her profit.",
+      "options": {
+        "A": "To impress her customers.",
+        "B": "To hire more workers.",
+        "C": "To avoid paying taxes.",
+        "D": "To identify which products sold best."
+      },
+      "answer": "D",
+      "explanation": "Direct detail: record sales to identify best-selling products. A/B/C are not stated."
+    },
+    {
+      "id": "C1-V038",
+      "section": "Verbal",
+      "question": "Why did Maria bake more bread on Fridays and Saturdays?",
+      "passage": "Maria manages a small bakery. Every morning, she checks her inventory, prepares the day's bread, and lists the items she needs to restock. She noticed that sales were highest on weekends, so she began baking more bread on Fridays and Saturdays. She also started recording daily sales in a notebook to identify which products sold best. Over time, her careful planning reduced waste and increased her profit.",
+      "options": {
+        "A": "Because flour was cheaper on those days.",
+        "B": "Because she had more free time.",
+        "C": "Because sales were highest on weekends.",
+        "D": "Because her workers requested it."
+      },
+      "answer": "C",
+      "explanation": "Direct detail: sales highest on weekends → bake more Fri/Sat. A/B/D are not stated."
+    },
+    {
+      "id": "C1-V039",
+      "section": "Verbal",
+      "question": "What was the result of Maria's planning?",
+      "passage": "Maria manages a small bakery. Every morning, she checks her inventory, prepares the day's bread, and lists the items she needs to restock. She noticed that sales were highest on weekends, so she began baking more bread on Fridays and Saturdays. She also started recording daily sales in a notebook to identify which products sold best. Over time, her careful planning reduced waste and increased her profit.",
+      "options": {
+        "A": "Reduced waste and increased profit.",
+        "B": "Increased waste and lower profit.",
+        "C": "Higher inventory costs with no benefit.",
+        "D": "Fewer customers on weekends."
+      },
+      "answer": "A",
+      "explanation": "Direct result: reduced waste, increased profit. B reverses it; C/D are not stated."
+    },
+    {
+      "id": "C1-V040",
+      "section": "Verbal",
+      "question": "Which trait best describes Maria as presented in the passage?",
+      "passage": "Maria manages a small bakery. Every morning, she checks her inventory, prepares the day's bread, and lists the items she needs to restock. She noticed that sales were highest on weekends, so she began baking more bread on Fridays and Saturdays. She also started recording daily sales in a notebook to identify which products sold best. Over time, her careful planning reduced waste and increased her profit.",
+      "options": {
+        "A": "Careless",
+        "B": "Impulsive",
+        "C": "Systematic and observant",
+        "D": "Reluctant to change"
+      },
+      "answer": "C",
+      "explanation": "Maria checks, plans, records → systematic and observant. A/B/D (careless/impulsive/reluctant) contradict her behavior."
+    },
+    {
+      "id": "C1-V041",
+      "section": "Verbal",
+      "question": "What is the author's main argument?",
+      "passage": "Public libraries remain valuable even in the age of the internet. While search engines provide quick answers, libraries offer curated collections, quiet study spaces, and guidance from librarians. They also host community programs such as reading sessions for children and skills workshops for adults. For students who lack internet access at home, libraries provide computers and a place to study. In this way, libraries promote both learning and equal opportunity.",
+      "options": {
+        "A": "Libraries are outdated and should be closed.",
+        "B": "Only students benefit from libraries.",
+        "C": "Search engines are more reliable than librarians.",
+        "D": "Libraries remain valuable despite the internet."
+      },
+      "answer": "D",
+      "explanation": "Author's argument: libraries remain valuable despite the internet. A (close them) is opposite; B (only students) is too narrow; C (search engines more reliable) contradicts the argument."
+    },
+    {
+      "id": "C1-V042",
+      "section": "Verbal",
+      "question": "According to the passage, what do libraries provide for students without home internet?",
+      "passage": "Public libraries remain valuable even in the age of the internet. While search engines provide quick answers, libraries offer curated collections, quiet study spaces, and guidance from librarians. They also host community programs such as reading sessions for children and skills workshops for adults. For students who lack internet access at home, libraries provide computers and a place to study. In this way, libraries promote both learning and equal opportunity.",
+      "options": {
+        "A": "Computers and a place to study.",
+        "B": "Free books to take home permanently.",
+        "C": "Paid tutoring services.",
+        "D": "Internet subscriptions for home use."
+      },
+      "answer": "A",
+      "explanation": "Direct detail: computers and a place to study. B (free books permanently), C (paid tutoring), D (home subscriptions) are not stated."
+    },
+    {
+      "id": "C1-V043",
+      "section": "Verbal",
+      "question": "Which of the following is mentioned as a library community program?",
+      "passage": "Public libraries remain valuable even in the age of the internet. While search engines provide quick answers, libraries offer curated collections, quiet study spaces, and guidance from librarians. They also host community programs such as reading sessions for children and skills workshops for adults. For students who lack internet access at home, libraries provide computers and a place to study. In this way, libraries promote both learning and equal opportunity.",
+      "options": {
+        "A": "Sports tournaments.",
+        "B": "Job placement guarantees.",
+        "C": "Reading sessions for children.",
+        "D": "Free meal distribution."
+      },
+      "answer": "C",
+      "explanation": "Direct detail: reading sessions for children. A/B/D (tournaments/job guarantees/meals) are not stated."
+    },
+    {
+      "id": "C1-V044",
+      "section": "Verbal",
+      "question": "The phrase \"equal opportunity\" in the passage most nearly means:",
+      "passage": "Public libraries remain valuable even in the age of the internet. While search engines provide quick answers, libraries offer curated collections, quiet study spaces, and guidance from librarians. They also host community programs such as reading sessions for children and skills workshops for adults. For students who lack internet access at home, libraries provide computers and a place to study. In this way, libraries promote both learning and equal opportunity.",
+      "options": {
+        "A": "Everyone pays the same fees.",
+        "B": "All students receive the same grades.",
+        "C": "All libraries have identical collections.",
+        "D": "Everyone has a fair chance to learn regardless of resources."
+      },
+      "answer": "D",
+      "explanation": "\"Equal opportunity\" = fair chance to learn regardless of resources. A (same fees), B (same grades), C (identical collections) misread the phrase."
+    },
+    {
+      "id": "C1-V045",
+      "section": "Verbal",
+      "question": "Alin ang wastong gamit ng \"kung\" at \"kong\"?",
+      "options": {
+        "A": "Kong aalis ka, sabihin mo sa akin.",
+        "B": "Kung libro ko ito, akin ito.",
+        "C": "Sabihin mo kung libro ito ay sa iyo.",
+        "D": "Kung aalis ka, sabihin mo sa akin."
+      },
+      "answer": "D",
+      "explanation": "\"Kung\" is the conjunction (if/when); \"kong\" is the fused form of \"ko\" + \"ng\" (my). D is correct: \"Kung aalis ka, sabihin mo sa akin\" uses \"kung\" as a conditional. A fails because it opens with \"kong\" (my) where the conditional \"kung\" is required. B uses \"kung\" correctly as a conditional (\"if this book is mine\"), but it contains no \"kong\" at all, using the separate \"ko\" instead, so it does not show the correct use of \"kong.\" C also contains no \"kong,\" and it fails on word order: \"kung libro ito ay sa iyo\" scrambles the clause; the natural order is \"kung sa iyo ang librong ito.\""
+    },
+    {
+      "id": "C1-V046",
+      "section": "Verbal",
+      "question": "Alin ang kasingkahulugan ng salitang masipag?",
+      "options": {
+        "A": "tamad",
+        "B": "matiyaga at masinop sa gawain",
+        "C": "madaldal",
+        "D": "matakaw"
+      },
+      "answer": "B",
+      "explanation": "\"Masipag\" = industrious — matiyaga at masinop sa gawain. A (tamad) is opposite; C/D are unrelated."
+    },
+    {
+      "id": "C1-V047",
+      "section": "Verbal",
+      "question": "Alin ang kasalungat ng salitang matapat?",
+      "options": {
+        "A": "tapat",
+        "B": "totoo",
+        "C": "taksil",
+        "D": "matulungin"
+      },
+      "answer": "C",
+      "explanation": "Antonym of \"matapat\" (honest/faithful) is \"taksil\" (traitor/disloyal). A/B are synonyms; D is unrelated."
+    },
+    {
+      "id": "C1-V048",
+      "section": "Verbal",
+      "question": "Piliin ang pangungusap na wasto ang gamit ng \"nang\" at \"ng\":",
+      "options": {
+        "A": "Kumain siya ng mabilis nang siya ay nagmamadali.",
+        "B": "Kumain siya nang mabilis ng siya ay nagmamadali.",
+        "C": "Kumain siya nang mabilis nang siya ay nagmamadali.",
+        "D": "Kumain siya ng mabilis ng siya ay nagmamadali."
+      },
+      "answer": "C",
+      "explanation": "\"Nang mabilis\" (adverb, \"quickly\") + \"nang siya ay …\" (when). A/B/D swap \"ng\" (possessive/object marker) and \"nang\" incorrectly."
+    },
+    {
+      "id": "C1-V049",
+      "section": "Verbal",
+      "question": "Ano ang pangunahing diwa ng pangungusap: \"Ang pagbasa ay susi sa kaalaman\"?",
+      "options": {
+        "A": "Ang susi ay ginagamit sa pagbasa.",
+        "B": "Ang pagbasa ay mahalaga upang magkaroon ng kaalaman.",
+        "C": "Ang kaalaman ay hindi kailangan ng pagbasa.",
+        "D": "Ang pagbasa ay libangan lamang."
+      },
+      "answer": "B",
+      "explanation": "\"Pagbasa ay susi sa kaalaman\" = reading is important for gaining knowledge. A is literal (key object); C contradicts; D narrows it to leisure only."
+    },
+    {
+      "id": "C1-V050",
+      "section": "Verbal",
+      "question": "Alin ang wastong gamit ng \"din\" at \"rin\"?",
+      "options": {
+        "A": "Siya din ay dumating.",
+        "B": "Siya rin ay dumating.",
+        "C": "Siya din ay dumating rin.",
+        "D": "Siya rin ay dumating din."
+      },
+      "answer": "B",
+      "explanation": "\"Rin\" follows a vowel (\"Siya\" ends in a vowel); \"din\" follows a consonant. A uses \"din\" after a vowel; C/D duplicate both."
+    },
+    {
+      "id": "C1-V051",
+      "section": "Verbal",
+      "question": "Ano ang ibig sabihin ng sawikaing \"nasa huli ang pagsisisi\"?",
+      "options": {
+        "A": "Ang pagsisisi ay laging huli at dapat pag-isipan ang kilos bago gawin.",
+        "B": "Ang huli ay laging nagsisisi.",
+        "C": "Ang pagsisisi ay walang saysay.",
+        "D": "Ang huli ay nauuna."
+      },
+      "answer": "A",
+      "explanation": "\"Nasa huli ang pagsisisi\" = regret comes too late, so think before acting. B is literal; C/D distort the meaning."
+    },
+    {
+      "id": "C1-V052",
+      "section": "Verbal",
+      "question": "Alin sa mga sumusunod ang halimbawa ng pang-abay?",
+      "options": {
+        "A": "mabilis na tumakbo",
+        "B": "malaking bahay",
+        "C": "pulang rosas",
+        "D": "matabang bata"
+      },
+      "answer": "A",
+      "explanation": "\"Mabilis na tumakbo\" modifies the verb (how he ran) → pang-abay (adverb). B/C/D are adjectives modifying nouns (bahay/rosas/bata)."
+    },
+    {
+      "id": "C1-N001",
+      "section": "Numerical",
+      "question": "What is 48 + 37 × 2 − 15?",
+      "options": {
+        "A": "107",
+        "B": "155",
+        "C": "95",
+        "D": "137"
+      },
+      "answer": "A",
+      "explanation": "Multiplication first: 37 × 2 = 74. Then 48 + 74 − 15 = 122 − 15 = 107. B (155) adds before multiplying; C (95) and D (137) mis-handle order/signs."
+    },
+    {
+      "id": "C1-N002",
+      "section": "Numerical",
+      "question": "What is 15% of 240?",
+      "options": {
+        "A": "24",
+        "B": "30",
+        "C": "40",
+        "D": "36"
+      },
+      "answer": "D",
+      "explanation": "15% of 240 = 0.15 × 240 = 36 (10% = 24, 5% = 12, 24 + 12 = 36). A/B/C are 10%, 12.5%, and 16.7% respectively."
+    },
+    {
+      "id": "C1-N003",
+      "section": "Numerical",
+      "question": "If 3 : 5 = x : 35, what is x?",
+      "options": {
+        "A": "15",
+        "B": "21",
+        "C": "25",
+        "D": "28"
+      },
+      "answer": "B",
+      "explanation": "3/5 = x/35 → cross-multiply: 5x = 105 → x = 21. A (15) uses 3:7; C/D do not satisfy the proportion."
+    },
+    {
+      "id": "C1-N004",
+      "section": "Numerical",
+      "question": "The scores of five students are 82, 88, 76, 94, and 90. What is their average score?",
+      "options": {
+        "A": "84",
+        "B": "85",
+        "C": "86",
+        "D": "88"
+      },
+      "answer": "C",
+      "explanation": "Sum = 82 + 88 + 76 + 94 + 90 = 430. Average = 430 ÷ 5 = 86. A/B/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N005",
+      "section": "Numerical",
+      "question": "What is 7/8 − 1/4?",
+      "options": {
+        "A": "3/8",
+        "B": "5/8",
+        "C": "3/4",
+        "D": "1/2"
+      },
+      "answer": "B",
+      "explanation": "Common denominator 8: 7/8 − 1/4 = 7/8 − 2/8 = 5/8. A/C/D do not equal 5/8."
+    },
+    {
+      "id": "C1-N006",
+      "section": "Numerical",
+      "question": "A train travels at 60 km/h for 2.5 hours. How far does it travel?",
+      "options": {
+        "A": "120 km",
+        "B": "135 km",
+        "C": "140 km",
+        "D": "150 km"
+      },
+      "answer": "D",
+      "explanation": "Distance = rate × time = 60 × 2.5 = 150 km (60 × 2 = 120, 60 × 0.5 = 30). A/B/C undercount the half hour."
+    },
+    {
+      "id": "C1-N007",
+      "section": "Numerical",
+      "question": "A salary of ₱2,500 is increased by 12%. What is the new salary?",
+      "options": {
+        "A": "₱2,620",
+        "B": "₱2,800",
+        "C": "₱2,750",
+        "D": "₱3,000"
+      },
+      "answer": "B",
+      "explanation": "Increase = 12% × 2,500 = 300. New salary = 2,500 + 300 = ₱2,800 (or 2,500 × 1.12). A/C/D use wrong rates."
+    },
+    {
+      "id": "C1-N008",
+      "section": "Numerical",
+      "question": "What is 0.75 × 48?",
+      "options": {
+        "A": "32",
+        "B": "34",
+        "C": "36",
+        "D": "38"
+      },
+      "answer": "C",
+      "explanation": "0.75 × 48 = (3/4) × 48 = 36. A/B/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N009",
+      "section": "Numerical",
+      "question": "What is the perimeter of a rectangle 12 m long and 8 m wide?",
+      "options": {
+        "A": "96 m",
+        "B": "32 m",
+        "C": "20 m",
+        "D": "40 m"
+      },
+      "answer": "D",
+      "explanation": "Perimeter = 2 × (length + width) = 2 × (12 + 8) = 2 × 20 = 40 m. A (96) is area; B (32) is 2 × 16 only; C (20) is half-perimeter."
+    },
+    {
+      "id": "C1-N010",
+      "section": "Numerical",
+      "question": "If 5 workers can finish a job in 12 days, how many days will it take 10 workers working at the same rate?",
+      "options": {
+        "A": "6 days",
+        "B": "8 days",
+        "C": "10 days",
+        "D": "12 days"
+      },
+      "answer": "A",
+      "explanation": "Inverse proportion: workers × days is constant: 5 × 12 = 60 worker-days. 60 ÷ 10 = 6 days. B/C/D treat it as direct proportion or no change."
+    },
+    {
+      "id": "C1-N011",
+      "section": "Numerical",
+      "question": "What is 7,500 ÷ 25?",
+      "options": {
+        "A": "250",
+        "B": "300",
+        "C": "350",
+        "D": "200"
+      },
+      "answer": "B",
+      "explanation": "7,500 ÷ 25 = 300 (25 × 300 = 7,500). A/C/D fail the check-multiplication."
+    },
+    {
+      "id": "C1-N012",
+      "section": "Numerical",
+      "question": "What is 12% of 350?",
+      "options": {
+        "A": "38",
+        "B": "40",
+        "C": "42",
+        "D": "45"
+      },
+      "answer": "C",
+      "explanation": "12% × 350 = 0.12 × 350 = 42 (10% = 35, 2% = 7, 35 + 7 = 42). A/B/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N013",
+      "section": "Numerical",
+      "question": "What is 8 + 4 × (6 − 2)?",
+      "options": {
+        "A": "48",
+        "B": "32",
+        "C": "20",
+        "D": "24"
+      },
+      "answer": "D",
+      "explanation": "Parentheses first: 6 − 2 = 4; 4 × 4 = 16; 8 + 16 = 24. A (48) does left-to-right ignoring precedence; B/C mis-handle the parentheses."
+    },
+    {
+      "id": "C1-N014",
+      "section": "Numerical",
+      "question": "Three times a number plus 5 equals 20. What is the number?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "4"
+      },
+      "answer": "A",
+      "explanation": "3x + 5 = 20 → 3x = 15 → x = 5. Check: 3(5) + 5 = 20. B/C/D do not satisfy the equation."
+    },
+    {
+      "id": "C1-N015",
+      "section": "Numerical",
+      "question": "What is the simple interest on ₱10,000 at 6% per year for 2 years?",
+      "options": {
+        "A": "₱600",
+        "B": "₱1,000",
+        "C": "₱1,200",
+        "D": "₱1,600"
+      },
+      "answer": "C",
+      "explanation": "Simple interest = P × r × t = 10,000 × 0.06 × 2 = ₱1,200. A is one year only; B/D use wrong rates/periods."
+    },
+    {
+      "id": "C1-N016",
+      "section": "Numerical",
+      "question": "What is 2/5 of 200?",
+      "options": {
+        "A": "60",
+        "B": "80",
+        "C": "100",
+        "D": "40"
+      },
+      "answer": "B",
+      "explanation": "2/5 × 200 = 400 ÷ 5 = 80. A/C/D use wrong fractions."
+    },
+    {
+      "id": "C1-N017",
+      "section": "Numerical",
+      "question": "What is the next number in the sequence 15, 25, 35, ___?",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "55",
+        "D": "45"
+      },
+      "answer": "D",
+      "explanation": "Arithmetic sequence, +10 each time: 15, 25, 35, 45. A/B/C break the +10 pattern."
+    },
+    {
+      "id": "C1-N018",
+      "section": "Numerical",
+      "question": "What is 9² − 4²?",
+      "options": {
+        "A": "65",
+        "B": "49",
+        "C": "97",
+        "D": "45"
+      },
+      "answer": "A",
+      "explanation": "9² = 81, 4² = 16; 81 − 16 = 65. B (49) is 7²; C/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N019",
+      "section": "Numerical",
+      "question": "A shirt is sold for ₱640 after a 20% discount. What was its original price?",
+      "options": {
+        "A": "₱700",
+        "B": "₱750",
+        "C": "₱800",
+        "D": "₱900"
+      },
+      "answer": "C",
+      "explanation": "Let original = P. 0.80 × P = 640 → P = 640 ÷ 0.80 = ₱800. Check: 800 − 20% (160) = 640. A/B/D do not give 640 after 20% off."
+    },
+    {
+      "id": "C1-N020",
+      "section": "Numerical",
+      "question": "Two numbers are in the ratio 4 : 7 and their sum is 44. What is the smaller number?",
+      "options": {
+        "A": "12",
+        "B": "16",
+        "C": "20",
+        "D": "28"
+      },
+      "answer": "B",
+      "explanation": "Total parts = 4 + 7 = 11. One part = 44 ÷ 11 = 4. Smaller = 4 × 4 = 16 (larger = 28). A/C/D use wrong part values."
+    },
+    {
+      "id": "C1-N021",
+      "section": "Numerical",
+      "question": "What is 120 ÷ 6 + 7 × 3?",
+      "options": {
+        "A": "35",
+        "B": "38",
+        "C": "45",
+        "D": "41"
+      },
+      "answer": "D",
+      "explanation": "Division and multiplication before addition: 120 ÷ 6 = 20; 7 × 3 = 21; 20 + 21 = 41. A/B/C do left-to-right or mis-add."
+    },
+    {
+      "id": "C1-N022",
+      "section": "Numerical",
+      "question": "What is 0.6 + 3/5?",
+      "options": {
+        "A": "1.2",
+        "B": "1.0",
+        "C": "0.9",
+        "D": "1.5"
+      },
+      "answer": "A",
+      "explanation": "3/5 = 0.6; 0.6 + 0.6 = 1.2. B/C/D mis-convert the fraction."
+    },
+    {
+      "id": "C1-N023",
+      "section": "Numerical",
+      "question": "A car travels 240 km in 4 hours at a constant speed. How far will it travel in 7 hours at the same speed?",
+      "options": {
+        "A": "360 km",
+        "B": "400 km",
+        "C": "420 km",
+        "D": "480 km"
+      },
+      "answer": "C",
+      "explanation": "Speed = 240 ÷ 4 = 60 km/h. Distance in 7 h = 60 × 7 = 420 km. A/B/D use wrong speeds/times."
+    },
+    {
+      "id": "C1-N024",
+      "section": "Numerical",
+      "question": "A price of ₱80 is increased by 25%. What is the new price?",
+      "options": {
+        "A": "₱95",
+        "B": "₱100",
+        "C": "₱105",
+        "D": "₱110"
+      },
+      "answer": "B",
+      "explanation": "Increase = 25% × 80 = 20. New price = 80 + 20 = ₱100 (or 80 × 1.25). A/C/D use wrong rates."
+    },
+    {
+      "id": "C1-N025",
+      "section": "Numerical",
+      "question": "What is the area of a triangle with base 10 cm and height 12 cm?",
+      "options": {
+        "A": "120 cm²",
+        "B": "100 cm²",
+        "C": "90 cm²",
+        "D": "60 cm²"
+      },
+      "answer": "D",
+      "explanation": "Area = ½ × base × height = ½ × 10 × 12 = 60 cm². A (120) omits the ½; B/C are off by arithmetic."
+    },
+    {
+      "id": "C1-N026",
+      "section": "Numerical",
+      "question": "What is 1/2 + 1/3 + 1/6?",
+      "options": {
+        "A": "1",
+        "B": "5/6",
+        "C": "1 1/6",
+        "D": "2/3"
+      },
+      "answer": "A",
+      "explanation": "Common denominator 6: 3/6 + 2/6 + 1/6 = 6/6 = 1. B/C/D use wrong denominators."
+    },
+    {
+      "id": "C1-N027",
+      "section": "Numerical",
+      "question": "If 3 men can paint a house in 9 days, how many days will it take 9 men working at the same rate?",
+      "options": {
+        "A": "1 day",
+        "B": "2 days",
+        "C": "3 days",
+        "D": "4 days"
+      },
+      "answer": "C",
+      "explanation": "Inverse proportion: 3 × 9 = 27 man-days. 27 ÷ 9 = 3 days. A/B/D treat it as direct proportion."
+    },
+    {
+      "id": "C1-N028",
+      "section": "Numerical",
+      "question": "What is 18% of 500?",
+      "options": {
+        "A": "80",
+        "B": "90",
+        "C": "100",
+        "D": "110"
+      },
+      "answer": "B",
+      "explanation": "18% × 500 = 0.18 × 500 = 90 (10% = 50, 8% = 40). A/C/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N029",
+      "section": "Numerical",
+      "question": "What is the next number in the sequence 2, 6, 12, 20, 30, ___?",
+      "options": {
+        "A": "36",
+        "B": "38",
+        "C": "40",
+        "D": "42"
+      },
+      "answer": "D",
+      "explanation": "Differences grow by 2: 6−2=4, 12−6=6, 20−12=8, 30−20=10, next difference = 12 → 30 + 12 = 42. A/B/C use constant differences."
+    },
+    {
+      "id": "C1-N030",
+      "section": "Numerical",
+      "question": "What is 5% of 1,200?",
+      "options": {
+        "A": "60",
+        "B": "50",
+        "C": "70",
+        "D": "80"
+      },
+      "answer": "A",
+      "explanation": "5% × 1,200 = 0.05 × 1,200 = 60. B/C/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N031",
+      "section": "Numerical",
+      "question": "₱1,500 is split in the ratio 2 : 3. What is the larger share?",
+      "options": {
+        "A": "₱600",
+        "B": "₱750",
+        "C": "₱900",
+        "D": "₱1,000"
+      },
+      "answer": "C",
+      "explanation": "Total parts = 2 + 3 = 5. One part = 1,500 ÷ 5 = 300. Larger = 3 × 300 = ₱900 (smaller = 600). A is the smaller share; B/D use wrong parts."
+    },
+    {
+      "id": "C1-N032",
+      "section": "Numerical",
+      "question": "What is 45 × 12?",
+      "options": {
+        "A": "520",
+        "B": "540",
+        "C": "560",
+        "D": "480"
+      },
+      "answer": "B",
+      "explanation": "45 × 12 = 45 × 10 + 45 × 2 = 450 + 90 = 540. A/C/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N033",
+      "section": "Numerical",
+      "question": "A buyer pays ₱1,000 for items costing ₱245 and ₱380. How much change does the buyer receive?",
+      "options": {
+        "A": "₱355",
+        "B": "₱365",
+        "C": "₱385",
+        "D": "₱375"
+      },
+      "answer": "D",
+      "explanation": "Total cost = 245 + 380 = 625. Change = 1,000 − 625 = ₱375. A/B/C are off by subtraction."
+    },
+    {
+      "id": "C1-N034",
+      "section": "Numerical",
+      "question": "What is the average of 10, 20, 30, and 40?",
+      "options": {
+        "A": "25",
+        "B": "20",
+        "C": "30",
+        "D": "35"
+      },
+      "answer": "A",
+      "explanation": "Sum = 10 + 20 + 30 + 40 = 100. Average = 100 ÷ 4 = 25. B/C/D are off by arithmetic."
+    },
+    {
+      "id": "C1-N035",
+      "section": "Numerical",
+      "question": "What is 3/8 of 320?",
+      "options": {
+        "A": "100",
+        "B": "110",
+        "C": "120",
+        "D": "130"
+      },
+      "answer": "C",
+      "explanation": "3/8 × 320 = 960 ÷ 8 = 120 (320 ÷ 8 = 40; 40 × 3 = 120). A/B/D use wrong fractions."
+    },
+    {
+      "id": "C1-N036",
+      "section": "Numerical",
+      "question": "How many minutes are in 2 hours and 45 minutes?",
+      "options": {
+        "A": "145 minutes",
+        "B": "165 minutes",
+        "C": "155 minutes",
+        "D": "175 minutes"
+      },
+      "answer": "B",
+      "explanation": "2 hours = 120 minutes; 120 + 45 = 165 minutes. A/C/D mis-convert hours."
+    },
+    {
+      "id": "C1-N037",
+      "section": "Numerical",
+      "question": "What is 9 × 8 − 7 × 6?",
+      "options": {
+        "A": "20",
+        "B": "24",
+        "C": "28",
+        "D": "30"
+      },
+      "answer": "D",
+      "explanation": "9 × 8 = 72; 7 × 6 = 42; 72 − 42 = 30. A/B/C are off by arithmetic."
+    },
+    {
+      "id": "C1-N038",
+      "section": "Numerical",
+      "question": "If x = 4, what is 2x² + 3x?",
+      "options": {
+        "A": "44",
+        "B": "40",
+        "C": "48",
+        "D": "36"
+      },
+      "answer": "A",
+      "explanation": "x = 4 → x² = 16. 2(16) + 3(4) = 32 + 12 = 44. B/C/D mis-square or mis-multiply."
+    },
+    {
+      "id": "C1-A001",
+      "section": "Analytical",
+      "question": "Speedometer : Speed :: Odometer : ___",
+      "options": {
+        "A": "Fuel",
+        "B": "Distance",
+        "C": "Engine",
+        "D": "Highway"
+      },
+      "answer": "B",
+      "explanation": "Instrument→quantity measured: a speedometer measures speed; an odometer measures the distance traveled. A (fuel) is measured by a fuel gauge, not an odometer; C (engine) is a vehicle part, not a measured quantity; D (highway) is where a vehicle travels, not something the instrument measures."
+    },
+    {
+      "id": "C1-A002",
+      "section": "Analytical",
+      "question": "Doctor : Hospital :: Teacher : ___",
+      "options": {
+        "A": "Student",
+        "B": "Book",
+        "C": "School",
+        "D": "Class"
+      },
+      "answer": "C",
+      "explanation": "Worker→workplace: doctor works in a hospital; teacher works in a school. A (student) is a person served; B (book) is a tool; D (class) is a session."
+    },
+    {
+      "id": "C1-A003",
+      "section": "Analytical",
+      "question": "Bird : Fly :: Fish : ___",
+      "options": {
+        "A": "Water",
+        "B": "Swim",
+        "C": "Fin",
+        "D": "Ocean"
+      },
+      "answer": "B",
+      "explanation": "Animal→characteristic movement: bird flies; fish swims. A (water) is habitat; C (fin) is a body part; D (ocean) is habitat."
+    },
+    {
+      "id": "C1-A004",
+      "section": "Analytical",
+      "question": "Hot : Cold :: Rich : ___",
+      "options": {
+        "A": "Money",
+        "B": "Wealth",
+        "C": "Expensive",
+        "D": "Poor"
+      },
+      "answer": "D",
+      "explanation": "Antonym pair: hot↔cold; rich↔poor. A/B (money/wealth) are related to rich, not opposites; C (expensive) is unrelated."
+    },
+    {
+      "id": "C1-A005",
+      "section": "Analytical",
+      "question": "Finger : Hand :: Toe : ___",
+      "options": {
+        "A": "Foot",
+        "B": "Leg",
+        "C": "Shoe",
+        "D": "Nail"
+      },
+      "answer": "A",
+      "explanation": "Part→whole: finger is part of a hand; toe is part of a foot. B (leg) is a larger limb; C (shoe) is worn on the foot; D (nail) is a smaller part."
+    },
+    {
+      "id": "C1-A006",
+      "section": "Analytical",
+      "question": "All managers are leaders. Maria is a manager. Therefore:",
+      "options": {
+        "A": "Maria is not a leader.",
+        "B": "No conclusion can be drawn.",
+        "C": "Maria is a leader.",
+        "D": "All leaders are managers."
+      },
+      "answer": "C",
+      "explanation": "Syllogism: All managers are leaders + Maria is a manager → Maria is a leader. A contradicts the premises; B ignores a valid deduction; D reverses the premise (not all leaders are managers)."
+    },
+    {
+      "id": "C1-A007",
+      "section": "Analytical",
+      "question": "If it rains, the game will be postponed. It rained. Therefore:",
+      "options": {
+        "A": "The game will proceed.",
+        "B": "The game will be postponed.",
+        "C": "The game is cancelled permanently.",
+        "D": "The rain had no effect."
+      },
+      "answer": "B",
+      "explanation": "Modus ponens: If rain → postponement; rain occurred → postponement follows. A contradicts; C adds \"permanently\" (not stated); D denies the rule."
+    },
+    {
+      "id": "C1-A008",
+      "section": "Analytical",
+      "question": "Only applicants with complete requirements will be interviewed. Juan was interviewed. What can be concluded?",
+      "options": {
+        "A": "Juan had incomplete requirements.",
+        "B": "Juan was rejected.",
+        "C": "No conclusion can be drawn.",
+        "D": "Juan had complete requirements."
+      },
+      "answer": "D",
+      "explanation": "\"Only complete → interviewed\" + \"Juan interviewed\" → Juan must have been complete (contrapositive). A contradicts; B adds rejection (not stated); C ignores the valid deduction."
+    },
+    {
+      "id": "C1-A009",
+      "section": "Analytical",
+      "question": "The office will buy new computers to improve efficiency. This plan assumes that:",
+      "options": {
+        "A": "New computers can improve efficiency.",
+        "B": "Computers are cheap.",
+        "C": "All offices need computers.",
+        "D": "Efficiency is unimportant."
+      },
+      "answer": "A",
+      "explanation": "The plan only works if new computers can improve efficiency — the unstated link. B (cheap) is not required; C (all offices) is too broad; D contradicts the goal."
+    },
+    {
+      "id": "C1-A010",
+      "section": "Analytical",
+      "question": "All roses are flowers. Some flowers are red. Can we conclude that all roses are red?",
+      "options": {
+        "A": "Yes, all roses are red.",
+        "B": "All flowers are roses.",
+        "C": "No — it does not necessarily follow.",
+        "D": "All red things are roses."
+      },
+      "answer": "C",
+      "explanation": "\"All roses are flowers\" + \"Some flowers are red\" does NOT prove all roses are red — the red flowers might not be roses. A over-claims; B reverses the premise; D is unrelated."
+    },
+    {
+      "id": "C1-A011",
+      "section": "Analytical",
+      "question": "Ana is taller than Bea. Bea is taller than Carla. Who is the shortest?",
+      "options": {
+        "A": "Ana",
+        "B": "Carla",
+        "C": "Bea",
+        "D": "Cannot be determined"
+      },
+      "answer": "B",
+      "explanation": "Ordering: Ana > Bea > Carla, so Carla is shortest. A is tallest; C is middle; D is wrong — the order is fully determined."
+    },
+    {
+      "id": "C1-A012",
+      "section": "Analytical",
+      "question": "In a line, Jose is ahead of Pedro. Pedro is ahead of Luis. Luis is ahead of Marco. Who is last in line?",
+      "options": {
+        "A": "Jose",
+        "B": "Pedro",
+        "C": "Luis",
+        "D": "Marco"
+      },
+      "answer": "D",
+      "explanation": "Ordering: Jose > Pedro > Luis > Marco (ahead = earlier), so Marco is last. A/B/C are ahead of Marco."
+    },
+    {
+      "id": "C1-A013",
+      "section": "Analytical",
+      "question": "No honest person takes bribes. Dela Cruz takes bribes. Therefore:",
+      "options": {
+        "A": "Dela Cruz is not honest.",
+        "B": "Dela Cruz is honest.",
+        "C": "All dishonest people take bribes.",
+        "D": "No conclusion can be drawn."
+      },
+      "answer": "A",
+      "explanation": "\"No honest person takes bribes\" + \"Dela Cruz takes bribes\" → Dela Cruz is not honest. B contradicts; C over-generalizes (dishonest people may or may not take bribes); D ignores the valid deduction."
+    },
+    {
+      "id": "C1-A014",
+      "section": "Analytical",
+      "question": "To reduce traffic, the city will add bus routes. This plan assumes that:",
+      "options": {
+        "A": "Everyone will ride the bus.",
+        "B": "Traffic has no other cause.",
+        "C": "More bus routes can reduce traffic.",
+        "D": "Buses never cause traffic."
+      },
+      "answer": "C",
+      "explanation": "The plan assumes bus routes can reduce traffic — the causal link. A (everyone) is too strong; B (no other cause) is not required; D (never) is too strong."
+    },
+    {
+      "id": "C1-A015",
+      "section": "Analytical",
+      "question": "Some clerks are bilingual. All bilingual staff were invited to the training. What follows?",
+      "options": {
+        "A": "All clerks were invited.",
+        "B": "Some clerks were invited.",
+        "C": "No clerk was invited.",
+        "D": "All bilingual staff are clerks."
+      },
+      "answer": "B",
+      "explanation": "Some clerks are bilingual, and all bilingual staff were invited → at least those bilingual clerks (some clerks) were invited, so B follows. A (all clerks) is not entailed by the premises: the premises say nothing about clerks who are not bilingual, so whether they were invited is simply not settled either way. C contradicts the premises; D reverses the premise (bilingual staff need not be clerks)."
+    },
+    {
+      "id": "C1-A016",
+      "section": "Analytical",
+      "question": "A is 2 more than B. B is 3 more than C. If C = 5, what is A?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "answer": "D",
+      "explanation": "C = 5 → B = 5 + 3 = 8 → A = 8 + 2 = 10. A/B/C mis-add the differences."
+    },
+    {
+      "id": "C1-A017",
+      "section": "Analytical",
+      "question": "Which one does NOT belong with the others?",
+      "options": {
+        "A": "Carrot",
+        "B": "Apple",
+        "C": "Banana",
+        "D": "Mango"
+      },
+      "answer": "A",
+      "explanation": "Carrot is a vegetable; apple, banana, mango are fruits. B/C/D share the fruit category."
+    },
+    {
+      "id": "C1-A018",
+      "section": "Analytical",
+      "question": "All pens in the box are blue. This item is not blue. Therefore:",
+      "options": {
+        "A": "It is a pen from the box.",
+        "B": "It is blue.",
+        "C": "It is not a pen from the box.",
+        "D": "It must be a pencil."
+      },
+      "answer": "C",
+      "explanation": "All pens in the box are blue; this item is not blue → it cannot be a pen from the box. A/B contradict the premises; D adds \"pencil\" (not stated)."
+    },
+    {
+      "id": "C1-A019",
+      "section": "Analytical",
+      "question": "What is the next letter in the series A, C, F, J, O, ___?",
+      "options": {
+        "A": "T",
+        "B": "U",
+        "C": "V",
+        "D": "W"
+      },
+      "answer": "B",
+      "explanation": "Differences increase by 1: A→C (+2), C→F (+3), F→J (+4), J→O (+5), O→U (+6). A/C/D break the +6 step."
+    },
+    {
+      "id": "C1-A020",
+      "section": "Analytical",
+      "question": "Jana finished ahead of Liza but behind Rosa. Who finished first?",
+      "options": {
+        "A": "Jana",
+        "B": "Liza",
+        "C": "They tied.",
+        "D": "Rosa"
+      },
+      "answer": "D",
+      "explanation": "Rosa ahead of Jana ahead of Liza → Rosa finished first. A is second; B is third; C contradicts the ordering."
+    },
+    {
+      "id": "C1-A021",
+      "section": "Analytical",
+      "question": "If 5 chairs cost ₱1,000, how much do 8 chairs cost at the same unit price?",
+      "options": {
+        "A": "₱1,600",
+        "B": "₱1,400",
+        "C": "₱1,800",
+        "D": "₱1,200"
+      },
+      "answer": "A",
+      "explanation": "Unit price = 1,000 ÷ 5 = ₱200. 8 × 200 = ₱1,600. B/C/D use wrong unit prices."
+    },
+    {
+      "id": "C1-A022",
+      "section": "Analytical",
+      "question": "A meeting starts at 9:00. Anna arrived 15 minutes early. Bea arrived 10 minutes after Anna. At what time did Bea arrive?",
+      "options": {
+        "A": "8:45",
+        "B": "9:00",
+        "C": "8:55",
+        "D": "9:10"
+      },
+      "answer": "C",
+      "explanation": "Anna: 9:00 − 15 min = 8:45. Bea: 8:45 + 10 min = 8:55. A is Anna's time; B/D mis-add."
+    },
+    {
+      "id": "C1-A023",
+      "section": "Analytical",
+      "question": "Which branch had the highest sales?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "North",
+        "B": "South",
+        "C": "East",
+        "D": "West"
+      },
+      "answer": "B",
+      "explanation": "South = 150, the largest (North 120, East 90, West 140). A/C/D are lower."
+    },
+    {
+      "id": "C1-A024",
+      "section": "Analytical",
+      "question": "What was the total number of units sold by all four branches?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "400",
+        "B": "450",
+        "C": "480",
+        "D": "500"
+      },
+      "answer": "D",
+      "explanation": "Total = 120 + 150 + 90 + 140 = 500 (120 + 150 = 270; 270 + 90 = 360; 360 + 140 = 500). A/B/C are off by addition."
+    },
+    {
+      "id": "C1-A025",
+      "section": "Analytical",
+      "question": "What is the difference between the highest and lowest branch sales?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "60",
+        "B": "50",
+        "C": "40",
+        "D": "30"
+      },
+      "answer": "A",
+      "explanation": "Highest (South 150) − lowest (East 90) = 60. B/C/D are off by subtraction."
+    },
+    {
+      "id": "C1-A026",
+      "section": "Analytical",
+      "question": "What percentage of total sales did the West branch contribute?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "24%",
+        "B": "26%",
+        "C": "28%",
+        "D": "30%"
+      },
+      "answer": "C",
+      "explanation": "West share = 140 ÷ 500 = 0.28 = 28%. A/B/D use wrong numerators/denominators."
+    },
+    {
+      "id": "C1-A027",
+      "section": "Analytical",
+      "question": "What is the combined sales of the East and North branches?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "200",
+        "B": "210",
+        "C": "220",
+        "D": "230"
+      },
+      "answer": "B",
+      "explanation": "East + North = 90 + 120 = 210. A/C/D are off by addition."
+    },
+    {
+      "id": "C1-A028",
+      "section": "Analytical",
+      "question": "If South branch sales increase by 10% next month, what will South sales be?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "150",
+        "B": "155",
+        "C": "160",
+        "D": "165"
+      },
+      "answer": "D",
+      "explanation": "10% of 150 = 15. New South = 150 + 15 = 165 (or 150 × 1.10). A/B/C use wrong rates."
+    },
+    {
+      "id": "C1-A029",
+      "section": "Analytical",
+      "question": "What is the average sales per branch?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "125",
+        "B": "120",
+        "C": "130",
+        "D": "115"
+      },
+      "answer": "A",
+      "explanation": "Average = total ÷ 4 = 500 ÷ 4 = 125. B/C/D are off by division."
+    },
+    {
+      "id": "C1-A030",
+      "section": "Analytical",
+      "question": "How many branches sold more than 130 units?",
+      "passage": "Branch | Units Sold\nNorth | 120\nSouth | 150\nEast | 90\nWest | 140",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "2",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Over 130: South (150) and West (140) = 2 branches. North (120) and East (90) are ≤130. A counts one; B counts three; D counts all four."
+    },
+    {
+      "id": "C1-G001",
+      "section": "General Information",
+      "question": "Under the 1987 Constitution, sovereignty resides in:",
+      "options": {
+        "A": "The President",
+        "B": "The people",
+        "C": "The Congress",
+        "D": "The Supreme Court"
+      },
+      "answer": "B",
+      "explanation": "1987 Constitution, Article II, Section 1: sovereignty resides in the people and all government authority emanates from them. A/C/D name institutions that exercise delegated authority, not the source of sovereignty."
+    },
+    {
+      "id": "C1-G002",
+      "section": "General Information",
+      "question": "What is the national language of the Philippines under the 1987 Constitution?",
+      "options": {
+        "A": "English",
+        "B": "Spanish",
+        "C": "Cebuano",
+        "D": "Filipino"
+      },
+      "answer": "D",
+      "explanation": "1987 Constitution, Article XIV, Section 6: the national language is Filipino. A (English) is an official language but not the national language; B/C are not the national language."
+    },
+    {
+      "id": "C1-G003",
+      "section": "General Information",
+      "question": "Republic Act No. 6713 is known as the:",
+      "options": {
+        "A": "Code of Conduct and Ethical Standards for Public Officials and Employees",
+        "B": "Anti-Graft and Corrupt Practices Act",
+        "C": "Revised Penal Code",
+        "D": "Administrative Code of 1987"
+      },
+      "answer": "A",
+      "explanation": "RA 6713 is titled the Code of Conduct and Ethical Standards for Public Officials and Employees. B is RA 3019; C is a different code; D is Executive Order No. 292."
+    },
+    {
+      "id": "C1-G004",
+      "section": "General Information",
+      "question": "Under RA 6713, what does SALN stand for?",
+      "options": {
+        "A": "Statement of Assets, Loans, and Notes",
+        "B": "Summary of Assets, Liabilities, and Income",
+        "C": "Statement of Assets, Liabilities, and Net Worth",
+        "D": "Statement of Accounts, Loans, and Net Worth"
+      },
+      "answer": "C",
+      "explanation": "SALN = Statement of Assets, Liabilities, and Net Worth. A/B/D scramble the terms (loans/notes/income/accounts are not the SALN title)."
+    },
+    {
+      "id": "C1-G005",
+      "section": "General Information",
+      "question": "What is the term of office of the President under the 1987 Constitution?",
+      "options": {
+        "A": "4 years",
+        "B": "6 years",
+        "C": "5 years",
+        "D": "8 years"
+      },
+      "answer": "B",
+      "explanation": "The President serves a single 6-year term and is not eligible for re-election. A/C/D are not the presidential term."
+    },
+    {
+      "id": "C1-G006",
+      "section": "General Information",
+      "question": "How many Senators compose the Senate of the Philippines?",
+      "options": {
+        "A": "12",
+        "B": "200",
+        "C": "20",
+        "D": "24"
+      },
+      "answer": "D",
+      "explanation": "The Senate is composed of 24 Senators elected at large. A (12) is the number elected each regular election; B/C are not the Senate size."
+    },
+    {
+      "id": "C1-G007",
+      "section": "General Information",
+      "question": "What is the minimum age requirement for the President under the 1987 Constitution?",
+      "options": {
+        "A": "40 years old",
+        "B": "35 years old",
+        "C": "30 years old",
+        "D": "25 years old"
+      },
+      "answer": "A",
+      "explanation": "The President must be at least 40 years old on the day of the election (Article VII, Section 2), and the same 40-year floor applies to the Vice-President. The distractors are the age floors of other offices: B (35) is the minimum age for a Senator (Article VI, Section 3), and D (25) is the minimum age for a Member of the House of Representatives (Article VI, Section 6). C (30) is not the minimum age for any of these national offices; a 30-year-old may sit in the House but is still too young for the Senate or the presidency."
+    },
+    {
+      "id": "C1-G008",
+      "section": "General Information",
+      "question": "Which body has the power to declare the existence of a state of war?",
+      "options": {
+        "A": "The President alone",
+        "B": "The Supreme Court",
+        "C": "The Congress",
+        "D": "The Commission on Elections"
+      },
+      "answer": "C",
+      "explanation": "The Congress, by a vote of two-thirds of both Houses, has the sole power to declare the existence of a state of war. A/B/D do not hold this power."
+    },
+    {
+      "id": "C1-G009",
+      "section": "General Information",
+      "question": "The Bill of Rights is found in which Article of the 1987 Constitution?",
+      "options": {
+        "A": "Article I",
+        "B": "Article III",
+        "C": "Article II",
+        "D": "Article V"
+      },
+      "answer": "B",
+      "explanation": "The Bill of Rights is Article III of the 1987 Constitution. A is the National Territory; C is the Declaration of Principles; D is Suffrage."
+    },
+    {
+      "id": "C1-G010",
+      "section": "General Information",
+      "question": "Which of the following is one of the norms of conduct under RA 6713?",
+      "options": {
+        "A": "Extravagance",
+        "B": "Favoritism",
+        "C": "Nepotism",
+        "D": "Simple living"
+      },
+      "answer": "D",
+      "explanation": "\"Simple living\" is one of the norms of conduct under RA 6713 (with commitment to public interest, professionalism, justness and sincerity, political neutrality, responsiveness, nationalism and patriotism, commitment to democracy). A/B/C are prohibited/contrary behaviors."
+    },
+    {
+      "id": "C1-G011",
+      "section": "General Information",
+      "question": "Republic Act No. 9003 is the:",
+      "options": {
+        "A": "Ecological Solid Waste Management Act of 2000",
+        "B": "Philippine Clean Air Act",
+        "C": "Philippine Clean Water Act",
+        "D": "Wildlife Resources Conservation and Protection Act"
+      },
+      "answer": "A",
+      "explanation": "RA 9003 = Ecological Solid Waste Management Act of 2000. B is RA 8749; C is RA 9275; D is RA 9147."
+    },
+    {
+      "id": "C1-G012",
+      "section": "General Information",
+      "question": "Which law is the Philippine Clean Air Act of 1999?",
+      "options": {
+        "A": "RA 9003",
+        "B": "RA 9275",
+        "C": "RA 8749",
+        "D": "RA 7586"
+      },
+      "answer": "C",
+      "explanation": "RA 8749 = Philippine Clean Air Act of 1999. A is solid waste; B is clean water; D is NIPAS."
+    },
+    {
+      "id": "C1-G013",
+      "section": "General Information",
+      "question": "Which law is the Philippine Clean Water Act of 2004?",
+      "options": {
+        "A": "RA 8749",
+        "B": "RA 9275",
+        "C": "RA 9003",
+        "D": "RA 6713"
+      },
+      "answer": "B",
+      "explanation": "RA 9275 = Philippine Clean Water Act of 2004. A is clean air; C is solid waste; D is the conduct code."
+    },
+    {
+      "id": "C1-G014",
+      "section": "General Information",
+      "question": "The National Integrated Protected Areas System (NIPAS) Act is:",
+      "options": {
+        "A": "RA 9003",
+        "B": "RA 8749",
+        "C": "RA 9275",
+        "D": "RA 7586"
+      },
+      "answer": "D",
+      "explanation": "RA 7586 = National Integrated Protected Areas System (NIPAS) Act. A/B/C are solid waste / clean air / clean water."
+    },
+    {
+      "id": "C1-G015",
+      "section": "General Information",
+      "question": "The Commission on Human Rights was created under which Constitution?",
+      "options": {
+        "A": "The 1987 Constitution",
+        "B": "The 1973 Constitution",
+        "C": "The 1935 Constitution",
+        "D": "The 1943 Constitution"
+      },
+      "answer": "A",
+      "explanation": "The Commission on Human Rights (CHR) was created by the 1987 Constitution, Article XIII, Sections 17 to 19 (Social Justice and Human Rights). It is a post-1986 human rights body, created after the fall of Martial Law: an independent office that investigates all forms of human rights violations involving civil and political rights, monitors the government's human rights record, and provides legal aid and protection services to victims. The 1973 (B), 1935 (C), and 1943 (D) Constitutions contained no such commission."
+    },
+    {
+      "id": "C1-G016",
+      "section": "General Information",
+      "question": "What is the minimum voting age in the Philippines?",
+      "options": {
+        "A": "16 years old",
+        "B": "21 years old",
+        "C": "18 years old",
+        "D": "25 years old"
+      },
+      "answer": "C",
+      "explanation": "Under Article V, Section 1, suffrage may be exercised by citizens not otherwise disqualified by law who are at least 18 years old, have resided in the Philippines for at least one year, and have resided in the place where they propose to vote for at least six months immediately preceding the election. Age alone is not enough; the residency qualifications must also be met. A (16) is below the constitutional floor, while B (21) and D (25) are minimum ages for certain elective offices, not for voting."
+    },
+    {
+      "id": "C1-G017",
+      "section": "General Information",
+      "question": "What is the term of office of a Member of the House of Representatives?",
+      "options": {
+        "A": "6 years",
+        "B": "3 years",
+        "C": "4 years",
+        "D": "5 years"
+      },
+      "answer": "B",
+      "explanation": "Members of the House of Representatives serve 3-year terms (Article VI, Section 7), and no Representative may serve for more than three consecutive terms. Contrast the longer term in the options: A (6 years) is the term of a Senator (Article VI, Section 4, with a maximum of two consecutive terms) and of the President (Article VII, Section 4, a single 6-year term with no re-election). C (4 years) and D (5 years) are not the term of any national office under the 1987 Constitution."
+    },
+    {
+      "id": "C1-G018",
+      "section": "General Information",
+      "question": "What is the term of office of a Senator?",
+      "options": {
+        "A": "3 years",
+        "B": "4 years",
+        "C": "5 years",
+        "D": "6 years"
+      },
+      "answer": "D",
+      "explanation": "Senators serve 6-year terms. A is the House term; B/C are not the Senate term."
+    },
+    {
+      "id": "C1-G019",
+      "section": "General Information",
+      "question": "Who is the Commander-in-Chief of all armed forces of the Philippines?",
+      "options": {
+        "A": "The President",
+        "B": "The Chief of Staff of the AFP",
+        "C": "The Senate President",
+        "D": "The Chief Justice"
+      },
+      "answer": "A",
+      "explanation": "Article VII, Section 18 provides that the President is the Commander-in-Chief of all the armed forces of the Philippines, the constitutional expression of civilian supremacy over the military. The distractors hold different roles: the Chief of Staff of the AFP (B) is the highest-ranking military officer and runs the armed forces day to day, but under the President's authority; the Senate President (C) leads the Senate, a legislative office; and the Chief Justice (D) heads the judiciary. None of them holds the Commander-in-Chief title."
+    },
+    {
+      "id": "C1-G020",
+      "section": "General Information",
+      "question": "The principle \"Public office is a public trust\" appears in which Article of the 1987 Constitution?",
+      "options": {
+        "A": "Article II",
+        "B": "Article III",
+        "C": "Article XI",
+        "D": "Article XIV"
+      },
+      "answer": "C",
+      "explanation": "\"Public office is a public trust\" is in Article XI (Accountability of Public Officers). A/B/D are different articles."
+    },
+    {
+      "id": "C1-G021",
+      "section": "General Information",
+      "question": "Which government agency is the primary agency responsible for implementing the Philippine Clean Air Act?",
+      "options": {
+        "A": "Department of Health (DOH)",
+        "B": "Department of Environment and Natural Resources (DENR)",
+        "C": "Department of Education (DepEd)",
+        "D": "Department of Trade and Industry (DTI)"
+      },
+      "answer": "B",
+      "explanation": "The DENR is the primary agency responsible for implementing the Philippine Clean Air Act (RA 8749), acting mainly through its Environmental Management Bureau (DENR-EMB), which sets air quality standards and administers permits and clearances. The other agencies have different mandates: the DOH (A) leads on public health and health services, the DepEd (C) runs basic education, and the DTI (D) handles trade, industry, and consumer protection. None of them administers the Clean Air Act."
+    },
+    {
+      "id": "C1-G022",
+      "section": "General Information",
+      "question": "Which of the following is protected under the Bill of Rights?",
+      "options": {
+        "A": "Warrantless arrest",
+        "B": "Forced confession",
+        "C": "Bill of attainder",
+        "D": "Freedom of speech and of the press"
+      },
+      "answer": "D",
+      "explanation": "Freedom of speech and of the press is protected under the Bill of Rights (Article III, Section 4). A/B/C are prohibited: unreasonable searches, forced confessions (coercion), and bills of attainder are all barred."
+    },
+    {
+      "id": "C1-G023",
+      "section": "General Information",
+      "question": "What does the 1987 Constitution renounce as an instrument of national policy?",
+      "options": {
+        "A": "War",
+        "B": "Diplomacy",
+        "C": "Trade",
+        "D": "Dialogue"
+      },
+      "answer": "A",
+      "explanation": "The Constitution renounces war as an instrument of national policy. B/C/D are instruments of peaceful policy, not what is renounced."
+    },
+    {
+      "id": "C1-G024",
+      "section": "General Information",
+      "question": "Which is the supreme law of the land?",
+      "options": {
+        "A": "A statute",
+        "B": "An executive order",
+        "C": "The Constitution",
+        "D": "An ordinance"
+      },
+      "answer": "C",
+      "explanation": "The Constitution is the supreme law of the land; statutes, executive orders, and ordinances must conform to it. A/B/D are subordinate to the Constitution."
+    },
+    {
+      "id": "C1-G025",
+      "section": "General Information",
+      "question": "When is Philippine Independence Day celebrated?",
+      "options": {
+        "A": "July 4",
+        "B": "June 12",
+        "C": "August 21",
+        "D": "March 16"
+      },
+      "answer": "B",
+      "explanation": "Philippine Independence Day is June 12 (1898 Declaration of Independence). A is U.S. Independence Day; C/D are not Independence Day."
+    },
+    {
+      "id": "C1-G026",
+      "section": "General Information",
+      "question": "What is the official name of the Philippines?",
+      "options": {
+        "A": "Philippine Republic",
+        "B": "Commonwealth of the Philippines",
+        "C": "Federal Republic of the Philippines",
+        "D": "Republic of the Philippines"
+      },
+      "answer": "D",
+      "explanation": "The official name of the country is the Republic of the Philippines. B is the historical distractor: \"Commonwealth of the Philippines\" was the official name during the Commonwealth period, from 1935 until independence in 1946, when the Republic began. A (\"Philippine Republic\") was the name of the First Republic of 1899, not the present official name. C is wrong twice over: the Philippines is a unitary state, not a federal one, so its name cannot be \"Federal Republic of the Philippines.\""
+    },
+    {
+      "id": "C1-G027",
+      "section": "General Information",
+      "question": "Which is the legislative branch of the Philippine government?",
+      "options": {
+        "A": "Congress",
+        "B": "Supreme Court",
+        "C": "Office of the President",
+        "D": "Commission on Elections"
+      },
+      "answer": "A",
+      "explanation": "Congress (Senate + House of Representatives) is the legislative branch. B is judicial; C is executive; D is a constitutional commission."
+    },
+    {
+      "id": "C1-G028",
+      "section": "General Information",
+      "question": "Which is the highest court in the Philippines?",
+      "options": {
+        "A": "Court of Appeals",
+        "B": "Sandiganbayan",
+        "C": "Supreme Court",
+        "D": "Regional Trial Court"
+      },
+      "answer": "C",
+      "explanation": "The Supreme Court is the highest court in the land and heads the judiciary (Article VIII). The hierarchy below it: the Court of Appeals (A) is the intermediate appellate court, and many of its decisions can still be brought up to the Supreme Court. The Sandiganbayan (B) is a special court of the same level as the Court of Appeals, created to try graft and corruption cases involving public officials; it is not the court of last resort. Regional Trial Courts (D) are trial courts of general jurisdiction, sitting below the appellate courts."
+    },
+    {
+      "id": "C1-G029",
+      "section": "General Information",
+      "question": "How many branches of government are there under the 1987 Constitution?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Three branches: legislative, executive, and judicial. A/C/D are not the number of branches."
+    },
+    {
+      "id": "C1-G030",
+      "section": "General Information",
+      "question": "Segregation of solid waste at source is required under which law?",
+      "options": {
+        "A": "RA 8749",
+        "B": "RA 9275",
+        "C": "RA 6713",
+        "D": "RA 9003"
+      },
+      "answer": "D",
+      "explanation": "Segregation at source is required under RA 9003 (Ecological Solid Waste Management Act). A/B/C are clean air / clean water / conduct code. --- End of Mock Exam 1. Civil Service Exam Reviewer, Professional Level (Sale Edition). Original practice items modeled on official CSC coverage. Not affiliated with the CSC. CSC does not produce or accredit any review material, and no item here is a real, leaked, or recalled exam question."
+    }
+  ]
+}

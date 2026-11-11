@@ -5,6 +5,12 @@
  * All 8 exams are open immediately from purchase (owner decision Oct 27,
  * 2026: the weekly release schedule was removed).
  *
+ * TRACKS (Nov 2026): a Civil Service track runs beside SASE in this same
+ * lib: 8 exams x 150 questions (Verbal 52, Numerical 38, Analytical 30,
+ * General Information 30), 3h10m timer, separate access-code registry
+ * (api/_cse-hashes.json) and separate bank (see loadCseBank below). The
+ * track rides in the signed token; see TRACKS / trackOf below.
+ *
  * Server-authoritative state lives in Neon Postgres (DATABASE_URL):
  *   bindings        , { order_id PK, devices JSONB } (1 password = up to 3 devices)
  *   exams           , { order_id, exam_n, data JSONB } (data = full examRec)
@@ -20,10 +26,48 @@
  *   EXAM_STATE_REPO , "owner/repo" of the private state repo (bank only)
  */
 import crypto from "crypto";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 export const EXAM_MS = 2 * 60 * 60 * 1000; // 2-hour practice timer (server-authoritative)
 export const EXAM_COUNT = 8;
 export const WEEK_MS = 7 * 24 * 3600 * 1000;
+
+// ---- tracks (SASE + Civil Service, added Nov 2026) ----
+// One portal, two fully separated tracks. The track is decided at auth time
+// by WHICH registry the credential matched (api/exam-auth.js), is carried in
+// the signed token, and every exam endpoint enforces it: bank selection,
+// timer length, and result benchmark all follow the token's track. A SASE
+// password can never reach CSE exams and a CSE access code can never reach
+// SASE exams, because the two registries are separate files and the token
+// track picks the bank. Order ids are track-prefixed (SASE- / CSE-), so the
+// Neon state rows (keyed by order_id) can never collide either.
+// Legacy tokens minted before this change carry no track: they are SASE.
+export const TRACK_SASE = "sase";
+export const TRACK_CSE = "cse";
+export const CSE_EXAM_MS = (3 * 60 + 10) * 60 * 1000; // 3h10m, the real CSE-PPT time limit
+export function trackOf(payload) {
+  return payload && payload.track === TRACK_CSE ? TRACK_CSE : TRACK_SASE;
+}
+export function examMsForTrack(track) {
+  return track === TRACK_CSE ? CSE_EXAM_MS : EXAM_MS;
+}
+// CSE result benchmark: the real exam passes at a GENERAL RATING of 80.00,
+// which the CSC computes its own way. A practice percent is shown against
+// that benchmark only; it is never the official rating and never a promise.
+export function cseBenchmark(pct) {
+  return {
+    track: TRACK_CSE,
+    passing_general_rating: 80.0,
+    practice_pct: pct,
+    note:
+      "Benchmark only: passing the real Civil Service exam takes a general rating of 80.00, " +
+      "which the CSC computes from your raw scores its own way. Your practice percent here is " +
+      "shown against that 80.00 benchmark to guide your review; it is not your official rating " +
+      "and does not guarantee a pass.",
+  };
+}
 
 const GH_TOKEN = process.env.GH_EXAM_TOKEN || "";
 const STATE_REPO = process.env.EXAM_STATE_REPO || "Yametech12/sase-exam-state";
@@ -358,6 +402,133 @@ export function getExamItems(bank, n) {
   return Array.isArray(arr) ? arr : [];
 }
 
+// ---- CSE bank backend (Civil Service track) ----
+// SOURCE OF TRUTH (chosen design, Nov 2026): local files in this repo,
+//   exam/cse-bank-exam-<n>.json   (n = 1..8)
+// each either a flat item array or the { exam, questions: [...] } wrapper
+// shape the anti-loss bank copies use. Files are read via fs from the exam/
+// folder bundled with the deployment (sibling of api/), so CSE content is
+// versioned WITH the code and a content fix ships as a normal deploy.
+// Item shape matches the SASE bank item shape; section labels are exactly
+// "Verbal" (52), "Numerical" (38), "Analytical" (30),
+// "General Information" (30) per exam.
+// PINNING: loadCseBank's sha is "local:<sha256 of the 8 files' bytes>",
+// stored as the attempt's bank_blob. loadCseBankAtBlob returns the CURRENT
+// local bank: within one deployment the files cannot change, so a pinned
+// attempt always grades against the bank its own deployment served. If a
+// redeploy swaps CSE content mid-attempt (rare, operator-controlled),
+// grading falls back to the current bank, the same documented fallback as
+// legacy SASE attempts with a missing blob.
+// PRODUCTION PATH if the CSE bank ever outgrows repo deploys: one file
+// cse-bank.json in the same private state repo (EXAM_STATE_REPO), shape
+// { "cseExams": { "1": [items], ..., "8": [items] } }, read through the same
+// gh()/ghBlob() mechanism as bank.json. loadCseBank already falls back to
+// that file when NO local CSE items exist, so moving is a content
+// operation, not a code change. A "gh:<blob sha>" pin grades against that
+// exact blob.
+function readLocalCseBank() {
+  const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "exam");
+  const cseExams = {};
+  const parts = [];
+  for (let n = 1; n <= EXAM_COUNT; n++) {
+    let raw = "";
+    try {
+      raw = fs.readFileSync(path.join(dir, `cse-bank-exam-${n}.json`), "utf8");
+      const parsed = JSON.parse(raw);
+      const arr = Array.isArray(parsed) ? parsed : parsed.questions;
+      if (Array.isArray(arr) && arr.length) cseExams[String(n)] = arr;
+    } catch {
+      /* missing or unreadable file: that exam stays bank_not_ready */
+    }
+    parts.push(raw);
+  }
+  return { cseExams, parts };
+}
+
+let cseBankCache = null;
+export async function loadCseBank() {
+  if (globalThis.__CSE_TEST_BANK) {
+    return { sha: "test-cse-bank", bank: globalThis.__CSE_TEST_BANK };
+  }
+  const fresh =
+    cseBankCache && Date.now() - (cseBankCache.cachedAt || 0) < BANK_CACHE_TTL_MS;
+  if (fresh) return cseBankCache;
+  const { cseExams, parts } = readLocalCseBank();
+  if (Object.keys(cseExams).length > 0) {
+    cseBankCache = {
+      sha: "local:" + sha256(parts.join("\n")),
+      bank: { cseExams },
+      cachedAt: Date.now(),
+    };
+    return cseBankCache;
+  }
+  // No local CSE content in this deployment: try the state-repo file.
+  try {
+    const meta = await gh("cse-bank.json");
+    const bank = await ghBlob(meta.sha);
+    if (bank && bank.cseExams) {
+      cseBankCache = { sha: "gh:" + meta.sha, bank, cachedAt: Date.now() };
+      return cseBankCache;
+    }
+  } catch {
+    /* no GH CSE bank either: CSE exams report bank_not_ready */
+  }
+  cseBankCache = { sha: "local:empty", bank: { cseExams: {} }, cachedAt: Date.now() };
+  return cseBankCache;
+}
+export async function loadCseBankAtBlob(sha) {
+  if (globalThis.__CSE_TEST_BANK) return globalThis.__CSE_TEST_BANK;
+  if (sha && sha.startsWith("gh:")) {
+    try {
+      return await ghBlob(sha.slice(3));
+    } catch {
+      /* fall through to the current bank */
+    }
+  }
+  const { bank } = await loadCseBank();
+  return bank;
+}
+export function getCseExamItems(bank, n) {
+  const arr = bank && bank.cseExams && bank.cseExams[String(n)];
+  return Array.isArray(arr) ? arr : [];
+}
+
+// ---- CSE video lessons (paid-only, Civil Service track) ----
+// SOURCE OF TRUTH: exam/cse-lessons.json in this repo, a flat array in
+// study-path order: [{ section, topic, title, channel, video_id, url, why }].
+// section is one of the 4 CSE section labels. The file ships EMPTY ([])
+// until the curated, live-verified list is dropped in; updating lessons
+// later = replace this one file and redeploy (no code change). The list is
+// served ONLY by api/exam-lessons.js behind a valid CSE-track token; it
+// must never be copied into any public HTML or landing page.
+let cseLessonsCache = null;
+export function loadCseLessons() {
+  if (globalThis.__CSE_TEST_LESSONS) return globalThis.__CSE_TEST_LESSONS;
+  if (cseLessonsCache) return cseLessonsCache;
+  let lessons = [];
+  try {
+    const file = path.join(
+      path.dirname(fileURLToPath(import.meta.url)), "..", "exam", "cse-lessons.json"
+    );
+    const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
+    if (Array.isArray(parsed)) {
+      lessons = parsed.filter(
+        (l) =>
+          l &&
+          typeof l.section === "string" &&
+          typeof l.title === "string" &&
+          typeof l.video_id === "string" &&
+          /^[A-Za-z0-9_-]{6,20}$/.test(l.video_id) &&
+          typeof l.url === "string"
+      );
+    }
+  } catch {
+    /* missing or unreadable lessons file: serve an empty list */
+  }
+  cseLessonsCache = lessons;
+  return lessons;
+}
+
 // ---- answer validation (G5): only A/B/C/D/E (or null) per known question id.
 // Unknown qids are ignored (never inflate the denominator); malformed letters
 // are dropped, never thrown.
@@ -488,6 +659,39 @@ const IMPROVEMENT_GUIDE = {
       "Review the scientific-method items, they're free points once the steps are clear.",
     ],
   },
+  // Civil Service track sections (exact CSE bank labels).
+  Verbal: {
+    chapters: "The Verbal lessons and Practice Banks in your Civil Service reviewer (English and Filipino grammar, vocabulary, reading)",
+    tips: [
+      "Read every explanation, even for items you got right. The same grammar rules and word families repeat across exams.",
+      "For paragraph organization, find the topic sentence first, then chain each sentence to the one it must follow.",
+      "Answer reading items from the passage only. Outside knowledge is the most common trap in this section.",
+    ],
+  },
+  Numerical: {
+    chapters: "The Numerical lessons and Practice Banks in your Civil Service reviewer (number series, percentages, ratio, age and work problems)",
+    tips: [
+      "Redo every missed problem from scratch on paper, showing each step, until the method is automatic.",
+      "For number series, test differences first, then ratios, then alternating patterns.",
+      "Keep the core formulas (percent change, simple interest, average, speed) memorized; they recur in every exam.",
+    ],
+  },
+  Analytical: {
+    chapters: "The Analytical lessons and Practice Banks in your Civil Service reviewer (logic, assumptions, conclusions, data interpretation)",
+    tips: [
+      "For assumption items, negate the choice: if negating it breaks the argument, it is the assumption.",
+      "Separate what a statement says from what it only suggests; conclusions must follow with certainty.",
+      "Sketch ordering and grouping items as a quick diagram instead of holding them in your head.",
+    ],
+  },
+  "General Information": {
+    chapters: "The General Information lessons and Last-Mile Drill in your Civil Service reviewer (1987 Constitution, RA 6713, environment laws)",
+    tips: [
+      "Anchor facts to their source: article numbers for the Constitution, law numbers for statutes. The exam loves near-miss numbers.",
+      "Drill the high-yield facts (terms of officials, SALN, bill of rights, RA 9003 / 8749 / 9275) until they are instant recall.",
+      "Read the explanation for every item, right or wrong. Each explanation carries one more fact the next exam may ask.",
+    ],
+  },
 };
 // Bank section labels may vary ("English" vs "Language Usage"); normalize for the
 // improvement-guide lookup. Unknown sections keep their label (no guide).
@@ -499,6 +703,13 @@ const SECTION_ALIASES = {
   mathematics: "Mathematics",
   science: "Science",
   aptitude: "Aptitude",
+  // Civil Service labels stay their own canonical names (never folded into
+  // the SASE labels, so per-track section breakdowns stay truthful).
+  verbal: "Verbal",
+  numerical: "Numerical",
+  analytical: "Analytical",
+  "general information": "General Information",
+  "general info": "General Information",
 };
 export function canonicalSection(s) {
   const k = String(s || "").trim().toLowerCase();
@@ -509,7 +720,9 @@ export function canonicalSection(s) {
 // `rec` = attempt record (q_order, opt_map), `finalAnswers` = sanitized
 // { qid: displayLetter }. Review shows options in the DISPLAY order the buyer
 // saw them; your_answer/correct_answer are display letters.
-export function buildResult(items, rec, finalAnswers) {
+// `opts.track` ("cse") attaches the 80.00 general-rating benchmark block;
+// SASE results are byte-identical to before when it is absent.
+export function buildResult(items, rec, finalAnswers, opts = {}) {
   const byId = new Map(items.map((it) => [it.id, it]));
   const sections = {};
   const review = [];
@@ -562,7 +775,10 @@ export function buildResult(items, rec, finalAnswers) {
     sections[k].pct = pct1(sections[k].correct, sections[k].total);
   }
   // Fixed tie-break order: identical section scores always pick the same section.
-  const SECTION_ORDER = ["Language Usage", "Mathematics", "Aptitude", "Science"];
+  const SECTION_ORDER = [
+    "Language Usage", "Mathematics", "Aptitude", "Science",
+    "Verbal", "Numerical", "Analytical", "General Information",
+  ];
   const orderedNames = [
     ...SECTION_ORDER.filter((n) => sections[n]),
     ...Object.keys(sections).filter((n) => !SECTION_ORDER.includes(n)),
@@ -580,7 +796,7 @@ export function buildResult(items, rec, finalAnswers) {
   // no weak area, and a >=70% paper gets the all-clear message client-side.
   const hasWeak = weakSection != null && weakPct < 70;
   const guide = hasWeak && IMPROVEMENT_GUIDE[weakSection] ? IMPROVEMENT_GUIDE[weakSection] : null;
-  return {
+  const out = {
     score,
     total,
     pct,
@@ -590,6 +806,8 @@ export function buildResult(items, rec, finalAnswers) {
     improvement: guide ? { section: weakSection, chapters: guide.chapters, tips: guide.tips } : null,
     review,
   };
+  if (opts && opts.track === TRACK_CSE) out.benchmark = cseBenchmark(pct);
+  return out;
 }
 
 // ---- user-facing copy (exact strings required by the copy audit) ----
@@ -613,6 +831,7 @@ export function resolveSubmission(state, idemKey) {
     score: rec.score, total: rec.total, pct: rec.pct,
     sections: rec.sections, weak_area: rec.weak_area,
     improvement: rec.improvement, review: rec.review || [],
+    benchmark: rec.benchmark || null,
     submitted_at: rec.submitted_at ?? entry.submitted_at,
     auto_submitted: !!rec.auto_submitted, forfeited: !!rec.forfeited,
     server_now: entry.server_now ?? null,
@@ -633,6 +852,11 @@ export function bindingHasDevice(b, dh) {
 
 export const DEVICE_MISMATCH_MSG =
   "This password is already used on 3 devices, the maximum allowed. If you changed phones, message SASE Practice Hub PH and we'll reset it for you.";
+export const DEVICE_MISMATCH_MSG_CSE =
+  "This access code is already used on 3 devices, the maximum allowed. If you changed phones, message us on Facebook and we'll reset it for you.";
+export function deviceMismatchMsg(track) {
+  return track === TRACK_CSE ? DEVICE_MISMATCH_MSG_CSE : DEVICE_MISMATCH_MSG;
+}
 export const EXAM_LOCKED_MSG =
   "This exam could not be opened. Please message SASE Practice Hub PH so we can help.";
 // Done-exam re-entry message with the buyer's score. All 8 exams are open
