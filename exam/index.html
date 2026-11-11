@@ -39,6 +39,12 @@
     </div>
 
     <form id="gate-form" class="gate-card" autocomplete="off">
+      <!-- Two separate products share this gate: the toggle picks which
+           portal (and which stored session) the form below belongs to. -->
+      <div class="home-tabs gate-track-tabs" role="group" aria-label="Choose your portal">
+        <button id="gate-track-sase" class="home-tab active" type="button" aria-pressed="true">SASE Portal</button>
+        <button id="gate-track-cse" class="home-tab" type="button" aria-pressed="false">Civil Service Portal</button>
+      </div>
       <label for="gate-password" class="field-label" id="field-label">Enter your reviewer password</label>
       <p class="field-hint" id="field-hint">Use the same unique password that came with your ₱167 PDF.</p>
       <div class="gate-row">
@@ -49,7 +55,7 @@
       <p id="gate-error" class="form-error" role="alert" hidden></p>
       <p class="gate-note" id="gate-note">One password works on <strong>up to 3 devices</strong>. Lost access? Message SASE Practice Hub PH.</p>
     </form>
-    <p class="gate-note" id="gate-cse-hint">Civil Service buyer? Enter your <strong>CSE7 access code</strong> above (it is separate from your PDF password).</p>
+    <p class="gate-note" id="gate-cse-hint">Civil Service buyer? Tap <strong>Civil Service Portal</strong> above, then enter your CSE7 access code (it is separate from your PDF password).</p>
 
     <!-- Section tabs (signed-in only, exam-ui.js wires these): Mock Exams
          and Video Lessons are separate sections of the home screen. -->
@@ -247,7 +253,7 @@
   <p id="foot-text">SASE Practice Hub PH · Practice exams for study purposes only, not the official MSU-SASE.</p>
 </footer>
 
-<script src="/exam/exam-ui.js"></script>
+<script src="/exam/exam-ui.js?v=20261111c"></script>
 <script>
 document.getElementById('back-home').addEventListener('click', function (e) {
   if (document.querySelector('#screen-exam.active, #screen-submitting.active')) {

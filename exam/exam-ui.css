@@ -727,6 +727,8 @@ body {
 
 /* ---- Home section tabs (Mock Exams / Video Lessons) ---- */
 .home-tabs { display: flex; gap: 8px; margin: 22px 0 4px; }
+.gate-track-tabs { margin: 0 0 16px; }
+.gate-track-tabs .home-tab { flex: 1; }
 .home-tabs[hidden] { display: none; }
 .home-tab {
   flex: 1; padding: 12px 10px; border-radius: 12px; cursor: pointer;

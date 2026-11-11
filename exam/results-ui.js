@@ -582,8 +582,17 @@
 
   function refetchReview(fallbackData, examN) {
     // Minimal fetch, results page has no api() helper; token lives in sessionStorage.
+    // Sessions are stored per track (portal_session_sase / portal_session_cse);
+    // the result's stored track says which slot holds this result's token.
+    // The legacy single key is the fallback for pre-separation sessions.
     var token = null;
-    try { token = sessionStorage.getItem("sase_exam_session"); } catch (e) {}
+    try {
+      var rt = sessionStorage.getItem("portal_result_track");
+      var keys = rt === "cse"
+        ? ["portal_session_cse", "portal_session_sase", "sase_exam_session"]
+        : ["portal_session_sase", "portal_session_cse", "sase_exam_session"];
+      for (var i = 0; i < keys.length && !token; i++) token = sessionStorage.getItem(keys[i]);
+    } catch (e) {}
     if (!token || !examN) { render(fallbackData, examN); return; } // nothing to fetch with
     fetch("/api/exam-result", {
       method: "POST",

@@ -75,7 +75,34 @@
   function profile() { return TRACK_PROFILES[state.track] || TRACK_PROFILES.sase; }
   var SYNC_DEBOUNCE_MS = 1500;
   var SYNC_HEARTBEAT_MS = 30000;
-  var SESSION_KEY = "sase_exam_session";     // sessionStorage: auth token
+  /* Track separation (owner order Nov 11, 2026, "E lahi na sila"): each
+     product keeps its OWN session slot, so a stored SASE session can never
+     swallow a Civil Service entry or the other way around. The pre-split
+     single key is migrated into its token's track slot on first load. */
+  var LEGACY_SESSION_KEY = "sase_exam_session"; // pre-separation single key
+  var SESSION_KEYS = { sase: "portal_session_sase", cse: "portal_session_cse" };
+  var LAST_TRACK_KEY = "portal_last_track";  // localStorage: last track used here
+  var RESULT_TRACK_KEY = "portal_result_track"; // sessionStorage: track of the stored result
+  function sessionKeyFor(track) { return SESSION_KEYS[track === "cse" ? "cse" : "sase"]; }
+  function getStoredSession(track) {
+    try { return sessionStorage.getItem(sessionKeyFor(track)); } catch (e) { return null; }
+  }
+  function storeSession(track, tok) {
+    try { sessionStorage.setItem(sessionKeyFor(track), tok); } catch (e) {}
+    try { localStorage.setItem(LAST_TRACK_KEY, track === "cse" ? "cse" : "sase"); } catch (e) {}
+  }
+  function clearSession(track) {
+    try { sessionStorage.removeItem(sessionKeyFor(track)); } catch (e) {}
+  }
+  function migrateLegacySession() {
+    try {
+      var t = sessionStorage.getItem(LEGACY_SESSION_KEY);
+      if (t) {
+        sessionStorage.setItem(sessionKeyFor(tokenTrack(t)), t);
+        sessionStorage.removeItem(LEGACY_SESSION_KEY);
+      }
+    } catch (e) {}
+  }
   var RESULT_KEY = "sase_exam_result";       // sessionStorage: grade result
   var EXAM_NUM_KEY = "sase_exam_n";          // sessionStorage: exam number for results header
   var DEVICE_KEY = "sase_exam_device";       // localStorage: persistent device id
@@ -202,7 +229,7 @@
       state.examLocked = true; // prevent further answer taps writing to a dead session
       lockExamUI();
     }
-    try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+    clearSession(state.track); // only this track's slot; the other product's session survives
     state.token = null;
     state.lessons = null; // per-track cache must not survive into the next login
     state.lessonsFilter = "all";
@@ -215,6 +242,7 @@
     state.homeTab = "exams";
     var htExp = $("home-tabs");
     if (htExp) htExp.hidden = true;
+    applyTrackChrome(); // gate falls back branded for THIS track, switch link hides with no token
     showScreen("screen-gate");
     gateForm.style.display = "";
     gateError.textContent = "Your session expired, please sign in again to resume your exam. Your saved answers are safe.";
@@ -271,7 +299,7 @@
         state.lessons = null;
         state.lessonsFilter = "all";
         state.lessonsLoading = false;
-        try { sessionStorage.setItem(SESSION_KEY, res.token); } catch (e) {}
+        storeSession(state.track, res.token); // this track's own slot only
         gateInput.value = ""; // never leave the password in the DOM after login
         gateForm.style.display = "none";
         if (logoutBtn) logoutBtn.hidden = false;
@@ -311,38 +339,71 @@
     } catch (e) { return null; }
   }
 
-  /* If a token is already in session storage, skip the gate, unless the
-     entry link asked for the other track. With no session, a track entry
-     brands the gate itself for that product before login. */
+  /* Restore the session for the track the visitor actually entered.
+     Sessions live in per-track slots, so entering one product can never
+     surface the other product's exams. With an explicit ?track= entry,
+     only that track's slot is restored (or its gate is branded). With a
+     plain entry, the last-used track's session wins, then the other
+     track's; with no session at all, the gate opens on the last-used
+     track with the SASE / Civil Service toggle on top. */
+  function restoreWithToken(t) {
+    state.token = t;
+    /* Brand the portal for the stored session's track BEFORE the
+       list call, so an expired CSE session falls back to a CSE gate,
+       not the static SASE defaults (audit finding, Nov 11, 2026). */
+    state.track = tokenTrack(t) || "sase";
+    try { localStorage.setItem(LAST_TRACK_KEY, state.track); } catch (e) {}
+    state.durationMs = profile().durationMs;
+    applyTrackChrome();
+    gateForm.style.display = "none";
+    if (logoutBtn) logoutBtn.hidden = false;
+    loadExamList();
+  }
+  function brandGate(track) {
+    state.track = track === "cse" ? "cse" : "sase";
+    state.durationMs = profile().durationMs;
+    applyTrackChrome();
+    gateInput.placeholder = state.track === "cse" ? "e.g. CSE7-XXXX-XXXX" : "e.g. Xk9mQ2vT7pLz";
+  }
   (function restoreSession() {
+    migrateLegacySession();
     var want = requestedTrack();
-    try {
-      var t = sessionStorage.getItem(SESSION_KEY);
-      if (t && want && tokenTrack(t) !== want) {
-        sessionStorage.removeItem(SESSION_KEY);
-        t = null;
-      }
-      if (t) {
-        state.token = t;
-        /* Brand the portal for the stored session's track BEFORE the
-           list call, so an expired CSE session falls back to a CSE gate,
-           not the static SASE defaults (audit finding, Nov 11, 2026). */
-        state.track = tokenTrack(t) || "sase";
-        state.durationMs = profile().durationMs;
-        applyTrackChrome();
-        gateForm.style.display = "none";
-        if (logoutBtn) logoutBtn.hidden = false;
-        loadExamList();
-        return;
-      }
-    } catch (e) {}
     if (want) {
-      state.track = want;
-      state.durationMs = profile().durationMs;
-      applyTrackChrome();
-      if (want === "cse") gateInput.placeholder = "e.g. CSE7-XXXX-XXXX";
+      var t = getStoredSession(want);
+      if (t) { restoreWithToken(t); return; }
+      brandGate(want);
+      return;
     }
+    var last = null;
+    try { last = localStorage.getItem(LAST_TRACK_KEY); } catch (e) {}
+    var order = last === "cse" ? ["cse", "sase"] : ["sase", "cse"];
+    for (var i = 0; i < order.length; i++) {
+      var tok = getStoredSession(order[i]);
+      if (tok) { restoreWithToken(tok); return; }
+    }
+    brandGate(last === "cse" ? "cse" : "sase");
   })();
+
+  /* Gate track toggle: the two products share one gate URL, so the buyer
+     picks their product first. Picking a track with a stored session
+     restores straight into that product; otherwise the gate rebrands. */
+  function syncGateToggle() {
+    var bs = $("gate-track-sase"), bc = $("gate-track-cse");
+    if (bs) { bs.classList.toggle("active", state.track !== "cse"); bs.setAttribute("aria-pressed", state.track !== "cse" ? "true" : "false"); }
+    if (bc) { bc.classList.toggle("active", state.track === "cse"); bc.setAttribute("aria-pressed", state.track === "cse" ? "true" : "false"); }
+  }
+  function chooseGateTrack(track) {
+    var t = getStoredSession(track);
+    if (t) { restoreWithToken(t); return; }
+    brandGate(track);
+    gateError.hidden = true;
+    gateInput.value = "";
+    gateInput.focus();
+  }
+  var gateTrackSaseBtn = $("gate-track-sase");
+  if (gateTrackSaseBtn) gateTrackSaseBtn.addEventListener("click", function () { chooseGateTrack("sase"); });
+  var gateTrackCseBtn = $("gate-track-cse");
+  if (gateTrackCseBtn) gateTrackCseBtn.addEventListener("click", function () { chooseGateTrack("cse"); });
 
   /* ---------- logout control + help link (audit fix) ----------
      exam/index.html is owned by the wiring agent, so both controls are
@@ -357,7 +418,18 @@
   logoutBtn.setAttribute("aria-label", "Log out of the exam portal");
   var brandbarInner = document.querySelector(".brandbar-inner");
   if (brandbarInner) brandbarInner.appendChild(logoutBtn);
+  /* Switch-portal link: always one tap from the other product's portal
+     (its own session restores if one exists, otherwise its gate). */
+  var switchLink = document.createElement("a");
+  switchLink.id = "portal-switch";
+  switchLink.className = "back-link";
+  switchLink.textContent = "Civil Service portal";
+  switchLink.href = "/exam?track=cse";
+  switchLink.hidden = true;
+  switchLink.setAttribute("aria-label", "Switch to the other exam portal");
+  if (brandbarInner) brandbarInner.insertBefore(switchLink, logoutBtn);
   logoutBtn.addEventListener("click", function () {
+    var leavingTrack = state.track; // clear THIS track's slot before the chrome reset below
     stopTimer();
     clearSync();
     clearSubmitRetry();
@@ -371,7 +443,7 @@
     var homeTabsOnOut = $("home-tabs");
     if (homeTabsOnOut) homeTabsOnOut.hidden = true;
     applyTrackChrome();
-    try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+    clearSession(leavingTrack); // the other product's stored session is untouched
     $("exam-list-wrap").hidden = true;
     var lessonsWrapOnOut = $("lessons-wrap");
     if (lessonsWrapOnOut) lessonsWrapOnOut.hidden = true; // paid lessons leave with the session
@@ -436,6 +508,13 @@
     set("foot-text", escapeHtml(pr.foot));
     var cseHint = $("gate-cse-hint");
     if (cseHint) cseHint.hidden = state.track === "cse";
+    syncGateToggle();
+    if (switchLink) {
+      var otherTrack = state.track === "cse" ? "sase" : "cse";
+      switchLink.href = "/exam?track=" + otherTrack;
+      switchLink.textContent = otherTrack === "cse" ? "Civil Service portal" : "SASE portal";
+      switchLink.hidden = !state.token;
+    }
   }
 
   function loadExamList() {
@@ -466,11 +545,12 @@
       .catch(function (err) {
         if (loadingEl) loadingEl.hidden = true;
         if (err.status === 401) { /* token expired: back to the gate */
-          try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+          clearSession(state.track);
           state.token = null;
           if (logoutBtn) logoutBtn.hidden = true;
           $("exam-list-wrap").hidden = true; // hide stale cards under the gate
           gateForm.style.display = "";
+          applyTrackChrome(); // gate stays branded for this track, switch link hides
           gateError.textContent = err.message || "Your session expired. Please sign in again.";
           gateError.hidden = false;
         } else {
@@ -579,6 +659,7 @@
       try {
         sessionStorage.setItem(RESULT_KEY, JSON.stringify(data));
         sessionStorage.setItem(EXAM_NUM_KEY, String(examN));
+        sessionStorage.setItem(RESULT_TRACK_KEY, state.track);
       } catch (e) {}
       window.location.href = "/exam/results.html";
     }).catch(function (err) {
@@ -1447,6 +1528,7 @@
     try {
       sessionStorage.setItem(RESULT_KEY, JSON.stringify(result));
       sessionStorage.setItem(EXAM_NUM_KEY, String(examN));
+      sessionStorage.setItem(RESULT_TRACK_KEY, state.track);
     } catch (e) {}
     window.location.href = "/exam/results.html";
   }
