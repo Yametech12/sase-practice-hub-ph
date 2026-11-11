@@ -38,7 +38,7 @@
         "D": "She is one of the employees whom works overtime every Friday."
       },
       "answer": "A",
-      "explanation": "Correct: \"one of the employees who work\" — the relative pronoun \"who\" refers to \"employees\" (plural), so the verb is plural \"work.\" B uses singular \"works\"; C uses singular \"employee\"; D uses \"whom\" (object pronoun) as subject."
+      "explanation": "Correct: \"one of the employees who work\": the relative pronoun \"who\" refers to \"employees\" (plural), so the verb is plural \"work.\" B uses singular \"works\"; C uses singular \"employee\"; D uses \"whom\" (object pronoun) as subject."
     },
     {
       "id": "C1-V004",
@@ -51,7 +51,7 @@
         "D": "Between you and me, the report needs revision."
       },
       "answer": "D",
-      "explanation": "Correct: \"Between you and me\" — \"between\" is a preposition requiring object pronouns. A uses subject pronoun \"I\"; B uses subject pronoun \"we\"; C uses reflexive \"myself\" incorrectly."
+      "explanation": "Correct: \"Between you and me\": \"between\" is a preposition requiring object pronouns. A uses subject pronoun \"I\"; B uses subject pronoun \"we\"; C uses reflexive \"myself\" incorrectly."
     },
     {
       "id": "C1-V005",
@@ -77,7 +77,7 @@
         "D": "He speaks English more fluent than any other student in his class."
       },
       "answer": "B",
-      "explanation": "Correct: Comparative of two entities needs \"more fluently than any other student\" — without \"other\" he would be compared with himself. A omits \"other\"; C mixes superlative \"most\" with comparative \"than\"; D uses adjective \"fluent\" instead of adverb \"fluently.\""
+      "explanation": "Correct: Comparative of two entities needs \"more fluently than any other student\": without \"other\" he would be compared with himself. A omits \"other\"; C mixes superlative \"most\" with comparative \"than\"; D uses adjective \"fluent\" instead of adverb \"fluently.\""
     },
     {
       "id": "C1-V007",
@@ -90,7 +90,7 @@
         "D": "The applicant submitted the requirements yesterday, and she will take the exam next month."
       },
       "answer": "D",
-      "explanation": "Correct: Past action (\"submitted … yesterday\") + future (\"will take … next month\") — tenses match their time markers. A/B/C variants mix \"take/takes/submits\" with the wrong time."
+      "explanation": "Correct: Past action (\"submitted … yesterday\") + future (\"will take … next month\"): tenses match their time markers. A/B/C variants mix \"take/takes/submits\" with the wrong time."
     },
     {
       "id": "C1-V008",
@@ -103,7 +103,7 @@
         "D": "If she had studied harder, she will have passed the exam."
       },
       "answer": "C",
-      "explanation": "Correct: Third conditional — \"If she had studied …, she would have passed.\" A pairs simple past with \"would have passed\"; B pairs past perfect with simple \"would pass\"; D pairs past perfect with future perfect."
+      "explanation": "Correct: Third conditional: \"If she had studied …, she would have passed.\" A pairs simple past with \"would have passed\"; B pairs past perfect with simple \"would pass\"; D pairs past perfect with future perfect."
     },
     {
       "id": "C1-V009",
@@ -116,7 +116,7 @@
         "D": "The supervisor asked the clerk to submit the report, to file the copies, and to check the entries."
       },
       "answer": "D",
-      "explanation": "Correct: Parallel infinitives — \"to submit …, to file …, and to check ….\" A/B/C break parallelism with \"checking/submitting/filing.\""
+      "explanation": "Correct: Parallel infinitives: \"to submit …, to file …, and to check ….\" A/B/C break parallelism with \"checking/submitting/filing.\""
     },
     {
       "id": "C1-V010",
@@ -168,7 +168,7 @@
         "D": "She don't likes coffee."
       },
       "answer": "C",
-      "explanation": "Correct: Third-person singular present: \"She doesn't like coffee\" — \"doesn't\" takes the base verb \"like.\" A/D use \"don't\" with singular \"she\"; B uses \"doesn't likes\" (double marking); D also uses \"don't likes.\""
+      "explanation": "Correct: Third-person singular present: \"She doesn't like coffee\": \"doesn't\" takes the base verb \"like.\" A/D use \"don't\" with singular \"she\"; B uses \"doesn't likes\" (double marking); D also uses \"don't likes.\""
     },
     {
       "id": "C1-V014",
@@ -238,7 +238,7 @@
     {
       "id": "C1-V019",
       "section": "Verbal",
-      "question": "The decision was unanimous — all members voted in favor.",
+      "question": "The decision was unanimous: all members voted in favor.",
       "options": {
         "A": "divided",
         "B": "secret",
@@ -609,7 +609,7 @@
         "D": "matakaw"
       },
       "answer": "B",
-      "explanation": "\"Masipag\" = industrious — matiyaga at masinop sa gawain. A (tamad) is opposite; C/D are unrelated."
+      "explanation": "\"Masipag\" = industrious: matiyaga at masinop sa gawain. A (tamad) is opposite; C/D are unrelated."
     },
     {
       "id": "C1-V047",
@@ -1298,7 +1298,7 @@
         "D": "Efficiency is unimportant."
       },
       "answer": "A",
-      "explanation": "The plan only works if new computers can improve efficiency — the unstated link. B (cheap) is not required; C (all offices) is too broad; D contradicts the goal."
+      "explanation": "The plan only works if new computers can improve efficiency, the unstated link. B (cheap) is not required; C (all offices) is too broad; D contradicts the goal."
     },
     {
       "id": "C1-A010",
@@ -1311,7 +1311,7 @@
         "D": "All red things are roses."
       },
       "answer": "C",
-      "explanation": "\"All roses are flowers\" + \"Some flowers are red\" does NOT prove all roses are red — the red flowers might not be roses. A over-claims; B reverses the premise; D is unrelated."
+      "explanation": "\"All roses are flowers\" + \"Some flowers are red\" does NOT prove all roses are red: the red flowers might not be roses. A over-claims; B reverses the premise; D is unrelated."
     },
     {
       "id": "C1-A011",
@@ -1324,7 +1324,7 @@
         "D": "Cannot be determined"
       },
       "answer": "B",
-      "explanation": "Ordering: Ana > Bea > Carla, so Carla is shortest. A is tallest; C is middle; D is wrong — the order is fully determined."
+      "explanation": "Ordering: Ana > Bea > Carla, so Carla is shortest. A is tallest; C is middle; D is wrong: the order is fully determined."
     },
     {
       "id": "C1-A012",
@@ -1363,7 +1363,7 @@
         "D": "Buses never cause traffic."
       },
       "answer": "C",
-      "explanation": "The plan assumes bus routes can reduce traffic — the causal link. A (everyone) is too strong; B (no other cause) is not required; D (never) is too strong."
+      "explanation": "The plan assumes bus routes can reduce traffic, the causal link. A (everyone) is too strong; B (no other cause) is not required; D (never) is too strong."
     },
     {
       "id": "C1-A015",

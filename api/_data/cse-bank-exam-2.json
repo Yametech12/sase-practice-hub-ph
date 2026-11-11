@@ -4,7 +4,7 @@
     {
       "id": "C2-V001",
       "section": "Verbal",
-      "question": "ABATE — synonym",
+      "question": "ABATE: synonym",
       "options": {
         "A": "increase",
         "B": "lessen",
@@ -17,7 +17,7 @@
     {
       "id": "C2-V002",
       "section": "Verbal",
-      "question": "LUCID — synonym",
+      "question": "LUCID: synonym",
       "options": {
         "A": "confusing",
         "B": "dull",
@@ -30,7 +30,7 @@
     {
       "id": "C2-V003",
       "section": "Verbal",
-      "question": "NOVICE — antonym",
+      "question": "NOVICE: antonym",
       "options": {
         "A": "expert",
         "B": "beginner",
@@ -43,7 +43,7 @@
     {
       "id": "C2-V004",
       "section": "Verbal",
-      "question": "VIVID — synonym",
+      "question": "VIVID: synonym",
       "options": {
         "A": "dull",
         "B": "pale",
@@ -56,7 +56,7 @@
     {
       "id": "C2-V005",
       "section": "Verbal",
-      "question": "FRUGAL — synonym",
+      "question": "FRUGAL: synonym",
       "options": {
         "A": "wasteful",
         "B": "thrifty",
@@ -64,12 +64,12 @@
         "D": "generous"
       },
       "answer": "B",
-      "explanation": "Frugal means careful with money — thrifty. A and C are opposites in spirit; D (generous) concerns giving, not saving."
+      "explanation": "Frugal means careful with money: thrifty. A and C are opposites in spirit; D (generous) concerns giving, not saving."
     },
     {
       "id": "C2-V006",
       "section": "Verbal",
-      "question": "OPAQUE — antonym",
+      "question": "OPAQUE: antonym",
       "options": {
         "A": "dark",
         "B": "solid",
@@ -82,7 +82,7 @@
     {
       "id": "C2-V007",
       "section": "Verbal",
-      "question": "DILIGENT — synonym",
+      "question": "DILIGENT: synonym",
       "options": {
         "A": "hardworking",
         "B": "lazy",
@@ -95,7 +95,7 @@
     {
       "id": "C2-V008",
       "section": "Verbal",
-      "question": "ADVERSE — synonym",
+      "question": "ADVERSE: synonym",
       "options": {
         "A": "helpful",
         "B": "favorable",
@@ -108,7 +108,7 @@
     {
       "id": "C2-V009",
       "section": "Verbal",
-      "question": "BREVITY — synonym",
+      "question": "BREVITY: synonym",
       "options": {
         "A": "length",
         "B": "detail",
@@ -116,12 +116,12 @@
         "D": "conciseness"
       },
       "answer": "D",
-      "explanation": "Brevity means briefness — conciseness. A (length) is the opposite; B and C are unrelated."
+      "explanation": "Brevity means briefness: conciseness. A (length) is the opposite; B and C are unrelated."
     },
     {
       "id": "C2-V010",
       "section": "Verbal",
-      "question": "HUMBLE — antonym",
+      "question": "HUMBLE: antonym",
       "options": {
         "A": "modest",
         "B": "arrogant",
@@ -134,7 +134,7 @@
     {
       "id": "C2-V011",
       "section": "Verbal",
-      "question": "ZEAL — synonym",
+      "question": "ZEAL: synonym",
       "options": {
         "A": "enthusiasm",
         "B": "apathy",
@@ -147,7 +147,7 @@
     {
       "id": "C2-V012",
       "section": "Verbal",
-      "question": "OBSCURE — antonym",
+      "question": "OBSCURE: antonym",
       "options": {
         "A": "hidden",
         "B": "vague",
@@ -377,7 +377,7 @@
         "D": "Toddlers enjoy reading corners."
       },
       "answer": "B",
-      "explanation": "The passage shows children, students, workers, volunteers, and residents all using and supporting the library — B captures the whole passage. A is a detail; C and D are minor details."
+      "explanation": "The passage shows children, students, workers, volunteers, and residents all using and supporting the library: B captures the whole passage. A is a detail; C and D are minor details."
     },
     {
       "id": "C2-V030",
@@ -405,7 +405,7 @@
         "D": "the library is privately owned."
       },
       "answer": "A",
-      "explanation": "\"Shared effort\" refers to residents raising funds plus volunteers working — people working together. B, C, D contradict the passage."
+      "explanation": "\"Shared effort\" refers to residents raising funds plus volunteers working, people working together. B, C, D contradict the passage."
     },
     {
       "id": "C2-V032",
@@ -600,7 +600,7 @@
         "D": "pabaya"
       },
       "answer": "B",
-      "explanation": "Maagap means quick to act — \"mabilis kumilos.\" A, C, D are opposites."
+      "explanation": "Maagap means quick to act: \"mabilis kumilos.\" A, C, D are opposites."
     },
     {
       "id": "C2-V046",
@@ -652,7 +652,7 @@
         "D": "marahas"
       },
       "answer": "B",
-      "explanation": "Payapa means peaceful — \"tahimik.\" A, C, D describe disturbance or violence."
+      "explanation": "Payapa means peaceful: \"tahimik.\" A, C, D describe disturbance or violence."
     },
     {
       "id": "C2-V050",
@@ -1354,7 +1354,7 @@
         "D": "Some pets are not dogs."
       },
       "answer": "D",
-      "explanation": "The pets that are cats are in the \"cats\" group, none of which are dogs — so some pets are not dogs. A, B, C contradict the premises."
+      "explanation": "The pets that are cats are in the \"cats\" group, none of which are dogs, so some pets are not dogs. A, B, C contradict the premises."
     },
     {
       "id": "C2-A014",
