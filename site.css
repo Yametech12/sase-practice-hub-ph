@@ -19,6 +19,15 @@
       --green-soft: #eafff6;
       --danger: #b52c42;
       --danger-soft: #fff1f4;
+      /* Final-action token: orange is the deliberate color for the last
+         step of an order (create the order message, send it on Facebook).
+         Every order CTA on the sales pages uses this token, never a
+         one-off gradient. White on the dark stop is 5.47:1 and on the
+         light stop 4.14:1; the CTA label is set at 1.19rem / 800 weight
+         (WCAG large text, AA needs 3:1), so both stops pass. */
+      --cta-final: #b7431f;
+      --cta-final-light: #d3542a;
+      --cta-final-gradient: linear-gradient(135deg, var(--cta-final-light) 0%, var(--cta-final) 100%);
       --shadow: 0 24px 60px rgba(7, 28, 50, 0.12);
       --shadow-soft: 0 12px 26px rgba(7, 28, 50, 0.08);
       --radius-xl: 32px;
@@ -665,8 +674,9 @@
       min-height: 54px;
       border: 0;
       border-radius: 14px;
-      background: linear-gradient(135deg, #d3542a 0%, #b7431f 100%);
+      background: var(--cta-final-gradient);
       color: #fff;
+      font-size: 1.19rem;
       font-weight: 800;
       box-shadow: 0 12px 24px rgba(229,109,61,0.22);
       margin-top: 8px;
@@ -799,9 +809,9 @@
     .fb-link {
       display: flex; align-items: center; justify-content: center;
       min-height: 48px; margin-top: 10px; border-radius: 12px;
-      background: #0f63d1; color: #fff; font-weight: 800; text-decoration: none;
+      background: var(--cta-final-gradient); color: #fff; font-size: 1.19rem; font-weight: 800; text-decoration: none;
     }
-    .fb-link:hover { background: var(--primary-dark); }
+    .fb-link:hover { background: var(--cta-final); }
     :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr; } }
     @media (prefers-reduced-motion: reduce) {
