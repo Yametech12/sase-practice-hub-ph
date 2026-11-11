@@ -282,17 +282,52 @@
       });
   });
 
-  /* If a token is already in session storage, skip the gate. */
+  /* Track-aware entry (owner report Nov 11, 2026): landing pages link here
+     with ?track=cse or ?track=sase. A stored session from the OTHER track
+     must not swallow the entry: a Civil Service buyer who still holds a
+     SASE session landed straight on the SASE exams and never saw the CSE
+     gate. The token payload carries its track (UX routing only; the
+     server still verifies the signature on every call). */
+  function requestedTrack() {
+    try {
+      var t = new URLSearchParams(window.location.search).get("track");
+      return t === "cse" || t === "sase" ? t : null;
+    } catch (e) { return null; }
+  }
+  function tokenTrack(tok) {
+    try {
+      var body = tok.split(".")[0].replace(/-/g, "+").replace(/_/g, "/");
+      while (body.length % 4) body += "=";
+      var p = JSON.parse(atob(body));
+      return p && p.track === "cse" ? "cse" : "sase";
+    } catch (e) { return null; }
+  }
+
+  /* If a token is already in session storage, skip the gate, unless the
+     entry link asked for the other track. With no session, a track entry
+     brands the gate itself for that product before login. */
   (function restoreSession() {
+    var want = requestedTrack();
     try {
       var t = sessionStorage.getItem(SESSION_KEY);
+      if (t && want && tokenTrack(t) !== want) {
+        sessionStorage.removeItem(SESSION_KEY);
+        t = null;
+      }
       if (t) {
         state.token = t;
         gateForm.style.display = "none";
         if (logoutBtn) logoutBtn.hidden = false;
         loadExamList();
+        return;
       }
     } catch (e) {}
+    if (want) {
+      state.track = want;
+      state.durationMs = profile().durationMs;
+      applyTrackChrome();
+      if (want === "cse") gateInput.placeholder = "e.g. CSE7-XXXX-XXXX";
+    }
   })();
 
   /* ---------- logout control + help link (audit fix) ----------
