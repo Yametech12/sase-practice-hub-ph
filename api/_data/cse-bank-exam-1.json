@@ -1307,7 +1307,7 @@
       "options": {
         "A": "Yes, all roses are red.",
         "B": "All flowers are roses.",
-        "C": "No — it does not necessarily follow.",
+        "C": "No: it does not necessarily follow.",
         "D": "All red things are roses."
       },
       "answer": "C",
