@@ -404,7 +404,7 @@ export function getExamItems(bank, n) {
 
 // ---- CSE bank backend (Civil Service track) ----
 // SOURCE OF TRUTH (chosen design, Nov 2026): local files in this repo,
-//   exam/cse-bank-exam-<n>.json   (n = 1..8)
+//   api/_data/cse-bank-exam-<n>.json   (n = 1..8)
 // each either a flat item array or the { exam, questions: [...] } wrapper
 // shape the anti-loss bank copies use. Files are read via fs from the exam/
 // folder bundled with the deployment (sibling of api/), so CSE content is
@@ -427,7 +427,7 @@ export function getExamItems(bank, n) {
 // operation, not a code change. A "gh:<blob sha>" pin grades against that
 // exact blob.
 function readLocalCseBank() {
-  const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "exam");
+  const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), "_data");
   const cseExams = {};
   const parts = [];
   for (let n = 1; n <= EXAM_COUNT; n++) {
@@ -496,16 +496,20 @@ export function getCseExamItems(bank, n) {
 // ---- Video lessons (paid-only, both tracks) ----
 // SOURCE OF TRUTH: one JSON file per track in this repo, a flat array in
 // study-path order: [{ section, topic, title, channel, video_id, url, why }].
-//   exam/cse-lessons.json  (Civil Service sections)
-//   exam/sase-lessons.json (SASE sections, added Nov 11, 2026 on owner order)
+//   api/_data/cse-lessons.json  (Civil Service sections)
+//   api/_data/sase-lessons.json (SASE sections, added Nov 11, 2026 on owner order)
 // section is one of the track's 4 section labels. Updating lessons later =
 // replace the track's one file and redeploy (no code change). Each list is
 // served ONLY by api/exam-lessons.js behind a valid token OF THE SAME
 // TRACK; it must never be copied into any public HTML or landing page.
+// The files live in api/_data (NOT exam/) because Vercel serves everything
+// under exam/ as public static files: until Nov 11, 2026 the lesson JSONs
+// and bank JSONs under exam/ were downloadable by anyone without a token.
+// Files under api/ are bundled into the functions only and are not routed.
 function readLessonsFile(fileName) {
   try {
     const file = path.join(
-      path.dirname(fileURLToPath(import.meta.url)), "..", "exam", fileName
+      path.dirname(fileURLToPath(import.meta.url)), "_data", fileName
     );
     const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
     if (Array.isArray(parsed)) {

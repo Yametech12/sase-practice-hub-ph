@@ -9,8 +9,8 @@
  *  - A valid signed token is required; no token, no list. The lesson titles
  *    and URLs are NEVER present in any public page or static file response.
  *  - The token's track decides WHICH library is served: a SASE token gets
- *    the SASE lessons (exam/sase-lessons.json) and a CSE token gets the
- *    CSE lessons (exam/cse-lessons.json). The two libraries never cross:
+ *    the SASE lessons (api/_data/sase-lessons.json) and a CSE token gets the
+ *    CSE lessons (api/_data/cse-lessons.json). The two libraries never cross:
  *    each response carries only its own track's lessons.
  *  - The token's device must still be bound to the order (max-3 rule),
  *    exactly like every other exam endpoint.
