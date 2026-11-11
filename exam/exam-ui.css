@@ -717,8 +717,24 @@ body {
   .instr-kicker, .instr-note { color: #f3d9a0; }
 }
 
+/* ---- Home section tabs (Mock Exams / Video Lessons) ---- */
+.home-tabs { display: flex; gap: 8px; margin: 22px 0 4px; }
+.home-tabs[hidden] { display: none; }
+.home-tab {
+  flex: 1; padding: 12px 10px; border-radius: 12px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);
+  font: 700 15px Inter, sans-serif;
+}
+.home-tab.active { background: var(--blue-700); border-color: var(--blue-700); color: #fff; }
+@media (prefers-color-scheme: dark) {
+  .home-tab { color: #dbe7fb; }
+  .home-tab.active { color: #fff; }
+}
+
 /* ---- Video lessons (both tracks, filled by exam-ui.js) ---- */
 #lessons-wrap { margin-top: 28px; }
+.lesson-player iframe:fullscreen { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.lesson-player iframe:-webkit-full-screen { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
 .lessons-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
 .lesson-chip {
   border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);

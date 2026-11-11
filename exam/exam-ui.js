@@ -93,6 +93,7 @@
     durationMs: EXAM_DURATION_MS, // per-track timer length (list response exam_ms wins)
     lessons: null,         // lessons array from /api/exam-lessons (per track)
     lessonsFilter: "all",  // lessons section filter
+    homeTab: "exams",      // home screen section tab: "exams" | "lessons"
     exam: null,            // exam number (n)
     sessionId: null,
     questions: [],
@@ -208,6 +209,9 @@
     if (warn) warn.hidden = true;
     var lw = $("lessons-wrap");
     if (lw) lw.hidden = true; // paid lesson content leaves the DOM flow on sign-out
+    state.homeTab = "exams";
+    var htExp = $("home-tabs");
+    if (htExp) htExp.hidden = true;
     showScreen("screen-gate");
     gateForm.style.display = "";
     gateError.textContent = "Your session expired, please sign in again to resume your exam. Your saved answers are safe.";
@@ -314,6 +318,9 @@
     state.track = "sase";       // reset chrome so the next login starts clean
     state.lessons = null;
     state.lessonsFilter = "all";
+    state.homeTab = "exams";
+    var homeTabsOnOut = $("home-tabs");
+    if (homeTabsOnOut) homeTabsOnOut.hidden = true;
     applyTrackChrome();
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
     $("exam-list-wrap").hidden = true;
@@ -328,6 +335,33 @@
     showScreen("screen-gate");
     gateInput.focus();
   });
+
+  /* Home screen section tabs (owner order Nov 11, 2026): Video Lessons get
+     their own section inside the portal, next to Mock Exams. The two wraps
+     stay in the DOM once; the tabs only switch which one is visible. */
+  function setHomeTab(tab) {
+    state.homeTab = tab === "lessons" ? "lessons" : "exams";
+    var tabs = $("home-tabs");
+    if (tabs && state.token) tabs.hidden = false;
+    var exBtn = $("tab-exams"), lsBtn = $("tab-lessons");
+    if (exBtn) {
+      exBtn.classList.toggle("active", state.homeTab === "exams");
+      exBtn.setAttribute("aria-selected", state.homeTab === "exams" ? "true" : "false");
+    }
+    if (lsBtn) {
+      lsBtn.classList.toggle("active", state.homeTab === "lessons");
+      lsBtn.setAttribute("aria-selected", state.homeTab === "lessons" ? "true" : "false");
+    }
+    var listWrap = $("exam-list-wrap");
+    if (listWrap && state.token) listWrap.hidden = state.homeTab !== "exams";
+    var lessonsWrap = $("lessons-wrap");
+    if (lessonsWrap) lessonsWrap.hidden = state.homeTab !== "lessons" || !state.token;
+    if (state.homeTab === "lessons") loadLessons();
+  }
+  var tabExamsBtn = $("tab-exams");
+  if (tabExamsBtn) tabExamsBtn.addEventListener("click", function () { setHomeTab("exams"); });
+  var tabLessonsBtn = $("tab-lessons");
+  if (tabLessonsBtn) tabLessonsBtn.addEventListener("click", function () { setHomeTab("lessons"); });
 
   var helpPara = document.createElement("p");
   helpPara.className = "page-foot-help";
@@ -374,6 +408,7 @@
         (meta.exams || []).forEach(function (ex, idx) { list.appendChild(examCard(ex, idx)); });
         $("exam-list-wrap").hidden = false;
         loadLessons();
+        setHomeTab(state.homeTab);
         /* No auto-start: an in-progress exam waits for an explicit Resume tap
            (audit fix). The Resume button on the card + the resume banner in
            beginExam stay available. */
@@ -540,24 +575,28 @@
   function loadLessons() {
     var wrap = $("lessons-wrap");
     if (!wrap || !state.token) return;
-    wrap.hidden = false;
+    wrap.hidden = state.homeTab !== "lessons";
     if (state.lessons) { renderLessons(); return; }
+    if (state.lessonsLoading) return;
+    state.lessonsLoading = true;
     api("/api/exam-lessons", { token: state.token })
       .then(function (data) {
+        state.lessonsLoading = false;
         if (data.track) state.track = data.track === "cse" ? "cse" : "sase";
         state.lessons = Array.isArray(data.lessons) ? data.lessons : [];
         /* Deep link from a results page: /exam/?lessons=Mathematics
-           opens the lessons filtered to the weak section. */
+           opens the lessons section, filtered to the weak section. */
         try {
           var want = new URLSearchParams(window.location.search).get("lessons");
           if (want && lessonSectionOrder().indexOf(want) !== -1) {
             state.lessonsFilter = want;
-            setTimeout(function () { wrap.scrollIntoView(); }, 80);
+            setHomeTab("lessons");
           }
         } catch (e) {}
         renderLessons();
       })
       .catch(function (err) {
+        state.lessonsLoading = false;
         var el = $("lessons-error");
         if (el) { el.textContent = err.message || "Could not load the video lessons. Please try again."; el.hidden = false; }
       });
@@ -622,8 +661,13 @@
       var ifr = document.createElement("iframe");
       ifr.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(l.video_id) + "?autoplay=1&rel=0";
       ifr.title = l.title;
-      ifr.setAttribute("allow", "accelerometer; autoplay; encrypted-media; picture-in-picture");
+      /* Fullscreen fix (owner report Nov 11, 2026): the allow list must name
+         fullscreen explicitly or several mobile browsers and in-app
+         webviews ignore the fullscreen button even with allowfullscreen. */
+      ifr.setAttribute("allow", "accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen");
       ifr.setAttribute("allowfullscreen", "");
+      ifr.setAttribute("webkitallowfullscreen", "");
+      ifr.setAttribute("mozallowfullscreen", "");
       player.innerHTML = "";
       player.appendChild(ifr);
     });

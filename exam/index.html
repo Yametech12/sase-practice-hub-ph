@@ -47,6 +47,13 @@
     </form>
     <p class="gate-note" id="gate-cse-hint">Civil Service buyer? Enter your <strong>CSE7 access code</strong> above (it is separate from your PDF password).</p>
 
+    <!-- Section tabs (signed-in only, exam-ui.js wires these): Mock Exams
+         and Video Lessons are separate sections of the home screen. -->
+    <div id="home-tabs" class="home-tabs" role="tablist" aria-label="Portal sections" hidden>
+      <button id="tab-exams" class="home-tab active" type="button" role="tab" aria-selected="true">Mock Exams</button>
+      <button id="tab-lessons" class="home-tab" type="button" role="tab" aria-selected="false">Video Lessons</button>
+    </div>
+
     <div id="exam-list-wrap" hidden>
       <h2 class="section-title" id="list-title">Your Exams</h2>
       <p class="section-sub" id="list-sub">All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>.</p>
