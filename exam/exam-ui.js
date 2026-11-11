@@ -362,8 +362,7 @@
   function brandGate(track) {
     state.track = track === "cse" ? "cse" : "sase";
     state.durationMs = profile().durationMs;
-    applyTrackChrome();
-    gateInput.placeholder = state.track === "cse" ? "e.g. CSE7-XXXX-XXXX" : "e.g. Xk9mQ2vT7pLz";
+    applyTrackChrome(); // also sets the field placeholder for the track
   }
   (function restoreSession() {
     migrateLegacySession();
@@ -508,6 +507,10 @@
     set("foot-text", escapeHtml(pr.foot));
     var cseHint = $("gate-cse-hint");
     if (cseHint) cseHint.hidden = state.track === "cse";
+    /* The placeholder follows the branded track too: a CSE session must not
+       leave its CSE7 example sitting in a SASE-branded gate after logout
+       (browser verification finding, Nov 11, 2026). */
+    if (gateInput) gateInput.placeholder = state.track === "cse" ? "e.g. CSE7-XXXX-XXXX" : "e.g. Xk9mQ2vT7pLz";
     syncGateToggle();
     if (switchLink) {
       var otherTrack = state.track === "cse" ? "sase" : "cse";
