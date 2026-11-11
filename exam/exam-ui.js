@@ -381,11 +381,11 @@
     var exBtn = $("tab-exams"), lsBtn = $("tab-lessons");
     if (exBtn) {
       exBtn.classList.toggle("active", state.homeTab === "exams");
-      exBtn.setAttribute("aria-selected", state.homeTab === "exams" ? "true" : "false");
+      exBtn.setAttribute("aria-pressed", state.homeTab === "exams" ? "true" : "false");
     }
     if (lsBtn) {
       lsBtn.classList.toggle("active", state.homeTab === "lessons");
-      lsBtn.setAttribute("aria-selected", state.homeTab === "lessons" ? "true" : "false");
+      lsBtn.setAttribute("aria-pressed", state.homeTab === "lessons" ? "true" : "false");
     }
     var listWrap = $("exam-list-wrap");
     if (listWrap && state.token) listWrap.hidden = state.homeTab !== "exams";
@@ -940,6 +940,10 @@
     var subjectEl = $("q-section");
     if (subjectEl) {
       var subjectText = q.subject || q.section || "";
+      /* Some banks store short section labels ("Language", "Math"); the
+         chip always shows the full label the instructions screen uses. */
+      if (subjectText === "Language") subjectText = "Language Usage";
+      if (subjectText === "Math") subjectText = "Mathematics";
       subjectEl.textContent = subjectText;
       subjectEl.hidden = !subjectText;
     }

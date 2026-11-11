@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
   <meta name="description" content="Privacy Policy for SASE Practice Hub PH, what data the reviewer store and mock exam portal collect, how it is used, and how to request deletion." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/privacy.html" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -20,8 +21,10 @@
     .brand { display: inline-flex; align-items: center; gap: 10px; color: white; font-weight: 900; letter-spacing: 0.02em; text-decoration: none; }
     .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, var(--yellow), #ffe18d); color: var(--ink); font-size: 18px; }
     .nav { display: flex; align-items: center; gap: 18px; font-size: 0.94rem; color: rgba(255,255,255,0.82); flex-wrap: wrap; }
-    .nav a { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 600; }
+    .nav a { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 600; padding: 10px 4px; display: inline-flex; align-items: center; min-height: 44px; }
     .nav a:hover { color: #fff; }
+    :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+    .topbar :focus-visible { outline-color: #fff; }
     .wrap { width: min(760px, calc(100% - 28px)); margin: 0 auto; }
     main { padding: 36px 0 10px; }
     .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px 28px; box-shadow: 0 12px 26px rgba(7,28,50,0.08); }
@@ -61,17 +64,17 @@
     <div class="wrap">
       <div class="card">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: October 13, 2026</p>
+  <p class="updated">Last updated: November 11, 2026</p>
   <p><strong>SASE Practice Hub PH</strong> ("we", "our") operates <a href="/">this website</a>, the mock exam portal at <a href="/exam">/exam</a>, and the SASE Practice Hub PH Facebook Page. This policy explains what data we collect and how we use it.</p>
 
   <h2>1. Data We Collect</h2>
   <ul>
     <li><strong>Facebook Page interactions:</strong> When you comment on our Page posts, we receive your public comment text and name via Facebook's webhook system to provide quiz answer replies.</li>
-    <li><strong>Order information:</strong> When you order the MSU-SASE Reviewer, we collect your name, your Facebook / Messenger name, your order reference, and your GCash reference number to verify payment and deliver your PDF.</li>
+    <li><strong>Order information:</strong> When you order the MSU-SASE Reviewer or the Civil Service Exam Reviewer, we collect your name, your Facebook / Messenger name, your order reference, and your GCash reference number to verify payment and deliver your PDF.</li>
     <li><strong>Portal access:</strong> When you use the mock exam portal, we collect and store:
       <ul>
-        <li><strong>PDF password (hashed):</strong> your unique PDF password is verified against a stored one-way hash. The password itself is not kept in readable form.</li>
-        <li><strong>Device IDs:</strong> a random device identifier your browser generates, used to enforce the up-to-3-devices-per-password limit.</li>
+        <li><strong>Portal credential (hashed):</strong> your reviewer password (SASE) or CSE7 access code (Civil Service) is verified against a stored one-way hash. The credential itself is not kept in readable form.</li>
+        <li><strong>Device IDs:</strong> a random device identifier your browser generates, used to enforce the up-to-3-devices-per-credential limit.</li>
         <li><strong>Exam answers and results:</strong> the answers you submit, your scores, and your answer-review history, so you can see your results and review every answer.</li>
         <li><strong>Session tokens:</strong> a temporary sign-in token kept in your browser while you use the portal, so you do not have to re-enter your password on every page.</li>
       </ul>

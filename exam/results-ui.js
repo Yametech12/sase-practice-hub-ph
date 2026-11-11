@@ -60,7 +60,7 @@
     // COPY fix 3: auto-submit / forfeit notices.
     if (data.auto_submitted) {
       els.resultNoticeText.textContent =
-        "Your time ran out, so your answers were submitted automatically. Here's how you did, review the weak areas below before your next exam.";
+        "Your time ran out, so your answers were submitted automatically. Here's how you did. Review the weak areas below before your next exam.";
       els.resultNotice.hidden = false;
     } else if (data.forfeited) {
       els.resultNoticeText.textContent =
@@ -100,7 +100,7 @@
       var disc = document.querySelector(".hero .disclaimer");
       if (disc) disc.innerHTML = "This is a <strong>practice benchmark</strong>, not an official CSC result. Use it to guide your study.";
       var footP = document.querySelector(".foot p");
-      if (footP) footP.innerHTML = "Prepared by the <strong>Civil Service Reviewer</strong> team, a professional Civil Service exam study resource.";
+      if (footP) footP.innerHTML = "Prepared by the <strong>Civil Service Reviewer</strong> team, an independent, unofficial Civil Service exam study resource.";
     }
 
     renderSections(data);
@@ -180,7 +180,7 @@
   var SECTION_GUIDE = {
     "Language Usage": {
       chapters: "Parts I & V of your reviewer (vocabulary, grammar, reading)",
-      tip: "Read one passage daily and learn 5 new words with their sentences, vocabulary compounds fast."
+      tip: "Read one passage daily and learn 5 new words in sentences. Vocabulary builds fast."
     },
     "Mathematics": {
       chapters: "Parts II & VI of your reviewer (word problems, algebra, geometry)",
@@ -265,7 +265,7 @@
     if (!weak.length) {
       var ok = document.createElement("div");
       ok.className = "improve-ok";
-      ok.innerHTML = '<span aria-hidden="true">🎉</span> All sections at 70% or higher, maintain with light review before your next exam.';
+      ok.innerHTML = '<span aria-hidden="true">🎉</span> All sections at 70% or higher. Maintain with light review before your next exam.';
       els.improveList.appendChild(ok);
       return;
     }
@@ -294,7 +294,7 @@
       linkDiv.className = "improve-item lessons-link";
       linkDiv.innerHTML =
         '<span aria-hidden="true">🎬</span> <a href="/exam/?lessons=' + encodeURIComponent(weakName) + '">' +
-        "Review the " + esc(weakName) + " video lessons</a> in the portal, then retake your next mock exam.";
+        "Review the " + esc(weakName) + " video lessons</a> in the portal, then take your next mock exam.";
       els.improveList.appendChild(linkDiv);
     }
   }

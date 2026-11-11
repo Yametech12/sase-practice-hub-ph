@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0d4ea3">
 <title>SASE Mock Exam, SASE Practice Hub PH</title>
+<meta name="description" content="Buyer portal: 8 full mock exams for the SASE and Civil Service reviewers, with timers, scores, answer reviews, and video lessons.">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -50,9 +54,9 @@
 
     <!-- Section tabs (signed-in only, exam-ui.js wires these): Mock Exams
          and Video Lessons are separate sections of the home screen. -->
-    <div id="home-tabs" class="home-tabs" role="tablist" aria-label="Portal sections" hidden>
-      <button id="tab-exams" class="home-tab active" type="button" role="tab" aria-selected="true">Mock Exams</button>
-      <button id="tab-lessons" class="home-tab" type="button" role="tab" aria-selected="false">Video Lessons</button>
+    <div id="home-tabs" class="home-tabs" role="group" aria-label="Portal sections" hidden>
+      <button id="tab-exams" class="home-tab active" type="button" aria-pressed="true">Mock Exams</button>
+      <button id="tab-lessons" class="home-tab" type="button" aria-pressed="false">Video Lessons</button>
     </div>
 
     <div id="exam-list-wrap" hidden>
@@ -86,7 +90,7 @@
       <p class="section-sub">Stream the lessons inside the portal, in study order. Start with your weakest section, then work through the path. Tap a lesson to watch, and tick it off when you are done.</p>
       <div id="lessons-filters" class="lessons-filters" role="group" aria-label="Filter lessons by section"></div>
       <div id="lessons-list" class="lessons-list"></div>
-      <p id="lessons-empty" class="section-sub" hidden>Video lessons are being prepared and will appear here soon.</p>
+      <p id="lessons-empty" class="section-sub" hidden>No video lessons are available for your account yet. If this looks wrong, message us on Facebook.</p>
       <p id="lessons-error" class="form-error" role="alert" hidden></p>
     </div>
   </section>
