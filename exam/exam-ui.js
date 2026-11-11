@@ -54,15 +54,15 @@
     },
     cse: {
       title: "Civil Service Mock Exams",
-      docTitle: "Civil Service Mock Exams, Practice Portal",
-      brand: "Civil Service Reviewer",
+      docTitle: "Civil Service Mock Exams, CSE Practice Hub PH",
+      brand: "CSE Practice Hub PH",
       subtitle: "Eight full mock exams · 150 questions each · 3 hours 10 minutes, the real exam time limit.",
       disclaimer: 'This is a <strong>practice exam</strong> for preparation only. It is not the official Civil Service Exam and is not affiliated with the Civil Service Commission.',
       fieldLabel: "Enter your CSE7 access code",
       fieldHint: "Use the CSE7 access code sent with your Civil Service reviewer. It is separate from your PDF password.",
-      gateNote: 'One access code works on <strong>up to 3 devices</strong>. Lost access? Message us on Facebook.',
+      gateNote: 'One access code works on <strong>up to 3 devices</strong>. Lost access? Message CSE Practice Hub PH.',
       listSub: 'All 8 exams are open right away, no waiting. Each exam can be taken <strong>once</strong>. Results are benchmarked against the real passing general rating of <strong>80.00</strong>.',
-      foot: "Civil Service Reviewer · Practice exams for study purposes only, not the official Civil Service Exam.",
+      foot: "CSE Practice Hub PH · Practice exams for study purposes only, not the official Civil Service Exam.",
       questions: 150,
       durationMs: (3 * 60 + 10) * 60 * 1000,
       durationShort: "3 hours 10 minutes",
@@ -485,7 +485,9 @@
 
   var helpPara = document.createElement("p");
   helpPara.className = "page-foot-help";
-  helpPara.innerHTML = 'Need help? <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message SASE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a>';
+  var HELP_SASE = 'Need help? <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message SASE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a>';
+  var HELP_CSE = 'Need help? <a href="https://www.facebook.com/profile.php?id=61596682491248" target="_blank" rel="noopener">Message CSE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a>';
+  helpPara.innerHTML = HELP_SASE;
   var pageFoot = document.querySelector(".page-foot");
   if (pageFoot) pageFoot.appendChild(helpPara);
 
@@ -511,6 +513,7 @@
        leave its CSE7 example sitting in a SASE-branded gate after logout
        (browser verification finding, Nov 11, 2026). */
     if (gateInput) gateInput.placeholder = state.track === "cse" ? "e.g. CSE7-XXXX-XXXX" : "e.g. Xk9mQ2vT7pLz";
+    if (helpPara) helpPara.innerHTML = state.track === "cse" ? HELP_CSE : HELP_SASE;
     syncGateToggle();
     if (switchLink) {
       var otherTrack = state.track === "cse" ? "sase" : "cse";

@@ -100,14 +100,14 @@
       var disc = document.querySelector(".hero .disclaimer");
       if (disc) disc.innerHTML = "This is a <strong>practice benchmark</strong>, not an official CSC result. Use it to guide your study.";
       var footP = document.querySelector(".foot p");
-      if (footP) footP.innerHTML = "Prepared by the <strong>Civil Service Reviewer</strong> team, an independent, unofficial Civil Service exam study resource.";
+      if (footP) footP.innerHTML = "Prepared by <strong>CSE Practice Hub PH</strong>, an independent, unofficial Civil Service exam study resource.";
       /* The top bar brand and the footer help line are static SASE text
          in results.html; switch them too, mirroring the exam page
          (audit finding, Nov 11, 2026). */
       var brandEl = document.querySelector(".brand-name");
-      if (brandEl) brandEl.textContent = "Civil Service Reviewer";
+      if (brandEl) brandEl.textContent = "CSE Practice Hub PH";
       var footPs = document.querySelectorAll(".foot p");
-      if (footPs[1]) footPs[1].innerHTML = "Need help? <a href=\"https://www.facebook.com/profile.php?id=61594997556905\" target=\"_blank\" rel=\"noopener\">Message Civil Service Reviewer on Facebook</a> · <a href=\"/privacy.html\">Privacy Policy</a>";
+      if (footPs[1]) footPs[1].innerHTML = "Need help? <a href=\"https://www.facebook.com/profile.php?id=61596682491248\" target=\"_blank\" rel=\"noopener\">Message CSE Practice Hub PH on Facebook</a> · <a href=\"/privacy.html\">Privacy Policy</a>";
     }
 
     renderSections(data);
@@ -491,7 +491,7 @@
     g.fillStyle = grad; g.fillRect(0, 0, 1080, 1350);
 
     var isCse = !!d.benchmark;
-    var brandLine = isCse ? "Civil Service Mock Exams" : "SASE Practice Hub PH";
+    var brandLine = isCse ? "CSE Practice Hub PH" : "SASE Practice Hub PH";
     g.fillStyle = "#ffffff"; g.textAlign = "center";
     g.font = "700 54px Arial"; g.fillText(brandLine, 540, 140);
     g.font = "600 32px Arial"; g.fillStyle = "#cdd9f2";
