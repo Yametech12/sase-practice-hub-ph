@@ -499,7 +499,10 @@
 
     .portal-card p {
       margin: 0;
-      color: rgba(255,255,255,0.82);
+      /* 0.94, not 0.82: at the lightest portal gradient stop, under the
+         card tint, 0.82 white composites to 3.92:1 (fails AA). 0.94
+         composites to 4.63:1. Checked Nov 11, 2026, workstream F. */
+      color: rgba(255,255,255,0.94);
     }
 
     .faq-grid {
@@ -912,4 +915,79 @@
     .generate-btn, .copy-summary { transition: transform 0.18s ease; }
     .generate-btn:hover, .copy-summary:hover { transform: translateY(-1px); }
     .hero-sample-link a:hover { color: #ffe28d; }
+    /* .button.secondary is styled for the dark hero. Its one use outside
+       the hero (the Civil Service section on index) sat on the light page
+       background, where the white label composited to 1.07:1. Give the
+       out-of-hero instance a readable tint treatment; the hero instance
+       keeps the original styling because .hero is not a .section. */
+    .section .button.secondary {
+      background: rgba(18,49,75,0.05);
+      color: var(--primary-dark);
+      border-color: rgba(18,49,75,0.16);
+    }
+
+    /* ---------- Sales pages dark mode (Nov 11, 2026) ----------
+       Follows the portal pattern in exam/exam-ui.css: surfaces go dark,
+       text lifts with the tokens, and surfaces that stay light (the exam
+       sheet, the float cards, the QR box) pin their text to the dark
+       palette (#17233b / #5b6b8c), exactly like the portal lesson cards.
+       Light mode above is untouched; everything below applies only
+       under prefers-color-scheme: dark. */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1526;
+        --bg-2: #0d182b;
+        --surface: rgba(26,44,71,0.82);
+        --surface-strong: #1a2c47;
+        --surface-soft: #16273f;
+        --ink: #e8f0fa;
+        --muted: #a8b8d0;
+        --line: #2c3f5f;
+        --primary: #57a8ff;
+        --primary-dark: #9cc3f0;
+        --primary-soft: rgba(87,168,255,0.16);
+        --green: #57d9a3;
+        --green-soft: #14382a;
+        --danger: #f08ba0;
+        --danger-soft: #3d1a22;
+        --shadow: 0 24px 60px rgba(0,0,0,0.45);
+        --shadow-soft: 0 12px 26px rgba(0,0,0,0.35);
+      }
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(26,120,232,0.14), transparent 28%),
+          linear-gradient(180deg, #0f1d33 0%, #0c1728 34%, #0b1526 100%);
+      }
+      .feature-card, .faq-item, .value-card, .info-card, .order-card { background: #1a2c47; }
+      /* Yellow surfaces keep their dark label, as in light mode. */
+      .button.primary, .nav-cta, .brand-mark, .count small { color: #12314b; }
+      .skip-link { background: #12314b; }
+      .mini-copy, .copy-summary { background: #12314b; }
+      .toast { background: #e8f0fa; color: #12314b; }
+      /* The sample band button keeps a dark blue gradient so its white
+         label stays readable (its second stop is --primary-dark, which
+         lifts to a light blue in this scheme). */
+      .sample-band .button { background: linear-gradient(135deg, #1668cc, #0d4ea3); }
+      input { background: #0f1e35; }
+      .helper {
+        color: #f3d9a0;
+        background: rgba(255,216,93,0.14);
+        border-color: rgba(238,175,29,0.35);
+      }
+      .summary-box { background: #16273f; border-color: var(--line); }
+      .summary-box pre { background: #0f1e35; border-color: var(--line); }
+      .count { background: linear-gradient(135deg, #22385c, #16273f); }
+      .section .button.secondary { background: #22385c; color: #e8f0fa; border-color: #2c3f5f; }
+      /* Pinned light surfaces: the exam sheet, float cards and QR box
+         stay white in dark mode so the QR codes stay scannable; their
+         text is pinned to the dark palette. */
+      .exam-sheet, .float-card { color: #17233b; }
+      .exam-sheet .opt b { color: #0d4ea3; }
+      .exam-sheet .opt.on b { background: #0d4ea3; border-color: #0d4ea3; color: #fff; }
+      .chip-subject { color: #0d4ea3; background: rgba(26,120,232,0.12); }
+      .chip-timer { color: #b52c42; background: #fff1f4; }
+      .float-card span, .score-float span, .weak-float span { color: #5b6b8c; }
+      .weak-float small { color: #b52c42; }
+      .qr-caption { color: #5b6b8c; }
+    }
   
