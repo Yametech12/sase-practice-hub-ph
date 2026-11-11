@@ -717,7 +717,7 @@ body {
   .instr-kicker, .instr-note { color: #f3d9a0; }
 }
 
-/* ---- Civil Service video lessons (CSE track only, filled by exam-ui.js) ---- */
+/* ---- Video lessons (both tracks, filled by exam-ui.js) ---- */
 #lessons-wrap { margin-top: 28px; }
 .lessons-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
 .lesson-chip {
@@ -751,4 +751,17 @@ body {
 @media (max-width: 560px) {
   .lesson-card { flex-direction: column; }
   .lesson-player { flex: none; max-width: none; width: 100%; }
+}
+/* Dark mode: the lesson card keeps its white background (hardcoded above),
+   while --ink and --muted flip to near-white for dark surfaces, which made
+   the card text unreadable (owner screenshot Nov 11, 2026). Pin the card
+   text back to the light-mode palette, same pattern as .resume-banner,
+   and lift the group title and filter chips that sit on the dark page. */
+@media (prefers-color-scheme: dark) {
+  .lesson-card { color: #17233b; }
+  .lesson-body h4, .lesson-why { color: #17233b; }
+  .lesson-meta { color: #5b6b8c; }
+  .lessons-group-title { color: #e8f0fa; }
+  .lesson-chip { color: #dbe7fb; }
+  .lesson-chip.active { color: #fff; }
 }
