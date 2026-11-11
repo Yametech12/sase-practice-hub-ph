@@ -742,6 +742,23 @@ body {
 #lessons-wrap { margin-top: 28px; }
 .lesson-player iframe:fullscreen { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
 .lesson-player iframe:-webkit-full-screen { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
+/* When the stage wrapper itself is the fullscreen element (the expand
+   button's fallback target), the iframe must fill it edge to edge. */
+.lesson-stage:fullscreen { background: #000; }
+.lesson-stage:fullscreen iframe { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.lesson-stage:-webkit-full-screen { background: #000; }
+.lesson-stage:-webkit-full-screen iframe { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.lesson-player:fullscreen { max-width: none; background: #000; }
+.lesson-player:fullscreen iframe { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.lesson-actions { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; margin-top: 8px; }
+.lesson-expand-btn {
+  border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);
+  border-radius: 999px; padding: 10px 14px; min-height: 44px; font: 600 13px Inter, sans-serif; cursor: pointer;
+}
+.lesson-yt-link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 10px 6px;
+  font-size: 13px; font-weight: 600; color: var(--blue-700);
+}
 .lessons-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
 .lesson-chip {
   border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);
@@ -786,6 +803,8 @@ body {
   .lesson-body h4, .lesson-why { color: #17233b; }
   .lesson-meta { color: #5b6b8c; }
   .lessons-group-title { color: #e8f0fa; }
+  .lesson-expand-btn { background: #eef4fd; color: #0c2147; border-color: #d7e3f5; }
+  .lesson-yt-link { color: #1a3f86; }
   .lesson-chip { color: #dbe7fb; }
   .lesson-chip.active { color: #fff; }
 }

@@ -678,12 +678,44 @@
     });
   }
 
+  /* Fullscreen helper (owner order Nov 11, 2026): ask the browser to put
+     the element into fullscreen from the user's own tap, with the webkit
+     prefix fallback. Returns false when the API does not exist at all
+     (for example iPhone Safari, which reserves element fullscreen), and
+     swallows promise rejections from webviews that expose the API but
+     refuse the request (Messenger and Facebook in-app browsers); in both
+     cases the permanent Watch on YouTube link under the player is the
+     working path to a big screen. */
+  function requestFullscreenOn(el, onFail) {
+    if (!el) { if (onFail) onFail(); return false; }
+    try {
+      var p = null;
+      if (el.requestFullscreen) p = el.requestFullscreen();
+      else if (el.webkitRequestFullscreen) p = el.webkitRequestFullscreen();
+      else if (el.msRequestFullscreen) p = el.msRequestFullscreen();
+      else { if (onFail) onFail(); return false; }
+      if (p && typeof p.catch === "function") {
+        p.catch(function () { if (onFail) onFail(); });
+      }
+      return true;
+    } catch (e) { if (onFail) onFail(); return false; }
+  }
+  function fullscreenApiExists() {
+    var probe = document.documentElement;
+    return !!(probe.requestFullscreen || probe.webkitRequestFullscreen || probe.msRequestFullscreen);
+  }
+
   function lessonCard(l, watched) {
     var card = document.createElement("div");
     card.className = "lesson-card" + (watched.indexOf(l.video_id) !== -1 ? " is-watched" : "");
 
     var player = document.createElement("div");
     player.className = "lesson-player";
+    /* The stage is the swap target for thumbnail and iframe, so the
+       actions row under the player survives the swap. */
+    var stage = document.createElement("div");
+    stage.className = "lesson-stage";
+    var currentIfr = null;
     var thumb = document.createElement("button");
     thumb.type = "button";
     thumb.className = "lesson-thumb";
@@ -703,10 +735,43 @@
       ifr.setAttribute("allowfullscreen", "");
       ifr.setAttribute("webkitallowfullscreen", "");
       ifr.setAttribute("mozallowfullscreen", "");
-      player.innerHTML = "";
-      player.appendChild(ifr);
+      currentIfr = ifr;
+      stage.innerHTML = "";
+      stage.appendChild(ifr);
+      /* Reveal the expand button only once a player exists, and only
+         when this browser exposes a fullscreen API at all. */
+      if (fullscreenApiExists()) expandBtn.hidden = false;
     });
-    player.appendChild(thumb);
+    stage.appendChild(thumb);
+    player.appendChild(stage);
+
+    /* Actions row: an explicit Full screen button (the embed's own
+       button is suppressed in some browsers and webviews, so the portal
+       provides its own, driven by the user's tap) and a permanent Watch
+       on YouTube link, the guaranteed big-screen path on every device,
+       including in-app webviews that block iframe fullscreen outright. */
+    var actions = document.createElement("div");
+    actions.className = "lesson-actions";
+    var expandBtn = document.createElement("button");
+    expandBtn.type = "button";
+    expandBtn.className = "lesson-expand-btn";
+    expandBtn.textContent = "Full screen";
+    expandBtn.hidden = true;
+    expandBtn.addEventListener("click", function () {
+      /* Try the iframe first, then the stage wrapper if the iframe
+         request is refused: some Android webviews accept one element
+         and reject the other. */
+      requestFullscreenOn(currentIfr, function () { requestFullscreenOn(stage, null); });
+    });
+    actions.appendChild(expandBtn);
+    var ytLink = document.createElement("a");
+    ytLink.className = "lesson-yt-link";
+    ytLink.href = "https://www.youtube.com/watch?v=" + encodeURIComponent(l.video_id);
+    ytLink.target = "_blank";
+    ytLink.rel = "noopener";
+    ytLink.textContent = "Watch on YouTube";
+    actions.appendChild(ytLink);
+    player.appendChild(actions);
     card.appendChild(player);
 
     var body = document.createElement("div");
