@@ -548,6 +548,8 @@
       border-radius: 8px;
     }
 
+    .info-card .pay-alt { margin-top: 12px; }
+
     .qr-caption {
       margin: 12px 0 0;
       color: var(--muted);
@@ -681,7 +683,7 @@
       color: #fff;
       font-size: 1.19rem;
       font-weight: 800;
-      box-shadow: 0 12px 24px rgba(229,109,61,0.22);
+      box-shadow: 0 12px 24px rgba(183,67,31,0.22); /* token tint of --cta-final */
       margin-top: 8px;
     }
 
