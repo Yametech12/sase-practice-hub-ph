@@ -293,14 +293,19 @@
        weakName comes from this result's own section breakdown, so a CSE
        result only ever names a CSE section and a SASE result only ever
        names a SASE section; the deep link opens that track's lessons
-       because the portal session carries the track. */
+       because the portal session carries the track; the link also
+       names the track explicitly (?track=) so it stays correct in a
+       fresh tab or a shared copy (QA finding, Nov 12, 2026). */
     var LESSON_SECTIONS = ["Verbal", "Numerical", "Analytical", "General Information",
                            "Language Usage", "Mathematics", "Aptitude", "Science"];
     if (weakName && LESSON_SECTIONS.indexOf(weakName) !== -1) {
+      var resultTrack = "sase";
+      try { if (sessionStorage.getItem("portal_result_track") === "cse") resultTrack = "cse"; } catch (e) {}
+      if (data.benchmark) resultTrack = "cse";
       var linkDiv = document.createElement("div");
       linkDiv.className = "improve-item lessons-link";
       linkDiv.innerHTML =
-        '<span aria-hidden="true">🎬</span> <a href="/exam/?lessons=' + encodeURIComponent(weakName) + '">' +
+        '<span aria-hidden="true">🎬</span> <a href="/exam?track=' + resultTrack + '&lessons=' + encodeURIComponent(weakName) + '">' +
         "Review the " + esc(weakName) + " video lessons</a> in the portal, then take your next mock exam.";
       els.improveList.appendChild(linkDiv);
     }

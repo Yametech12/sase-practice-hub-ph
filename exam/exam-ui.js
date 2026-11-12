@@ -391,7 +391,19 @@
     if (bs) { bs.classList.toggle("active", state.track !== "cse"); bs.setAttribute("aria-pressed", state.track !== "cse" ? "true" : "false"); }
     if (bc) { bc.classList.toggle("active", state.track === "cse"); bc.setAttribute("aria-pressed", state.track === "cse" ? "true" : "false"); }
   }
+  /* Keep the address bar honest: choosing a portal rewrites ?track=
+     in place (other params, like lessons, survive), so a refresh or a
+     copied link lands on the portal the buyer actually picked
+     (QA finding, Nov 12, 2026). */
+  function syncTrackInUrl(track) {
+    try {
+      var url = new URL(window.location.href);
+      url.searchParams.set("track", track === "cse" ? "cse" : "sase");
+      history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch (e) {}
+  }
   function chooseGateTrack(track) {
+    syncTrackInUrl(track);
     var t = getStoredSession(track);
     if (t) { restoreWithToken(t); return; }
     brandGate(track);
@@ -422,8 +434,9 @@
   var switchLink = document.createElement("a");
   switchLink.id = "portal-switch";
   switchLink.className = "back-link";
-  switchLink.textContent = "Civil Service portal";
-  switchLink.href = "/exam?track=cse";
+  var initialOther = state.track === "cse" ? "sase" : "cse";
+  switchLink.textContent = initialOther === "cse" ? "Civil Service portal" : "SASE portal";
+  switchLink.href = "/exam?track=" + initialOther;
   switchLink.hidden = true;
   switchLink.setAttribute("aria-label", "Switch to the other exam portal");
   if (brandbarInner) brandbarInner.insertBefore(switchLink, logoutBtn);
@@ -487,9 +500,15 @@
   helpPara.className = "page-foot-help";
   var HELP_SASE = 'Need help? <a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message SASE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a>';
   var HELP_CSE = 'Need help? <a href="https://www.facebook.com/profile.php?id=61596682491248" target="_blank" rel="noopener">Message CSE Practice Hub PH on Facebook</a> · <a href="/privacy.html">Privacy Policy</a>';
-  helpPara.innerHTML = HELP_SASE;
+  helpPara.innerHTML = state.track === "cse" ? HELP_CSE : HELP_SASE;
   var pageFoot = document.querySelector(".page-foot");
   if (pageFoot) pageFoot.appendChild(helpPara);
+  /* Gate init: now that the injected chrome exists (logout button,
+     switch link, help line), apply the entered track's full profile, so
+     a fresh /exam?track=cse load shows the CSE branding and help link
+     from the first paint instead of the static SASE defaults
+     (QA finding, Nov 12, 2026). */
+  applyTrackChrome();
 
   /* Rewrite the gate/instructions chrome for the signed-in track. Called
      after auth and after every list load; SASE values are the page's
@@ -506,6 +525,8 @@
     set("gate-note", pr.gateNote);
     set("list-sub", pr.listSub);
     set("brand-name", escapeHtml(pr.brand));
+    var brandEl = document.querySelector(".brand");
+    if (brandEl) brandEl.setAttribute("aria-label", pr.brand);
     set("foot-text", escapeHtml(pr.foot));
     var cseHint = $("gate-cse-hint");
     if (cseHint) cseHint.hidden = state.track === "cse";
