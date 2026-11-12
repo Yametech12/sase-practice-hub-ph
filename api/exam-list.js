@@ -19,7 +19,7 @@
  */
 import {
   verifyToken,
-  loadState,
+  loadOrderScope,
   readBody,
   examUnlock,
   EXAM_COUNT,
@@ -39,7 +39,8 @@ export default async function handler(req, res) {
     const track = trackOf(p);
     const EXAM_MS = examMsForTrack(track); // per-track timer (SASE 2h, CSE 3h10m)
     const now = Date.now();
-    const { state } = await loadState();
+    // Scoped read: only this order's rows (Nov 12, 2026 latency fix).
+    const state = await loadOrderScope(p.order_id);
     const b = state.bindings[p.order_id];
     if (!bindingHasDevice(b, p.device_hash)) {
       return res.status(403).json({ error: "device_mismatch", message: deviceMismatchMsg(track) });

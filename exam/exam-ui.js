@@ -145,11 +145,35 @@
 
   /* ---------------- dom helpers ---------------- */
   function $(id) { return document.getElementById(id); }
+
+  /* Slow-wait note (Nov 12, 2026): a long server wait must never look
+     frozen. armSlowNote swaps the waiting label for a "server may be
+     waking up" note after about 5 seconds; settling or navigating away
+     from the submitting screen clears it. */
+  var slowNoteTimer = null;
+  function armSlowNote(el, slowText) {
+    clearSlowNote();
+    if (!el) return;
+    slowNoteTimer = setTimeout(function () {
+      slowNoteTimer = null;
+      el.textContent = slowText;
+    }, 5000);
+  }
+  function clearSlowNote() {
+    if (slowNoteTimer) { clearTimeout(slowNoteTimer); slowNoteTimer = null; }
+  }
+  function setSubmittingTitle(text, slowText) {
+    var el = $("submitting-title");
+    el.textContent = text;
+    armSlowNote(el, slowText);
+  }
+
   function showScreen(id) {
     var screens = document.querySelectorAll(".screen");
     for (var i = 0; i < screens.length; i++) screens[i].classList.remove("active");
     $(id).classList.add("active");
     window.scrollTo(0, 0);
+    if (id !== "screen-submitting") clearSlowNote();
   }
   function fmtTime(ms) {
     var sec = Math.max(0, Math.floor(ms / 1000));
@@ -288,6 +312,7 @@
     gateError.hidden = true;
     gateSubmit.disabled = true;
     gateSubmit.textContent = "Checking…";
+    armSlowNote(gateSubmit, "Still checking, the server may be waking up…");
     api("/api/exam-auth", { password: gateInput.value.trim(), device_id: getDeviceId() })
       .then(function (res) {
         state.token = res.token;
@@ -313,6 +338,7 @@
         gateInput.focus(); /* A11Y K4 */
       })
       .then(function () {
+        clearSlowNote();
         gateSubmit.disabled = false;
         gateSubmit.textContent = "Unlock";
       });
@@ -845,7 +871,8 @@
     thumb.innerHTML =
       '<img src="https://i.ytimg.com/vi/' + escapeHtml(l.video_id) + '/hqdefault.jpg" alt="" loading="lazy">' +
       '<span class="lesson-play" aria-hidden="true">▶</span>';
-    thumb.addEventListener("click", function () {
+    function activatePlayer() {
+      if (currentIfr) return;
       // Lazy: the embed iframe exists only after an explicit tap.
       var ifr = document.createElement("iframe");
       ifr.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(l.video_id) + "?autoplay=1&rel=0";
@@ -860,10 +887,8 @@
       currentIfr = ifr;
       stage.innerHTML = "";
       stage.appendChild(ifr);
-      /* Reveal the expand button only once a player exists, and only
-         when this browser exposes a fullscreen API at all. */
-      if (fullscreenApiExists()) expandBtn.hidden = false;
-    });
+    }
+    thumb.addEventListener("click", activatePlayer);
     stage.appendChild(thumb);
     player.appendChild(stage);
 
@@ -878,11 +903,18 @@
     expandBtn.type = "button";
     expandBtn.className = "lesson-expand-btn";
     expandBtn.textContent = "Full screen";
-    expandBtn.hidden = true;
+    /* Visible whenever this browser exposes a fullscreen API at all,
+       even before the video is opened: a tap here starts the player
+       first (see the handler below). */
+    expandBtn.hidden = !fullscreenApiExists();
     expandBtn.addEventListener("click", function () {
-      /* Try the iframe first, then the stage wrapper if the iframe
-         request is refused: some Android webviews accept one element
-         and reject the other. */
+      /* Full screen before the video was opened (Nov 12, 2026): start
+         the player first, then fullscreen the fresh iframe, all inside
+         this same tap so the browser still counts a user gesture. Try
+         the iframe first, then the stage wrapper if the iframe request
+         is refused: some Android webviews accept one element and reject
+         the other. */
+      if (!currentIfr) activatePlayer();
       requestFullscreenOn(currentIfr, function () { requestFullscreenOn(stage, null); });
     });
     actions.appendChild(expandBtn);
@@ -974,7 +1006,7 @@
     state.submitRetries = 0;
     clearSubmitRetry();
     $("submit-error").hidden = true;
-    $("submitting-title").textContent = "Loading your exam…";
+    setSubmittingTitle("Loading your exam…", "Still loading, the server may be waking up…");
     showScreen("screen-submitting");
     api("/api/exam-questions", { token: state.token, exam: examN })
       .then(function (data) {
@@ -1480,7 +1512,7 @@
     if (state.submitting) return;
     stopTimer();
     closeDialog();
-    $("submitting-title").textContent = "Grading your exam…";
+    setSubmittingTitle("Grading your exam…", "Still grading, the server may be waking up…");
     showScreen("screen-submitting");
     /* Final sync BEFORE the submitting guard goes up: syncProgressNow()
        early-returns while state.submitting is true, so the sync must run
@@ -1511,7 +1543,7 @@
       // never restart the timer. Backoff, then retry the SAME submission_id.
       var delay = submitBackoffMs(state.submitRetries);
       state.submitRetries++;
-      $("submitting-title").textContent = "Grading your exam…";
+      setSubmittingTitle("Grading your exam…", "Still grading, the server may be waking up…");
       showScreen("screen-submitting");
       $("submit-error-text").textContent =
         "Could not reach the server, retrying in " + Math.round(delay / 1000) +
@@ -1527,7 +1559,7 @@
     }
     if (auto) {
       // Cap exhausted: stay on submitting screen with a MANUAL retry button.
-      $("submitting-title").textContent = "Grading your exam…";
+      setSubmittingTitle("Grading your exam…", "Still grading, the server may be waking up…");
       showScreen("screen-submitting");
       $("submit-error-text").textContent =
         "The server is still unreachable after several tries. Tap Try again to retry, " +
@@ -1580,7 +1612,7 @@
     closeDialog();
     if (state.submitting) return;
     stopTimer();
-    $("submitting-title").textContent = "Grading your exam…";
+    setSubmittingTitle("Grading your exam…", "Still grading, the server may be waking up…");
     showScreen("screen-submitting");
     /* Flush pending answers BEFORE forfeit: forfeit grades saved answers
        only, so an unflushed debounce would silently drop the last answer(s).
@@ -1616,7 +1648,7 @@
   function retryForfeit() {
     if (state.submitting) return;
     stopTimer();
-    $("submitting-title").textContent = "Grading your exam…";
+    setSubmittingTitle("Grading your exam…", "Still grading, the server may be waking up…");
     showScreen("screen-submitting");
     // No re-sync needed on retry: the first attempt already flushed,
     // and any answers tapped since are flushed by the restored heartbeat/debounce.

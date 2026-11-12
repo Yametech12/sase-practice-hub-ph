@@ -48,14 +48,40 @@ export function createMockNeon() {
   let writeCount = 0;
   let interfereOnce = null;
 
+  const queryLog = [];
+
   function exec(strings, values) {
     const text = strings.join("\u0000");
     const has = (m) => text.includes(m);
+    const marker = (text.match(/NEON:[a-z-]+/) || [null])[0];
+    if (marker) queryLog.push(marker);
 
     // Migration DDL (CREATE TABLE ...) has no /* NEON: */ marker, it runs
     // as a no-op success, like the real driver's direct-call form.
     if (/^\s*CREATE TABLE/i.test(text)) return [];
 
+    if (has("NEON:scope-bindings")) {
+      const oid = values[0];
+      return db.bindings.has(oid)
+        ? [{ order_id: oid, devices: clone(db.bindings.get(oid)) }]
+        : [];
+    }
+    if (has("NEON:scope-exams")) {
+      const oid = values[0];
+      return [...db.exams.entries()]
+        .filter(([k]) => k.slice(0, k.lastIndexOf(":")) === oid)
+        .map(([k, data]) => ({
+          order_id: oid,
+          exam_n: Number(k.slice(k.lastIndexOf(":") + 1)),
+          data: clone(data),
+        }));
+    }
+    if (has("NEON:scope-subs")) {
+      const oid = values[0];
+      return [...db.subs.entries()]
+        .filter(([key]) => key.split(":")[0] === oid)
+        .map(([key, result]) => ({ key, result: clone(result) }));
+    }
     if (has("NEON:read-bindings")) {
       return [...db.bindings.entries()].map(([order_id, devices]) => ({ order_id, devices: clone(devices) }));
     }
@@ -182,6 +208,7 @@ export function createMockNeon() {
   };
 
   tag.db = db;
+  tag.queryLog = queryLog;
   tag.interfereOnce = (fn) => {
     interfereOnce = fn;
   };

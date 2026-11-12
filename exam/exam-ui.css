@@ -113,6 +113,11 @@ body {
 .screen { display: none; }
 .screen.active { display: block; animation: fadein .25s ease; }
 @keyframes fadein { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: none;} }
+/* Exam screen exception (Nov 12, 2026): question and option text must
+   never fade through unreadable opacity, so this screen's enter
+   animation moves transform only. Other screens keep the fade. */
+#screen-exam.screen.active { animation: screenin .25s ease; }
+@keyframes screenin { from { transform: translateY(6px); } to { transform: none; } }
 
 /* ---------- gate screen ---------- */
 .gate-hero { text-align: center; padding: 18px 8px 6px; }
@@ -417,6 +422,7 @@ body {
 /* ---------- reduced motion (A11Y K16) ---------- */
 @media (prefers-reduced-motion: reduce) {
   .screen.active { animation: none; }
+  #screen-exam.screen.active { animation: none; }
   .grid-panel, .confirm-panel { animation: none; }
   .spinner { animation: none; }
   .skel-num, .skel-line { animation: none; }
@@ -466,10 +472,12 @@ body {
 #screen-exam .q-text { font-size: 16.5px; line-height: 1.5; margin: 0 0 14px; }
 #screen-exam .q-passage { font-size: 14px; margin: 0 0 12px; padding: 10px 12px; }
 
-/* question-change enter animation (re-triggered from JS) */
+/* question-change enter animation (re-triggered from JS).
+   Transform only (Nov 12, 2026): the old opacity 0 start rendered the
+   question and options pale on every question change. */
 @keyframes qEnter {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: none; }
+  from { transform: translateY(10px); }
+  to   { transform: none; }
 }
 #screen-exam .qcard.q-enter { animation: qEnter .28s ease; }
 @media (prefers-reduced-motion: reduce) {

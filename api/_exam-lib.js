@@ -235,6 +235,35 @@ export async function loadState() {
   return { sha: "neon:" + sha256(JSON.stringify(state)), state };
 }
 
+// Scoped read for ONE order (Nov 12, 2026 latency fix). loadState pulls
+// every buyer's rows (including every completed attempt's full review
+// JSONB) plus a whole-state stringify+hash on EVERY call, and the
+// read-only endpoints (list, lessons, result) each need exactly one
+// order's slice, so their cost grew with total buyer count for no reason.
+// loadOrderScope runs the same 3 reads with an order filter in one
+// transaction and returns the same state shape, scoped. The subs filter
+// uses split_part on the "<order_id>:<n>:<submission_id>" key format, so
+// it is exact (no LIKE wildcards involved). Write paths keep using
+// loadState/updateState: the guarded full-snapshot write is unchanged.
+export async function loadOrderScope(orderId) {
+  const sql = sqlClient();
+  const [bRows, eRows, sRows] = await sql.transaction(
+    [
+      sql`/* NEON:scope-bindings */ SELECT order_id, devices FROM bindings WHERE order_id = ${orderId}`,
+      sql`/* NEON:scope-exams */ SELECT order_id, exam_n, data FROM exams WHERE order_id = ${orderId}`,
+      sql`/* NEON:scope-subs */ SELECT key, result FROM used_submissions WHERE split_part(key, ':', 1) = ${orderId}`,
+    ],
+    { readOnly: true },
+  );
+  const bindings = {};
+  for (const r of bRows) bindings[r.order_id] = { devices: bindingDevices({ devices: r.devices }) };
+  const exams = {};
+  for (const r of eRows) (exams[r.order_id] ||= {})[String(r.exam_n)] = r.data;
+  const used_submissions = {};
+  for (const r of sRows) used_submissions[r.key] = r.result;
+  return { bindings, exams, used_submissions };
+}
+
 // Write the full after-state in ONE Serializable transaction. The guard
 // (first statement) raises unless the DB still equals `before`, the exact
 // snapshot the mutator saw. Raises -> caller retries with a fresh snapshot.

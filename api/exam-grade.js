@@ -24,6 +24,7 @@ import {
   verifyToken,
   ipHash,
   updateState,
+  loadOrderScope,
   loadBankAtBlob,
   getExamItems,
   loadCseBankAtBlob,
@@ -66,6 +67,19 @@ export default async function handler(req, res) {
 
     const idemKey = `${p.order_id}:${n}:${submission_id}`;
     let pendingLog = null;
+
+    // Idempotent-replay fast path (Nov 12, 2026 latency fix): a re-sent
+    // submission_id resolves read-only from this order's scoped rows,
+    // the same resolveSubmission the write path runs first. A replay
+    // therefore skips the full-state load and guarded write entirely.
+    // Anything not already graded falls through to updateState, which
+    // re-checks under the snapshot guard, so grading semantics (device
+    // binding, session match, expiry rule, bank pin) are unchanged.
+    const scope = await loadOrderScope(p.order_id);
+    const priorReplay = resolveSubmission(scope, idemKey);
+    if (priorReplay) {
+      return res.status(200).json(priorReplay);
+    }
 
     const outcome = await updateState(async (state) => {
       pendingLog = null; // a retry must never emit a previous run's event

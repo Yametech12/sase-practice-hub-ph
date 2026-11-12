@@ -10,7 +10,7 @@
  */
 import {
   verifyToken,
-  loadState,
+  loadOrderScope,
   readBody,
   validExamN,
   trackOf,
@@ -32,7 +32,8 @@ export default async function handler(req, res) {
     }
 
     const track = trackOf(p);
-    const { state } = await loadState();
+    // Scoped read: only this order's rows (Nov 12, 2026 latency fix).
+    const state = await loadOrderScope(p.order_id);
     const b = state.bindings[p.order_id];
     if (!bindingHasDevice(b, p.device_hash)) {
       return res.status(403).json({ error: "device_mismatch", message: deviceMismatchMsg(track) });

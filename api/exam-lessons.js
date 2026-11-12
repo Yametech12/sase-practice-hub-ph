@@ -21,7 +21,7 @@
  */
 import {
   verifyToken,
-  loadState,
+  loadOrderScope,
   readBody,
   trackOf,
   loadLessonsForTrack,
@@ -40,7 +40,8 @@ export default async function handler(req, res) {
       return res.status(401).json({ error: "bad_token", message: "Session expired. Please log in again." });
     }
     const track = trackOf(p);
-    const { state } = await loadState();
+    // Scoped read: only this order's binding row (Nov 12, 2026 latency fix).
+    const state = await loadOrderScope(p.order_id);
     const b = state.bindings[p.order_id];
     if (!bindingHasDevice(b, p.device_hash)) {
       return res.status(403).json({ error: "device_mismatch", message: deviceMismatchMsg(track) });

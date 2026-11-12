@@ -67,8 +67,8 @@ check("site.css gives id targets a 96px scroll margin",
   read("site.css").includes("scroll-margin-top: 96px"));
 
 /* Cache-bust bumped on both exam pages. */
-check("exam page loads exam-ui.js?v=20261112a", read("exam/index.html").includes("/exam/exam-ui.js?v=20261112a"));
-check("results page loads results-ui.js?v=20261112a", read("exam/results.html").includes("/exam/results-ui.js?v=20261112a"));
+check("exam page loads exam-ui.js?v=20261112b", read("exam/index.html").includes("/exam/exam-ui.js?v=20261112b"));
+check("results page loads results-ui.js?v=20261112b", read("exam/results.html").includes("/exam/results-ui.js?v=20261112b"));
 
 console.log("\nsite-fixes: " + passed + " passed" + (failed ? ", " + failed + " FAILED" : ""));
 process.exit(failed ? 1 : 0);

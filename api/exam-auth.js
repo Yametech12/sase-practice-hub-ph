@@ -27,10 +27,12 @@ import {
   ipHash,
   signToken,
   updateState,
+  loadOrderScope,
   readBody,
   logEvent,
   rateLimit,
   bindingDevices,
+  bindingHasDevice,
   MAX_DEVICES_PER_PASSWORD,
   deviceMismatchMsg,
   TRACK_SASE,
@@ -113,20 +115,33 @@ export default async function handler(req, res) {
     }
     const dh = deviceHash(device_id);
 
-    const outcome = await updateState((state) => {
-      const b = state.bindings[orderId];
-      const list = bindingDevices(b);
-      if (list.some((x) => x.device_hash === dh)) return { ok: true, rebound: false };
-      if (list.length >= MAX_DEVICES_PER_PASSWORD) return { ok: false, reason: "device_limit" };
-      // Bind this as an additional device (also lazy-migrates legacy bindings).
-      list.push({
-        device_hash: dh,
-        bound_at: new Date().toISOString(),
-        ip_hash: ipHash(req),
-      });
-      state.bindings[orderId] = { devices: list };
-      return { ok: true, rebound: true };
-    }, `exam: bind device for ${orderId}`);
+    // Fast path (Nov 12, 2026 latency fix): a repeat login from an
+    // already-bound device mutates nothing, which is exactly the outcome
+    // updateState returns when its snapshot comes back unchanged. A
+    // scoped binding read reaches the same answer without loading every
+    // buyer's state. Only a device that is NOT yet bound takes the
+    // guarded write path, where the device-limit check still runs under
+    // the snapshot guard, so no check is weakened.
+    const scope = await loadOrderScope(orderId);
+    let outcome;
+    if (bindingHasDevice(scope.bindings[orderId], dh)) {
+      outcome = { ok: true, rebound: false };
+    } else {
+      outcome = await updateState((state) => {
+        const b = state.bindings[orderId];
+        const list = bindingDevices(b);
+        if (list.some((x) => x.device_hash === dh)) return { ok: true, rebound: false };
+        if (list.length >= MAX_DEVICES_PER_PASSWORD) return { ok: false, reason: "device_limit" };
+        // Bind this as an additional device (also lazy-migrates legacy bindings).
+        list.push({
+          device_hash: dh,
+          bound_at: new Date().toISOString(),
+          ip_hash: ipHash(req),
+        });
+        state.bindings[orderId] = { devices: list };
+        return { ok: true, rebound: true };
+      }, `exam: bind device for ${orderId}`);
+    }
 
     if (!outcome.ok) {
       logEvent({
