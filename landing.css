@@ -509,6 +509,16 @@ a { color: var(--link); }
   cursor: pointer;
 }
 .mini-copy:hover { background: var(--coral-dark); }
+.pay-alt { color: rgba(255, 255, 255, 0.75); font-size: 0.9rem; margin: 16px 0 0; }
+.honesty-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--coral);
+  border-radius: 14px;
+  padding: 28px 30px;
+}
+.honesty-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; margin: 0 0 12px; }
+.honesty-card p { color: var(--muted); margin: 0; max-width: 75ch; }
 
 .order-card {
   background: var(--card);

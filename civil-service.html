@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
   <meta name="description" content="Civil Service Exam reviewer: 560 explained practice items, 8 online mock exams in the real CSE format, and 98 video lessons. Exam date March 14, 2027." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/civil-service.html" />
   <meta property="og:type" content="website" />
@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>Civil Service Exam Reviewer, CSE Practice Hub PH</title>
-  <link rel="stylesheet" href="/site.css" />
+  <link rel="stylesheet" href="/landing.css" />
 </head>
 <body>
 
@@ -32,8 +32,8 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand" aria-label="CSE Practice Hub PH home">
-        <span class="brand-mark">📘</span>
+      <div class="brand">
+        <span class="brand-mark">C</span>
         <span>CSE Practice Hub PH</span>
       </div>
       <div class="nav-wrap">
@@ -54,84 +54,54 @@
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="wrap">
-        <div class="hero-shell">
-          <div class="hero-grid">
-            <div>
-              <span class="eyebrow">Civil Service Exam · March 14, 2027</span>
-              <h1>Review for the CSE like it is the real thing.</h1>
-              <p class="lead">A complete Civil Service reviewer with lessons before the questions: 560 explained practice items in the PDF, 8 online mock exams in the real CSE format and time limit, and video lessons inside the portal, all for one payment.</p>
-              <div class="hero-actions">
-                <a href="#order" class="button primary">Order for ₱369</a>
-                <a href="/exam?track=cse" class="button secondary">Already ordered? Open portal</a>
+        <div class="hero-grid">
+          <div>
+            <span class="kicker">Civil Service Exam · March 14, 2027</span>
+            <h1>Review for the CSE like it is the real thing.</h1>
+            <p class="lead">A complete Civil Service reviewer with lessons before the questions: 560 explained practice items in the PDF, 8 online mock exams in the real CSE format and time limit, and video lessons inside the portal, all for one payment.</p>
+            <div class="hero-actions">
+              <a href="#order" class="button primary">Order for ₱369</a>
+              <a href="/exam?track=cse" class="button secondary">Already ordered? Open portal</a>
+            </div>
+            <p class="hero-sample-link">Filing for the March 14, 2027 CSE-PPT is already open. Slots are first come, first served, so start your review early.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <strong>560</strong>
+                <span>explained items</span>
               </div>
-              <p class="hero-sample-link">Filing for the March 14, 2027 CSE-PPT is already open. Slots are first come, first served, so start your review early.</p>
-              <div class="hero-stats" aria-label="Key product metrics">
-                <div class="stat">
-                  <strong>560</strong>
-                  <span>explained items</span>
-                </div>
-                <div class="stat">
-                  <strong>8</strong>
-                  <span>online mock exams</span>
-                </div>
-                <div class="stat">
-                  <strong>₱369</strong>
-                  <span>one-time payment</span>
-                </div>
+              <div class="stat">
+                <strong>8</strong>
+                <span>online mock exams</span>
+              </div>
+              <div class="stat">
+                <strong>₱369</strong>
+                <span>one-time payment</span>
               </div>
             </div>
+          </div>
 
-            <div>
-            <div class="mock-card scene" role="img" aria-label="Illustration of a mock exam: a question card with a timer, a score ring showing 84 percent, and a weak-spot tracker">
-              <svg class="scene-bg" viewBox="0 0 400 460" aria-hidden="true" focusable="false">
-                <defs>
-                  <linearGradient id="gSun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe28d"/><stop offset="1" stop-color="#ffb938"/></linearGradient>
-                </defs>
-                <circle cx="330" cy="70" r="46" fill="url(#gSun)" opacity=".9"/>
-                <circle cx="62" cy="400" r="70" fill="#ff8bb2" opacity=".22"/>
-                <g fill="#fff" opacity=".55">
-                  <circle cx="40" cy="60" r="3"/><circle cx="64" cy="92" r="2"/><circle cx="360" cy="190" r="3"/>
-                  <circle cx="24" cy="220" r="2"/><circle cx="372" cy="330" r="2.5"/>
-                </g>
-                <path d="M300 410l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#ffd85d"/>
-                <path d="M46 150l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#fff" opacity=".8"/>
-              </svg>
-
-              <div class="exam-sheet">
-                <div class="sheet-top">
-                  <span class="chip chip-subject">Verbal</span>
-                  <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 2:41:37</span>
-                </div>
-                <div class="sheet-progress" aria-hidden="true"><span></span></div>
-                <p class="sheet-q">Choose the word closest in meaning to ABATE.</p>
-                <div class="sheet-opts" aria-hidden="true">
-                  <div class="opt on"><b>A</b> Lessen <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                  <div class="opt"><b>B</b> Increase</div>
-                  <div class="opt"><b>C</b> Postpone</div>
-                  <div class="opt"><b>D</b> Praise</div>
-                </div>
+          <div class="hero-visual">
+            <div class="hero-art-wrap">
+            <img class="hero-art" src="/hero-coral.webp" alt="3D illustration of a stopwatch, progress cards, and an open book" width="1400" height="933" fetchpriority="high" />
+            <div class="exam-card" role="img" aria-label="Illustration of a mock exam question card with a timer and four answer options">
+              <div class="sheet-top">
+                <span class="chip chip-subject">Verbal</span>
+                <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 2:41:37</span>
               </div>
-
-              <div class="float-card score-float">
-                <svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true">
-                  <circle cx="32" cy="32" r="26" fill="none" stroke="#e1ecfb" stroke-width="8"/>
-                  <circle cx="32" cy="32" r="26" fill="none" stroke="#0f8d69" stroke-width="8" stroke-linecap="round" stroke-dasharray="163" stroke-dashoffset="26" transform="rotate(-90 32 32)"/>
-                  <text x="32" y="37" text-anchor="middle" font-size="15" font-weight="900" fill="#12314b">84%</text>
-                </svg>
-                <div><strong>Great job!</strong><span>Mock Exam 2</span></div>
+              <div class="sheet-progress" aria-hidden="true"><span></span></div>
+              <p class="sheet-q">Choose the word closest in meaning to ABATE.</p>
+              <div class="sheet-opts" aria-hidden="true">
+                <div class="opt on"><b>A</b> Lessen <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="opt"><b>B</b> Increase</div>
+                <div class="opt"><b>C</b> Postpone</div>
+                <div class="opt"><b>D</b> Praise</div>
               </div>
-
-              <div class="float-card weak-float">
-                <small>Weak spot</small>
-                <div class="mini-bar"><i style="width:48%"></i></div>
-                <span>Numerical · focus here</span>
-              </div>
+            </div>
             </div>
             <p class="hero-visual-caption">Illustration: sample exam view</p>
-            </div>
           </div>
         </div>
       </div>
@@ -221,29 +191,27 @@
     <section id="portal" class="section">
       <div class="wrap">
         <div class="portal-band">
-          <div class="portal-inner">
-            <span class="eyebrow">Included with your reviewer</span>
-            <h2 class="section-title" style="color:white; margin-top:12px;">Practice under real exam conditions.</h2>
-            <div class="portal-grid">
-              <article class="portal-card">
-                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-                <h3>8 full mock exams</h3>
-                <p>150 items each in the real CSE format: Verbal 52, Numerical 38, Analytical 30, General Information 30. All 8 open right away.</p>
-              </article>
-              <article class="portal-card">
-                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="13.5" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v5l3 2M9.5 2.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                <h3>The real 3 hours 10 minutes timer</h3>
-                <p>A server-enforced clock and one attempt per exam, like the real day. Finishing an exam unlocks a full answer review with explanations.</p>
-              </article>
-              <article class="portal-card">
-                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.5l5 2.5-5 2.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
-                <h3>98 video lessons</h3>
-                <p>Stream lessons grouped by the four CSE sections, as a study path inside the portal. When a mock result flags a weak section, it links straight to that section's lessons.</p>
-              </article>
-            </div>
-            <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
-              <a href="/exam?track=cse" class="button primary">Open the CSE portal</a>
-            </div>
+          <span class="kicker">Included with your reviewer</span>
+          <h2 class="section-title" style="margin-top:14px;">Practice under real exam conditions.</h2>
+          <div class="portal-grid">
+            <article class="portal-card">
+              <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <h3>8 full mock exams</h3>
+              <p>150 items each in the real CSE format: Verbal 52, Numerical 38, Analytical 30, General Information 30. All 8 open right away.</p>
+            </article>
+            <article class="portal-card">
+              <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="13.5" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v5l3 2M9.5 2.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h3>The real 3 hours 10 minutes timer</h3>
+              <p>A server-enforced clock and one attempt per exam, like the real day. Finishing an exam unlocks a full answer review with explanations.</p>
+            </article>
+            <article class="portal-card">
+              <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.5l5 2.5-5 2.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+              <h3>98 video lessons</h3>
+              <p>Stream lessons grouped by the four CSE sections, as a study path inside the portal. When a mock result flags a weak section, it links straight to that section's lessons.</p>
+            </article>
+          </div>
+          <div class="hero-actions" style="margin-top: 26px;">
+            <a href="/exam?track=cse" class="button primary">Open the CSE portal</a>
           </div>
         </div>
       </div>
@@ -258,7 +226,7 @@
       </div>
       <div class="wrap order-wrap">
         <aside class="info-card">
-          <span class="eyebrow" style="color: var(--primary-dark);">Pay and send details</span>
+          <span class="kicker">Pay and send details</span>
           <h3>Easy payment, easy process</h3>
           <div class="qr-box">
             <img src="qr-payment-369.png" alt="InstaPay QR code for the ₱369 Civil Service reviewer payment" width="353" height="353" loading="lazy" decoding="async" />
@@ -270,7 +238,7 @@
           </div>
           <div class="mobile-box">
             <div>
-              <small style="display:block; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: 0.7rem;">GCash number</small>
+              <small>GCash number</small>
               <strong>0991 277 4308</strong>
             </div>
           </div>
@@ -299,7 +267,7 @@
 
     <section class="section" id="honesty">
       <div class="wrap">
-        <div class="info-card">
+        <div class="honesty-card">
           <h3>Honest notes before you buy</h3>
           <p>Every item in this reviewer is an original practice item written for this product and modeled on the official CSC coverage. No item is a real, leaked, or recalled exam question. This product is not affiliated with the Civil Service Commission, and the CSC does not produce or accredit any review material, including this one. Your practice percent is a study benchmark against the 80.00 passing rating; it is not your official rating, and no reviewer can guarantee a pass. What we can promise is honest, carefully checked material that teaches as it tests.</p>
         </div>
