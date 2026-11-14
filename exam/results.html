@@ -127,6 +127,8 @@
 document.getElementById('btnLogout').addEventListener('click', function () {
   try {
     sessionStorage.removeItem('sase_exam_session');
+    sessionStorage.removeItem('portal_session_sase');
+    sessionStorage.removeItem('portal_session_cse');
     sessionStorage.removeItem('sase_exam_result');
     sessionStorage.removeItem('sase_exam_n');
   } catch (e) {}

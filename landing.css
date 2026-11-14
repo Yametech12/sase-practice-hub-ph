@@ -267,6 +267,8 @@ a { color: var(--link); }
   border-radius: 26px;
   box-shadow: 0 34px 70px rgba(0, 0, 0, 0.42);
   width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 .exam-card {
   position: absolute;
@@ -481,7 +483,7 @@ a { color: var(--link); }
 .info-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; margin: 8px 0 18px; }
 .info-card .kicker { color: #ffd9cd; }
 .qr-box { background: #fff; border-radius: 18px; padding: 18px; text-align: center; }
-.qr-box img { margin: 0 auto; border-radius: 8px; }
+.qr-box img { margin: 0 auto; border-radius: 8px; width: 100%; max-width: 250px; height: auto; }
 .qr-caption { color: #5d5b73; font-size: 0.86rem; margin: 12px 0 0; }
 .amount { display: flex; align-items: baseline; justify-content: space-between; margin-top: 22px; }
 .amount small { color: rgba(255, 255, 255, 0.7); }
@@ -682,4 +684,99 @@ footer a { color: #ffb59f; }
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: none; }
   }
+}
+
+/* ============================================================
+   DESIGN ELEVATION (Nov 15, 2026): depth, texture, and rhythm
+   on top of the base system. No layout or content changes.
+   ============================================================ */
+::selection { background: var(--coral); color: #fff; }
+
+/* film grain over the dark hero and portal band */
+.hero, .portal-band { position: relative; }
+.hero::after, .portal-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+.hero .wrap, .portal-band > * { position: relative; z-index: 1; }
+.portal-band { overflow: hidden; }
+
+/* gradient display type */
+.hero h1 {
+  background: linear-gradient(100deg, #ffffff 55%, #ffc9b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.section-title { letter-spacing: -0.015em; }
+.section-head { position: relative; }
+.section-head::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--coral), var(--coral-deep));
+  margin-bottom: 18px;
+}
+
+/* stat numerals pick up the coral gradient */
+.hero-stats .stat strong {
+  background: linear-gradient(120deg, #ffffff, #ffb59f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* tactile primary buttons */
+.button.primary, .generate-btn {
+  box-shadow: 0 10px 24px rgba(214, 64, 38, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.button.primary:hover, .generate-btn:hover {
+  box-shadow: 0 14px 30px rgba(179, 50, 31, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* section rhythm: alternating warm tint */
+main > .section:nth-of-type(even) { background: #f1eee8; }
+@media (prefers-color-scheme: dark) {
+  main > .section:nth-of-type(even) { background: #16142f; }
+}
+
+/* cards lift on hover, headings get a coral tick */
+.value-card, .feature-card { transition: transform 0.18s ease; }
+.value-card:hover, .feature-card:hover { transform: translateY(-3px); }
+.feature-card { border-top-color: var(--coral); }
+.value-card h3 { position: relative; padding-left: 18px; }
+.value-card h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--coral);
+}
+
+/* sample band: soft dotted texture over the tint */
+.sample-band {
+  background-image: radial-gradient(rgba(214, 64, 38, 0.14) 1.2px, transparent 1.3px);
+  background-size: 22px 22px;
+}
+
+/* topbar gains depth once the page scrolls under it */
+.topbar { box-shadow: 0 10px 30px rgba(23, 22, 56, 0.1); }
+
+/* FAQ rows breathe and react */
+.faq-item summary { transition: color 0.15s ease; }
+.faq-item summary:hover { color: var(--link); }
+
+/* sticky order card: deeper glass, coral edge light */
+.info-card {
+  border-top: 3px solid var(--coral);
+  box-shadow: 0 30px 60px rgba(16, 15, 40, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
