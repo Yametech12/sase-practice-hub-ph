@@ -88,7 +88,7 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 14px 16px;
-  background: #fbfcff;
+  background: #faf8fd;
 }
 .sample-review-q { margin: 0 0 6px; font-size: 15px; font-weight: 600; }
 .sample-review-line { margin: 0 0 6px; font-size: 14px; font-weight: 700; }
@@ -116,10 +116,10 @@
 .sample-retake { display: block; margin: 0 auto; }
 
 @media (prefers-color-scheme: dark) {
-  .sample-score-line, .sample-upsell h3, .sample-plan h3, .sample-price { color: #e8f0fa; }
+  .sample-score-line, .sample-upsell h3, .sample-plan h3, .sample-price { color: #edecf4; }
   /* The priority box keeps its light cream background in dark mode
      (--gold-soft is not redefined there), so its text stays dark. */
   .sample-priority { color: var(--blue-900); }
-  .sample-review-item { background: #16273f; }
-  .sample-note { color: #e8f0fa; }
+  .sample-review-item { background: #232147; }
+  .sample-note { color: #edecf4; }
 }

@@ -5,23 +5,23 @@
 
 :root {
   color-scheme: light dark;
-  --blue-900: #0c2147;
-  --blue-700: #1a3f86;
-  --blue-600: #2456ab;
-  --blue-100: #dbe7fb;
-  --blue-50:  #eef4fd;
-  --ink: #17233b;
-  --muted: #5b6b8c;
-  --line: #dbe3f0;
+  --blue-900: #171638;
+  --blue-700: #2c2a5e;
+  --blue-600: #232147;
+  --blue-100: #e6e2f4;
+  --blue-50:  #f7f5f1;
+  --ink: #1c1b2e;
+  --muted: #5d5b73;
+  --line: #e6e2f4;
   --green: #0e6b44;   /* darkened: on white = 6.55:1 (A11Y C3); white on this = 6.55:1 (C5) */
   --green-bg: #e6f6ee;
   --red: #b52c42;     /* darkened: on white = 6.17:1 (A11Y C4); white on this = 6.17:1 (C5) */
   --red-bg: #fdeaed;
   --amber: #7a520d;   /* darkened: on #fdf3e0 = 6.27:1 (A11Y C1); white on this = 6.91:1 (C5) */
   --amber-bg: #fdf3e0;
-  --grey-bg: #eef1f6;
+  --grey-bg: #ede9f7;
   --radius: 18px;
-  --shadow: 0 2px 12px rgba(15, 42, 92, 0.08);
+  --shadow: 0 2px 12px rgba(23, 22, 56, 0.08);
 }
 
 * { box-sizing: border-box; }
@@ -30,7 +30,7 @@ html { -webkit-text-size-adjust: 100%; }
 /* Skip link: visible only on keyboard focus */
 .skip-link {
   position: absolute; left: 12px; top: -100px; z-index: 200;
-  background: #0f2a5c; color: #fff; font-weight: 700; font-size: 14px;
+  background: #171638; color: #fff; font-weight: 700; font-size: 14px;
   padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
 }
 .skip-link:focus { top: 0; }
@@ -75,12 +75,12 @@ body {
 .back-link {
   display: inline-flex; align-items: center; gap: 4px;
   color: var(--blue-900); text-decoration: none; font-size: 13px; font-weight: 700;
-  background: #fff; border: 1px solid #d5dcea;
+  background: #fff; border: 1px solid #e6e2f4;
   padding: 10px 14px; border-radius: 999px; white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(12,33,71,.08);
+  box-shadow: 0 1px 3px rgba(23,22,56,.08);
   min-height: 44px; /* 44px touch target */
 }
-.back-link:hover, .back-link:focus-visible { background: #eef3fb; }
+.back-link:hover, .back-link:focus-visible { background: #f1eef9; }
 @media (max-width: 420px) {
   .back-link { padding: 10px 12px; font-size: 12px; min-height: 44px; }
   .brand-name { font-size: 13px; }
@@ -192,7 +192,7 @@ body {
 }
 .chip span { color: var(--muted); font-weight: 700; }
 .chip.active { background: var(--blue-900); border-color: var(--blue-900); color: #fff; }
-.chip.active span { color: #cdd9f2; }
+.chip.active span { color: #d8d4f0; }
 
 .review-list { display: flex; flex-direction: column; gap: 10px; }
 .q-empty { padding: 18px 12px; text-align: center; font-size: 13.5px; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; background: #fff; }
@@ -250,8 +250,8 @@ body {
   font-size: 13.5px;
   line-height: 1.6;
   color: var(--ink);
-  background: #f4f7ff;
-  border-left: 4px solid #1d4ed8;
+  background: #f4f1fa;
+  border-left: 4px solid #ff6f4f;
   border-radius: 0 8px 8px 0;
   white-space: pre-wrap;
 }
@@ -305,29 +305,29 @@ body {
    ============================================================ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e8f0fa;
-    --muted: #a8b8d0;
-    --line: #2c3f5f;
-    --blue-50: #101f36;
-    --blue-100: #22385c;
+    --ink: #edecf4;
+    --muted: #a5a3bd;
+    --line: #3a3768;
+    --blue-50: #141333;
+    --blue-100: #2e2b5c;
     --green-bg: #14382a;
     --red-bg: #3d1a22;
     --amber-bg: #3a2f16;
-    --grey-bg: #22385c;
+    --grey-bg: #2e2b5c;
   }
-  body { background: #0d182b; }
+  body { background: #100f28; }
   .brand-name, .card-title, .hero-copy h1, .sec-pct, .sec-name, .score-pct,
-  .improve-item strong, .q-head-q, .q-text { color: #e8f0fa; }
-  .back-link, .btn-ghost, .chip, .q-item, .q-empty, .card { background: #1a2c47; color: var(--ink); }
-  .back-link, .btn-ghost, .chip { color: #dbe7fb; }
-  .chip.active { background: #2c4a7a; border-color: #2c4a7a; color: #fff; }
-  .btn-primary { background: #2c4a7a; }
-  .btn-primary:active { background: #3a5a8a; }
-  .exam-status { background: #16273f; }
-  .disclaimer, .improve-item, .q-expl { background: #16273f; }
-  .sec-track { background: #22385c; }
-  .q-passage { background: #16273f; }
-  .q-code { color: #9cc3f0; background: #22385c; }
+  .improve-item strong, .q-head-q, .q-text { color: #edecf4; }
+  .back-link, .btn-ghost, .chip, .q-item, .q-empty, .card { background: #1e1c45; color: var(--ink); }
+  .back-link, .btn-ghost, .chip { color: #e6e2f4; }
+  .chip.active { background: #3a3768; border-color: #3a3768; color: #fff; }
+  .btn-primary { background: #3a3768; }
+  .btn-primary:active { background: #4a4780; }
+  .exam-status { background: #232147; }
+  .disclaimer, .improve-item, .q-expl { background: #232147; }
+  .sec-track { background: #2e2b5c; }
+  .q-passage { background: #232147; }
+  .q-code { color: #ffb59f; background: #2e2b5c; }
   .q-opts li { color: var(--muted); }
   .q-opts li b { color: var(--ink); }
   .q-item.correct .q-status { color: #7ed9a8; background: #14382a; }
@@ -337,8 +337,8 @@ body {
   .ans-line .you-right { color: #7ed9a8; }
   .ans-line .you-wrong { color: #f08ba0; }
   .improve-ok { background: #14382a; color: #7ed9a8; }
-  .improve-item .chap { background: #1a2c47; color: #9cc3f0; }
-  .foot a { color: #9cc3f0; }
+  .improve-item .chap { background: #1e1c45; color: #ffb59f; }
+  .foot a { color: #ffb59f; }
 }
 
 /* Civil Service results: 80.00 benchmark line + weak-section lessons link */
@@ -353,6 +353,36 @@ body {
 /* Contrast fixes (QA Nov 11, 2026): lessons link + practice badge in dark */
 .improve-item.lessons-link a { color: var(--blue-700); }
 @media (prefers-color-scheme: dark) {
-  .improve-item.lessons-link a { color: #9cc3f0; }
+  .improve-item.lessons-link a { color: #ffb59f; }
   .practice-badge { color: #f0cd7a; }
+}
+
+
+/* ============================================================
+   INDIGO/CORAL ALIGNMENT (Nov 15, 2026): token swap above plus
+   pinned on-white text (the light-mode variables flip in dark
+   mode, so on-white text colors must not track them).
+   ============================================================ */
+body { color: #1c1b2e; background: #f7f5f1; }
+.brand-name, .hero-copy h1, .card-title { font-family: Montserrat, Inter, sans-serif; }
+.brand-name, .card-title, .hero-copy h1, .score-pct, .sec-pct,
+.improve-item strong { color: #171638; }
+.chip, .btn-ghost, .improve-item.lessons-link a { color: #232147; }
+.q-code { color: #232147; }
+.chip.active { background: #171638; border-color: #171638; }
+.chip.active span { color: #d8d4f0; }
+.q-expl { border-left-color: #232147; }
+.q-passage { border-left-color: #ff6f4f; }
+.btn-primary { background: #232147; }
+.btn-primary:active { background: #171638; }
+.exam-status { background: #171638; }
+.skip-link { background: #171638; }
+@media (prefers-color-scheme: dark) {
+  body { background: #100f28; }
+  .back-link, .btn-ghost, .chip { color: #d8d4f0; }
+  .improve-item.lessons-link a { color: #ffb59f; }
+  .chip.active { background: #3a3768; border-color: #3a3768; }
+  .btn-primary { background: #3a3768; }
+  .btn-primary:active { background: #4a4780; }
+  .exam-status { background: #232147; }
 }

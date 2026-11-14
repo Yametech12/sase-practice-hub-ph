@@ -7,17 +7,17 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
   <title>Page not found, SASE Practice Hub PH</title>
   <style>
-    :root { --bg: #f5f9ff; --ink: #12314b; --muted: #5d7188; --line: rgba(18,49,75,0.1); --primary: #1a78e8; --primary-dark: #0d4ea3; --yellow: #ffd85d; --radius-lg: 24px; --max: 1180px; }
+    :root { --bg: #f7f5f1; --ink: #1c1b2e; --muted: #5d5b73; --line: rgba(28,27,46,0.12); --primary: #ff6f4f; --primary-dark: #c93a20; --yellow: #ff6f4f; --radius-lg: 24px; --max: 1180px; }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, "Segoe UI", system-ui, sans-serif; background: linear-gradient(180deg, #f8fbff 0%, #f4f8ff 34%, #f2f7fb 100%); color: var(--ink); line-height: 1.6; }
+    body { margin: 0; font-family: Inter, "Segoe UI", system-ui, sans-serif; background: #f7f5f1; color: var(--ink); line-height: 1.6; }
     a { color: inherit; }
-    .topbar { position: sticky; top: 0; z-index: 50; background: rgba(13,24,42,0.76); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .topbar { position: sticky; top: 0; z-index: 50; background: rgba(23,22,56,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
     .topbar-inner { max-width: var(--max); width: min(var(--max), calc(100% - 24px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; }
     .brand { display: inline-flex; align-items: center; gap: 10px; color: white; font-weight: 900; letter-spacing: 0.02em; text-decoration: none; }
-    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, var(--yellow), #ffe18d); color: var(--ink); font-size: 18px; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: var(--yellow); color: #fff; font-size: 18px; font-weight: 800; }
     .nav { display: flex; align-items: center; gap: 18px; font-size: 0.94rem; color: rgba(255,255,255,0.82); flex-wrap: wrap; }
     .nav a { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 600; padding: 10px 4px; display: inline-flex; align-items: center; min-height: 44px; }
     .nav a:hover { color: #fff; }
@@ -25,12 +25,12 @@
     .topbar :focus-visible { outline-color: var(--yellow); }
     .wrap { width: min(760px, calc(100% - 28px)); margin: 0 auto; }
     main { padding: 56px 0 20px; text-align: center; }
-    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px 28px; box-shadow: 0 12px 26px rgba(7,28,50,0.08); }
-    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 12px; line-height: 1.05; letter-spacing: -0.03em; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px 28px; box-shadow: 0 12px 26px rgba(23,22,56,0.08); }
+    h1 { font-family: Montserrat, Inter, sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 12px; line-height: 1.05; letter-spacing: -0.03em; }
     p { color: var(--muted); margin: 0 auto 24px; max-width: 520px; }
     .links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 999px; text-decoration: none; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
-    .button.alt { background: linear-gradient(135deg, var(--yellow), #ffe28d); color: var(--ink); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 999px; text-decoration: none; font-weight: 800; background: var(--primary-dark); color: #fff; }
+    .button.alt { background: var(--yellow); color: #fff; }
     .button.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
     footer { padding: 28px 0 42px; color: var(--muted); }
     .footer-inner { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 0.82rem; border-top: 1px solid var(--line); padding-top: 18px; }
@@ -48,7 +48,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="/" aria-label="SASE Practice Hub PH home">
-        <span class="brand-mark">&#128218;</span>
+        <span class="brand-mark">S</span>
         <span>SASE Practice Hub PH</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
