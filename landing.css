@@ -905,3 +905,128 @@ main > .section:nth-of-type(even) { background: #f1eee8; }
   .rv.in { opacity: 1; transform: translateY(0); }
   .rv.in.value-card:hover, .rv.in.feature-card:hover, .rv.in.portal-card:hover { transform: translateY(-3px); }
 }
+
+/* ============================================================
+   DESIGN ELEVATION 3 (Nov 15, 2026): the answer-sheet identity.
+   Question markers, bubble-sheet texture, editorial stats,
+   one offset section, a pen check, ruled-paper double rules.
+   Texture and type only; the round-2 3D scene is untouched.
+   ============================================================ */
+
+/* --- 1. section eyebrows become question markers --- */
+.q-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  color: var(--coral-deep);
+  margin-bottom: 16px;
+}
+.q-mark::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid var(--coral-deep);
+  background: radial-gradient(circle, var(--coral-deep) 0, var(--coral-deep) 3.5px, transparent 4.5px);
+}
+.section-head:has(> .q-mark)::before { display: none; }
+
+/* --- 2. bubble-sheet texture on the sample and portal bands --- */
+.sample-band {
+  background-image:
+    radial-gradient(circle at 16px 16px, transparent 0, transparent 2.3px, rgba(160, 44, 18, 0.18) 2.3px, rgba(160, 44, 18, 0.18) 3.5px, transparent 3.6px),
+    radial-gradient(circle at 104px 70px, rgba(214, 64, 38, 0.20) 0, rgba(214, 64, 38, 0.20) 3.4px, transparent 4.2px);
+  background-size: 46px 46px, 190px 190px;
+}
+.portal-band {
+  background:
+    radial-gradient(circle at 16px 16px, transparent 0, transparent 2.3px, rgba(255, 255, 255, 0.10) 2.3px, rgba(255, 255, 255, 0.10) 3.5px, transparent 3.6px),
+    radial-gradient(circle at 104px 70px, rgba(255, 111, 79, 0.32) 0, rgba(255, 111, 79, 0.32) 3.4px, transparent 4.2px),
+    radial-gradient(640px 360px at 100% 0%, rgba(255, 111, 79, 0.25), transparent 60%),
+    linear-gradient(150deg, var(--indigo-soft), var(--indigo-deep));
+  background-size: 46px 46px, 190px 190px, auto, auto;
+}
+
+/* --- 3. stats go editorial: giant numerals, hairline rules --- */
+.hero-stats { align-items: stretch; gap: 38px; }
+.hero-stats .stat { display: flex; flex-direction: column; justify-content: center; }
+.hero-stats .stat + .stat { border-left: 1px solid var(--line-dark); padding-left: 38px; }
+.hero-stats .stat strong {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  color: #fff;
+  font-size: clamp(3.1rem, 7.2vw, 5.75rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+.hero-stats .stat:first-child strong {
+  background: linear-gradient(120deg, #ffffff, #ffb59f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-stats .stat span {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.76rem;
+  font-weight: 600;
+  max-width: none;
+}
+@media (max-width: 640px) {
+  .hero-stats { gap: 24px; }
+  .hero-stats .stat + .stat { border-left: none; padding-left: 0; }
+}
+
+/* --- 4. one offset section: coverage head left, rows wide right --- */
+@media (min-width: 921px) {
+  #coverage .wrap { display: grid; grid-template-columns: 290px 1fr; gap: 54px; align-items: start; }
+  #coverage .section-head { margin-bottom: 0; position: sticky; top: 108px; }
+  #coverage .value-grid { gap: 26px; }
+}
+
+/* --- 5. teacher's-pen check inside the chosen answer bubble --- */
+.sheet-opts .opt.on b {
+  position: relative;
+  background: var(--coral-tint);
+  color: var(--coral-deep);
+}
+.sheet-opts .opt.on b::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  bottom: 4px;
+  width: 7px;
+  height: 4px;
+  border-left: 2.2px solid var(--coral-deep);
+  border-bottom: 2.2px solid var(--coral-deep);
+  transform: rotate(-48deg);
+}
+
+/* --- 6. ruled-paper double rules on the key dividers --- */
+#faq, #order {
+  border-top: none;
+  background-image: linear-gradient(var(--line), var(--line)), linear-gradient(var(--line), var(--line));
+  background-size: 100% 1px, 100% 1px;
+  background-position: 0 0, 0 4px;
+  background-repeat: no-repeat;
+}
+
+/* --- dark mode tuning for the new marks --- */
+@media (prefers-color-scheme: dark) {
+  .q-mark { color: #ff8a70; }
+  .q-mark::before {
+    border-color: #ff8a70;
+    background: radial-gradient(circle, #ff8a70 0, #ff8a70 3.5px, transparent 4.5px);
+  }
+  .sample-band {
+    background-image:
+      radial-gradient(circle at 16px 16px, transparent 0, transparent 2.3px, rgba(255, 158, 128, 0.16) 2.3px, rgba(255, 158, 128, 0.16) 3.5px, transparent 3.6px),
+      radial-gradient(circle at 104px 70px, rgba(255, 111, 79, 0.30) 0, rgba(255, 111, 79, 0.30) 3.4px, transparent 4.2px);
+  }
+}
