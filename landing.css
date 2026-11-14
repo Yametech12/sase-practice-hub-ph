@@ -564,6 +564,8 @@ a { color: var(--link); }
 .generate-btn:hover { background: var(--coral-dark); }
 .summary-box { display: none; margin-top: 22px; border-top: 1px solid var(--line); padding-top: 20px; }
 .summary-box.visible { display: block; }
+.order-ref { margin: 0 0 10px; color: var(--muted); font-size: 0.9rem; }
+.order-ref strong { color: var(--ink); }
 .summary-box pre {
   background: var(--paper);
   border-radius: 12px;
