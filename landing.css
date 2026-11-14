@@ -782,3 +782,126 @@ main > .section:nth-of-type(even) { background: #f1eee8; }
   border-top: 3px solid var(--coral);
   box-shadow: 0 30px 60px rgba(16, 15, 40, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
+
+/* ============================================================
+   DESIGN ELEVATION 2 (Nov 15, 2026): true 3D hero scene.
+   One light source (upper left) drives every shadow below.
+   Presentation only: no layout, copy, or behavior changes.
+   ============================================================ */
+
+/* --- layered, directional shadows --- */
+.hero-art {
+  position: relative;
+  box-shadow:
+    0 18px 36px rgba(10, 9, 30, 0.34),
+    0 48px 90px rgba(10, 9, 30, 0.38);
+}
+.exam-card {
+  box-shadow:
+    0 3px 6px rgba(16, 15, 40, 0.16),
+    0 16px 32px rgba(16, 15, 40, 0.20),
+    0 42px 84px rgba(16, 15, 40, 0.27),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(23, 22, 56, 0.05);
+}
+.chip { box-shadow: 0 5px 12px rgba(16, 15, 40, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.55); }
+
+/* soft coral glow pooled behind the hero art */
+.scene3d::before {
+  content: "";
+  position: absolute;
+  inset: 6% -4% -6% 10%;
+  background: radial-gradient(closest-side, rgba(255, 111, 79, 0.4), transparent 72%);
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+/* floating ceramic sphere, the front-most hero accent */
+.orb {
+  position: absolute;
+  top: -20px;
+  right: 7%;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #ffe3d8 0%, var(--coral) 52%, var(--coral-deep) 100%);
+  box-shadow:
+    0 18px 32px rgba(160, 44, 18, 0.35),
+    inset -7px -9px 15px rgba(160, 44, 18, 0.45),
+    inset 5px 7px 11px rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+}
+
+/* --- section depth: real card surfaces and tactile panels --- */
+.value-grid .value-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 26px 24px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    0 2px 6px rgba(23, 22, 56, 0.05),
+    0 18px 36px rgba(23, 22, 56, 0.07);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.value-grid .value-card:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    0 4px 10px rgba(23, 22, 56, 0.06),
+    0 28px 52px rgba(23, 22, 56, 0.12);
+}
+.order-card {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 6px rgba(23, 22, 56, 0.05),
+    0 22px 46px rgba(23, 22, 56, 0.09);
+}
+.info-card {
+  background: linear-gradient(165deg, #211f4e 0%, var(--indigo) 52%, var(--indigo-deep) 100%);
+  box-shadow:
+    0 4px 10px rgba(16, 15, 40, 0.25),
+    0 24px 48px rgba(16, 15, 40, 0.34),
+    0 52px 100px rgba(16, 15, 40, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+.portal-card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 14px 30px rgba(10, 9, 30, 0.25);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.portal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 24px 44px rgba(10, 9, 30, 0.32);
+}
+@media (prefers-color-scheme: dark) {
+  .value-grid .value-card {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 18px 36px rgba(0, 0, 0, 0.35);
+  }
+  .order-card {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 22px 46px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* --- the 3D scene: desktop, fine pointer, motion allowed --- */
+@media (prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 921px) {
+  .hero-visual { perspective: 1150px; perspective-origin: 50% 42%; }
+  .scene3d { transform-style: preserve-3d; will-change: transform; }
+  .scene3d::before { transform: translateZ(-70px); }
+  .hero-art { transform: translateZ(-26px) scale(1.03); }
+  .exam-card { transform: translateZ(48px); transform-style: preserve-3d; }
+  .exam-card .sheet-top { transform-style: preserve-3d; }
+  .exam-card .chip { transform: translateZ(15px); }
+  .orb { transform: translateZ(72px); }
+}
+
+/* --- scroll reveal (JS adds .rv, observer adds .in) --- */
+@media (prefers-reduced-motion: no-preference) {
+  .rv { opacity: 0; transform: translateY(12px); transition: opacity 0.35s ease, transform 0.35s ease; }
+  .rv.in { opacity: 1; transform: translateY(0); }
+  .rv.in.value-card:hover, .rv.in.feature-card:hover, .rv.in.portal-card:hover { transform: translateY(-3px); }
+}

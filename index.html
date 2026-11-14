@@ -90,8 +90,9 @@
           </div>
 
           <div class="hero-visual">
-            <div class="hero-art-wrap">
+            <div class="hero-art-wrap scene3d">
             <img class="hero-art" src="/hero-coral-full.webp" alt="3D illustration of a stopwatch, progress cards, and an open book" width="1400" height="1060" fetchpriority="high" />
+            <span class="orb" aria-hidden="true"></span>
             <div class="exam-card" role="img" aria-label="Illustration of a mock exam question card with a timer and four answer options">
               <div class="sheet-top">
                 <span class="chip chip-subject">Mathematics</span>
@@ -534,6 +535,50 @@
         if (el) { setTimeout(function () { el.scrollIntoView(); stripHash(); }, 50); }
         else stripHash();
       }
+    })();
+  </script>
+  <script>
+    /* Design elevation: scroll reveal + pointer tilt on the hero 3D scene.
+       Pure decoration; runs only when motion is allowed. */
+    (function () {
+      if (!window.matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+      var blocks = document.querySelectorAll(".section-head, .feature-card, .value-card, .portal-card, .faq-item, .sample-band, .portal-band, .order-card, .info-card, .honesty-card");
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            var el = en.target;
+            el.classList.add("in");
+            io.unobserve(el);
+            setTimeout(function () { el.style.transitionDelay = "0ms"; }, 650);
+          });
+        }, { threshold: 0.12 });
+        blocks.forEach(function (el, i) {
+          el.classList.add("rv");
+          el.style.transitionDelay = (i % 3) * 60 + "ms";
+          io.observe(el);
+        });
+      }
+      var scene = document.querySelector(".scene3d");
+      if (!scene || !window.matchMedia("(pointer: fine)").matches) return;
+      var host = scene.closest(".hero-visual") || scene;
+      var tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+      function loop() {
+        cx += (tx - cx) * 0.12;
+        cy += (ty - cy) * 0.12;
+        scene.style.transform = "rotateX(" + cy.toFixed(2) + "deg) rotateY(" + cx.toFixed(2) + "deg)";
+        raf = (Math.abs(tx - cx) > 0.02 || Math.abs(ty - cy) > 0.02) ? requestAnimationFrame(loop) : 0;
+      }
+      function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+      host.addEventListener("pointermove", function (e) {
+        if (window.innerWidth < 921) return;
+        var r = scene.getBoundingClientRect();
+        if (!r.width) return;
+        tx = Math.max(-6, Math.min(6, ((e.clientX - r.left) / r.width - 0.5) * 12));
+        ty = Math.max(-6, Math.min(6, (0.5 - (e.clientY - r.top) / r.height) * 12));
+        kick();
+      });
+      host.addEventListener("pointerleave", function () { tx = 0; ty = 0; kick(); });
     })();
   </script>
 </body>
