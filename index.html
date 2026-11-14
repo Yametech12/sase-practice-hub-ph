@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
   <meta name="description" content="SASE Practice Hub PH: ₱167 one-time MSU-SASE reviewer with 450 explained questions, 8 online mock exams (180 items each), and 72 video lessons in the portal." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:type" content="website" />
@@ -24,17 +24,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>SASE Practice Hub PH</title>
-  <link rel="stylesheet" href="/site.css" />
+  <link rel="stylesheet" href="/landing.css" />
 </head>
 <body>
-
 
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand" aria-label="SASE Practice Hub PH home">
-        <span class="brand-mark">📘</span>
+        <span class="brand-mark">S</span>
         <span>SASE Practice Hub PH</span>
       </div>
       <div class="nav-wrap">
@@ -60,84 +59,52 @@
   <main id="main-content">
     <section class="hero">
       <div class="wrap">
-        <div class="hero-shell">
-          <div class="hero-grid">
-            <div>
-              <span class="eyebrow">No cap, just better prep</span>
-              <h1>Study smarter, not harder.</h1>
-              <p class="lead">A casual, student-friendly SASE prep hub with lessons before the questions, original reviewer questions, answer explanations, and 8 full mock exams, all open right away, so you improve without the stress.</p>
+        <div class="hero-grid">
+          <div>
+            <span class="kicker">No cap, just better prep</span>
+            <h1>Study smarter, not harder.</h1>
+            <p class="lead">A casual, student-friendly SASE prep hub with lessons before the questions, original reviewer questions, answer explanations, and 8 full mock exams, all open right away, so you improve without the stress.</p>
 
-              <div class="hero-actions">
-                <a href="#order" class="button primary">Order the reviewer</a>
-                <a href="/exam?track=sase" class="button secondary">Already ordered? Open portal</a>
-              </div>
-
-              <p class="hero-sample-link">New here? Start with the free 10-question sample: <a href="/sample">Try the free sample</a></p>
-
-              <div class="hero-stats" aria-label="Key product metrics">
-                <div class="stat">
-                  <strong>450</strong>
-                  <span>reviewer questions</span>
-                </div>
-                <div class="stat">
-                  <strong>8</strong>
-                  <span>mock exams</span>
-                </div>
-                <div class="stat">
-                  <strong>₱167</strong>
-                  <span>one-time student bundle</span>
-                </div>
-              </div>
+            <div class="hero-actions">
+              <a href="#order" class="button primary">Order the reviewer</a>
+              <a href="/exam?track=sase" class="button secondary">Already ordered? Open portal</a>
             </div>
 
-            <div>
-            <div class="mock-card scene" role="img" aria-label="Illustration of a mock exam: a question card with a timer, a score ring showing 86 percent, and a weak-spot tracker">
-              <svg class="scene-bg" viewBox="0 0 400 460" aria-hidden="true" focusable="false">
-                <defs>
-                  <linearGradient id="gSun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe28d"/><stop offset="1" stop-color="#ffb938"/></linearGradient>
-                </defs>
-                <circle cx="330" cy="70" r="46" fill="url(#gSun)" opacity=".9"/>
-                <circle cx="62" cy="400" r="70" fill="#ff8bb2" opacity=".22"/>
-                <g fill="#fff" opacity=".55">
-                  <circle cx="40" cy="60" r="3"/><circle cx="64" cy="92" r="2"/><circle cx="360" cy="190" r="3"/>
-                  <circle cx="24" cy="220" r="2"/><circle cx="372" cy="330" r="2.5"/>
-                </g>
-                <path d="M300 410l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#ffd85d"/>
-                <path d="M46 150l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#fff" opacity=".8"/>
-              </svg>
+            <p class="hero-sample-link">New here? Start with the free 10-question sample: <a href="/sample">Try the free sample</a></p>
 
-              <div class="exam-sheet">
-                <div class="sheet-top">
-                  <span class="chip chip-subject">Mathematics</span>
-                  <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 1:42:18</span>
-                </div>
-                <div class="sheet-progress" aria-hidden="true"><span></span></div>
-                <p class="sheet-q">If 3x + 7 = 22, what is the value of x?</p>
-                <div class="sheet-opts" aria-hidden="true">
-                  <div class="opt"><b>A</b> 3</div>
-                  <div class="opt on"><b>B</b> 5 <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                  <div class="opt"><b>C</b> 7</div>
-                  <div class="opt"><b>D</b> 15</div>
-                </div>
+            <div class="hero-stats" aria-label="Key product metrics">
+              <div class="stat">
+                <strong>450</strong>
+                <span>reviewer questions</span>
               </div>
-
-              <div class="float-card score-float">
-                <svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true">
-                  <circle cx="32" cy="32" r="26" fill="none" stroke="#e1ecfb" stroke-width="8"/>
-                  <circle cx="32" cy="32" r="26" fill="none" stroke="#0f8d69" stroke-width="8" stroke-linecap="round" stroke-dasharray="163" stroke-dashoffset="23" transform="rotate(-90 32 32)"/>
-                  <text x="32" y="37" text-anchor="middle" font-size="15" font-weight="900" fill="#12314b">86%</text>
-                </svg>
-                <div><strong>Great job!</strong><span>Mock Exam 3</span></div>
+              <div class="stat">
+                <strong>8</strong>
+                <span>mock exams</span>
               </div>
-
-              <div class="float-card weak-float">
-                <small>Weak spot</small>
-                <div class="mini-bar"><i style="width:48%"></i></div>
-                <span>Science · focus here</span>
+              <div class="stat">
+                <strong>₱167</strong>
+                <span>one-time student bundle</span>
               </div>
             </div>
-            <p class="hero-visual-caption">Illustration: sample result view</p>
+          </div>
+
+          <div class="hero-visual">
+            <img class="hero-art" src="/hero-coral.webp" alt="3D illustration of a stopwatch, progress cards, and an open book" width="1400" height="933" fetchpriority="high" />
+            <div class="exam-card" role="img" aria-label="Illustration of a mock exam question card with a timer and four answer options">
+              <div class="sheet-top">
+                <span class="chip chip-subject">Mathematics</span>
+                <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 1:42:18</span>
+              </div>
+              <div class="sheet-progress" aria-hidden="true"><span></span></div>
+              <p class="sheet-q">If 3x + 7 = 22, what is the value of x?</p>
+              <div class="sheet-opts" aria-hidden="true">
+                <div class="opt"><b>A</b> 3</div>
+                <div class="opt on"><b>B</b> 5 <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="opt"><b>C</b> 7</div>
+                <div class="opt"><b>D</b> 15</div>
+              </div>
             </div>
+            <p class="hero-visual-caption">Illustration: sample question view</p>
           </div>
         </div>
       </div>
@@ -152,19 +119,19 @@
 
         <div class="feature-grid">
           <article class="feature-card">
-            <div class="count"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5A2.5 2.5 0 014 20.5zM9 8h7M9 12h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><small>01</small></div>
+            <div class="f-ico"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5A2.5 2.5 0 014 20.5zM9 8h7M9 12h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <h3>Study with purpose</h3>
             <p>Original practice questions that help you understand what’s really going on instead of just guessing and hoping.</p>
           </article>
 
           <article class="feature-card">
-            <div class="count"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="13.5" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v5l3 2M9.5 2.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><small>02</small></div>
+            <div class="f-ico"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="13.5" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v5l3 2M9.5 2.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <h3>Practice under pressure</h3>
             <p>Timed mock exams help you get used to the pace and pressure without the whole “panic mode” thing.</p>
           </article>
 
           <article class="feature-card">
-            <div class="count"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><small>03</small></div>
+            <div class="f-ico"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <h3>Track your weak spots</h3>
             <p>See your results, revisit mistakes, and know where to focus your next study session without overthinking it.</p>
           </article>
@@ -175,7 +142,6 @@
     <section class="section">
       <div class="wrap value-grid">
         <article class="value-card">
-          <span class="eyebrow" style="color: var(--primary-dark);">What’s included</span>
           <h3>Everything in one student bundle</h3>
           <ul class="value-list">
             <li>41 pages of lessons before the questions: Language Usage, Mathematics, Aptitude, and Science, with rules, worked examples, and figures</li>
@@ -188,7 +154,6 @@
         </article>
 
         <article class="value-card">
-          <span class="eyebrow" style="color: var(--primary-dark);">Why students use it</span>
           <h3>Less chaos, more clarity</h3>
           <p>We designed this to feel supportive and practical, not overwhelming. It’s easy to review, easy to follow, and built for people who want actual improvement.</p>
           <ul class="value-list">
@@ -205,7 +170,7 @@
         <div class="sample-band">
           <h2>Not sure yet? Try 10 questions first.</h2>
           <p>Take our free sample before you decide. Ten practice questions across Language Usage, Mathematics, Aptitude, and Science, each with the correct answer and a full explanation at the end. No sign-up, no payment, no timer. Just an honest look at where you stand today.</p>
-          <a href="/sample" class="button">Start the free sample</a>
+          <a href="/sample" class="button on-light">Start the free sample</a>
           <small>Free forever. The full reviewer is ₱167 if you decide you want more practice.</small>
         </div>
       </div>
@@ -214,29 +179,27 @@
     <section id="mock-exam-portal" class="section">
       <div class="wrap">
         <div class="portal-band">
-          <div class="portal-inner">
-            <span class="eyebrow">Free with your reviewer</span>
-            <h2 class="section-title" style="color:white; margin-top:12px;">Train like it’s the real thing.</h2>
-            <div class="portal-grid">
-              <article class="portal-card">
-                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-                <h3>8 full mock exams</h3>
-                <p>All 8 exams open from day one, so you can practice at your own pace and build momentum on your schedule.</p>
-              </article>
-              <article class="portal-card">
-                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                <h3>Review every answer</h3>
-                <p>Check what you got wrong, understand why, and turn mistakes into real progress.</p>
-              </article>
-              <article class="portal-card">
-                <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
-                <h3>Know your weak spots</h3>
-                <p>See exactly which sections need more work and focus your next study session wisely.</p>
-              </article>
-            </div>
-            <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
-              <a href="/exam?track=sase" class="button primary">Open mock exam portal</a>
-            </div>
+          <span class="kicker">Free with your reviewer</span>
+          <h2 class="section-title" style="margin-top:14px;">Train like it’s the real thing.</h2>
+          <div class="portal-grid">
+            <article class="portal-card">
+              <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <h3>8 full mock exams</h3>
+              <p>All 8 exams open from day one, so you can practice at your own pace and build momentum on your schedule.</p>
+            </article>
+            <article class="portal-card">
+              <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h3>Review every answer</h3>
+              <p>Check what you got wrong, understand why, and turn mistakes into real progress.</p>
+            </article>
+            <article class="portal-card">
+              <div class="p-ico"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
+              <h3>Know your weak spots</h3>
+              <p>See exactly which sections need more work and focus your next study session wisely.</p>
+            </article>
+          </div>
+          <div class="hero-actions" style="margin-top: 26px;">
+            <a href="/exam?track=sase" class="button primary">Open mock exam portal</a>
           </div>
         </div>
       </div>
@@ -245,13 +208,10 @@
     <section id="civil-service" class="section">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <span class="eyebrow">New: Civil Service Exam</span>
-            <h2 class="section-title">Taking the CSE on March 14, 2027?</h2>
-          </div>
+          <h2 class="section-title">Taking the CSE on March 14, 2027?</h2>
           <p class="section-sub">Our Civil Service reviewer is built the same way as the SASE one: lessons first, every item explained, and full mock exams in the real exam format. Filing for the March 14, 2027 CSE-PPT is already open.</p>
         </div>
-        <div class="value-grid">
+        <div class="cse-grid">
           <article class="value-card">
             <h3>560 explained practice items</h3>
             <p>A complete PDF reviewer: a study guide, 160 practice-bank items, two full 150-item mock exams in study format, and a 100-item last-mile drill. Every explanation teaches the rule or the steps, not just the answer.</p>
@@ -269,9 +229,9 @@
             <p>Pay once via GCash and get the PDF plus your portal access within 5 minutes after verification. The portal uses its own CSE7 access code, separate from your PDF password. A free 10-question sample of the reviewer is available. Message us on Facebook to get it.</p>
           </article>
         </div>
-        <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
-          <a href="/civil-service.html" class="button primary">See the Civil Service reviewer</a>
-          <a href="/exam?track=cse" class="button secondary">Already ordered? Open portal</a>
+        <div class="hero-actions" style="margin-top: 26px;">
+          <a href="/civil-service.html" class="button on-light">See the Civil Service reviewer</a>
+          <a href="/exam?track=cse" class="button" style="border-color: var(--indigo); color: var(--indigo);">Already ordered? Open portal</a>
         </div>
       </div>
     </section>
@@ -331,7 +291,7 @@
     <section id="order" class="section">
       <div class="wrap order-wrap">
         <aside class="info-card">
-          <span class="eyebrow" style="color: var(--primary-dark);">Pay and send details</span>
+          <span class="kicker">Pay and send details</span>
           <h3>Easy payment, easy process</h3>
           <div class="qr-box">
             <img src="qr-payment-167.png" alt="InstaPay QR code for the ₱167 reviewer payment" width="854" height="854" loading="lazy" decoding="async" />
@@ -343,7 +303,7 @@
           </div>
           <div class="mobile-box">
             <div>
-              <small style="display:block; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: 0.7rem;">Mobile number</small>
+              <small>Mobile number</small>
               <strong id="mobileNumber">0991 277 4308</strong>
             </div>
             <button type="button" class="mini-copy" data-copy="09912774308">Copy</button>
@@ -480,7 +440,7 @@
         refFormatError.classList.remove('visible');
         formError.classList.remove('visible');
 
-        ref = ref.replace(/\s+/g, '');   /* "1234 5678 90123" -> 13 digits */
+        ref = ref.replace(/\s+/g, '');
 
         var valid = true;
         if (!buyer || !contact || !ref) {
