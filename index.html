@@ -32,7 +32,7 @@
 
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand" aria-label="SASE Practice Hub PH home">
+      <div class="brand">
         <span class="brand-mark">S</span>
         <span>SASE Practice Hub PH</span>
       </div>
@@ -56,7 +56,7 @@
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="wrap">
         <div class="hero-grid">
@@ -72,7 +72,7 @@
 
             <p class="hero-sample-link">New here? Start with the free 10-question sample: <a href="/sample">Try the free sample</a></p>
 
-            <div class="hero-stats" aria-label="Key product metrics">
+            <div class="hero-stats">
               <div class="stat">
                 <strong>450</strong>
                 <span>reviewer questions</span>
@@ -89,6 +89,7 @@
           </div>
 
           <div class="hero-visual">
+            <div class="hero-art-wrap">
             <img class="hero-art" src="/hero-coral.webp" alt="3D illustration of a stopwatch, progress cards, and an open book" width="1400" height="933" fetchpriority="high" />
             <div class="exam-card" role="img" aria-label="Illustration of a mock exam question card with a timer and four answer options">
               <div class="sheet-top">
@@ -103,6 +104,7 @@
                 <div class="opt"><b>C</b> 7</div>
                 <div class="opt"><b>D</b> 15</div>
               </div>
+            </div>
             </div>
             <p class="hero-visual-caption">Illustration: sample question view</p>
           </div>
@@ -231,7 +233,7 @@
         </div>
         <div class="hero-actions" style="margin-top: 26px;">
           <a href="/civil-service.html" class="button on-light">See the Civil Service reviewer</a>
-          <a href="/exam?track=cse" class="button" style="border-color: var(--indigo); color: var(--indigo);">Already ordered? Open portal</a>
+          <a href="/exam?track=cse" class="button ghost">Already ordered? Open portal</a>
         </div>
       </div>
     </section>
