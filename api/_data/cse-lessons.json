@@ -1,704 +1,884 @@
 [
- {
-  "section": "Numerical",
-  "topic": "Decimals and place value",
-  "title": "Introduction to decimals | Decimals | 4th grade | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "BItpeFXC4vA",
-  "url": "https://www.youtube.com/watch?v=BItpeFXC4vA",
-  "why": "Foundation for decimal computation and decimal-fraction-percent conversion items."
- },
- {
-  "section": "Numerical",
-  "topic": "Fractions: adding and subtracting",
-  "title": "Math Antics - Adding and Subtracting Fractions",
-  "channel": "mathantics",
-  "video_id": "5juto2ze8Lg",
-  "url": "https://www.youtube.com/watch?v=5juto2ze8Lg",
-  "why": "Prepares for fraction operations inside basic-operations and word-problem items."
- },
- {
-  "section": "Numerical",
-  "topic": "Order of operations (MDAS/PEMDAS)",
-  "title": "Math Antics - Order Of Operations",
-  "channel": "mathantics",
-  "video_id": "dAgfnK528RA",
-  "url": "https://www.youtube.com/watch?v=dAgfnK528RA",
-  "why": "Prepares for basic-operations items where operation order changes the answer."
- },
- {
-  "section": "Numerical",
-  "topic": "Exponents and basic operations",
-  "title": "Exponent properties involving products | Numbers and operations | 8th grade | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "zM_p7tfWvLU",
-  "url": "https://www.youtube.com/watch?v=zM_p7tfWvLU",
-  "why": "Prepares for items with powers and exponent rules inside longer computations."
- },
- {
-  "section": "Numerical",
-  "topic": "Ratio: introduction",
-  "title": "Introduction to ratios | Ratios, rates, and percentages | 6th grade | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "bIKmw0aTmYc",
-  "url": "https://www.youtube.com/watch?v=bIKmw0aTmYc",
-  "why": "Foundation for ratio and proportion word problems."
- },
- {
-  "section": "Numerical",
-  "topic": "Ratio and proportion word problems",
-  "title": "How to solve Ratio Word Problems  | Part - 7",
-  "channel": "Divide and Conquer with Radha",
-  "video_id": "biyqeCC96Gs",
-  "why": "Moves from the ratio introduction to the multi-step word problems CSE actually asks.",
-  "url": "https://www.youtube.com/watch?v=biyqeCC96Gs"
- },
- {
-  "section": "Numerical",
-  "topic": "Percent of a number",
-  "title": "Math Antics - Finding A Percent Of A Number",
-  "channel": "mathantics",
-  "video_id": "rR95Cbcjzus",
-  "url": "https://www.youtube.com/watch?v=rR95Cbcjzus",
-  "why": "Prepares for percentage word problems using Part = Rate x Base."
- },
- {
-  "section": "Numerical",
-  "topic": "Percent change, discount and profit/loss",
-  "title": "Math Antics - Calculating Percent Change",
-  "channel": "mathantics",
-  "video_id": "5nZEUpZX_P0",
-  "url": "https://www.youtube.com/watch?v=5nZEUpZX_P0",
-  "why": "Prepares for percent increase/decrease, discount and price-change items."
- },
- {
-  "section": "Numerical",
-  "topic": "Percent applications: discount, tax, original price",
-  "title": "Percent Word Problems - Sales Tax, Discount, & Finding The Original Price",
-  "channel": "The Organic Chemistry Tutor",
-  "video_id": "TRlC8lqkhT4",
-  "why": "Discount, tax, and reverse-percent problems are the most common CSE percent applications.",
-  "url": "https://www.youtube.com/watch?v=TRlC8lqkhT4"
- },
- {
-  "section": "Numerical",
-  "topic": "Algebraic expressions: foundations",
-  "title": "What are variables, expressions, and equations? | Introduction to algebra | Algebra I | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "vDqOoI-4Z6M",
-  "url": "https://www.youtube.com/watch?v=vDqOoI-4Z6M",
-  "why": "Builds the variable-and-expression vocabulary behind algebra word problems."
- },
- {
-  "section": "Numerical",
-  "topic": "Algebraic expressions from word problems",
-  "title": "How to write algebraic expressions from word problems | 6th grade | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "C_KffdI34ZU",
-  "url": "https://www.youtube.com/watch?v=C_KffdI34ZU",
-  "why": "Prepares for translating word problems into equations, the setup step of most Numerical items."
- },
- {
-  "section": "Numerical",
-  "topic": "Linear equations",
-  "title": "Solving a more complicated equation | Linear equations | Algebra I | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "XoEn1LfVoTo",
-  "url": "https://www.youtube.com/watch?v=XoEn1LfVoTo",
-  "why": "Prepares for equation-solving items of the form ax + b = c."
- },
- {
-  "section": "Numerical",
-  "topic": "Linear equations: variables on both sides",
-  "title": "Introduction to solving an equation with variables on both sides | Algebra I | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "f15zA0PhSek",
-  "url": "https://www.youtube.com/watch?v=f15zA0PhSek",
-  "why": "Prepares for harder equation items used in age, work and mixture setups."
- },
- {
-  "section": "Numerical",
-  "topic": "Number series and patterns",
-  "title": "Practice finding patterns in numbers | 3rd grade | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "l-6uEtTBH7g",
-  "url": "https://www.youtube.com/watch?v=l-6uEtTBH7g",
-  "why": "Trains the check-the-differences habit behind number series items."
- },
- {
-  "section": "Numerical",
-  "topic": "Geometric sequences and series (advanced)",
-  "title": "Don't Fail Sequences Again! Geometric Sums Made Simple",
-  "channel": "Zeralem Teaching Center ",
-  "video_id": "-ysY4h4jZGM",
-  "why": "Nth term and partial sums of geometric sequences are the advanced CSE sequence items.",
-  "url": "https://www.youtube.com/watch?v=-ysY4h4jZGM"
- },
- {
-  "section": "Numerical",
-  "topic": "Averages: mean, median, mode",
-  "title": "Finding mean, median, and mode | Descriptive statistics | Probability and Statistics | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "k3aKKasOmIw",
-  "url": "https://www.youtube.com/watch?v=k3aKKasOmIw",
-  "why": "Prepares for average items and simple data summaries."
- },
- {
-  "section": "Numerical",
-  "topic": "Probability: basic concepts",
-  "title": "Basic Probability — Explained from the Basics",
-  "channel": "Classroom Core HQ",
-  "video_id": "7q_Mk9FsF6k",
-  "why": "Simple probability of coins, dice, and cards extends the statistics cluster into CSE probability items.",
-  "url": "https://www.youtube.com/watch?v=7q_Mk9FsF6k"
- },
- {
-  "section": "Numerical",
-  "topic": "Age problems",
-  "title": "Age word problems 2 | Linear equations | Algebra I | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "pPqPj8CAPvI",
-  "url": "https://www.youtube.com/watch?v=pPqPj8CAPvI",
-  "why": "Prepares for age word problems with now-vs-then setups."
- },
- {
-  "section": "Numerical",
-  "topic": "Work problems (combined rates)",
-  "title": "Applying rational equations 1 | Polynomial and rational functions | Algebra II | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "gD7A1LA4jO8",
-  "url": "https://www.youtube.com/watch?v=gD7A1LA4jO8",
-  "why": "Prepares for work-rate items using 1/T = 1/a + 1/b."
- },
- {
-  "section": "Numerical",
-  "topic": "Distance, rate and time",
-  "title": "Passing Trains",
-  "channel": "Khan Academy",
-  "video_id": "qLLjD-g_9ms",
-  "url": "https://www.youtube.com/watch?v=qLLjD-g_9ms",
-  "why": "Prepares for motion and relative-speed items using Distance = Rate x Time."
- },
- {
-  "section": "Numerical",
-  "topic": "Mixture problems",
-  "title": "Mixture problems 2 | Linear equations | Algebra I | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "OBVGQt1Eeug",
-  "url": "https://www.youtube.com/watch?v=OBVGQt1Eeug",
-  "why": "Prepares for mixture and weighted-average word problems."
- },
- {
-  "section": "Numerical",
-  "topic": "Simple interest",
-  "title": "Simple Interest Formula",
-  "channel": "The Organic Chemistry Tutor",
-  "video_id": "NCYNXkbTTUo",
-  "url": "https://www.youtube.com/watch?v=NCYNXkbTTUo",
-  "why": "Prepares for simple interest items using I = P x r x t."
- },
- {
-  "section": "Numerical",
-  "topic": "Perimeter",
-  "title": "Math Antics - Perimeter",
-  "channel": "mathantics",
-  "video_id": "AAY1bsazcgM",
-  "url": "https://www.youtube.com/watch?v=AAY1bsazcgM",
-  "why": "Prepares for perimeter items on rectangles, squares and triangles."
- },
- {
-  "section": "Numerical",
-  "topic": "Area",
-  "title": "Math Antics - Area",
-  "channel": "mathantics",
-  "video_id": "xCdxURXMdFY",
-  "url": "https://www.youtube.com/watch?v=xCdxURXMdFY",
-  "why": "Prepares for area items and area-scaling traps."
- },
- {
-  "section": "Numerical",
-  "topic": "Circles: pi, circumference and area",
-  "title": "Why Every Circle Gives the Same Ratio: π and C = πd (7.G.B.4)",
-  "channel": " Animated Math Lessons: Common Core Edition",
-  "video_id": "4209o1wtlWc",
-  "why": "Builds circumference and area of circles on the existing perimeter and area lessons for CSE geometry items.",
-  "url": "https://www.youtube.com/watch?v=4209o1wtlWc"
- },
- {
-  "section": "Numerical",
-  "topic": "Volume of 3D objects",
-  "title": "VOLUME AND CAPACITY OF THREE-DIMENSIONAL OBJECTS",
-  "channel": "WOW MATH",
-  "video_id": "zT7WoAfUR8Y",
-  "why": "Prism, cylinder, cone, and sphere volume formulas complete the CSE geometry set.",
-  "url": "https://www.youtube.com/watch?v=zT7WoAfUR8Y"
- },
- {
-  "section": "Verbal",
-  "topic": "Agreement: subjects, verbs and pronouns",
-  "title": "Introduction to agreement | The parts of speech | Grammar | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "KEdI0-xIUFc",
-  "url": "https://www.youtube.com/watch?v=KEdI0-xIUFc",
-  "why": "Foundation for subject-verb and pronoun-antecedent agreement items."
- },
- {
-  "section": "Verbal",
-  "topic": "Pronoun case",
-  "title": "Personal Pronoun Chart || One Shot || #englishgrammarbypcsir #tense #grammar #english #pronouns ",
-  "channel": "English Grammar By PC Sir",
-  "video_id": "NFWPtcdTK2w",
-  "why": "Subjective, objective, and possessive pronoun case is tested in CSE grammar and identifying-error items.",
-  "url": "https://www.youtube.com/watch?v=NFWPtcdTK2w"
- },
- {
-  "section": "Verbal",
-  "topic": "Subject-verb agreement",
-  "title": "Subject-verb agreement | Syntax | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "4fMipjAnlRk",
-  "url": "https://www.youtube.com/watch?v=4fMipjAnlRk",
-  "why": "Prepares for the highest-frequency grammar trap: verb agreeing with the true subject."
- },
- {
-  "section": "Verbal",
-  "topic": "Frequently confused words",
-  "title": "There, their, and they're | Frequently confused words | Usage | Grammar",
-  "channel": "Khan Academy",
-  "video_id": "0D54pfccNUQ",
-  "why": "Homophone and confused-word choices are a staple of CSE correct usage and error items.",
-  "url": "https://www.youtube.com/watch?v=0D54pfccNUQ"
- },
- {
-  "section": "Verbal",
-  "topic": "Verb tense",
-  "title": "The past tense | The parts of speech | Grammar | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "zS6N5EqXpCY",
-  "url": "https://www.youtube.com/watch?v=zS6N5EqXpCY",
-  "why": "Prepares for verb tense and tense-consistency items."
- },
- {
-  "section": "Verbal",
-  "topic": "Prepositions: correct usage",
-  "title": "Prepositions of time | The parts of speech | Grammar | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "TzUO8du5Lrg",
-  "url": "https://www.youtube.com/watch?v=TzUO8du5Lrg",
-  "why": "Prepares for preposition correct-usage items (in, on, at for time)."
- },
- {
-  "section": "Verbal",
-  "topic": "Parallelism",
-  "title": "Parallel structure | Syntax | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "2l2FgUrln1A",
-  "url": "https://www.youtube.com/watch?v=2l2FgUrln1A",
-  "why": "Prepares for parallelism items in sentence correction and error identification."
- },
- {
-  "section": "Verbal",
-  "topic": "Misplaced and dangling modifiers",
-  "title": "Writing - Misplaced Modifiers",
-  "channel": "Adam’s English Lessons · engVid",
-  "video_id": "Qu5pvwL9u4Q",
-  "why": "Modifier placement errors are a classic CSE identifying-error and sentence correction target.",
-  "url": "https://www.youtube.com/watch?v=Qu5pvwL9u4Q"
- },
- {
-  "section": "Verbal",
-  "topic": "Error detection in grammar",
-  "title": "Error Detection in English Grammar | 6 Smart Tricks & Methods | STHP 2027 & Sukkur IBA Test",
-  "channel": "SK Ai Studio",
-  "video_id": "3qxmITaa130",
-  "why": "Teaches a method for spotting the erroneous part of a sentence, the exact CSE error-identification format.",
-  "url": "https://www.youtube.com/watch?v=3qxmITaa130"
- },
- {
-  "section": "Verbal",
-  "topic": "Sentence completion: text completion method",
-  "title": "GRE Text Completion: The 3-Step Method Every 170 Scorer Uses",
-  "channel": "GRE-Dominator",
-  "video_id": "OenhKOafAsk",
-  "why": "Predict-before-you-look method transfers directly to CSE sentence completion items.",
-  "url": "https://www.youtube.com/watch?v=OenhKOafAsk"
- },
- {
-  "section": "Verbal",
-  "topic": "Vocabulary in context",
-  "title": "Using context clues to figure out new words | Reading | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "CiNggzdWkIo",
-  "url": "https://www.youtube.com/watch?v=CiNggzdWkIo",
-  "why": "Prepares for vocabulary-in-context items using inference, definition, example, antonym and synonym clues."
- },
- {
-  "section": "Verbal",
-  "topic": "Word roots and vocabulary building",
-  "title": "Learn Root Words | Boost Vocabulary & Reading Skills",
-  "channel": "Innovative Literacy",
-  "video_id": "eumrmlOmkBs",
-  "why": "Greek and Latin roots unlock unfamiliar word meanings in CSE vocabulary and reading items.",
-  "url": "https://www.youtube.com/watch?v=eumrmlOmkBs"
- },
- {
-  "section": "Verbal",
-  "topic": "Synonyms and antonyms: advanced vocabulary",
-  "title": "GRE Vocabulary Lecture 16 | 10 Advanced Words, Synonyms, Antonyms & MCQs",
-  "channel": "Learn With Shema Solangi",
-  "video_id": "w7Tc5pVOsVk",
-  "why": "Directly trains the synonym and antonym item type with advanced words and practice questions.",
-  "url": "https://www.youtube.com/watch?v=w7Tc5pVOsVk"
- },
- {
-  "section": "Verbal",
-  "topic": "Idioms and figurative expressions",
-  "title": "15 English Idioms for Small Talk in English",
-  "channel": "Duarte Business English",
-  "video_id": "iF8Fj6mv_ds",
-  "why": "Idiom meanings appear in CSE vocabulary-in-context and sentence completion items.",
-  "url": "https://www.youtube.com/watch?v=iF8Fj6mv_ds"
- },
- {
-  "section": "Verbal",
-  "topic": "Reading comprehension: main idea",
-  "title": "What is a main idea? | Reading | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "4swFGRhQoMI",
-  "url": "https://www.youtube.com/watch?v=4swFGRhQoMI",
-  "why": "Prepares for main-idea items, the largest reading comprehension block."
- },
- {
-  "section": "Verbal",
-  "topic": "Author's purpose and tone",
-  "title": "English 9 Term 2 Week 6 Session 1 | Author's Purpose and Meaning | MATATAG Curriculum",
-  "channel": "MATATAG Learning Hub",
-  "video_id": "eKEGenUfEMA",
-  "why": "Purpose and tone questions follow main idea questions in CSE reading comprehension sets.",
-  "url": "https://www.youtube.com/watch?v=eKEGenUfEMA"
- },
- {
-  "section": "Verbal",
-  "topic": "Making inferences",
-  "title": "Make an inference easy | K-12",
-  "channel": "Smekens Education",
-  "video_id": "1V-puUv3-N4",
-  "why": "Clue-plus-background inference method is exactly what CSE implied-meaning items require.",
-  "url": "https://www.youtube.com/watch?v=1V-puUv3-N4"
- },
- {
-  "section": "Verbal",
-  "topic": "Reading for details: extracting significant information",
-  "title": "English 7 Term 2 Week 5 Session 4 | Extracting Significant Information | MATATAG Curriculum",
-  "channel": "MATATAG Learning Hub",
-  "video_id": "C4YyeT-EPzE",
-  "why": "Separating main idea from supporting details trains CSE detail and NOT-true reading items.",
-  "url": "https://www.youtube.com/watch?v=C4YyeT-EPzE"
- },
- {
-  "section": "Verbal",
-  "topic": "Paragraph organization",
-  "title": "Paragraph Structure",
-  "channel": "Smrt English",
-  "video_id": "NLzKqujmdGk",
-  "url": "https://www.youtube.com/watch?v=NLzKqujmdGk",
-  "why": "Prepares for paragraph organization items: topic sentence, supporting sentences, conclusion."
- },
- {
-  "section": "Verbal",
-  "topic": "Sentence arrangement",
-  "title": "THE ART OF SENTENCE ARRANGEMENT LIKE A PRO: PQRS - MADE EASY FOR ALL COMPETITIVE EXAMS",
-  "channel": "Arun Dalal English Classes",
-  "video_id": "HOqRh1y1aZo",
-  "why": "Ordering jumbled sentences is the sentence-level half of CSE paragraph organization items.",
-  "url": "https://www.youtube.com/watch?v=HOqRh1y1aZo"
- },
- {
-  "section": "Analytical",
-  "topic": "Conclusions: inductive vs deductive reasoning",
-  "title": "Difference between inductive and deductive reasoning | Precalculus | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "GEId0GonOZM",
-  "url": "https://www.youtube.com/watch?v=GEId0GonOZM",
-  "why": "Foundation for conclusion items: what follows necessarily vs what is only probable."
- },
- {
-  "section": "Analytical",
-  "topic": "Argument structure: premises, conclusions, validity",
-  "title": "Structure of Argument  |  Types of Argument  |  Validity of Argument",
-  "channel": "Statistics with Musharaf-Ur-Rehman",
-  "video_id": "uZRPll9u_Yg",
-  "why": "Foundation for every CSE logical reasoning item: find the conclusion, check the support.",
-  "url": "https://www.youtube.com/watch?v=uZRPll9u_Yg"
- },
- {
-  "section": "Analytical",
-  "topic": "Critical thinking: assumptions and fallacies overview",
-  "title": "Asking the Right Questions: A Guide to Critical Thinking | Video Summary",
-  "channel": "Hidden Library",
-  "video_id": "voVWi4YfQuA",
-  "why": "Covers issue, conclusion, reasons, hidden assumptions, and fallacies in one framework for CSE argument items.",
-  "url": "https://www.youtube.com/watch?v=voVWi4YfQuA"
- },
- {
-  "section": "Analytical",
-  "topic": "Logical fallacies",
-  "title": "Reading Logical Fallacies",
-  "channel": "Mometrix Academy",
-  "video_id": "IawIjqOJBU8",
-  "why": "Naming the flaw in an argument is a recurring CSE logical reasoning item type.",
-  "url": "https://www.youtube.com/watch?v=IawIjqOJBU8"
- },
- {
-  "section": "Analytical",
-  "topic": "Syllogisms",
-  "title": "Decision Making: Syllogisms Explained In 20 Minutes | UCAT Preparation",
-  "channel": "MES UCAT",
-  "video_id": "oBysm0k-a40",
-  "url": "https://www.youtube.com/watch?v=oBysm0k-a40",
-  "why": "Prepares for syllogism items where a conclusion must follow from given statements."
- },
- {
-  "section": "Analytical",
-  "topic": "Statement vs inference",
-  "title": "CLAT 2027 Logical Reasoning: Statement vs Inference | True vs Follows #clat #clatprep #clattips",
-  "channel": "Amardeep Siingh",
-  "video_id": "KdcnDWTxuS4",
-  "why": "CSE asks what must be true or follows from a statement; this drills exactly that distinction.",
-  "url": "https://www.youtube.com/watch?v=KdcnDWTxuS4"
- },
- {
-  "section": "Analytical",
-  "topic": "If-then logic (rules of implication)",
-  "title": "Rules of Implication (part 1)",
-  "channel": "A Little Bit of Philosophy",
-  "video_id": "pNt6V6cHDnU",
-  "url": "https://www.youtube.com/watch?v=pNt6V6cHDnU",
-  "why": "Prepares for conditional-logic items: modus ponens, modus tollens and the invalid converse."
- },
- {
-  "section": "Analytical",
-  "topic": "Strengthen and weaken questions",
-  "title": "How to Crack LSAT Strengthen & Weaken Questions | 6 Practice Questions Explained",
-  "channel": "Airtight Prep",
-  "video_id": "qWRTew5mvSs",
-  "why": "Strengthen, weaken, and assumption handling are the hardest CSE argument items; this teaches them with worked examples.",
-  "url": "https://www.youtube.com/watch?v=qWRTew5mvSs"
- },
- {
-  "section": "Analytical",
-  "topic": "Logical reasoning methods for arguments",
-  "title": "How to Destroy LSAT Logical Reasoning (Even If You Blank Out on Every Argument)",
-  "channel": "LSAT Unplugged & Law School Admissions Podcast",
-  "video_id": "YpvVUCGomVM",
-  "why": "A full method for argument questions: conclusion spotting, prephrasing, and trap answer elimination.",
-  "url": "https://www.youtube.com/watch?v=YpvVUCGomVM"
- },
- {
-  "section": "Analytical",
-  "topic": "Analogies and word association",
-  "title": "Analogy I English for CLAT & IIM IPM I Score Booster",
-  "channel": "ProTalent Admin",
-  "video_id": "rgJ_8h8nc50",
-  "url": "https://www.youtube.com/watch?v=rgJ_8h8nc50",
-  "why": "Prepares for analogy items: name the relationship first, then match it."
- },
- {
-  "section": "Analytical",
-  "topic": "Analogies: relationship types (advanced)",
-  "title": "ADRE 2.0 Reasoning | Chapter 1: Analogy  |Assam Police| |APSC| #adre #trending #class #concept",
-  "channel": "Classroom Engine",
-  "video_id": "GcHWvCUe6V4",
-  "why": "Systematic analogy relationship types deepen the existing word association lesson for harder CSE pairs.",
-  "url": "https://www.youtube.com/watch?v=GcHWvCUe6V4"
- },
- {
-  "section": "Analytical",
-  "topic": "Number series: advanced patterns",
-  "title": "*Number Series Reasoning Tricks | 8 Types | Pattern Explained | Reasoning for All Exams*",
-  "channel": "JHANGIR OFFICIAL ",
-  "video_id": "P-wZ_P0JLFM",
-  "why": "Eight series pattern families cover the advanced CSE number series beyond basic sequences.",
-  "url": "https://www.youtube.com/watch?v=P-wZ_P0JLFM"
- },
- {
-  "section": "Analytical",
-  "topic": "Letter series: basics to advanced",
-  "title": "CSAT Letter Series Class 1 | Basics to Advanced | UPSC CSE 2027 | Live Class",
-  "channel": "Legacy IAS Academy",
-  "video_id": "hKdL9EY9mUg",
-  "why": "Alphabet position and skip patterns are the core skill in CSE letter series items.",
-  "url": "https://www.youtube.com/watch?v=hKdL9EY9mUg"
- },
- {
-  "section": "Analytical",
-  "topic": "Data interpretation: bar graphs",
-  "title": "Reading bar graphs | Applying mathematical reasoning | Pre-Algebra | Khan Academy",
-  "channel": "Khan Academy",
-  "video_id": "kiQ6MUQZHSs",
-  "url": "https://www.youtube.com/watch?v=kiQ6MUQZHSs",
-  "why": "Prepares for data interpretation items on graphs: read labels, units and values first."
- },
- {
-  "section": "Analytical",
-  "topic": "Data interpretation: reading tables and graphs",
-  "title": "ACT Science Interpretation of Data: Read Tables and Graphs Fast",
-  "channel": "The Learning Curve",
-  "video_id": "gxih1l0fPf8",
-  "why": "Fast, accurate table and graph reading under time pressure is the CSE data interpretation skill.",
-  "url": "https://www.youtube.com/watch?v=gxih1l0fPf8"
- },
- {
-  "section": "Analytical",
-  "topic": "Data interpretation: mixed chart practice",
-  "title": "SBI/IBPS/RRB Clerk 2026  | Quant Preparation | Data Interpretation | Most Important DI Questions",
-  "channel": "Adda247 Bank Maths",
-  "video_id": "90vcKYGiFI4",
-  "why": "Worked tabular, pie, line, and bar chart sets mirror the mixed CSE data interpretation items.",
-  "url": "https://www.youtube.com/watch?v=90vcKYGiFI4"
- },
- {
-  "section": "Analytical",
-  "topic": "Abstract reasoning: pattern rules",
-  "title": "AFPSAT | ABSTRACT REASONING | Logical Test",
-  "channel": "SolvingMath with Leonalyn",
-  "video_id": "oOdQYmW1JFc",
-  "why": "Philippine exam abstract reasoning with explained figure patterns, the closest match to CSE figure reasoning items.",
-  "url": "https://www.youtube.com/watch?v=oOdQYmW1JFc"
- },
- {
-  "section": "General Information",
-  "topic": "Philippine history: Spanish colonization",
-  "title": "How Did Spain Rule the Philippines for 300 Years but Leave So Little Spanish Behind? In 20 minutes",
-  "channel": "Medge Tv",
-  "video_id": "T0i3Ox-4RsQ",
-  "why": "Covers colonization, the galleon era, and the road to revolution that CSE history items draw on.",
-  "url": "https://www.youtube.com/watch?v=T0i3Ox-4RsQ"
- },
- {
-  "section": "General Information",
-  "topic": "Philippine history: full timeline to EDSA",
-  "title": "The ENTIRE History of the Philippines in 15 Minutes | The Bells America Took",
-  "channel": "Retold Atlas",
-  "video_id": "oM3FaMY5l_c",
-  "why": "One sweep from pre-colonial to American period to People Power, anchoring CSE history facts in sequence.",
-  "url": "https://www.youtube.com/watch?v=oM3FaMY5l_c"
- },
- {
-  "section": "General Information",
-  "topic": "History of the Philippine Constitution",
-  "title": "History of the Philippine Constitution",
-  "channel": "May May",
-  "video_id": "pm8-O1FiCXI",
-  "why": "Malolos to 1935 to 1973 to 1987: CSE asks which constitution and provision came when.",
-  "url": "https://www.youtube.com/watch?v=pm8-O1FiCXI"
- },
- {
-  "section": "General Information",
-  "topic": "Philippine government: three branches",
-  "title": "The Three Branches of Philippine Government",
-  "channel": "NoMo Studio",
-  "video_id": "-p4_OFbxnmY",
-  "url": "https://www.youtube.com/watch?v=-p4_OFbxnmY",
-  "why": "Prepares for structure-of-government items: legislative, executive and judicial roles."
- },
- {
-  "section": "General Information",
-  "topic": "Three branches: constitutional design of powers",
-  "title": "BASIC CONCEPTS: CONSTITUTIONAL DESIGN OF GOVERNMENT POWERS",
-  "channel": "TLG Legal Group",
-  "video_id": "3n_cKTaBQu4",
-  "why": "Separation of powers, veto, and judicial review in depth, beyond the existing three branches overview.",
-  "url": "https://www.youtube.com/watch?v=3n_cKTaBQu4"
- },
- {
-  "section": "General Information",
-  "topic": "Legislative process and Philippine legislation",
-  "title": "Foundations of Philippine Legislation | Philippine Contemporary Legislation",
-  "channel": "Vincent Pagador",
-  "video_id": "8zoA5QXJ5fI",
-  "why": "How Congress makes law and how statutes rank supports CSE government structure and local governance items.",
-  "url": "https://www.youtube.com/watch?v=8zoA5QXJ5fI"
- },
- {
-  "section": "General Information",
-  "topic": "Bill of Rights (Article III)",
-  "title": "The Bill of Rights (Philippine Constitution) Basic Concepts (Part 1)",
-  "channel": "Atty. Edgar Pascua II",
-  "video_id": "lNZ0l-85Moo",
-  "url": "https://www.youtube.com/watch?v=lNZ0l-85Moo",
-  "why": "Prepares for Bill of Rights items, the most heavily tested General Information block."
- },
- {
-  "section": "General Information",
-  "topic": "Citizenship: Article IV",
-  "title": "People:  Philippine Citizenship (Part 1)",
-  "channel": "Atty. Edgar Pascua II",
-  "video_id": "sDxjsSJxi6k",
-  "why": "Who is a Filipino citizen and how citizenship is lost or reacquired are direct CSE Constitution items.",
-  "url": "https://www.youtube.com/watch?v=sDxjsSJxi6k"
- },
- {
-  "section": "General Information",
-  "topic": "Human rights: the UDHR",
-  "title": "Universal Declaration of Human Rights (UDHR) Explained | Articles 1–30 | Human Rights Law Part 7",
-  "channel": "Adv Gargi Chandrawanshi ",
-  "video_id": "X9gAn4mZbvc",
-  "why": "The UDHR articles underpin the human rights concepts CSE pairs with the Bill of Rights.",
-  "url": "https://www.youtube.com/watch?v=X9gAn4mZbvc"
- },
- {
-  "section": "General Information",
-  "topic": "RA 6713: code of conduct",
-  "title": "RA 6713: Code of Conduct and Ethical Standards for Public Officials and Employees",
-  "channel": "Jeffrey Sasoy",
-  "video_id": "2sYz3Uf5Boc",
-  "url": "https://www.youtube.com/watch?v=2sYz3Uf5Boc",
-  "why": "Prepares for RA 6713 items: norms of conduct, duties, prohibited acts and SALN."
- },
- {
-  "section": "General Information",
-  "topic": "Philippine flag and national symbols (RA 8491)",
-  "title": "Flag Heraldic Code of the Philippines | NSTP Lecture by Engr. Jorge Escalona",
-  "channel": "Jonas' Class Notes",
-  "video_id": "5PX0h6AbLvI",
-  "url": "https://www.youtube.com/watch?v=5PX0h6AbLvI",
-  "why": "Prepares for national symbol and flag items under the Flag and Heraldic Code."
- },
- {
-  "section": "General Information",
-  "topic": "ASEAN basics",
-  "title": "ASEAN Explained - Everything you need to Know! #asean #css #generalknowledge",
-  "channel": "CSS To The Point",
-  "video_id": "oMUlQ0r6Kcc",
-  "why": "ASEAN members, objectives, and principles are standard CSE general information items.",
-  "url": "https://www.youtube.com/watch?v=oMUlQ0r6Kcc"
- },
- {
-  "section": "General Information",
-  "topic": "United Nations basics",
-  "title": "What is the United Nations",
-  "channel": "FN-sambandet Norge",
-  "video_id": "E67ln5yJtyE",
-  "why": "UN purpose and main organs are recurring CSE general information items.",
-  "url": "https://www.youtube.com/watch?v=E67ln5yJtyE"
- },
- {
-  "section": "General Information",
-  "topic": "Environment: greenhouse effect and climate basics",
-  "title": "What Is the Greenhouse Effect?",
-  "channel": "NASA Space Place",
-  "video_id": "SN5-DnOHQmE",
-  "url": "https://www.youtube.com/watch?v=SN5-DnOHQmE",
-  "why": "Prepares for environment concept items: greenhouse gases, warming and climate basics."
- },
- {
-  "section": "General Information",
-  "topic": "RA 9003: Ecological Solid Waste Management",
-  "title": "“Ecological Solid Waste Management Act” (RA 9003) in Jose Rizal University (JRU)",
-  "channel": "Nicole Libut",
-  "video_id": "Gx5s8ttHOT4",
-  "why": "Waste segregation and RA 9003 duties are the environmental management facts CSE tests most.",
-  "url": "https://www.youtube.com/watch?v=Gx5s8ttHOT4"
- }
+  {
+    "section": "Numerical",
+    "topic": "Decimals and place value",
+    "title": "Introduction to decimals | Decimals | 4th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "BItpeFXC4vA",
+    "url": "https://www.youtube.com/watch?v=BItpeFXC4vA",
+    "why": "Foundation for decimal computation and decimal-fraction-percent conversion items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Fractions: adding and subtracting",
+    "title": "Math Antics - Adding and Subtracting Fractions",
+    "channel": "mathantics",
+    "video_id": "5juto2ze8Lg",
+    "url": "https://www.youtube.com/watch?v=5juto2ze8Lg",
+    "why": "Prepares for fraction operations inside basic-operations and word-problem items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Order of operations (MDAS/PEMDAS)",
+    "title": "Math Antics - Order Of Operations",
+    "channel": "mathantics",
+    "video_id": "dAgfnK528RA",
+    "url": "https://www.youtube.com/watch?v=dAgfnK528RA",
+    "why": "Prepares for basic-operations items where operation order changes the answer."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Exponents and basic operations",
+    "title": "Exponent properties involving products | Numbers and operations | 8th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "zM_p7tfWvLU",
+    "url": "https://www.youtube.com/watch?v=zM_p7tfWvLU",
+    "why": "Prepares for items with powers and exponent rules inside longer computations."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Ratio: introduction",
+    "title": "Introduction to ratios | Ratios, rates, and percentages | 6th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "bIKmw0aTmYc",
+    "url": "https://www.youtube.com/watch?v=bIKmw0aTmYc",
+    "why": "Foundation for ratio and proportion word problems."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Ratio and proportion word problems",
+    "title": "How to solve Ratio Word Problems  | Part - 7",
+    "channel": "Divide and Conquer with Radha",
+    "video_id": "biyqeCC96Gs",
+    "why": "Moves from the ratio introduction to the multi-step word problems CSE actually asks.",
+    "url": "https://www.youtube.com/watch?v=biyqeCC96Gs"
+  },
+  {
+    "section": "Numerical",
+    "topic": "Percent of a number",
+    "title": "Math Antics - Finding A Percent Of A Number",
+    "channel": "mathantics",
+    "video_id": "rR95Cbcjzus",
+    "url": "https://www.youtube.com/watch?v=rR95Cbcjzus",
+    "why": "Prepares for percentage word problems using Part = Rate x Base."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Percent change, discount and profit/loss",
+    "title": "Math Antics - Calculating Percent Change",
+    "channel": "mathantics",
+    "video_id": "5nZEUpZX_P0",
+    "url": "https://www.youtube.com/watch?v=5nZEUpZX_P0",
+    "why": "Prepares for percent increase/decrease, discount and price-change items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Percent applications: discount, tax, original price",
+    "title": "Percent Word Problems - Sales Tax, Discount, & Finding The Original Price",
+    "channel": "The Organic Chemistry Tutor",
+    "video_id": "TRlC8lqkhT4",
+    "why": "Discount, tax, and reverse-percent problems are the most common CSE percent applications.",
+    "url": "https://www.youtube.com/watch?v=TRlC8lqkhT4"
+  },
+  {
+    "section": "Numerical",
+    "topic": "Algebraic expressions: foundations",
+    "title": "What are variables, expressions, and equations? | Introduction to algebra | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "vDqOoI-4Z6M",
+    "url": "https://www.youtube.com/watch?v=vDqOoI-4Z6M",
+    "why": "Builds the variable-and-expression vocabulary behind algebra word problems."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Algebraic expressions from word problems",
+    "title": "How to write algebraic expressions from word problems | 6th grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "C_KffdI34ZU",
+    "url": "https://www.youtube.com/watch?v=C_KffdI34ZU",
+    "why": "Prepares for translating word problems into equations, the setup step of most Numerical items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Linear equations",
+    "title": "Solving a more complicated equation | Linear equations | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "XoEn1LfVoTo",
+    "url": "https://www.youtube.com/watch?v=XoEn1LfVoTo",
+    "why": "Prepares for equation-solving items of the form ax + b = c."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Linear equations: variables on both sides",
+    "title": "Introduction to solving an equation with variables on both sides | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "f15zA0PhSek",
+    "url": "https://www.youtube.com/watch?v=f15zA0PhSek",
+    "why": "Prepares for harder equation items used in age, work and mixture setups."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Number series and patterns",
+    "title": "Practice finding patterns in numbers | 3rd grade | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "l-6uEtTBH7g",
+    "url": "https://www.youtube.com/watch?v=l-6uEtTBH7g",
+    "why": "Trains the check-the-differences habit behind number series items."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Geometric sequences and series (advanced)",
+    "title": "Don't Fail Sequences Again! Geometric Sums Made Simple",
+    "channel": "Zeralem Teaching Center ",
+    "video_id": "-ysY4h4jZGM",
+    "why": "Nth term and partial sums of geometric sequences are the advanced CSE sequence items.",
+    "url": "https://www.youtube.com/watch?v=-ysY4h4jZGM"
+  },
+  {
+    "section": "Numerical",
+    "topic": "Averages: mean, median, mode",
+    "title": "Finding mean, median, and mode | Descriptive statistics | Probability and Statistics | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "k3aKKasOmIw",
+    "url": "https://www.youtube.com/watch?v=k3aKKasOmIw",
+    "why": "Prepares for average items and simple data summaries."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Probability: basic concepts",
+    "title": "Basic Probability — Explained from the Basics",
+    "channel": "Classroom Core HQ",
+    "video_id": "7q_Mk9FsF6k",
+    "why": "Simple probability of coins, dice, and cards extends the statistics cluster into CSE probability items.",
+    "url": "https://www.youtube.com/watch?v=7q_Mk9FsF6k"
+  },
+  {
+    "section": "Numerical",
+    "topic": "Age problems",
+    "title": "Age word problems 2 | Linear equations | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "pPqPj8CAPvI",
+    "url": "https://www.youtube.com/watch?v=pPqPj8CAPvI",
+    "why": "Prepares for age word problems with now-vs-then setups."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Work problems (combined rates)",
+    "title": "Applying rational equations 1 | Polynomial and rational functions | Algebra II | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "gD7A1LA4jO8",
+    "url": "https://www.youtube.com/watch?v=gD7A1LA4jO8",
+    "why": "Prepares for work-rate items using 1/T = 1/a + 1/b."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Distance, rate and time",
+    "title": "Passing Trains",
+    "channel": "Khan Academy",
+    "video_id": "qLLjD-g_9ms",
+    "url": "https://www.youtube.com/watch?v=qLLjD-g_9ms",
+    "why": "Prepares for motion and relative-speed items using Distance = Rate x Time."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Mixture problems",
+    "title": "Mixture problems 2 | Linear equations | Algebra I | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "OBVGQt1Eeug",
+    "url": "https://www.youtube.com/watch?v=OBVGQt1Eeug",
+    "why": "Prepares for mixture and weighted-average word problems."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Simple interest",
+    "title": "Simple Interest Formula",
+    "channel": "The Organic Chemistry Tutor",
+    "video_id": "NCYNXkbTTUo",
+    "url": "https://www.youtube.com/watch?v=NCYNXkbTTUo",
+    "why": "Prepares for simple interest items using I = P x r x t."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Perimeter",
+    "title": "Math Antics - Perimeter",
+    "channel": "mathantics",
+    "video_id": "AAY1bsazcgM",
+    "url": "https://www.youtube.com/watch?v=AAY1bsazcgM",
+    "why": "Prepares for perimeter items on rectangles, squares and triangles."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Area",
+    "title": "Math Antics - Area",
+    "channel": "mathantics",
+    "video_id": "xCdxURXMdFY",
+    "url": "https://www.youtube.com/watch?v=xCdxURXMdFY",
+    "why": "Prepares for area items and area-scaling traps."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Circles: pi, circumference and area",
+    "title": "Why Every Circle Gives the Same Ratio: π and C = πd (7.G.B.4)",
+    "channel": " Animated Math Lessons: Common Core Edition",
+    "video_id": "4209o1wtlWc",
+    "why": "Builds circumference and area of circles on the existing perimeter and area lessons for CSE geometry items.",
+    "url": "https://www.youtube.com/watch?v=4209o1wtlWc"
+  },
+  {
+    "section": "Numerical",
+    "topic": "Volume of 3D objects",
+    "title": "VOLUME AND CAPACITY OF THREE-DIMENSIONAL OBJECTS",
+    "channel": "WOW MATH",
+    "video_id": "zT7WoAfUR8Y",
+    "why": "Prism, cylinder, cone, and sphere volume formulas complete the CSE geometry set.",
+    "url": "https://www.youtube.com/watch?v=zT7WoAfUR8Y"
+  },
+  {
+    "section": "Numerical",
+    "topic": "Compound interest",
+    "title": "Exponential Growth and Decay Explained | Compound Interest, Depreciation & Half-Life | WAEC & IGCSE",
+    "channel": "Math Minders Academy",
+    "video_id": "k60vQGQsS6c",
+    "url": "https://www.youtube.com/watch?v=k60vQGQsS6c",
+    "why": "Compound interest is a named CSE gap beside the existing simple interest lesson; this works the A = P(1+r)^t formula with exam-style examples."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Weighted average",
+    "title": "How to Calculate Weighted Average | Examples, Tips, and Tricks!",
+    "channel": "Indeed",
+    "video_id": "uyW_0UeKE-o",
+    "url": "https://www.youtube.com/watch?v=uyW_0UeKE-o",
+    "why": "Weighted averages sit behind CSE grade, price and mixture averages that a plain mean cannot solve; this teaches the weight-by-value method directly."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Number series: CSE pattern shortcuts",
+    "title": "Number Series part1 | Quantitative Reasoning | AFPSAT CSE UPCAT",
+    "channel": "SolvingMath with Leonalyn",
+    "video_id": "LPx5WncPs-c",
+    "url": "https://www.youtube.com/watch?v=LPx5WncPs-c",
+    "why": "Philippine CSE-specific series training from an established PH reviewer channel, going beyond the existing basic Khan patterns lesson."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Proportion: direct, inverse and partitive",
+    "title": "DIRECT, INVERSE & PARTITIVE PROPORTION",
+    "channel": "Sheena Doria",
+    "video_id": "fPQQsGL74CA",
+    "url": "https://www.youtube.com/watch?v=fPQQsGL74CA",
+    "why": "Partitive proportion (splitting a quantity by ratio) is a recurring CSE item type the existing ratio lessons do not isolate."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Clock problems",
+    "title": "Clocks - Tricks & Shortcuts for Placement tests, Job Interviews & Exams",
+    "channel": "CareerRide",
+    "video_id": "edEvlh0tqzk",
+    "url": "https://www.youtube.com/watch?v=edEvlh0tqzk",
+    "why": "Angle-between-hands and time-gained/lost clock items are a named CSE topic with no coverage in the current library; this teaches the shortcut formulas."
+  },
+  {
+    "section": "Numerical",
+    "topic": "Speed math: multiplication shortcuts",
+    "title": "Civil Service Exam Tips: Speed Math #2 (Multiplying by 5)",
+    "channel": "Lyqa Maravilla",
+    "video_id": "KjWCtLyf0RI",
+    "url": "https://www.youtube.com/watch?v=KjWCtLyf0RI",
+    "why": "CSE is a race against the clock; Team Lyqa speed-math techniques cut computation time across the whole Numerical section."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Agreement: subjects, verbs and pronouns",
+    "title": "Introduction to agreement | The parts of speech | Grammar | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "KEdI0-xIUFc",
+    "url": "https://www.youtube.com/watch?v=KEdI0-xIUFc",
+    "why": "Foundation for subject-verb and pronoun-antecedent agreement items."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Pronoun case",
+    "title": "Personal Pronoun Chart || One Shot || #englishgrammarbypcsir #tense #grammar #english #pronouns ",
+    "channel": "English Grammar By PC Sir",
+    "video_id": "NFWPtcdTK2w",
+    "why": "Subjective, objective, and possessive pronoun case is tested in CSE grammar and identifying-error items.",
+    "url": "https://www.youtube.com/watch?v=NFWPtcdTK2w"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Subject-verb agreement",
+    "title": "Subject-verb agreement | Syntax | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "4fMipjAnlRk",
+    "url": "https://www.youtube.com/watch?v=4fMipjAnlRk",
+    "why": "Prepares for the highest-frequency grammar trap: verb agreeing with the true subject."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Frequently confused words",
+    "title": "There, their, and they're | Frequently confused words | Usage | Grammar",
+    "channel": "Khan Academy",
+    "video_id": "0D54pfccNUQ",
+    "why": "Homophone and confused-word choices are a staple of CSE correct usage and error items.",
+    "url": "https://www.youtube.com/watch?v=0D54pfccNUQ"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Verb tense",
+    "title": "The past tense | The parts of speech | Grammar | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "zS6N5EqXpCY",
+    "url": "https://www.youtube.com/watch?v=zS6N5EqXpCY",
+    "why": "Prepares for verb tense and tense-consistency items."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Prepositions: correct usage",
+    "title": "Prepositions of time | The parts of speech | Grammar | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "TzUO8du5Lrg",
+    "url": "https://www.youtube.com/watch?v=TzUO8du5Lrg",
+    "why": "Prepares for preposition correct-usage items (in, on, at for time)."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Parallelism",
+    "title": "Parallel structure | Syntax | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "2l2FgUrln1A",
+    "url": "https://www.youtube.com/watch?v=2l2FgUrln1A",
+    "why": "Prepares for parallelism items in sentence correction and error identification."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Misplaced and dangling modifiers",
+    "title": "Writing - Misplaced Modifiers",
+    "channel": "Adam’s English Lessons · engVid",
+    "video_id": "Qu5pvwL9u4Q",
+    "why": "Modifier placement errors are a classic CSE identifying-error and sentence correction target.",
+    "url": "https://www.youtube.com/watch?v=Qu5pvwL9u4Q"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Error detection in grammar",
+    "title": "Error Detection in English Grammar | 6 Smart Tricks & Methods | STHP 2027 & Sukkur IBA Test",
+    "channel": "SK Ai Studio",
+    "video_id": "3qxmITaa130",
+    "why": "Teaches a method for spotting the erroneous part of a sentence, the exact CSE error-identification format.",
+    "url": "https://www.youtube.com/watch?v=3qxmITaa130"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Sentence completion: text completion method",
+    "title": "GRE Text Completion: The 3-Step Method Every 170 Scorer Uses",
+    "channel": "GRE-Dominator",
+    "video_id": "OenhKOafAsk",
+    "why": "Predict-before-you-look method transfers directly to CSE sentence completion items.",
+    "url": "https://www.youtube.com/watch?v=OenhKOafAsk"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Vocabulary in context",
+    "title": "Using context clues to figure out new words | Reading | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "CiNggzdWkIo",
+    "url": "https://www.youtube.com/watch?v=CiNggzdWkIo",
+    "why": "Prepares for vocabulary-in-context items using inference, definition, example, antonym and synonym clues."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Word roots and vocabulary building",
+    "title": "Learn Root Words | Boost Vocabulary & Reading Skills",
+    "channel": "Innovative Literacy",
+    "video_id": "eumrmlOmkBs",
+    "why": "Greek and Latin roots unlock unfamiliar word meanings in CSE vocabulary and reading items.",
+    "url": "https://www.youtube.com/watch?v=eumrmlOmkBs"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Synonyms and antonyms: advanced vocabulary",
+    "title": "GRE Vocabulary Lecture 16 | 10 Advanced Words, Synonyms, Antonyms & MCQs",
+    "channel": "Learn With Shema Solangi",
+    "video_id": "w7Tc5pVOsVk",
+    "why": "Directly trains the synonym and antonym item type with advanced words and practice questions.",
+    "url": "https://www.youtube.com/watch?v=w7Tc5pVOsVk"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Idioms and figurative expressions",
+    "title": "15 English Idioms for Small Talk in English",
+    "channel": "Duarte Business English",
+    "video_id": "iF8Fj6mv_ds",
+    "why": "Idiom meanings appear in CSE vocabulary-in-context and sentence completion items.",
+    "url": "https://www.youtube.com/watch?v=iF8Fj6mv_ds"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Reading comprehension: main idea",
+    "title": "What is a main idea? | Reading | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "4swFGRhQoMI",
+    "url": "https://www.youtube.com/watch?v=4swFGRhQoMI",
+    "why": "Prepares for main-idea items, the largest reading comprehension block."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Author's purpose and tone",
+    "title": "English 9 Term 2 Week 6 Session 1 | Author's Purpose and Meaning | MATATAG Curriculum",
+    "channel": "MATATAG Learning Hub",
+    "video_id": "eKEGenUfEMA",
+    "why": "Purpose and tone questions follow main idea questions in CSE reading comprehension sets.",
+    "url": "https://www.youtube.com/watch?v=eKEGenUfEMA"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Making inferences",
+    "title": "Make an inference easy | K-12",
+    "channel": "Smekens Education",
+    "video_id": "1V-puUv3-N4",
+    "why": "Clue-plus-background inference method is exactly what CSE implied-meaning items require.",
+    "url": "https://www.youtube.com/watch?v=1V-puUv3-N4"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Reading for details: extracting significant information",
+    "title": "English 7 Term 2 Week 5 Session 4 | Extracting Significant Information | MATATAG Curriculum",
+    "channel": "MATATAG Learning Hub",
+    "video_id": "C4YyeT-EPzE",
+    "why": "Separating main idea from supporting details trains CSE detail and NOT-true reading items.",
+    "url": "https://www.youtube.com/watch?v=C4YyeT-EPzE"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Paragraph organization",
+    "title": "Paragraph Structure",
+    "channel": "Smrt English",
+    "video_id": "NLzKqujmdGk",
+    "url": "https://www.youtube.com/watch?v=NLzKqujmdGk",
+    "why": "Prepares for paragraph organization items: topic sentence, supporting sentences, conclusion."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Sentence arrangement",
+    "title": "THE ART OF SENTENCE ARRANGEMENT LIKE A PRO: PQRS - MADE EASY FOR ALL COMPETITIVE EXAMS",
+    "channel": "Arun Dalal English Classes",
+    "video_id": "HOqRh1y1aZo",
+    "why": "Ordering jumbled sentences is the sentence-level half of CSE paragraph organization items.",
+    "url": "https://www.youtube.com/watch?v=HOqRh1y1aZo"
+  },
+  {
+    "section": "Verbal",
+    "topic": "Subject-verb agreement: advanced cases",
+    "title": "Subject Verb Agreement Masterclass (Part-2) | Zero to Hero Series",
+    "channel": "Rohilla English Grammar",
+    "video_id": "qNkp7V7oA_Q",
+    "url": "https://www.youtube.com/watch?v=qNkp7V7oA_Q",
+    "why": "Part 2 tackles the advanced SVA traps (indefinite pronouns, collective nouns, inverted order) that decide CSE grammar items, beyond the existing Khan basics."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Error identification: spotting error practice",
+    "title": "English Advantage - Free English Learning Online Classes for Competitions :: ibps clerk preparation 2016 |  Tricky Spotting Error Questions",
+    "channel": "English Advantage - Free English Learning Online Classes for Competitions",
+    "video_id": "c2gPM29_46Q",
+    "url": "https://www.youtube.com/watch?v=c2gPM29_46Q",
+    "why": "Timed spotting-error drills in the exact CSE identifying-error format, adding practice depth to the existing method lesson."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Reading comprehension: strategy and tips",
+    "title": "Reading Comprehension Tips",
+    "channel": "Team Lyqa",
+    "video_id": "tp5-KdErrFc",
+    "url": "https://www.youtube.com/watch?v=tp5-KdErrFc",
+    "why": "Team Lyqa's CSE-proven reading approach: how to attack passages under time pressure instead of reading line by line."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Reading comprehension: CSE-style guided practice",
+    "title": "Reading Comprehension Tips | VERBAL REASONING TEST",
+    "channel": "SolvingMath with Leonalyn",
+    "video_id": "8lV37fhyZhk",
+    "url": "https://www.youtube.com/watch?v=8lV37fhyZhk",
+    "why": "Leonalyn walks through verbal reasoning reading items in actual CSE style, pairing with the Team Lyqa strategy lesson as guided practice."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Paragraph organization: ordering jumbled sentences",
+    "title": "Parajumbles - Tricks and Strategies",
+    "channel": "FACE Prep",
+    "video_id": "DDO8EyxR9rA",
+    "url": "https://www.youtube.com/watch?v=DDO8EyxR9rA",
+    "why": "Parajumble technique (find the opener, link mandatory pairs, use transitions) is exactly the CSE paragraph organization skill at the whole-paragraph level."
+  },
+  {
+    "section": "Verbal",
+    "topic": "Correct usage: compound nouns and plural forms",
+    "title": "Compound Nouns - Plural Form - English Grammar - Civil Service Review",
+    "channel": "Team Lyqa",
+    "video_id": "6LOwrOFtRao",
+    "url": "https://www.youtube.com/watch?v=6LOwrOFtRao",
+    "why": "Plural forms of compound nouns (attorneys-general, passers-by) are a classic CSE correct-usage and error trap, taught here in CSE review context."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Conclusions: inductive vs deductive reasoning",
+    "title": "Difference between inductive and deductive reasoning | Precalculus | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "GEId0GonOZM",
+    "url": "https://www.youtube.com/watch?v=GEId0GonOZM",
+    "why": "Foundation for conclusion items: what follows necessarily vs what is only probable."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Argument structure: premises, conclusions, validity",
+    "title": "Structure of Argument  |  Types of Argument  |  Validity of Argument",
+    "channel": "Statistics with Musharaf-Ur-Rehman",
+    "video_id": "uZRPll9u_Yg",
+    "why": "Foundation for every CSE logical reasoning item: find the conclusion, check the support.",
+    "url": "https://www.youtube.com/watch?v=uZRPll9u_Yg"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Critical thinking: assumptions and fallacies overview",
+    "title": "Asking the Right Questions: A Guide to Critical Thinking | Video Summary",
+    "channel": "Hidden Library",
+    "video_id": "voVWi4YfQuA",
+    "why": "Covers issue, conclusion, reasons, hidden assumptions, and fallacies in one framework for CSE argument items.",
+    "url": "https://www.youtube.com/watch?v=voVWi4YfQuA"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Logical fallacies",
+    "title": "Reading Logical Fallacies",
+    "channel": "Mometrix Academy",
+    "video_id": "IawIjqOJBU8",
+    "why": "Naming the flaw in an argument is a recurring CSE logical reasoning item type.",
+    "url": "https://www.youtube.com/watch?v=IawIjqOJBU8"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Syllogisms",
+    "title": "Decision Making: Syllogisms Explained In 20 Minutes | UCAT Preparation",
+    "channel": "MES UCAT",
+    "video_id": "oBysm0k-a40",
+    "url": "https://www.youtube.com/watch?v=oBysm0k-a40",
+    "why": "Prepares for syllogism items where a conclusion must follow from given statements."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Statement vs inference",
+    "title": "CLAT 2027 Logical Reasoning: Statement vs Inference | True vs Follows #clat #clatprep #clattips",
+    "channel": "Amardeep Siingh",
+    "video_id": "KdcnDWTxuS4",
+    "why": "CSE asks what must be true or follows from a statement; this drills exactly that distinction.",
+    "url": "https://www.youtube.com/watch?v=KdcnDWTxuS4"
+  },
+  {
+    "section": "Analytical",
+    "topic": "If-then logic (rules of implication)",
+    "title": "Rules of Implication (part 1)",
+    "channel": "A Little Bit of Philosophy",
+    "video_id": "pNt6V6cHDnU",
+    "url": "https://www.youtube.com/watch?v=pNt6V6cHDnU",
+    "why": "Prepares for conditional-logic items: modus ponens, modus tollens and the invalid converse."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Strengthen and weaken questions",
+    "title": "How to Crack LSAT Strengthen & Weaken Questions | 6 Practice Questions Explained",
+    "channel": "Airtight Prep",
+    "video_id": "qWRTew5mvSs",
+    "why": "Strengthen, weaken, and assumption handling are the hardest CSE argument items; this teaches them with worked examples.",
+    "url": "https://www.youtube.com/watch?v=qWRTew5mvSs"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Logical reasoning methods for arguments",
+    "title": "How to Destroy LSAT Logical Reasoning (Even If You Blank Out on Every Argument)",
+    "channel": "LSAT Unplugged & Law School Admissions Podcast",
+    "video_id": "YpvVUCGomVM",
+    "why": "A full method for argument questions: conclusion spotting, prephrasing, and trap answer elimination.",
+    "url": "https://www.youtube.com/watch?v=YpvVUCGomVM"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Analogies and word association",
+    "title": "Analogy I English for CLAT & IIM IPM I Score Booster",
+    "channel": "ProTalent Admin",
+    "video_id": "rgJ_8h8nc50",
+    "url": "https://www.youtube.com/watch?v=rgJ_8h8nc50",
+    "why": "Prepares for analogy items: name the relationship first, then match it."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Analogies: relationship types (advanced)",
+    "title": "ADRE 2.0 Reasoning | Chapter 1: Analogy  |Assam Police| |APSC| #adre #trending #class #concept",
+    "channel": "Classroom Engine",
+    "video_id": "GcHWvCUe6V4",
+    "why": "Systematic analogy relationship types deepen the existing word association lesson for harder CSE pairs.",
+    "url": "https://www.youtube.com/watch?v=GcHWvCUe6V4"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Number series: advanced patterns",
+    "title": "*Number Series Reasoning Tricks | 8 Types | Pattern Explained | Reasoning for All Exams*",
+    "channel": "JHANGIR OFFICIAL ",
+    "video_id": "P-wZ_P0JLFM",
+    "why": "Eight series pattern families cover the advanced CSE number series beyond basic sequences.",
+    "url": "https://www.youtube.com/watch?v=P-wZ_P0JLFM"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Letter series: basics to advanced",
+    "title": "CSAT Letter Series Class 1 | Basics to Advanced | UPSC CSE 2027 | Live Class",
+    "channel": "Legacy IAS Academy",
+    "video_id": "hKdL9EY9mUg",
+    "why": "Alphabet position and skip patterns are the core skill in CSE letter series items.",
+    "url": "https://www.youtube.com/watch?v=hKdL9EY9mUg"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Data interpretation: bar graphs",
+    "title": "Reading bar graphs | Applying mathematical reasoning | Pre-Algebra | Khan Academy",
+    "channel": "Khan Academy",
+    "video_id": "kiQ6MUQZHSs",
+    "url": "https://www.youtube.com/watch?v=kiQ6MUQZHSs",
+    "why": "Prepares for data interpretation items on graphs: read labels, units and values first."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Data interpretation: reading tables and graphs",
+    "title": "ACT Science Interpretation of Data: Read Tables and Graphs Fast",
+    "channel": "The Learning Curve",
+    "video_id": "gxih1l0fPf8",
+    "why": "Fast, accurate table and graph reading under time pressure is the CSE data interpretation skill.",
+    "url": "https://www.youtube.com/watch?v=gxih1l0fPf8"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Data interpretation: mixed chart practice",
+    "title": "SBI/IBPS/RRB Clerk 2026  | Quant Preparation | Data Interpretation | Most Important DI Questions",
+    "channel": "Adda247 Bank Maths",
+    "video_id": "90vcKYGiFI4",
+    "why": "Worked tabular, pie, line, and bar chart sets mirror the mixed CSE data interpretation items.",
+    "url": "https://www.youtube.com/watch?v=90vcKYGiFI4"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Abstract reasoning: pattern rules",
+    "title": "AFPSAT | ABSTRACT REASONING | Logical Test",
+    "channel": "SolvingMath with Leonalyn",
+    "video_id": "oOdQYmW1JFc",
+    "why": "Philippine exam abstract reasoning with explained figure patterns, the closest match to CSE figure reasoning items.",
+    "url": "https://www.youtube.com/watch?v=oOdQYmW1JFc"
+  },
+  {
+    "section": "Analytical",
+    "topic": "Statement and assumptions",
+    "title": "Statement and Assumptions - Tricks & Shortcuts for Placement tests, Job Interviews & Exams",
+    "channel": "CareerRide",
+    "video_id": "azRxI1e6Ekk",
+    "url": "https://www.youtube.com/watch?v=azRxI1e6Ekk",
+    "why": "Statement-assumption is a named CSE Analytical gap; this teaches which implicit assumptions a statement actually rests on."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Blood relations",
+    "title": "Blood Relations - Tricks & Shortcuts for 2026 - 2027 Placement tests, Job Interviews & Exams",
+    "channel": "CareerRide",
+    "video_id": "LRdLhfDupMU",
+    "url": "https://www.youtube.com/watch?v=LRdLhfDupMU",
+    "why": "Family-relation puzzles appear in CSE Analytical sets and are pure technique: draw the family tree, mark genders, read the chain."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Sequencing: seating arrangement puzzles",
+    "title": "Seating Arrangement - Tricks & Shortcuts for 2026 - 2027 Placement tests, Job Interviews & Exams",
+    "channel": "CareerRide",
+    "video_id": "GYe98jwCn7g",
+    "url": "https://www.youtube.com/watch?v=GYe98jwCn7g",
+    "why": "Ordering and seating puzzles are the sequencing half of CSE Analytical reasoning; this gives a fixed diagram-first method."
+  },
+  {
+    "section": "Analytical",
+    "topic": "Abstract reasoning: paper folding (spatial)",
+    "title": "Spatial Relations - Folding Tutorial",
+    "channel": "MrTestPreparation",
+    "video_id": "E-7n9qK2x_g",
+    "url": "https://www.youtube.com/watch?v=E-7n9qK2x_g",
+    "why": "Paper-folding and punch patterns are the spatial reasoning items that complement the existing Leonalyn figure-pattern lesson."
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine history: Spanish colonization",
+    "title": "How Did Spain Rule the Philippines for 300 Years but Leave So Little Spanish Behind? In 20 minutes",
+    "channel": "Medge Tv",
+    "video_id": "T0i3Ox-4RsQ",
+    "why": "Covers colonization, the galleon era, and the road to revolution that CSE history items draw on.",
+    "url": "https://www.youtube.com/watch?v=T0i3Ox-4RsQ"
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine history: full timeline to EDSA",
+    "title": "The ENTIRE History of the Philippines in 15 Minutes | The Bells America Took",
+    "channel": "Retold Atlas",
+    "video_id": "oM3FaMY5l_c",
+    "why": "One sweep from pre-colonial to American period to People Power, anchoring CSE history facts in sequence.",
+    "url": "https://www.youtube.com/watch?v=oM3FaMY5l_c"
+  },
+  {
+    "section": "General Information",
+    "topic": "History of the Philippine Constitution",
+    "title": "History of the Philippine Constitution",
+    "channel": "May May",
+    "video_id": "pm8-O1FiCXI",
+    "why": "Malolos to 1935 to 1973 to 1987: CSE asks which constitution and provision came when.",
+    "url": "https://www.youtube.com/watch?v=pm8-O1FiCXI"
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine government: three branches",
+    "title": "The Three Branches of Philippine Government",
+    "channel": "NoMo Studio",
+    "video_id": "-p4_OFbxnmY",
+    "url": "https://www.youtube.com/watch?v=-p4_OFbxnmY",
+    "why": "Prepares for structure-of-government items: legislative, executive and judicial roles."
+  },
+  {
+    "section": "General Information",
+    "topic": "Three branches: constitutional design of powers",
+    "title": "BASIC CONCEPTS: CONSTITUTIONAL DESIGN OF GOVERNMENT POWERS",
+    "channel": "TLG Legal Group",
+    "video_id": "3n_cKTaBQu4",
+    "why": "Separation of powers, veto, and judicial review in depth, beyond the existing three branches overview.",
+    "url": "https://www.youtube.com/watch?v=3n_cKTaBQu4"
+  },
+  {
+    "section": "General Information",
+    "topic": "Legislative process and Philippine legislation",
+    "title": "Foundations of Philippine Legislation | Philippine Contemporary Legislation",
+    "channel": "Vincent Pagador",
+    "video_id": "8zoA5QXJ5fI",
+    "why": "How Congress makes law and how statutes rank supports CSE government structure and local governance items.",
+    "url": "https://www.youtube.com/watch?v=8zoA5QXJ5fI"
+  },
+  {
+    "section": "General Information",
+    "topic": "Bill of Rights (Article III)",
+    "title": "The Bill of Rights (Philippine Constitution) Basic Concepts (Part 1)",
+    "channel": "Atty. Edgar Pascua II",
+    "video_id": "lNZ0l-85Moo",
+    "url": "https://www.youtube.com/watch?v=lNZ0l-85Moo",
+    "why": "Prepares for Bill of Rights items, the most heavily tested General Information block."
+  },
+  {
+    "section": "General Information",
+    "topic": "Citizenship: Article IV",
+    "title": "People:  Philippine Citizenship (Part 1)",
+    "channel": "Atty. Edgar Pascua II",
+    "video_id": "sDxjsSJxi6k",
+    "why": "Who is a Filipino citizen and how citizenship is lost or reacquired are direct CSE Constitution items.",
+    "url": "https://www.youtube.com/watch?v=sDxjsSJxi6k"
+  },
+  {
+    "section": "General Information",
+    "topic": "Human rights: the UDHR",
+    "title": "Universal Declaration of Human Rights (UDHR) Explained | Articles 1–30 | Human Rights Law Part 7",
+    "channel": "Adv Gargi Chandrawanshi ",
+    "video_id": "X9gAn4mZbvc",
+    "why": "The UDHR articles underpin the human rights concepts CSE pairs with the Bill of Rights.",
+    "url": "https://www.youtube.com/watch?v=X9gAn4mZbvc"
+  },
+  {
+    "section": "General Information",
+    "topic": "RA 6713: code of conduct",
+    "title": "RA 6713: Code of Conduct and Ethical Standards for Public Officials and Employees",
+    "channel": "Jeffrey Sasoy",
+    "video_id": "2sYz3Uf5Boc",
+    "url": "https://www.youtube.com/watch?v=2sYz3Uf5Boc",
+    "why": "Prepares for RA 6713 items: norms of conduct, duties, prohibited acts and SALN."
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine flag and national symbols (RA 8491)",
+    "title": "Flag Heraldic Code of the Philippines | NSTP Lecture by Engr. Jorge Escalona",
+    "channel": "Jonas' Class Notes",
+    "video_id": "5PX0h6AbLvI",
+    "url": "https://www.youtube.com/watch?v=5PX0h6AbLvI",
+    "why": "Prepares for national symbol and flag items under the Flag and Heraldic Code."
+  },
+  {
+    "section": "General Information",
+    "topic": "ASEAN basics",
+    "title": "ASEAN Explained - Everything you need to Know! #asean #css #generalknowledge",
+    "channel": "CSS To The Point",
+    "video_id": "oMUlQ0r6Kcc",
+    "why": "ASEAN members, objectives, and principles are standard CSE general information items.",
+    "url": "https://www.youtube.com/watch?v=oMUlQ0r6Kcc"
+  },
+  {
+    "section": "General Information",
+    "topic": "United Nations basics",
+    "title": "What is the United Nations",
+    "channel": "FN-sambandet Norge",
+    "video_id": "E67ln5yJtyE",
+    "why": "UN purpose and main organs are recurring CSE general information items.",
+    "url": "https://www.youtube.com/watch?v=E67ln5yJtyE"
+  },
+  {
+    "section": "General Information",
+    "topic": "Environment: greenhouse effect and climate basics",
+    "title": "What Is the Greenhouse Effect?",
+    "channel": "NASA Space Place",
+    "video_id": "SN5-DnOHQmE",
+    "url": "https://www.youtube.com/watch?v=SN5-DnOHQmE",
+    "why": "Prepares for environment concept items: greenhouse gases, warming and climate basics."
+  },
+  {
+    "section": "General Information",
+    "topic": "RA 9003: Ecological Solid Waste Management",
+    "title": "“Ecological Solid Waste Management Act” (RA 9003) in Jose Rizal University (JRU)",
+    "channel": "Nicole Libut",
+    "video_id": "Gx5s8ttHOT4",
+    "why": "Waste segregation and RA 9003 duties are the environmental management facts CSE tests most.",
+    "url": "https://www.youtube.com/watch?v=Gx5s8ttHOT4"
+  },
+  {
+    "section": "General Information",
+    "topic": "Suffrage: Article V",
+    "title": "Gen. Info - Art.5: Suffrage",
+    "channel": "Civil Service Review TV",
+    "video_id": "aayEAooF3Hs",
+    "url": "https://www.youtube.com/watch?v=aayEAooF3Hs",
+    "why": "Article V voter qualifications (age 18, residency 1 year and 6 months, no literacy or property requirement) are direct-quote CSE Constitution items, taught by a CSE reviewer channel."
+  },
+  {
+    "section": "General Information",
+    "topic": "Local government: Article X",
+    "title": "CONSLAW REVIEWER - Local Government",
+    "channel": "LeyLaSalle",
+    "video_id": "nIneXYG9s4s",
+    "url": "https://www.youtube.com/watch?v=nIneXYG9s4s",
+    "why": "Article X local autonomy, LGUs and plebiscite rules fill the Constitution coverage gap between the existing branches and citizenship lessons."
+  },
+  {
+    "section": "General Information",
+    "topic": "RA 6713: prohibited acts and transactions (Section 7)",
+    "title": "Prohibited Acts and Transactions | RA 6713",
+    "channel": "NoMo Studio",
+    "video_id": "vxKfPY7jR_g",
+    "url": "https://www.youtube.com/watch?v=vxKfPY7jR_g",
+    "why": "Goes deeper than the existing RA 6713 overview into Section 7: financial interest, outside employment, gift solicitation and their penalties, the most itemized part of the law in CSE questions."
+  },
+  {
+    "section": "General Information",
+    "topic": "Philippine geography: island groups",
+    "title": "Three Largest Island Groups of Philippines",
+    "channel": "First World Peoples",
+    "video_id": "Jw54Z0Bzuuk",
+    "url": "https://www.youtube.com/watch?v=Jw54Z0Bzuuk",
+    "why": "Luzon, Visayas and Mindanao island-group facts anchor the Philippine geography items the current library does not cover at all."
+  }
 ]
