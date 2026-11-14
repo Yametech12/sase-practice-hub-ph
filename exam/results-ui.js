@@ -492,24 +492,24 @@
 
     // background
     var grad = g.createLinearGradient(0, 0, 0, 1350);
-    grad.addColorStop(0, "#0f2a5c"); grad.addColorStop(1, "#143a7a");
+    grad.addColorStop(0, "#171638"); grad.addColorStop(1, "#232147");
     g.fillStyle = grad; g.fillRect(0, 0, 1080, 1350);
 
     var isCse = !!d.benchmark;
     var brandLine = isCse ? "CSE Practice Hub PH" : "SASE Practice Hub PH";
     g.fillStyle = "#ffffff"; g.textAlign = "center";
     g.font = "700 54px Arial"; g.fillText(brandLine, 540, 140);
-    g.font = "600 32px Arial"; g.fillStyle = "#cdd9f2";
+    g.font = "600 32px Arial"; g.fillStyle = "#d8d4f0";
     g.fillText(examLabel, 540, 208);
     if (dateLabel) {
-      g.font = "600 28px Arial"; g.fillStyle = "#9db4dd";
+      g.font = "600 28px Arial"; g.fillStyle = "#a5a3bd";
       g.fillText(dateLabel, 540, 258);
     }
 
     // score
     g.fillStyle = "#ffffff"; g.font = "800 220px Arial";
     g.fillText(pct.toFixed(1) + "%", 540, 520);
-    g.font = "600 44px Arial"; g.fillStyle = "#cdd9f2";
+    g.font = "600 44px Arial"; g.fillStyle = "#d8d4f0";
     g.fillText(d.score + " out of " + d.total + " correct", 540, 600);
 
     // sections (spacing shrinks gracefully if there are ever more than 4)
@@ -528,7 +528,7 @@
     });
 
     // footer watermark
-    g.textAlign = "center"; g.fillStyle = "#9db4dd"; g.font = "600 30px Arial";
+    g.textAlign = "center"; g.fillStyle = "#a5a3bd"; g.font = "600 30px Arial";
     g.fillText(isCse ? "Practice benchmark, not an official CSC rating" : "Practice benchmark, not an official SASE result", 540, 1230);
     g.fillStyle = "#ffffff"; g.font = "700 34px Arial";
     g.fillText(brandLine, 540, 1285);
