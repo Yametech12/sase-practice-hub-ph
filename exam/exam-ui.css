@@ -600,7 +600,7 @@ body {
      (--gold-soft is not redefined there), so its text stays dark. */
   .resume-banner { color: #1c1b2e; }
   /* Pinned exam nav: dark translucent surface */
-  #screen-exam .exam-nav { background: rgba(13, 24, 43, .94); }
+  #screen-exam .exam-nav { background: rgba(16, 15, 40, .94); }
   #screen-exam .qcard { border-color: #3a3768; }
   #screen-exam .option { background: #232147; }
   #screen-exam .option.selected { background: linear-gradient(180deg, #2c2a5e, #232147); }
