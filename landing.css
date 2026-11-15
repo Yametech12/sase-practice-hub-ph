@@ -6,7 +6,12 @@
   --indigo: #171638;
   --indigo-deep: #100f28;
   --indigo-soft: #232147;
+  --indigo-mid: #2a2560;
+  --violet: #4a3f8c;
+  --peri: #a5a3d9;
+  --mist: #efedf7;
   --coral: #ff6f4f;
+  --peach: #ff8a5c;
   --coral-deep: #d64026;
   --coral-dark: #b3321f;
   --link: #c93a20;
@@ -173,7 +178,7 @@ a { color: var(--link); }
   border: 2px solid transparent;
   cursor: pointer;
 }
-.button.primary { background: var(--coral-deep); color: #fff; }
+.button.primary { background: linear-gradient(135deg, var(--coral-deep), var(--coral-dark)); color: #fff; }
 .button.primary:hover { background: var(--coral-dark); }
 .button.ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
 .button.ghost:hover { border-color: var(--link); color: var(--link); }
@@ -183,7 +188,7 @@ a { color: var(--link); }
   border-color: rgba(255, 255, 255, 0.45);
 }
 .button.secondary:hover { border-color: #fff; }
-.button.on-light { background: var(--indigo); color: #fff; }
+.button.on-light { background: linear-gradient(135deg, var(--indigo-soft), var(--violet)); color: #fff; }
 .button.on-light:hover { background: var(--coral-deep); }
 
 /* ---------- Hero ---------- */
@@ -191,7 +196,7 @@ a { color: var(--link); }
 .hero {
   background:
     radial-gradient(720px 420px at 88% -10%, rgba(255, 111, 79, 0.28), transparent 65%),
-    linear-gradient(160deg, var(--indigo-soft) 0%, var(--indigo) 46%, var(--indigo-deep) 100%);
+    linear-gradient(160deg, var(--indigo-soft) 0%, var(--indigo-mid) 34%, var(--indigo) 62%, var(--indigo-deep) 100%);
   color: #fff;
   overflow: hidden;
 }
@@ -554,7 +559,7 @@ a { color: var(--link); }
   padding: 15px;
   border: none;
   border-radius: 999px;
-  background: var(--coral-deep);
+  background: linear-gradient(135deg, var(--coral-deep), var(--coral-dark));
   color: #fff;
   font-family: var(--font-display);
   font-weight: 700;
@@ -590,7 +595,7 @@ a { color: var(--link); }
 .send-note { color: var(--muted); font-size: 0.88rem; }
 
 /* Footer */
-footer { background: var(--indigo-deep); color: rgba(255, 255, 255, 0.72); }
+footer { background: linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 88%); color: rgba(255, 255, 255, 0.72); }
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
@@ -746,9 +751,9 @@ footer a { color: #ffb59f; }
 }
 
 /* section rhythm: alternating warm tint */
-main > .section:nth-of-type(even) { background: #f1eee8; }
+main > .section:nth-of-type(even) { background: var(--mist); }
 @media (prefers-color-scheme: dark) {
-  main > .section:nth-of-type(even) { background: #16142f; }
+  main > .section:nth-of-type(even) { background: #1a1740; }
 }
 
 /* cards lift on hover, headings get a coral tick */
@@ -1045,7 +1050,7 @@ main > .section:nth-of-type(even) { background: #f1eee8; }
 
 /* --- ticker: a coral band that scrolls the offer under the hero --- */
 .ticker {
-  background: linear-gradient(90deg, var(--coral-deep) 0%, var(--coral) 52%, var(--coral-deep) 100%);
+  background: linear-gradient(90deg, var(--coral-deep) 0%, var(--coral) 34%, var(--peach) 50%, var(--coral) 66%, var(--coral-deep) 100%);
   color: #fff;
   overflow: hidden;
   padding: 13px 0;

@@ -17,8 +17,8 @@
   --green-bg: #e6f6ee;
   --red: #b52c42;     /* darkened: on white = 6.17:1 (A11Y C4); white on this = 6.17:1 (C5) */
   --red-bg: #fdeaed;
-  --amber: #7a520d;   /* darkened: on #fdf3e0 = 6.27:1 (A11Y C1); white on this = 6.91:1 (C5) */
-  --amber-bg: #fdf3e0;
+  --amber: #9a4a12;   /* burnt orange, harmonized with coral: on #fdeee2 = 5.50:1; white on this = 6.25:1 */
+  --amber-bg: #fdeee2;
   --grey-bg: #ede9f7;
   --radius: 18px;
   --shadow: 0 2px 12px rgba(23, 22, 56, 0.08);
@@ -70,7 +70,7 @@ body {
 .practice-badge {
   font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
   color: var(--amber); background: var(--amber-bg);
-  border: 1px solid #f0d9a8; border-radius: 999px; padding: 5px 10px;
+  border: 1px solid #f3c9a8; border-radius: 999px; padding: 5px 10px;
 }
 .back-link {
   display: inline-flex; align-items: center; gap: 4px;
@@ -103,7 +103,7 @@ body {
 
 /* ---- Auto-submit / forfeit notice ---- */
 .result-notice {
-  background: var(--amber-bg); border: 1px solid #f0d9a8;
+  background: var(--amber-bg); border: 1px solid #f3c9a8;
   border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px;
   font-size: 14px; color: var(--ink); line-height: 1.55;
 }
@@ -312,10 +312,12 @@ body {
     --blue-100: #2e2b5c;
     --green-bg: #14382a;
     --red-bg: #3d1a22;
-    --amber-bg: #3a2f16;
+    --amber-bg: #402416;
+    --amber: #ffb59f;   /* light peach text on dark caution surfaces: on #402416 = 8.34:1 */
     --grey-bg: #2e2b5c;
   }
   body { background: #100f28; }
+  .q-item.skipped .q-num { background: #9a4a12; }   /* badge keeps the deep tone so its white numeral stays readable */
   .brand-name, .card-title, .hero-copy h1, .sec-pct, .sec-name, .score-pct,
   .improve-item strong, .q-head-q, .q-text { color: #edecf4; }
   .back-link, .btn-ghost, .chip, .q-item, .q-empty, .card { background: #1e1c45; color: var(--ink); }
@@ -332,7 +334,7 @@ body {
   .q-opts li b { color: var(--ink); }
   .q-item.correct .q-status { color: #7ed9a8; background: #14382a; }
   .q-item.wrong .q-status { color: #f08ba0; background: #3d1a22; }
-  .q-item.skipped .q-status { color: #f0cd7a; background: #3a2f16; }
+  .q-item.skipped .q-status { color: #f0cd7a; background: #402416; }
   .q-opts li.is-correct, .q-opts li.is-correct b { color: #7ed9a8; }
   .ans-line .you-right { color: #7ed9a8; }
   .ans-line .you-wrong { color: #f08ba0; }
@@ -344,7 +346,7 @@ body {
 /* Civil Service results: 80.00 benchmark line + weak-section lessons link */
 .benchmark-line {
   margin: 14px 0 0; padding: 12px 14px; border-radius: 12px;
-  background: #fdf3e0; color: #5c430a; font-size: 14px; line-height: 1.55;
+  background: #fdeee2; color: #5c430a; font-size: 14px; line-height: 1.55;
   border: 1px solid #f0dcae;
 }
 .improve-item.lessons-link { font-size: 14px; }
