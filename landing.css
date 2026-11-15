@@ -644,7 +644,9 @@ footer a { color: #ffb59f; }
 }
 
 @media (max-width: 640px) {
-  .hero-art { aspect-ratio: 3 / 4; }
+  .hero-art { aspect-ratio: 3 / 1; }
+  .hero-grid { gap: 36px; padding-top: 44px; padding-bottom: 64px; }
+  .hero-visual-caption { margin-top: 14px; text-align: center; }
   .hero-stats { gap: 26px; }
   .exam-card { position: static; width: 100%; margin-top: 14px; }
   .hero-actions .button { flex: 1 1 100%; }
