@@ -845,3 +845,29 @@ body { color: #1c1b2e; }
 .lesson-topic { color: #d64026; }
 .q-passage { border-left-color: #ff6f4f; }
 .skip-link { background: #171638; }
+
+/* ============================================================
+   DARK REPAIR (Nov 15, 2026): the indigo/coral alignment block
+   above is not media-scoped, so its pinned dark text colors also
+   applied in dark mode and sat unreadable on dark surfaces
+   (owner phone screenshots Nov 15: timer digits, progress line,
+   subject chip, option letters, instructions title and stat
+   numbers, loading title). This block restores the dark palette
+   for every pinned selector that lives on a dark surface.
+   Light mode is untouched.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  body { color: var(--ink); }
+  .gate-hero h1, .section-title, .timer-text, .progress-text,
+  .grid-head h3, .confirm-panel h3, .exam-list-loading p,
+  .instr-title, .instr-h, .grid-filter-label,
+  .lessons-group-title { color: #edecf4; }
+  .q-number { color: #a5a3bd; }
+  .q-section, .exam-score, .option .opt-letter { color: #ffb59f; }
+  .btn-ghost { color: #e6e2f4; }
+  .instr-fact strong, .instr-sections b { color: #ffb59f; }
+  .instr-kicker, .instr-note { color: #ffb59f; }
+  .instr-sections li { color: var(--ink); }
+  .instr-steps li::before { background: var(--violet); }
+  .spinner { border-top-color: #ff6f4f; }
+}

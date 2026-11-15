@@ -388,3 +388,14 @@ body { color: #1c1b2e; background: #f7f5f1; }
   .btn-primary:active { background: #4a4780; }
   .exam-status { background: #232147; }
 }
+
+/* DARK REPAIR (Nov 15, 2026): same unscoped pin-block issue as
+   exam-ui.css. The pinned headings and score figures sit on dark
+   cards in dark mode (#1e1c45), and inherited body text sat on
+   the dark page background. Restore the dark palette. */
+@media (prefers-color-scheme: dark) {
+  body { color: var(--ink); }
+  .brand-name, .card-title, .hero-copy h1, .score-pct, .sec-pct,
+  .improve-item strong { color: #edecf4; }
+  .q-code { color: #d8d4f0; }
+}
