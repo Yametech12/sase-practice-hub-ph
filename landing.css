@@ -267,7 +267,7 @@ a { color: var(--link); }
   border-radius: 26px;
   box-shadow: 0 34px 70px rgba(0, 0, 0, 0.42);
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 .exam-card {
@@ -644,6 +644,7 @@ footer a { color: #ffb59f; }
 }
 
 @media (max-width: 640px) {
+  .hero-art { aspect-ratio: 3 / 4; }
   .hero-stats { gap: 26px; }
   .exam-card { position: static; width: 100%; margin-top: 14px; }
   .hero-actions .button { flex: 1 1 100%; }
@@ -1169,3 +1170,6 @@ main > .section:nth-of-type(even) { background: #f1eee8; }
     50% { transform: translateY(-6px); }
   }
 }
+
+/* Elevation 4.1: responsive hero picture (portrait art on phones) */
+.hero-art-wrap picture { display: block; }
