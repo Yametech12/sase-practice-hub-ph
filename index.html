@@ -75,15 +75,15 @@
 
             <div class="hero-stats">
               <div class="stat">
-                <strong>450</strong>
+                <strong data-count="450">450</strong>
                 <span>reviewer questions</span>
               </div>
               <div class="stat">
-                <strong>8</strong>
+                <strong data-count="8">8</strong>
                 <span>mock exams</span>
               </div>
               <div class="stat">
-                <strong>₱167</strong>
+                <strong data-count="167" data-prefix="₱">₱167</strong>
                 <span>one-time student bundle</span>
               </div>
             </div>
@@ -96,7 +96,7 @@
             <div class="exam-card" role="img" aria-label="Illustration of a mock exam question card with a timer and four answer options">
               <div class="sheet-top">
                 <span class="chip chip-subject">Mathematics</span>
-                <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 1:42:18</span>
+                <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> <span class="t-time">1:42:18</span></span>
               </div>
               <div class="sheet-progress" aria-hidden="true"><span></span></div>
               <p class="sheet-q">If 3x + 7 = 22, what is the value of x?</p>
@@ -113,6 +113,27 @@
         </div>
       </div>
     </section>
+
+    <div class="ticker" role="region" aria-label="What the SASE reviewer includes">
+      <div class="ticker-track">
+        <span class="tick-group">
+          <span class="tick">450 explained questions</span>
+          <span class="tick">8 full mock exams</span>
+          <span class="tick">72 video lessons</span>
+          <span class="tick">Lessons before the questions</span>
+          <span class="tick">Free 10-question sample</span>
+          <span class="tick">₱167 one-time</span>
+        </span>
+        <span class="tick-group" aria-hidden="true">
+          <span class="tick">450 explained questions</span>
+          <span class="tick">8 full mock exams</span>
+          <span class="tick">72 video lessons</span>
+          <span class="tick">Lessons before the questions</span>
+          <span class="tick">Free 10-question sample</span>
+          <span class="tick">₱167 one-time</span>
+        </span>
+      </div>
+    </div>
 
     <section id="features" class="section">
       <div class="wrap">
@@ -582,6 +603,90 @@
         kick();
       });
       host.addEventListener("pointerleave", function () { tx = 0; ty = 0; kick(); });
+    })();
+  </script>
+  <script>
+    /* Design elevation 4: the hero exam card is a live demo.
+       The timer really ticks, the questions really cycle, and the
+       hero stats count up when they scroll into view. Decoration
+       only; runs solely when the visitor allows motion. */
+    (function () {
+      if (!window.matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+
+      var stats = document.querySelectorAll(".hero-stats .stat strong[data-count]");
+      function countUp(el) {
+        var target = parseInt(el.getAttribute("data-count"), 10);
+        var prefix = el.getAttribute("data-prefix") || "";
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min(1, (ts - start) / 1150);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = prefix + Math.round(target * eased);
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      if ("IntersectionObserver" in window && stats.length) {
+        var io2 = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            countUp(en.target);
+            io2.unobserve(en.target);
+          });
+        }, { threshold: 0.4 });
+        stats.forEach(function (el) { io2.observe(el); });
+      }
+
+      var card = document.querySelector(".exam-card");
+      if (!card) return;
+      var QUESTIONS = [
+        { s: "Mathematics", q: "If 3x + 7 = 22, what is the value of x?", o: ["3", "5", "7", "15"], a: 1, p: 46 },
+        { s: "Language Usage", q: "Neither the students nor their teacher ___ in school today.", o: ["is", "are", "were", "be"], a: 0, p: 62 },
+        { s: "Science", q: "Which unit is used to measure electric current?", o: ["Volt", "Ampere", "Ohm", "Watt"], a: 1, p: 78 }
+      ];
+      var FULL = 7199;
+      var subj = card.querySelector(".chip-subject");
+      var qEl = card.querySelector(".sheet-q");
+      var optsEl = card.querySelector(".sheet-opts");
+      var bar = card.querySelector(".sheet-progress span");
+      var tEl = card.querySelector(".t-time");
+      var CHECK = '<svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      function fmt(s) { return Math.floor(s / 3600) + ":" + pad(Math.floor((s % 3600) / 60)) + ":" + pad(s % 60); }
+      if (tEl) {
+        var left = FULL;
+        tEl.textContent = fmt(left);
+        setInterval(function () {
+          left = left > 0 ? left - 1 : FULL;
+          tEl.textContent = fmt(left);
+        }, 1000);
+      }
+      function render(item) {
+        subj.textContent = item.s;
+        qEl.textContent = item.q;
+        bar.style.width = item.p + "%";
+        optsEl.innerHTML = "";
+        item.o.forEach(function (o, i) {
+          var d = document.createElement("div");
+          d.className = "opt" + (i === item.a ? " on" : "");
+          var b = document.createElement("b");
+          b.textContent = "ABCD"[i];
+          d.appendChild(b);
+          d.appendChild(document.createTextNode(" " + o));
+          if (i === item.a) d.insertAdjacentHTML("beforeend", CHECK);
+          optsEl.appendChild(d);
+        });
+      }
+      var idx = 0;
+      setInterval(function () {
+        idx = (idx + 1) % QUESTIONS.length;
+        card.classList.add("swap");
+        setTimeout(function () {
+          render(QUESTIONS[idx]);
+          card.classList.remove("swap");
+        }, 300);
+      }, 6500);
     })();
   </script>
 </body>

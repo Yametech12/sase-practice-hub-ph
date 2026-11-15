@@ -1030,3 +1030,142 @@ main > .section:nth-of-type(even) { background: #f1eee8; }
       radial-gradient(circle at 104px 70px, rgba(255, 111, 79, 0.30) 0, rgba(255, 111, 79, 0.30) 3.4px, transparent 4.2px);
   }
 }
+
+/* ============================================================
+   DESIGN ELEVATION 4 (Nov 15, 2026): the page is alive.
+   A scrolling ticker, a live hero exam card (real ticking timer,
+   cycling questions, animated progress), count-up stats, a
+   pulsing live dot, drifting glow, floating accents, and shine
+   on the primary buttons. Every animation is transform or
+   opacity only, and all of it switches off for reduced motion.
+   ============================================================ */
+
+/* --- ticker: a coral band that scrolls the offer under the hero --- */
+.ticker {
+  background: linear-gradient(90deg, var(--coral-deep) 0%, var(--coral) 52%, var(--coral-deep) 100%);
+  color: #fff;
+  overflow: hidden;
+  padding: 13px 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+}
+.ticker-track { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 6px; }
+.tick-group { display: inline-flex; align-items: center; }
+.tick-group[aria-hidden="true"] { display: none; }
+.tick {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.tick::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: radial-gradient(circle, #fff 0, #fff 3px, transparent 3.8px);
+}
+
+/* --- live exam card: question swaps and the progress bar --- */
+.exam-card .sheet-q, .exam-card .sheet-opts { transition: opacity 0.3s ease, transform 0.3s ease; }
+.exam-card .chip-subject { transition: opacity 0.3s ease; }
+.exam-card.swap .sheet-q, .exam-card.swap .sheet-opts { opacity: 0; transform: translateY(6px); }
+.exam-card.swap .chip-subject { opacity: 0; }
+.sheet-progress span { transition: width 0.6s ease; }
+
+/* --- icons bob when their card is hovered --- */
+.feature-card .f-ico, .portal-card .p-ico { transition: transform 0.25s ease; }
+.feature-card:hover .f-ico, .portal-card:hover .p-ico { transform: translateY(-3px); }
+
+/* --- FAQ marker turns into a close cross when open --- */
+.faq-item summary::after { transition: transform 0.25s ease; }
+.faq-item[open] summary::after { content: "+"; transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* ticker becomes a seamless marquee */
+  .ticker-track {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    animation: tick-move 32s linear infinite;
+  }
+  .tick-group[aria-hidden="true"] { display: inline-flex; }
+  .ticker:hover .ticker-track { animation-play-state: paused; }
+  @keyframes tick-move { to { transform: translateX(-50%); } }
+
+  /* the kicker dot breathes like a live indicator */
+  .kicker::before { animation: kicker-ping 2.6s ease-out infinite; }
+  @keyframes kicker-ping {
+    0% { box-shadow: 0 0 0 0 rgba(255, 111, 79, 0.45); }
+    70% { box-shadow: 0 0 0 8px rgba(255, 111, 79, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 111, 79, 0); }
+  }
+
+  /* headline gradient slowly sheens across */
+  .hero h1 {
+    background-size: 200% 100%;
+    animation: h1-sheen 10s ease-in-out infinite alternate;
+  }
+  @keyframes h1-sheen {
+    from { background-position: 0% 0; }
+    to { background-position: 100% 0; }
+  }
+
+  /* coral glow behind the hero art drifts */
+  .scene3d::before { animation: glow-pulse 9s ease-in-out infinite alternate; }
+  @keyframes glow-pulse {
+    from { opacity: 0.8; }
+    to { opacity: 1; }
+  }
+
+  /* the ceramic orb floats */
+  .orb { animation: orb-float 7s ease-in-out infinite; }
+  @keyframes orb-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+  }
+
+  /* primary buttons get a shine sweep on hover */
+  .button.primary, .generate-btn { position: relative; overflow: hidden; }
+  .button.primary::after, .generate-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: translateX(-180%) skewX(-18deg);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+  }
+  .button.primary:hover::after, .generate-btn:hover::after { transform: translateX(320%) skewX(-18deg); }
+
+  /* section eyebrow bar grows in with the reveal */
+  .section-head.rv::before { width: 0; }
+  .section-head.rv.in::before { width: 44px; transition: width 0.55s ease 0.15s; }
+}
+
+/* the orb keeps its 3D depth while floating on desktop */
+@media (prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 921px) {
+  .orb { animation-name: orb-float-3d; }
+  @keyframes orb-float-3d {
+    0%, 100% { transform: translateZ(72px) translateY(0); }
+    50% { transform: translateZ(72px) translateY(-9px); }
+  }
+}
+
+/* below the 3D breakpoint the exam card itself gently bobs */
+@media (prefers-reduced-motion: no-preference) and (max-width: 920px) {
+  .exam-card { animation: card-bob 8s ease-in-out infinite; }
+  @keyframes card-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+}

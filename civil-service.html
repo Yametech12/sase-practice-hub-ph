@@ -70,15 +70,15 @@
             <p class="hero-sample-link">Filing for the March 14, 2027 CSE-PPT is already open. Slots are first come, first served, so start your review early.</p>
             <div class="hero-stats">
               <div class="stat">
-                <strong>560</strong>
+                <strong data-count="560">560</strong>
                 <span>explained items</span>
               </div>
               <div class="stat">
-                <strong>8</strong>
+                <strong data-count="8">8</strong>
                 <span>online mock exams</span>
               </div>
               <div class="stat">
-                <strong>₱369</strong>
+                <strong data-count="369" data-prefix="₱">₱369</strong>
                 <span>one-time payment</span>
               </div>
             </div>
@@ -91,7 +91,7 @@
             <div class="exam-card" role="img" aria-label="Illustration of a mock exam question card with a timer and four answer options">
               <div class="sheet-top">
                 <span class="chip chip-subject">Verbal</span>
-                <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> 2:41:37</span>
+                <span class="chip chip-timer"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 9v4l3 2M9 2h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> <span class="t-time">2:41:37</span></span>
               </div>
               <div class="sheet-progress" aria-hidden="true"><span></span></div>
               <p class="sheet-q">Choose the word closest in meaning to ABATE.</p>
@@ -108,6 +108,27 @@
         </div>
       </div>
     </section>
+
+    <div class="ticker" role="region" aria-label="What the Civil Service reviewer includes">
+      <div class="ticker-track">
+        <span class="tick-group">
+          <span class="tick">560 explained items</span>
+          <span class="tick">8 mock exams, real CSE format</span>
+          <span class="tick">98 video lessons</span>
+          <span class="tick">Exam day: March 14, 2027</span>
+          <span class="tick">Free 10-question sample</span>
+          <span class="tick">₱369 one-time</span>
+        </span>
+        <span class="tick-group" aria-hidden="true">
+          <span class="tick">560 explained items</span>
+          <span class="tick">8 mock exams, real CSE format</span>
+          <span class="tick">98 video lessons</span>
+          <span class="tick">Exam day: March 14, 2027</span>
+          <span class="tick">Free 10-question sample</span>
+          <span class="tick">₱369 one-time</span>
+        </span>
+      </div>
+    </div>
 
     <section class="section" id="facts">
       <div class="wrap">
@@ -375,6 +396,90 @@
         kick();
       });
       host.addEventListener("pointerleave", function () { tx = 0; ty = 0; kick(); });
+    })();
+  </script>
+  <script>
+    /* Design elevation 4: the hero exam card is a live demo.
+       The timer really ticks, the questions really cycle, and the
+       hero stats count up when they scroll into view. Decoration
+       only; runs solely when the visitor allows motion. */
+    (function () {
+      if (!window.matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+
+      var stats = document.querySelectorAll(".hero-stats .stat strong[data-count]");
+      function countUp(el) {
+        var target = parseInt(el.getAttribute("data-count"), 10);
+        var prefix = el.getAttribute("data-prefix") || "";
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min(1, (ts - start) / 1150);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = prefix + Math.round(target * eased);
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      if ("IntersectionObserver" in window && stats.length) {
+        var io2 = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            countUp(en.target);
+            io2.unobserve(en.target);
+          });
+        }, { threshold: 0.4 });
+        stats.forEach(function (el) { io2.observe(el); });
+      }
+
+      var card = document.querySelector(".exam-card");
+      if (!card) return;
+      var QUESTIONS = [
+        { s: "Verbal", q: "Choose the word closest in meaning to ABATE.", o: ["Lessen", "Increase", "Postpone", "Praise"], a: 0, p: 38 },
+        { s: "Numerical", q: "A price rises 20%, then falls 20%. The final price is:", o: ["The same", "4% lower", "4% higher", "20% lower"], a: 1, p: 55 },
+        { s: "Analytical", q: "All cats are mammals. Some pets are cats. Therefore:", o: ["All pets are mammals", "Some pets are mammals", "No pets are mammals", "All mammals are pets"], a: 1, p: 71 }
+      ];
+      var FULL = 11399;
+      var subj = card.querySelector(".chip-subject");
+      var qEl = card.querySelector(".sheet-q");
+      var optsEl = card.querySelector(".sheet-opts");
+      var bar = card.querySelector(".sheet-progress span");
+      var tEl = card.querySelector(".t-time");
+      var CHECK = '<svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      function fmt(s) { return Math.floor(s / 3600) + ":" + pad(Math.floor((s % 3600) / 60)) + ":" + pad(s % 60); }
+      if (tEl) {
+        var left = FULL;
+        tEl.textContent = fmt(left);
+        setInterval(function () {
+          left = left > 0 ? left - 1 : FULL;
+          tEl.textContent = fmt(left);
+        }, 1000);
+      }
+      function render(item) {
+        subj.textContent = item.s;
+        qEl.textContent = item.q;
+        bar.style.width = item.p + "%";
+        optsEl.innerHTML = "";
+        item.o.forEach(function (o, i) {
+          var d = document.createElement("div");
+          d.className = "opt" + (i === item.a ? " on" : "");
+          var b = document.createElement("b");
+          b.textContent = "ABCD"[i];
+          d.appendChild(b);
+          d.appendChild(document.createTextNode(" " + o));
+          if (i === item.a) d.insertAdjacentHTML("beforeend", CHECK);
+          optsEl.appendChild(d);
+        });
+      }
+      var idx = 0;
+      setInterval(function () {
+        idx = (idx + 1) % QUESTIONS.length;
+        card.classList.add("swap");
+        setTimeout(function () {
+          render(QUESTIONS[idx]);
+          card.classList.remove("swap");
+        }, 300);
+      }, 6500);
     })();
   </script>
 </body>
