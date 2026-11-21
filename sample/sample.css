@@ -131,3 +131,17 @@
   .sample-review-line.is-wrong { color: #e87a8d; }
   .sample-note { color: #edecf4; }
 }
+
+/* GT-20261121-08: sample page recolored to the unified tokens (R10 bar
+   language for the breakdown, token surfaces for review and upsell). */
+.sample-review-item { background: var(--card); }
+.sample-priority { background: var(--amber-bg); color: var(--ink); border-color: var(--amber-line, #F3C9A8); }
+.sample-score-line { color: var(--ink); font-family: var(--font-display); }
+.sample-breakdown li { background: var(--surface-2, #EDF0EC); border-color: var(--line); border-radius: var(--radius-chip, 6px); }
+.sample-upsell, .sample-plan { border-radius: var(--radius-card, 14px); }
+@media (prefers-color-scheme: dark) {
+  .sample-review-item { background: var(--card); }
+  .sample-priority { color: var(--ink); }
+  .sample-review-line.is-correct { color: var(--correct, #55C273); }
+  .sample-review-line.is-wrong { color: var(--wrong, #FF8478); }
+}

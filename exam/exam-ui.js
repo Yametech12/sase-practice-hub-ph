@@ -313,6 +313,7 @@
        stale "Incorrect..." error on screen. (The input no longer carries
        `required`, so this handler, not native validation, owns the case.) */
     if (!gateInput.value.trim()) {
+      gateError.classList.add("is-empty");
       gateError.textContent = state.track === "cse"
         ? "Please enter your CSE7 access code."
         : "Please enter your reviewer password.";
@@ -320,6 +321,7 @@
       gateInput.focus();
       return;
     }
+    gateError.classList.remove("is-empty");
     gateError.hidden = true;
     gateSubmit.disabled = true;
     gateSubmit.textContent = "Checking…";
@@ -893,7 +895,7 @@
        branded stage gradient and play badge carry the card instead of a
        broken-image glyph. */
     var thumbImg = thumb.querySelector("img");
-    if (thumbImg) thumbImg.addEventListener("error", function () { thumbImg.style.display = "none"; });
+    if (thumbImg) thumbImg.addEventListener("error", function () { thumbImg.style.display = "none"; thumb.classList.add("is-missing"); });
     function activatePlayer() {
       if (currentIfr) return;
       // Lazy: the embed iframe exists only after an explicit tap.

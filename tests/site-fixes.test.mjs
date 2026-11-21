@@ -57,10 +57,13 @@ const resultsUi = read("exam/results-ui.js");
 check("results lesson link includes ?track= and &lessons=",
   resultsUi.includes('"/exam?track=" + resultTrack') || resultsUi.includes("/exam?track=' + resultTrack + '&lessons='"));
 
-/* Fix 7: exactly one FREE SAMPLE badge remains on /sample (the card). */
+/* Fix 7: exactly one free sample badge remains on /sample (the card).
+   GT-20261121-08 fix round 1 (M2): the badge label style is sentence
+   case per the token system, so the check follows the new casing; the
+   intent is unchanged (one in-card kicker badge, nowhere else). */
 const sample = read("sample/index.html");
-check("sample page keeps only the in-card FREE SAMPLE kicker",
-  (sample.match(/FREE SAMPLE/g) || []).length === 1 && sample.includes('<p class="instr-kicker">FREE SAMPLE</p>'));
+check("sample page keeps only the in-card Free sample kicker",
+  (sample.match(/Free sample/g) || []).length === 1 && sample.includes('<p class="instr-kicker">Free sample</p>'));
 
 /* Fix 8: anchor targets clear the sticky header. */
 check("site.css gives id targets a 96px scroll margin",
