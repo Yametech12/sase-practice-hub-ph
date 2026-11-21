@@ -1626,3 +1626,56 @@ section.band { padding-top: var(--space-11); padding-bottom: var(--space-11); }
 .hx-topic { grid-template-columns: minmax(96px, auto) 1fr auto; }
 .hx-topic-name { overflow-wrap: normal; }
 .hero-facts strong { font-family: var(--font-display); }
+
+/* ============ GT-20261121-08 FIX ROUND 1 (Design Auditor M1, M2) ============
+   M1: the hero exam starts inside the first phone screen. The hero grid
+   gains named areas: copy, then the working exam, then the actions. On
+   desktop the actions sit under the copy in the left column and the exam
+   spans both rows; on phone the order is copy, exam, actions, so the CTA
+   pair moves below the fold instead of pushing the exam below it. No copy
+   is cut; the intro is tightened (headline scale, spacing, type size).
+   M2: every surviving label takes the token data and label style:
+   sentence case, no uppercase transform, no letter-spacing tracking. */
+.hero-grid { grid-template-areas: "copy visual" "actions visual"; }
+.hero-copy { grid-area: copy; min-width: 0; }
+.hero-actions { grid-area: actions; min-width: 0; align-self: start; }
+.hero-visual { grid-area: visual; }
+
+.kicker, .hero-caption, .th-field label, .score-box label, .ec-live,
+.key-count small, .toc h3, .item-tag, .sched th, .honesty .h-label,
+.bulletin .b-label, .receipt h3, .field label, .scope-count small,
+.footer-credit, .footer-inner span:last-child, .info-card .amount small,
+.info-card .mobile-box small, .order-card .step-label, .next-steps h4,
+.honesty-card h3 {
+  text-transform: none; letter-spacing: 0;
+  font-family: var(--font-marker); font-size: 0.8125rem; font-weight: 600;
+}
+.scope-count small { text-align: right; }
+.footer-inner span:last-child { font-size: 0.8125rem; }
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-areas: "copy" "visual" "actions";
+    grid-template-columns: 1fr; gap: var(--space-4); margin-top: var(--space-2);
+  }
+  .hero { padding-top: var(--space-3); }
+}
+@media (max-width: 640px) {
+  .topbar-inner { min-height: 56px; }
+  .hero { padding-bottom: var(--space-9); }
+  .hero h1 { font-size: 1.8rem; line-height: 1.08; margin: 0 0 var(--space-2); }
+  .lead { font-size: 0.94rem; line-height: 1.45; }
+  .hero-facts { font-size: 0.88rem; line-height: 1.4; margin-top: var(--space-2); }
+  .hero-facts strong { font-size: 1.15rem; }
+  .cta-row { margin-top: 0; gap: var(--space-3); }
+  .cta-note { margin-top: var(--space-3); }
+  .hx-card { padding: var(--space-3); }
+  .hx-head { padding-bottom: var(--space-2); }
+  .hx-rail { padding: var(--space-3) 0 var(--space-1); gap: 6px; }
+  .hx-bubble { width: 24px; height: 24px; font-size: 0.7rem; }
+  .hx-score { margin-bottom: var(--space-3); }
+  .hx-section { margin-bottom: var(--space-1); }
+  .hx-question { font-size: 1.02rem; line-height: 1.42; margin-bottom: var(--space-3); }
+  .hx-opt { min-height: 48px; padding: var(--space-2) var(--space-3); font-size: 0.95rem; }
+  .hero-caption { margin-top: var(--space-3); }
+}
