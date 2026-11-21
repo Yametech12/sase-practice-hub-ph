@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-product="sase">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5f1" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171638" />
-  <link rel="preload" href="/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6F4" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141816" />
+  <link rel="preload" href="/fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin />
   <meta name="description" content="450 SASE practice questions with explanations, lessons before the questions, and 8 full mock exams of 180 items in an online portal. ₱167 one-time. Exam day is November 29, 2026." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
   <meta property="og:type" content="website" />
@@ -40,7 +40,7 @@
       </div>
       <div class="nav-wrap">
       <nav class="nav" aria-label="Main navigation">
-        <a href="#features">Features</a>
+        <a href="#inside">What you get</a>
         <a href="/exam?track=sase" class="nav-portal">SASE Portal</a>
         <a href="/civil-service.html">Civil Service</a>
         <a href="#faq">FAQ</a>
@@ -48,7 +48,7 @@
       </nav>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">&#9776;</button>
       <div id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
-        <a href="#features">Features</a>
+        <a href="#inside">What you get</a>
         <a href="/exam?track=sase">SASE Portal</a>
         <a href="/civil-service.html">Civil Service</a>
         <a href="#faq">FAQ</a>
@@ -61,94 +61,51 @@
   <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="wrap">
-        <div class="test-head">
-          <div class="th-fields">
-            <div class="th-field"><label>Exam</label><span>MSU SASE 2027-2028</span></div>
-            <div class="th-field"><label>Date</label><span>November 29, 2026</span></div>
-            <div class="th-field"><label>Items</label><span>450 + 8 mock exams</span></div>
-            <div class="th-field"><label>Format</label><span>PDF + online portal</span></div>
-          </div>
-          <div class="score-box"><label>One-time</label><b>₱167</b></div>
-        </div>
         <div class="hero-grid">
           <div>
-            <p class="kicker">MSU SASE reviewer, exam day November 29, 2026</p>
-            <h1>450 questions. <span class="mark">Every answer explained.</span></h1>
+            <h1>450 questions. Every answer explained.</h1>
             <p class="lead">Lessons first, then the questions. The reviewer opens with lessons, works through <strong>450 practice questions with a full explanation for every answer</strong>, and continues in an online portal with <strong>8 full mock exams</strong>. One payment of ₱167. No subscription, nothing else to buy.</p>
+            <p class="hero-facts"><strong>₱167</strong> one-time &middot; Exam November 29, 2026 &middot; 450 explained questions &middot; 8 portal mock exams of 180 items, all open right away</p>
             <div class="cta-row">
-              <a href="/sample" class="btn">Try the free sample</a>
+              <a href="#heroExam" class="btn">Answer the sample in the hero</a>
               <a href="#order" class="btn-outline">Order the reviewer, ₱167</a>
             </div>
             <p class="cta-note">Already ordered? <a class="text-link" href="/exam?track=sase">Open the portal</a></p>
           </div>
           <div class="hero-visual">
-            <div class="exam-card" id="demoCard">
-              <div class="ec-top">
-                <span class="ec-brand">Mock Exam 1</span>
-                <span class="ec-live">Live demo</span>
+            <div class="hx-card" id="heroExam">
+              <div class="hx-head">
+                <span class="hx-title">Free SASE sample exam</span>
+                <span class="hx-progress">Question 1 of 10</span>
               </div>
-              <div class="ec-meta">
-                <span class="ec-chip solid" id="ecSubject">Mathematics</span>
-                <span class="ec-chip">Time left <span id="ecTime">1:59:59</span></span>
+              <div class="hx-rail" aria-hidden="true"></div>
+              <p class="hx-score" aria-live="polite">Score 0 of 0 answered</p>
+              <div class="hx-body">
+                <noscript><p class="hx-noscript">The sample exam needs JavaScript to score your answers. You can also read it on the <a href="/sample">sample page</a>.</p></noscript>
               </div>
-              <div class="ec-progress" aria-hidden="true"><i id="ecBar" style="width:46%"></i></div>
-              <p class="ec-q" id="ecQ">If 3x + 7 = 22, what is the value of x?</p>
-              <div class="ec-options" id="ecOpts"></div>
-              <p class="ec-explain" id="ecExplain">Tap an answer. In the reviewer, every question comes with an explanation like this one.</p>
-              <div class="ec-foot"><span id="ecItem">Item 83 of 180</span><span>Answers explained</span></div>
             </div>
-            <p class="hero-caption">A live preview of the portal, running now</p>
+            <p class="hero-caption">The free 10-question sample, running in the hero. Answer, get scored, see your weak topic.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="band">
+
+    <section class="readout-band" id="readout">
       <div class="wrap">
-        <div class="sec-head">
-          <span class="q-mark">Q.01</span>
-          <h2>What you are actually training</h2>
-          <p>Four things decide a SASE score: knowing the lessons, finishing 180 items on pace, learning from every wrong answer, and knowing which section is weak. The reviewer is built around those four.</p>
+        <h2>Your readout</h2>
+        <div id="readout-live">
+          <p class="rb-note">Answer the 10 sample items in the hero and your own readout prints here: your score, your filled bubbles per topic, and the topic to train first.</p>
+          <div class="hx-topics"><div class="hx-topic"><span class="hx-topic-name">Language Usage</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 3 filled</span></div><div class="hx-topic"><span class="hx-topic-name">Mathematics</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 2 filled</span></div><div class="hx-topic"><span class="hx-topic-name">Aptitude</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 2 filled</span></div><div class="hx-topic"><span class="hx-topic-name">Science</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 3 filled</span></div></div>
         </div>
-        <div class="key-row">
-          <span class="key-bub">A</span>
-          <div>
-            <h3>Practice under the real pace</h3>
-            <p>Eight full mock exams, timed, so a 180-item paper feels familiar by the second or third sitting, not for the first time on exam day.</p>
-          </div>
-          <span class="key-count">8 × 180<small>Mock exam items</small></span>
-        </div>
-        <div class="key-row">
-          <span class="key-bub">B</span>
-          <div>
-            <h3>Every answer explained</h3>
-            <p>The explanation is printed with each question, in the same sitting, so a wrong answer turns into the rule or the steps you were missing.</p>
-          </div>
-          <span class="key-count">450<small>Explained questions</small></span>
-        </div>
-        <div class="key-row">
-          <span class="key-bub">C</span>
-          <div>
-            <h3>Lessons before the questions</h3>
-            <p>The PDF opens with lessons across Language Usage, Mathematics, Aptitude, and Science, with rules and worked examples. The portal adds video lessons grouped by subject.</p>
-          </div>
-          <span class="key-count">72<small>Video lessons</small></span>
-        </div>
-        <div class="key-row">
-          <span class="key-bub">D</span>
-          <div>
-            <h3>See the weak section, fix it</h3>
-            <p>Portal results break your score down by section, so the next study session goes to the section that is actually costing you points.</p>
-          </div>
-          <span class="key-count">4<small>Sections tracked</small></span>
-        </div>
+        <p class="rb-note">The full reviewer trains every one of these topics: lessons first, then 450 questions with a full explanation for every answer, then 8 portal mock exams of 180 items.</p>
       </div>
     </section>
+
 
     <section id="inside" class="band">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.02</span>
           <h2>What you get</h2>
           <p>One payment, two study tools. The PDF teaches and drills; the portal examines.</p>
         </div>
@@ -172,35 +129,10 @@
       </div>
     </section>
 
-    <section id="free-sample" class="band">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="q-mark">Q.03</span>
-          <h2>Try one item the way the reviewer teaches it</h2>
-          <p>This is item 1 of the free sample, exactly as it appears there. Answer it, read the explanation, then take all ten.</p>
-        </div>
-        <div class="item-card" data-item>
-          <p class="item-tag">Sample item · Language Usage</p>
-          <p class="item-q">The architect was <em>meticulous</em> in checking every detail of the blueprint. Which word is closest in meaning to <em>meticulous</em>?</p>
-          <div class="item-opts">
-            <button type="button" class="item-opt"><span class="bub">A</span> careless</button>
-            <button type="button" class="item-opt"><span class="bub">B</span> hasty</button>
-            <button type="button" class="item-opt" data-correct><span class="bub">C</span> thorough</button>
-            <button type="button" class="item-opt"><span class="bub">D</span> lazy</button>
-          </div>
-          <p class="item-explain"><strong>Answer: C, thorough.</strong> <em>Meticulous</em> means showing great attention to detail: thorough.</p>
-        </div>
-        <div class="sample-actions">
-          <a href="/sample" class="btn">Start the free sample</a>
-          <a href="#order" class="text-link">Or order the full reviewer, ₱167</a>
-        </div>
-      </div>
-    </section>
 
     <section id="mock-exam-portal" class="band">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.04</span>
           <h2>Your mock exam schedule</h2>
           <p>All eight exams are open from the day your access arrives. Sit one, review every answer, then sit the next.</p>
         </div>
@@ -224,79 +156,55 @@
       </div>
     </section>
 
-    <section id="civil-service" class="band">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="q-mark">Q.05</span>
-          <h2>Also on your calendar</h2>
-        </div>
-        <div class="bulletin">
-          <p class="b-label">Also taking the Civil Service Exam?</p>
-          <p class="b-date">March 14, 2027</p>
-          <p>The Civil Service reviewer follows the same method: lessons first, every item explained, full mock exams in the real CSE format. Filing for the March 14, 2027 CSE-PPT is already open.</p>
-          <div class="b-facts">
-            <span><b>560</b> explained items</span>
-            <span><b>8</b> mock exams</span>
-            <span><b>98</b> video lessons</span>
-            <span><b>₱369</b> one-time</span>
-          </div>
-          <div class="sample-actions">
-            <a href="/civil-service.html" class="btn-outline">See the Civil Service reviewer</a>
-            <a href="/exam?track=cse" class="text-link">Already ordered? Open portal</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="faq" class="band">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.06</span>
           <h2>The usual questions</h2>
           <p>Straight answers before you pay.</p>
         </div>
         <details class="faq-item">
-          <summary><span class="faq-n">01</span>Is this an official MSU reviewer?</summary>
+          <summary>Is this an official MSU reviewer?</summary>
           <div class="faq-a"><p>No. This is an unofficial practice reviewer with original questions. It is not affiliated with or endorsed by Mindanao State University (MSU), and MSU does not produce or endorse this material.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">02</span>Is this the actual SASE?</summary>
+          <summary>Is this the actual SASE?</summary>
           <div class="faq-a"><p>No. These are original practice questions written for this reviewer. Nothing here is a leaked, recalled, or actual exam item.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">03</span>How many questions are in the reviewer?</summary>
+          <summary>How many questions are in the reviewer?</summary>
           <div class="faq-a"><p>The PDF holds 450 practice questions, each with a full explanation. The portal holds a separate bank: 8 mock exams of 180 items each, all open right away.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">04</span>How do I receive it?</summary>
+          <summary>How do I receive it?</summary>
           <div class="faq-a"><p>After your payment is verified, we send your PDF and your portal password via Messenger, within 5 minutes after verification.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">05</span>How does ordering work?</summary>
+          <summary>How does ordering work?</summary>
           <div class="faq-a"><p>Pay ₱167 by GCash using the number or QR code in the order section below, then create your order message with your name, Messenger name, and the 13-digit GCash reference number. Send that message to our Facebook Page and we verify and deliver.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">06</span>Can I see a sample first?</summary>
+          <summary>Can I see a sample first?</summary>
           <div class="faq-a"><p>Yes. Take the <a href="/sample" aria-label="Free SASE practice sample">Free SASE practice sample</a>: 10 questions with the correct answer and an explanation for each, right here on the site. No sign-up and no payment.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">07</span>What if I need help?</summary>
+          <summary>What if I need help?</summary>
           <div class="faq-a"><p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener" aria-label="Message us on Facebook">Message us on Facebook</a> anytime and we will help you with the material or the process.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">08</span>I lost my portal password, what do I do?</summary>
+          <summary>I lost my portal password, what do I do?</summary>
           <div class="faq-a"><p>Message the Page on Facebook and we will resend or reset it for you.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">09</span>How many devices can use the portal?</summary>
+          <summary>How many devices can use the portal?</summary>
           <div class="faq-a"><p>Up to 3 devices with one password. If you replace a phone, message the Page and we will reset a device slot for you.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">10</span>Can I print the PDF?</summary>
+          <summary>Can I print the PDF?</summary>
           <div class="faq-a"><p>Yes, you can print the PDF for your own personal study.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">11</span>Can I pay without GCash?</summary>
+          <summary>Can I pay without GCash?</summary>
           <div class="faq-a"><p>Yes. MariBank, GoTyme, and Maya also land in the same account; the payment card in the order section lists them. GCash is the fastest to verify.</p></div>
         </details>
       </div>
@@ -573,79 +481,6 @@
     })();
   </script>
     <script>
-    /* The hero exam card is a live demo: the timer ticks, questions cycle,
-       and tapping an answer marks it and shows the explanation. */
-    (function () {
-      var card = document.getElementById("demoCard");
-      if (!card) return;
-      var QUESTIONS = [
-        { s: "Mathematics", q: "If 3x + 7 = 22, what is the value of x?", o: ["3", "5", "7", "15"], a: 1, p: 46, e: "Subtract 7 from both sides: 3x = 15. Divide by 3: x = 5." },
-        { s: "Language Usage", q: "Neither the students nor their teacher ___ in school today.", o: ["is", "are", "were", "be"], a: 0, p: 62, e: "With neither/nor, the verb agrees with the nearer subject. Teacher is singular, so the verb is is." },
-        { s: "Science", q: "Which unit is used to measure electric current?", o: ["Volt", "Ampere", "Ohm", "Watt"], a: 1, p: 78, e: "Electric current is measured in amperes. Volts measure potential difference, ohms resistance, watts power." }
-      ];
-      var FULL = 7199, PER = 180;
-      var subj = document.getElementById("ecSubject");
-      var qEl = document.getElementById("ecQ");
-      var optsEl = document.getElementById("ecOpts");
-      var bar = document.getElementById("ecBar");
-      var tEl = document.getElementById("ecTime");
-      var exEl = document.getElementById("ecExplain");
-      var itemEl = document.getElementById("ecItem");
-      var idx = 0, left = FULL, interacted = false;
-      function pad(n) { return (n < 10 ? "0" : "") + n; }
-      function fmt(x) { return Math.floor(x / 3600) + ":" + pad(Math.floor((x % 3600) / 60)) + ":" + pad(x % 60); }
-      function render(item) {
-        subj.textContent = item.s;
-        qEl.textContent = item.q;
-        bar.style.width = item.p + "%";
-        itemEl.textContent = "Item " + Math.round(item.p * PER / 100) + " of " + PER;
-        exEl.textContent = "Tap an answer. In the reviewer, every question comes with an explanation like this one.";
-        optsEl.innerHTML = "";
-        item.o.forEach(function (o, i) {
-          var b = document.createElement("button");
-          b.type = "button";
-          b.className = "ec-opt";
-          var bub = document.createElement("span");
-          bub.className = "bub";
-          bub.textContent = "ABCD"[i];
-          b.appendChild(bub);
-          b.appendChild(document.createTextNode(" " + o));
-          b.addEventListener("click", function () {
-            interacted = true;
-            optsEl.querySelectorAll(".ec-opt").forEach(function (x) { x.classList.remove("selected", "correct"); });
-            b.classList.add("selected");
-            optsEl.children[item.a].classList.add("correct");
-            exEl.textContent = (i === item.a ? "" : "Not quite. ") + item.e;
-          });
-          optsEl.appendChild(b);
-        });
-      }
-      render(QUESTIONS[0]);
-      tEl.textContent = fmt(left);
-      if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
-        setInterval(function () { left = left > 0 ? left - 1 : FULL; tEl.textContent = fmt(left); }, 1000);
-        setInterval(function () { if (interacted) return; idx = (idx + 1) % QUESTIONS.length; render(QUESTIONS[idx]); }, 9000);
-      }
-    })();
-  </script>
-  <script>
-    /* Playable sample item: JS hides the explanation until an answer is
-       tapped. With JS off, the item reads as an answered sample. */
-    (function () {
-      document.querySelectorAll("[data-item]").forEach(function (card) {
-        var ex = card.querySelector(".item-explain");
-        if (ex) ex.hidden = true;
-        card.querySelectorAll(".item-opt").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            card.querySelectorAll(".item-opt").forEach(function (o) { o.classList.toggle("picked", o === btn); });
-            card.classList.add("answered");
-            if (ex) ex.hidden = false;
-          });
-        });
-      });
-    })();
-  </script>
-  <script>
     /* Sticky phone bar: appears after the hero, hides over the order
        section and the footer. */
     (function () {
@@ -661,5 +496,7 @@
       if (foot) new IntersectionObserver(function (e) { st.footIn = e[0].isIntersecting; upd(); }).observe(foot);
     })();
   </script>
+  <script>window.HERO_EXAM = {"items": [{"n": 1, "section": "Language Usage", "question": "The architect was <em>meticulous</em> in checking every detail of the blueprint. Which word is closest in meaning to <em>meticulous</em>?", "options": {"A": "careless", "B": "hasty", "C": "thorough", "D": "lazy"}, "answer": "C", "explanation": "<em>Meticulous</em> means showing great attention to detail: <strong>thorough</strong>."}, {"n": 2, "section": "Language Usage", "question": "Because she was <em>frugal</em>, she managed to save enough for college tuition. Which word is closest in meaning to <em>frugal</em>?", "options": {"A": "thrifty", "B": "wasteful", "C": "generous", "D": "lavish"}, "answer": "A", "explanation": "<em>Frugal</em> means careful with money: <strong>thrifty</strong>."}, {"n": 3, "section": "Language Usage", "question": "The vote was <em>unanimous</em>, every single member raised a hand in favor. What does <em>unanimous</em> mean here?", "options": {"A": "divided", "B": "delayed", "C": "in complete agreement", "D": "secret"}, "answer": "C", "explanation": "The context clue (every member in favor) points to <strong>in complete agreement</strong>."}, {"n": 4, "section": "Mathematics", "question": "8 + 4 × 3 − 6 ÷ 2 = ?", "options": {"A": "33", "B": "17", "C": "21", "D": "14"}, "answer": "B", "explanation": "Order of operations: 8 + 12 − 3 = <strong>17</strong>."}, {"n": 5, "section": "Mathematics", "question": "3/8 of 160 = ?", "options": {"A": "48", "B": "40", "C": "60", "D": "24"}, "answer": "C", "explanation": "3/8 × 160 = 480/8 = <strong>60</strong>."}, {"n": 6, "section": "Aptitude", "question": "Find the next term: 3, 7, 12, 18, 25, __", "options": {"A": "30", "B": "33", "C": "31", "D": "35"}, "answer": "B", "explanation": "Differences grow by 1 each time (4, 5, 6, 7, 8): 25 + 8 = <strong>33</strong>."}, {"n": 7, "section": "Aptitude", "question": "Find the next term: 1, 4, 9, 16, 25, __", "options": {"A": "30", "B": "32", "C": "36", "D": "49"}, "answer": "C", "explanation": "These are perfect squares (1², 2², 3², 4², 5²), so the next is 6² = <strong>36</strong>."}, {"n": 8, "section": "Science", "question": "Which organelle is the site of photosynthesis in plant cells?", "options": {"A": "Mitochondrion", "B": "Nucleus", "C": "Chloroplast", "D": "Ribosome"}, "answer": "C", "explanation": "Photosynthesis happens in the <strong>chloroplast</strong>."}, {"n": 9, "section": "Science", "question": "During which phase of mitosis do sister chromatids separate and move to opposite poles?", "options": {"A": "Prophase", "B": "Anaphase", "C": "Telophase", "D": "Metaphase"}, "answer": "B", "explanation": "Chromatids separate during <strong>anaphase</strong>."}, {"n": 10, "section": "Science", "question": "In pea plants, tall (T) is dominant over short (t). What phenotypic ratio results from a Tt × Tt cross?", "options": {"A": "1:1", "B": "1:2:1", "C": "9:3:3:1", "D": "3:1"}, "answer": "D", "explanation": "A monohybrid cross gives a <strong>3:1</strong> dominant-to-recessive phenotypic ratio."}], "subjects": ["Language Usage", "Mathematics", "Aptitude", "Science"], "orderLabel": "Get the full reviewer, ₱167", "sampleHref": "/sample", "sampleLabel": "Open the standalone sample page"};</script>
+  <script src="/hero-exam.js"></script>
 </body>
 </html>

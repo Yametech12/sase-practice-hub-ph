@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-product="cse">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5f1" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171638" />
-  <link rel="preload" href="/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6F4" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141816" />
+  <link rel="preload" href="/fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin />
   <meta name="description" content="560 Civil Service practice items with explanations, lessons before the questions, and 8 full mock exams in the real CSE format. ₱369 one-time. Exam day is March 14, 2027." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/civil-service.html" />
   <meta property="og:type" content="website" />
@@ -61,20 +61,11 @@
   <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="wrap">
-        <div class="test-head">
-          <div class="th-fields">
-            <div class="th-field"><label>Exam</label><span>CSE-PPT, Professional</span></div>
-            <div class="th-field"><label>Date</label><span>March 14, 2027</span></div>
-            <div class="th-field"><label>Items</label><span>150 per exam</span></div>
-            <div class="th-field"><label>Format</label><span>PDF + online portal</span></div>
-          </div>
-          <div class="score-box"><label>Passing</label><b>80.00</b></div>
-        </div>
         <div class="hero-grid">
           <div>
-            <p class="kicker">Civil Service Exam reviewer, CSE-PPT</p>
-            <h1>150 items. 3 hours 10 minutes. <span class="mark">Practice on the real clock.</span></h1>
+            <h1>150 items. 3 hours 10 minutes. Practice on the real clock.</h1>
             <p class="lead">Lessons first, then the questions. The reviewer opens with lessons, works through <strong>560 practice items with a full explanation for every answer</strong>, and continues in an online portal with <strong>8 full mock exams in the real CSE format</strong>. One payment of ₱369. No subscription, nothing else to buy.</p>
+            <p class="hero-facts"><strong>₱369</strong> one-time &middot; Exam March 14, 2027 &middot; 560 explained questions &middot; 8 mock exams of 150 items &middot; 98 video lessons</p>
             <div class="cta-row">
               <a href="#order" class="btn">Order for ₱369</a>
               <a href="https://www.facebook.com/profile.php?id=61596682491248" class="btn-outline" target="_blank" rel="noopener">Get the free sample</a>
@@ -83,31 +74,38 @@
             <p class="cta-note">Filing for the March 14, 2027 CSE-PPT opened on November 2, 2026 and runs while slots last.</p>
           </div>
           <div class="hero-visual">
-            <div class="exam-card" id="demoCard">
-              <div class="ec-top">
-                <span class="ec-brand">Mock Exam 1</span>
-                <span class="ec-live">Live demo</span>
+            <div class="hx-card" id="heroExam">
+              <div class="hx-head">
+                <span class="hx-title">Free CSE sample exam</span>
+                <span class="hx-progress">Question 1 of 10</span>
               </div>
-              <div class="ec-meta">
-                <span class="ec-chip solid" id="ecSubject">Verbal</span>
-                <span class="ec-chip">Time left <span id="ecTime">3:09:59</span></span>
+              <div class="hx-rail" aria-hidden="true"></div>
+              <p class="hx-score" aria-live="polite">Score 0 of 0 answered</p>
+              <div class="hx-body">
+                <noscript><p class="hx-noscript">The sample exam needs JavaScript to score your answers. You can also get it from the <a href="https://www.facebook.com/profile.php?id=61596682491248" target="_blank" rel="noopener">CSE Page</a>.</p></noscript>
               </div>
-              <div class="ec-progress" aria-hidden="true"><i id="ecBar" style="width:38%"></i></div>
-              <p class="ec-q" id="ecQ">Choose the word closest in meaning to ABATE.</p>
-              <div class="ec-options" id="ecOpts"></div>
-              <p class="ec-explain" id="ecExplain">Tap an answer. In the reviewer, every item comes with an explanation like this one.</p>
-              <div class="ec-foot"><span id="ecItem">Item 57 of 150</span><span>Answers explained</span></div>
             </div>
-            <p class="hero-caption">A live preview of the portal, running now</p>
+            <p class="hero-caption">The free 10-question sample, running in the hero. Answer, get scored, see your weak topic.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <section class="readout-band" id="readout">
+      <div class="wrap">
+        <h2>Your readout</h2>
+        <div id="readout-live">
+          <p class="rb-note">Answer the 10 sample items in the hero and your own readout prints here: your score, your filled bubbles per topic, and the topic to train first.</p>
+          <div class="hx-topics"><div class="hx-topic"><span class="hx-topic-name">Verbal</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 3 filled</span></div><div class="hx-topic"><span class="hx-topic-name">Numerical</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 3 filled</span></div><div class="hx-topic"><span class="hx-topic-name">Analytical</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 2 filled</span></div><div class="hx-topic"><span class="hx-topic-name">General Information</span><span class="hx-topic-track"><span class="hx-topic-fill" style="transform:scaleX(0)"></span></span><span class="hx-topic-num">0 of 2 filled</span></div></div>
+        </div>
+        <p class="rb-note">The full reviewer trains every one of these topics: 560 explained questions, 8 mock exams of 150 items, and 98 video lessons. Portal results set your percent per section against the 80.00 passing benchmark.</p>
       </div>
     </section>
 
     <section class="band" id="facts">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.01</span>
           <h2>The exam, in short</h2>
           <p>Everything below follows the official CSE-PPT format, so your practice matches the day itself.</p>
         </div>
@@ -125,7 +123,6 @@
     <section class="band" id="inside">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.02</span>
           <h2>What is inside</h2>
           <p>Two parts that work together: the PDF teaches, the portal tests.</p>
         </div>
@@ -155,7 +152,6 @@
     <section class="band" id="coverage">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.03</span>
           <h2>What it covers</h2>
           <p>The four official CSE sections, with the topics the exam actually draws from.</p>
         </div>
@@ -194,35 +190,10 @@
       </div>
     </section>
 
-    <section class="band" id="sample">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="q-mark">Q.04</span>
-          <h2>Try a sample item first</h2>
-          <p>One Verbal item in the reviewer's style. The free sample has ten items; message the Page and we will send it.</p>
-        </div>
-        <div class="item-card" data-item>
-          <p class="item-tag">Sample item · Verbal</p>
-          <p class="item-q">Choose the word closest in meaning to ABATE.</p>
-          <div class="item-opts">
-            <button type="button" class="item-opt" data-correct><span class="bub">A</span> Lessen</button>
-            <button type="button" class="item-opt"><span class="bub">B</span> Increase</button>
-            <button type="button" class="item-opt"><span class="bub">C</span> Postpone</button>
-            <button type="button" class="item-opt"><span class="bub">D</span> Praise</button>
-          </div>
-          <p class="item-explain"><strong>Answer: A, lessen.</strong> Abate means to become less strong or less intense, so Lessen is the closest match.</p>
-        </div>
-        <div class="sample-actions">
-          <a href="https://www.facebook.com/profile.php?id=61596682491248" class="btn" target="_blank" rel="noopener">Message us for the free sample</a>
-          <a href="#order" class="text-link">Or order the full reviewer, ₱369</a>
-        </div>
-      </div>
-    </section>
 
     <section class="band" id="portal">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.05</span>
           <h2>Practice under real exam conditions</h2>
           <p>The portal runs the real format: 150 items, the real 3 hours 10 minutes on a server-enforced clock, one attempt per exam. Finishing unlocks a full answer review with explanations, and your percent per section set against the 80.00 benchmark.</p>
         </div>
@@ -235,32 +206,31 @@
     <section class="band" id="faq">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.06</span>
           <h2>The usual questions</h2>
           <p>Straight answers before you pay.</p>
         </div>
         <details class="faq-item">
-          <summary><span class="faq-n">01</span>Is this affiliated with the Civil Service Commission?</summary>
+          <summary>Is this affiliated with the Civil Service Commission?</summary>
           <div class="faq-a"><p>No. This is an unofficial reviewer with original practice questions. It is not affiliated with or endorsed by the Civil Service Commission, and the CSC does not produce or accredit any review material.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">02</span>How do I get the reviewer after I pay?</summary>
+          <summary>How do I get the reviewer after I pay?</summary>
           <div class="faq-a"><p>Message the CSE Practice Hub PH Page with your receipt. Within 5 minutes after verification, you receive your PDF, its password, and your CSE7 portal access code on Messenger.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">03</span>What is the CSE7 code?</summary>
+          <summary>What is the CSE7 code?</summary>
           <div class="faq-a"><p>It is your portal sign-in for the 8 mock exams, separate from your PDF password so the two never get mixed up. One code works on up to 3 devices.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">04</span>I lost my code or password. What now?</summary>
+          <summary>I lost my code or password. What now?</summary>
           <div class="faq-a"><p>Message the Page and we will resend or reset it for you.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">05</span>Can I see a sample first?</summary>
+          <summary>Can I see a sample first?</summary>
           <div class="faq-a"><p>Yes, a free 10-question sample. <a href="https://www.facebook.com/profile.php?id=61596682491248" target="_blank" rel="noopener">Message the CSE Page for the free sample</a> and we will send it.</p></div>
         </details>
         <details class="faq-item">
-          <summary><span class="faq-n">06</span>When is the exam?</summary>
+          <summary>When is the exam?</summary>
           <div class="faq-a"><p>The CSE-PPT is on March 14, 2027. Filing opened on November 2, 2026 and runs while slots last.</p></div>
         </details>
       </div>
@@ -278,7 +248,6 @@
     <section class="band" id="order">
       <div class="wrap">
         <div class="sec-head">
-          <span class="q-mark">Q.07</span>
           <h2>How to order</h2>
           <p>Five steps, and you are reviewing within minutes.</p>
         </div>
@@ -393,79 +362,6 @@
     })();
   </script>
     <script>
-    /* The hero exam card is a live demo: the timer ticks, questions cycle,
-       and tapping an answer marks it and shows the explanation. */
-    (function () {
-      var card = document.getElementById("demoCard");
-      if (!card) return;
-      var QUESTIONS = [
-        { s: "Verbal", q: "Choose the word closest in meaning to ABATE.", o: ["Lessen", "Increase", "Postpone", "Praise"], a: 0, p: 38, e: "Abate means to become less strong or less intense, so Lessen is the closest match." },
-        { s: "Numerical", q: "A price rises 20%, then falls 20%. The final price is:", o: ["The same", "4% lower", "4% higher", "20% lower"], a: 1, p: 55, e: "Start at 100. Up 20% makes 120. Down 20% of 120 is 24, leaving 96, which is 4% lower than the start." },
-        { s: "Analytical", q: "All cats are mammals. Some pets are cats. Therefore:", o: ["All pets are mammals", "Some pets are mammals", "No pets are mammals", "All mammals are pets"], a: 1, p: 71, e: "Some pets are cats, and every cat is a mammal, so at least those pets are mammals. The other choices claim more than the statements give." }
-      ];
-      var FULL = 11399, PER = 150;
-      var subj = document.getElementById("ecSubject");
-      var qEl = document.getElementById("ecQ");
-      var optsEl = document.getElementById("ecOpts");
-      var bar = document.getElementById("ecBar");
-      var tEl = document.getElementById("ecTime");
-      var exEl = document.getElementById("ecExplain");
-      var itemEl = document.getElementById("ecItem");
-      var idx = 0, left = FULL, interacted = false;
-      function pad(n) { return (n < 10 ? "0" : "") + n; }
-      function fmt(x) { return Math.floor(x / 3600) + ":" + pad(Math.floor((x % 3600) / 60)) + ":" + pad(x % 60); }
-      function render(item) {
-        subj.textContent = item.s;
-        qEl.textContent = item.q;
-        bar.style.width = item.p + "%";
-        itemEl.textContent = "Item " + Math.round(item.p * PER / 100) + " of " + PER;
-        exEl.textContent = "Tap an answer. In the reviewer, every item comes with an explanation like this one.";
-        optsEl.innerHTML = "";
-        item.o.forEach(function (o, i) {
-          var b = document.createElement("button");
-          b.type = "button";
-          b.className = "ec-opt";
-          var bub = document.createElement("span");
-          bub.className = "bub";
-          bub.textContent = "ABCD"[i];
-          b.appendChild(bub);
-          b.appendChild(document.createTextNode(" " + o));
-          b.addEventListener("click", function () {
-            interacted = true;
-            optsEl.querySelectorAll(".ec-opt").forEach(function (x) { x.classList.remove("selected", "correct"); });
-            b.classList.add("selected");
-            optsEl.children[item.a].classList.add("correct");
-            exEl.textContent = (i === item.a ? "" : "Not quite. ") + item.e;
-          });
-          optsEl.appendChild(b);
-        });
-      }
-      render(QUESTIONS[0]);
-      tEl.textContent = fmt(left);
-      if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
-        setInterval(function () { left = left > 0 ? left - 1 : FULL; tEl.textContent = fmt(left); }, 1000);
-        setInterval(function () { if (interacted) return; idx = (idx + 1) % QUESTIONS.length; render(QUESTIONS[idx]); }, 9000);
-      }
-    })();
-  </script>
-  <script>
-    /* Playable sample item: JS hides the explanation until an answer is
-       tapped. With JS off, the item reads as an answered sample. */
-    (function () {
-      document.querySelectorAll("[data-item]").forEach(function (card) {
-        var ex = card.querySelector(".item-explain");
-        if (ex) ex.hidden = true;
-        card.querySelectorAll(".item-opt").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            card.querySelectorAll(".item-opt").forEach(function (o) { o.classList.toggle("picked", o === btn); });
-            card.classList.add("answered");
-            if (ex) ex.hidden = false;
-          });
-        });
-      });
-    })();
-  </script>
-  <script>
     /* Copy controls (GCash number) with a toast. */
     (function () {
       var toast = document.getElementById("toast");
@@ -514,5 +410,7 @@
       if (foot) new IntersectionObserver(function (e) { st.footIn = e[0].isIntersecting; upd(); }).observe(foot);
     })();
   </script>
+  <script>window.HERO_EXAM = {"items": [{"n": 1, "section": "Verbal", "question": "Choose the word closest in meaning to ABATE.", "options": {"A": "To intensify", "B": "To hasten", "C": "To abandon", "D": "To lessen"}, "answer": "D", "explanation": "Abate means to become less intense or to lessen. Intensify and hasten are near-opposites, while abandon means to give up entirely, which is a different meaning."}, {"n": 2, "section": "Verbal", "question": "Neither the manager nor the employees _____ aware of the schedule change.", "options": {"A": "is", "B": "has been", "C": "was", "D": "are"}, "answer": "D", "explanation": "With neither...nor, the verb agrees with the nearer subject. The nearer subject here is employees, which is plural, so the plural verb are is correct. Is, has been, and was are all singular forms, so none of them can agree with employees."}, {"n": 3, "section": "Numerical", "question": "What is the next number in the series: 3, 7, 15, 31, ?", "options": {"A": "47", "B": "55", "C": "63", "D": "71"}, "answer": "C", "explanation": "Each term is the previous term times 2 plus 1: 3 x 2 + 1 = 7; 7 x 2 + 1 = 15; 15 x 2 + 1 = 31; 31 x 2 + 1 = 63. A (47) is 31 + 16, not the rule. B (55) and D (71) do not follow the rule."}, {"n": 4, "section": "Numerical", "question": "What is the next number in the series: 100, 90, 81, 73, ?", "options": {"A": "66", "B": "64", "C": "68", "D": "70"}, "answer": "A", "explanation": "Differences: 100 - 90 = 10; 90 - 81 = 9; 81 - 73 = 8. The subtracted amount decreases by 1 each step, so next subtract 7: 73 - 7 = 66. B (64) subtracts 9 again. C (68) subtracts 5. D (70) subtracts 3."}, {"n": 5, "section": "Numerical", "question": "What is the next number in the series: 6, 8, 11, 16, 23, ?", "options": {"A": "32", "B": "33", "C": "34", "D": "36"}, "answer": "C", "explanation": "The amounts added are consecutive prime numbers: 6 + 2 = 8; 8 + 3 = 11; 11 + 5 = 16; 16 + 7 = 23. The next prime is 11, so 23 + 11 = 34. A (32) adds 9, which is not prime. B (33) adds 10, which is not prime. D (36) adds 13, skipping the prime 11."}, {"n": 6, "section": "Analytical", "question": "BOOK : READ :: PEN : _____", "options": {"A": "Paper", "B": "Ink", "C": "Write", "D": "Desk"}, "answer": "C", "explanation": "The relation is object to its primary use: a book is used to read, a pen is used to write. Ink and paper are related materials, and desk is a location, not the use."}, {"n": 7, "section": "Analytical", "question": "Statement: \"The barangay will post flood warnings early so residents can evacuate in time.\" Which assumption MUST be true?", "options": {"A": "Residents can receive and act on early warnings.", "B": "Floods never happen at night.", "C": "All residents own cars.", "D": "Warnings alone stop floods."}, "answer": "A", "explanation": "Early warnings help only if residents can receive and act on them. B and C are unnecessary, and D is false since warnings do not stop floods."}, {"n": 8, "section": "General Information", "question": "Under Article III, Section 1 of the 1987 Constitution, no person shall be deprived of life, liberty, or property without which guarantee, and no person shall be denied the equal protection of the laws?", "options": {"A": "Freedom of expression", "B": "Right to bail", "C": "Right against self-incrimination", "D": "Due process of law"}, "answer": "D", "explanation": "Article III, Section 1 provides: \"No person shall be deprived of life, liberty, or property without due process of law, nor shall any person be denied the equal protection of the laws.\" A is Section 4. B is Section 13. C is Section 17."}, {"n": 9, "section": "General Information", "question": "Under Article III, Section 21 of the 1987 Constitution, no person shall be twice put in jeopardy of punishment for the same offense. What is this protection commonly called?", "options": {"A": "Ex post facto prohibition", "B": "Protection against double jeopardy", "C": "Bill of attainder prohibition", "D": "Protection against cruel punishment"}, "answer": "B", "explanation": "Section 21 provides: \"No person shall be twice put in jeopardy of punishment for the same offense.\" This is the protection against double jeopardy. A, C, and D are separate prohibitions in Section 19 and Section 22."}, {"n": 10, "section": "Verbal", "question": "Passage: The town library began as a single shelf of donated books in the barangay hall. Volunteers soon organized the collection, set regular opening hours, and invited students to study there. Within two years, the library offered reading programs, computer access, and review sessions for job seekers. Its growth did not come from a large budget but from steady community support. According to the passage, which service did the library eventually offer?", "options": {"A": "Free meals for all residents", "B": "Paid tutoring by professionals", "C": "Overnight lodging", "D": "Reading programs and computer access"}, "answer": "D", "explanation": "The passage lists reading programs, computer access, and review sessions. Free meals, lodging, and paid tutoring are never mentioned."}], "subjects": ["Verbal", "Numerical", "Analytical", "General Information"], "orderLabel": "Get the full reviewer, ₱369", "sampleHref": "https://www.facebook.com/profile.php?id=61596682491248", "sampleLabel": "Or get the sample from the CSE Page", "sampleExternal": true};</script>
+  <script src="/hero-exam.js"></script>
 </body>
 </html>
