@@ -329,7 +329,9 @@ el("next-btn").addEventListener("click", function () {
 });
 el("submit-btn").addEventListener("click", submit);
 el("skip-review-btn").addEventListener("click", goToFirstSkipped);
-el("skip-back-btn").addEventListener("click", goToFirstSkipped);
+/* The second warning button is labelled "Submit and see my score", so it
+   submits: with the warning visible, submit() proceeds to the score. */
+el("skip-back-btn").addEventListener("click", submit);
 el("retake-btn").addEventListener("click", reset);
 
 renderQuestion();

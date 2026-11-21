@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#171638" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5f1" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171638" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="description" content="Page not found, SASE Practice Hub PH." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
   <title>Page not found, SASE Practice Hub PH</title>
   <style>
-    :root { --bg: #f7f5f1; --ink: #1c1b2e; --muted: #5d5b73; --line: rgba(28,27,46,0.12); --primary: #ff6f4f; --primary-dark: #c93a20; --yellow: #ff6f4f; --radius-lg: 24px; --max: 1180px; }
+    /* Self-hosted variable fonts, same files as the landing pages. */
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var.woff2') format('woff2'); }
+    @font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 600 700; font-display: swap; src: url('/fonts/fraunces-var.woff2') format('woff2'); }
+    :root { --bg: #f7f5f1; --card: #ffffff; --ink: #1c1b2e; --muted: #5d5b73; --line: rgba(28,27,46,0.12); --primary: #ff6f4f; --primary-dark: #c93a20; --yellow: #ff6f4f; --radius-lg: 24px; --max: 1180px; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #12112a; --card: #1b1a3d; --ink: #edecf4; --muted: #a5a3bd; --line: rgba(255,255,255,0.13); --primary-dark: #ff8a70; }
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, "Segoe UI", system-ui, sans-serif; background: #f7f5f1; color: var(--ink); line-height: 1.6; }
+    body { margin: 0; font-family: Inter, "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
     a { color: inherit; }
     .topbar { position: sticky; top: 0; z-index: 50; background: rgba(23,22,56,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
     .topbar-inner { max-width: var(--max); width: min(var(--max), calc(100% - 24px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; }
@@ -26,13 +31,13 @@
     .topbar :focus-visible { outline-color: var(--yellow); }
     .wrap { width: min(760px, calc(100% - 28px)); margin: 0 auto; }
     main { padding: 56px 0 20px; text-align: center; }
-    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px 28px; box-shadow: 0 12px 26px rgba(23,22,56,0.08); }
-    h1 { font-family: Montserrat, Inter, sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 12px; line-height: 1.05; letter-spacing: -0.03em; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px 28px; box-shadow: 0 12px 26px rgba(23,22,56,0.08); }
+    h1 { font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 12px; line-height: 1.05; letter-spacing: -0.03em; }
     p { color: var(--muted); margin: 0 auto 24px; max-width: 520px; }
     .links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 999px; text-decoration: none; font-weight: 800; background: var(--primary-dark); color: #fff; }
     .button.alt { background: var(--yellow); color: #fff; }
-    .button.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+    .button.ghost { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
     footer { padding: 28px 0 42px; color: var(--muted); }
     .footer-inner { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 0.82rem; border-top: 1px solid var(--line); padding-top: 18px; }
     .footer-inner a { color: var(--primary-dark); }
@@ -78,6 +83,7 @@
     <div class="footer-inner">
       <span>Unofficial practice material. Not affiliated with or endorsed by Mindanao State University or the Civil Service Commission.</span>
       <span>Digital PDF &#8226; SASE &#8369;167 &#8226; Civil Service &#8369;369 &#8226; <a href="/privacy.html">Privacy Policy</a></span>
+      <span>Made by Mohammad Sidique Ibrahim</span>
     </div>
   </footer>
   <script>

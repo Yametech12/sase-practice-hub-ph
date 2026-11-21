@@ -76,7 +76,10 @@
   font-size: 15px;
   font-weight: 700;
   color: var(--blue-900);
-  background: var(--gold-soft);
+  /* Fixed cream in BOTH modes (the old var(--gold-soft) was never defined,
+     so the background computed to transparent and the dark text vanished
+     on the dark score card). #171638 on #fdf0dc measures 15.45:1. */
+  background: #fdf0dc;
   border: 1px solid #f3c9a8;
   border-radius: 12px;
   padding: 10px 14px;
@@ -117,9 +120,14 @@
 
 @media (prefers-color-scheme: dark) {
   .sample-score-line, .sample-upsell h3, .sample-plan h3, .sample-price { color: #edecf4; }
-  /* The priority box keeps its light cream background in dark mode
-     (--gold-soft is not redefined there), so its text stays dark. */
+  /* The priority box keeps its fixed light cream background (#fdf0dc)
+     in dark mode too, so its dark text stays at 15.45:1. */
   .sample-priority { color: var(--blue-900); }
   .sample-review-item { background: #232147; }
+  /* Review verdict lines lightened for the dark card (#232147):
+     green #3fae7c = 5.48:1, red #e87a8d = 5.51:1 (light-mode tokens
+     measured 2.32:1 and 2.47:1 here). */
+  .sample-review-line.is-correct { color: #3fae7c; }
+  .sample-review-line.is-wrong { color: #e87a8d; }
   .sample-note { color: #edecf4; }
 }

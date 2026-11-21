@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#171638" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5f1" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171638" />
   <link rel="preload" href="/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
   <meta name="description" content="450 SASE practice questions with explanations, lessons before the questions, and 8 full mock exams of 180 items in an online portal. ₱167 one-time. Exam day is November 29, 2026." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/" />
@@ -276,11 +277,11 @@
         </details>
         <details class="faq-item">
           <summary><span class="faq-n">06</span>Can I see a sample first?</summary>
-          <div class="faq-a"><p>Yes. Take the <a href="/sample">Free SASE practice sample</a>: 10 questions with the correct answer and an explanation for each, right here on the site. No sign-up and no payment.</p></div>
+          <div class="faq-a"><p>Yes. Take the <a href="/sample" aria-label="Free SASE practice sample">Free SASE practice sample</a>: 10 questions with the correct answer and an explanation for each, right here on the site. No sign-up and no payment.</p></div>
         </details>
         <details class="faq-item">
           <summary><span class="faq-n">07</span>What if I need help?</summary>
-          <div class="faq-a"><p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener">Message us on Facebook</a> anytime and we will help you with the material or the process.</p></div>
+          <div class="faq-a"><p><a href="https://www.facebook.com/profile.php?id=61594997556905" target="_blank" rel="noopener" aria-label="Message us on Facebook">Message us on Facebook</a> anytime and we will help you with the material or the process.</p></div>
         </details>
         <details class="faq-item">
           <summary><span class="faq-n">08</span>I lost my portal password, what do I do?</summary>
@@ -316,7 +317,10 @@
           <span class="kicker">Order slip, SASE reviewer</span>
           <h3>Pay here, then fill in the form</h3>
           <div class="qr-box">
-            <img src="qr-payment-167.png" alt="InstaPay QR code for the ₱167 reviewer payment" width="854" height="854" loading="lazy" decoding="async" />
+            <picture>
+              <source srcset="qr-payment-167.webp" type="image/webp" />
+              <img src="qr-payment-167.png" alt="InstaPay QR code for the ₱167 reviewer payment" width="854" height="854" loading="lazy" decoding="async" />
+            </picture>
             <p class="qr-caption">Paying from a second device? Scan this QR code with GCash.</p>
           </div>
           <div class="amount">
@@ -485,7 +489,11 @@
           valid = false;
         }
 
-        document.getElementById('reference').setAttribute('aria-invalid', valid ? 'false' : 'true');
+        /* QA1 M3: every invalid field carries its own aria-invalid, not
+           only the reference field. */
+        document.getElementById('buyerName').setAttribute('aria-invalid', buyer ? 'false' : 'true');
+        document.getElementById('contactName').setAttribute('aria-invalid', contact ? 'false' : 'true');
+        document.getElementById('reference').setAttribute('aria-invalid', (!ref || isLikelyPhoneNumber(ref) || !/^\d{13}$/.test(ref)) ? 'true' : 'false');
         if (!valid) return;
 
         var orderRef = 'SASE-' + Math.random().toString(36).slice(2, 8).toUpperCase();

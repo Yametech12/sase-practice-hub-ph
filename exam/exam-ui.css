@@ -104,7 +104,7 @@ body {
 .skip-link {
   position: absolute; left: 12px; top: -100px; z-index: 200;
   background: var(--indigo); color: #fff; font-weight: 700; font-size: 14px;
-  padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
+  padding: 13px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
 }
 .skip-link:focus { top: 0; }
 
@@ -171,6 +171,14 @@ body {
   .brand-name { font-size: 14px; }
   .back-link { padding: 10px 12px; font-size: 12px; min-height: 44px; }
   .practice-badge { display: none; } /* badge is decorative; brand + back-link matter */
+}
+/* QA3 F2: signed in, the bar also carries the portal-switch pill and the
+   Log out button, and the brand name truncated to "CSE P..." / "S.." at
+   phone widths. Let the bar wrap instead: brand keeps a full row with
+   Home, switch and Log out drop to a second row, name never truncates. */
+@media (max-width: 560px) {
+  .brandbar-inner { flex-wrap: wrap; }
+  .brand { flex: 1 1 auto; }
 }
 
 /* ---------- layout: one paper sheet on the desk ---------- */
@@ -678,7 +686,16 @@ body {
   max-width: 720px; margin: 0 auto;
 }
 .page-foot-help { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
-.page-foot-help a { color: var(--coral-dark); }
+.page-foot-help a { color: var(--coral-dark); display: inline-block; padding: 10px 2px; }
+/* Credit line, styled like the landing footer credit (marker font,
+   uppercase, letterspaced) but kept small on the portal surfaces. */
+.page-foot-credit {
+  margin: 10px 0 0;
+  font-family: var(--font-marker);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+}
 
 /* ---------- larger screens ---------- */
 @media (min-width: 560px) {
@@ -736,7 +753,12 @@ body {
 .lesson-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; display: block; }
 .lesson-thumb {
   position: relative; display: block; width: 100%; padding: 0; border: 0; cursor: pointer;
-  background: #000; border-radius: 12px; overflow: hidden;
+  /* Branded stage behind the thumbnail: if the i.ytimg.com image fails
+     (QA3 F4, the img is hidden on error), the indigo stage and the play
+     badge still read as an intentional player, never a broken image. */
+  background: linear-gradient(135deg, var(--indigo-2), var(--indigo-deep));
+  border-radius: 12px; overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 .lesson-thumb img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 .lesson-play {

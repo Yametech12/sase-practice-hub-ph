@@ -566,6 +566,26 @@
       els.examStatusText.textContent = "No result loaded";
       return;
     }
+    /* QA3 F1: a stored snapshot is not enough on its own. Without a live
+       session token for the result's track (hub logout clears both, but a
+       leftover snapshot must never render), drop the snapshot and send
+       the visitor back to the gate. The legacy single key counts for
+       pre-separation sessions. */
+    var hasToken = false;
+    try {
+      var resultTrack = sessionStorage.getItem("portal_result_track") === "cse" ? "cse" : "sase";
+      hasToken = !!sessionStorage.getItem(resultTrack === "cse" ? "portal_session_cse" : "portal_session_sase")
+        || !!sessionStorage.getItem("sase_exam_session");
+    } catch (e) {}
+    if (!hasToken) {
+      try {
+        sessionStorage.removeItem(RESULT_KEY);
+        sessionStorage.removeItem(EXAM_NUM_KEY);
+        sessionStorage.removeItem("portal_result_track");
+      } catch (e) {}
+      window.location.replace("/exam");
+      return;
+    }
     var data;
     try { data = JSON.parse(raw); } catch (e) { data = null; }
     if (!data || typeof data.score !== "number") {

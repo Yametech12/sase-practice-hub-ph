@@ -128,6 +128,7 @@ document.getElementById('btnLogout').addEventListener('click', function () {
     sessionStorage.removeItem('portal_session_cse');
     sessionStorage.removeItem('sase_exam_result');
     sessionStorage.removeItem('sase_exam_n');
+    sessionStorage.removeItem('portal_result_track');
   } catch (e) {}
   window.location.href = '/exam';
 });

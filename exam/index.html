@@ -4,8 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#171638">
-<title>SASE Mock Exam, SASE Practice Hub PH</title>
+<title>Mock Exam Portal, Practice Hub PH</title>
 <meta name="description" content="Buyer portal: 8 full mock exams for the SASE and Civil Service reviewers, with timers, scores, answer reviews, and video lessons.">
+<link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/exam">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sase-practice-hub-ph.vercel.app/exam">
+<meta property="og:title" content="Mock Exam Portal, SASE Practice Hub PH">
+<meta property="og:description" content="Buyer portal: 8 full mock exams for the SASE and Civil Service reviewers, with timers, scores, answer reviews, and video lessons.">
+<meta property="og:image" content="https://sase-practice-hub-ph.vercel.app/og-sase.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mock Exam Portal, SASE Practice Hub PH">
+<meta name="twitter:description" content="Buyer portal: 8 full mock exams for the SASE and Civil Service reviewers, with timers, scores, answer reviews, and video lessons.">
+<meta name="twitter:image" content="https://sase-practice-hub-ph.vercel.app/og-sase.png">
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -19,9 +31,11 @@
 <header class="brandbar">
   <div class="brandbar-inner">
     <a href="/" class="back-link" id="back-home" aria-label="Back to home page">&#8592; Home</a>
-    <div class="brand" aria-label="SASE Practice Hub PH">
-      <span class="brand-mark" aria-hidden="true">📘</span>
-      <span class="brand-name" id="brand-name">SASE Practice Hub PH</span>
+    <div class="brand" aria-label="Practice Hub PH">
+      <!-- The mark is the CSS answer-bubble drawn by exam-ui.css; no emoji
+           glyph, so it renders identically on every device. -->
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" id="brand-name">Practice Hub PH</span>
     </div>
     <span class="practice-badge">PRACTICE EXAM</span>
   </div>
@@ -31,9 +45,12 @@
   <section id="screen-gate" class="screen active">
     <div class="gate-hero">
       <p class="gate-kicker">Buyer portal · Practice exams</p>
-      <h1 id="gate-title">SASE Mock Exam Portal</h1>
-      <p class="subtitle" id="gate-subtitle">Eight full-length mock exams · 180 questions each · 2-hour practice timer.</p>
-      <p class="disclaimer-line" id="gate-disclaimer">This is a <strong>practice exam</strong> for preparation only. It is not the official MSU-SASE and is not affiliated with MSU.</p>
+      <!-- Neutral defaults: exam-ui.js rebrands this gate for the entered
+           track (SASE or Civil Service) on load, so the static HTML must
+           not flash one product's wording at the other product's buyers. -->
+      <h1 id="gate-title">Mock Exam Portal</h1>
+      <p class="subtitle" id="gate-subtitle">Eight full-length mock exams for your reviewer. Pick your portal below, then enter the password or access code that came with it.</p>
+      <p class="disclaimer-line" id="gate-disclaimer">This is a <strong>practice exam</strong> for preparation only. It is not an official exam and is not affiliated with MSU or the Civil Service Commission.</p>
     </div>
 
     <form id="gate-form" class="gate-card" autocomplete="off">
@@ -43,15 +60,15 @@
         <button id="gate-track-sase" class="home-tab active" type="button" aria-pressed="true">SASE Portal</button>
         <button id="gate-track-cse" class="home-tab" type="button" aria-pressed="false">Civil Service Portal</button>
       </div>
-      <label for="gate-password" class="field-label" id="field-label">Enter your reviewer password</label>
-      <p class="field-hint" id="field-hint">Use the same unique password that came with your ₱167 PDF.</p>
+      <label for="gate-password" class="field-label" id="field-label">Enter your reviewer password or access code</label>
+      <p class="field-hint" id="field-hint">Use the password or CSE7 access code that came with your reviewer.</p>
       <div class="gate-row">
-        <input type="password" id="gate-password" placeholder="e.g. Xk9mQ2vT7pLz"
-               autocomplete="current-password" aria-describedby="field-hint gate-error" required>
+        <input type="password" id="gate-password" placeholder="Your password or CSE7 code"
+               autocomplete="current-password" aria-describedby="field-hint gate-error">
         <button type="submit" id="gate-submit" class="btn btn-primary">Unlock</button>
       </div>
       <p id="gate-error" class="form-error" role="alert" hidden></p>
-      <p class="gate-note" id="gate-note">One password works on <strong>up to 3 devices</strong>. Lost access? Message SASE Practice Hub PH.</p>
+      <p class="gate-note" id="gate-note">One password or access code works on <strong>up to 3 devices</strong>. Lost access? Message us on Facebook.</p>
     </form>
     <p class="gate-note" id="gate-cse-hint">Civil Service buyer? Tap <strong>Civil Service Portal</strong> above, then enter your CSE7 access code (it is separate from your PDF password).</p>
 
@@ -248,7 +265,8 @@
 </main>
 
 <footer class="page-foot">
-  <p id="foot-text">SASE Practice Hub PH · Practice exams for study purposes only, not the official MSU-SASE.</p>
+  <p id="foot-text">Practice Hub PH · Practice exams for study purposes only.</p>
+  <p class="page-foot-credit">Made by Mohammad Sidique Ibrahim</p>
 </footer>
 
 <script src="/exam/exam-ui.js?v=20261112b"></script>

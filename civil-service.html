@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#171638" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5f1" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171638" />
   <link rel="preload" href="/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
   <meta name="description" content="560 Civil Service practice items with explanations, lessons before the questions, and 8 full mock exams in the real CSE format. ₱369 one-time. Exam day is March 14, 2027." />
   <link rel="canonical" href="https://sase-practice-hub-ph.vercel.app/civil-service.html" />
@@ -286,7 +287,10 @@
             <span class="kicker">Order slip, CSE reviewer</span>
             <h3>Pay here, then message the Page</h3>
             <div class="qr-box">
-              <img src="qr-payment-369.png" alt="InstaPay QR code for the ₱369 Civil Service reviewer payment" width="353" height="353" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="qr-payment-369.webp" type="image/webp" />
+                <img src="qr-payment-369.png" alt="InstaPay QR code for the ₱369 Civil Service reviewer payment" width="353" height="353" loading="lazy" decoding="async" />
+              </picture>
               <p class="qr-caption">Paying from a second device? Scan this QR code with GCash.</p>
             </div>
             <div class="amount">
@@ -349,11 +353,13 @@
         toggle.addEventListener('click', function () {
           var open = menu.classList.toggle('open');
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         });
         menu.addEventListener('click', function (e) {
           if (e.target.tagName === 'A') {
             menu.classList.remove('open');
             toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Open menu');
           }
         });
       }

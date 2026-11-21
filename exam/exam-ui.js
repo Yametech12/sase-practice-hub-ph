@@ -309,6 +309,17 @@
 
   gateForm.addEventListener("submit", function (ev) {
     ev.preventDefault();
+    /* QA3 F3: an empty field gets its own message instead of leaving a
+       stale "Incorrect..." error on screen. (The input no longer carries
+       `required`, so this handler, not native validation, owns the case.) */
+    if (!gateInput.value.trim()) {
+      gateError.textContent = state.track === "cse"
+        ? "Please enter your CSE7 access code."
+        : "Please enter your reviewer password.";
+      gateError.hidden = false;
+      gateInput.focus();
+      return;
+    }
     gateError.hidden = true;
     gateSubmit.disabled = true;
     gateSubmit.textContent = "Checking…";
@@ -482,6 +493,13 @@
     if (homeTabsOnOut) homeTabsOnOut.hidden = true;
     applyTrackChrome();
     clearSession(leavingTrack); // the other product's stored session is untouched
+    /* QA3 F1: logout must also drop the stored result snapshot, or the
+       results page stays readable in this tab after sign-out. */
+    try {
+      sessionStorage.removeItem(RESULT_KEY);
+      sessionStorage.removeItem(EXAM_NUM_KEY);
+      sessionStorage.removeItem(RESULT_TRACK_KEY);
+    } catch (e) {}
     $("exam-list-wrap").hidden = true;
     var lessonsWrapOnOut = $("lessons-wrap");
     if (lessonsWrapOnOut) lessonsWrapOnOut.hidden = true; // paid lessons leave with the session
@@ -871,6 +889,11 @@
     thumb.innerHTML =
       '<img src="https://i.ytimg.com/vi/' + escapeHtml(l.video_id) + '/hqdefault.jpg" alt="" loading="lazy">' +
       '<span class="lesson-play" aria-hidden="true">▶</span>';
+    /* QA3 F4: if the thumbnail host fails, hide the broken image so the
+       branded stage gradient and play badge carry the card instead of a
+       broken-image glyph. */
+    var thumbImg = thumb.querySelector("img");
+    if (thumbImg) thumbImg.addEventListener("error", function () { thumbImg.style.display = "none"; });
     function activatePlayer() {
       if (currentIfr) return;
       // Lazy: the embed iframe exists only after an explicit tap.

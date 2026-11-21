@@ -308,6 +308,7 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--ink); }
   text-decoration-color: var(--coral);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
+  padding: 6px 0; /* QA4 M2: grow the tap area toward 44px without moving the line */
 }
 .text-link:hover { color: var(--coral-dark); }
 
@@ -853,6 +854,7 @@ table.sched, table.spec { width: 100%; border-collapse: collapse; }
 }
 .faq-item[open ] summary::after { content: ""; background: var(--coral-deep); border-color: var(--coral-deep); }
 .faq-a { padding: 0 46px 22px 0; color: var(--muted); max-width: 44rem; }
+.faq-a a { padding: 6px 0; } /* QA4 M2: inline FAQ links get a taller tap area */
 .faq-a p { margin: 0; }
 
 /* ---------- Order sheet ---------- */
@@ -1376,6 +1378,7 @@ table.sched, table.spec { width: 100%; border-collapse: collapse; }
 .copy-summary:hover { background: var(--ink); color: var(--paper); }
 .fb-link {
   display: inline-block;
+  padding: 10px 2px; /* QA4 M2: tap height toward 44px */
   margin: 14px 0 0 4px;
   color: var(--link);
   font-weight: 600;
@@ -1409,7 +1412,7 @@ table.sched, table.spec { width: 100%; border-collapse: collapse; }
 
 footer { border-top: 4px double var(--line-strong); padding: 42px 0 54px; }
 .footer-inner { display: flex; flex-direction: column; gap: 7px; color: var(--muted); font-size: 0.9rem; }
-.footer-inner a { color: var(--ink); font-weight: 600; }
+.footer-inner a { color: var(--ink); font-weight: 600; display: inline-block; padding: 10px 4px; } /* QA4 M2: footer link tap height toward 44px */
 .footer-inner span:last-child {
   font-family: var(--font-marker);
   font-size: 0.78rem;
