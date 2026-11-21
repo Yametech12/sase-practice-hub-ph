@@ -978,3 +978,44 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   .instr-check:has(input:checked) { background: var(--surface-2); }
   :focus-visible { outline-color: var(--focus-ring); }
 }
+
+/* ============ GT-20261121-08 FIX ROUND 1 (Design Auditor M2, M3, M4) ============
+   M2: portal labels take the token data and label style: sentence case,
+   no uppercase transform, no letter-spacing tracking. This covers the
+   runner and gate rules the auditor named (gate kicker, exam status,
+   instruction kicker and fact labels, timer label, section chip,
+   question number, footer credit, lesson topic) plus the practice badge.
+   M3: the runner passage block leaves the rejected cream and the colored
+   left border: it paints the token sheet surface (surface-2 in both
+   schemes) with a plain hairline edge and the row radius.
+   M4: portal primary actions take the one action color. The track is
+   not exposed in markup or CSS (exam-ui.js keeps it in JS state only),
+   so one action color serves both tracks: MSU Maroon in light, and the
+   lifted dark accent fill with graphite text in dark, which reads
+   clearly against the dark card surface. */
+.gate-kicker, .exam-status, .instr-kicker, .instr-fact span, .timer-label,
+.q-section, .q-number, .page-foot-credit, .lesson-topic {
+  text-transform: none; letter-spacing: 0;
+  font-family: var(--font-marker); font-size: 0.8125rem; font-weight: 600;
+}
+.practice-badge {
+  text-transform: none; letter-spacing: 0;
+  font-family: var(--font-marker); font-size: 0.75rem; font-weight: 600;
+  color: #FFFFFF;
+}
+.home-tab { letter-spacing: 0; }
+.q-passage {
+  background: var(--surface-2); color: var(--ink);
+  border: 1px solid var(--line); border-left: 1px solid var(--line);
+  border-radius: var(--radius-row);
+}
+.btn-primary { background: var(--action); border-color: var(--action); color: var(--on-action); }
+.btn-primary:hover { background: color-mix(in srgb, var(--action) 88%, white); }
+.btn-primary:active { background: var(--action-press); }
+.btn-primary:disabled { background: var(--surface-2); color: var(--muted); box-shadow: none; cursor: not-allowed; transform: none; }
+.home-tab.active { background: var(--action); border-color: var(--action); color: var(--on-action); }
+@media (prefers-color-scheme: dark) {
+  .btn-primary { background: var(--action); color: var(--on-action); }
+  .home-tab.active { background: var(--action); border-color: var(--action); color: var(--on-action); }
+  .q-passage { background: var(--surface-2); }
+}

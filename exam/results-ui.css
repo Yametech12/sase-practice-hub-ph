@@ -528,3 +528,36 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   .exam-status { background: var(--surface-2); }
   .q-code { color: var(--ink); background: var(--surface-2); }
 }
+
+/* ============ GT-20261121-08 FIX ROUND 1 (Design Auditor M2, M3, M4) ============
+   M2: results labels take the token data and label style: sentence case,
+   no uppercase transform, no letter-spacing tracking (hero kicker,
+   section label, question code, practice badge).
+   M3: the review passage block takes the same treatment as the runner
+   passage: token sheet surface, plain hairline edge, no colored left
+   border. State left borders on review items keep their state job and
+   are not touched.
+   M4: results primary actions and the active filter chip take the one
+   action color, with the lifted dark accent fill in dark mode. */
+.hero-kicker, .q-sec {
+  text-transform: none; letter-spacing: 0;
+  font-family: var(--font-marker); font-size: 0.8125rem; font-weight: 600;
+}
+.q-code, .practice-badge {
+  text-transform: none; letter-spacing: 0;
+  font-family: var(--font-marker); font-size: 0.75rem; font-weight: 600;
+}
+.q-passage {
+  background: var(--surface-2); color: var(--ink);
+  border: 1px solid var(--line); border-left: 1px solid var(--line);
+  border-radius: var(--radius-row);
+}
+.btn-primary { background: var(--action); color: var(--on-action); }
+.btn-primary:active { background: var(--action-press); }
+.chip.active { background: var(--action); border-color: var(--action); color: var(--on-action); }
+.chip.active span { color: var(--on-action); }
+@media (prefers-color-scheme: dark) {
+  .btn-primary { background: var(--action); color: var(--on-action); }
+  .chip.active { background: var(--action); border-color: var(--action); color: var(--on-action); }
+  .q-passage { background: var(--surface-2); }
+}
