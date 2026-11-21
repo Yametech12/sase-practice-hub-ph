@@ -1,27 +1,71 @@
 /* ============================================================
-   SASE Mock Exam, Results screen styles
-   Mobile-first (360px), deep blue / white professional design.
+   SASE / Civil Service Mock Exam, Results screen styles
+   Design system (Nov 21, 2026): the marked answer sheet, same
+   tokens and self-hosted fonts as the landing pages and the
+   exam portal. Mobile-first (360px).
    ============================================================ */
+
+/* Self-hosted variable fonts (latin subset), display swap. */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url('/fonts/fraunces-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/inter-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/fonts/spacegrotesk-var.woff2') format('woff2');
+}
 
 :root {
   color-scheme: light dark;
+  /* Landing tokens */
+  --paper: #f7f5f1;
+  --desk: #e9e6de;
+  --card: #ffffff;
+  --ink: #1c1b2e;
+  --muted: #5d5b73;
+  --line: #e0dcd2;
+  --line-strong: #b9b4a6;
+  --indigo: #171638;
+  --indigo-2: #232147;
+  --indigo-deep: #100f28;
+  --coral: #ff6f4f;
+  --coral-deep: #d64026;
+  --coral-dark: #b3321f;
+  --coral-tint: #ffe9e2;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-marker: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Portal semantic tokens */
+  --green: #0e6b44;   /* on white = 6.55:1; white on this = 6.55:1 */
+  --green-bg: #e6f6ee;
+  --red: #b52c42;     /* on white = 6.17:1; white on this = 6.17:1 */
+  --red-bg: #fdeaed;
+  --amber: #9a4a12;   /* on #fdeee2 = 5.50:1; white on this = 6.25:1 */
+  --amber-bg: #fdeee2;
+  --track: #ece9e0;
+  --tint: #f1efe9;
+  /* Legacy aliases */
   --blue-900: #171638;
   --blue-700: #2c2a5e;
   --blue-600: #232147;
   --blue-100: #e6e2f4;
-  --blue-50:  #f7f5f1;
-  --ink: #1c1b2e;
-  --muted: #5d5b73;
-  --line: #e6e2f4;
-  --green: #0e6b44;   /* darkened: on white = 6.55:1 (A11Y C3); white on this = 6.55:1 (C5) */
-  --green-bg: #e6f6ee;
-  --red: #b52c42;     /* darkened: on white = 6.17:1 (A11Y C4); white on this = 6.17:1 (C5) */
-  --red-bg: #fdeaed;
-  --amber: #9a4a12;   /* burnt orange, harmonized with coral: on #fdeee2 = 5.50:1; white on this = 6.25:1 */
-  --amber-bg: #fdeee2;
+  --blue-50: #f1efe9;
   --grey-bg: #ede9f7;
   --radius: 18px;
-  --shadow: 0 2px 12px rgba(23, 22, 56, 0.08);
+  --shadow: 0 10px 30px rgba(23, 22, 56, .08);
 }
 
 * { box-sizing: border-box; }
@@ -30,7 +74,7 @@ html { -webkit-text-size-adjust: 100%; }
 /* Skip link: visible only on keyboard focus */
 .skip-link {
   position: absolute; left: 12px; top: -100px; z-index: 200;
-  background: #171638; color: #fff; font-weight: 700; font-size: 14px;
+  background: var(--indigo); color: #fff; font-weight: 700; font-size: 14px;
   padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
 }
 .skip-link:focus { top: 0; }
@@ -42,58 +86,87 @@ html { -webkit-text-size-adjust: 100%; }
   clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* Visible keyboard focus everywhere (A11Y K1) */
+/* Visible keyboard focus everywhere */
 :focus-visible {
-  outline: 3px solid var(--blue-600);
+  outline: 3px solid var(--coral-deep);
   outline-offset: 2px;
 }
 
 body {
   margin: 0;
-  font-family: Inter, "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
-  background: var(--blue-50);
+  font-family: var(--font-body);
+  background: var(--desk);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+::selection { background: var(--coral); color: #17162e; }
+
+/* The marked sheet on the desk */
+.page {
+  max-width: 560px; margin: 0 auto;
+  padding: 0 14px 40px;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--line);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+@media (min-width: 600px) {
+  .page { box-shadow: 0 0 0 1px var(--line), 0 24px 60px rgba(10, 9, 30, .14); }
 }
 
-.page { max-width: 560px; margin: 0 auto; padding: 0 14px 40px; }
-
-/* ---- Top bar ---- */
+/* ---- Top bar: the sheet header ---- */
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: calc(14px + env(safe-area-inset-top, 0px)) 2px 14px; /* notch safe area */
+  padding: calc(14px + env(safe-area-inset-top, 0px)) 2px 13px; /* notch safe area */
   gap: 8px; flex-wrap: nowrap;
+  border-bottom: 3px double var(--line-strong);
+  margin-bottom: 14px;
 }
-.brand { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.brand-mark { font-size: 22px; }
-.brand-name { font-weight: 700; color: var(--blue-900); font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+/* Filled answer bubble on a coral tile, same mark as the portal. */
+.brand-mark {
+  flex: 0 0 30px; width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: 9px; background: var(--coral);
+  font-size: 0;
+}
+.brand-mark::after {
+  content: ""; width: 13px; height: 13px; border-radius: 50%;
+  background: #fff;
+}
+.brand-name {
+  font-family: var(--font-display); font-weight: 600; font-size: 16px;
+  color: var(--indigo); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .practice-badge {
-  font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+  font-family: var(--font-marker);
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.09em;
   color: var(--amber); background: var(--amber-bg);
-  border: 1px solid #f3c9a8; border-radius: 999px; padding: 5px 10px;
+  border: 1px solid #f3c9a8; border-radius: 6px; padding: 5px 9px;
+  white-space: nowrap;
 }
 .back-link {
   display: inline-flex; align-items: center; gap: 4px;
-  color: var(--blue-900); text-decoration: none; font-size: 13px; font-weight: 700;
-  background: #fff; border: 1px solid #e6e2f4;
+  color: var(--indigo); text-decoration: none; font-size: 13px; font-weight: 700;
+  background: var(--card); border: 1px solid var(--line-strong);
   padding: 10px 14px; border-radius: 999px; white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(23,22,56,.08);
   min-height: 44px; /* 44px touch target */
 }
-.back-link:hover, .back-link:focus-visible { background: #f1eef9; }
+.back-link:hover, .back-link:focus-visible { background: var(--tint); }
 @media (max-width: 420px) {
   .back-link { padding: 10px 12px; font-size: 12px; min-height: 44px; }
-  .brand-name { font-size: 13px; }
+  .brand-name { font-size: 14px; }
   .practice-badge { display: none; } /* badge is decorative; brand + back-link matter */
 }
 
 /* ---- Exam status strip ---- */
 .exam-status {
-  display: flex; align-items: center; gap: 8px;
-  background: var(--blue-900); color: #fff;
-  border-radius: var(--radius); padding: 11px 14px;
+  display: flex; align-items: center; gap: 9px;
+  background: var(--indigo); color: #fff;
+  border-radius: 14px; padding: 12px 15px;
+  font-family: var(--font-marker);
   font-size: 13.5px; font-weight: 600; margin-bottom: 14px;
-  box-shadow: var(--shadow);
 }
 .exam-status-dot {
   width: 9px; height: 9px; border-radius: 50%;
@@ -104,24 +177,30 @@ body {
 /* ---- Auto-submit / forfeit notice ---- */
 .result-notice {
   background: var(--amber-bg); border: 1px solid #f3c9a8;
-  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px;
+  border-radius: 14px; padding: 12px 14px; margin-bottom: 14px;
   font-size: 14px; color: var(--ink); line-height: 1.55;
 }
 .result-notice[hidden] { display: none; }
 
 /* ---- Cards ---- */
 .card {
-  background: #fff; border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 18px 16px; margin-bottom: 14px;
+  background: var(--card); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 19px 17px; margin-bottom: 14px;
   border: 1px solid var(--line);
 }
-.card-title { margin: 0 0 12px; font-size: 17px; color: var(--blue-900); }
+.card-title {
+  margin: 0 0 13px; font-size: 20px; color: var(--indigo);
+  font-family: var(--font-display); font-weight: 600;
+  padding-bottom: 8px; border-bottom: 3px double var(--line-strong);
+}
 .card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
 
-/* ---- Hero ---- */
+/* ---- Hero: the score box of the marked sheet ---- */
 .hero-kicker {
-  margin: 0 0 10px; font-size: 12.5px; font-weight: 700;
-  letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 12px;
+  font-family: var(--font-marker);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--coral-dark);
 }
 .score-wrap { display: flex; align-items: center; gap: 18px; }
 @media (max-width: 360px) {
@@ -130,9 +209,9 @@ body {
 .hero-copy { min-width: 0; overflow-wrap: break-word; }
 .score-ring { position: relative; width: 128px; height: 128px; flex-shrink: 0; }
 .ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-.ring-track { fill: none; stroke: var(--blue-100); stroke-width: 11; }
+.ring-track { fill: none; stroke: var(--track); stroke-width: 11; }
 .ring-fill {
-  fill: none; stroke: var(--blue-600); stroke-width: 11;
+  fill: none; stroke: var(--coral-deep); stroke-width: 11;
   stroke-linecap: round; stroke-dasharray: 326.7; stroke-dashoffset: 326.7;
   transition: stroke-dashoffset 1.1s ease;
 }
@@ -140,67 +219,84 @@ body {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
-.score-pct { font-size: 27px; font-weight: 800; color: var(--blue-900); }
-.score-raw { font-size: 12px; color: var(--muted); font-weight: 600; }
-.hero-copy h1 { margin: 0 0 6px; font-size: 22px; color: var(--blue-900); }
-.hero-copy p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+.score-pct { font-size: 29px; font-weight: 700; color: var(--indigo); font-family: var(--font-display); line-height: 1.1; }
+.score-raw { font-size: 11.5px; color: var(--muted); font-weight: 600; font-family: var(--font-marker); letter-spacing: .02em; }
+.hero-copy h1 { margin: 0 0 6px; font-size: 24px; color: var(--indigo); font-family: var(--font-display); font-weight: 600; line-height: 1.2; }
+.hero-copy p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
 .disclaimer {
-  margin: 14px 0 0; font-size: 12.5px; color: var(--muted);
-  background: var(--blue-50); border-radius: 10px; padding: 10px 12px; line-height: 1.5;
+  margin: 15px 0 0; font-size: 12.5px; color: var(--muted);
+  background: var(--tint); border-radius: 10px; padding: 10px 12px; line-height: 1.55;
+}
+/* Civil Service results: 80.00 benchmark line + weak-section lessons link */
+.benchmark-line {
+  margin: 14px 0 0; padding: 12px 14px; border-radius: 12px;
+  background: var(--amber-bg); color: #5c430a; font-size: 14px; line-height: 1.55;
+  border: 1px solid #f0dcae;
 }
 
-/* ---- Section bars ---- */
-.section-bars { display: flex; flex-direction: column; gap: 12px; }
+/* ---- Section bars: answer-key rows ---- */
+.section-bars { display: flex; flex-direction: column; gap: 13px; }
 .sec-row { display: grid; grid-template-columns: 105px 1fr 46px; align-items: center; gap: 10px; }
 .sec-name { font-size: 13.5px; font-weight: 600; color: var(--ink); }
-.sec-track { height: 10px; background: var(--blue-100); border-radius: 999px; overflow: hidden; }
+.sec-track { height: 10px; background: var(--track); border-radius: 999px; overflow: hidden; }
 .sec-fill {
-  height: 100%; border-radius: 999px; background: var(--blue-600);
-  transform: scaleX(0); transform-origin: left; /* PERF F-4: compositor-only */
+  height: 100%; border-radius: 999px; background: var(--indigo-2);
+  transform: scaleX(0); transform-origin: left; /* compositor-only */
   transition: transform 0.9s ease;
 }
 .sec-fill.good { background: var(--green); }
 .sec-fill.weak { background: var(--red); }
-.sec-pct { font-size: 13px; font-weight: 700; color: var(--blue-900); text-align: right; }
+.sec-pct { font-size: 13.5px; font-weight: 700; color: var(--indigo); text-align: right; font-family: var(--font-marker); }
 
 /* ---- Improve ---- */
 .improve-intro { margin: 0 0 12px; font-size: 13.5px; color: var(--muted); line-height: 1.55; }
 .improve-list { display: flex; flex-direction: column; gap: 10px; }
 .improve-item {
-  border: 1px solid var(--line); border-radius: 10px; padding: 12px;
-  background: var(--blue-50);
+  border: 1px solid var(--line); border-left: 3px solid var(--coral);
+  border-radius: 12px; padding: 13px;
+  background: var(--tint);
 }
-.improve-item strong { color: var(--blue-900); font-size: 14px; }
+.improve-item strong { color: var(--indigo); font-size: 15px; font-family: var(--font-display); font-weight: 600; }
 .improve-item p { margin: 6px 0 0; font-size: 13.5px; color: var(--ink); line-height: 1.55; }
 .improve-item .chap {
-  display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 700;
-  color: var(--blue-700); background: #fff; border: 1px solid var(--line);
-  border-radius: 999px; padding: 4px 10px;
+  display: inline-block; margin-top: 9px; font-size: 11.5px; font-weight: 600;
+  font-family: var(--font-marker);
+  color: var(--indigo-2); background: var(--card); border: 1px solid var(--line);
+  border-radius: 999px; padding: 5px 11px;
 }
 .improve-ok {
   text-align: center; color: var(--green); font-weight: 700; font-size: 14px;
-  background: var(--green-bg); border-radius: 10px; padding: 14px;
+  background: var(--green-bg); border-radius: 12px; padding: 14px;
 }
+.improve-item.lessons-link { font-size: 14px; }
+.improve-item.lessons-link a { font-weight: 700; color: var(--indigo-2); }
 
-/* ---- Review ---- */
-.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+/* ---- Review: the marked answer sheet ---- */
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 13px; }
 .chip {
-  border: 1px solid var(--line); background: #fff; border-radius: 999px;
-  padding: 7px 12px; font-size: 13px; font-weight: 600; color: var(--blue-700);
-  cursor: pointer; font-family: inherit;
-  min-height: 44px; display: inline-flex; align-items: center; /* MOBILE F2 */
+  border: 1px solid var(--line); background: var(--card); border-radius: 999px;
+  padding: 7px 13px; font-size: 13px; font-weight: 600; color: var(--indigo-2);
+  font-family: var(--font-marker);
+  cursor: pointer;
+  min-height: 44px; display: inline-flex; align-items: center; /* touch target */
 }
 .chip span { color: var(--muted); font-weight: 700; }
-.chip.active { background: var(--blue-900); border-color: var(--blue-900); color: #fff; }
+.chip.active { background: var(--indigo); border-color: var(--indigo); color: #fff; }
 .chip.active span { color: #d8d4f0; }
 
 .review-list { display: flex; flex-direction: column; gap: 10px; }
-.q-empty { padding: 18px 12px; text-align: center; font-size: 13.5px; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; background: #fff; }
-.q-item { border: 1px solid var(--line); border-radius: 10px; background: #fff; overflow: hidden; }
+.q-empty { padding: 18px 12px; text-align: center; font-size: 13.5px; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 12px; background: var(--card); }
+.q-item {
+  border: 1px solid var(--line); border-radius: 14px;
+  background: var(--card); overflow: hidden;
+}
+.q-item.correct { border-left: 4px solid var(--green); }
+.q-item.wrong { border-left: 4px solid var(--red); }
+.q-item.skipped { border-left: 4px solid var(--amber); }
 .q-head {
   width: 100%; border: 0; background: none; text-align: left; cursor: pointer;
-  display: flex; flex-direction: column; gap: 7px; padding: 12px;
-  font-family: inherit;
+  display: flex; flex-direction: column; gap: 7px; padding: 13px;
+  font-family: inherit; color: var(--ink);
 }
 .q-head-row {
   display: flex; align-items: center; gap: 8px; min-width: 0;
@@ -208,7 +304,8 @@ body {
 .q-num {
   flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 800; color: #fff; background: #5b6577;
+  font-size: 12px; font-weight: 700; color: #fff; background: #6d6a85;
+  font-family: var(--font-marker);
   white-space: nowrap; /* circle holds 1-3 digit numbers only, never wrap */
 }
 .q-item.correct .q-num { background: var(--green); }
@@ -218,8 +315,9 @@ body {
    flex-shrink:0 + nowrap + full padding keep it fully visible at 360px. */
 .q-code {
   flex-shrink: 0; white-space: nowrap;
-  font-size: 11px; font-weight: 800; letter-spacing: 0.04em;
-  color: var(--blue-700); background: var(--blue-100);
+  font-family: var(--font-marker);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--indigo-2); background: var(--blue-100);
   border-radius: 999px; padding: 4px 9px;
 }
 .q-sec { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; flex: 1 1 auto; min-width: 0; overflow-wrap: break-word; word-break: break-word; }
@@ -232,16 +330,14 @@ body {
 .q-item.skipped .q-status { color: var(--amber); background: var(--amber-bg); }
 .q-chev { color: var(--muted); transition: transform 0.2s; flex-shrink: 0; font-size: 14px; }
 .q-item.open .q-chev { transform: rotate(180deg); }
-/* Full question text in the header: wraps to as many lines as needed,
-   never truncated, the old 64-char cut is what produced the
-   "The badly researched…" / "A muscle cell is working hard, but it…" stubs. */
+/* Full question text in the header: wraps to as many lines as needed, never truncated. */
 .q-head-q {
-  margin: 0; font-size: 14px; font-weight: 600; color: var(--ink);
+  margin: 0; font-size: 14.5px; font-weight: 600; color: var(--ink);
   line-height: 1.5; white-space: normal; overflow-wrap: break-word; word-break: break-word;
 }
 .q-tap-hint { font-size: 12px; font-weight: 600; color: var(--muted); }
 .q-item.open .q-tap-hint { display: none; }
-.q-body { display: none; padding: 0 12px 12px; font-size: 13.5px; line-height: 1.6; }
+.q-body { display: none; padding: 0 13px 13px; font-size: 13.5px; line-height: 1.6; }
 .q-item.open .q-body { display: block; }
 .q-text { margin: 0 0 8px; color: var(--ink); }
 .q-passage {
@@ -250,8 +346,8 @@ body {
   font-size: 13.5px;
   line-height: 1.6;
   color: var(--ink);
-  background: #f4f1fa;
-  border-left: 4px solid #ff6f4f;
+  background: var(--tint);
+  border-left: 4px solid var(--coral);
   border-radius: 0 8px 8px 0;
   white-space: pre-wrap;
 }
@@ -260,13 +356,14 @@ body {
 .q-opts li b { color: var(--ink); }
 .q-opts li.is-correct { color: var(--green); font-weight: 700; }
 .q-opts li.is-correct b { color: var(--green); }
-.q-opts li.is-yours { text-decoration: underline; }
+.q-opts li.is-yours { text-decoration: underline; color: var(--ink); }
 .ans-line { margin: 6px 0; font-size: 13px; }
 .ans-line .you-wrong { color: var(--red); font-weight: 700; }
 .ans-line .you-right { color: var(--green); font-weight: 700; }
 .q-expl {
-  margin: 8px 0 0; background: var(--blue-50); border-left: 3px solid var(--blue-600);
-  padding: 8px 10px; border-radius: 0 8px 8px 0; font-size: 13px; color: var(--ink);
+  margin: 8px 0 0; background: var(--tint); border-left: 3px solid var(--indigo);
+  padding: 9px 11px; border-radius: 0 8px 8px 0; font-size: 13px; color: var(--ink);
+  line-height: 1.6;
 }
 
 /* ---- Actions ---- */
@@ -275,9 +372,9 @@ body {
   border: 0; border-radius: 12px; padding: 15px; font-size: 15px; font-weight: 700;
   cursor: pointer; width: 100%; font-family: inherit; min-height: 48px;
 }
-.btn-primary { background: var(--blue-700); color: #fff; box-shadow: var(--shadow); }
-.btn-primary:active { background: var(--blue-900); }
-.btn-ghost { background: #fff; color: var(--blue-700); border: 1px solid var(--line); }
+.btn-primary { background: var(--indigo); color: #fff; box-shadow: var(--shadow); }
+.btn-primary:active { background: var(--indigo-deep); }
+.btn-ghost { background: var(--card); color: var(--indigo-2); border: 1px solid var(--line-strong); }
 
 /* ---- Footer ---- */
 .foot {
@@ -285,51 +382,54 @@ body {
   padding-bottom: env(safe-area-inset-bottom, 0px); /* notch safe area */
 }
 .foot p { margin: 4px 0; }
+.foot a { color: var(--coral-dark); }
 .foot-small { font-size: 12px; }
 
 /* ---- Desktop ---- */
 @media (min-width: 600px) {
   .page { padding-top: 10px; }
-  .hero-copy h1 { font-size: 26px; }
+  .hero-copy h1 { font-size: 27px; }
 }
 
-/* ---- Reduced motion (A11Y K16) ---- */
+/* ---- Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
   .ring-fill, .sec-fill, .q-chev { transition: none; }
 }
 
 /* ============================================================
-   DARK MODE (prefers-color-scheme: dark), matches the landing
-   page's dark mode. Surfaces go dark; brand blues stay, with
-   lightened text where a dark blue was used as a text color.
+   DARK MODE (prefers-color-scheme: dark). Surfaces run on the
+   tokens, so the marked sheet stays readable end to end.
    ============================================================ */
 @media (prefers-color-scheme: dark) {
   :root {
+    --paper: #12112a;
+    --desk: #0a0919;
+    --card: #1e1c45;
     --ink: #edecf4;
     --muted: #a5a3bd;
     --line: #3a3768;
-    --blue-50: #141333;
-    --blue-100: #2e2b5c;
+    --line-strong: rgba(255, 255, 255, .32);
+    --coral-dark: #ff8a70;
     --green-bg: #14382a;
     --red-bg: #3d1a22;
     --amber-bg: #402416;
     --amber: #ffb59f;   /* light peach text on dark caution surfaces: on #402416 = 8.34:1 */
+    --track: #2e2b5c;
+    --tint: #232147;
+    --blue-50: #232147;
+    --blue-100: #2e2b5c;
     --grey-bg: #2e2b5c;
   }
-  body { background: #100f28; }
+  :focus-visible { outline-color: #ff8a70; }
   .q-item.skipped .q-num { background: #9a4a12; }   /* badge keeps the deep tone so its white numeral stays readable */
   .brand-name, .card-title, .hero-copy h1, .sec-pct, .sec-name, .score-pct,
   .improve-item strong, .q-head-q, .q-text { color: #edecf4; }
-  .back-link, .btn-ghost, .chip, .q-item, .q-empty, .card { background: #1e1c45; color: var(--ink); }
-  .back-link, .btn-ghost, .chip { color: #e6e2f4; }
+  .back-link, .btn-ghost, .chip { background: #1e1c45; color: #e6e2f4; }
   .chip.active { background: #3a3768; border-color: #3a3768; color: #fff; }
   .btn-primary { background: #3a3768; }
   .btn-primary:active { background: #4a4780; }
   .exam-status { background: #232147; }
-  .disclaimer, .improve-item, .q-expl { background: #232147; }
-  .sec-track { background: #2e2b5c; }
-  .q-passage { background: #232147; }
-  .q-code { color: #ffb59f; background: #2e2b5c; }
+  .q-code { color: #d8d4f0; background: #2e2b5c; }
   .q-opts li { color: var(--muted); }
   .q-opts li b { color: var(--ink); }
   .q-item.correct .q-status { color: #7ed9a8; background: #14382a; }
@@ -340,62 +440,8 @@ body {
   .ans-line .you-wrong { color: #f08ba0; }
   .improve-ok { background: #14382a; color: #7ed9a8; }
   .improve-item .chap { background: #1e1c45; color: #ffb59f; }
+  .improve-item.lessons-link a { color: #ffb59f; }
+  .benchmark-line { color: #f0cd7a; border-color: #5c3a26; }
+  .practice-badge { color: #f0cd7a; background: #402416; border-color: #5c3a26; }
   .foot a { color: #ffb59f; }
-}
-
-/* Civil Service results: 80.00 benchmark line + weak-section lessons link */
-.benchmark-line {
-  margin: 14px 0 0; padding: 12px 14px; border-radius: 12px;
-  background: #fdeee2; color: #5c430a; font-size: 14px; line-height: 1.55;
-  border: 1px solid #f0dcae;
-}
-.improve-item.lessons-link { font-size: 14px; }
-.improve-item.lessons-link a { font-weight: 700; }
-
-/* Contrast fixes (QA Nov 11, 2026): lessons link + practice badge in dark */
-.improve-item.lessons-link a { color: var(--blue-700); }
-@media (prefers-color-scheme: dark) {
-  .improve-item.lessons-link a { color: #ffb59f; }
-  .practice-badge { color: #f0cd7a; }
-}
-
-
-/* ============================================================
-   INDIGO/CORAL ALIGNMENT (Nov 15, 2026): token swap above plus
-   pinned on-white text (the light-mode variables flip in dark
-   mode, so on-white text colors must not track them).
-   ============================================================ */
-body { color: #1c1b2e; background: #f7f5f1; }
-.brand-name, .hero-copy h1, .card-title { font-family: Montserrat, Inter, sans-serif; }
-.brand-name, .card-title, .hero-copy h1, .score-pct, .sec-pct,
-.improve-item strong { color: #171638; }
-.chip, .btn-ghost, .improve-item.lessons-link a { color: #232147; }
-.q-code { color: #232147; }
-.chip.active { background: #171638; border-color: #171638; }
-.chip.active span { color: #d8d4f0; }
-.q-expl { border-left-color: #232147; }
-.q-passage { border-left-color: #ff6f4f; }
-.btn-primary { background: #232147; }
-.btn-primary:active { background: #171638; }
-.exam-status { background: #171638; }
-.skip-link { background: #171638; }
-@media (prefers-color-scheme: dark) {
-  body { background: #100f28; }
-  .back-link, .btn-ghost, .chip { color: #d8d4f0; }
-  .improve-item.lessons-link a { color: #ffb59f; }
-  .chip.active { background: #3a3768; border-color: #3a3768; }
-  .btn-primary { background: #3a3768; }
-  .btn-primary:active { background: #4a4780; }
-  .exam-status { background: #232147; }
-}
-
-/* DARK REPAIR (Nov 15, 2026): same unscoped pin-block issue as
-   exam-ui.css. The pinned headings and score figures sit on dark
-   cards in dark mode (#1e1c45), and inherited body text sat on
-   the dark page background. Restore the dark palette. */
-@media (prefers-color-scheme: dark) {
-  body { color: var(--ink); }
-  .brand-name, .card-title, .hero-copy h1, .score-pct, .sec-pct,
-  .improve-item strong { color: #edecf4; }
-  .q-code { color: #d8d4f0; }
 }

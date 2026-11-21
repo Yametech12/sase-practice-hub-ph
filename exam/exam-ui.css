@@ -1,32 +1,76 @@
 /* ============================================================
-   SASE Mock Exam Portal, exam-taking UI
-   Mobile-first (360px). Deep blue / white professional theme.
+   SASE / Civil Service Mock Exam Portal, exam-taking UI
+   Design system (Nov 21, 2026): the portal is the exam paper,
+   same tokens and self-hosted fonts as the landing pages
+   (landing.css). Paper sheet on a desk, ink and indigo type,
+   coral as the marking accent. Mobile-first, phone buyers first.
    ============================================================ */
+
+/* Self-hosted variable fonts (latin subset), display swap. */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url('/fonts/fraunces-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/inter-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/fonts/spacegrotesk-var.woff2') format('woff2');
+}
 
 :root {
   color-scheme: light dark;
+  /* Landing tokens */
+  --paper: #f7f5f1;
+  --desk: #e9e6de;
+  --card: #ffffff;
+  --ink: #1c1b2e;
+  --muted: #5d5b73;
+  --line: #e0dcd2;
+  --line-strong: #b9b4a6;
+  --indigo: #171638;
+  --indigo-2: #232147;
+  --indigo-deep: #100f28;
+  --peri: #a5a3d9;
+  --coral: #ff6f4f;
+  --coral-deep: #d64026;
+  --coral-dark: #b3321f;
+  --coral-tint: #ffe9e2;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-marker: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Portal semantic tokens */
+  --green: #0e6b44;   /* white on this = 6.55:1 */
+  --green-bg: #e4f5ea;
+  --red: #b52c42;     /* white on this = 6.17:1 */
+  --red-bg: #fdeaea;
+  --amber: #9a4a12;   /* on #fdeee2 = 5.50:1, on white = 6.25:1 */
+  --amber-bg: #fdeee2;
+  --amber-line: #f3c9a8;
+  --track: #ece9e0;   /* progress and timer tracks on white */
+  --tint: #f1efe9;    /* warm paper tint for inner surfaces */
+  /* Legacy aliases (older rules and the dark-contrast audit use these) */
   --blue-900: #171638;
   --blue-800: #232147;
   --blue-700: #2c2a5e;
   --blue-600: #232147;
   --blue-100: #e6e2f4;
-  --blue-50:  #f7f5f1;
-  --gold:     #ff6f4f;
-  --gold-soft:#fdeee2;
-  --violet:   #4a3f8c;
-  --ink:      #1c1b2e;
-  --muted:    #5d5b73;
-  --line:     #e6e2f4;
-  --green:    #0e6b44;   /* darkened: white on this = 6.55:1 (A11Y C3/C5a/C7) */
-  --green-bg: #e4f5ea;
-  --red:      #b52c42;   /* darkened: white on this = 6.17:1 (A11Y C4/C8) */
-  --red-bg:   #fdeaea;
-  --amber:    #9a4a12;   /* burnt orange, harmonized with coral: on #fdeee2 = 5.50:1, on white = 6.25:1 */
-  --amber-bg: #fdeee2;
-  --card:     #ffffff;
-  --radius:   14px;
-  --shadow:   0 6px 24px rgba(23, 22, 56, .10);
-  --font: Inter, "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --blue-50: #f1efe9;
+  --violet: #4a3f8c;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(23, 22, 56, .08);
+  --font: var(--font-body);
 }
 
 * { box-sizing: border-box; }
@@ -34,12 +78,14 @@ button, input { font-family: inherit; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: var(--font-body);
   color: var(--ink);
-  background: linear-gradient(180deg, var(--blue-50) 0%, #f7f5f1 320px);
+  background: var(--desk);
   min-height: 100vh;
   line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
+::selection { background: var(--coral); color: #17162e; }
 
 /* Visually hidden but announced to screen readers (timer thresholds, etc.) */
 .sr-only {
@@ -48,34 +94,36 @@ body {
   clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* Visible keyboard focus everywhere (A11Y K1) */
+/* Visible keyboard focus everywhere */
 :focus-visible {
-  outline: 3px solid var(--blue-600);
+  outline: 3px solid var(--coral-deep);
   outline-offset: 2px;
 }
 
 /* Skip link: visible only on keyboard focus */
 .skip-link {
   position: absolute; left: 12px; top: -100px; z-index: 200;
-  background: #171638; color: #fff; font-weight: 700; font-size: 14px;
+  background: var(--indigo); color: #fff; font-weight: 700; font-size: 14px;
   padding: 10px 16px; border-radius: 0 0 10px 10px; text-decoration: none;
 }
 .skip-link:focus { top: 0; }
 
 /* Sync-failure banner: warning styling, not a fatal error */
-#sync-warning { background: var(--amber-bg); border-color: #f3c9a8; margin-bottom: 12px; }
+#sync-warning { background: var(--amber-bg); border-color: var(--amber-line); margin-bottom: 12px; }
 #sync-warning[hidden] { display: none; }
-/* The logout button is a .back-link (display: inline-flex), which overrides
-   the hidden attribute. It must stay hidden until a session exists. */
+/* The logout and switch controls are .back-link (display: inline-flex),
+   which overrides the hidden attribute. They must stay hidden until a
+   session exists. */
 #exam-logout[hidden] { display: none; }
+#portal-switch[hidden] { display: none; }
 
-/* ---------- brand bar ---------- */
+/* ---------- brand bar: the printed header of the sheet ---------- */
 .brandbar {
-  background: linear-gradient(135deg, var(--blue-900), #322a6e);
+  background: var(--indigo-deep);
   color: #fff;
   position: sticky; top: 0; z-index: 50;
-  box-shadow: 0 2px 12px rgba(23,22,56,.25);
-  padding-top: env(safe-area-inset-top, 0px); /* MOBILE F4: notch safe area */
+  border-bottom: 2px solid var(--coral);
+  padding-top: env(safe-area-inset-top, 0px); /* notch safe area */
 }
 /* Focus ring must also read on the dark brand bar (white outline there). */
 .brandbar :focus-visible { outline-color: #fff; }
@@ -85,320 +133,538 @@ body {
   display: flex; align-items: center; justify-content: space-between;
   gap: 8px; flex-wrap: nowrap;
 }
-.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; min-width: 0; }
-.brand-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.brand-mark { font-size: 20px; }
+.brand { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 15px; min-width: 0; }
+.brand-name {
+  font-family: var(--font-display); font-weight: 600; font-size: 16px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* The mark is a filled answer bubble on a coral tile. The emoji glyph in
+   the markup is hidden (aria-hidden there too); the bubble is the brand. */
+.brand-mark {
+  flex: 0 0 30px; width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: 9px; background: var(--coral);
+  font-size: 0;
+}
+.brand-mark::after {
+  content: ""; width: 13px; height: 13px; border-radius: 50%;
+  background: #fff;
+}
 .practice-badge {
-  font-size: 10px; font-weight: 800; letter-spacing: 1.5px;
-  background: var(--gold); color: var(--blue-900);
-  padding: 5px 10px; border-radius: 999px;
+  font-family: var(--font-marker);
+  font-size: 10px; font-weight: 700; letter-spacing: 1.6px;
+  background: var(--coral); color: var(--indigo-deep);
+  padding: 5px 9px; border-radius: 6px; white-space: nowrap;
 }
 .back-link {
   display: inline-flex; align-items: center; gap: 4px;
   color: #fff; text-decoration: none; font-size: 13px; font-weight: 600;
-  background: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.10);
   border: 1px solid rgba(255,255,255,.28);
   padding: 10px 14px; border-radius: 999px; white-space: nowrap;
   min-height: 44px; /* 44px touch target */
+  cursor: pointer; font-family: var(--font-body);
 }
-.back-link:hover, .back-link:focus-visible { background: rgba(255,255,255,.26); }
+.back-link:hover, .back-link:focus-visible { background: rgba(255,255,255,.24); }
 @media (max-width: 420px) {
   .brandbar-inner { gap: 8px; }
-  .brand-name { font-size: 13px; }
+  .brand-name { font-size: 14px; }
   .back-link { padding: 10px 12px; font-size: 12px; min-height: 44px; }
   .practice-badge { display: none; } /* badge is decorative; brand + back-link matter */
 }
 
-/* ---------- layout ---------- */
-.app { max-width: 720px; margin: 0 auto; padding: 16px 16px 48px; }
+/* ---------- layout: one paper sheet on the desk ---------- */
+.app {
+  max-width: 720px; margin: 0 auto;
+  padding: 16px 16px 48px;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--line);
+  min-height: calc(100vh - 70px);
+  min-height: calc(100dvh - 70px);
+  position: relative;
+}
+@media (min-width: 760px) {
+  .app { box-shadow: 0 0 0 1px var(--line), 0 24px 60px rgba(10, 9, 30, .14); }
+}
 .screen { display: none; }
 .screen.active { display: block; animation: fadein .25s ease; }
 @keyframes fadein { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: none;} }
-/* Exam screen exception (Nov 12, 2026): question and option text must
-   never fade through unreadable opacity, so this screen's enter
-   animation moves transform only. Other screens keep the fade. */
+/* Exam screen exception: question and option text must never fade
+   through unreadable opacity, so this screen's enter animation moves
+   transform only. Other screens keep the fade. */
 #screen-exam.screen.active { animation: screenin .25s ease; }
 @keyframes screenin { from { transform: translateY(6px); } to { transform: none; } }
 
 /* ---------- gate screen ---------- */
-.gate-hero { text-align: center; padding: 18px 8px 6px; }
-.gate-hero h1 { margin: 0 0 6px; font-size: 26px; color: var(--blue-900); letter-spacing: -.3px; }
-.subtitle { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.gate-hero { padding: 22px 4px 4px; }
+.gate-kicker {
+  margin: 0 0 8px;
+  font-family: var(--font-marker); font-size: 11.5px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--coral-dark);
+}
+.gate-hero h1 {
+  margin: 0 0 8px;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 32px; line-height: 1.12; letter-spacing: -.01em;
+  color: var(--indigo);
+}
+.subtitle { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; }
 .disclaimer-line {
-  display: inline-block; font-size: 12px; color: var(--muted);
-  background: var(--amber-bg); border: 1px solid #f3c9a8;
-  padding: 8px 12px; border-radius: 10px; margin: 0;
+  display: block; font-size: 12.5px; color: var(--amber);
+  background: var(--amber-bg); border: 1px solid var(--amber-line);
+  padding: 9px 13px; border-radius: 10px; margin: 0;
+  line-height: 1.5;
 }
 
 .gate-card {
-  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 20px 18px; margin: 18px 0;
 }
-.field-label { font-weight: 700; font-size: 15px; display: block; }
+.field-label {
+  font-family: var(--font-marker); font-weight: 600; font-size: 14.5px;
+  letter-spacing: .02em; display: block;
+}
 .field-hint { margin: 4px 0 12px; font-size: 13px; color: var(--muted); }
 .gate-row { display: flex; gap: 10px; }
 .gate-row input {
   flex: 1; min-width: 0;
-  font-size: 16px; padding: 12px 14px;
-  border: 2px solid var(--line); border-radius: 10px;
+  font-size: 16px; padding: 13px 14px; min-height: 52px;
+  border: 2px solid var(--line-strong); border-radius: 12px;
+  background: #fff; color: var(--ink);
 }
-.gate-row input:focus { outline: none; border-color: var(--blue-600); box-shadow: 0 0 0 3px var(--blue-100); }
-.form-error { color: var(--red); font-size: 13px; margin: 10px 0 0; background: var(--red-bg); padding: 8px 12px; border-radius: 8px; }
-.gate-note { font-size: 12px; color: var(--muted); margin: 12px 0 0; }
-
-/* ---------- exam cards ---------- */
-.section-title { font-size: 18px; color: var(--blue-900); margin: 8px 0 2px; }
-.section-sub { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
-.exam-list { display: grid; gap: 12px; }
-.exam-card {
-  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: 16px; display: flex; gap: 14px; align-items: center;
-  border: 2px solid transparent; flex-wrap: wrap;
-}
-.exam-card .btn { flex-shrink: 0; white-space: nowrap; }
+.gate-row input:focus { outline: none; border-color: var(--coral-deep); box-shadow: 0 0 0 3px var(--coral-tint); }
+.gate-row input::placeholder { color: #8f8db0; }
+.form-error { color: var(--red); font-size: 13px; margin: 10px 0 0; background: var(--red-bg); padding: 9px 12px; border-radius: 10px; line-height: 1.5; }
+.gate-note { font-size: 12.5px; color: var(--muted); margin: 12px 0 0; line-height: 1.55; }
 @media (max-width: 420px) {
-  .exam-card { flex-direction: column; align-items: stretch; }
-  .exam-card .btn { width: 100%; }
+  .gate-row { flex-direction: column; }
+  .gate-row .btn { width: 100%; }
 }
-.exam-card .exam-num {
-  flex: 0 0 52px; height: 52px; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 800; color: #fff;
-  background: linear-gradient(135deg, var(--blue-700), var(--violet));
-}
-.exam-card .exam-body { flex: 1; min-width: 0; }
-.exam-card h3 { margin: 0 0 2px; font-size: 16px; }
-.exam-meta { margin: 0; font-size: 13px; color: var(--muted); }
-.exam-status {
-  display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .6px;
-  padding: 4px 10px; border-radius: 999px; margin-top: 6px; text-transform: uppercase;
-}
-.status-available { background: var(--green-bg); color: var(--green); }
-.status-done      { background: var(--blue-100); color: var(--blue-700); }
-.status-locked    { background: #ede9f7; color: var(--muted); }
-.status-inprogress { background: var(--amber-bg); color: var(--amber); }
-.exam-card.is-done { border-color: var(--blue-100); }
-.exam-card.is-locked { opacity: .75; }
-.exam-card.is-locked .exam-num { background: #5d5b73; } /* white on this = 5.35:1 */
-.exam-score { font-size: 13px; color: var(--blue-700); font-weight: 700; margin: 4px 0 0; }
-.exam-breakdown { font-size: 12px; color: var(--muted); margin: 4px 0 0; line-height: 1.45; }
-/* Rotating card accents: scanning aid only, no meaning per exam */
-.exam-card.accent-0 { border-left: 6px solid var(--blue-700); }
-.exam-card.accent-1 { border-left: 6px solid var(--green); }
-.exam-card.accent-1 .exam-num { background: linear-gradient(135deg, #0e6b44, #12805a); }
-.exam-card.accent-2 { border-left: 6px solid var(--gold); }
-.exam-card.accent-2 .exam-num { background: linear-gradient(135deg, #9a4a12, #b3541a); }
-
-/* ---------- exam list loading state ---------- */
-.exam-list-loading { text-align: center; padding: 8px 0 4px; }
-.exam-list-loading[hidden] { display: none; }
-.exam-list-loading p { margin: 0 0 12px; font-size: 14px; font-weight: 700; color: var(--blue-900); }
-.exam-list-loading .spinner { margin-bottom: 10px; }
-.exam-skeleton-list { display: grid; gap: 12px; text-align: left; }
-.skeleton-card {
-  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 16px; display: flex; gap: 14px; align-items: center;
-}
-.skel-num { flex: 0 0 52px; height: 52px; border-radius: 12px; background: var(--blue-100); animation: skeletonPulse 1.2s ease-in-out infinite alternate; }
-.skel-lines { flex: 1; display: grid; gap: 8px; }
-.skel-line { display: block; height: 12px; width: 55%; border-radius: 6px; background: var(--blue-100); animation: skeletonPulse 1.2s ease-in-out infinite alternate; }
-.skel-line-wide { width: 85%; height: 16px; }
-@keyframes skeletonPulse { from { opacity: .55; } to { opacity: 1; } }
 
 /* ---------- buttons ---------- */
 .btn {
-  font-family: var(--font); font-size: 15px; font-weight: 700;
-  border: none; border-radius: 10px; padding: 12px 18px; cursor: pointer;
+  font-family: var(--font-body); font-size: 15px; font-weight: 700;
+  border: none; border-radius: 12px; padding: 12px 18px; cursor: pointer;
   transition: transform .06s ease, box-shadow .15s ease, background .15s ease;
   min-height: 48px; /* touch target */
 }
 .btn:active { transform: scale(.98); }
-.btn-primary { background: linear-gradient(135deg, var(--blue-700), var(--violet)); color: #fff; box-shadow: 0 4px 14px rgba(23,22,56,.35); }
+.btn-primary { background: var(--indigo); color: #fff; box-shadow: 0 4px 14px rgba(23,22,56,.28); }
+.btn-primary:hover { background: var(--indigo-2); }
 .btn-primary:disabled { opacity: .55; box-shadow: none; cursor: wait; }
-.btn-secondary { background: #ede9f7; color: var(--blue-800); }
-.btn-ghost { background: transparent; color: var(--blue-700); padding: 8px 12px; min-height: 44px; } /* MOBILE F3 */
-.btn-submit { background: linear-gradient(135deg, #157347, var(--green)); color: #fff; box-shadow: 0 4px 14px rgba(14,107,68,.35); }
+.btn-resume { background: var(--coral-deep); color: #fff; box-shadow: 0 4px 14px rgba(214,64,38,.30); }
+.btn-resume:hover { background: var(--coral-dark); }
+.btn-secondary { background: #fff; color: var(--indigo); border: 1px solid var(--line-strong); }
+.btn-ghost { background: transparent; color: var(--indigo-2); padding: 8px 12px; min-height: 44px; }
+.btn-submit { background: var(--green); color: #fff; box-shadow: 0 4px 14px rgba(14,107,68,.30); }
 .btn-block { width: 100%; }
 
 /* ---------- inline error cards (replace alert()) ---------- */
 .error-card {
-  background: var(--red-bg); border: 1px solid #f3c2c7; border-radius: var(--radius);
+  background: var(--red-bg); border: 1px solid #f3c2c7; border-radius: 14px;
   padding: 14px 16px; margin: 0 0 14px; font-size: 14px; color: var(--ink);
+  line-height: 1.55;
 }
 .error-card[hidden] { display: none; }
 .error-card p { margin: 0 0 10px; }
 .error-card .btn { min-height: 44px; }
 
+/* ---------- section tabs (gate track toggle + signed-in sections) ---- */
+.home-tabs { display: flex; gap: 8px; margin: 22px 0 4px; }
+.home-tabs[hidden] { display: none; }
+.gate-track-tabs {
+  margin: 0 0 18px; padding-bottom: 16px;
+  border-bottom: 3px double var(--line-strong);
+}
+.gate-track-tabs .home-tab { flex: 1; }
+.home-tab {
+  flex: 1; padding: 12px 10px; border-radius: 10px; cursor: pointer;
+  border: 1px solid var(--line); background: transparent; color: var(--muted);
+  font-family: var(--font-marker); font-weight: 600; font-size: 14px;
+  letter-spacing: .02em; min-height: 48px;
+}
+.home-tab.active { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+
+/* ---------- exam list: the mock exam schedule ---------- */
+.section-title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 23px; color: var(--indigo); margin: 20px 0 4px;
+  padding-bottom: 9px; border-bottom: 3px double var(--line-strong);
+}
+.section-sub { font-size: 13.5px; color: var(--muted); margin: 10px 0 14px; line-height: 1.55; }
+.exam-list { display: grid; gap: 12px; }
+.exam-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 16px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.exam-card .btn { flex-shrink: 0; white-space: nowrap; }
+.exam-card:not(.is-locked):not(.is-done):hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(23,22,56,.13); }
+@media (max-width: 420px) {
+  .exam-card { flex-direction: column; align-items: stretch; }
+  .exam-card .btn { width: 100%; }
+}
+.exam-card .exam-num {
+  flex: 0 0 54px; height: 54px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 23px; font-weight: 700;
+  color: var(--indigo); background: var(--paper);
+  border: 2px solid var(--indigo);
+}
+.exam-card.is-done .exam-num { background: var(--indigo); color: #fff; }
+.exam-card.is-locked { opacity: .72; }
+.exam-card.is-locked .exam-num { border-color: var(--line-strong); color: var(--muted); background: transparent; }
+.exam-card .exam-body { flex: 1; min-width: 0; }
+.exam-card h3 { margin: 0 0 2px; font-size: 18px; font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+.exam-meta { margin: 0; font-size: 13px; color: var(--muted); }
+.exam-status {
+  display: inline-block; font-family: var(--font-marker);
+  font-size: 10.5px; font-weight: 700; letter-spacing: .09em;
+  padding: 4px 9px; border-radius: 6px; margin-top: 7px; text-transform: uppercase;
+}
+.status-available { background: var(--green-bg); color: var(--green); }
+.status-done      { background: var(--blue-100); color: var(--blue-700); }
+.status-locked    { background: var(--tint); color: var(--muted); }
+.status-inprogress { background: var(--amber-bg); color: var(--amber); }
+.exam-score { font-size: 14.5px; color: var(--indigo); font-weight: 700; margin: 4px 0 0; font-family: var(--font-display); }
+.exam-breakdown { font-size: 12.5px; color: var(--muted); margin: 4px 0 0; line-height: 1.5; }
+
+/* ---------- exam list loading state ---------- */
+.exam-list-loading { text-align: center; padding: 8px 0 4px; }
+.exam-list-loading[hidden] { display: none; }
+.exam-list-loading p { margin: 0 0 12px; font-size: 14px; font-weight: 700; color: var(--indigo); }
+.exam-list-loading .spinner { margin-bottom: 10px; }
+.exam-skeleton-list { display: grid; gap: 12px; text-align: left; }
+.skeleton-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 16px; display: flex; gap: 14px; align-items: center;
+}
+.skel-num { flex: 0 0 54px; height: 54px; border-radius: 12px; background: var(--tint); animation: skeletonPulse 1.2s ease-in-out infinite alternate; }
+.skel-lines { flex: 1; display: grid; gap: 8px; }
+.skel-line { display: block; height: 12px; width: 55%; border-radius: 6px; background: var(--tint); animation: skeletonPulse 1.2s ease-in-out infinite alternate; }
+.skel-line-wide { width: 85%; height: 16px; }
+@keyframes skeletonPulse { from { opacity: .55; } to { opacity: 1; } }
+
+/* ---------- instructions screen: the front page of the test ---------- */
+.instr-card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 20px; box-shadow: var(--shadow);
+  padding: 20px 18px 22px; margin-top: 6px;
+}
+.instr-back { padding-left: 0; margin-bottom: 4px; }
+.instr-kicker {
+  display: inline-block; margin: 0 0 8px;
+  font-family: var(--font-marker); font-size: 11px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--coral-dark); background: var(--coral-tint);
+  padding: 5px 10px; border-radius: 6px;
+}
+.instr-title {
+  margin: 0 0 6px; font-size: 28px; font-weight: 600; line-height: 1.15;
+  letter-spacing: -.01em; color: var(--indigo); outline: none;
+  font-family: var(--font-display);
+}
+.instr-lead { margin: 0 0 16px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.instr-lead strong { color: var(--ink); }
+.instr-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 6px; }
+.instr-fact {
+  text-align: center; padding: 13px 6px 11px; border-radius: 14px;
+  background: var(--paper); border: 1px solid var(--line);
+}
+.instr-fact strong {
+  display: block; font-size: 23px; font-weight: 700; line-height: 1.1;
+  color: var(--indigo); font-family: var(--font-display);
+}
+.instr-fact span {
+  font-family: var(--font-marker); font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+.instr-h {
+  margin: 20px 0 6px; font-size: 16px; font-weight: 600; color: var(--indigo);
+  font-family: var(--font-display);
+  padding-bottom: 7px; border-bottom: 3px double var(--line-strong);
+}
+/* Contents rows with dotted leaders, like the landing contents page. */
+.instr-sections { list-style: none; margin: 0; padding: 0; }
+.instr-sections li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 10px 2px; border-bottom: 1px dotted var(--line-strong);
+  font-size: 14.5px; font-weight: 600;
+}
+.instr-sections li:last-child { border-bottom: none; }
+.instr-sections b {
+  color: var(--indigo); font-family: var(--font-marker); font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.instr-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 11px; }
+.instr-steps li {
+  counter-increment: step; position: relative;
+  padding-left: 38px; font-size: 14.5px; line-height: 1.55; color: var(--ink);
+}
+.instr-steps li::before {
+  content: counter(step); position: absolute; left: 0; top: 0;
+  width: 26px; height: 26px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--indigo); color: #fff;
+  font-family: var(--font-marker); font-size: 13px; font-weight: 700;
+}
+.instr-note {
+  margin: 16px 0; padding: 11px 13px; border-radius: 12px;
+  background: var(--amber-bg); color: var(--amber); font-size: 13px; line-height: 1.55;
+}
+.instr-check {
+  display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+  padding: 13px; margin-bottom: 12px; border: 2px solid var(--line);
+  border-radius: 14px; font-size: 14.5px; font-weight: 600; line-height: 1.5;
+}
+.instr-check:has(input:checked) { border-color: var(--indigo); background: var(--paper); }
+.instr-check input { width: 22px; height: 22px; flex: 0 0 22px; margin: 0; accent-color: var(--indigo); }
+#instr-start:disabled { opacity: .5; box-shadow: none; cursor: not-allowed; }
+@media (min-width: 560px) { .instr-card { padding: 28px 30px 30px; } .instr-title { font-size: 31px; } }
+
+/* ============================================================
+   EXAM SCREEN: no-scroll app-like layout. Timer / progress /
+   answer sheet / pinned nav.
+   ============================================================ */
+#screen-exam.active {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 70px);
+  min-height: calc(100dvh - 70px);
+}
+.app:has(#screen-exam.active) { padding-bottom: 6px; }
+
 /* ---------- resume banner ---------- */
 .resume-banner {
   display: flex; gap: 12px; align-items: center;
-  background: var(--gold-soft); border: 1px solid #f3c9a8;
-  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px;
-  font-size: 14px;
+  background: var(--amber-bg); border: 1px solid var(--amber-line);
+  border-radius: 14px; padding: 12px 14px; margin-bottom: 12px;
+  font-size: 14px; color: var(--ink); line-height: 1.5;
 }
 /* The [hidden] attribute must win over the flex layout above, otherwise the
-   banner (with its hardcoded placeholder time) stays visible on fresh starts. */
+   banner (with its placeholder time) stays visible on fresh starts. */
 .resume-banner[hidden] { display: none; }
 .resume-icon { font-size: 22px; }
 .resume-banner span#resume-remaining { display: block; color: var(--amber); font-weight: 700; }
 
-/* ---------- timer (sticky under the sticky brandbar, MOBILE F1) ---------- */
+/* ---------- timer: the proctor strip, sticky under the brand bar ---------- */
 .timer-block {
-  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: 12px 16px; margin-bottom: 12px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 11px 15px; margin-bottom: 9px;
   position: sticky;
-  top: calc(env(safe-area-inset-top, 0px) + 68px);
+  top: calc(env(safe-area-inset-top, 0px) + 70px);
   z-index: 40;
 }
-.timer-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
-.timer-label { font-size: 13px; color: var(--muted); font-weight: 600; }
-.timer-text { font-size: 22px; font-weight: 800; color: var(--blue-900); font-variant-numeric: tabular-nums; }
+.timer-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+.timer-label {
+  font-family: var(--font-marker); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+}
+.timer-text {
+  font-family: var(--font-marker); font-size: 23px; font-weight: 700;
+  color: var(--indigo); font-variant-numeric: tabular-nums; line-height: 1;
+}
 .timer-text.danger { color: var(--red); }
-.timer-track { height: 8px; background: #ede9f7; border-radius: 999px; overflow: hidden; }
+.timer-track { height: 6px; background: var(--track); border-radius: 999px; overflow: hidden; }
 .timer-fill {
   height: 100%; border-radius: 999px;
-  background: linear-gradient(90deg, var(--blue-600), var(--violet));
-  transform: scaleX(1); transform-origin: left; /* PERF F-4: compositor-only */
+  background: var(--coral-deep);
+  transform: scaleX(1); transform-origin: left; /* compositor-only */
   transition: transform 1s linear, background .3s ease;
 }
-.timer-fill.danger { background: linear-gradient(90deg, #c9405a, var(--red)); }
+.timer-fill.danger { background: var(--red); }
 
 /* ---------- progress ---------- */
-.progress-row { display: flex; justify-content: space-between; align-items: center; margin: 2px 0 6px; }
-.progress-text { font-size: 14px; font-weight: 700; color: var(--blue-900); }
-.progress-track { height: 6px; background: #ede9f7; border-radius: 999px; overflow: hidden; margin-bottom: 14px; }
+.progress-row { display: flex; justify-content: space-between; align-items: center; margin: 0 0 5px; }
+.progress-text {
+  font-family: var(--font-marker); font-size: 13px; font-weight: 600;
+  color: var(--indigo); letter-spacing: .01em;
+}
+#grid-toggle { border: 1px solid var(--line-strong); border-radius: 999px; color: var(--indigo); font-weight: 700; }
+.progress-track { height: 5px; background: var(--track); border-radius: 999px; overflow: hidden; margin-bottom: 11px; }
 .progress-fill {
-  height: 100%; border-radius: 999px; background: linear-gradient(90deg, #d64026, #e04e2e); /* deep coral stops: 3.8:1 and 3.3:1 on the #ede9f7 track */
-  transform: scaleX(0); transform-origin: left; /* PERF F-4: compositor-only */
+  height: 100%; border-radius: 999px; background: var(--indigo);
+  transform: scaleX(0); transform-origin: left; /* compositor-only */
   transition: transform .2s ease;
 }
 
-/* ---------- question card ---------- */
+/* ---------- the answer sheet ---------- */
 .qcard {
-  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: 20px 18px; margin-bottom: 14px;
+  background: var(--card); border: 1px solid var(--line);
+  border-left: 3px solid var(--coral);
+  border-radius: 16px; box-shadow: var(--shadow);
+  padding: 18px 17px 16px; margin-bottom: 10px;
+  flex: 1 0 auto;
   /* Anti-copy: questions & choices can't be selected/copied during the exam (practice integrity). */
   user-select: none; -webkit-user-select: none;
 }
-.qcard-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.qcard-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; }
 .q-section {
-  font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--blue-700); background: var(--blue-100); padding: 4px 10px; border-radius: 999px;
+  font-family: var(--font-marker);
+  font-size: 11px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase;
+  color: var(--coral-dark); background: var(--coral-tint);
+  padding: 5px 10px; border-radius: 6px;
 }
-.subject-chip { border: 1px solid var(--blue-100); box-shadow: inset 0 0 0 1px rgba(214,64,38,.08); }
 .subject-chip[hidden] { display: none; }
 .flag-btn {
-  background: transparent; border: 1px solid var(--line); border-radius: 999px;
-  padding: 6px 12px; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer;
-  min-height: 44px; /* MOBILE F3 */
-  font-family: var(--font);
+  background: transparent; border: 1px solid var(--line-strong); border-radius: 999px;
+  padding: 6px 13px; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer;
+  min-height: 44px; /* touch target */
+  font-family: var(--font-body);
 }
-.flag-btn[aria-pressed="true"] { background: var(--amber-bg); border-color: #f3c9a8; color: var(--amber); }
-.q-number { margin: 0 0 6px; font-size: 14px; color: var(--muted); font-weight: 600; }
-.q-text { margin: 0 0 16px; font-size: 17px; font-weight: 600; color: var(--ink); overflow-wrap: break-word; }
+.flag-btn[aria-pressed="true"] { background: var(--amber-bg); border-color: var(--amber-line); color: var(--amber); }
+.q-number {
+  margin: 0 0 8px;
+  font-family: var(--font-marker); font-size: 12px; font-weight: 700;
+  letter-spacing: 1.6px; text-transform: uppercase; color: var(--coral-dark);
+}
+.q-text { margin: 0 0 15px; font-size: 17.5px; font-weight: 600; line-height: 1.55; color: var(--ink); overflow-wrap: break-word; }
 .q-passage {
-  margin: 0 0 14px;
+  margin: 0 0 13px;
   padding: 12px 14px;
   font-size: 14.5px;
   line-height: 1.65;
   color: var(--ink);
-  background: var(--paper, #f4f1fa);
-  border-left: 4px solid var(--brand, #ff6f4f);
-  border-radius: 0 8px 8px 0;
+  background: #f4f1ea;
+  border-left: 4px solid var(--coral);
+  border-radius: 0 10px 10px 0;
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }
 
-/* options */
-.options { display: grid; gap: 10px; }
+/* question-change enter animation (re-triggered from JS).
+   Transform only: an opacity start renders the question and options
+   pale on every question change. */
+@keyframes qEnter {
+  from { transform: translateY(10px); }
+  to   { transform: none; }
+}
+.qcard.q-enter { animation: qEnter .28s ease; }
+
+/* ---------- options: bubble-sheet rows ---------- */
+.options { display: grid; gap: 9px; }
 .option {
-  display: flex; gap: 12px; align-items: flex-start; text-align: left;
-  background: #faf8fd; border: 2px solid var(--line); border-radius: 12px;
-  padding: 13px 14px; font-size: 15px; cursor: pointer; font-family: var(--font);
-  min-height: 56px; transition: border-color .12s ease, background .12s ease;
+  display: flex; gap: 12px; align-items: center; text-align: left; width: 100%;
+  background: #fff; border: 2px solid var(--line); border-radius: 14px;
+  padding: 12px 14px; font-size: 15.5px; line-height: 1.45; cursor: pointer;
+  font-family: var(--font-body); color: var(--ink);
+  min-height: 56px;
+  box-shadow: 0 1px 2px rgba(23,22,56,.05);
+  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease, transform .1s ease;
   overflow-wrap: break-word;
 }
-.option:hover { border-color: var(--blue-600); }
-.option .opt-letter {
-  flex: 0 0 30px; height: 30px; border-radius: 50%;
-  background: #fff; border: 2px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 14px; color: var(--blue-700);
+@media (hover: hover) {
+  .option:hover { border-color: var(--indigo); box-shadow: 0 4px 12px rgba(23,22,56,.10); }
 }
-.option.selected { border-color: var(--blue-600); background: var(--blue-50); }
-.option.selected .opt-letter { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
+.option:active { transform: scale(.99); }
+.option .opt-letter {
+  flex: 0 0 32px; height: 32px; border-radius: 50%;
+  background: transparent; border: 2px solid var(--line-strong);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-marker); font-weight: 700; font-size: 14px; color: var(--indigo);
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.option .opt-check {
+  margin-left: auto; flex: 0 0 24px; height: 24px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800; line-height: 1;
+  color: transparent; background: transparent;
+  border: 2px solid var(--line);
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+.option.selected { border-color: var(--indigo); background: #f6f4ee; }
+.option.selected .opt-letter { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+.option.selected .opt-check { background: var(--green); border-color: var(--green); color: #fff; }
 
-/* ---------- exam nav ---------- */
-.exam-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; }
-.exam-nav .btn { padding: 12px 8px; font-size: 14px; }
-
-/* Subtle give-up text button near the nav */
+/* ---------- pinned bottom nav ---------- */
+.exam-nav {
+  position: sticky; bottom: 0; z-index: 30;
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 9px;
+  margin: 6px -16px 0;
+  padding: 11px 16px calc(11px + env(safe-area-inset-bottom, 0px));
+  background: rgba(247,245,241,.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top: 3px double var(--line-strong);
+}
+.exam-nav .btn { border-radius: 14px; min-height: 50px; padding: 12px 8px; font-size: 14.5px; }
 .forfeit-btn {
   display: block; margin: 2px auto 0;
   background: none; border: none; cursor: pointer;
-  color: var(--muted); font-size: 13px; font-family: var(--font);
+  color: var(--muted); font-size: 13px; font-family: var(--font-body);
   text-decoration: underline; text-underline-offset: 3px;
   min-height: 44px; padding: 8px 12px;
 }
 .forfeit-btn:hover { color: var(--red); }
 
-/* ---------- grid navigator drawer ---------- */
+/* ---------- grid navigator drawer: the bubble sheet overview ---------- */
 .grid-overlay {
   position: fixed; inset: 0; z-index: 100;
-  background: rgba(23, 22, 56, .55);
+  background: rgba(16, 15, 40, .55);
   display: flex; align-items: flex-end; justify-content: center;
 }
 .grid-overlay[hidden] { display: none; }
 .grid-panel {
-  background: #fff; width: 100%; max-width: 720px;
+  background: var(--paper); width: 100%; max-width: 720px;
   max-height: 82vh; overflow-y: auto;
   border-radius: 18px 18px 0 0; padding: 18px 16px calc(24px + env(safe-area-inset-bottom, 0px));
   animation: slideup .22s ease;
 }
 @keyframes slideup { from { transform: translateY(30px); opacity: .6;} to { transform: none; opacity: 1;} }
 .grid-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-.grid-head h3 { margin: 0; font-size: 17px; color: var(--blue-900); }
-.grid-legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); margin-bottom: 12px; }
-.dot { display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 4px; vertical-align: -1px; }
-.dot-answered { background: var(--blue-600); }
-.dot-flagged  { background: var(--gold); }
-.dot-current   { background: #fff; border: 2px solid var(--blue-700); }
-.dot-empty     { background: #ede9f7; }
+.grid-head h3 { margin: 0; font-size: 20px; font-family: var(--font-display); font-weight: 600; color: var(--indigo); }
+.grid-legend {
+  display: flex; flex-wrap: wrap; gap: 8px 14px;
+  font-family: var(--font-marker); font-size: 11.5px; font-weight: 600;
+  color: var(--muted); margin-bottom: 12px;
+}
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 5px; vertical-align: -1px; }
+.dot-answered { background: var(--indigo); }
+.dot-flagged  { background: var(--coral); }
+.dot-current   { background: #fff; border: 2px solid var(--coral-deep); }
+.dot-empty     { background: #fff; border: 1.5px solid var(--line-strong); }
 .grid-filter { margin-bottom: 12px; }
 .grid-filter-label {
   display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
-  font-size: 13px; font-weight: 700; color: var(--blue-900);
-  padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px;
-  min-height: 44px;
+  font-size: 13px; font-weight: 700; color: var(--indigo);
+  padding: 8px 13px; border: 1px solid var(--line-strong); border-radius: 999px;
+  min-height: 44px; background: var(--card);
 }
-.grid-filter-label input { width: 18px; height: 18px; margin: 0; accent-color: var(--blue-600); }
+.grid-filter-label input { width: 18px; height: 18px; margin: 0; accent-color: var(--indigo); }
 .grid-cell.is-filtered-out { display: none; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 8px; margin-bottom: 16px; }
 .grid-cell {
-  height: 44px; border-radius: 8px; border: 1px solid var(--line);
-  background: #f4f1fa; font-weight: 700; font-size: 14px; color: var(--muted);
-  cursor: pointer; position: relative;
+  height: 44px; border-radius: 10px; border: 1.5px solid var(--line-strong);
+  background: #fff; font-family: var(--font-marker); font-weight: 600; font-size: 14px;
+  color: var(--muted); cursor: pointer; position: relative;
 }
-.grid-cell.answered { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
-.grid-cell.current { border: 2px solid var(--blue-700); color: var(--blue-700); }
-.grid-cell .flag-mark { position: absolute; top: -7px; right: -4px; font-size: 13px; }
+.grid-cell.answered { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+.grid-cell.current { border: 2.5px solid var(--coral-deep); color: var(--coral-dark); background: #fff; }
+.grid-cell.answered.current { background: var(--indigo); color: #fff; box-shadow: 0 0 0 2px var(--paper), 0 0 0 4.5px var(--coral-deep); }
+.grid-cell .flag-mark { position: absolute; top: -7px; right: -4px; font-size: 13px; color: var(--coral-deep); }
 
 /* ---------- confirm modal ---------- */
+#confirm-overlay, #forfeit-overlay { align-items: center; padding: 24px; }
 .confirm-panel {
-  background: #fff; width: calc(100% - 48px); max-width: 440px;
-  border-radius: 18px; padding: 24px 20px; text-align: center;
+  background: var(--card); width: calc(100% - 48px); max-width: 440px;
+  border: 1px solid var(--line); border-radius: 18px; padding: 24px 20px;
+  text-align: center; box-shadow: var(--shadow);
   animation: slideup .22s ease;
 }
-.confirm-panel h3 { margin: 0 0 8px; color: var(--blue-900); }
-.confirm-panel p { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
-.confirm-warn { background: var(--amber-bg); border-radius: 8px; padding: 8px 12px !important; }
+.confirm-panel h3 { margin: 0 0 8px; color: var(--indigo); font-family: var(--font-display); font-weight: 600; font-size: 22px; }
+.confirm-panel p { font-size: 14px; color: var(--muted); margin: 0 0 8px; line-height: 1.55; }
+.confirm-warn { background: var(--amber-bg); color: var(--amber); border-radius: 10px; padding: 9px 12px !important; }
 .confirm-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
 
 /* ---------- submitting ---------- */
 .center-card { text-align: center; padding: 60px 20px; }
+.center-card h2 { font-family: var(--font-display); font-weight: 600; color: var(--indigo); }
 .spinner {
   width: 44px; height: 44px; margin: 0 auto 16px;
-  border: 4px solid var(--blue-100); border-top-color: var(--blue-600);
+  border: 4px solid var(--line); border-top-color: var(--coral-deep);
   border-radius: 50%; animation: spin 0.8s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -406,352 +672,27 @@ body {
 /* ---------- footer ---------- */
 .page-foot {
   text-align: center; font-size: 12px; color: var(--muted);
-  padding: 18px 16px calc(28px + env(safe-area-inset-bottom, 0px)); /* MOBILE F4 */
+  padding: 18px 16px calc(28px + env(safe-area-inset-bottom, 0px)); /* notch safe area */
+  background: var(--paper);
+  max-width: 720px; margin: 0 auto;
 }
 .page-foot-help { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
-.page-foot-help a { color: inherit; }
+.page-foot-help a { color: var(--coral-dark); }
 
 /* ---------- larger screens ---------- */
 @media (min-width: 560px) {
-  .gate-hero h1 { font-size: 32px; }
-  .q-text { font-size: 18px; }
-  .exam-nav .btn { font-size: 15px; }
+  .gate-hero h1 { font-size: 36px; }
+  .q-text { font-size: 18.5px; }
+  .qcard { padding: 22px 24px 20px; }
+  .option { padding: 13px 16px; font-size: 15.5px; }
   .grid-overlay { align-items: center; padding: 24px; }
   .grid-panel { border-radius: 18px; }
-}
-
-/* ---------- reduced motion (A11Y K16) ---------- */
-@media (prefers-reduced-motion: reduce) {
-  .screen.active { animation: none; }
-  #screen-exam.screen.active { animation: none; }
-  .grid-panel, .confirm-panel { animation: none; }
-  .spinner { animation: none; }
-  .skel-num, .skel-line { animation: none; }
-  .timer-fill, .progress-fill, .option, .btn { transition: none; }
-  .btn:active { transform: none; }
+  #confirm-overlay, #forfeit-overlay { padding: 24px; }
 }
 
 /* ============================================================
-   EXAM SCREEN REDESIGN (Oct 13, 2026)
-   - No-scroll app-like layout: timer / progress / card / pinned nav
-   - Beauty pass: refined options, gradient selected states, animations
+   VIDEO LESSONS (both tracks, filled by exam-ui.js)
    ============================================================ */
-
-/* App-like column that fills the viewport under the brand bar */
-#screen-exam.active {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 68px);
-  min-height: calc(100dvh - 68px);
-}
-.app:has(#screen-exam.active) { padding-bottom: 6px; }
-
-/* --- compact timer --- */
-#screen-exam .timer-block { padding: 10px 14px; margin-bottom: 8px; border-radius: 16px; }
-#screen-exam .timer-row { margin-bottom: 6px; }
-#screen-exam .timer-text { font-size: 20px; }
-#screen-exam .timer-track { height: 6px; }
-
-/* --- compact progress --- */
-#screen-exam .progress-row { margin: 0 0 4px; }
-#screen-exam .progress-text { font-size: 13px; }
-#screen-exam .progress-track { height: 5px; margin-bottom: 10px; }
-
-/* --- question card --- */
-#screen-exam .qcard {
-  flex: 1 0 auto;
-  padding: 16px 16px 14px;
-  margin-bottom: 10px;
-  border-radius: 18px;
-  border: 1px solid #e6e2f4;
-}
-#screen-exam .qcard-top { margin-bottom: 10px; }
-#screen-exam .q-number {
-  font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase;
-  margin: 0 0 8px;
-}
-#screen-exam .q-text { font-size: 16.5px; line-height: 1.5; margin: 0 0 14px; }
-#screen-exam .q-passage { font-size: 14px; margin: 0 0 12px; padding: 10px 12px; }
-
-/* question-change enter animation (re-triggered from JS).
-   Transform only (Nov 12, 2026): the old opacity 0 start rendered the
-   question and options pale on every question change. */
-@keyframes qEnter {
-  from { transform: translateY(10px); }
-  to   { transform: none; }
-}
-#screen-exam .qcard.q-enter { animation: qEnter .28s ease; }
-@media (prefers-reduced-motion: reduce) {
-  #screen-exam .qcard.q-enter { animation: none; }
-}
-
-/* --- options: beautiful selectable cards --- */
-#screen-exam .options { gap: 8px; }
-#screen-exam .option {
-  align-items: center;
-  padding: 10px 12px;
-  min-height: 52px;
-  font-size: 14.5px;
-  border-radius: 14px;
-  border: 1.5px solid var(--line);
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(23,22,56,.05);
-  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease, transform .1s ease;
-}
-#screen-exam .option:hover {
-  border-color: var(--blue-600);
-  box-shadow: 0 4px 12px rgba(214,64,38,.12);
-  transform: translateY(-1px);
-}
-#screen-exam .option:active { transform: scale(.99); }
-#screen-exam .option .opt-letter {
-  flex-basis: 32px; height: 32px; font-size: 14px;
-  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
-}
-#screen-exam .option.selected {
-  border-color: var(--blue-600);
-  background: linear-gradient(180deg, #f1eef9, var(--blue-50));
-  box-shadow: 0 4px 14px rgba(214,64,38,.16);
-}
-#screen-exam .option.selected .opt-letter {
-  background: linear-gradient(135deg, var(--blue-600), var(--violet));
-  border-color: transparent; color: #fff;
-  box-shadow: 0 2px 6px rgba(214,64,38,.4);
-}
-/* check badge: appears on the selected option */
-#screen-exam .opt-check {
-  margin-left: auto; flex: 0 0 24px; height: 24px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 800; line-height: 1;
-  color: transparent; background: transparent;
-  border: 2px solid var(--line);
-  transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
-}
-#screen-exam .option.selected .opt-check {
-  background: var(--green); border-color: var(--green); color: #fff;
-  box-shadow: 0 2px 6px rgba(14,107,68,.35);
-}
-
-/* --- pinned bottom nav: always reachable, no scrolling for buttons --- */
-#screen-exam .exam-nav {
-  position: sticky;
-  bottom: 0;
-  z-index: 30;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 8px;
-  margin: 6px -16px 0;
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
-  background: rgba(247,250,255,.94);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid var(--line);
-}
-#screen-exam .exam-nav .btn { border-radius: 14px; min-height: 50px; padding: 12px 8px; font-size: 14px; }
-#screen-exam .forfeit-btn { min-height: 44px; padding: 6px 12px; }
-
-/* --- desktop: a little more air --- */
-@media (min-width: 560px) {
-  #screen-exam .qcard { padding: 22px 24px 20px; }
-  #screen-exam .q-text { font-size: 17.5px; }
-  #screen-exam .option { padding: 12px 16px; font-size: 15px; }
-}
-
-/* ============================================================
-   DARK MODE (prefers-color-scheme: dark). The portal honors the
-   device setting; the sales pages are pinned light by design.
-   Surfaces go dark; brand blues stay, with lightened text where
-   a dark blue was used as a text color.
-   ============================================================ */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #edecf4;
-    --muted: #a5a3bd;
-    --line: #3a3768;
-    --blue-50: #232147;
-    --blue-100: #2e2b5c;
-    --card: #1e1c45;
-    --green-bg: #14382a;
-    --red-bg: #3d1a22;
-    --amber-bg: #402416;
-    --amber: #ffb59f;   /* light peach text on dark caution surfaces: on #402416 = 8.34:1 */
-  }
-  body { background: linear-gradient(180deg, #141333 0%, #100f28 320px); }
-  .gate-hero h1, .section-title, .progress-text, .timer-text,
-  .exam-card h3, .grid-head h3, .confirm-panel h3, .exam-list-loading p { color: #edecf4; }
-  .gate-row input { background: #171638; color: var(--ink); border-color: var(--line); }
-  .gate-row input::placeholder { color: #8f8db0; }
-  .btn-secondary { background: #2e2b5c; color: #e6e2f4; }
-  .btn-ghost { color: #e6e2f4; }
-  .q-section { color: #ffb59f; background: #2e2b5c; }
-  .exam-score { color: #ffb59f; }
-  .status-done { color: #ffb59f; background: #2e2b5c; }
-  .status-locked { background: #2e2b5c; color: #a5a3bd; }
-  .exam-card.is-locked .exam-num { background: #4a4780; }
-  .option { background: #232147; }
-  .option .opt-letter { background: #171638; color: #ffb59f; }
-  .flag-btn { color: var(--muted); }
-  .forfeit-btn { color: var(--muted); }
-  .q-passage { background: #232147; }
-  .timer-track, .progress-track { background: #2e2b5c; }
-  .grid-panel, .confirm-panel { background: #1e1c45; color: var(--ink); }
-  .grid-cell { background: #232147; color: var(--muted); }
-  .grid-cell.current { color: #ffb59f; }
-  .dot-empty { background: #2e2b5c; }
-  .error-card { color: var(--ink); }
-  /* The resume banner keeps its light cream background in dark mode
-     (--gold-soft is not redefined there), so its text stays dark. */
-  .resume-banner { color: #1c1b2e; }
-  /* Pinned exam nav: dark translucent surface */
-  #screen-exam .exam-nav { background: rgba(16, 15, 40, .94); }
-  #screen-exam .qcard { border-color: #3a3768; }
-  #screen-exam .option { background: #232147; }
-  #screen-exam .option.selected { background: linear-gradient(180deg, #2c2a5e, #232147); }
-  #screen-exam .option .opt-letter { background: #171638; }
-  #screen-exam .opt-check { border-color: var(--line); }
-  /* Contrast fixes (QA Nov 11, 2026): states and errors pair non-flipped
-     foregrounds with flipped backgrounds in dark mode. */
-  .status-available { color: #7ed9a8; }
-  .status-inprogress { color: #f0cd7a; }
-  .form-error { color: #f08ba0; }
-  .flag-btn[aria-pressed="true"] { color: #f0cd7a; }
-  .grid-filter-label { color: #edecf4; }
-}
-
-
-/* ============================================================
-   REDESIGN PASS (Oct 25, 2026)
-   Matches the landing page: friendly yellow accent, softer
-   surfaces, bigger touch targets. Overrides only; the base
-   rules above stay as the structural source of truth.
-   ============================================================ */
-:root {
-  --radius: 18px;
-  --shadow: 0 10px 30px rgba(23, 22, 56, .08);
-  --shadow-lift: 0 16px 36px rgba(214, 64, 38, .16);
-}
-body {
-  background:
-    radial-gradient(900px 420px at 10% -10%, rgba(214,64,38,.10), transparent 60%),
-    radial-gradient(700px 360px at 100% 0%, rgba(255,111,79,.12), transparent 55%),
-    linear-gradient(180deg, #f7f5f1 0%, #f7f5f1 100%);
-}
-
-/* brand bar */
-.brandbar { background: linear-gradient(120deg, #100f28 0%, #232147 100%); }
-.brand-mark {
-  display: grid; place-items: center; width: 30px; height: 30px;
-  border-radius: 9px; background: linear-gradient(135deg, #ff6f4f, #d64026);
-  font-size: 16px;
-}
-.brand-name { letter-spacing: .01em; }
-.practice-badge { background: #ff6f4f; }
-
-/* gate */
-.gate-hero { padding: 28px 8px 8px; }
-.gate-hero h1 { font-size: 30px; font-weight: 900; letter-spacing: -.02em; }
-.subtitle { font-size: 15px; }
-.disclaimer-line { border-radius: 999px; padding: 7px 14px; }
-.gate-card { padding: 24px 20px; border: 1px solid var(--line); }
-.gate-row input { border-radius: 12px; min-height: 52px; }
-.gate-row .btn { min-width: 104px; }
-.gate-note { line-height: 1.5; }
-@media (max-width: 420px) {
-  .gate-row { flex-direction: column; }
-  .gate-row .btn { width: 100%; }
-}
-
-/* exam list */
-.section-title { font-size: 20px; font-weight: 800; margin-top: 18px; }
-.exam-card { border: 1px solid var(--line); transition: transform .15s ease, box-shadow .15s ease; }
-.exam-card:not(.is-locked):not(.is-done):hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
-.exam-card .exam-num { border-radius: 14px; background: linear-gradient(135deg, #232147, #232147); }
-.btn { border-radius: 12px; }
-
-/* ---------- instructions screen ---------- */
-.instr-card {
-  background: var(--card); border: 1px solid var(--line);
-  border-radius: 22px; box-shadow: var(--shadow);
-  padding: 20px 18px 22px; margin-top: 6px;
-}
-.instr-back { padding-left: 0; margin-bottom: 4px; }
-.instr-kicker {
-  display: inline-block; margin: 0 0 6px; font-size: 11px; font-weight: 800;
-  letter-spacing: 1.4px; text-transform: uppercase;
-  color: var(--amber); background: var(--amber-bg);
-  padding: 4px 10px; border-radius: 999px;
-}
-.instr-title { margin: 0 0 6px; font-size: 26px; font-weight: 900; letter-spacing: -.02em; color: var(--blue-900); outline: none; }
-.instr-lead { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
-.instr-lead strong { color: var(--ink); }
-.instr-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
-.instr-fact {
-  text-align: center; padding: 12px 6px; border-radius: 14px;
-  background: var(--blue-50); border: 1px solid var(--blue-100);
-}
-.instr-fact strong { display: block; font-size: 22px; font-weight: 900; color: var(--blue-700); line-height: 1.1; }
-.instr-fact span { font-size: 12px; color: var(--muted); font-weight: 600; }
-.instr-h { margin: 18px 0 8px; font-size: 15px; font-weight: 800; color: var(--blue-900); }
-.instr-sections { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.instr-sections li {
-  display: flex; justify-content: space-between; align-items: center; gap: 8px;
-  padding: 10px 12px; border-radius: 12px; background: var(--blue-50);
-  font-size: 14px; font-weight: 600;
-}
-.instr-sections b { color: var(--blue-700); font-variant-numeric: tabular-nums; }
-.instr-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 10px; }
-.instr-steps li {
-  counter-increment: step; position: relative;
-  padding-left: 38px; font-size: 14.5px; line-height: 1.5; color: var(--ink);
-}
-.instr-steps li::before {
-  content: counter(step); position: absolute; left: 0; top: 0;
-  width: 26px; height: 26px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--blue-600); color: #fff; font-size: 13px; font-weight: 800;
-}
-.instr-note {
-  margin: 16px 0; padding: 10px 12px; border-radius: 12px;
-  background: var(--amber-bg); color: var(--amber); font-size: 13px; line-height: 1.5;
-}
-.instr-check {
-  display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
-  padding: 12px; margin-bottom: 12px; border: 2px solid var(--line);
-  border-radius: 14px; font-size: 14.5px; font-weight: 600;
-}
-.instr-check:has(input:checked) { border-color: var(--blue-600); background: var(--blue-50); }
-.instr-check input { width: 22px; height: 22px; flex: 0 0 22px; margin: 0; accent-color: var(--blue-600); }
-#instr-start:disabled { opacity: .5; box-shadow: none; cursor: not-allowed; }
-@media (max-width: 380px) { .instr-sections { grid-template-columns: 1fr; } }
-@media (min-width: 560px) { .instr-card { padding: 28px 30px 30px; } .instr-title { font-size: 30px; } }
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background:
-      radial-gradient(900px 420px at 10% -10%, rgba(214,64,38,.22), transparent 60%),
-      linear-gradient(180deg, #141333 0%, #100f28 100%);
-  }
-  .instr-title, .instr-h { color: #edecf4; }
-  .instr-fact strong, .instr-sections b { color: #ffb59f; }
-  .instr-kicker, .instr-note { color: #f3d9a0; }
-}
-
-/* ---- Home section tabs (Mock Exams / Video Lessons) ---- */
-.home-tabs { display: flex; gap: 8px; margin: 22px 0 4px; }
-.gate-track-tabs { margin: 0 0 16px; }
-.gate-track-tabs .home-tab { flex: 1; }
-.home-tabs[hidden] { display: none; }
-.home-tab {
-  flex: 1; padding: 12px 10px; border-radius: 12px; cursor: pointer;
-  border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);
-  font: 700 15px Inter, sans-serif;
-}
-.home-tab.active { background: var(--blue-700); border-color: var(--blue-700); color: #fff; }
-@media (prefers-color-scheme: dark) {
-  .home-tab { color: #e6e2f4; }
-  .home-tab.active { color: #fff; }
-}
-
-/* ---- Video lessons (both tracks, filled by exam-ui.js) ---- */
 #lessons-wrap { margin-top: 28px; }
 .lesson-player iframe:fullscreen { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
 .lesson-player iframe:-webkit-full-screen { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
@@ -763,111 +704,158 @@ body {
 .lesson-stage:-webkit-full-screen iframe { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
 .lesson-player:fullscreen { max-width: none; background: #000; }
 .lesson-player:fullscreen iframe { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
-.lesson-actions { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; margin-top: 8px; }
+.lesson-actions { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; margin-top: 8px; }
 .lesson-expand-btn {
-  border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);
-  border-radius: 999px; padding: 10px 14px; min-height: 44px; font: 600 13px Inter, sans-serif; cursor: pointer;
+  border: 1px solid var(--line-strong); background: var(--paper); color: var(--indigo);
+  border-radius: 999px; padding: 10px 15px; min-height: 44px;
+  font-family: var(--font-marker); font-weight: 600; font-size: 13px; cursor: pointer;
 }
 .lesson-yt-link {
   display: inline-flex; align-items: center; min-height: 44px; padding: 10px 6px;
-  font-size: 13px; font-weight: 600; color: var(--blue-700);
+  font-size: 13px; font-weight: 700; color: var(--coral-dark);
 }
 .lessons-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
 .lesson-chip {
-  border: 1px solid var(--line); background: var(--blue-50); color: var(--blue-900);
-  border-radius: 999px; padding: 10px 14px; min-height: 44px; font: 600 13px Inter, sans-serif; cursor: pointer;
+  border: 1px solid var(--line); background: var(--card); color: var(--indigo);
+  border-radius: 999px; padding: 10px 15px; min-height: 44px;
+  font-family: var(--font-marker); font-weight: 600; font-size: 13px; cursor: pointer;
 }
-.lesson-chip.active { background: var(--blue-700); color: #fff; border-color: var(--blue-700); }
-.lessons-group-title { font-size: 16px; color: var(--blue-900); margin: 18px 0 10px; }
+.lesson-chip.active { background: var(--indigo); color: #fff; border-color: var(--indigo); }
+.lessons-group-title {
+  font-family: var(--font-display); font-weight: 600; font-size: 19px;
+  color: var(--indigo); margin: 20px 0 12px;
+  padding-bottom: 7px; border-bottom: 3px double var(--line-strong);
+}
 .lesson-card {
-  display: flex; gap: 14px; background: #fff; border: 1px solid var(--line);
-  border-radius: 14px; padding: 12px; margin: 0 0 12px;
+  display: flex; gap: 14px; background: var(--card); border: 1px solid var(--line);
+  border-radius: 16px; padding: 12px; margin: 0 0 12px; box-shadow: var(--shadow);
 }
-.lesson-card.is-watched { border-color: var(--blue-100); opacity: .85; }
+.lesson-card.is-watched { border-left: 3px solid var(--green); }
 .lesson-player { flex: 0 0 220px; max-width: 220px; }
-.lesson-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 10px; display: block; }
+.lesson-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; display: block; }
 .lesson-thumb {
   position: relative; display: block; width: 100%; padding: 0; border: 0; cursor: pointer;
-  background: #000; border-radius: 10px; overflow: hidden;
+  background: #000; border-radius: 12px; overflow: hidden;
 }
 .lesson-thumb img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 .lesson-play {
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  font-size: 30px; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,.6);
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; padding-left: 3px; color: #fff;
+  background: rgba(214, 64, 38, .94);
+  box-shadow: 0 4px 14px rgba(10, 9, 30, .45);
 }
 .lesson-body { flex: 1; min-width: 0; }
-.lesson-body h4 { margin: 2px 0 4px; font-size: 15px; color: var(--ink); }
-.lesson-topic { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--amber); }
+.lesson-body h4 { margin: 2px 0 4px; font-size: 16px; font-family: var(--font-display); font-weight: 600; color: var(--ink); line-height: 1.35; }
+.lesson-topic {
+  margin: 0; font-family: var(--font-marker); font-size: 11px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--coral-dark);
+}
 .lesson-meta { margin: 0 0 4px; font-size: 12px; color: var(--muted); }
-.lesson-why { margin: 0 0 8px; font-size: 13px; color: var(--ink); }
-.lesson-watch { font-size: 13px; font-weight: 600; color: var(--blue-800); cursor: pointer; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 4px; }
-.lesson-watch input { width: 22px; height: 22px; margin: 0 6px 0 0; }
+.lesson-why { margin: 0 0 8px; font-size: 13.5px; color: var(--ink); line-height: 1.55; }
+.lesson-watch {
+  font-size: 13px; font-weight: 600; color: var(--indigo-2); cursor: pointer;
+  display: inline-flex; align-items: center; min-height: 44px; padding: 8px 4px;
+}
+.lesson-watch input { width: 22px; height: 22px; margin: 0 6px 0 0; accent-color: var(--indigo); }
 @media (max-width: 560px) {
   .lesson-card { flex-direction: column; }
   .lesson-player { flex: none; max-width: none; width: 100%; }
 }
-/* Dark mode: the lesson card keeps its white background (hardcoded above),
-   while --ink and --muted flip to near-white for dark surfaces, which made
-   the card text unreadable (owner screenshot Nov 11, 2026). Pin the card
-   text back to the light-mode palette, same pattern as .resume-banner,
-   and lift the group title and filter chips that sit on the dark page. */
-@media (prefers-color-scheme: dark) {
-  .lesson-card { color: #1c1b2e; }
-  .lesson-body h4, .lesson-why { color: #1c1b2e; }
-  .lesson-meta { color: #5d5b73; }
-  .lessons-group-title { color: #edecf4; }
-  .lesson-expand-btn { background: #f7f5f1; color: #171638; border-color: #e6e2f4; }
-  .lesson-yt-link { color: #2c2a5e; }
-  .lesson-chip { color: #e6e2f4; }
-  .lesson-chip.active { color: #fff; }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .screen.active { animation: none; }
+  #screen-exam.screen.active { animation: none; }
+  .grid-panel, .confirm-panel { animation: none; }
+  .spinner { animation: none; }
+  .skel-num, .skel-line { animation: none; }
+  .timer-fill, .progress-fill, .option, .btn { transition: none; }
+  .btn:active { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qcard.q-enter { animation: none; }
+  .exam-card { transition: none; }
 }
 
-
 /* ============================================================
-   INDIGO/CORAL ALIGNMENT (Nov 15, 2026): token swap above plus
-   pinned on-white text. The light-mode variables flip in dark
-   mode, so text that sits on white/light surfaces must use
-   these pinned values instead of the flipping variables.
-   ============================================================ */
-body { color: #1c1b2e; }
-.brand-name, .gate-hero h1, .instr-title, .section-title { font-family: Montserrat, Inter, sans-serif; }
-.gate-hero h1, .section-title, .timer-text, .progress-text,
-.grid-head h3, .confirm-panel h3, .exam-list-loading p,
-.q-number, .instr-title, .instr-h, .grid-filter-label,
-.sample-note, .sample-upsell h3, .sample-plan h3,
-.sample-priority, .sample-price, .lessons-group-title { color: #171638; }
-.exam-score, .q-section, .option .opt-letter, .btn-ghost,
-.lesson-yt-link, .lesson-watch { color: #232147; }
-.instr-fact strong, .instr-sections b { color: #232147; }
-.instr-steps li::before { background: #232147; }
-.instr-check:has(input:checked) { border-color: #232147; }
-.instr-check input, .grid-filter-label input { accent-color: #232147; }
-.lesson-topic { color: #d64026; }
-.q-passage { border-left-color: #ff6f4f; }
-.skip-link { background: #171638; }
-
-/* ============================================================
-   DARK REPAIR (Nov 15, 2026): the indigo/coral alignment block
-   above is not media-scoped, so its pinned dark text colors also
-   applied in dark mode and sat unreadable on dark surfaces
-   (owner phone screenshots Nov 15: timer digits, progress line,
-   subject chip, option letters, instructions title and stat
-   numbers, loading title). This block restores the dark palette
-   for every pinned selector that lives on a dark surface.
-   Light mode is untouched.
+   DARK MODE (prefers-color-scheme: dark). The portal honors the
+   device setting. Every surface runs on the tokens above, so the
+   dark sheet stays readable end to end: paper goes deep indigo,
+   cards lift one step, coral lightens for text use.
    ============================================================ */
 @media (prefers-color-scheme: dark) {
-  body { color: var(--ink); }
-  .gate-hero h1, .section-title, .timer-text, .progress-text,
-  .grid-head h3, .confirm-panel h3, .exam-list-loading p,
-  .instr-title, .instr-h, .grid-filter-label,
-  .lessons-group-title { color: #edecf4; }
-  .q-number { color: #a5a3bd; }
-  .q-section, .exam-score, .option .opt-letter { color: #ffb59f; }
+  :root {
+    --paper: #12112a;
+    --desk: #0a0919;
+    --card: #1e1c45;
+    --ink: #edecf4;
+    --muted: #a5a3bd;
+    --line: #3a3768;
+    --line-strong: rgba(255, 255, 255, .32);
+    --coral-tint: #2c1a30;
+    --coral-dark: #ff8a70;
+    --green-bg: #14382a;
+    --red-bg: #3d1a22;
+    --amber-bg: #402416;
+    --amber: #ffb59f;   /* light peach text on dark caution surfaces: on #402416 = 8.34:1 */
+    --amber-line: #5c3a26;
+    --track: #2e2b5c;
+    --tint: #232147;
+    --blue-50: #232147;
+    --blue-100: #2e2b5c;
+  }
+  :focus-visible { outline-color: #ff8a70; }
+  .gate-hero h1, .section-title, .instr-title, .instr-h,
+  .lessons-group-title, .grid-head h3, .confirm-panel h3,
+  .exam-list-loading p, .timer-text, .progress-text,
+  .exam-card .exam-num, .instr-fact strong, .instr-sections b,
+  .center-card h2 { color: #edecf4; }
+  .gate-kicker, .q-number, .lesson-topic { color: #ff8a70; }
+  .disclaimer-line, .instr-note { color: #ffb59f; }
+  .gate-row input { background: #171638; color: var(--ink); border-color: var(--line); }
+  .btn-secondary { background: #2e2b5c; color: #e6e2f4; border-color: transparent; }
   .btn-ghost { color: #e6e2f4; }
-  .instr-fact strong, .instr-sections b { color: #ffb59f; }
-  .instr-kicker, .instr-note { color: #ffb59f; }
-  .instr-sections li { color: var(--ink); }
-  .instr-steps li::before { background: var(--violet); }
-  .spinner { border-top-color: #ff6f4f; }
+  #grid-toggle { color: #e6e2f4; }
+  .home-tab { color: #a5a3bd; }
+  .home-tab.active { color: #fff; }
+  .q-section { color: #ffb59f; background: #2e2b5c; }
+  .exam-score { color: #ffb59f; }
+  .status-done { color: #ffb59f; background: #2e2b5c; }
+  .status-locked { background: #2e2b5c; }
+  .exam-card.is-done .exam-num { background: #2e2b5c; border-color: #2e2b5c; }
+  .exam-card.is-locked .exam-num { background: transparent; }
+  .instr-fact { background: #232147; border-color: var(--line); }
+  .instr-sections li { border-bottom-color: rgba(255, 255, 255, .22); }
+  .instr-check:has(input:checked) { background: #232147; }
+  .instr-kicker { color: #ffb59f; background: #402416; }
+  .option { background: #232147; }
+  .option .opt-letter { color: #ffb59f; }
+  .option.selected { background: #2c2a5e; }
+  .option.selected .opt-letter { background: var(--coral-deep); border-color: var(--coral-deep); color: #fff; }
+  .timer-text.danger { color: #f08ba0; }
+  .progress-fill { background: var(--peri); }
+  .grid-cell.answered { background: #2e2b5c; border-color: #2e2b5c; }
+  .q-passage { background: #232147; }
+  .exam-nav { background: rgba(18, 17, 42, .95); }
+  .grid-cell { background: #232147; }
+  .grid-cell.current { background: #232147; color: #ff8a70; }
+  .grid-cell.answered.current { background: #2e2b5c; box-shadow: 0 0 0 2px var(--paper), 0 0 0 4.5px var(--coral-deep); }
+  .dot-current { background: #232147; }
+  .dot-empty { background: #232147; }
+  .grid-filter-label { background: #232147; }
+  .lesson-chip { color: #e6e2f4; }
+  .lesson-chip.active { color: #fff; }
+  .lesson-expand-btn { background: #232147; color: #e6e2f4; }
+  .lesson-yt-link, .page-foot-help a { color: #ff8a70; }
+  .lesson-watch { color: #e6e2f4; }
+  .error-card { border-color: #5c2a36; }
+  /* Contrast pairs: states and errors pair lightened text with the
+     dark tint backgrounds. */
+  .status-available { color: #7ed9a8; }
+  .status-inprogress { color: #f0cd7a; }
+  .form-error { color: #f08ba0; }
+  .flag-btn[aria-pressed="true"] { color: #f0cd7a; }
+  .resume-banner span#resume-remaining { color: #f0cd7a; }
 }
