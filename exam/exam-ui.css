@@ -861,5 +861,8 @@ body {
   .resume-banner span#resume-remaining { color: #f0cd7a; }
 }
 
-/* Pass 2 fix: the Answered legend swatch must stay visible on the dark sheet. */
-:root[data-theme="dark"] .dot-answered { background: #3a3670; }
+/* Pass 2 fix: the Answered legend swatch must stay visible on the dark sheet.
+   Dark mode here is driven by prefers-color-scheme, not a data-theme attr. */
+@media (prefers-color-scheme: dark) {
+  .dot-answered { background: #3a3670; }
+}
