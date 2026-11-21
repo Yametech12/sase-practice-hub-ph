@@ -203,6 +203,11 @@ body {
   letter-spacing: 0.09em; text-transform: uppercase; color: var(--coral-dark);
 }
 .score-wrap { display: flex; align-items: center; gap: 18px; }
+/* Phone: stack the ring above the verdict instead of squeezing the copy. */
+@media (max-width: 560px) {
+  .score-wrap { flex-direction: column; align-items: center; text-align: center; }
+  .hero-copy .note { text-align: left; }
+}
 @media (max-width: 360px) {
   .score-wrap { flex-wrap: wrap; } /* "Outstanding!" headline must not overflow at 320px */
 }

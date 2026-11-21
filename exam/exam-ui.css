@@ -240,6 +240,7 @@ body {
 @media (max-width: 420px) {
   .gate-row { flex-direction: column; }
   .gate-row .btn { width: 100%; }
+  .instr-fact span { font-size: 10px; letter-spacing: .08em; }
 }
 
 /* ---------- buttons ---------- */
@@ -859,3 +860,6 @@ body {
   .flag-btn[aria-pressed="true"] { color: #f0cd7a; }
   .resume-banner span#resume-remaining { color: #f0cd7a; }
 }
+
+/* Pass 2 fix: the Answered legend swatch must stay visible on the dark sheet. */
+:root[data-theme="dark"] .dot-answered { background: #3a3670; }
