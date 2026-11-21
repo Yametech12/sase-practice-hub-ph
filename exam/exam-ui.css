@@ -537,9 +537,6 @@ body {
   font-size: 14.5px;
   line-height: 1.65;
   color: var(--ink);
-  background: #f4f1ea;
-  border-left: 4px solid var(--coral);
-  border-radius: 0 10px 10px 0;
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }
@@ -1019,3 +1016,6 @@ h1, h2, h3 { letter-spacing: -0.02em; text-wrap: balance; }
   .home-tab.active { background: var(--action); border-color: var(--action); color: var(--on-action); }
   .q-passage { background: var(--surface-2); }
 }
+/* GT-08 cleanup (confirmation minors n1): the last two label classes
+   outside the M2 sweep keep no tracking either. */
+.field-label, .progress-text { letter-spacing: 0; }
