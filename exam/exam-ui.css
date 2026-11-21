@@ -240,7 +240,7 @@ body {
 @media (max-width: 420px) {
   .gate-row { flex-direction: column; }
   .gate-row .btn { width: 100%; }
-  .instr-fact span { font-size: 10px; letter-spacing: .08em; }
+  .instr-fact span { font-size: 9.5px; letter-spacing: .05em; }
 }
 
 /* ---------- buttons ---------- */
